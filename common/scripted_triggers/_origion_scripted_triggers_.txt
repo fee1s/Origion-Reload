@@ -1,0 +1,60 @@
+SOV_before_dnepr_objective = {
+    state = 192
+	state = 834
+	state = 198
+	state = 203
+	state = 197
+	state = 226 # лан похуй
+}
+ORIGION_is_in_faction_with_allies = {
+	OR = {
+		original_tag = HOL
+		original_tag = BEL
+		original_tag = DEN
+		original_tag = USA
+		original_tag = ENG
+		original_tag = CAN
+		original_tag = SAF
+		original_tag = RAJ
+		original_tag = NZL
+		original_tag = AST
+		original_tag = FRA
+	}
+}
+is_french_north_africa = {
+	OR = {
+		state = 458
+		state = 459
+		state = 460
+		state = 461
+		state = 462
+	    state = 513
+		state = 665
+		state = 783
+	}
+}
+ORIGION_is_controlled_by_axis = {
+	OR = {
+		is_controlled_by = GER
+		is_controlled_by = ITA
+		is_controlled_by = HUN
+		is_controlled_by = ROM
+		is_controlled_by = BUL
+		is_controlled_by = JAP
+	}
+}
+ORIGION_is_controlled_by_allies = {
+	OR = {
+		is_controlled_by = HOL
+		is_controlled_by = BEL
+		is_controlled_by = DEN
+		is_controlled_by = USA
+		is_controlled_by = ENG
+		is_controlled_by = CAN
+		is_controlled_by = SAF
+		is_controlled_by = RAJ
+		is_controlled_by = NZL
+		is_controlled_by = AST
+		is_controlled_by = FRA
+	}
+}

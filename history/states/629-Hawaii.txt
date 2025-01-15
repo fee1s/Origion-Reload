@@ -1,0 +1,45 @@
+
+state={
+	id=629
+	name="STATE_629"
+	manpower = 368336
+	state_category = town
+	
+	resources={
+		oil = 12
+		rubber = 14
+		aluminium = 9
+	}
+	
+	history={
+		owner = USA
+		add_core_of = COL
+		buildings = {
+			infrastructure = 3
+			air_base = 8
+			4180 = {
+				naval_base = 10
+			}
+		}
+		victory_points = {
+			4180 15
+		}
+		victory_points = {
+			12021 3
+		}
+		1936.1.1.13 = {
+			owner = COL
+			add_core_of = COL
+		}
+		1936.1.1.14 = {
+            owner = USA
+            add_core_of = COL
+        }
+	}
+
+	provinces={
+		4180 7112 7195 10048 12021 
+	}
+
+	local_supplies=0.0 
+}

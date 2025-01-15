@@ -1,0 +1,927 @@
+JAP_operation = {
+	
+	JAP_strike_on_the_southern_resource_area_decision = {
+		icon = GFX_decision_eng_puppet_usa
+		priority = 104
+		available = {
+			has_completed_focus = JAP_strike_on_the_southern_resource_area
+			date > 1941.5.1
+		}
+		activation = {
+		}
+		fire_only_once = yes
+		is_good = yes
+		
+		complete_effect = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			activate_mission = JAP_stagnation_economic_0
+			add_timed_idea = { idea = JAP_surprise_attack days = 90 }
+			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+			
+			hidden_effect = {
+				sound_effect = psi_usa_war
+				USA_join_to_war = yes # скриптед_эффект, юса вступает в алайсы, призывает всех в войну и вступает в европейскую войну
+			}
+		}
+	}
+	
+	JAP_strike_midyei = {
+		icon = GFX_decision_generic_naval
+		priority = 102
+		available = {
+			has_completed_focus = JAP_miduey_fight_focus
+			date > 1942.6.1
+		}
+		
+		fire_only_once = yes
+		is_good = yes
+		
+		complete_effect = {
+			add_timed_idea = {idea = JAP_strike_midyei days = 60}
+		}
+	}
+	
+	JAP_wal_indonesia = {
+		icon = GFX_decision_generic_mountain_fortification
+		highlight_states = {
+			highlight_state_targets = {
+			state = 335
+			state = 672
+			state = 334
+			state = 667
+			state = 721
+			} 
+		}
+		fire_only_once = yes
+		available = {
+			has_completed_focus = JAP_building_asian_wal
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			has_full_control_of_state = 334
+			has_full_control_of_state = 667
+			has_full_control_of_state = 721
+		}
+		visible = {
+			always = yes
+		}
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			672 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			721 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			335 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			334 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			667 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			672 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12268
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4652
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1648
+					instant_build = yes
+				}
+			}
+			335 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7381
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4608
+					instant_build = yes
+				}
+			}
+			667 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10175
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12234
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1355
+					instant_build = yes
+				}
+			}
+			334 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10237
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10325
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1316
+					instant_build = yes
+				}
+			}
+			721 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12190
+					instant_build = yes
+				}
+			}
+		}
+	}
+	JAP_wal_malaya = {
+		icon = GFX_decision_generic_mountain_fortification
+		highlight_states = {
+			highlight_state_targets = {
+			state = 333
+			state = 336
+			} 
+		}
+		fire_only_once = yes
+		available = {
+			has_completed_focus = JAP_building_asian_wal
+			has_full_control_of_state = 336
+			has_full_control_of_state = 333
+		}
+		visible = {
+			always = yes
+		}
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			333 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			336 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			336 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 10
+					province = 12299
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10297
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7329
+					instant_build = yes
+				}
+			}
+			333 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1208
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7371
+					instant_build = yes
+				}
+			}
+		}
+	}
+	JAP_wal_birma = {
+		icon = GFX_decision_generic_mountain_fortification
+		highlight_states = {
+			highlight_state_targets = {
+			state = 640
+			state = 288
+			} 
+		}
+		fire_only_once = yes
+		available = {
+			has_completed_focus = JAP_building_asian_wal
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+		}
+		visible = {
+			always = yes
+		}
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			640 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			288 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			288 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1330
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 12090
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 4147
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 10033
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 11966
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 3999
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 4454
+					instant_build = yes
+				}
+			}
+			640 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 10486
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 4588
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 8063
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 1934
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 4318
+					instant_build = yes
+				}
+			}
+		}
+	}
+	JAP_wal_phillipins = {
+		icon = GFX_decision_generic_mountain_fortification
+		highlight_states = {
+			highlight_state_targets = {
+			state = 623
+			state = 626
+			state = 327
+			state = 624
+			state = 625
+			state = 627
+			state = 628
+			} 
+		}
+		fire_only_once = yes
+		available = {
+			has_completed_focus = JAP_building_asian_wal
+			has_full_control_of_state = 623
+			has_full_control_of_state = 626
+			has_full_control_of_state = 327
+			has_full_control_of_state = 624
+			has_full_control_of_state = 625
+			has_full_control_of_state = 627
+			has_full_control_of_state = 628
+		}
+		visible = {
+			always = yes
+		}
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			623 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			327 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			624 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			625 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			627 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			628 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			hidden_effect = {
+				626 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+				}	
+			}
+			623 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12213
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1415
+					instant_build = yes
+				}
+			}
+			623 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10265
+					instant_build = yes
+				}
+			}
+			627 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4241
+					instant_build = yes
+				}
+			}
+			628 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12118
+					instant_build = yes
+				}
+			}
+			626 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4429
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	JAP_wal_ins_2 = {
+		icon = GFX_decision_generic_mountain_fortification
+		highlight_states = {
+			highlight_state_targets = {
+			state = 673
+			state = 668
+			state = 738
+			state = 669
+			state = 523
+			state = 737
+			state = 979
+			} 
+		}
+		fire_only_once = yes
+		available = {
+			has_completed_focus = JAP_building_asian_wal
+			has_full_control_of_state = 623
+			has_full_control_of_state = 626
+			has_full_control_of_state = 327
+			has_full_control_of_state = 624
+			has_full_control_of_state = 625
+			has_full_control_of_state = 628
+		}
+		visible = {
+			always = yes
+		}
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			623 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			626 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			327 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			624 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			625 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			628 = {
+				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			}
+			628 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10263
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 10153
+					instant_build = yes
+				}
+			}
+			668 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1574
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7413
+					instant_build = yes
+				}
+			}
+			738 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4579
+					instant_build = yes
+				}
+			}
+			669 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12371
+					instant_build = yes
+				}
+			}
+			979 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12240
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12154
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 12237
+					instant_build = yes
+				}
+			}
+			523 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4329
+					instant_build = yes
+				}
+			}
+			737 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7251
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 4352
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 7339
+					instant_build = yes
+				}
+			}
+			668 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 5
+					province = 1351
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	JAP_strike_USSR = {
+		icon = GFX_decision_generic_tank
+		priority = 100
+		
+		available = {
+			has_completed_focus = JAP_strike_sov
+			has_full_control_of_state = 672
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 336
+			has_full_control_of_state = 430
+			has_full_control_of_state = 335
+			has_full_control_of_state = 284
+			has_full_control_of_state = 285
+			has_full_control_of_state = 631
+			has_full_control_of_state = 630
+			has_full_control_of_state = 727
+			has_full_control_of_state = 723
+			has_full_control_of_state = 284
+			has_full_control_of_state = 285
+			has_full_control_of_state = 629
+		}
+		
+		fire_only_once = yes
+		is_good = yes
+		
+		complete_effect = {
+			declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			
+			add_timed_idea = { idea = JAP_strike_sov days = 90}
+		}
+	}	
+}
+
+JAP_economic_stagnation = {
+	JAP_stagnation_economic_0_des = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			has_war = yes
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 640
+				state = 288
+				state = 334
+				state = 333
+				state = 672
+				state = 335
+				#state = 623
+				#state = 327
+				#state = 624
+				#state = 626
+				#state = 628
+				#state = 627
+			} 
+		}
+		available = {
+			has_full_control_of_state = 336
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			#has_full_control_of_state = 623
+			#has_full_control_of_state = 327
+			#has_full_control_of_state = 624
+			#has_full_control_of_state = 626
+			#has_full_control_of_state = 628
+			#has_full_control_of_state = 627
+		}
+		timeout_effect = {
+			activate_mission = JAP_stagnation_economic_1_des
+			add_ideas = JAP_stagnation_economic_0
+		}
+	}
+	JAP_stagnation_economic_1_des = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 640
+				state = 288
+				state = 334
+				state = 333
+				state = 672
+				state = 335
+				#state = 623
+				#state = 327
+				#state = 624
+				#state = 626
+				#state = 628
+				#state = 627
+			} 
+		}
+		available = {
+			has_full_control_of_state = 336
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			#has_full_control_of_state = 623
+			#has_full_control_of_state = 327
+			#has_full_control_of_state = 624
+			#has_full_control_of_state = 626
+			#has_full_control_of_state = 628
+			#has_full_control_of_state = 627
+		}
+		timeout_effect = {
+			activate_mission = JAP_stagnation_economic_2_des
+			swap_ideas = {
+				remove_idea = JAP_stagnation_economic_0
+				add_idea = JAP_stagnation_economic_1
+			}
+		}
+	}
+	JAP_stagnation_economic_2_des = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 640
+				state = 288
+				state = 334
+				state = 333
+				state = 672
+				state = 335
+				#state = 623
+				#state = 327
+				#state = 624
+				#state = 626
+				#state = 628
+				#state = 627
+			} 
+		}
+		available = {
+			has_full_control_of_state = 336
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			#has_full_control_of_state = 623
+			#has_full_control_of_state = 327
+			#has_full_control_of_state = 624
+			#has_full_control_of_state = 626
+			#has_full_control_of_state = 628
+			#has_full_control_of_state = 627
+		}
+		timeout_effect = {
+			activate_mission = JAP_stagnation_economic_3_des
+			swap_ideas = {
+				remove_idea = JAP_stagnation_economic_1
+				add_idea = JAP_stagnation_economic_2
+			}
+		}	
+	}
+	JAP_stagnation_economic_3_des = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 640
+				state = 288
+				state = 334
+				state = 333
+				state = 672
+				state = 335
+				#state = 623
+				#state = 327
+				#state = 624
+				#state = 626
+				#state = 628
+				#state = 627
+			} 
+		}
+		available = {
+			has_full_control_of_state = 336
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			#has_full_control_of_state = 623
+			#has_full_control_of_state = 327
+			#has_full_control_of_state = 624
+			#has_full_control_of_state = 626
+			#has_full_control_of_state = 628
+			#has_full_control_of_state = 627
+		}
+		timeout_effect = {
+			activate_mission = JAP_stagnation_economic_4_des
+			swap_ideas = {
+				remove_idea = JAP_stagnation_economic_2
+				add_idea = JAP_stagnation_economic_3
+			}
+		}
+	}
+	JAP_stagnation_economic_4_des = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 640
+				state = 288
+				state = 334
+				state = 333
+				state = 672
+				state = 335
+				#state = 623
+				#state = 327
+				#state = 624
+				#state = 626
+				#state = 628
+				#state = 627
+			} 
+		}
+		available = {
+			has_full_control_of_state = 336
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			#has_full_control_of_state = 623
+			#has_full_control_of_state = 327
+			#has_full_control_of_state = 624
+			#has_full_control_of_state = 626
+			#has_full_control_of_state = 628
+			#has_full_control_of_state = 627
+		}
+		timeout_effect = {
+			activate_mission = JAP_stagnation_economic_5_des
+			swap_ideas = {
+				remove_idea = JAP_stagnation_economic_3
+				add_idea = JAP_stagnation_economic_4
+			}
+		}
+	}
+	JAP_stagnation_economic_5_des = {
+		icon = GFX_decision_revolt
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 336
+				state = 640
+				state = 288
+				state = 334
+				state = 333
+				state = 672
+				state = 335
+				#state = 623
+				#state = 327
+				#state = 624
+				#state = 626
+				#state = 628
+				#state = 627
+			} 
+		}
+		available = {
+			has_full_control_of_state = 336
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			has_full_control_of_state = 333
+			has_full_control_of_state = 334
+			has_full_control_of_state = 672
+			has_full_control_of_state = 335
+			#has_full_control_of_state = 623
+			#has_full_control_of_state = 327
+			#has_full_control_of_state = 624
+			#has_full_control_of_state = 626
+			#has_full_control_of_state = 628
+			#has_full_control_of_state = 627
+		}
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = JAP_stagnation_economic_4
+				add_idea = JAP_stagnation_economic_5
+			}
+		}
+	}
+}

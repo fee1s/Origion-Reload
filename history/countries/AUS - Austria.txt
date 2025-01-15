@@ -1,0 +1,50 @@
+﻿capital = 4
+
+oob = "AUS_1936"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+
+add_ideas = {
+    BAN_BAN
+}
+
+country_lock_all_division_template = yes
+
+recruit_character = AUS_kurt_schuschnigg
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 48
+	fascism = 50
+	democratic = 1
+	communism = 1
+}
+
+set_stability = 0.50
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 650
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 23000
+}

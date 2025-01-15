@@ -1,0 +1,1547 @@
+add_namespace = origion
+
+news_event = { # триумф оси в египте
+	id = origion.1
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			447 = { is_controlled_by = ITA }
+			447 = { is_controlled_by = GER }
+			447 = { is_controlled_by = ROM }
+		}
+		
+		OR = {
+			907 = { is_controlled_by = ITA }
+			907 = { is_controlled_by = GER }
+			907 = { is_controlled_by = ROM }
+		}
+		
+		OR = {
+			446 = { is_controlled_by = ITA }
+			446 = { is_controlled_by = GER }
+			446 = { is_controlled_by = ROM }
+		}
+		
+		ENG = {
+			NOT = {
+				has_completed_focus = uk_counter_offensive_cairo
+			}
+		}
+		
+		ENG = {
+			NOT = {
+				has_completed_focus = uk_defeat_of_the_italian_corps
+			}
+		}
+	}
+	
+	immediate = {
+		ITA = {
+			complete_national_focus = ITA_axis_triumph_egypt
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # ось сдает африку до мая 1941
+	id = origion.2
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date < 1941.05.1
+		ENG = {
+			NOT = {
+				has_completed_focus = uk_counter_offensive_cairo
+			}
+		}
+				OR = {
+					661 = { is_controlled_by = ENG }
+					661 = { is_controlled_by = FRA }
+					661 = { is_controlled_by = CAN }
+					661 = { is_controlled_by = RAJ }
+					661 = { is_controlled_by = AST }
+					661 = { is_controlled_by = NZL }
+					661 = { is_controlled_by = SAF }
+					661 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					448 = { is_controlled_by = ENG }
+					448 = { is_controlled_by = FRA }
+					448 = { is_controlled_by = CAN }
+					448 = { is_controlled_by = RAJ }
+					448 = { is_controlled_by = AST }
+					448 = { is_controlled_by = NZL }
+					448 = { is_controlled_by = SAF }
+					448 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					449 = { is_controlled_by = ENG }
+					449 = { is_controlled_by = FRA }
+					449 = { is_controlled_by = CAN }
+					449 = { is_controlled_by = RAJ }
+					449 = { is_controlled_by = AST }
+					449 = { is_controlled_by = NZL }
+					449 = { is_controlled_by = SAF }
+					449 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					662 = { is_controlled_by = ENG }
+					662 = { is_controlled_by = FRA }
+					662 = { is_controlled_by = CAN }
+					662 = { is_controlled_by = RAJ }
+					662 = { is_controlled_by = AST }
+					662 = { is_controlled_by = NZL }
+					662 = { is_controlled_by = SAF }
+					662 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					663 = { is_controlled_by = ENG }
+					663 = { is_controlled_by = FRA }
+					663 = { is_controlled_by = CAN }
+					663 = { is_controlled_by = RAJ }
+					663 = { is_controlled_by = AST }
+					663 = { is_controlled_by = NZL }
+					663	 = { is_controlled_by = SAF }
+					663	 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					450 = { is_controlled_by = ENG }
+					450 = { is_controlled_by = FRA }
+					450 = { is_controlled_by = CAN }
+					450 = { is_controlled_by = RAJ }
+					450 = { is_controlled_by = AST }
+					450 = { is_controlled_by = NZL }
+					450 = { is_controlled_by = SAF }
+					450 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					451 = { is_controlled_by = ENG }
+					451 = { is_controlled_by = FRA }
+					451 = { is_controlled_by = CAN }
+					451 = { is_controlled_by = RAJ }
+					451 = { is_controlled_by = AST }
+					451 = { is_controlled_by = NZL }
+					451	 = { is_controlled_by = SAF }
+					451 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					665 = { is_controlled_by = ENG }
+					665 = { is_controlled_by = FRA }
+					665 = { is_controlled_by = CAN }
+					665 = { is_controlled_by = RAJ }
+					665 = { is_controlled_by = AST }
+					665 = { is_controlled_by = NZL }
+					665 = { is_controlled_by = SAF }
+					665 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					458 = { is_controlled_by = ENG }
+					458 = { is_controlled_by = FRA }
+					458 = { is_controlled_by = CAN }
+					458 = { is_controlled_by = RAJ }
+					458 = { is_controlled_by = AST }
+					458 = { is_controlled_by = NZL }
+					458	 = { is_controlled_by = SAF }
+					458	 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					984 = { is_controlled_by = ENG }
+					984 = { is_controlled_by = FRA }
+					984 = { is_controlled_by = CAN }
+					984 = { is_controlled_by = RAJ }
+					984 = { is_controlled_by = AST }
+					984 = { is_controlled_by = NZL }
+					984	 = { is_controlled_by = SAF }
+					984	 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					983 = { is_controlled_by = ENG }
+					983 = { is_controlled_by = FRA }
+					983 = { is_controlled_by = CAN }
+					983 = { is_controlled_by = RAJ }
+					983 = { is_controlled_by = AST }
+					983 = { is_controlled_by = NZL }
+					983	 = { is_controlled_by = SAF }
+					983	 = { is_controlled_by = USA }
+				}
+	}
+	
+	immediate = {
+		ENG = {
+			complete_national_focus = uk_defeat_of_the_italian_corps
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # ось сдает африку после мая 1941
+	id = origion.3
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1941.05.1
+		ENG = {
+			NOT = {
+				has_completed_focus = uk_defeat_of_the_italian_corps
+			}
+		}
+				OR = {
+					661 = { is_controlled_by = ENG }
+					661 = { is_controlled_by = FRA }
+					661 = { is_controlled_by = CAN }
+					661 = { is_controlled_by = RAJ }
+					661 = { is_controlled_by = AST }
+					661 = { is_controlled_by = NZL }
+					661 = { is_controlled_by = SAF }
+					661 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					448 = { is_controlled_by = ENG }
+					448 = { is_controlled_by = FRA }
+					448 = { is_controlled_by = CAN }
+					448 = { is_controlled_by = RAJ }
+					448 = { is_controlled_by = AST }
+					448 = { is_controlled_by = NZL }
+					448 = { is_controlled_by = SAF }
+					448 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					449 = { is_controlled_by = ENG }
+					449 = { is_controlled_by = FRA }
+					449 = { is_controlled_by = CAN }
+					449 = { is_controlled_by = RAJ }
+					449 = { is_controlled_by = AST }
+					449 = { is_controlled_by = NZL }
+					449 = { is_controlled_by = SAF }
+					449 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					662 = { is_controlled_by = ENG }
+					662 = { is_controlled_by = FRA }
+					662 = { is_controlled_by = CAN }
+					662 = { is_controlled_by = RAJ }
+					662 = { is_controlled_by = AST }
+					662 = { is_controlled_by = NZL }
+					662 = { is_controlled_by = SAF }
+					662 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					663 = { is_controlled_by = ENG }
+					663 = { is_controlled_by = FRA }
+					663 = { is_controlled_by = CAN }
+					663 = { is_controlled_by = RAJ }
+					663 = { is_controlled_by = AST }
+					663 = { is_controlled_by = NZL }
+					663	 = { is_controlled_by = SAF }
+					663	 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					450 = { is_controlled_by = ENG }
+					450 = { is_controlled_by = FRA }
+					450 = { is_controlled_by = CAN }
+					450 = { is_controlled_by = RAJ }
+					450 = { is_controlled_by = AST }
+					450 = { is_controlled_by = NZL }
+					450 = { is_controlled_by = SAF }
+					450 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					451 = { is_controlled_by = ENG }
+					451 = { is_controlled_by = FRA }
+					451 = { is_controlled_by = CAN }
+					451 = { is_controlled_by = RAJ }
+					451 = { is_controlled_by = AST }
+					451 = { is_controlled_by = NZL }
+					451	 = { is_controlled_by = SAF }
+					451 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					665 = { is_controlled_by = ENG }
+					665 = { is_controlled_by = FRA }
+					665 = { is_controlled_by = CAN }
+					665 = { is_controlled_by = RAJ }
+					665 = { is_controlled_by = AST }
+					665 = { is_controlled_by = NZL }
+					665 = { is_controlled_by = SAF }
+					665 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					458 = { is_controlled_by = ENG }
+					458 = { is_controlled_by = FRA }
+					458 = { is_controlled_by = CAN }
+					458 = { is_controlled_by = RAJ }
+					458 = { is_controlled_by = AST }
+					458 = { is_controlled_by = NZL }
+					458	 = { is_controlled_by = SAF }
+					458	 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					984 = { is_controlled_by = ENG }
+					984 = { is_controlled_by = FRA }
+					984 = { is_controlled_by = CAN }
+					984 = { is_controlled_by = RAJ }
+					984 = { is_controlled_by = AST }
+					984 = { is_controlled_by = NZL }
+					984	 = { is_controlled_by = SAF }
+					984	 = { is_controlled_by = USA }
+				}
+				
+				OR = {
+					983 = { is_controlled_by = ENG }
+					983 = { is_controlled_by = FRA }
+					983 = { is_controlled_by = CAN }
+					983 = { is_controlled_by = RAJ }
+					983 = { is_controlled_by = AST }
+					983 = { is_controlled_by = NZL }
+					983	 = { is_controlled_by = SAF }
+					983	 = { is_controlled_by = USA }
+				}
+	}
+	
+	immediate = {
+		ENG = {
+			complete_national_focus = uk_counter_offensive_cairo
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # вступление италии в войну против союзников
+	id = origion.4
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1940.5.31
+		GER = {
+			has_war_with = ENG
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				GER = { is_faction_leader = yes }
+			}
+			
+			GER = { add_to_faction = ITA }
+		}
+		
+		ITA = {
+			set_rule = {
+				can_join_factions = yes
+			}
+			
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				declare_war_on = {
+					target = ENG
+					type = annex_everything
+				}
+			}
+			for_each_scope_loop = {
+				array = ENG.allies
+				if = {
+					limit = {
+						NOT = {
+							original_tag = BUL
+						}
+					}
+				}
+				add_to_war = {
+					targeted_alliance = ENG
+					enemy = ITA
+				}
+			}
+		}
+		
+		458 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		665 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		448 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		661 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		449 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		662 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		450 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		451 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		663 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		984 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+		
+		983 = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = ENG
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					FRA = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = FRA
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					CAN = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = CAN
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					RAJ = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = RAJ
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					SAF = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = SAF
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					NZL = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = NZL
+					days = 14
+				}
+			}
+			
+			if = {
+				limit = {
+					AST = { exists = yes }
+				}
+				
+				add_dynamic_modifier = {
+					modifier = ENG_unpredictable_invasion
+					scope = AST
+					days = 14
+				}
+			}
+		}
+
+		ITA = {
+			add_timed_idea = {
+				idea = africa_supply_buff
+				days = 180
+			}
+		}
+		
+		GER = {
+			add_timed_idea = {
+				idea = africa_supply_buff
+				days = 180
+			}
+		}
+	
+		HUN = {
+			add_timed_idea = {
+				idea = africa_supply_buff
+				days = 180
+			}
+		}
+		
+		ROM = {
+			add_timed_idea = {
+				idea = africa_supply_buff
+				days = 180
+			}
+		}
+		
+		BUL = {
+			add_timed_idea = {
+				idea = africa_supply_buff
+				days = 180
+			}
+		}
+		
+		sound_effect = psi_ita_join_war
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # -тнп за продажу самолетов Югославии (интегрировано)
+	id = origion.5
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1937.12.30
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				ITA = { exists = yes }
+			}
+			
+			ITA = {
+				add_timed_idea = {
+					idea = YUG_air_payment
+					days = 180
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				GER = { exists = yes }
+			}
+			
+			GER = {
+				add_timed_idea = {
+					idea = YUG_air_payment
+					days = 180
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				FRA = { exists = yes }
+			}
+			
+			FRA = {
+				add_timed_idea = {
+					idea = YUG_air_payment
+					days = 180
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				ENG = { exists = yes }
+			}
+			
+			ENG = {
+				add_timed_idea = {
+					idea = YUG_air_payment
+					days = 180
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+
+news_event = { # начало блау новости
+	id = origion.6
+	title = origion.6.t
+	desc = origion.6.d
+	picture = GFX_news_event_fall_blau
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.6.a
+	}
+	
+	immediate = { hidden_effect = { sound_effect = psi_blau_speech } }
+}
+
+news_event = { # напряга за марко поло в ноу азии
+	id = origion.7
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1937.07.22
+		JAP = { exists = no }
+	}
+	
+	immediate = {
+		add_named_threat = {
+			threat = 10
+			name = news.1.t
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # напряга за конец аннекса китая в ноу азии
+	id = origion.8
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1938.07.22
+		JAP = { exists = no }
+	}
+	
+	immediate = {
+		add_named_threat = {
+			threat = 30
+			name = JAP_secure_china
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # авиационный опыт за Испанию
+	id = origion.9
+	hidden = yes
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1936.08.01
+	}
+	immediate = {
+		GER = {
+			air_experience = 300
+		}
+		SOV = {
+			air_experience = 300
+		}
+		HUN = {
+			air_experience = 200
+		}
+		ITA = {
+			air_experience = 300
+		}
+		JAP = {
+			air_experience = 300
+		}
+	}	
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+country_event = { # передача стейтов на ост-фронте от румына в германию автоматически (кд в десижене на влет)
+	id = origion.10
+	
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = origion.10.a
+		ROM = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = SOV				
+				}
+				GER = { set_state_controller = PREV }				
+			}		
+		}
+	}
+}

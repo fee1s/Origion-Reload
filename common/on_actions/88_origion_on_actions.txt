@@ -1,0 +1,155 @@
+on_actions = {
+    on_startup = {
+		effect = {
+			COL = {
+				give_resource_rights = {
+					receiver = USA
+					state = 479
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 480
+				}
+				give_resource_rights = {
+					receiver = ENG
+					state = 477
+				}
+				give_resource_rights = {
+					receiver = ENG
+					state = 476
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 277
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 478
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 485
+				}
+		    }
+	    }
+	}
+	on_startup = { ### NO ASIA
+	    effect = {
+		    if = {
+			    limit = {
+				    has_global_flag = NO_ASIA_FLAG
+				}
+				276 = { # Канада
+				    add_resource  = {
+					    type = steel
+						amount = 80
+					}
+					 add_resource  = {
+					    type = tungsten
+						amount = 40
+					}
+					 add_resource  = {
+					    type = aluminium
+						amount = 40
+					}
+				}
+				468 = { # Канада
+				    add_resource  = {
+					    type = steel
+						amount = 80
+					}
+					 add_resource  = {
+					    type = tungsten
+						amount = 40
+					}
+					 add_resource  = {
+					    type = aluminium
+						amount = 40
+					}
+					add_resource  = {
+					    type = oil
+						amount = 50
+					}
+				}
+				COL = {
+					give_resource_rights = {
+						receiver = CAN
+						state = 393
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 394
+					}
+					give_resource_rights = {
+						receiver = CAN
+						state = 391
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 378
+					}
+					give_resource_rights = {
+						receiver = CAN
+						state = 379
+					}
+					give_resource_rights = {
+						receiver = CAN
+						state = 380
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 377
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 376
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 375
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 368
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 373
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 315
+					}
+					give_resource_rights = {
+						receiver = SAF
+						state = 360
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 358
+					}
+					give_resource_rights = {
+						receiver = SAF
+						state = 357
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 371
+					}
+					give_resource_rights = {
+						receiver = ENG
+						state = 383
+					}
+					give_resource_rights = {
+						receiver = CAN
+						state = 387
+					}
+					give_resource_rights = {
+						receiver = CAN
+						state = 382
+					}
+				}
+			}
+		}
+	}
+}

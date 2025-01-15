@@ -1,0 +1,38 @@
+state={
+	id=726
+	name="STATE_726"
+	manpower=123214
+	state_category = small_island
+	
+	resources={
+		oil = 4
+		rubber = 6
+	}
+	
+	history={
+		owner = AST
+		add_core_of = AST
+		buildings = {
+			infrastructure = 2
+			7290 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			7290 1
+		}
+		1936.1.1.13 = {
+			owner = COL
+			add_core_of = COL
+		}
+		1936.1.1.14 = {
+            owner = AST
+            add_core_of = AST
+        }
+	}
+	provinces={
+		7290 13080 
+	}
+
+	local_supplies=0.0 
+}

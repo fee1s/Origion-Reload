@@ -1,0 +1,47 @@
+#################
+#### GERMANY ####
+#################
+
+GER_mefo_bills_category = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		original_tag = GER
+	}
+	priority = 10
+}
+
+GER_operations = {
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		original_tag = GER
+	}
+	priority = 9
+	icon = GFX_GER_so_category
+	picture = GFX_GER_so_fix
+}
+
+GER_reichskommissariats = {
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		original_tag = GER
+	}
+	priority = 8
+}
+
+GER_military_buildup = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+
+	}
+}

@@ -1,0 +1,46 @@
+﻿shared_focus = {
+	id = CHI_invite_foreign_investors 
+	icon = GFX_focus_generic_concessions
+	x = 40
+	y = 0
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			tag = PRC
+		}
+	}
+	offset = {
+		x = -16
+		y = 0
+		trigger = {
+			 tag = MAN 
+		}
+	}
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}

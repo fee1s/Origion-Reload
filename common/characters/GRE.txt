@@ -1,0 +1,60 @@
+characters={
+	GRE_konstantinos_demertzis={
+		name=GRE_konstantinos_demertzis
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_konstantinos_demertzis"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ monarchist_puppet }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_ioannis_metaxas={
+		instance={
+			allowed={ NOT = { has_dlc = "Battle for the Bosporus" } }
+			name=GRE_ioannis_metaxas
+			portraits={
+				civilian={
+					large=GFX_portrait_GRE_ioannis_metaxas
+				}
+			}
+			country_leader={
+				ideology=despotism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+		instance={
+			allowed = { has_dlc = "Battle for the Bosporus" }
+			name=GRE_ioannis_metaxas
+			portraits={
+				army={
+					small="GFX_idea_gre_ioannis_metaxas"
+				}
+				civilian={
+					large=GFX_portrait_GRE_ioannis_metaxas
+				}
+			}
+			
+			country_leader = {
+				ideology = despotism
+				expire="1965.1.1.1"
+				traits = { 
+					arkhigos
+				}
+			}
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					arkhigos
+				}
+			}
+		}
+	}
+}

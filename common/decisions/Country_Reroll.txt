@@ -1,0 +1,73 @@
+origion_rerol_dec_cat = {
+    origion_rerol_dec_SOV = {
+		icon = generic_army_support
+		cosmetic_tag = SOV
+		cosmetic_ideology = communism	
+        visible = {
+		    always = yes
+		}
+		available = {
+			ROOT = { is_ai = no }
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			hidden_effect = {
+		        random_country = {
+			        limit = {
+					tag = SOV
+			        }
+					change_tag_from = ROOT				
+				}
+			}
+		}
+	}
+	
+	origion_rerol_dec_ENG = {
+		icon = generic_army_support
+		cosmetic_tag = ENG
+		cosmetic_ideology = democratic
+		visible = {
+			always = yes
+		}
+		available = {
+			ROOT = { is_ai = no }
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			hidden_effect = {
+				random_country = {
+					limit = {
+					tag = ENG
+					}
+					change_tag_from = ROOT
+				}
+			}
+		}
+	}
+
+	origion_rerol_dec_USA = {
+		icon = generic_army_support
+		cosmetic_tag = USA
+		cosmetic_ideology = democratic
+		visible = {
+			always = yes
+		}
+		available = {
+			ROOT = { is_ai = no }
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			hidden_effect = {
+				random_country = {
+					limit = {
+					tag = USA
+					}
+					change_tag_from = ROOT			
+				}
+			}
+		}
+	}
+}

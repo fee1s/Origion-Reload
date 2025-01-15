@@ -1,0 +1,570 @@
+ENG_narvik_crisis_cat = {
+	ENG_narvik_crisis = {
+		icon = generic_operation
+		available = {
+			GER = { has_completed_focus = GER_resource }
+			
+			OR = {
+				AND = {
+					144 = { is_fully_controlled_by = ROOT }
+					924 = { is_fully_controlled_by = ROOT }
+					923 = { is_fully_controlled_by = ROOT }
+					143 = { is_fully_controlled_by = ROOT }
+				}
+					
+				any_allied_country = {
+					has_full_control_of_state = 144
+					has_full_control_of_state = 924
+					has_full_control_of_state = 923
+					has_full_control_of_state = 143
+				}
+			}
+		}
+		
+		visible = {
+			ENG = {
+				NOT = {
+					has_country_flag = ENG_activated_plan_rfour
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					GER = {
+						has_completed_focus = GER_swedish_trade_agreement
+					}
+				}
+				
+				GER = {
+					remove_resource_rights = 918
+					remove_resource_rights = 666
+				}
+			}
+			
+			SWE = { 
+				send_embargo = GER
+				send_embargo = ITA
+				send_embargo = ROM
+				send_embargo = HUN
+				send_embargo = BUL
+			}
+				
+			hidden_effect = {
+				GER = { country_event = { id = AAT_britain_narvik.2 hours = 1} }
+				SWE = { country_event = { id = AAT_britain_narvik.2 hours = 1 } }
+			}
+			
+			hidden_effect = {
+				set_country_flag = ENG_activated_plan_rfour
+			}
+		}
+	}
+}
+
+political_actions = {
+	hold_blood_toil_tears_sweat_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = blood_toil_tears_sweat_speech }
+			}
+			set_country_flag = blood_toil_tears_sweat_speech
+			play_blood_toil_tears_sweat_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_fight_on_the_beaches_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = {
+				surrender_progress > 0.2
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = blood_toil_tears_sweat_speech
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = fight_on_the_beaches_speech }
+			}
+			set_country_flag = fight_on_the_beaches_speech
+			play_we_shall_fight_on_the_beaches_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_this_was_their_finest_hour_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = { has_capitulated = yes }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = fight_on_the_beaches_speech
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = this_was_their_finest_hour_speech }
+			}
+			set_country_flag = this_was_their_finest_hour_speech
+			play_their_finest_hour_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	macdonald_proposal = {
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			NOT = {
+				has_war_with = IRE
+			}
+			IRE = { exists = yes }
+			NOT = { is_in_faction_with = IRE }
+			FRA = { has_capitulated = yes }
+			is_in_faction_with = FRA
+		}
+
+		cost = 50
+		
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+			NOT = { is_in_faction_with = IRE }
+		}
+		
+		complete_effect = {
+			IRE = { country_event = { id = wtt_britain.24 } }
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ENG_request_azores_lease = {
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			has_war = yes
+			has_government = democratic
+			POR = {
+				has_full_control_of_state = 698
+				OR = {
+					has_government = ROOT
+					has_government = neutrality
+				}
+			}
+			POR = { is_in_faction = no }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		visible = {
+			has_war = yes
+			POR = {
+				has_full_control_of_state = 698
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		
+		complete_effect = {
+			POR = { country_event = wtt_britain_lease_azores.1 }
+		}
+	}
+
+	ENG_abdication_crisis = { # timer for the player to see when the event chain ends
+
+		priority = 10
+
+		icon = eng_abdication_crisis
+		
+		available = {
+			has_country_flag = ENG_abdication_crisis_changed_mind
+		}
+
+		days_mission_timeout = 200
+
+		fire_only_once = yes
+
+		activation = {
+			tag = ENG
+			OR = {
+				has_country_flag = ENG_abdication_crisis_normal_marriage
+				has_country_flag = ENG_abdication_crisis_morganatic_marriage
+			}
+		}
+
+		visible = {
+			tag = ENG
+			NOT = {
+				has_country_flag = ENG_edward_viii_abdicated
+				has_country_flag = edward_viii_married_wallis_simpson
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = yes
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			country_event = { id = mtg_britain.5 }
+		}
+	}
+
+}
+
+operations = {
+
+	operation_fork = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			ICE = { exists = yes }
+			IF = {
+				limit = {
+					NOR = { has_government = democratic }
+				}
+				NOR = { has_capitulated = yes }
+				is_in_faction_with = NOR
+			}
+			ELSE = {
+				any_country_with_original_tag = {
+					original_tag_to_check = NOR 
+					has_capitulated = yes
+					is_in_faction_with = ROOT 
+				}
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 200 
+				ICE = {
+					has_completed_focus = ICE_declare_absolute_neutrality
+				}	
+			}
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+			ICE = { exists = yes }
+			NOT = { ICE = { is_in_faction_with = ROOT } }
+			ICE = {
+				NOT = { has_completed_focus = ICE_united_we_stand }
+			}
+		}
+		
+		complete_effect = {
+			ICE = { country_event = { id = britain.25 days = 1} }
+			add_popularity = { ideology = democratic popularity = -0.05 }
+		}
+	}
+
+	# the Occupation of the Faroes
+	ENG_operation_valentine = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = { #Dublicate of Visibility intented
+			DEN = {
+				is_subject = yes
+				NOT = {
+					is_in_faction_with = var:DEN.DEN_overlord_nation
+				}
+			}
+			has_war_with = var:DEN.DEN_overlord_nation
+			337 = {
+				is_controlled_by = DEN
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			# We want to do this
+			base = 50
+			modifier = {
+				# Fascist Germany is a lot more scary than other versions of Germany
+				factor = 2 	
+				GER = {
+					has_government = fascism
+				}
+			}
+			modifier = {
+				# Iceland has gone their own path, so we can consolidate the North Sea
+				factor = 2 	
+				ICE = {
+					has_completed_focus = ICE_declare_absolute_neutrality
+				}
+			}
+			modifier = {
+				# Norway has already fallen, we are too late
+				factor = 6
+				any_country = {
+					has_government = democratic
+					original_tag = NOR
+					is_in_faction_with = ROOT
+					has_capitulated = yes
+				}
+			}
+		}
+		
+		visible = {
+			original_tag = ENG
+			DEN = {
+				is_subject = yes
+				NOT = {
+					is_in_faction_with = var:DEN.DEN_overlord_nation
+				}
+			}
+			has_war_with = var:DEN.DEN_overlord_nation
+			337 = {
+				is_controlled_by = DEN
+			}
+			has_dlc = "Arms Against Tyranny"
+		}
+		
+		complete_effect = {
+			DEN = { country_event = { id = AAT_USA_events.02 days = 2 } }
+			add_popularity = { 
+				ideology = ROOT 
+				popularity = -0.02
+			}
+			add_stability = -0.01
+			ROOT = {
+				transfer_state = 337
+			}
+			337 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 13003
+				}	
+			}
+			hidden_effect = {
+				set_global_flag = ENG_occupied_DEN_faroes
+			}
+		}
+	}
+	
+	invade_ireland = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+			NOT = { is_in_faction_with = IRE }
+			IF = {
+				limit = {
+					NOR = { has_government = democratic }
+				}
+				NOR = { has_capitulated = yes }
+				is_in_faction_with = NOR
+			}
+			ELSE = {
+				any_country_with_original_tag = {
+					original_tag_to_check = NOR 
+					has_capitulated = yes
+					is_in_faction_with = ROOT
+				}
+			}
+			FRA = { has_capitulated = yes }
+			is_in_faction_with = FRA
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				any_enemy_country = {
+					has_attache_from = IRE
+				}
+			}
+			modifier = {
+				add = 1
+				has_opinion = { target = IRE value < -50 }
+			}
+			modifier = {
+				add = 1
+				IRE = { has_added_tension_amount > 0.05 }
+			}
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+			IRE = { exists = yes }
+		}
+		
+		complete_effect = {
+			add_state_claim = 113
+			add_state_claim = 134
+			add_state_claim = 135
+			declare_war_on = { target = IRE type = annex_everything }
+			add_stability = -0.05
+			add_popularity = { ideology = democratic popularity = -0.03 }
+		}
+	}
+
+
+}

@@ -1,0 +1,47 @@
+characters={
+
+#########################
+#########################
+#### COUNTRY LEADERS ####
+#########################
+#########################
+
+#### DEMOCRATIC ####
+
+	DEN_thorvald_stauning = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = DEN_thorvald_stauning
+			portraits={
+				civilian={
+					large = GFX_portrait_Thorvald_Stauning
+					small = GFX_portrait_DEN_thorvald_stauning_small
+				}
+			}
+			country_leader = {
+				ideology = socialism
+				traits = { DEN_socialdemokrat }
+				expire = "1965.1.1.1"
+				id = -1
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name = DEN_thorvald_stauning
+			portraits={
+				civilian={
+					large=GFX_portrait_Thorvald_Stauning
+				}
+			}
+			country_leader={
+				ideology=socialism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

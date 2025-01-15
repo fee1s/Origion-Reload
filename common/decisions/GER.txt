@@ -1,0 +1,1657 @@
+GER_mefo_bills_category = {
+	GER_mefo_bills_mission = {
+		allowed = { always = no }
+		icon = ger_mefo_bills
+		available = {
+			NOT = { has_government = democratic }
+			GER_can_delay_mefo_payment = yes
+			has_political_power > 0
+			hidden_trigger = { always = no }
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { GER_has_mefo_bills = yes }
+					has_idea = GER_mefo_bills_ended
+				}
+			}
+		}
+		days_remove = GER_extend_mefo_bills_days?0
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = ger_has_cancelled_mefo
+				}
+				GER_remove_mefo_bills = yes
+				#1
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+					}
+					add_political_power = -20
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 60 }
+				}
+				#2
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 20 compare = equals }
+					}
+					add_political_power = -40
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 80 }
+				}
+				#3
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 30 compare = equals }
+					}
+					add_political_power = -60
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 100 }
+				}
+				#4
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 40 compare = equals }
+					}
+					add_political_power = -80
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 120 }
+				}
+				#5
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 50 compare = equals }
+					}
+					add_political_power = -100
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 140 }
+				}
+				#6
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 60 compare = equals }
+					}
+					add_political_power = -120
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 160 }
+				}
+				#7
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 70 compare = equals }
+					}
+					add_political_power = -140
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 180 }
+				}
+				#8
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 80 compare = equals }
+					}
+					add_political_power = -160
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 200 }
+				}
+				#9
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 90 compare = equals }
+					}
+					add_political_power = -180
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 220 }
+				}
+				#10
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 100 compare = equals }
+					}
+					add_political_power = -200
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 240 }
+				}
+				#11
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 110 compare = equals }
+					}
+					add_political_power = -220
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 260 }
+				}
+				#12
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 120 compare = equals }
+					}
+					add_political_power = -240
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 280 }
+				}
+				#13
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 130 compare = equals }
+					}
+					add_political_power = -260
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 300 }
+				}
+				#14
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 140 compare = equals }
+					}
+					add_political_power = -280
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 320 }
+				}
+				#15
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 150 compare = equals }
+					}
+					add_political_power = -300
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 340 }
+				}
+				#16
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 160 compare = equals }
+					}
+					add_political_power = -320
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 360 }
+				}
+				#17
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 170 compare = equals }
+					}
+					add_political_power = -340
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 380 }
+				}
+				#18
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 180 compare = equals }
+					}
+					add_political_power = -360
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 400 }
+				}
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 180 compare = greater_than }
+					}
+					add_political_power = -380
+					add_timed_idea = { idea = GER_mefo_bills_ended days = 420 }
+				}
+			}
+			else = {
+				custom_effect_tooltip = GER_mefo_bills_mission_tt
+				custom_effect_tooltip = GER_mefo_bills_effect_in_days
+				hidden_effect = {
+					set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+					set_country_flag = paid_for_mefo
+				}
+				GER_mefo_bills_level_up = yes
+				if = {
+					limit = {
+						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+					}
+					hidden_effect = { set_variable = { var = GER_mefo_bill_counter value = 10 } }
+				}
+				add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+				hidden_effect = {
+					activate_mission = GER_mefo_bills_mission
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	GER_cancel_mefos = {
+		icon = ger_mefo_bills
+		available = {
+			hidden_trigger = {
+				NOT = { has_country_flag = ger_has_cancelled_mefo }
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		visible = {
+			hidden_trigger = {
+				NOT = { has_country_flag = ger_has_cancelled_mefo }
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+		cancel_if_not_visible = yes
+		remove_effect = {
+			set_country_flag = ger_has_cancelled_mefo
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	GER_renew_mefos = {
+		icon = ger_mefo_bills
+		available = {
+			hidden_trigger = {
+				has_country_flag = ger_has_cancelled_mefo
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		visible = {
+			hidden_trigger = {
+				has_country_flag = ger_has_cancelled_mefo
+				NOT = {
+					OR = {
+						NOT = { GER_has_mefo_bills = yes }
+						has_idea = GER_mefo_bills_ended
+					}
+				}
+			}
+		}
+		cancel_if_not_visible = yes
+		remove_effect = {
+			clr_country_flag = ger_has_cancelled_mefo
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+GER_operations = {
+	GER_treaty_of_craiova = {
+		icon = GFX_GER_so_decision
+		available = {
+			BUL = {
+				is_in_faction_with = GER
+				is_ai = no
+			}
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			ROM = {
+				country_event = { id = romania.5 hours = 3 }
+			}
+		}
+	}
+	GER_fall_wise = {
+		icon = GFX_GER_so_decision
+		available = {
+			has_completed_focus = GER_danzig_or_war
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				ENG = { add_to_faction = POL }
+            	ENG = { add_to_faction = FRA }
+				GER = { add_to_faction = HUN }
+            	GER = { add_to_faction = ROM }
+            	GER = { add_to_faction = BUL }
+				sound_effect = psi_ww2
+			}
+			GER = {
+                declare_war_on = {
+                    target = POL
+                	type = annex_everything
+                }
+                declare_war_on_all_allies = yes
+            }
+		}
+	}
+	GER_fall_weserubung = {
+		icon = GFX_GER_so_decision
+		available = {
+			has_completed_focus = GER_weserubung
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+                declare_war_on = {
+                    target = DEN
+                	type = annex_everything
+                }
+                declare_war_on = {
+                    target = NOR
+                	type = annex_everything
+                }
+            }
+			
+			hidden_effect = {
+				ENG = { add_to_faction = DEN }
+            	ENG = { add_to_faction = NOR }
+			}
+			
+			if = {
+				limit = {
+					has_war = yes
+				}
+				ROOT_call_all_allies_against_DEN_NOR = yes
+			}
+		}
+	}
+	GER_fall_gelb = {
+		icon = GFX_GER_so_decision
+		available = {
+			has_completed_focus = GER_around_maginot
+			has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+                declare_war_on = {
+                    target = HOL
+                	type = annex_everything
+                }
+                declare_war_on = {
+                    target = BEL
+                	type = annex_everything
+                }
+                declare_war_on = {
+                    target = LUX
+                	type = annex_everything
+                }
+				add_timed_idea = {
+					idea = GER_fall_gelb_idea
+					days = 45
+				}
+            }
+			
+			hidden_effect = {
+				ENG = { add_to_faction = HOL }
+            	ENG = { add_to_faction = BEL }
+            	ENG = { add_to_faction = LUX }
+			}
+			
+			if = {
+				limit = {
+					has_war = yes
+				}
+				ROOT_call_all_allies_against_benelux = yes
+			}
+		}
+	}
+	GER_ROT = {
+		icon = GFX_GER_so_decision
+		available = {
+			date > 1940.1.1
+			date < 1940.3.1
+		    has_war = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_timed_idea = {
+				idea = GER_fall_rot_idea
+				days = 90
+			}
+		}
+	}
+	Ger_fall_barbarossa = {
+		icon = GFX_GER_so_decision
+		available = {
+			has_completed_focus = GER_ussr_war_goal
+			date > 1941.6.22
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			GER = {
+                declare_war_on = {
+                    target = SOV
+                	type = annex_everything
+                }
+				add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
+			}
+			hidden_effect = {
+				ITA = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = SOV
+					}
+					add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
+				}
+				HUN = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = SOV
+					}
+					add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
+				}
+				ROM = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = SOV
+					}
+					
+					country_event = { id = origion.10 days = 7 }
+					country_event = { id = origion.10 days = 14 }
+					country_event = { id = origion.10 days = 21 }
+					country_event = { id = origion.10 days = 40 }
+					country_event = { id = origion.10 days = 60 }
+					country_event = { id = origion.10 days = 80 }
+					
+					add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
+            	}
+				BUL = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = SOV
+					}
+					
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = ENG
+					}
+					
+					add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
+            	}
+				
+				if = {
+					limit = { USA = { exists = no } }
+					
+					COL = { transfer_state = 336 }
+				}
+			}
+		}
+	}
+	Ger_fall_blau = {
+		icon = GFX_GER_so_decision
+		available = {
+			has_completed_focus = GER_operation_Blau
+			date > 1942.6.1
+			date < 1942.9.1
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				ITA = {
+					add_timed_idea = {
+						idea = GER_Blau
+						days = 75
+					}
+				}
+				ROM = {
+					add_timed_idea = {
+						idea = GER_Blau
+						days = 75
+					}
+				}
+				HUN = {
+					add_timed_idea = {
+						idea = GER_Blau
+						days = 75
+					}
+				}
+				BUL = {
+					add_timed_idea = {
+						idea = GER_Blau
+						days = 75
+					}
+				}
+				country_event = { id = origion.6 days = 3 }
+			}
+			add_timed_idea = {
+				idea = GER_Blau
+				days = 75
+			}
+		}
+	}
+	GER_ITA = {
+		icon = GFX_GER_so_decision
+         
+		available = {
+			ITA = {
+				surrender_progress > 0.20
+			}
+		}
+		fire_only_once = yes
+		
+		complete_effect = {
+		    ITA = { 
+				add_ideas = german_occupation
+				hidden_effect = { set_cosmetic_tag = ITA_repubblica_sociale_italiana }
+			}
+			
+			if = {
+				limit = { 39 = { is_controlled_by = ITA } }
+				
+				GER = { transfer_state = 39 add_state_core = 39 }
+			}
+			
+			if = {
+				limit = { 850 = { is_controlled_by = ITA } }
+				
+				GER = { transfer_state = 850 add_state_core = 850 }
+			}
+			
+			if = {
+				limit = { 736 = { is_controlled_by = ITA } }
+				
+				GER = { transfer_state = 736 add_state_core = 736 }
+			}	
+			
+			if = {
+				limit = { 852 = { is_controlled_by = ITA } }
+				
+				GER = { transfer_state = 852 add_state_core = 852 }
+			}
+			
+			if = {
+				limit = { 102 = { is_controlled_by = ITA } }
+				
+				GER = { transfer_state = 102 add_state_core = 102 }
+			}
+			
+			if = {
+				limit = { 853 = { is_controlled_by = ITA } }
+				
+				GER = { transfer_state = 853 add_state_core = 853 }
+			}			
+		}
+	}
+	GER_aviation_ll_to_hungary = {
+		icon = GFX_GER_so_decision
+		available = { HUN = { is_ai = no } }
+		visible = { NOT = { has_country_flag = aviation_ll_to_hungary_enabled } }
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			set_country_flag = aviation_ll_to_hungary_enabled
+			activate_mission = GER_aviation_ll_to_hungary_first
+		}
+	}
+	GER_stop_aviation_ll_to_hungary = {
+		icon = GFX_GER_so_decision
+		visible = { has_country_flag = aviation_ll_to_hungary_enabled } 
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			clr_country_flag = aviation_ll_to_hungary_enabled
+		}
+	}
+	GER_aviation_ll_to_hungary_first = { 
+		icon = GFX_GER_so_decision
+		activation = { always = no }
+		allowed = { always = no }
+		available = { NOT = { has_country_flag = aviation_ll_to_hungary_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 6
+		timeout_effect = { 
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 49 } 
+						has_equipment = { small_plane_airframe < 100 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 50 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 99 } 
+						has_equipment = { small_plane_airframe < 200 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 100 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 199 } 
+						has_equipment = { small_plane_airframe < 300 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 200 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 299 } 
+						has_equipment = { small_plane_airframe < 400 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 300 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 399 } 
+						has_equipment = { small_plane_airframe < 500 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 400 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 499 } 
+						has_equipment = { small_plane_airframe < 600 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 500 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 599 } 
+						has_equipment = { small_plane_airframe < 700 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 600 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 699 } 
+						has_equipment = { small_plane_airframe < 800 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 700 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 799 } 
+						has_equipment = { small_plane_airframe < 900 }
+					}
+				}
+				
+				send_equipment = { equipment = small_plane_airframe amount = 800 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 899 } 
+						has_equipment = { small_plane_airframe < 1000 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 900 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 999 } 
+						has_equipment = { small_plane_airframe < 1100 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1000 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1099 } 
+						has_equipment = { small_plane_airframe < 1200 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1100 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1199 } 
+						has_equipment = { small_plane_airframe < 1300 }
+					}
+				}
+				
+				send_equipment = { equipment = small_plane_airframe amount = 1200 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1299 } 
+						has_equipment = { small_plane_airframe < 1400 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1300 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1399 } 
+						has_equipment = { small_plane_airframe < 1500 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1400 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1499 } 
+						has_equipment = { small_plane_airframe < 1600 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1500 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1599 } 
+						has_equipment = { small_plane_airframe < 1700 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1600 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1699 }
+						has_equipment = { small_plane_airframe < 1800 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1700 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1799 } 
+						has_equipment = { small_plane_airframe < 1900 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1800 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1899 } 
+						has_equipment = { small_plane_airframe < 2000 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1900 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1999 } 
+						has_equipment = { small_plane_airframe < 2100 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2000 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2099 } 
+						has_equipment = { small_plane_airframe < 2200 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2100 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2199 } 
+						has_equipment = { small_plane_airframe < 2300 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2200 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2299 } 
+						has_equipment = { small_plane_airframe < 2400 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2300 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2399 } 
+						has_equipment = { small_plane_airframe < 2500 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2400 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2499 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2500 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_second }
+			}
+		}
+	}
+	GER_aviation_ll_to_hungary_second = { 
+		icon = GFX_GER_so_decision
+		activation = { always = no }
+		allowed = { always = no }
+		available = { NOT = { has_country_flag = aviation_ll_to_hungary_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 6
+		timeout_effect = { 
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 49 } 
+						has_equipment = { small_plane_airframe < 100 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 50 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 99 } 
+						has_equipment = { small_plane_airframe < 200 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 100 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 199 } 
+						has_equipment = { small_plane_airframe < 300 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 200 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 299 } 
+						has_equipment = { small_plane_airframe < 400 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 300 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 399 } 
+						has_equipment = { small_plane_airframe < 500 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 400 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 499 } 
+						has_equipment = { small_plane_airframe < 600 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 500 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 599 } 
+						has_equipment = { small_plane_airframe < 700 }
+					}
+				}
+				
+				send_equipment = { equipment = small_plane_airframe amount = 600 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 699 } 
+						has_equipment = { small_plane_airframe < 800 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 700 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 799 } 
+						has_equipment = { small_plane_airframe < 900 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 800 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 899 } 
+						has_equipment = { small_plane_airframe < 1000 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 900 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 999 } 
+						has_equipment = { small_plane_airframe < 1100 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1000 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1099 } 
+						has_equipment = { small_plane_airframe < 1200 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1100 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1199 } 
+						has_equipment = { small_plane_airframe < 1300 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1200 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1299 } 
+						has_equipment = { small_plane_airframe < 1400 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1300 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1399 } 
+						has_equipment = { small_plane_airframe < 1500 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1400 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1499 } 
+						has_equipment = { small_plane_airframe < 1600 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1500 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1599 } 
+						has_equipment = { small_plane_airframe < 1700 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1600 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1699 } 
+						has_equipment = { small_plane_airframe < 1800 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1700 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1799 } 
+						has_equipment = { small_plane_airframe < 1900 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1800 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1899 } 
+						has_equipment = { small_plane_airframe < 2000 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 1900 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 1999 } 
+						has_equipment = { small_plane_airframe < 2100 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2000 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2099 } 
+						has_equipment = { small_plane_airframe < 2200 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2100 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2199 } 
+						has_equipment = { small_plane_airframe < 2300 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2200 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2299 } 
+						has_equipment = { small_plane_airframe < 2400 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2300 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2399 } 
+						has_equipment = { small_plane_airframe < 2500 }
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2400 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+			if = {
+				limit = {
+					GER = { 
+						has_equipment = { small_plane_airframe > 2499 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 2500 target = HUN }
+				hidden_effect = { activate_mission = GER_aviation_ll_to_hungary_first }
+			}
+		}
+	}
+}
+
+
+GER_reichskommissariats = {
+
+	GER_reichskommissariat_hungary = {
+		icon = ger_reichskommissariats
+		available = {
+		    HUN = { is_ai = yes }
+			date > 1938.01.01
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = HUN
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+		    HUN = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = GER
+				}
+			}
+			GER = { 
+				set_autonomy = {
+					target = HUN
+					autonomy_state = autonomy_reichskommissariat
+				}
+				
+				air_experience = 300
+			}	
+		}
+	}
+	GER_reichskommissariat_romania = {
+		icon = ger_reichskommissariats
+		available = {
+		    ROM = { is_ai = yes }
+			date > 1938.01.01
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ROM
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+		    ROM = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = GER
+				}
+			}
+			GER = { 
+				set_autonomy = {
+					target = ROM
+					autonomy_state = autonomy_reichskommissariat
+				}	
+			}	
+			add_resource = {
+    			type = oil
+    			amount = 60
+    			state = 46
+			}
+		}
+	}
+	GER_reichskommissariat_bulgaria = {
+		icon = ger_reichskommissariats
+		available = {
+		    BUL = { is_ai = yes }
+			date > 1938.01.01
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = BUL
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+		    BUL = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = GER
+				}
+			}
+			GER = { 
+				set_autonomy = {
+					target = BUL
+					autonomy_state = autonomy_reichskommissariat
+				}
+			}			
+		}
+	}
+	GER_reichskommissariat_poland = {
+		icon = ger_reichskommissariats
+		available = {
+			POL = { has_capitulated = yes }
+		}
+		cost = 0
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = POL
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			every_state = {
+			    limit = { is_core_of = POL }
+			    add_compliance = 50
+			}
+		}
+	}
+    GER_reichskommissariat_scandinavia = {
+		icon = ger_reichskommissariats
+		available = {
+			DEN = { has_capitulated = yes }
+			NOR = { has_capitulated = yes }
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = NOR
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			hidden_effect = { GER = { transfer_state = 910 } }
+			every_state = {
+			    limit = { is_core_of = DEN }
+			    add_compliance = 50
+			}			
+			every_state = {
+			    limit = { is_core_of = NOR }
+			    add_compliance = 50
+			}
+		}
+	}
+	GER_reichskommissariat_benelux = {
+		icon = ger_reichskommissariats
+		available = {
+			HOL = { has_capitulated = yes }
+			BEL = { has_capitulated = yes }
+			LUX = { has_capitulated = yes }
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = HOL
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			every_state = {
+			    limit = { is_core_of = HOL }
+			    add_compliance = 50
+			}
+			every_state = {
+			    limit = { is_core_of = BEL }
+			    add_compliance = 50
+			}
+			every_state = {
+			    limit = { is_core_of = LUX }
+			    add_compliance = 50
+			}
+		}
+	}
+	#GER_reichskommissariat_rankreich = {
+		#icon = ger_reichskommissariats
+		#available = {
+			#FRA = { has_capitulated = yes }
+		#}
+		#target_trigger = {
+			#FROM = {
+				#OR = {
+					#original_tag = FRA
+				#}
+			#}
+		#}
+		#fire_only_once = yes
+		#days_remove = -1
+		#complete_effect = {
+			#every_state = {
+			    #limit = { is_core_of = FRA }
+			    #add_compliance = 70
+			#}
+		#}
+	#}
+	GER_reichskommissariat_ostland = {
+		icon = ger_reichskommissariats
+		available = {
+			has_full_control_of_state = 97
+			has_full_control_of_state = 189
+			has_full_control_of_state = 814
+			has_full_control_of_state = 11
+			has_full_control_of_state = 815
+			has_full_control_of_state = 190
+			has_full_control_of_state = 809
+			has_full_control_of_state = 808
+			has_full_control_of_state = 810
+			has_full_control_of_state = 12
+			has_full_control_of_state = 191
+			has_full_control_of_state = 13
+			has_full_control_of_state = 811
+			has_full_control_of_state = 812
+			has_full_control_of_state = 813
+			has_full_control_of_state = 784
+			has_full_control_of_state = 95
+			has_full_control_of_state = 96
+			has_full_control_of_state = 207
+			has_full_control_of_state = 206
+			has_full_control_of_state = 204
+			has_full_control_of_state = 94
+			has_full_control_of_state = 194
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = SOV
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = -1
+		complete_effect = {
+			189 = { add_compliance = 70 }
+			814 = { add_compliance = 70 }
+			11 = { add_compliance = 70 }
+			815 = { add_compliance = 70 }
+			190 = { add_compliance = 70 }
+			809 = { add_compliance = 70 }
+			808 = { add_compliance = 70 }
+			810 = { add_compliance = 70 }
+			12 = { add_compliance = 70 }
+			191 = { add_compliance = 70 }
+			13 = { add_compliance = 70 }
+			811 = { add_compliance = 70 }
+			812 = { add_compliance = 70 }
+			813 = { add_compliance = 70 }
+			784 = { add_compliance = 70 }
+			95 = { add_compliance = 70 }
+			96 = { add_compliance = 70 }
+			207 = { add_compliance = 70 }
+			206 = { add_compliance = 70 }
+			204 = { add_compliance = 70 }
+			94 = { add_compliance = 70 }
+			194 = { add_compliance = 70 }
+		}
+	}
+	GER_reichskommissariat_ukraine = {
+		icon = ger_reichskommissariats
+		available = {
+			has_full_control_of_state = 93
+			has_full_control_of_state = 91
+			has_full_control_of_state = 89
+			has_full_control_of_state = 199
+			has_full_control_of_state = 201
+			has_full_control_of_state = 198
+			has_full_control_of_state = 202
+			has_full_control_of_state = 193
+			has_full_control_of_state = 225
+			has_full_control_of_state = 259
+			has_full_control_of_state = 221
+			has_full_control_of_state = 228
+			has_full_control_of_state = 227
+			has_full_control_of_state = 226
+			has_full_control_of_state = 200
+			has_full_control_of_state = 196
+			has_full_control_of_state = 137
+			has_full_control_of_state = 203
+			has_full_control_of_state = 197
+			has_full_control_of_state = 834
+			has_full_control_of_state = 192
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = SOV
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			93 = { add_compliance = 70 }
+			91 = { add_compliance = 70 }
+			89 = { add_compliance = 70 }
+			199 = { add_compliance = 70 }
+			201 = { add_compliance = 70 }
+			198 = { add_compliance = 70 }
+			202 = { add_compliance = 70 }
+			193 = { add_compliance = 70 }
+			225 = { add_compliance = 70 }
+			259 = { add_compliance = 70 }
+			221 = { add_compliance = 70 }
+			228 = { add_compliance = 70 }
+			227 = { add_compliance = 70 }
+			226 = { add_compliance = 70 }
+			200 = { add_compliance = 70 }
+			196 = { add_compliance = 70 }
+			137 = { add_compliance = 70 }
+			203 = { add_compliance = 70 }
+			197 = { add_compliance = 70 }
+			834 = { add_compliance = 70 }
+			192 = { add_compliance = 70 }
+		}
+	}
+}
+
+GER_military_buildup = {
+	GER_plan_z = {
+		icon = generic_naval
+		available = {
+			has_navy_size = {
+				unit = battleship
+				size > 9
+			}
+			has_navy_size = {
+				unit = battle_cruiser
+				size > 2
+			}
+			has_navy_size = {
+				unit = carrier
+				size > 3
+			}
+			has_navy_size = {
+				unit = heavy_cruiser
+				size > 19
+			}
+			has_navy_size = {
+				unit = light_cruiser
+				size > 19
+			}
+			has_navy_size = {
+				unit = destroyer
+				size > 99
+			}
+		}
+
+		fire_only_once = yes
+		days_mission_timeout = 1800
+		is_good = no
+		activation = {
+			has_completed_focus = GER_plan_z
+		}
+
+
+		visible = {
+			has_completed_focus = GER_plan_z
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			navy_experience = 150
+		}
+	}
+}
+
+special_projects = {
+	GER_begin_heavy_water_production = {
+		allowed = {
+			original_tag = GER
+			has_dlc = "La Resistance"
+		}
+		available = {
+			110 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		visible = { has_tech = atomic_research }
+		cost = 0
+		ai_will_do = {
+			factor = 5
+		}
+		cancel_trigger = { NOT = { has_global_flag = GER_heavy_water_production_underway } } #can be removed via intelligence ops
+		days_remove = 365
+		remove_effect = {
+			add_tech_bonus = {
+				name = GER_heavy_water
+				category = nuclear
+				uses = 2
+				bonus = 2
+			}
+		}
+		complete_effect = { set_global_flag = GER_heavy_water_production_underway }
+	}
+}
+
+operations = {
+	GER_barbarossa_mission = {
+		icon = generic_operation
+		allowed = {
+			always = no
+			#added through on_action
+		}
+		available = {
+			219 = { is_controlled_by_ROOT_or_ally = yes }
+			195 = { is_controlled_by_ROOT_or_ally = yes }
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+			217 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+		days_mission_timeout = 180
+		fire_only_once = yes
+		is_good = no
+		complete_effect = {
+			add_war_support = 0.1
+			custom_effect_tooltip = barbarossa_mission_tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+GER_case_anton_category = {
+	GER_case_anton = {
+		icon = generic_operation
+		available = {
+			original_tag = GER
+			has_war = yes
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				has_government = fascism
+				OR = {
+					is_subject_of = GER
+					has_focus_tree = vichy_french_focus
+				}
+				NOT = { has_war_with = GER }
+				NOT = { has_country_flag = case_anton }
+				custom_trigger_tooltip = {
+					tooltip = GER_case_anton_tt2
+					count_triggers = {
+						amount = 3 # lost control of ca half french north africa
+						458 = { CONTROLLER = { has_war_with = ROOT } }
+						459 = { CONTROLLER = { has_war_with = ROOT } }
+						460 = { CONTROLLER = { has_war_with = ROOT } }
+						461 = { CONTROLLER = { has_war_with = ROOT } }
+						462 = { CONTROLLER = { has_war_with = ROOT } }
+						513 = { CONTROLLER = { has_war_with = ROOT } }
+						665 = { CONTROLLER = { has_war_with = ROOT } }
+					}
+				}
+			}
+			divisions_in_state = { state = 31 size < 1 }
+			divisions_in_state = { state = 25 size < 1 }
+			divisions_in_state = { state = 22 size < 1 }
+			divisions_in_state = { state = 21 size < 1 }
+			divisions_in_state = { state = 851 size < 1 }
+			divisions_in_state = { state = 32 size < 1 }
+			divisions_in_state = { state = 22 size < 1 }
+			divisions_in_state = { state = 26 size < 1 }
+			divisions_in_state = { state = 33 size < 1 }
+			divisions_in_state = { state = 20 size < 1 }
+			OR = {
+				ITA = { owns_state = 735 }
+				divisions_in_state = { state = 735 size < 1 }
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			original_tag = GER
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				has_government = fascism
+				OR = {
+					is_subject_of = GER
+					has_focus_tree = vichy_french_focus
+				}
+				NOT = { has_war_with = GER }
+			}
+		}
+		ai_will_do = {
+			factor = 25
+
+			modifier = {
+				factor = 0
+				VIC = { is_ai = no }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = GER_case_anton_tt
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+						OR = {
+							is_subject_of = GER
+							has_focus_tree = vichy_french_focus
+						}
+					}
+					set_country_flag = case_anton
+					activate_mission = FRA_case_anton_mission
+				}
+			}
+		}
+	}
+}

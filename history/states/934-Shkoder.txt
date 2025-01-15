@@ -1,0 +1,42 @@
+
+state = {
+	id = 934
+	name = "STATE_934"
+	resources = {
+		aluminium = 1.000
+        chromium = 1.000
+	}
+
+	history = {
+		owner = ALB
+        victory_points = {
+            9780 3 
+        }
+        buildings = {
+            infrastructure = 4
+            industrial_complex = 2
+			dockyard = 1
+			arms_factory = 3
+		}
+		add_core_of = ALB
+		add_core_of = ITA
+		1939.4.12 = {
+		    owner = ITA
+		    controller = ITA
+		    remove_claim_by = ITA
+		}
+		1936.1.1.14 = {
+            owner = COL
+            add_core_of = COL
+        }
+		
+		add_extra_state_shared_building_slots = 4
+	}
+
+	provinces = {
+		3896 9780 11762
+	}
+	manpower = 246933
+	state_category = rural
+	local_supplies = 5.000
+}

@@ -1,0 +1,38 @@
+state=
+{
+	id=626
+	name="STATE_626"
+	manpower = 83041
+	
+	state_category = rural
+	
+	resources={
+		oil = 4
+		rubber = 2
+		aluminium = 5
+	}
+	
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			4429 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = COL
+		1936.1.1.13 = {
+			owner = COL
+			add_core_of = COL
+		}
+		1936.1.1.14 = {
+            owner = USA
+            add_core_of = COL
+        }
+	}
+	provinces={
+		4429 7419 10145 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,66 @@
+﻿capital = 613 # Nanjing
+
+oob = "CHI_1936"
+
+country_lock_all_division_template = yes
+
+recruit_character = CHI_chiang_kaishek
+
+set_stability = 0.2
+set_war_support = 0.5
+
+add_ideas = {
+	BAN_BAN
+}
+
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
+	}		
+	add_ideas = {
+		free_trade
+	}
+}
+
+set_convoys = 40
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_0
+	amount = 51406
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 13356
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 285
+}
+
+add_equipment_to_stockpile = {
+	type = anti_air_equipment_1
+	amount = 317
+}
+
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+	amount = 19
+}
+
+add_equipment_to_stockpile = {
+    type = artillery_equipment_1
+	amount = 1357
+}

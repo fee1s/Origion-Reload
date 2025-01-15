@@ -1,0 +1,128 @@
+ideas = {
+	country = {
+		trade_laws = {
+		law = yes
+		use_list_view = yes
+		
+		#Экономика закрытка
+		JAP_close_economi = {
+
+			picture = gre_schachtplan
+
+			available = {
+				if = {
+					limit = {
+						original_tag = JAP
+					}
+				}
+			}
+
+			visible = {
+				original_tag = JAP
+				has_game_rule = {					
+						rule = jap_closed_eco
+						option = yes
+				}
+			}
+
+			cost = 1000
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+					always =no
+			}
+		}
+
+		FRA_closed_eco = {
+
+			picture = SOV_third_five_year_plan_civilian
+            
+			available = {
+				if = {
+					limit = {
+						original_tag = FRA
+					}
+				}
+			}
+
+			visible = {
+				original_tag = FRA
+				has_game_rule = {					
+					rule = fra_closed_eco
+					option = yes
+				}
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.0
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_speed_buildings_factor = 0.10
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				always = no
+			}
+		}
+
+		SOV_closed_eco = {
+
+			picture = SOV_third_five_year_plan_civilian
+
+			available = {
+				if = {
+					limit = {
+						original_tag = SOV
+					}
+				}
+			}
+
+			visible = {
+				original_tag = SOV
+				has_game_rule = {					
+						rule = sov_closed_eco
+						option = yes
+				}
+			}
+
+			cost = 1000
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.0
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				always = no
+			}
+		}
+	}
+}

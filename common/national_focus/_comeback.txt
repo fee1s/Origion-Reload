@@ -1,0 +1,131 @@
+﻿    shared_focus = {
+		id = comeback_bracing_for_the_inevitable
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		x = 150
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			has_capitulated = yes
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = 50000
+					producer = ENG
+			}
+			add_equipment_to_stockpile = {
+					type = artillery_equipment_2
+					amount = 1000
+					producer = RAJ
+			}
+			add_equipment_to_stockpile = {
+					type = anti_tank_equipment_2
+					amount = 2000
+					producer = RAJ
+			}
+			add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 1000
+					producer = ENG
+			}
+		}
+	}
+	shared_focus = {
+		id = comeback_british_industrial_help
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = RAJ_bracing_for_the_inevitable }
+		x = 0
+		y = 1
+		relative_position_id = RAJ_bracing_for_the_inevitable
+		cost = 5
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			add_offsite_building = {type = industrial_complex level = 10}
+		}
+	}
+	shared_focus = {
+		id = comeback_british_arms_help
+		icon = GFX_SOV_national_unification_ccp_2d_sov_compatibility
+		prerequisite = { focus = RAJ_british_industrial_help }
+		x = 0
+		y = 1
+		relative_position_id = RAJ_british_industrial_help
+		cost = 5
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 5}
+		}
+	}
+	shared_focus = {
+		id = comeback_influx_of_exiles
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+		prerequisite = { focus = RAJ_bracing_for_the_inevitable }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = RAJ_bracing_for_the_inevitable
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			add_ideas = { RAJ_influx_of_exiles }
+		}
+	}
+	shared_focus = {
+		id = comeback_comeback_motherland
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = RAJ_influx_of_exiles }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = RAJ_influx_of_exiles
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = RAJ_comeback
+				days = 180
+			}
+		}
+	}
+	shared_focus = {
+		id = comeback_british_arms_help2
+		icon = GFX_SOV_national_unification_ccp_2d_sov_compatibility
+		prerequisite = { focus = RAJ_british_arms_help }
+		x = 0
+		y = 1
+		relative_position_id = RAJ_british_arms_help
+		cost = 5
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 5}
+		}
+	}
+	shared_focus = {
+		id = comeback_british_arms_help3
+		icon = GFX_SOV_national_unification_ccp_2d_sov_compatibility
+		prerequisite = { focus = RAJ_british_arms_help2 }
+		x = 0
+		y = 1
+		relative_position_id = RAJ_british_arms_help2
+		cost = 5
+		available = {
+			has_capitulated = yes
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 5}
+		}
+	}
+}

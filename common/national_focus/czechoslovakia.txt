@@ -1,0 +1,153 @@
+﻿focus_tree = {
+	id = czech_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CZE
+			has_dlc = "Death or Dishonor"
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	focus = {
+	    id = cze_deleted_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		
+		x = 1
+		y = 0
+		
+		cost = 0
+		
+		ai_will_do = {
+		    factor = 1000
+		}
+		
+		completion_reward = {
+		
+			69 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			
+			9 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			9 = {
+				add_building_construction = { type = bunker province = 6440 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6418 level = 5 instant_build = yes }
+				add_building_construction = { type = bunker province = 6592 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9414 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3462 level = 3 instant_build = yes }
+			}
+				
+			69 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			
+			9 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						id = 445
+						id = 494
+						limit_to_border = yes
+					}
+				}
+			}
+			
+			74 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						id = 421
+						id = 6485
+						id = 3414
+						id = 3583
+						limit_to_border = yes
+					}
+				}
+			}
+			
+			70 = {
+				set_building_level = {
+					type = bunker
+					level = 7
+					province = {
+						id = 9539
+						id = 9692
+						limit_to_border = yes
+					}
+				}
+			}
+			
+			664 = {
+				add_building_construction = { type = bunker province = 3565 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3716 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6561 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6573 level = 5 instant_build = yes }
+				add_building_construction = { type = bunker province = 9537 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11679 level = 3 instant_build = yes }
+			}
+			
+			73 = {
+				add_building_construction = { type = bunker province = 11691 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3548 level = 3 instant_build = yes }
+			}
+			
+			72 = {
+				add_building_construction = { type = bunker province = 9567 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 9551 level = 2 instant_build = yes }
+			}
+			71 = {      
+				add_building_construction = { type = bunker province = 581 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3550 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3581 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 6604 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 11554 level = 2 instant_build = yes }
+			}
+			
+			75 = {
+				add_building_construction = { type = bunker province = 3569 level = 2 instant_build = yes }
+			}
+		}
+    }		
+}

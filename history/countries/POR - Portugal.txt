@@ -1,0 +1,36 @@
+﻿capital = 112
+
+send_embargo = sov
+send_embargo = usa
+send_embargo = ast
+send_embargo = nzl
+send_embargo = eng
+send_embargo = saf
+send_embargo = can
+send_embargo = fra
+
+add_ideas = {
+	BAN_BAN
+	free_trade
+}
+
+set_convoys = 1000
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	
+    recruit_character = POR_antonio_de_oliveira_salazar
+}

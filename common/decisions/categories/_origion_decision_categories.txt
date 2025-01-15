@@ -1,0 +1,28 @@
+origion_rerol_dec_cat = {
+
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+	    OR = {
+		    original_tag = AST
+			original_tag = CAN
+			original_tag = FRA
+			original_tag = NZL
+			original_tag = SAF
+		}
+	}
+}
+USA_kambeck = {
+	
+	icon = military_operation
+	
+	picture = generic_army_support
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		USA = { has_full_control_of_state = 948 }
+	}
+}

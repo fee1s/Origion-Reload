@@ -1,0 +1,153 @@
+FRA_annex = {
+	FRA_abuz = {
+		icon = generic_ignite_civil_war
+		available = {
+			OR = {
+			has_tech = concentrated_industry3
+			has_tech = dispersed_industry3
+			}
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = GER
+				}
+			}
+		}
+		fire_only_once = yes
+		days_mission_timeout = 1430
+		timeout_effect = {
+			add_stability = -1
+			add_war_support = -1
+			ENG = {
+				add_ideas = ENG_DEF
+			}
+			set_global_flag = fall_of_france
+			set_global_flag = flag_franco_british_union
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = FRA
+					}
+					ENG = {
+						add_state_core = PREV
+					}
+				}
+			}
+			FRA = {
+				every_unit_leader = {
+					set_unit_leader_flag = flag_former_french_general
+					set_nationality = ENG
+				}
+			}
+			ENG = {
+				annex_country = { target = FRA transfer_troops = yes }
+			}
+			custom_effect_tooltip = FRA_franco_british_cores
+			hidden_effect = {
+				ENG = { set_cosmetic_tag = FRA_UK }
+				GER = { 
+					country_event = { hours = 6 id = news.35 }
+				}
+			}	
+		}
+	}
+	FRA_evakuation = {
+		icon = generic_army_support
+		available = {
+		    has_capitulated = yes
+			date > 1939.1.1 
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 80
+			}
+			set_capital = { state = 660 }
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 300
+			}
+			army_experience = 200
+			660 = {
+			add_resource = {
+				type = steel
+				amount = 30
+			}				
+			add_resource = {
+				type = oil
+				amount = 20
+				}
+			}
+			660 = {add_core_of = FRA}
+			772 = {add_core_of = FRA}
+			539 = {add_core_of = FRA}
+			773	= {add_core_of = FRA}
+			774 = {add_core_of = FRA}
+			776 = {add_core_of = FRA}
+			777 = {add_core_of = FRA}
+			778 = {add_core_of = FRA}
+			779 = {add_core_of = FRA}
+			780 = {add_core_of = FRA}
+			889 = {add_core_of = FRA}
+			556 = {add_core_of = FRA}
+			898 = {add_core_of = FRA}
+			272 = {add_core_of = FRA}
+			hidden_effect = {
+				transfer_state = 538 
+				transfer_state = 718
+				transfer_state = 295
+				transfer_state = 888
+				transfer_state = 889
+				transfer_state = 890
+				transfer_state = 769	
+				transfer_state = 768
+			}
+		}
+	}
+	FRA_Revolt = {
+		icon = generic_army_support
+		available = {
+			has_capitulated = yes
+		}
+		fire_only_once = yes
+		days_remove = -1
+		
+		complete_effect = {
+			FRA = {
+				add_ideas = FRA_closed_eco
+			}
+		    add_offsite_building = { type = industrial_complex level = 10 }
+			add_offsite_building = { type = arms_factory level = 20 }
+		    add_stability = 0.1
+		}
+	}
+	FRA_WIN_Africa = {
+		icon = generic_army_support
+		available = {
+			461 = { is_controlled_by = ENG }
+			462 = { is_controlled_by = ENG }
+			513 = { is_controlled_by = ENG }
+			459 = { is_controlled_by = ENG }
+			460 = { is_controlled_by = ENG }
+			458 = { is_controlled_by = ENG }
+			665 = { is_controlled_by = ENG }
+		}
+		fire_only_once = yes
+		days_remove = -1
+		complete_effect = {
+			FRA = { 
+			transfer_state = 461
+			transfer_state = 462
+			transfer_state = 513
+			transfer_state = 459
+			transfer_state = 460
+			transfer_state = 458
+			transfer_state = 665								
+			}
+		}
+	}
+}
+

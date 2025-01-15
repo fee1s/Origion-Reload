@@ -1,0 +1,45 @@
+
+state={
+	id=668
+	name="STATE_668"
+	manpower = 579100
+	
+	state_category = pastoral
+	
+	resources={
+		oil = 4
+		rubber = 6
+		aluminium = 6
+	}
+	
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 2
+			1574 = {
+				naval_base = 1
+			}
+			1351 = {
+				naval_base = 1
+			}
+			7413 = {
+				naval_base = 1
+			}
+		}
+		1936.1.1.13 = {
+			owner = COL
+			add_core_of = COL
+		}
+		1936.1.1.14 = {
+            owner = INS
+            add_core_of = INS
+        }
+	}
+
+	provinces={
+		1351 1419 1437 1574 7369 7413 7557 10141 10342 10409 
+	}
+
+	local_supplies=0.0 
+}

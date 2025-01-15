@@ -1,0 +1,364 @@
+                                                                                                                                          
+ ######  #         ##    #    #  ######  #####  #    #  #####    ####   #    #  ######  #####       #####    ##    #    #  #    #   ####  
+ #       #        #  #   ##  ##  #         #    #    #  #    #  #    #  #    #  #       #    #        #     #  #   ##   #  #   #   #      
+ #####   #       #    #  # ## #  #####     #    ######  #    #  #    #  #    #  #####   #    #        #    #    #  # #  #  ####     ####  
+ #       #       ######  #    #  #         #    #    #  #####   #    #  # ## #  #       #####         #    ######  #  # #  #  #         # 
+ #       #       #    #  #    #  #         #    #    #  #   #   #    #  ##  ##  #       #   #         #    #    #  #   ##  #   #   #    # 
+ #       ######  #    #  #    #  ######    #    #    #  #    #   ####   #    #  ######  #    #        #    #    #  #    #  #    #   ####  
+                                                                                                                                          
+
+
+sp_land_flamethrower_tank = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+
+	project_tags = sp_tag_tank
+
+	ai_will_do = {
+		base = 1
+	}
+
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+	
+	available = {
+		FROM = {
+			has_tech = tech_engineers
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+}
+
+
+  #####                                                                       #                                                         #     #                                                    
+ #     #  #####   ######   ####   #    ##    #       #   ####   #####        # #    #####   #    #   ####   #####   ######  #####       #     #  ######  #    #  #   ####   #       ######   ####  
+ #        #    #  #       #    #  #   #  #   #       #  #         #         #   #   #    #  ##  ##  #    #  #    #  #       #    #      #     #  #       #    #  #  #    #  #       #       #      
+  #####   #    #  #####   #       #  #    #  #       #   ####     #        #     #  #    #  # ## #  #    #  #    #  #####   #    #      #     #  #####   ######  #  #       #       #####    ####  
+       #  #####   #       #       #  ######  #       #       #    #        #######  #####   #    #  #    #  #####   #       #    #       #   #   #       #    #  #  #       #       #            # 
+ #     #  #       #       #    #  #  #    #  #       #  #    #    #        #     #  #   #   #    #  #    #  #   #   #       #    #        # #    #       #    #  #  #    #  #       #       #    # 
+  #####   #       ######   ####   #  #    #  ######  #   ####     #        #     #  #    #  #    #   ####   #    #  ######  #####          #     ######  #    #  #   ####   ######  ######   ####  
+                                                                                                                                                                                                
+
+sp_land_military_engineering_vehicles = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_tank
+	
+	available = {
+		FROM = {
+			has_tech = tech_engineers
+		}
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+}
+
+
+
+
+                                                                                             ##                                                                                                   
+  ####   #    #  #####   ######  #####          #    #  ######    ##    #    #  #   #       #  #        #    #   ####   #####   ######  #####   #    #      #####    ##    #    #  #    #   ####  
+ #       #    #  #    #  #       #    #         #    #  #        #  #   #    #   # #         ##         ##  ##  #    #  #    #  #       #    #  ##   #        #     #  #   ##   #  #   #   #      
+  ####   #    #  #    #  #####   #    #  #####  ######  #####   #    #  #    #    #         ###         # ## #  #    #  #    #  #####   #    #  # #  #        #    #    #  # #  #  ####     ####  
+      #  #    #  #####   #       #####          #    #  #       ######  #    #    #        #   # #      #    #  #    #  #    #  #       #####   #  # #        #    ######  #  # #  #  #         # 
+ #    #  #    #  #       #       #   #          #    #  #       #    #   #  #     #        #    #       #    #  #    #  #    #  #       #   #   #   ##        #    #    #  #   ##  #   #   #    # 
+  ####    ####   #       ######  #    #         #    #  ######  #    #    ##      #         ###  #      #    #   ####   #####   ######  #    #  #    #        #    #    #  #    #  #    #   ####  
+                                                                                                                                                                                                  
+
+sp_land_land_cruiser = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_tank
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	available = {
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			FROM = {
+				has_tech = super_heavy_tank_chassis
+			}
+		}
+		else = {
+			FROM = {
+				has_tech = super_heavy_tank
+			}
+		}
+	}
+	
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.insane
+
+	breakthrough_cost = {
+		specialization_land = 3
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 16
+			chromium = 8
+		}
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+
+	unique_prototype_rewards = {
+	}
+
+
+}
+
+
+
+                                                                                                                                                                                                        
+   ##    #####   #    #    ##    #    #   ####   ######  #####         ##    #####   #####  #  #       #       ######  #####   #   #      #####   #####    ####        #  ######   ####   #####   ####  
+  #  #   #    #  #    #   #  #   ##   #  #    #  #       #    #       #  #   #    #    #    #  #       #       #       #    #   # #       #    #  #    #  #    #       #  #       #    #    #    #      
+ #    #  #    #  #    #  #    #  # #  #  #       #####   #    #      #    #  #    #    #    #  #       #       #####   #    #    #        #    #  #    #  #    #       #  #####   #         #     ####  
+ ######  #    #  #    #  ######  #  # #  #       #       #    #      ######  #####     #    #  #       #       #       #####     #        #####   #####   #    #       #  #       #         #         # 
+ #    #  #    #   #  #   #    #  #   ##  #    #  #       #    #      #    #  #   #     #    #  #       #       #       #   #     #        #       #   #   #    #  #    #  #       #    #    #    #    # 
+ #    #  #####     ##    #    #  #    #   ####   ######  #####       #    #  #    #    #    #  ######  ######  ######  #    #    #        #       #    #   ####    ####   ######   ####     #     ####  
+                                                                                                                                                                                               
+
+sp_land_super_heavy_howitzer = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_artillery
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+	}
+	
+	available = {
+		FROM = {
+			has_tech = gw_artillery
+		}
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 4
+		}
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+
+	unique_prototype_rewards = {
+	}
+}
+
+sp_land_self_propelled_super_heavy_howitzer = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_artillery
+
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	special_project_parent = {
+		sp_land_military_engineering_vehicles
+		sp_land_super_heavy_howitzer
+	}
+	
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 6
+			chromium = 2
+		}
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+
+	unique_prototype_rewards = {
+	}
+}
+
+sp_land_super_heavy_railway_gun = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_artillery
+
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+
+	available = {
+		FROM = {
+			has_tech = railway_gun
+		}
+	}
+
+	prototype_time = sp_time.prototype.long
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 16
+			tungsten = 8
+			chromium = 8
+		}
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+}
+
+sp_land_multi_charge_large_caliber_gun = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_artillery
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	special_project_parent = {
+		sp_land_super_heavy_howitzer
+	}
+		
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.small
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 6
+			tungsten = 4
+			chromium = 2
+		}
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+
+	unique_prototype_rewards = {
+	}
+}
+
+
+##     ## ########  ######      ###       ########  #######  ########  ######## 
+###   ### ##       ##    ##    ## ##      ##       ##     ## ##     ##    ##    
+#### #### ##       ##         ##   ##     ##       ##     ## ##     ##    ##    
+## ### ## ######   ##   #### ##     ##    ######   ##     ## ########     ##    
+##     ## ##       ##    ##  #########    ##       ##     ## ##   ##      ##    
+##     ## ##       ##    ##  ##     ##    ##       ##     ## ##    ##     ##    
+##     ## ########  ######   ##     ##    ##        #######  ##     ##    ##
+
+
+sp_land_stronghold_network = {
+	specialization = specialization_land
+
+	project_tags = sp_tag_artillery
+
+	allowed = {
+		has_dlc = "Gotterdammerung"
+	}
+	
+	available = {
+		FROM = {
+			has_tech = basic_fortification_tech
+		}
+	}
+	
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.large
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	
+	project_output = {
+	}
+
+	generic_prototype_rewards = {
+	}
+
+	unique_prototype_rewards = {
+	}
+}

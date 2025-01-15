@@ -1,0 +1,28 @@
+fighter_1940 = {
+	create_equipment_variant = {
+		name = "Истребитель 1940го" 
+		type = small_plane_airframe_2
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = fuel_tanks_small
+			special_type_slot_2 = armor_plate_small		
+			special_type_slot_3 = armor_plate_small		
+		}
+	}					
+}
+Cas_1940 = {
+	create_equipment_variant = {
+		name = "Штурмовик 1940го" 
+		type = small_plane_cas_airframe_2
+		modules = {
+			fixed_main_weapon_slot = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_2 = heavy_bomb_locks
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = fuel_tanks_small
+		}
+	}					
+}

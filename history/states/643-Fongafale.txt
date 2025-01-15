@@ -1,0 +1,36 @@
+
+state={
+	id=643
+	name="STATE_643"
+	manpower=493
+	state_category = small_island
+	
+	resources={
+		oil = 4
+		rubber = 9
+	}
+	
+	history={
+		owner = ENG
+		add_core_of = COL
+		buildings = {
+			infrastructure = 2
+			13056 = {
+				naval_base = 1
+			}
+			13054 = {
+				naval_base = 1
+			}
+		}
+		1936.1.1.14 = {
+            owner = USA
+            add_core_of = COL
+        }
+	}
+
+	provinces={
+		13054 13055 13056 13057 
+	}
+
+	local_supplies=0.0 
+}

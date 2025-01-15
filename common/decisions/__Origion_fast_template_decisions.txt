@@ -1,0 +1,146 @@
+Origion_fast_templates = {
+	
+	decision_allow_templates = {
+
+		icon = GFX_decision_bul_bolster_zveno
+
+		allowed = {
+			
+		}
+
+		available = { is_ai = no }
+
+		visible = {
+			NOT = { has_country_flag = templates_decisions_allowed_flag }
+		}
+
+		complete_effect = {
+			set_country_flag = templates_decisions_allowed_flag
+		}
+	}
+
+	close_templates = {
+
+		icon = GFX_decision_bul_bolster_zveno
+
+		allowed = {
+			
+		}
+
+		available = {is_ai = no
+		}
+
+		visible = {
+			has_country_flag = templates_decisions_allowed_flag
+		}
+
+		complete_effect = {
+			clr_country_flag = templates_decisions_allowed_flag
+		}
+	}
+
+	
+	decision_18w_template = {
+		icon = GFX_decision_SWE_set_army_budget
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		complete_effect = {
+			division_template = {
+				name = "Пехота 18W"
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 }  
+					infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 }  						 
+					infantry = { x = 0 y = 2 } 	infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } 
+				}
+				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } }
+			}				
+		}
+	}
+	decision_45w_template_tank_destroyers = {
+		icon = GFX_decision_generic_tank
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		complete_effect = {
+			set_temp_variable = { target_country = THIS }
+			division_template = {
+			name = "Танк 45W"
+				regiments = {
+					medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_tank_destroyer_brigade = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
+					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_tank_destroyer_brigade = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_tank_destroyer_brigade = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_tank_destroyer_brigade = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+					medium_tank_destroyer_brigade = { x = 0 y = 4 }  medium_sp_anti_air_brigade = { x = 1 y = 4 }																				  mechanized = { x = 3 y = 4 }																									
+				}			
+				support = {
+					engineer = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1 }		
+					medium_flame_tank = { x = 0 y = 2 }
+				}
+			}				
+		}
+	}
+	decision_46w_template = {
+		icon = GFX_decision_generic_protection
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		complete_effect = {
+			division_template = {
+				name = "Конверт 46W"
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 3 y = 0 } infantry = { x = 4 y = 0 }   
+					infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 } infantry = { x = 3 y = 1 } infantry = { x = 4 y = 1 }  						 
+					infantry = { x = 0 y = 2 } infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } infantry = { x = 3 y = 2 } infantry = { x = 4 y = 2 }  
+					infantry = { x = 0 y = 3 } infantry = { x = 1 y = 3 } infantry = { x = 2 y = 3 } infantry = { x = 3 y = 3 } infantry = { x = 4 y = 3 }				 
+				}
+			}				
+		}
+	}
+	decision_50w_template = {
+		icon = GFX_decision_generic_cavalry
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		complete_effect = {
+			division_template = {
+				name = "Гарнизон 50W"
+				regiments = {
+					cavalry = { x = 0 y = 0 } cavalry = { x = 1 y = 0 } cavalry = { x = 2 y = 0 } cavalry = { x = 3 y = 0 }  cavalry = { x = 4 y = 0 }   
+					cavalry = { x = 0 y = 1 } cavalry = { x = 1 y = 1 } cavalry = { x = 2 y = 1 }  cavalry = { x = 3 y = 1 }  cavalry = { x = 4 y = 1 }  						 
+					cavalry = { x = 0 y = 2 } cavalry = { x = 1 y = 2 } cavalry = { x = 2 y = 2 } cavalry = { x = 3 y = 2 }  cavalry = { x = 4 y = 2 }  
+					cavalry = { x = 0 y = 3 } cavalry = { x = 1 y = 3 } cavalry = { x = 2 y = 3 }  cavalry = { x = 3 y = 3 }  cavalry = { x = 4 y = 3 }  
+					cavalry = { x = 0 y = 4 } cavalry = { x = 1 y = 4 } cavalry = { x = 2 y = 4 }  cavalry = { x = 3 y = 4 }  cavalry = { x = 4 y = 4 }  						 
+				}
+			}				
+		}
+	}	  
+  
+	Fast_fighter_1940_template = {
+		icon = GFX_decision_SWE_set_air_budget
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		available = { 
+			has_tech = improved_small_airframe
+			has_tech = aa_hmg
+			has_tech = range_improvements
+			has_tech = survivability_studies
+			has_tech = engines_3
+		}
+		complete_effect = {
+			fighter_1940 = yes
+		}
+	}
+
+	Fast_cas_template = {
+		icon = GFX_decision_generic_merge_plant_aircraft		
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+			available = { 
+			has_tech = improved_small_airframe
+			has_tech = engines_3
+			has_tech = range_improvements
+			has_tech = heavy_bombs
+		}
+		complete_effect = {
+			Cas_1940 = yes
+		}
+	}
+}

@@ -1,0 +1,295 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+JAP_osaka_army_arsenal_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+} 
+
+JAP_heavy_tanks_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_osaka_army_arsenal
+	
+	allowed = {	
+			tag = JAP 
+
+	}
+
+	available = {
+	
+	}
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+JAP_kure_naval_arsenal_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_kure_naval_arsenal
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			OR = {
+				has_completed_focus = JAP_supremacy_of_the_battlefleet
+				has_completed_focus = JAP_the_ultimate_battleship
+			}
+		}
+	}
+}
+
+JAP_yokosuka_naval_arsenal_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_yokosuka_naval_arsenal
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+JAP_maizuru_naval_arsenal_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_maizuru_naval_arsenal
+	
+	allowed = {	 
+		OR = {
+			tag = JAP 
+			AND = {
+				tag = ETH
+				has_dlc = "By Blood Alone"
+			}
+		}
+	}
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = JAP } }
+			}
+			FROM = { NOT = { has_war_with = JAP } }
+		}
+
+		IF = {
+			limit = {
+				FROM = { original_tag = ETH }
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_JAP_maizuru_naval_arsenal_organization_flag
+				}
+			}
+		}
+	}
+}
+
+JAP_sasebo_naval_arsenal_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_sasebo_naval_arsenal
+	allowed = {	 
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+JAP_mitsubishi_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_mitsubishi
+	equipment_type = {
+		mio_cat_eq_all_small_plane
+		maritime_patrol_plane
+	}	
+	
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	research_categories = {	
+		mio_cat_all_light_fighter_and_modules 
+		mio_cat_all_naval_bomber_and_modules 
+	}
+
+	override_trait = {
+		token = generic_mio_trait_fuel_injection_engines
+		
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_bigger_engines
+	}
+
+	override_trait = {
+		token = generic_mio_trait_high_octane_fuels
+		
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_bigger_engines
+	}
+
+	override_trait = {
+		token = generic_mio_trait_subsidiary_suppliers
+		
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_fuel_injection_engines
+	}
+
+	add_trait = { 
+		token = ENG_mio_trait_elliptical_wings
+		name = ENG_mio_trait_elliptical_wings
+		icon = GFX_generic_mio_trait_icon_defense
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_cantilever_wing_structure
+
+		any_parent = { generic_mio_trait_cantilever_wing_structure }
+
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+
+	add_trait = { 
+		token = ENG_mio_trait_supercharger
+		name = ENG_mio_trait_supercharger
+		icon = GFX_generic_mio_trait_icon_defense
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_fuel_injection_engines
+
+		all_parents = { generic_mio_trait_fuel_injection_engines generic_mio_trait_high_octane_fuels }
+
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+}
+
+JAP_aichi_organization = {
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_aichi
+	allowed = {	
+		tag = JAP
+	}
+	available = {
+		FROM = { has_completed_focus = JAP_range_focus }
+	}
+}
+
+JAP_nakajima_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_nakajima
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+JAP_yokosuka_organization = {
+	include = generic_naval_aircraft_organization 
+	icon = GFX_idea_yokosuka
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+JAP_tokyo_arsenal_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_tokyo_arsenal
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+JAP_osaka_army_arsenal_artillery_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		tag = JAP
+		has_dlc = "Arms Against Tyranny"
+	}
+} 
+
+JAP_nissan_organization = {
+	include = generic_motorized_mechanized_organization 
+	icon = GFX_idea_nissan
+	allowed = {	 
+		OR = {
+			tag = JAP 
+			AND = {
+				tag = ETH
+				has_dlc = "By Blood Alone"
+			}
+		}
+	}
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = JAP } }
+			}
+			FROM = { NOT = { has_war_with = JAP } }
+		}
+
+		IF = {
+			limit = {
+				FROM = { original_tag = ETH }
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_JAP_nissan_organization_flag
+				}
+			}
+		}
+	}
+}
