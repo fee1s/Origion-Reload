@@ -86,7 +86,7 @@
 		icon = GFX_goal_generic_construct_infrastructure
 		relative_position_id = AST_support_the_policy_of_appeasement
 		prerequisite = { focus = AST_support_the_policy_of_appeasement }
-		x = -20
+		x = -21
 		y = 1
 
 		cost = 5
@@ -289,8 +289,9 @@
 		id = AST_department_of_supply_and_development
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = AST_western_australian_government_railways }
+		prerequisite = { focus = AST_civil_construction_corps }
 		x = 2
-		y = 2
+		y = 3
 		relative_position_id = AST_standard_gauge_railway
 
 		cost = 5
@@ -317,10 +318,10 @@
 				limit = {
 					has_state_flag = AST_department_of_supply_and_development_AF
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -332,15 +333,15 @@
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 					NOT = { state = 674 }
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = AST_department_of_supply_and_development_AF
@@ -415,9 +416,8 @@
 		id = AST_allied_works_council
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = AST_department_of_supply_and_development }
-		prerequisite = { focus = AST_civil_construction_corps }
 		x = 2
-		y = 3
+		y = 4
 		relative_position_id = AST_standard_gauge_railway
 
 		cost = 5
@@ -446,7 +446,7 @@
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -457,7 +457,7 @@
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -469,7 +469,7 @@
 				limit = {					
 					is_in_home_area = yes					
 					free_building_slots = {
-						building = industrial_complex
+						building = arms_factory
 						size > 1
 						include_locked = yes
 					}
@@ -477,7 +477,7 @@
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -487,7 +487,7 @@
 				limit = {
 					is_in_home_area = yes					
 					free_building_slots = {
-						building = industrial_complex
+						building = arms_factory
 						size > 1
 						include_locked = yes
 					}
@@ -495,7 +495,7 @@
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -538,10 +538,10 @@
 			634 = {add_core_of = AST}
 			523 = {
 				
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -554,8 +554,8 @@
 		id = AST_australian_arms_production
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = AST_allied_works_council }
-		x = 2
-		y = 4
+		x = 3
+		y = 5
 		relative_position_id = AST_standard_gauge_railway
 
 		cost = 5
@@ -565,7 +565,7 @@
 		}
 
 		available = {
-
+		    has_war = yes
 		}
 		
 		bypass = {
@@ -578,7 +578,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = AST_australian_arms_production
+		    add_timed_idea = {
+			    idea = AST_australian_arms_production
+				days = 365
+			}
 		}
 	}
 	
@@ -1033,7 +1036,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1041,7 +1044,7 @@
 				limit = {
 					has_state_flag = NZL_think_big_AF
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -1063,7 +1066,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = NZL_think_big_IC1
@@ -1080,7 +1083,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = NZL_think_big_AF
@@ -1200,7 +1203,7 @@
 		id = AST_volunteer_defence_corps
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = AST_establish_advisory_war_council }
-		x = 5
+		x = 6
 		y = 1
 		relative_position_id = AST_establish_advisory_war_council
 
@@ -1226,280 +1229,14 @@
 			add_ideas = AST_volunteer_defence_corps
 		}
 	}
-
-	focus = {
-		id = AST_civil_construction_corps
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = AST_national_security_act }
-		x = -4
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = AST_great_depression_2
-				add_idea = AST_great_depression_3
-			}
-		}
-	}
-
-	focus = {
-		id = AST_army_inventions_directorate
-		icon = GFX_focus_research
-		prerequisite = { focus = AST_national_security_act }
-		x = -2
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = AST_invest_in_victory
-		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = AST_national_security_act }
-		x = 0
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			has_war = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_ideas = AST_invest_in_victory
-		}
-	}
-
-	focus = {
-		id = AST_citizen_military_forces
-		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = AST_volunteer_defence_corps }
-		x = 5
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = AST_citizen_military_forces
-			add_war_support = 0.05
-		}
-	}
-
-	focus = {
-		id = AST_rats_of_tobruk
-		icon = GFX_focus_AST_rats_tobruk
-		prerequisite = { focus = AST_volunteer_defence_corps }
-		x = 8
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war_with = ITA
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {  }
-
-		completion_reward = {
-			add_ideas = rats_of_tobruk_idea
-		}
-	}
-	
-	focus = {
-		id = AST_lose_in_africa
-		icon = GFX_focus_generic_surrender
-		prerequisite = { focus = AST_rats_of_tobruk }
-		x = -1
-		y = 1
-		relative_position_id = AST_rats_of_tobruk
-		mutually_exclusive = { focus = AST_win_in_africa }
-
-		cost = 0
-
-		available = {
-		    always = no
-			axis_won_africa_trigger = yes
-		}
-		search_filters = {  }
-
-		completion_reward = {
-			add_timed_idea = {
-			    idea = AST_lose_in_africa_idea
-				days = 365
-			}
-		}
-	}
-	
-	focus = {
-		id = AST_preparation_for_the_crusader
-		icon = GFX_focus_SWE_neither_death_nor_dishonor
-		prerequisite = { focus = AST_lose_in_africa }
-		prerequisite = { focus = AST_citizen_military_forces }
-		x = -3
-		y = 2
-		relative_position_id = AST_rats_of_tobruk
-
-		cost = 5
-		
-		available = {
-		    NOT = { has_idea = AST_lose_in_africa_idea }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_timed_idea = {
-			    idea = AST_preparation_for_the_crusader_idea
-				days = 120
-			}
-		}
-	}
-	
-	focus = {
-		id = AST_win_in_africa
-		icon = GFX_focus_focus_fra_fascist_threat
-		prerequisite = { focus = AST_rats_of_tobruk }
-		x = 1
-		y = 1
-		relative_position_id = AST_rats_of_tobruk
-		mutually_exclusive = { focus = AST_lose_in_africa }
-
-		cost = 0
-
-		available = {
-		    always = no
-			axis_lost_africa_trigger = yes
-		}
-		search_filters = {  }
-
-		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.1
-		}
-	}
-	
-	focus = {
-		id = AST_lessons_of_the_war
-		icon = GFX_focus_ARG_the_war_machine
-		prerequisite = { focus = AST_win_in_africa  focus = AST_lose_in_africa}
-		x = 0
-		y = 2
-		relative_position_id = AST_rats_of_tobruk
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {  }
-
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 3.0
-				uses = 2
-				category = armor
-			}
-		}
-	}
 	
 	focus = {
 		id = AST_swpa_protector
 		icon = GFX_SOV_intervention_in_china_ccp_2d_sov_compatibility
 		prerequisite = { focus = AST_volunteer_defence_corps }
-		x = 2
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
+		x = -3
+		y = 1
+		relative_position_id = AST_volunteer_defence_corps
 
 		cost = 5
 
@@ -1684,17 +1421,287 @@
 			}
 		}
 	}
+	
+	focus = {
+		id = AST_citizen_military_forces
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = AST_volunteer_defence_corps }
+		x = 0
+		y = 1
+		relative_position_id = AST_volunteer_defence_corps
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = AST_citizen_military_forces
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = AST_rats_of_tobruk
+		icon = GFX_focus_AST_rats_tobruk
+		prerequisite = { focus = AST_volunteer_defence_corps }
+		x = 3
+		y = 1
+		relative_position_id = AST_volunteer_defence_corps
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_war_with = ITA
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {  }
+
+		completion_reward = {
+			add_ideas = rats_of_tobruk_1_idea
+		}
+	}
+	
+	focus = {
+		id = AST_lose_in_africa
+		icon = GFX_focus_generic_surrender
+		prerequisite = { focus = AST_rats_of_tobruk }
+		x = -1
+		y = 1
+		relative_position_id = AST_rats_of_tobruk
+		mutually_exclusive = { focus = AST_win_in_africa }
+
+		cost = 0
+
+		available = {
+		    always = no
+			axis_won_africa_trigger = yes
+		}
+		search_filters = {  }
+
+		completion_reward = {
+			add_timed_idea = {
+			    idea = AST_lose_in_africa_idea
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = AST_preparation_for_the_crusader
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		prerequisite = { focus = AST_lose_in_africa }
+		prerequisite = { focus = AST_citizen_military_forces }
+		x = -3
+		y = 2
+		relative_position_id = AST_rats_of_tobruk
+
+		cost = 5
+		
+		available = {
+		    NOT = { has_idea = AST_lose_in_africa_idea }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = {
+			    idea = AST_preparation_for_the_crusader_idea
+				days = 120
+			}
+		}
+	}
+	
+	focus = {
+		id = AST_win_in_africa
+		icon = GFX_focus_focus_fra_fascist_threat
+		prerequisite = { focus = AST_rats_of_tobruk }
+		x = 1
+		y = 1
+		relative_position_id = AST_rats_of_tobruk
+		mutually_exclusive = { focus = AST_lose_in_africa }
+
+		cost = 0
+
+		available = {
+		    always = no
+			axis_lost_africa_trigger = yes
+		}
+		search_filters = {  }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = AST_lessons_of_the_war
+		icon = GFX_focus_ARG_the_war_machine
+		prerequisite = { focus = AST_win_in_africa  focus = AST_lose_in_africa}
+		x = 0
+		y = 2
+		relative_position_id = AST_rats_of_tobruk
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {  }
+
+		completion_reward = {
+		    swap_ideas = {
+			    remove_idea = rats_of_tobruk_1_idea
+				add_idea = rats_of_tobruk_2_idea
+			}
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = AST_civil_construction_corps
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = AST_national_security_act }
+		x = -4
+		y = 2
+		relative_position_id = AST_establish_advisory_war_council
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AST_great_depression_2
+				add_idea = AST_great_depression_3
+			}
+		}
+	}
+	
+	focus = {
+		id = AST_army_inventions_directorate
+		icon = GFX_focus_research
+		prerequisite = { focus = AST_civil_construction_corps }
+		x = 0
+		y = 1
+		relative_position_id = AST_civil_construction_corps
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = AST_invest_in_victory
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = AST_national_security_act }
+		x = 0
+		y = 2
+		relative_position_id = AST_establish_advisory_war_council
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_war = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = AST_invest_in_victory
+		}
+	}
 
 	focus = {
 		id = AST_fight_work_or_perish
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = AST_civil_construction_corps }
 		prerequisite = { focus = AST_squash_the_squanderbugs }
-		x = -3
-		y = 4
+		x = -2
+		y = 5
 		relative_position_id = AST_establish_advisory_war_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 15
@@ -1775,7 +1782,7 @@
 		id = AST_rationing_and_recycling
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = AST_invest_in_victory }
-		x = 0
+		x = 1
 		y = 3
 		relative_position_id = AST_establish_advisory_war_council
 

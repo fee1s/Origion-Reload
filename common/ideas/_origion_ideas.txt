@@ -753,7 +753,8 @@ ideas = {
 			}
 		}
 		
-		rats_of_tobruk_idea = {
+		rats_of_tobruk_1_idea = {
+		    name = rats_of_tobruk_idea
 			allowed = {
 				always = no
 			}
@@ -764,6 +765,23 @@ ideas = {
 			modifier = {
 				supply_consumption_factor = -0.25
 				army_fuel_consumption_factor = -0.5
+			}
+		}
+		
+		rats_of_tobruk_2_idea = {
+		    name = rats_of_tobruk_idea
+			allowed = {
+				always = no
+			}
+			picture = eng_imperial_conscription
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.25
+				army_fuel_consumption_factor = -0.5
+				experience_loss_factor = -0.25
+				army_morale_factor = 0.1
 			}
 		}
 		

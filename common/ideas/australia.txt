@@ -35,10 +35,11 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_factor = 0.40
+				consumer_goods_factor = 0.6
 				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = -0.15
 				stability_factor = -0.10
+				production_speed_arms_factory_factor = -0.5
 			}
 		}
 
@@ -57,9 +58,10 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_factor = 0.30
+				consumer_goods_factor = 0.4
 				industrial_capacity_factory = -0.10
 				industrial_capacity_dockyard = -0.10
+				production_speed_arms_factory_factor = -0.4
 			}
 		}
 
@@ -78,9 +80,10 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.2
 				industrial_capacity_factory = -0.05
 				industrial_capacity_dockyard = -0.05
+				production_speed_arms_factory_factor = -0.3
 			}
 		}
 
@@ -121,7 +124,6 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.15
-				production_factory_max_efficiency_factor = 0.025
 				industrial_capacity_factory = 0.07
 				industrial_capacity_dockyard = 0.07
 				stability_factor = 0.05
@@ -206,16 +208,17 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
 			}
 			
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.1
+					build_cost_ic = -0.15
 					instant = yes
 				}
 				medium_tank_chassis = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.05 
+					instant = yes
 				}
 			}
 			
