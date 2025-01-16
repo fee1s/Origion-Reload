@@ -33,7 +33,66 @@ is_french_north_africa = {
 		state = 783
 	}
 }
-ORIGION_is_controlled_by_axis = {
+axis_lost_africa_trigger = {
+    custom_trigger_tooltip = {
+        tooltip = axis_lost_africa_tt
+	    AND = {
+		    448 = { is_controlled_by_allies = yes }
+			661 = { is_controlled_by_allies = yes }
+			449 = { is_controlled_by_allies = yes }
+			662 = { is_controlled_by_allies = yes }
+			450 = { is_controlled_by_allies = yes }
+			451 = { is_controlled_by_allies = yes }
+			663 = { is_controlled_by_allies = yes }
+			984 = { is_controlled_by_allies = yes }
+			983 = { is_controlled_by_allies = yes }
+			982 = { is_controlled_by_allies = yes }
+			985 = { is_controlled_by_allies = yes }
+			452 = { is_controlled_by_allies = yes }
+			447 = { is_controlled_by_allies = yes }
+			907 = { is_controlled_by_allies = yes }
+			446 = { is_controlled_by_allies = yes }
+			665 = { is_controlled_by_allies = yes }
+			458 = { is_controlled_by_allies = yes }
+	    }
+	}
+}
+axis_won_africa_trigger = {
+   custom_trigger_tooltip = {
+        tooltip = axis_won_africa_tt
+	    AND = {
+	        448 = { is_controlled_by_axis = yes }
+			661 = { is_controlled_by_axis = yes }
+			449 = { is_controlled_by_axis = yes }
+			662 = { is_controlled_by_axis = yes }
+			450 = { is_controlled_by_axis = yes }
+			451 = { is_controlled_by_axis = yes }
+			663 = { is_controlled_by_axis = yes }
+			984 = { is_controlled_by_axis = yes }
+			983 = { is_controlled_by_axis = yes }
+			982 = { is_controlled_by_axis = yes }
+			985 = { is_controlled_by_axis = yes }
+			452 = { is_controlled_by_axis = yes }
+			447 = { is_controlled_by_axis = yes }
+			907 = { is_controlled_by_axis = yes }
+			446 = { is_controlled_by_axis = yes }
+			665 = { is_controlled_by_axis = yes }
+			458 = { is_controlled_by_axis = yes }
+	    }
+	}
+}
+is_controlled_by_allies = {
+	OR = {
+		is_controlled_by = USA
+		is_controlled_by = ENG
+		is_controlled_by = CAN
+		is_controlled_by = SAF
+		is_controlled_by = RAJ
+		is_controlled_by = AST
+		is_controlled_by = FRA
+	}
+}
+is_controlled_by_axis = {
 	OR = {
 		is_controlled_by = GER
 		is_controlled_by = ITA
@@ -41,20 +100,5 @@ ORIGION_is_controlled_by_axis = {
 		is_controlled_by = ROM
 		is_controlled_by = BUL
 		is_controlled_by = JAP
-	}
-}
-ORIGION_is_controlled_by_allies = {
-	OR = {
-		is_controlled_by = HOL
-		is_controlled_by = BEL
-		is_controlled_by = DEN
-		is_controlled_by = USA
-		is_controlled_by = ENG
-		is_controlled_by = CAN
-		is_controlled_by = SAF
-		is_controlled_by = RAJ
-		is_controlled_by = NZL
-		is_controlled_by = AST
-		is_controlled_by = FRA
 	}
 }

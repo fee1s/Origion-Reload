@@ -752,5 +752,67 @@ ideas = {
 				naval_invasion_penalty = -0.25
 			}
 		}
+		
+		rats_of_tobruk_idea = {
+			allowed = {
+				always = no
+			}
+			picture = eng_imperial_conscription
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.25
+				army_fuel_consumption_factor = -0.5
+			}
+		}
+		
+		AST_preparation_for_the_crusader_idea = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			#equipment_bonus = {
+			#    medium_tank_chassis = {
+			#		build_cost_ic = -0.1 instant = yes
+			#	}
+			#}
+		}
+		
+		AST_lose_in_africa_idea = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = SOV_desperate_measures_ns_nsb_ccp_sov_compatibility
+			
+			modifier = {
+			    stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+		
+		AST_preparing_for_the_isolation_idea = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = ast_naval_auxiliary_patrol
+			
+			modifier = {
+			    consumer_goods_expected_value = -0.05
+				local_resources_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
 	}
 }

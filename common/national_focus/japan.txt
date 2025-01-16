@@ -5001,6 +5001,9 @@ focus_tree = {
 			}
 		}
 		available = {
+			has_tech = improved_fire_control_system
+			has_tech = improved_dp_light_battery
+			has_tech = centimetric_radar
 		}
 		bypass = {
 		}
@@ -5154,6 +5157,9 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			has_tech = improved_fire_control_system
+			has_tech = improved_dp_light_battery
+			has_tech = centimetric_radar
 		}
 		bypass = {
 			AND = {
@@ -5227,7 +5233,7 @@ focus_tree = {
 						}
 						name = "Yamato" 
 						requested_factories = 1
-						progress = 0.75
+						progress = 0.8
 						amount = 1
 					}
 					add_equipment_production = {
@@ -5238,7 +5244,7 @@ focus_tree = {
 						}
 						name = "Musashi" 
 						requested_factories = 1
-						progress = 0.5
+						progress = 0.8
 						amount = 1
 					}
 				}
