@@ -480,21 +480,6 @@ characters={
 				small="GFX_idea_generic_air_europe_1"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = AST_clive_caldwell
-			ledger = air
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				air_air_superiority_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 	
 	
@@ -503,21 +488,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_AST_john_collins" #small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = AST_john_collins
-			ledger = navy
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}		
 	}
@@ -552,19 +522,6 @@ characters={
 			army={
 				small="GFX_idea_AST_arthur_drakeford" #small="GFX_idea_generic_army_europe_4"
 			}
-		}
-		advisor={			
-			slot = high_command
-			idea_token = AST_arthur_drakeford
-			ledger = air
-			allowed = {
-				original_tag = AST
-				has_dlc = "Together for Victory"
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-			cost = 100
 		}		
 	}
 	
@@ -618,49 +575,6 @@ characters={
 			}
 		}		
 	}
-	
-	AST_robert_g_menzies={
-		name=AST_robert_g_menzies
-		portraits={
-			army={
-				small="GFX_idea_AST_robert_g_menzies" #small="GFX_idea_generic_political_advisor_europe_2"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = AST_robert_g_menzies
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				backroom_backstabber 
-			}
-		}		
-	}
-
-	AST_ben_chifley={
-		name=AST_ben_chifley
-		portraits={
-			army={
-				small="GFX_idea_AST_ben_chifley" #small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = AST_ben_chifley
-			allowed = {
-				original_tag = AST
-				has_dlc = "Together for Victory"
-			}
-			cost = 100.000
-			traits = {
-				smooth_talking_charmer 
-			}
-			available = {
-				has_completed_focus = AST_never_another_gallipoli 
-			}
-		}		
-	}
 
 	AST_herbert_v_evatt={
 		name=AST_herbert_v_evatt
@@ -706,26 +620,6 @@ characters={
 			}
 			traits = {
 				war_industrialist 
-			}
-		}		
-	}
-
-	AST_frank_forde={
-		name=AST_frank_forde
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = AST_frank_forde
-			allowed = {
-				original_tag = AST
-				has_dlc = "Together for Victory"
-			}
-			traits = {
-				compassionate_gentleman 
 			}
 		}		
 	}

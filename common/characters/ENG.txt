@@ -9,33 +9,6 @@ characters={
 				small="GFX_idea_ENG_winston_churchill"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_winston_churchill
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				royalist_bulldog 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-
 		country_leader={
 			ideology=conservatism
 			traits = {
@@ -71,24 +44,6 @@ characters={
 				small="GFX_idea_ENG_oswald_mosley"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_oswald_mosley
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				economic_organizer 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 		
 		country_leader={
 			ideology=fascism_ideology
@@ -106,40 +61,6 @@ characters={
 			}
 			army={
 				small="GFX_idea_harry_pollitt"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = harry_pollitt
-			allowed  = {
-				original_tag  = ENG
-			}
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_government  = communism 
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				communist_revolutionary 
-			}
-			do_effect  = {
-				NOT = {
-					has_government  = communism 
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
 			}
 		}
 		
@@ -1559,42 +1480,6 @@ characters={
 			army={
 				small="GFX_idea_clement_attlee"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = clement_attlee
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_completed_focus  = ENG_a_change_in_course 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				democratic_reformer 
-			}
-			do_effect  = {
-				NOT = {
-					has_government  = democratic 
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
 		}		
 	}
 	
@@ -1603,40 +1488,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_john_beckett"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = john_beckett
-			allowed  = {
-				original_tag  = ENG
-			}
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_government  = fascism 
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				fascist_demagogue 
-			}
-			do_effect  = {
-				NOT = {
-					has_government  = fascism 
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
 			}
 		}
 	}
@@ -1651,17 +1502,6 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_philip_kerr
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_completed_focus  = ENG_no_further_appeasement 
-					}
-					has_government  = democratic 
-				}
-			}
 			allowed  = {
 				original_tag  = ENG
 			}
@@ -1686,16 +1526,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_nevile_henderson"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_nevile_henderson
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				backroom_backstabber 
 			}
 		}
 	}
@@ -1770,23 +1600,6 @@ characters={
 				small="GFX_idea_ENG_mary_sophia_allen"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_mary_sophia_allen
-			available  = {
-				has_government  = fascism 
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				princess_of_terror 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	ENG_george_orwell={
@@ -1794,31 +1607,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_george_orwell"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_george_orwell
-			available  = {
-				has_government  = communism 
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				socialist_novelist 
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
@@ -1830,55 +1618,6 @@ characters={
 				small="GFX_idea_ENG_sylvia_pankhurst"
 			}
 		}
-		gender = female
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_sylvia_pankhurst
-			available  = {
-				OR = {
-					has_government  = communism 
-				}
-			}
-			allowed  = {
-				OR = {
-					AND = {
-						original_tag  = ENG
-						has_dlc = "Man the Guns"
-					}
-					AND = {
-						original_tag = ETH
-						has_dlc = "By Blood Alone"
-					}
-
-					AND = {
-						original_tag = SWE
-						has_aat = yes
-					}
-				}
-				
-			}
-			traits  = {
-				red_suffragette 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-			on_add = {
-				owner = {
-					IF = {
-						limit = {
-							has_power_balance = {
-								id = ETH_centralization_balance
-							}
-						}
-						
-						hidden_effect = {
-							ETH_BOP_decentralization_large_effect = yes
-						}
-					}				
-				}
-			}
-		}
 	}
 
 	ENG_david_lloyd_george={
@@ -1886,24 +1625,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_david_lloyd_george"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_david_lloyd_george
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				old_figurehead 
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}

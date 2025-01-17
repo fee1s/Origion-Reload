@@ -1265,26 +1265,10 @@
 		y = 2
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 20
+		cost = 10
 
 		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_completed_focus = CAN_canada_wheat_board
-			}
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-			NOT = {
-				any_owned_state = {
-					is_in_home_area = yes
-				}
-			}
+			factor = 5
 		}
 
 		cancel_if_invalid = yes
@@ -1300,7 +1284,7 @@
 				}
 				add_resource = {
 					type = steel
-					amount = 96
+					amount = 12
 				}
 			}
 			random_owned_controlled_state = {
@@ -1310,7 +1294,7 @@
 				}
 				add_resource = {
 					type = tungsten
-					amount = 72
+					amount = 16
 				}
 			}
 			random_owned_controlled_state = {
@@ -1320,7 +1304,7 @@
 				}
 				add_resource = {
 					type = chromium
-					amount = 48
+					amount = 14
 				}
 			}
 		}

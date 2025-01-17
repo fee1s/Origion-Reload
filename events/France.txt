@@ -436,10 +436,7 @@ country_event = {
 					elections_allowed = no
 				}
 				set_popularities = {
-					democratic = 22
-					fascism = 46
-					neutrality = 30
-					communism = 2
+					fascism = 100
 				}
 				set_cosmetic_tag = FRA_VICHY
 				VIC_philippe_petain= {
@@ -454,8 +451,7 @@ country_event = {
 						promote_leader = yes
 					}
 				}
-				add_ideas = FRA_occupation_costs_4
-				load_focus_tree = vichy_french_focus
+				add_ideas = BAN_BAN
 				if = {
 					limit = { FRA = { has_country_flag = become_vichy } }
 					change_tag_from = FRA
@@ -470,9 +466,6 @@ country_event = {
 			}
 		}
 		VIC = {
-			GER = {
-				give_guarantee = PREV
-			}
 			every_unit_leader = {
 				limit = {
 					has_id = 101 #de Gaulle
@@ -480,9 +473,6 @@ country_event = {
 				set_nationality = FRA
 			}
 			every_army_leader = {
-				limit = {
-					NOT = { has_trait = old_guard }
-				}
 				set_nationality = FRA
 			}
 		}

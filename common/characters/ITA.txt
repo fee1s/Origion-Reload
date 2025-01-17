@@ -1989,33 +1989,6 @@ characters = {
 				small = GFX_portrait_ITA_carlo_favagrossa_small
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_carlo_favagrossa
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_really_fascist = yes
-			}
-			traits = {
-				armaments_organizer
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
-		}
 	}
 
 	ITA_alberto_beneduce = {
@@ -2098,33 +2071,6 @@ characters = {
 				small = GFX_portrait_ITA_adelchi_serena_small
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_adelchi_serena
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_somewhat_fascist = yes
-			}
-			traits = {
-				silent_workhorse
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
-		}
 	}
 
 	ITA_curzio_malaparte = {
@@ -2143,33 +2089,6 @@ characters = {
 				small = GFX_portrait_ITA_serafino_mazzolini_small
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_serafino_mazzolini
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_really_fascist = yes
-			}
-			traits = {
-				ideological_crusader 
-			}
-			on_add = {
-			}
-			ai_will_do = {
-				base = 0.500
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
-		}
 	}
 
 	ITA_roberto_farinacci = {
@@ -2186,45 +2105,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_idea_carlo_scorza
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = carlo_scorza
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_really_fascist = yes
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				fascist_demagogue 
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascism 
-				}
-			}
-			ai_will_do = {
-				base = 0.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}		
 	}
@@ -2550,36 +2430,6 @@ characters = {
 				small = GFX_idea_amadeo_bordiga
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = amadeo_bordiga
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_is_going_antifascist_in_bba = yes
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				communist_revolutionary 
-			}
-			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
-			}
-			ai_will_do = {
-				base = 0.000
-			}
-		}
 	}
 
 	ITA_luigi_longo = {
@@ -2610,49 +2460,6 @@ characters = {
 			expire = "1965.1.1.1"
 			id = -1
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_palmiro_togliatti
-			allowed = {
-				OR = {
-					original_tag = ITA
-					original_tag = SWE
-				}
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				OR = {
-					AND = {
-						NOT = { has_completed_focus = ITA_culto_del_duce }
-						NOT = { has_completed_focus = ITA_convene_the_grand_council }
-						NOT = { 
-							has_country_leader = {
-								character = ITA_palmiro_togliatti
-								ruling_only = yes
-							}
-						}
-					}
-					SWE_refuge_for_revolutionaries_trigger = yes
-				}
-			}
-			
-			traits = {
-				marxist_fundamentalist
-			}
-			
-			ai_will_do = {
-				base = 0.100
-				modifier = {
-					factor = 10
-					has_stability < 0.3
-				}
-				modifier = {
-					factor = 0
-					ITA_is_socialist_ai = yes
-				}
-			}
-		}
 	}
 
 	ITA_sandro_pertini = {
@@ -2669,37 +2476,6 @@ characters = {
 			traits = { staunch_anti_fascist }
 			expire = "1965.1.1.1"
 			id = -1
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_sandro_pertini
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_convene_the_grand_council }
-				NOT = { 
-					has_country_leader = {
-						character = ITA_sandro_pertini
-						ruling_only = yes
-					}
-				}
-			}
-			
-			traits = {
-				marxist_philosopher
-			}
-			
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 0
-					ITA_is_socialist_ai = yes
-				}
-			}
 		}
 	}
 
