@@ -698,40 +698,6 @@ characters={
 			army={
 				smalL="GFX_idea_RAJ_bhimrao_ramji_ambedkar" #small="GFX_idea_generic_political_advisor_india_1"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_bhimrao_ramji_ambedkar
-			allowed = {
-				original_tag = RAJ
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_indian_national_congress 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
 		}		
 	}
 
@@ -740,40 +706,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_india_2"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_karam_singh_mann
-			allowed = {
-				original_tag = RAJ
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				communist_revolutionary 
-			}
-			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
 			}
 		}
 	}
@@ -786,40 +718,6 @@ characters={
 			}
 			civilian ={
 				large = "GFX_RAJ_subhas_chandra_bose" #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism)
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_subhas_chanda_bose
-			allowed = {
-				original_tag = RAJ
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				fascist_demagogue 
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascism 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
 			}
 		}		
 	}
@@ -868,16 +766,6 @@ characters={
 			army={
 				small="GFX_idea_RAJ_mahatma_mohandas_gandhi" #small="GFX_idea_generic_political_advisor_arab_3"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_mahatma_mohandas_gandhi
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				compassionate_gentleman 
-			}
 		}		
 	}
 
@@ -905,19 +793,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RAJ_sir_mohammed_iqbal" #small="GFX_idea_generic_political_advisor_arab_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_sir_mohammed_iqbal
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				backroom_backstabber 
-			}
-			ai_will_do = {
-				factor = 0.000
 			}
 		}
 	}

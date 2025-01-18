@@ -6165,55 +6165,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ITA_servizio_informazione_militare
-		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = ITA_triumph_in_africa_bba }
-
-		x = 0
-		y = 1
-
-		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 10
-		available = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				ETH_deescalate_the_war_effect = yes
-			}
-			
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				if = {
-					limit = {
-						has_intelligence_agency = no
-					}
-					create_intelligence_agency = yes
-				}
-				add_ideas = ITA_servizio_informazione_militare_ns
-
-				ITA_create_rosa_dainelli_operative = yes
-			}
-			else = {
-				add_ideas = ITA_servizio_informazione_militare_ns_vanilla
-			}
-		}
-	}
-	
-	focus = {
 		id = ITA_devaluate_the_lire
 		icon = GFX_focus_ITA_devaluate_the_lire
-		prerequisite = { focus = ITA_servizio_informazione_militare }
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
 		x = -1
-		y = 2	
+		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
@@ -6230,10 +6187,10 @@ focus_tree = {
 	focus = {
 		id = ITA_the_new_emperor_of_ethiopia
 		icon = GFX_focus_ITA_the_new_emperor_of_ethiopia
-		prerequisite = { focus = ITA_servizio_informazione_militare }
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
@@ -6276,10 +6233,10 @@ focus_tree = {
 	focus = {
 		id = ITA_culto_del_duce
 		icon = GFX_focus_ITA_culto_del_duce
-		prerequisite = { focus = ITA_servizio_informazione_militare }
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
@@ -7315,9 +7272,6 @@ focus_tree = {
 						transfer_state = 45
 						transfer_state = 764
 					}
-					
-					45 = { set_compliance = 50 }
-					764 = { set_compliance = 50 }
 				}
 				
 				if = {
@@ -7328,15 +7282,16 @@ focus_tree = {
 						transfer_state = 803
 						transfer_state = 802
 						transfer_state = 108
+						transfer_state = 970
 					}
-					
-					106 = { set_compliance = 50 }
-					803 = { set_compliance = 50 }
-					802 = { set_compliance = 50 }
-					108 = { set_compliance = 50 }
 				}
 				
 				ITA = { annex_country = { target = YUG } }
+				
+				add_state_core = 103
+				add_state_core = 163
+				add_state_core = 105
+				
 				add_named_threat = { threat = 15 name = GER_fate_of_yugoslavia }
 			}
 		}
@@ -7435,9 +7390,6 @@ focus_tree = {
 						transfer_state = 184
 						transfer_state = 731
 					}
-					
-					184 = { set_compliance = 50 }
-					731 = { set_compliance = 50 }
 				}
 				
 				ITA = { annex_country = { target = GRE } }

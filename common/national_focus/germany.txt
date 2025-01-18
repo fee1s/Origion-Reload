@@ -1062,10 +1062,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-			NOT = { has_war_with = HUN }
-		}
+		
 		completion_reward = {
 			if = {
 				limit = {
@@ -1112,12 +1109,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-			NOT = { has_war_with = ROM }
-		}
-
-		
 		
 		completion_reward = {
 			if = {
@@ -1164,11 +1155,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			
 		}
 
 		available_if_capitulated = no
@@ -1842,24 +1828,6 @@ focus_tree = {
 				}
 				country_event = { id = news.32 }
 			}
-			# additional 3 anti-tank bonuses!
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = anti_tank_bonus
-						option = both
-					}
-				}
-				add_tech_bonus = {
-					name = shm_ger_sov_treaty_at
-					bonus = 1.0
-					uses = 3
-					technology = antitank3
-					technology = antitank4
-					technology = antitank5
-				}
-				custom_effect_tooltip = "RThe Soviet Union will receive similar bonuses as well.W"
-			}
 			custom_effect_tooltip = GER_mol_rib_pact_tt
 		}
 	}
@@ -1927,20 +1895,6 @@ focus_tree = {
 		id = GER_swedish_trade_agreement
 		icon = GFX_focus_generic_befriend_sweden
 		prerequisite = { focus = GER_lider_faction}
-		available = {
-			is_subject = no
-			AND = {
-				country_exists = SWE
-				SWE = { is_subject = no }
-				NOT = { has_war_with = SWE }
-				SWE = {
-					custom_trigger_tooltip = {
-						tooltip = GER_alone_or_peace_faction_tt
-						is_alone_or_in_faction_at_peace_with_GER = yes
-					}
-				}
-			}
-		}
 		x = -2
 		y = 2
 		relative_position_id = GER_rhineland
@@ -3609,10 +3563,7 @@ focus_tree = {
 		prerequisite = {focus = GER_lider_faction}
 		relative_position_id = GER_lider_faction
 		available = {
-			GER = {
-			is_faction_leader = yes
-			is_in_faction_with = ITA
-			}
+			date > 1940.6.1
 		}
 		bypass = {
 		}
@@ -3644,11 +3595,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_ITA_stell
 		}
-		available = {
-			has_war = yes
-		}
-		bypass = {
-		}
+
 		relative_position_id = GER_ITA_stell
 		cancel_if_invalid = yes
 		x = 1
@@ -3666,14 +3613,6 @@ focus_tree = {
 		icon = GFX_focus_ITA_redirect_alfa_romeo_production
 		prerequisite = {
 			focus = GER_ITA_stell
-		}
-		available = {
-			GER = {
-			is_faction_leader = yes
-			is_in_faction_with = ITA
-			}
-		}
-		bypass = {
 		}
 		relative_position_id = GER_ITA_stell
 		
@@ -3715,14 +3654,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_integrate_war_economies
 		}
-		available = {
-			GER = {
-						is_faction_leader = yes
-						is_in_faction_with = HUN
-					}
-		}
-		bypass = {
-		}
+
 		relative_position_id = GER_align_hungary
 		cancel_if_invalid = yes
 		x = 0
@@ -3757,14 +3689,6 @@ focus_tree = {
 			focus = GER_HUN_Aliim
 			
 		}
-		available = {
-			GER = {
-			is_faction_leader = yes
-			is_in_faction_with = HUN
-			}
-		}
-		bypass = {
-		}
 		relative_position_id = GER_HUN_Aliim
 		
 		cancel_if_invalid = yes
@@ -3792,14 +3716,6 @@ focus_tree = {
 		icon = GFX_focus_invite_romania
 		prerequisite = {
 			focus = GER_integrate_war_economies
-		}
-		available = {
-			GER = {
-						is_faction_leader = yes
-						is_in_faction_with = ROM
-					}
-		}
-		bypass = {
 		}
 		relative_position_id = GER_align_romania
 		cancel_if_invalid = yes
@@ -3836,14 +3752,6 @@ focus_tree = {
 			
 		}
 		
-		available = {
-			GER = {
-						is_faction_leader = yes
-						is_in_faction_with = ROM
-					}
-		}
-		bypass = {
-		}
 		relative_position_id = GER_ROM_oil
 		
 		cancel_if_invalid = yes
@@ -3888,14 +3796,6 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_integrate_war_economies
 		}
-		available = {
-			GER = {
-						is_faction_leader = yes
-						is_in_faction_with = BUL
-					}
-		}
-		bypass = {
-		}
 		relative_position_id = GER_integrate_war_economies
 		cancel_if_invalid = yes
 		x = 0
@@ -3928,14 +3828,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_BUL_Chromik
 		}
-		available = {
-			GER = {
-				is_faction_leader = yes
-				is_in_faction_with = BUL
-			}
-		}
-		bypass = {
-		}
+
 		relative_position_id = GER_BUL_Chromik
 		
 		cancel_if_invalid = yes

@@ -54,47 +54,6 @@ characters={
 				large="GFX_portrait_fra_maurice_thorez"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = maurice_thorez
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				or  = {
-					has_completed_focus  = FRA_leftist_rhetoric 
-					has_completed_focus  = FRA_invite_communist_ministers 
-				}
-				not  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				communist_revolutionary 
-			}
-			do_effect  = {
-				not  = {
-					has_government  = communism 
-				}
-			}
-			on_add  = {
-				FRA_right_wing_riot_effect = yes 
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
 		
 		country_leader={
 			ideology=stalinism
@@ -255,20 +214,6 @@ characters={
 			}
 			army={
 				large=GFX_portrait_FRA_alphonse_georges
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = alphonse_georges
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				army_chief_maneuver_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 		
@@ -804,21 +749,7 @@ characters={
 			army={
 				small="GFX_idea_generic_army_europe_3"
 			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = FRA_henri_marie_auguste_bineau
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				army_chief_offensive_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
+		}	
 	}
 
 	FRA_pierre_alombert_goget={
@@ -826,20 +757,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = FRA_pierre_alombert_goget
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				army_chief_defensive_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -1119,22 +1036,6 @@ characters={
 			allowed  = {
 				original_tag  = FRA
 			}
-			available  = {
-				NOT  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
 			traits  = {
 				democratic_reformer 
 			}
@@ -1156,51 +1057,6 @@ characters={
 				small="GFX_idea_marcel_bucard"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = marcel_bucard
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				or  = {
-					has_completed_focus  = FRA_right_wing_rhetoric 
-					has_completed_focus  = FRA_utilize_the_leagues 
-					has_focus_tree  = vichy_french_focus
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					not  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				fascist_demagogue 
-			}
-			do_effect  = {
-				not  = {
-					has_government  = fascism 
-				}
-			}
-			on_add  = {
-				if  = {
-					limit  = {
-						not  = {
-							owner = { tag = VIC }
-						}
-					}
-					owner = {
-						country_event  = lar_france_political_violence.2
-					}
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
 	}
 
 	FRA_rene_massigli={
@@ -1208,26 +1064,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_rene_massigli"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = rene_massigli
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				has_completed_focus  = FRA_confirm_eastern_commitments 
-				has_government  = democratic 
-			}
-			cost  = 75.000
-			traits  = {
-				hawk 
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
@@ -1246,11 +1082,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				OR = {
-					has_completed_focus  = FRA_buy_time
-					has_completed_focus  = FRA_appeal_to_the_french_nation
-				}
-				has_government  = democratic 
+				has_completed_focus  = FRA_buy_time
 			}
 			cost  = 75.000
 			traits  = {
@@ -1270,32 +1102,6 @@ characters={
 			army={
 				small=GFX_portrait_FRA_charles_maurras_small
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = charles_maurras
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				has_completed_focus  = FRA_integralism 
-				or  = {
-					has_government  = fascism 
-					has_government  = neutrality 
-				}
-			}
-			visible  = {
-				has_dlc = "La Resistance"
-			}
-			cost  = 75.000
-			traits  = {
-				national_integralist 
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
 		}		
 	}
 
@@ -1304,29 +1110,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_FRA_philippe_henriot"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_philippe_henriot
-			allowed  = {
-				original_tag  = FRA
-			}
-			visible  = {
-				has_dlc = "La Resistance"
-			}
-			available  = {
-				has_completed_focus  = FRA_national_regeneration 
-				has_government  = fascism 
-			}
-			cost  = 75.000
-			traits  = {
-				propaganda_expert 
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
@@ -1343,11 +1126,6 @@ characters={
 			idea_token = FRA_pierre_pucheu
 			allowed  = {
 				original_tag  = FRA
-			}
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
 			}
 			cost  = 150.000
 			traits  = {
@@ -1395,19 +1173,6 @@ characters={
 				large=GFX_portrait_FRA_jacques_duclos #Used only as Operative atm
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_jacques_duclos
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				backroom_backstabber 
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
 	}
 
 	FRA_paul_baudouin={
@@ -1415,23 +1180,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_FRA_paul_baudouin"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_paul_baudouin
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				smooth_talking_charmer 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
@@ -1443,26 +1191,6 @@ characters={
 				small="GFX_idea_FRA_vincent_auriol"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_vincent_auriol
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				has_completed_focus  = FRA_form_the_popular_front 
-			}
-			traits  = {
-				financial_expert 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	FRA_roger_salengro={
@@ -1470,26 +1198,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_FRA_roger_salengro"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_roger_salengro
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				has_completed_focus  = FRA_form_the_popular_front 
-			}
-			traits  = {
-				compassionate_gentleman 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
@@ -1553,23 +1261,6 @@ characters={
 				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_charles_tillon
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				armaments_organizer 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	FRA_paul_reynaud={
@@ -1581,45 +1272,14 @@ characters={
 			civilian = {
 				large = GFX_portrait_FRA_paul_reynaud
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_paul_reynaud
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				quartermaster_general 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
 		}		
 	}
-		
+	
 	FRA_maurice_gauche={
 		name=FRA_maurice_gauche
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_maurice_gauche
-			available  = {
-				has_intelligence_agency  = yes 
-			}
-			allowed  = {
-				original_tag  = FRA
-				has_dlc = "La Resistance"
-			}
-			traits  = {
-				head_of_intelligence 
 			}
 		}
 	}

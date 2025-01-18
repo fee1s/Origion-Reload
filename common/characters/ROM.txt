@@ -494,26 +494,6 @@ characters={
 				small="GFX_idea_ROM_iuliu_maniu"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_iuliu_maniu
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-		}
 	}
 
 	ROM_gheorghe_gheorghiu_dej={
@@ -521,32 +501,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ROM_gheorghe_gheorghiu_dej"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_gheorghe_gheorghiu_dej
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus = ROM_appoint_soviet_friendly_government 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				communist_revolutionary 
 			}
 		}
 	}
@@ -595,19 +549,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ROM_petru_groza"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_petru_groza
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				backroom_backstabber 
-			}
-			ai_will_do = {
-				factor = 0.000
 			}
 		}
 	}

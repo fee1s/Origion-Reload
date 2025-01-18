@@ -24,6 +24,16 @@ ideas = {
 		    }
 		}
 		
+		origion_defeatism = {
+			picture = BEL_the_kings_surrender
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = { surrender_limit = -0.3 }
+		}
+		
 		usa_new_law_is_in_development = {
 			picture = generic_constitutional_guarantees
 			
@@ -572,11 +582,9 @@ ideas = {
 			removal_cost = -1
 			picture = generic_fascism_drift_2
 			modifier = {
-			resistance_target = -0.25
-			conscription = 0.01
-			training_time_army_factor = -0.10
-			fascism_drift = 0.02
-			resistance_damage_to_garrison	= -0.4
+				conscription = 0.01
+				training_time_army_factor = -0.10
+				fascism_drift = 0.1
 			}
 		}
 	

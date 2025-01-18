@@ -1659,25 +1659,6 @@ characters={
 				small="GFX_idea_joachim_von_ribbentrop"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = joachim_von_ribbentrop
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
-			}
-			traits = {
-				backroom_backstabber 
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
-		}
 	}
 
 	GER_konstantin_von_neurath={
@@ -1687,16 +1668,6 @@ characters={
 				small="GFX_idea_konstantin_von_neurath"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = konstantin_von_neurath
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				smooth_talking_charmer 
-			}
-		}
 	}
 
 	GER_wilhelm_canaris={
@@ -1704,20 +1675,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ger_wilhelm_canaris"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ger_wilhelm_canaris
-			available = {
-				has_intelligence_agency = yes 
-			}
-			allowed = {
-				original_tag = GER
-				has_dlc = "La Resistance"
-			}
-			traits = {
-				head_of_intelligence 
 			}
 		}		
 	}

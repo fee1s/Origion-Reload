@@ -1838,33 +1838,6 @@ characters = {
 				large = GFX_portrait_ITA_mario_roatta
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = mario_roatta_political_advisor
-			allowed = {
-				original_tag = ITA
-				has_dlc = "La Resistance"
-			}
-			available = {
-				has_intelligence_agency = yes
-				ITA_government_is_really_fascist = yes
-			}
-			traits = {
-				head_of_intelligence 
-			}
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
-		}
 
 		corps_commander = {
 			traits = { politically_connected }

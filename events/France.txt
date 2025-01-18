@@ -431,6 +431,9 @@ country_event = {
 					can_create_factions = no
 					can_not_declare_war = yes
 				}
+				
+				country_lock_all_division_template = yes
+				
 				set_politics = {
 					ruling_party = fascism
 					elections_allowed = no
@@ -451,7 +454,10 @@ country_event = {
 						promote_leader = yes
 					}
 				}
+				
 				add_ideas = BAN_BAN
+				add_ideas = free_trade
+				
 				if = {
 					limit = { FRA = { has_country_flag = become_vichy } }
 					change_tag_from = FRA

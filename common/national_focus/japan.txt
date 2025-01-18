@@ -1042,11 +1042,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			custom_effect_tooltip = JAP_war_chi_reward_tt
-			add_timed_idea = { idea = CHI_war days = 300 }
-			add_collaboration = {
-	            target = CHI
-	            value = 1
-			}
+			
+			#add_timed_idea = { idea = CHI_war days = 300 }
+			
 			add_named_threat = {
 				threat = 10
 				name = news.1.t

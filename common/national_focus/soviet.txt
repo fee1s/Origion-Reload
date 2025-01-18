@@ -4050,11 +4050,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = SOV_national_academies_of_sciences_available_tt
-				check_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_academies_required_for_atomic_bomb_project compare = greater_than_or_equals }
-			}
-			is_subject = no
+			date > 1943.1.1
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -4067,23 +4063,6 @@ focus_tree = {
 				ahead_reduction = 1
 				category = nuclear
 			}
-
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				create_operative_leader = {
-					name = "Ursula Kuczynski"
-					GFX = GFX_Portrait_ursula_kuczynski
-					female = yes
-					traits = { operative_safe_cracker operative_infiltrator }
-					bypass_recruitment = no
-					available_to_spy_master = yes
-					nationalities = { SOV GER }
-				}
-				add_ideas = SOV_soviet_atomic_bomb_project_ns
-			}
-			custom_effect_tooltip = SOV_soviet_atomic_bomb_project_unlock_operation_tt
 		}
 	}
 
@@ -4307,43 +4286,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			OR = {
-				195 = { #LENINGRAD
-					is_controlled_by = ROOT
-					any_neighbor_state = {
-						is_owned_by = ROOT
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-				}
-				219 = { #MOSCOW
-					is_controlled_by = ROOT
-					any_neighbor_state = {
-						is_owned_by = ROOT
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-				}
-				217 = { #STALINGRAD
-					is_controlled_by = ROOT
-					any_neighbor_state = {
-						is_owned_by = ROOT
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-				}
-				137 = { #SEVASTOPOL
-					is_controlled_by = ROOT
-					any_neighbor_state = {
-						is_owned_by = ROOT
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-				}
-				202 = { #Kiev
-					is_controlled_by = ROOT
-					any_neighbor_state = {
-						is_owned_by = ROOT
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-				}
-			}
+			has_war = yes
 		}
 		
 		search_filters = {}
@@ -5820,58 +5763,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_lessons_of_war
 		cost = 5
-
-		available = {
-			any_owned_state = {
-				controller = {
-					has_war_with = ROOT
-				}
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_operative_slot  = 1 }
-			custom_effect_tooltip = SOV_organization_of_the_partisans_ns_tt
 
-			if = {
-				limit = {
-					has_government = communism
-				}
-				show_unit_leaders_tooltip = SOV_vasily_korzh
-				show_unit_leaders_tooltip = SOV_sidor_kovpak
-			}
-
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				if = {
-					limit = {
-						has_government = communism
-					}
-					create_operative_leader = {
-						name = "Dmitry Medvedev"
-						GFX = GFX_Portrait_dmitry_medvedev
-						female = yes
-						traits = { operative_demolition_expert operative_commando }
-						bypass_recruitment = no
-						available_to_spy_master = yes
-						nationalities = { SOV }
-					}
-				}
-
-				add_timed_idea = {
-					idea = SOV_central_headquarters_of_the_partisan_movement
-					days = 720
-				}
-			}
-			else = {
-				add_timed_idea = {
-					idea = SOV_central_headquarters_of_the_partisan_movement_no_lar
-					days = 720
-				}
+			add_timed_idea = {
+				idea = SOV_central_headquarters_of_the_partisan_movement
+				days = 720
 			}
 
 			if = {
@@ -7051,42 +6950,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 1
-
-		available = {
-			has_government = communism
-		}
 		
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			
-				if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				custom_effect_tooltip = SOV_behead_the_snake_lar_tt
-				create_operative_leader = {
-					name = "Ramón Mercader"
-					GFX = GFX_portrait_SOV_ramon_mercader
-					traits = { operative_tough operative_infiltrator }
-					bypass_recruitment = no
-					available_to_spy_master = yes
-					nationalities = { SOV SPR MEX }
-				}
-
-				#Extra operative slot
-				set_variable = { SOV_the_politburo_operative_slot = 1 }
-				custom_effect_tooltip = SOV_behead_the_snake_ns_tt
-			}
-			else = {
-				custom_effect_tooltip = SOV_behead_the_snake_no_lar_tt
-			}
 
 			SOV_paranoia_high_decrease_effect = yes
-				remove_ideas = trotskyite_plot_nsb
-				add_ideas = trotskyite_plot_purged
-				
-			
+			swap_ideas = {
+				remove_idea = trotskyite_plot_nsb
+				add_idea = trotskyite_plot_purged
+			}
 		}
 	}
 
@@ -16503,21 +16376,6 @@ focus_tree = {
 			custom_effect_tooltip = SOV_secret_protocol_of_the_MR_pact_tt
 			
 			hidden_effect = {
-				add_collaboration = {
-					target = EST
-					value = 1
-				}
-				
-				add_collaboration = {
-					target = LAT
-					value = 1
-				}
-				
-				add_collaboration = {
-					target = LIT
-					value = 1
-				}
-				
 				annex_country = { target = EST }
 				annex_country = { target = LAT }
 				annex_country = { target = LIT }
@@ -16529,7 +16387,7 @@ focus_tree = {
 				transfer_state = 146
 				transfer_state = 147
 			
-				add_named_threat = { threat = 12 name = SOV_Bribalts }
+				add_named_threat = { threat = 12 name = SOV_secret_protocol_of_the_MR_pact }
 				
 				add_timed_idea = {
 					idea = SOV_hit_of_hammer_like_idea

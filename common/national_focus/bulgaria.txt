@@ -7424,50 +7424,18 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			any_state = {
-				has_state_flag = BUL_historical_bulgarian_claim_flag
-				is_fully_controlled_by = BUL
-			}
+			date > 1938.1.1
 		}
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-			custom_effect_tooltip = BUL_bulgarian_administration_of_the_balkans_decisions_tt
-			custom_effect_tooltip = BUL_bulgarian_administration_of_the_balkans_cores_tt
-			if = {
-				limit = {
-					has_full_control_of_state = 106
-					106 = { NOT = { is_core_of = ROOT } }
-				}
-				106 = { set_state_flag = BUL_bulgarian_reintegration_campaign_flag }
-				add_state_core = 106
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 803
-					803 = { NOT = { is_core_of = ROOT } }
-				}
-				803 = { set_state_flag = BUL_bulgarian_reintegration_campaign_flag }
-				add_state_core = 803
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 77
-					77 = { NOT = { is_core_of = ROOT } }
-				}
-				77 = { set_state_flag = BUL_bulgarian_reintegration_campaign_flag }
-				add_state_core = 77
-			}
-			custom_effect_tooltip = BUL_historical_states_tt
-
-			hidden_effect = {
-				news_event = { id = bftb_news.5 hours = 8 random_hours = 4 }
-			}
-
-			add_ai_strategy = { #We really want to garrison all these territorial gains
-				type = garrison
-				value = 75
-			}
+			add_state_core = 106
+			add_state_core = 803
+			add_state_core = 970
+			add_state_core = 802
+			add_state_core = 108
+			add_state_core = 731
+			add_state_core = 184
 		}
 	}
 

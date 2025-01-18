@@ -1949,8 +1949,6 @@ country_event = {
 		
 		GER = {
 			annex_country = { target = CZE }
-			9 = { add_compliance = 50 }
-			75 = { add_compliance = 50 }
 		}
 		
 		HUN = {
@@ -1961,10 +1959,6 @@ country_event = {
 		
 		add_war_support = 0.1
 		POL = { transfer_state = 72 }
-		
-		hidden_effect = {
-			country_event = { hours = 6 id = news.61 }
-		}
 		
 		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
 		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
