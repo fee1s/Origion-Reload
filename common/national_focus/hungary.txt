@@ -3047,184 +3047,16 @@ focus_tree = {
 	}
 
 	############################
-	##### MILITARY STUFFS ######
-	############################
-
-	focus = {
-		id = HUN_secret_rearmament
-		icon = GFX_focus_secret_rearmament
-		x = 8
-		y = 0
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 80
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-			NOT = { has_idea = HUN_treaty_of_triannon_aat }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = HUN_secret_rearmament
-			custom_effect_tooltip = HUN_secret_rearmament_tt
-		}
-	}
-
-	focus = {
-		id = HUN_war_games
-		icon = GFX_goal_poland_goal
-		prerequisite = { focus = HUN_secret_rearmament }
-		x = -1
-		y = 1
-		relative_position_id = HUN_secret_rearmament
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 70
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = HUN_theoretical_air_efforts
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = HUN_secret_rearmament }
-		x = 1
-		y = 1
-		relative_position_id = HUN_secret_rearmament
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 70
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = HUN_theoretical_air_efforts
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_bled_agreement
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = HUN_war_games focus = HUN_theoretical_air_efforts }
-		x = 0
-		y = 2
-		relative_position_id = HUN_secret_rearmament
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-			OR = {
-				AND = {
-					NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					NOT = { has_idea = HUN_treaty_of_triannon_2 }
-				}
-				has_idea = HUN_treaty_of_triannon_3
-				AND = {
-					ROM = {
-						OR = {
-							exists = no
-							is_puppet = yes
-						}
-					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
-						}
-					}
-				}
-			}
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			if = {
-				limit = {
-					FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
-				}
-				FRA = { country_event = DOD_hungary.140 }
-			}
-			if = {
-				limit = {
-					NOT = { FRA = { has_completed_focus = FRA_strengthen_the_little_entente } }
-				}
-				ROM = { country_event = DOD_hungary.140 }
-			}
-
-			custom_effect_tooltip = HUN_bled_agreement_custom_effect_tooltip
-		}
-	}
-
-	############################
 	######## AIR STUFFS ########
 	############################
 
 	focus = {
 		id = HUN_establish_the_air_force
 		icon = GFX_goal_generic_build_airforce
-		prerequisite = { focus = HUN_bled_agreement }
+		prerequisite = { focus = wuw_HUN_negotiate_the_restrictions }
 		x = -4
 		y = 1
-		relative_position_id = HUN_bled_agreement
+		relative_position_id = wuw_HUN_negotiate_the_restrictions
 		cost = 10
 
 		ai_will_do = {
@@ -3357,586 +3189,6 @@ focus_tree = {
 				ahead_reduction = 2
 				uses = 1
 				category = tactical_bomber
-			}
-		}
-	}
-
-	############################
-	####### ARMY STUFFS ########
-	############################
-
-	focus = {
-		id = HUN_army_maneuvers
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = HUN_bled_agreement }
-		x = 12
-		y = 3
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			army_experience = 300
-		}
-	}
-
-	############################
-	###### MOBILE BRANCH #######
-	############################
-
-	focus = {
-		id = HUN_mobile_focus
-		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = HUN_army_maneuvers }
-		mutually_exclusive = { focus = HUN_home_defense }
-		x = -2
-		y = 1
-		relative_position_id = HUN_army_maneuvers
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = HUN_mobile_focus
-				cost_reduction = 0.25
-				uses = 1
-				category = cat_mobile_warfare
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_the_botond
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = HUN_mobile_focus }
-		x = -2
-		y = 1
-		relative_position_id = HUN_mobile_focus
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_the_botond
-				bonus = 1.0
-				uses = 1
-				category = motorized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_motorized_logistics
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = HUN_the_botond }
-		x = -1
-		y = 4
-		relative_position_id = HUN_mobile_focus
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_motorized_logistics
-				bonus = 1.0
-				uses = 2
-				category = hospital_tech
-				category = logistics_tech
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_develop_tanks
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = HUN_mobile_focus }
-		mutually_exclusive = { focus = HUN_assault_gun_focus }
-		x = 0
-		y = 1
-		relative_position_id = HUN_mobile_focus
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 40
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_develop_tanks
-				ahead_reduction = 2
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_assault_gun_focus
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = HUN_mobile_focus focus = HUN_home_defense }
-		mutually_exclusive = { focus = HUN_develop_tanks }
-		x = 2
-		y = 1
-		relative_position_id = HUN_mobile_focus
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = HUN_assault_gun_focus
-		}
-	}
-
-	focus = {
-		id = HUN_joint_tank_procurement
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = HUN_develop_tanks focus = HUN_assault_gun_focus }
-		x = 2
-		y = 2
-		relative_position_id = HUN_mobile_focus
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 70
-		}
-
-		available = {
-			is_in_faction = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_to_tech_sharing_group = HUN_joint_tank_development_group
-			every_other_country = {
-				limit = {
-					is_in_faction_with = HUN
-				}
-				add_to_tech_sharing_group = HUN_joint_tank_development_group
-			}
-			
-		}
-	}
-
-	focus = {
-		id = HUN_armored_warfare
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = HUN_the_botond }
-		x = 0
-		y = 1
-		relative_position_id = HUN_the_botond
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_armored_warfare
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_mobile_corps_doctrine
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = HUN_armored_warfare }
-		x = 0
-		y = 2
-		relative_position_id = HUN_the_botond
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = HUN_mobile_corps_doctrine
-				cost_reduction = 0.25
-				uses = 1
-				category = cat_mobile_warfare
-			}
-		}
-	}
-
-	############################
-	##### HOME DEF BRANCH ######
-	############################
-
-	focus = {
-		id = HUN_home_defense
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = HUN_army_maneuvers }
-		mutually_exclusive = { focus = HUN_mobile_focus }
-		x = 2
-		y = 1
-		relative_position_id = HUN_army_maneuvers
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 80
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = HUN_home_defense
-				cost_reduction = 0.25
-				uses = 1
-				category = cat_grand_battle_plan
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_danuvia_submachine_guns
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = HUN_home_defense }
-		x = 0
-		y = 1
-		relative_position_id = HUN_home_defense
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_danuvia_submachine_guns
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_artillery_effort
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = HUN_danuvia_submachine_guns }
-		x = 0
-		y = 2
-		relative_position_id = HUN_home_defense
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_artillery_effort
-				bonus = 1.0
-				uses = 3
-				technology = antitank3
-				technology = antitank4
-                technology = antitank5
-			}
-		}
-	}
-
-	focus = {
-		id = HUN_light_infantry_divisions_doctrine
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = HUN_danuvia_submachine_guns }
-		x = -4
-		y = 2
-		relative_position_id = HUN_home_defense
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
-			hidden_effect = {
-				if = {
-					limit = { has_tech = tech_engineers }
-					division_template = {
-						name = "Light Division"
-						division_names_group = HUN_INF_01
-						priority = 2
-		
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-				
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-						}
-						support = {
-							recon = { x = 0 y = 0 }
-							artillery = { x = 0 y = 1 }
-							engineer = { x = 0 y = 1 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Light Division"
-							division_names_group = HUN_INF_01
-							priority = 2
-			
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-					
-			    	   		 	infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-							support = {
-								recon = { x = 0 y = 0 }
-								artillery = { x = 0 y = 1 }
-								engineer = { x = 0 y = 1 }
-							}
-						}					
-					}
-				}	
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0" 
-						owner = HUN
-					}
-				}
-			}
-			hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
-		}
-	}
-
-	focus = {
-		id = HUN_form_parachute_battalions
-		icon = GFX_focus_generic_paratrooper
-		prerequisite = { focus = HUN_light_infantry_divisions_doctrine }
-		x = -4
-		y = 3
-		relative_position_id = HUN_home_defense
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_form_parachute_battalions
-				bonus = 3.0
-				uses = 1
-				category = para_tech
 			}
 		}
 	}
@@ -4254,6 +3506,1321 @@ focus_tree = {
 				category = cv_tech
 			}
 
+		}
+	}
+	
+	focus = {
+		id = wuw_HUN_secret_rearmament
+		icon = GFX_focus_secret_rearmament
+		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
+		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
+		x = 8
+		y = 0
+
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			wuw_HUN_does_not_have_trianon = yes
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_ideas = HUN_secret_rearmament
+			custom_effect_tooltip = HUN_secret_rearmament_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_idea = HUN_levente_associations
+				}
+				swap_ideas = {
+					remove_idea = HUN_levente_associations
+					add_idea = HUN_levente_associations_secret_rearmament
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_idea = HUN_levente_associations_act_of_defense
+				}
+				swap_ideas = {
+					remove_idea = HUN_levente_associations_act_of_defense
+					add_idea = HUN_levente_associations_act_of_defense_and_secret_rearmament
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_undercover_air_maneuvers
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = wuw_HUN_secret_rearmament }
+		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_secret_rearmament
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_AIR_XP FOCUS_FILTER_HISTORICAL }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "Arms Against Tyranny"
+					}
+				}
+				IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_wuw
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_wuw
+						add_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+						add_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
+					}
+				}
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_aat_wuw
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_aat_wuw
+						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
+						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
+					}
+				}
+			}
+
+			air_experience = 15
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_undercover_air_maneuvers
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					wuw_HUN_does_not_have_trianon = no
+				}
+				custom_effect_tooltip = available_theorist
+				show_ideas_tooltip = HUN_gyorgy_jendrassik
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				custom_effect_tooltip = available_military_high_command
+				show_ideas_tooltip = HUN_sandor_magyarossy
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_hold_war_games
+		icon = GFX_goal_poland_goal
+		prerequisite = { focus = wuw_HUN_secret_rearmament }
+		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_secret_rearmament
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "Arms Against Tyranny"
+					}
+				}
+				IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_wuw
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_wuw
+						add_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
+						add_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
+					}
+				}
+			}
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_aat_wuw
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_aat_wuw
+						add_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
+					}
+					swap_ideas = {
+						remove_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
+						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
+					}
+				}
+			}
+
+			army_experience = 30
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					wuw_HUN_does_not_have_trianon = no
+				}
+				custom_effect_tooltip = available_theorist
+				show_ideas_tooltip = HUN_shvoy_kalman
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_negotiate_the_restrictions
+		icon = GFX_focus_HUN_negotiate_the_restrictions
+		prerequisite = { focus = wuw_HUN_undercover_air_maneuvers focus = wuw_HUN_hold_war_games }
+		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_undercover_air_maneuvers
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		bypass = {
+			OR = {
+				wuw_HUN_does_not_have_trianon = yes
+				has_idea = HUN_bled_agreement_wuw
+				AND = {
+					ROM = {
+						OR = {
+							exists = no
+							is_puppet = yes
+						}
+					}
+					FRA = {
+						OR = {
+							exists = no
+							is_puppet = yes
+							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
+						}
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_war_support = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					NOT = { FRA = { has_completed_focus = FRA_strengthen_the_little_entente } }
+				}
+				ROM = { country_event = DOD_hungary.140 }
+			}
+
+			custom_effect_tooltip = HUN_bled_agreement_custom_effect_tooltip
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_reinstate_the_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = wuw_HUN_secret_rearmament }
+		x = 7
+		y = 1
+		relative_position_id = wuw_HUN_secret_rearmament
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+			wuw_HUN_does_not_have_trianon = yes
+			NOT = {
+				has_idea = HUN_promises_of_peace
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+			add_ideas = HUN_naval_warfare
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = HUN_obudai_hajogyar_organization
+
+				mio:HUN_obudai_hajogyar_organization = {
+					add_mio_size = 3
+				}
+
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = HUN_obudai_hajogyar
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = communism
+							has_government = fascism
+						}
+					}
+				}
+				custom_effect_tooltip = available_chief_of_navy
+				show_ideas_tooltip = HUN_miklos_horthy
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_initiate_army_maneuvers
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = wuw_HUN_negotiate_the_restrictions }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_negotiate_the_restrictions
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			army_experience = 100
+
+			add_doctrine_cost_reduction = {
+				name = HUN_army_maneuvers
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_danuvia_submachine_guns
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
+		x = -2
+		y = 1
+		relative_position_id = wuw_HUN_initiate_army_maneuvers
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_danuvia_submachine_guns
+				bonus = 1.0
+				uses = 2
+				technology = improved_infantry_weapons
+				technology = advanced_infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_form_the_gyorshadtest
+		icon = GFX_focus_HUN_form_the_gyorshadtest
+		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
+		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_initiate_army_maneuvers
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = wuw_HUN_form_the_gyorshadtest
+				bonus = 3
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_establish_the_mavag_army_division
+		icon = GFX_focus_HUN_establish_the_mavag_army_division
+		prerequisite = { focus = wuw_HUN_form_the_gyorshadtest }
+		#mutually_exclusive = { focus = wuw_HUN_repulö_muszaki_intezet }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_form_the_gyorshadtest
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		    add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_doctrinal_studies
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = wuw_HUN_initiate_army_maneuvers }
+		x = 3
+		y = 1
+		relative_position_id = wuw_HUN_initiate_army_maneuvers
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_doctrinal_studies
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_quantity_over_quality
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = wuw_HUN_doctrinal_studies }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_doctrinal_studies
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_artillery_effort
+				bonus = 1.0
+				uses = 3
+				technology = antitank3
+				technology = antitank4
+                technology = antitank5
+			}
+		}
+	}
+	
+	focus = {
+		id = HUN_the_botond
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = wuw_HUN_quantity_over_quality }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_quantity_over_quality
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_the_botond
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_motorized_logistics
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = HUN_the_botond }
+		prerequisite = { focus = wuw_HUN_quantity_over_quality }
+		x = 1
+		y = 1
+		relative_position_id = HUN_the_botond
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HUN_motorized_logistics
+				bonus = 1.0
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_the_turan
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = wuw_HUN_quantity_over_quality }
+		prerequisite = { focus = wuw_HUN_establish_the_mavag_army_division }
+		x = -3
+		y = 1
+		relative_position_id = wuw_HUN_quantity_over_quality
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = HUN_develop_tanks
+				ahead_reduction = 1
+				bonus = 1
+				uses = 2
+				category = cat_medium_armor
+			}
+			add_tech_bonus = {
+				name = HUN_develop_tanks
+				bonus = 1.0
+				uses = 2
+				technology = armor_tech_3
+				technology = engine_tech_3
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_assault_gun_focus
+		icon = GFX_focus_generic_self_propelled_gun
+		prerequisite = { focus = wuw_HUN_the_turan }
+		x = 0
+		y = 2
+		relative_position_id = wuw_HUN_establish_the_mavag_army_division
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		    add_ideas = HUN_assault_gun_focus
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_renew_the_shipping_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = wuw_HUN_reinstate_the_navy }
+		#mutually_exclusive = { focus = wuw_HUN_assault_gun_focus }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_reinstate_the_navy
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			IF = {
+				limit = {
+					NOT = {
+						any_controlled_state = {
+							is_coastal = yes
+						}
+					}
+				}
+				custom_effect_tooltip = wuw_HUN_renew_the_shipping_industry_tt
+			}
+			ELSE = {
+				random_owned_controlled_state = {
+					limit = {
+						has_state_flag = HUN_dockyards_flag
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 50
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					NOT = {
+						any_controlled_state = {
+							is_coastal = yes
+						}
+					}
+				}
+				custom_effect_tooltip = wuw_HUN_renew_the_shipping_industry_tt
+			}
+			ELSE = {
+				random_owned_controlled_state = {
+					prioritize = { 103 }
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+					set_state_flag = HUN_dockyards_flag
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_embrace_navy_traditions
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = wuw_HUN_reinstate_the_navy }
+		mutually_exclusive = { focus = wuw_HUN_a_reformed_navy }
+		x = -1
+		y = 2
+		relative_position_id = wuw_HUN_reinstate_the_navy
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_embrace_navy_traditions
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_fleet_in_being
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_a_reformed_navy
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = wuw_HUN_reinstate_the_navy }
+		mutually_exclusive = { focus = wuw_HUN_embrace_navy_traditions }
+		x = 1
+		y = 2
+		relative_position_id = wuw_HUN_reinstate_the_navy
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 15
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_a_reformed_navy
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_trade_interdiction
+				category = cat_base_strike
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_invest_in_destroyer_models
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = wuw_HUN_embrace_navy_traditions focus = wuw_HUN_a_reformed_navy }
+		#mutually_exclusive = { focus = wuw_HUN_embrace_navy_traditions }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_a_reformed_navy
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = wuw_HUN_invest_in_destroyer_models
+				bonus = 1
+				uses = 2
+				category = dd_tech
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_cruiser_investments
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = wuw_HUN_invest_in_destroyer_models }
+		#mutually_exclusive = { focus = wuw_HUN_embrace_navy_traditions }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_invest_in_destroyer_models
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = wuw_HUN_cruiser_investments
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_wolfs_of_the_sea
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = wuw_HUN_a_reformed_navy }
+		#mutually_exclusive = { focus = wuw_HUN_embrace_navy_traditions }
+		x = 1
+		y = 1
+		relative_position_id = wuw_HUN_a_reformed_navy
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = wuw_HUN_wolfs_of_the_sea
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_bringing_the_air_battle_to_the_seas
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = wuw_HUN_wolfs_of_the_sea }
+		#mutually_exclusive = { focus = wuw_HUN_embrace_navy_traditions }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_wolfs_of_the_sea
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = wuw_HUN_bringing_the_air_battle_to_the_seas
+				bonus = 2
+				uses = 1
+				category = cv_tech
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_capital_ship_efforts
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = wuw_HUN_embrace_navy_traditions }
+		#mutually_exclusive = { focus = wuw_HUN_embrace_navy_traditions }
+		x = -1
+		y = 1
+		relative_position_id = wuw_HUN_embrace_navy_traditions
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			navy_experience = 15
+
+			add_tech_bonus = {
+				name = wuw_HUN_capital_ship_efforts
+				bonus = 1.0
+				uses = 2
+				category = bc_tech
+				category = bb_tech
+			}
+
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_a_new_pride_of_the_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = wuw_HUN_capital_ship_efforts }
+		#mutually_exclusive = { focus = wuw_HUN_capital_ship_efforts }
+		x = 0
+		y = 1
+		relative_position_id = wuw_HUN_capital_ship_efforts
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		available = {
+			has_tech = basic_ship_hull_heavy
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Viribus Unitis Class"
+				type = ship_hull_heavy_2
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_1
+					fixed_ship_secondaries_slot = dp_ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bb_1
+					front_1_custom_slot = ship_heavy_battery_1
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = dp_ship_secondaries_1
+					rear_1_custom_slot = ship_heavy_battery_1
+				}
+				upgrades = {
+					ship_reliability_upgrade = 2
+					ship_engine_upgrade = 2
+					ship_armor_upgrade = 3
+					ship_gun_upgrade = 3
+				}
+			}
+
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "HUN"
+					version_name = "Viribus Unitis Class"
+				}
+				name = "Viribus Unitis"
+				requested_factories = 2
+				progress = 0.75
+				amount = 1
+			}
+		}
+	}
+
+	focus = {
+		id = wuw_HUN_degauss_ship_hulls
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = wuw_HUN_a_new_pride_of_the_fleet focus = wuw_HUN_cruiser_investments focus = wuw_HUN_bringing_the_air_battle_to_the_seas }
+		#mutually_exclusive = { focus = wuw_HUN_a_new_pride_of_the_fleet }
+		x = 2
+		y = 1
+		relative_position_id = wuw_HUN_a_new_pride_of_the_fleet
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				if = {
+					limit = {
+						has_tech = degaussing
+					}
+					add_tech_bonus = {
+						name = CAN_degauss_ship_hulls
+						bonus = 0.5
+						uses = 1
+						category = naval_mines
+					}
+					else = {
+						set_technology = {
+						    degaussing = 1
+						}
+					}
+					}
+				}
+			
+			if = {
+				limit = {
+						NOT = {
+							has_dlc = "Man the Guns"
+						}
+					}
+				add_ideas = CAN_degauss_ship_hulls
+			}
 		}
 	}
 }
