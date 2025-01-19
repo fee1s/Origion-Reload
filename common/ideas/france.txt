@@ -52,8 +52,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
 		FRA_inefficient_economy_2 = {
@@ -71,8 +71,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
 			}
 		}
 		FRA_political_violence = {
@@ -303,7 +303,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_industrial_complex_factor = 0.25
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = -0.6
 			}
 		}
 		FRA_entrepeneurship = {
@@ -1142,10 +1143,30 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_disjointed_gov
-			
+			FRA_dis
 			modifier = {
 				political_power_cost = 0.8
 				stability_factor = -0.10
+				surrender_limit = -0.5
+			}
+		}
+
+		FRA_disjointed_government_2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
 				surrender_limit = -0.5
 			}
 		}

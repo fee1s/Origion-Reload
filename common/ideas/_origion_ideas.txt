@@ -244,15 +244,49 @@ ideas = {
 			
 			removal_cost = -1
 			
-			modifier = { 
-				production_speed_fuel_silo_factor = -1.5
-				production_speed_naval_base_factor = -1.5
-				conversion_cost_civ_to_mil_factor = 5
-				production_speed_naval_base_factor = -1.5
-				lend_lease_tension = 1
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = 1 instant = yes
+				}
+				air_equipment = {
+					build_cost_ic = 1 instant = yes
+				}
+			}
+		}
+
+		FRA_inflexible_production_2 = { 
+			allowed = { original_tag = FRA always = no }
+			
+			picture = tur_etatism
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				air_equipment = {
+					build_cost_ic = 1 instant = yes
+				}
 			}
 		}
 		
+		FRA_general_work_council = {
+			picture = generic_agrarian_reform
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = -0.6
+			}
+		}
+
 		peace_training = {
 			allowed = {
 				always = no
