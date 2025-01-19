@@ -1,7 +1,6 @@
 scripted_gui = {
-		###THIS BLOCK HAS HORST TOOL STUFF, TALK TO LENNARD ABOUT THIS AS HE MADE IT###
 		
-		tool_open= {
+	tool_open= {
 		context_type = player_context
 		window_name = "horsttool_open_container"
 		visible = {	has_country_flag = host	}
@@ -302,10 +301,6 @@ scripted_gui = {
 				}
 			}
 
-
-
-
-
 			observer_click = {
 				owner = { 				
 				set_temp_variable = { ROOT.marks = this}	var:marks = { news_event = { id = news.4004 } }	DDR = {change_tag_from =var:marks}
@@ -333,11 +328,6 @@ scripted_gui = {
 
 				}
 			}
-
-			#add_equipment_to_stockpile = {
-			#		type = convoy
-			#		amount = 50
-			#	}
 		
 			clear_all_markings_click = {
 				ROOT = {
@@ -439,21 +429,16 @@ scripted_gui = {
 					}
 				}
 			}
-						fix_production_click = { owner = { news_event = { id = news.4003 } add_timed_idea = { idea = fix_production_idea days = 1 }}  }
-						fix_xp_click = { owner = { news_event = { id = news.4113 } army_experience = 25 }  }
-						fix_xp2_click = { owner = { news_event = { id = news.4114 } navy_experience = 25 }  }
-						fix_xp3_click = { owner = { news_event = { id = news.4115 } air_experience = 25 }  }
-			            convoy_click = { owner = { news_event = { id = news.4116 } add_equipment_to_stockpile = { type = convoy amount = 50 } }  }
-						manpower_add_click = { owner = { news_event = { id = news.4117 } add_manpower = 10000 }  }
-						manpower_NO_add_click = { owner = { news_event = { id = news.4118 } add_manpower = -10000 }  }
-						add_autonomy_ratio_click = { owner = { news_event = { id = news.4119 } add_autonomy_ratio = { value = 0.1 } }  } 
-						add_NO_autonomy_ratio_click = { owner = { news_event = { id = news.4120 } add_autonomy_ratio = { value = -0.1 } }  }
 
-						
-					
-
-						
-
+			fix_production_click = { owner = { news_event = { id = news.4003 } add_timed_idea = { idea = fix_production_idea days = 1 }}  }
+			fix_xp_click = { owner = { news_event = { id = news.4113 } army_experience = 25 }  }
+			fix_xp2_click = { owner = { news_event = { id = news.4114 } navy_experience = 25 }  }
+			fix_xp3_click = { owner = { news_event = { id = news.4115 } air_experience = 25 }  }
+			convoy48_click = { owner = { news_event = { id = news.4116 } add_equipment_to_stockpile = { type = convoy_1 amount = 50 } }  }
+			manpower_add_click = { owner = { news_event = { id = news.4117 } add_manpower = 10000 }  }
+			manpower_NO_add_click = { owner = { news_event = { id = news.4118 } add_manpower = -10000 }  }
+			add_autonomy_ratio_click = { owner = { news_event = { id = news.4119 } add_autonomy_ratio = { value = 0.1 } }  } 
+			add_NO_autonomy_ratio_click = { owner = { news_event = { id = news.4120 } add_autonomy_ratio = { value = -0.1 } }  }
 
 			award_states_click = {
 
@@ -479,6 +464,7 @@ scripted_gui = {
 					
 				}
 			}
+
 			add_cheat_click = {
 				set_variable = { ROOT.taker = this}
 				var:taker = {
@@ -491,7 +477,7 @@ scripted_gui = {
 					if={limit={check_variable={Root.selected_cheat=5}} add_stability  = 0.01 }
 					if={limit={check_variable={Root.selected_cheat=6}} add_war_support = 0.01 }
 					if={limit={check_variable={Root.selected_cheat=7}} add_research_slot = 1 }
-					if={limit={check_variable={Root.selected_cheat=10}} compliance 100 }
+					if={limit={check_variable={Root.selected_cheat=10}}  }
 					}
 				}
 				GER={
@@ -501,13 +487,15 @@ scripted_gui = {
 				}
 				clear_variable = ROOT.taker
 			}
+
 			add_debuff_click = {
 				set_variable = { ROOT.taker = this}
 				var:taker = {
-				owner={set_variable={Root.target_country = this}
-					if={limit={check_variable={Root.selected_debuff=1}} generic_debuff_1 = yes }
-					if={limit={check_variable={Root.selected_debuff=2}} generic_debuff_2 = yes }
-					}
+				   owner={
+					   set_variable={Root.target_country = this}
+					   if={owner={ news_event = { id = horsttool.14 days = 0}}limit={check_variable={Root.selected_debuff=1}} generic_debuff_1 = yes }
+					   if={owner={ news_event = { id = horsttool.15 days = 0}}limit={check_variable={Root.selected_debuff=2}} generic_debuff_2 = yes }
+				   }
 				}
 				GER={
 					set_variable={this.target_country=Root.target_country}
@@ -552,49 +540,62 @@ scripted_gui = {
 				else={clear_variable=mark_status
 					remove_from_array={ROOT.marked_states=THIS}}
 				set_variable={ROOT.first_marked_state=ROOT.marked_states^0}
-			}				
-						pingtool_click = {
-				HMP_anti_building_exploit_effect = yes
 			}
-			mill_add_click = { owner={ news_event = { id = horsttool.11 days = 0} add_offsite_building = { type = arms_factory level = 1 }	}	} 
-			civ_add_click = {   owner={ news_event = { id = horsttool.12 days = 0} add_offsite_building = { type = industrial_complex level = 1 }		} }
+
+			pingtool_click = {  owner={ news_event = { id = horsttool.13 days = 0} add_offsite_building = { type = dockyard level = 1 }}}
+			mill_add_click = { owner={ news_event = { id = horsttool.11 days = 0} add_offsite_building = { type = arms_factory level = 1 }}} 
+			civ_add_click = { owner={ news_event = { id = horsttool.12 days = 0} add_offsite_building = { type = industrial_complex level = 1 }}}
 
 			horsttool_helpbutton_click = { ROOT = { country_event = { id =  horsthelp.2 } } }
+
 			pause_blocker_all_click = { COL =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 1 } } ROOT={clr_global_flag=blocking_pauses} }#ALL CAN PAUSE
 			pause_blocker_host_click = { COL =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 2 } } ROOT={clr_global_flag=blocking_pauses } } #ONLY HOST CAN USE PAUSE BUTTON
-			pause_blocker_major_click = {if={limit={ROOT={has_global_flag=blocking_pauses}} COL =  { clear_variable = pause_blocker_variable set_variable = { var = pause_blocker_variable value = 3 } }  ROOT={clr_global_flag=blocking_pauses}} else = {ROOT={set_global_flag = blocking_pauses } } }#ONLY MAJORS CAN PAUSE
+			pause_blocker_major_click = {
+				if={
+					limit={
+						ROOT={has_global_flag=blocking_pauses}
+					} 
+					COL =  { 
+						clear_variable = pause_blocker_variable 
+						set_variable = { var = pause_blocker_variable value = 3 } 
+					}  
+					ROOT={clr_global_flag=blocking_pauses}
+				} 
+				else = {
+					ROOT={set_global_flag = blocking_pauses } 
+				} 
+			}
 			
 			wt_add_click = { COL = { add_threat = 1 } }
 			wt_remove_click = { COL = { add_threat = -1 } }
+			
 			remove_debuff_click = { owner={remove_ideas = { debuff_tanks_idea debuff_aviation_idea } } }
 			
-				cb_red_click ={if={limit={Root={has_global_flag=colorblindness}} set_variable={Root.selected_color=1} ROOT={clr_global_flag=colorblindness}} else={ROOT={set_global_flag=colorblindness}}	}
-				cb_orange_click={set_variable={Root.selected_color=2} ROOT={clr_global_flag=colorblindness}}
-				cb_yellow_click={set_variable={Root.selected_color=3} ROOT={clr_global_flag=colorblindness}}
-				cb_green_click={set_variable={Root.selected_color=4} ROOT={clr_global_flag=colorblindness}}
-				cb_blue_click={set_variable={Root.selected_color=5} ROOT={clr_global_flag=colorblindness}}
-				cb_purple_click={set_variable={Root.selected_color=6} ROOT={clr_global_flag=colorblindness}}
-				cb_pink_click={set_variable={Root.selected_color=7} ROOT={clr_global_flag=colorblindness}}
-				cb_teal_click={set_variable={Root.selected_color=8} ROOT={clr_global_flag=colorblindness}}
-				cb_remove_click={set_variable={Root.selected_color=9} ROOT={clr_global_flag=colorblindness}}
+			cb_red_click ={if={limit={Root={has_global_flag=colorblindness}} set_variable={Root.selected_color=1} ROOT={clr_global_flag=colorblindness}} else={ROOT={set_global_flag=colorblindness}}	}
+			cb_orange_click={set_variable={Root.selected_color=2} ROOT={clr_global_flag=colorblindness}}
+			cb_yellow_click={set_variable={Root.selected_color=3} ROOT={clr_global_flag=colorblindness}}
+			cb_green_click={set_variable={Root.selected_color=4} ROOT={clr_global_flag=colorblindness}}
+			cb_blue_click={set_variable={Root.selected_color=5} ROOT={clr_global_flag=colorblindness}}
+			cb_purple_click={set_variable={Root.selected_color=6} ROOT={clr_global_flag=colorblindness}}
+			cb_pink_click={set_variable={Root.selected_color=7} ROOT={clr_global_flag=colorblindness}}
+			cb_teal_click={set_variable={Root.selected_color=8} ROOT={clr_global_flag=colorblindness}}
+			cb_remove_click={set_variable={Root.selected_color=9} ROOT={clr_global_flag=colorblindness}}
 
 			add_color_click = {
 				set_variable = { ROOT.taker = this}
 				var:taker = {
-				owner={set_variable={Root.target_country = this}
-					if={limit={check_variable={Root.selected_color=1}} set_cosmetic_tag = COLORBLIND_RED   }
-					if={limit={check_variable={Root.selected_color=2}} set_cosmetic_tag = COLORBLIND_ORANGE }
-					if={limit={check_variable={Root.selected_color=3}} set_cosmetic_tag = COLORBLIND_YELLOW }
-					if={limit={check_variable={Root.selected_color=4}} set_cosmetic_tag = COLORBLIND_GREEN }
-					if={limit={check_variable={Root.selected_color=5}} set_cosmetic_tag = COLORBLIND_BLUE }
-					if={limit={check_variable={Root.selected_color=6}} set_cosmetic_tag = COLORBLIND_PURPLE }
-					if={limit={check_variable={Root.selected_color=7}} set_cosmetic_tag = COLORBLIND_PINK }
-					if={limit={check_variable={Root.selected_color=8}} set_cosmetic_tag = COLORBLIND_TEAL }	
-					if={limit={check_variable={Root.selected_color=9}}
-					drop_cosmetic_tag = yes 
-
-					}	
-					}
+				   owner={
+					   set_variable={Root.target_country = this}
+					   if={limit={check_variable={Root.selected_color=1}} set_cosmetic_tag = COLORBLIND_RED   }
+					   if={limit={check_variable={Root.selected_color=2}} set_cosmetic_tag = COLORBLIND_ORANGE }
+					   if={limit={check_variable={Root.selected_color=3}} set_cosmetic_tag = COLORBLIND_YELLOW }
+					   if={limit={check_variable={Root.selected_color=4}} set_cosmetic_tag = COLORBLIND_GREEN }
+					   if={limit={check_variable={Root.selected_color=5}} set_cosmetic_tag = COLORBLIND_BLUE }
+					   if={limit={check_variable={Root.selected_color=6}} set_cosmetic_tag = COLORBLIND_PURPLE }
+					   if={limit={check_variable={Root.selected_color=7}} set_cosmetic_tag = COLORBLIND_PINK }
+					   if={limit={check_variable={Root.selected_color=8}} set_cosmetic_tag = COLORBLIND_TEAL }	
+					   if={limit={check_variable={Root.selected_color=9}} drop_cosmetic_tag = yes }	
+				   }
 				}
 				GER={
 					set_variable={this.target_country=Root.target_country}
@@ -603,63 +604,70 @@ scripted_gui = {
 				}
 				clear_variable = ROOT.taker
 			}
-		
-		
-		
-			
-				cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}	}
-				cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_country_flag=cheating}}
-				cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_country_flag=cheating}}
-				cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_country_flag=cheating}}
-				cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_country_flag=cheating}}
-				cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_country_flag=cheating}}
-				cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_country_flag=cheating}}
-				cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_country_flag=cheating}}
+		    cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}	}
+			cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_country_flag=cheating}}
+			cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_country_flag=cheating}}
+			cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_country_flag=cheating}}
+			cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_country_flag=cheating}}
+			cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_country_flag=cheating}}
+			cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_country_flag=cheating}}
+			cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_country_flag=cheating}}
 				
-				debuff1_click={if={limit={Root={has_country_flag=debuffing}} set_variable={Root.selected_debuff=1} ROOT={clr_country_flag=debuffing}} else={ROOT={set_country_flag=debuffing}}	}
-				debuff2_click={set_variable={Root.selected_debuff=2} ROOT={clr_country_flag=debuffing}}
+			debuff1_click={if={limit={Root={has_country_flag=debuffing}} set_variable={Root.selected_debuff=1} ROOT={clr_country_flag=debuffing}} else={ROOT={set_country_flag=debuffing}}	}
+			debuff2_click={set_variable={Root.selected_debuff=2} ROOT={clr_country_flag=debuffing}}
 		}
-			properties = {
-				toogle_mark={ frame = mark_status }
-			}
+			
+			
+		properties = {
+			toogle_mark={ frame = mark_status }
+		}
 		
 		triggers = {
-			observer_click_enabled = {owner = { is_ai=no}	}	
-			observer_visible = {	}		
+
+			observer_click_enabled = { }	
+			observer_visible = {	}	
+
 			add_cheat_click_enabled = {check_variable={Root.selected_cheat>0}}
+
 			add_debuff_click_enabled = {check_variable={Root.selected_debuff>0}}
 			
-				cb_red_visible ={	}
-				cb_orange_visible={ ROOT={has_global_flag=colorblindness}}
-				cb_yellow_visible={ROOT={has_global_flag=colorblindness}}
-				cb_green_visible={ROOT={has_global_flag=colorblindness}}
-				cb_blue_visible={ROOT={has_global_flag=colorblindness}}
-				cb_purple_visible={ROOT={has_global_flag=colorblindness}}
-				cb_pink_visible={ROOT={has_global_flag=colorblindness}}
-				cb_teal_visible={ROOT={has_global_flag=colorblindness}}
-				cb_remove_visible={ROOT={has_global_flag=colorblindness}}
+			cb_red_visible ={	}
+			cb_orange_visible={ ROOT={has_global_flag=colorblindness}}
+			cb_yellow_visible={ROOT={has_global_flag=colorblindness}}
+			cb_green_visible={ROOT={has_global_flag=colorblindness}}
+			cb_blue_visible={ROOT={has_global_flag=colorblindness}}
+			cb_purple_visible={ROOT={has_global_flag=colorblindness}}
+			cb_pink_visible={ROOT={has_global_flag=colorblindness}}
+			cb_teal_visible={ROOT={has_global_flag=colorblindness}}
+			cb_remove_visible={ROOT={has_global_flag=colorblindness}}
 				
-				cb_red_text_visible ={	}
-				cb_orange_text_visible={ ROOT={has_global_flag=colorblindness}}
-				cb_yellow_text_visible={ ROOT={has_global_flag=colorblindness}}
-				cb_green_text_visible={ ROOT={has_global_flag=colorblindness}}
-				cb_blue_text_visible={ROOT={has_global_flag=colorblindness}}
-				cb_purple_text_visible={ROOT={has_global_flag=colorblindness}}
-				cb_pink_text_visible={ ROOT={has_global_flag=colorblindness}}
-				cb_teal_text_visible={ROOT={has_global_flag=colorblindness}}
-				cb_remove_text_visible={ROOT={has_global_flag=colorblindness}}
-			pause_blocker_all_visible ={ has_global_flag=blocking_pauses}
-			pause_blocker_major_visible ={ }
-			pause_blocker_host_visible ={has_global_flag=blocking_pauses }	
-			pause_blocker_all_text_visible ={ has_global_flag=blocking_pauses}
-			pause_blocker_major_text_visible ={ }
-			pause_blocker_host_text_visible ={has_global_flag=blocking_pauses }
-			cheat1_visible={}
+			cb_red_text_visible ={	}
+			cb_orange_text_visible={ ROOT={has_global_flag=colorblindness}}
+			cb_yellow_text_visible={ ROOT={has_global_flag=colorblindness}}
+			cb_green_text_visible={ ROOT={has_global_flag=colorblindness}}
+			cb_blue_text_visible={ROOT={has_global_flag=colorblindness}}
+			cb_purple_text_visible={ROOT={has_global_flag=colorblindness}}
+			cb_pink_text_visible={ ROOT={has_global_flag=colorblindness}}
+			cb_teal_text_visible={ROOT={has_global_flag=colorblindness}}
+			cb_remove_text_visible={ROOT={has_global_flag=colorblindness}}
+
+			pause_blocker_major_visible ={  }
+			pause_blocker_all_visible ={ has_global_flag=blocking_pauses }
+			pause_blocker_host_visible ={ has_global_flag=blocking_pauses }
+			pause_blocker_major_text_visible ={  }	
+			pause_blocker_major1_text_visible ={  }
+			pause_blocker_all_text_visible ={ has_global_flag=blocking_pauses }
+			pause_blocker_host_text_visible ={ has_global_flag=blocking_pauses }
+
+			
 			annex_country_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
+
+			cheat1_visible={}
 			cheat1_text_visible={}
 			cheat2_visible={ROOT={has_country_flag=cheating}}
 			cheat3_visible={ROOT={has_country_flag=cheating}}
 			cheat4_visible={ROOT={has_country_flag=cheating}}
+			cheat4_text_visible={ROOT={has_country_flag=cheating}}
 			cheat2_text_visible={ROOT={has_country_flag=cheating}}
 			cheat3_text_visible={ROOT={has_country_flag=cheating}}
 			cheat5_visible={ROOT={has_country_flag=cheating}}
@@ -670,15 +678,24 @@ scripted_gui = {
 			cheat7_text_visible={ROOT={has_country_flag=cheating}}
 			cheat10_visible={ROOT={has_country_flag=cheating}}
 			cheat10_text_visible={ROOT={has_country_flag=cheating}}
+
 			award_states_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
-			mill_add_click_enabled = {  date < 1939.9.1	}
-			civ_add_click_enabled = {  date < 1939.9.1	}
+
+			mill_add_click_enabled = { }
+			civ_add_click_enabled = { }
+
+			pingtool_click_enabled = { 	}
+
 			change_host_nation_click_enabled ={  }
+
 			fix_production_click_enabled ={  }
+
 			fix_xp_click_enabled ={  }
-			cheat4_text_visible={ROOT={has_country_flag=cheating}}
+
 			clear_all_markings_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }	
+
 			add_cores_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
+
 			States_resursed_steel_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_rubber_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_oil_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
@@ -691,19 +708,22 @@ scripted_gui = {
 			States_resursed_alu1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_tungsten1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
 			States_resursed_chromium1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 }	}
+
 			add_compliance_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 			add_cover_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 			add_compliance1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
 			add_cover1_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }
+
 			wt_add_click_enabled = {}
 			wt_remove_click_enabled = {}
+
 			debuff1_visible={}
 			debuff2_visible={ROOT={has_country_flag=debuffing}}
 			debuff1_text_visible={}
 			debuff2_text_visible={ROOT={has_country_flag=debuffing}}
+
 			remove_debuff_click_enabled = {}
 		}
-        
 	}
 		
 	pause_is_blocked = {
@@ -711,10 +731,10 @@ scripted_gui = {
 		window_name = "pause_block_window"
 		parent_window_name = time_control_window
 		visible = {
-		OR ={ 
-			AND = { COL = { check_variable = { pause_blocker_variable = 2    } } NOT = { has_country_flag = host }     } 
-			AND = { COL = { check_variable = { pause_blocker_variable = 3    } } NOT = { immune_to_pause_block = yes  }     } 
-		   }
+		    OR ={
+			   AND = { COL = { check_variable = { pause_blocker_variable = 2    } } NOT = { has_country_flag = host }     } 
+			   AND = { COL = { check_variable = { pause_blocker_variable = 3    } } NOT = { immune_to_pause_block = yes  }     } 
+		    }
 		}
 	}
 }

@@ -33,9 +33,9 @@ country_event = {
 
 news_event = {
 	id = horsttool.1
-	title = "Horsttool"
+	title = "Хост в здании"
 	
-	desc = " [From.Getname] gave [Root.cheat_selected] to [From.From.Owner.Getname]"
+	desc = " [From.Getname] выдал [Root.cheat_selected] для [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
 	
 	major = yes
@@ -53,9 +53,9 @@ news_event = {
 	
 	news_event = {
 	id = horsttool.11
-	title = "Horsttool"
+	title = "Хост в здании"
 	
-	desc = " [From.Getname] gave five military factories to [From.From.Owner.Getname]"
+	desc = " [From.Getname] выдан один военный завод для [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
 	
 	major = yes
@@ -69,9 +69,9 @@ news_event = {
 	}
 		news_event = {
 	id = horsttool.12
-	title = "Horsttool"
+	title = "Хост в здании"
 	
-	desc = " [From.Getname] gave one civilian factory to [From.From.Owner.Getname]"
+	desc = " [From.Getname] выдана одна гражданская фабрика для [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
 	
 	major = yes
@@ -83,7 +83,58 @@ news_event = {
 		 }
 		
 	}
-		news_event = {
+
+   	news_event = {
+	id = horsttool.13
+	title = "Хост в здании"
+	
+	desc = " [From.Getname] выдана одна верфь для [From.From.Owner.Getname]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Пох?"
+		 }
+		
+	}
+
+	news_event = {
+	id = horsttool.14
+	title = "Хост в здании"
+	
+	desc = " [From.Getname] выдал дебаф на танки для [From.From.Owner.Getname]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Пох?"
+		 }
+	}
+
+	news_event = {
+	id = horsttool.15
+	title = "Хост в здании"
+	
+	desc = " [From.Getname] выдал дебаф на авиацию для [From.From.Owner.Getname]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Пох?"
+		 }
+		
+	}
+	
+	news_event = {
 	id = horsttool.30
 	title = "How to use Horsttool"
 	
@@ -101,9 +152,9 @@ news_event = {
 	}
 		news_event = {
 	id = horsttool.31
-	title = "Country Color Changed"
+	title = "Изменён цвет страны"
 	
-	desc = "[From.Getname] changed the color of [From.From.Owner.Getname] to [FROM.color_selected]"
+	desc = "[From.Getname] изменил цвет [From.From.Owner.Getname] на [FROM.color_selected]"
 	picture = GFX_news_event_001
 	
 	major = yes
@@ -116,10 +167,10 @@ news_event = {
 		
 	}
 	
-	          news_event = {	
+   news_event = {	
    id = news.4002
    title = news.4002.t
-   desc = "a"
+   desc = ""
    picture = GFX_news_event_italian_tank_desert
 
 		major =  yes

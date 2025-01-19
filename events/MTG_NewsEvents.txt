@@ -112,47 +112,6 @@ news_event = {
 	
 	option = {
 		name = mtg_news.3.a
-		trigger = {
-			original_tag = USA
-		}
-	}
-	option = {
-		name = mtg_news.3.b
-		trigger = { 
-			NOT = { original_tag = USA }
-			has_government = fascism
-		}
-	}
-	option = {
-		name = mtg_news.3.c
-		trigger = { 
-			NOT = { original_tag = USA }
-			has_government = communism
-		}
-	}
-	option = {
-		name = mtg_news.3.d
-		trigger = { 
-			NOT = { original_tag = USA }
-			NOT = { original_tag = BEL }
-			NOT = { has_idea = HOL_aloof_neutrality }
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-	}
-	option = {
-		name = mtg_news.3.e
-		trigger = { 
-			has_idea = HOL_aloof_neutrality
-		}
-	}
-	option = {
-		name = mtg_news.3.f
-		trigger = { 
-			original_tag = BEL
-		}
 	}
 }
 # US goes Interventionist

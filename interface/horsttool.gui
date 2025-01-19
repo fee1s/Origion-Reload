@@ -3,11 +3,10 @@ guiTypes = {
 ####################### 
 	containerWindowType = {
 		name = "horsttool_open_container"
-		position = { x = -593 y = 4 }
+		position = { x = -503 y = 4 }
 		Orientation = UPPER_RIGHT
 		buttonType = {
 			name = "tool_open"
-			#quadTextureSprite = "GFX_generic_bg"
 			quadTextureSprite = "GFX_generic_box_96"
 			position = { x = 0 y = 0 }
 			scale=1.1
@@ -18,7 +17,6 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "title"
-			#position = {x=22 y=5}
 			position = {x=3 y=4}
 			font = "hoi_18mbs"
 			text = "[transfer_states_tooltip]"
@@ -214,7 +212,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "whitepeace"	
-			position = {x=120 y=345}
+			position = {x=115 y=345}
 			spriteType = "GFX_relation_truce"
 					scale=1.8
 			pdx_tooltip = "WHITEPEACE"
@@ -239,11 +237,11 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "observer" 
-			position = {x=80 y=405}
+			position = {x=70 y=400}
 			spriteType = "GFX_observer_button"
          	pdx_tooltip = "OBSERVER"
 			pdx_tooltip_delayed = "OBSERVER_DELAYED"
-			scale = 0.70
+			scale = 0.75
 		}
 		buttonType = {
 			name = "annex_country" 
@@ -384,7 +382,7 @@ guiTypes = {
 		
 		buttonType = { 
 			name = "wt_add"	
-			position = {x=80 y=350}
+			position = {x=73 y=350}
 			spriteType = "GFX_horst_increase_wt"
 			pdx_tooltip = "WTADD"
 			pdx_tooltip_delayed = "WTADD_DELAYED"
@@ -402,15 +400,15 @@ guiTypes = {
 		
 	 buttonType = {
 		name = "pingtool"	
-			position = {x=170 y=393}
+			position = {x=165 y=392}
 			spriteType = "GFX_focus_generic_refit_civilian_ships"
-		scale = 0.75
+		scale = 0.63
 			pdx_tooltip = "PINGTOOL"
 			pdx_tooltip_delayed = "PINGTOOL_DELAYED"
 		} 
 		buttonType = {
 			name = "addpp"	
-			position = {x=118 y=392}
+			position = {x=112 y=392}
 			spriteType = "GFX_horst_addpp"
             scale=1
 			pdx_tooltip = "ADDPP"
@@ -600,13 +598,13 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cb_green"
-			position = {x=80 y=550}
+			position = {x=80 y=555}
 			spriteType = "GFX_generic_box_125"
 			scale= 1
 		}
 		instantTextboxType = {
 			name = "cb_green_text"
-			position = {x=85 y=555}
+			position = {x=85 y=560}
 			font = "hoi_18mbs"
 			text = "COLOR4"
 			maxWidth = 340
@@ -616,13 +614,13 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "cb_blue"
-			position = {x=80 y=570}
+			position = {x=80 y=580}
 			spriteType = "GFX_generic_box_125"
 			scale= 1
 		}
 		instantTextboxType = {
 			name = "cb_blue_text"
-			position = {x=85 y=575}
+			position = {x=85 y=585}
 			font = "hoi_18mbs"
 			text = "COLOR5"
 			maxWidth = 340
@@ -633,13 +631,13 @@ guiTypes = {
 		
 	buttonType = {
 		name = "cb_purple"
-			position = {x=80 y=590}
+			position = {x=80 y=605}
 			spriteType = "GFX_generic_box_125"
 			scale= 1
 		}
 												instantTextboxType = {
 		name = "cb_purple_text"
-			position = {x=85 y=595}
+			position = {x=85 y=610}
 			font = "hoi_18mbs"
 			text = "COLOR6"
 			maxWidth = 340
@@ -650,13 +648,13 @@ guiTypes = {
 		
 	buttonType = {
 		name = "cb_pink"
-			position = {x=80 y=610}
+			position = {x=80 y=630}
 			spriteType = "GFX_generic_box_125"
 			scale= 1
 		}
 		instantTextboxType = {
 		name = "cb_pink_text" 
-			position = {x=85 y=615}
+			position = {x=85 y=635}
 			font = "hoi_18mbs"
 			text = "COLOR7"
 			maxWidth = 340
@@ -676,13 +674,13 @@ guiTypes = {
 		}
 		buttonType = {
 		name = "cb_teal"
-			position = {x=80 y=630}
+			position = {x=80 y=655}
 			spriteType = "GFX_generic_box_125"
 			scale= 1
 		}
 		instantTextboxType = {
 		name = "cb_teal_text"
-			position = {x=85 y=635}
+			position = {x=85 y=660}
 			font = "hoi_18mbs"
 			text = "COLOR8"
 			maxWidth = 340
@@ -692,13 +690,13 @@ guiTypes = {
 		}	
 		buttonType = {
 		name = "cb_remove"
-			position = {x=80 y=650}
+			position = {x=80 y=680}
 			spriteType = "GFX_generic_box_125"
 			scale= 1
 		}
 		instantTextboxType = {
 		name = "cb_remove_text"
-			position = {x=85 y=655}
+			position = {x=85 y=685}
 			font = "hoi_18mbs"
 			text = "COLOR9"
 			maxWidth = 340
@@ -799,7 +797,7 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
-		#пьяница который не поверил что спиздил хорст тул у Вади. Я сижу уже полтора часа настраиваю его до рабочего состояния. А ты даже спасибо не говоришь...
+		#пьяница который не поверил что спиздил хорст тул у Вади. А ты даже спасибо не говоришь...
 		buttonType = {
 			name = "toogle_mark" 
 			position = {x=203 y=35}

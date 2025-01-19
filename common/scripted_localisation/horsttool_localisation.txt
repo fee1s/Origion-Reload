@@ -1,4 +1,4 @@
-defined_text = { # state
+defined_text = {
 	name = mark_state_tooltip
 
 	text = {
@@ -11,20 +11,20 @@ defined_text = { # state
 		localization_key = mark_state_yes
 	}
 }
-defined_text = { # Country
+defined_text = {
 	name = GetLeftDesc
 	text = {
 		localization_key = POL_san_left_desc
 	}
 }
 
-defined_text = { # Country
+defined_text = {
 	name = GetRightDesc
 	text = {
 		localization_key = POL_san_right_desc
 	}
 }
-defined_text = { # global
+defined_text = {
 	name = transfer_states_tooltip
 
 	text = {
@@ -37,7 +37,7 @@ defined_text = { # global
 		localization_key = transfer_states_on
 	}
 }
-defined_text = { # global
+defined_text = {
 	name = command_limit_tooltip
 
 	text = {
@@ -52,7 +52,7 @@ defined_text = { # global
 }
 
 
-defined_text = { # global
+defined_text = {
 	name = ST_TOOLTIP
 
 	text = {
@@ -66,7 +66,7 @@ defined_text = { # global
 	}
 }
 
-defined_text = { # global
+defined_text = {
 	name = mark_status
 
 	text = {
@@ -79,7 +79,7 @@ defined_text = { # global
 		localization_key = mark_status_unmarked
 	}
 }
-defined_text = { # global
+defined_text = {
 	name = cheat_selected
 	text = {
 		trigger = {
@@ -143,7 +143,7 @@ defined_text = { # global
 }
 
 
-defined_text = { # global
+defined_text = {
 	name = debuff_selected
 	text = {
 		trigger = {
@@ -169,7 +169,7 @@ defined_text = { # global
 
 
 
-defined_text = { # global
+defined_text = {
 	name = color_selected
 	text = {
 		trigger = {
@@ -233,21 +233,9 @@ defined_text = { # global
 		}
 		localization_key = COLOR9
 	}
-	
-	
 }
 
 defined_text = {
-	name = pause_selected
-	text = {
-
-		localization_key = resorser1
-
-	}
-
-}
-
-defined_text = { # global
 	name = pause_selected
 	text = {
 		trigger = {
@@ -260,20 +248,18 @@ defined_text = { # global
 		trigger = {
 			check_variable = {COL.pause_blocker_variable=1}
 		}
-		localization_key = PAUSE1
+		localization_key = PAUSE1 #все
 	}
 	text = {
 		trigger = {
 			check_variable = {COL.pause_blocker_variable=2}
 		}
-		localization_key = PAUSE2
+		localization_key = PAUSE2 #хост
 	}
-	
-		text = {
+	text = {
 		trigger = {
 			check_variable = {COL.pause_blocker_variable=3}
 		}
-		localization_key = PAUSE3
+		localization_key = PAUSE3 #только мажоры
 	}
-	
 }

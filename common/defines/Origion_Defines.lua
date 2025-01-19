@@ -17,7 +17,7 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спе
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0; -- Модификатор треньки (меньше - меньше опыта)
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 -- Бафф треньки (По умолчанию - 0.0015)
-NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.0001 -- Лок на прочачку генов
+NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0 -- Лок на прочачку генов
 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
@@ -40,6 +40,18 @@ NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.035 -- шанс попад�
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Моментальная развертка авиа-крыльев
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.08 -- Скорость перелета авиа-крыльев между филдами (увеличено, ванила - 0.02)
 
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0 
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR	= 0
+
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_INFRA_DAMAGE_SPILL_FACTOR	= 0
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_FACTOR = 0 
+
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DISRUPTION_MIN_DAMAGE_FACTOR = 0 
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_MAX_DISRUPTION_DAMAGE_TO_CONSIDER = 0
+
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DIRECT_DISRUPTION_DAMAGE_FACTOR	 =  0
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_MAX_FACTOR = 0 
+
 -- Единственный лвл обученности у авиации
 
 NDefines.NAir.AIR_WING_XP_TRAINING_MAX = 2.0
@@ -50,6 +62,13 @@ NDefines.NAir.AIR_WING_XP_AIR_VS_AIR_COMBAT_GAIN = 0
 NDefines.NAir.AIR_WING_XP_GROUND_MISSION_COMPLETED_GAIN = 0
 NDefines.NAir.AIR_WING_XP_RECON_MISSION_COMPLETED_GAIN = 0
 NDefines.NAir.AIR_WING_XP_LOSS_WHEN_KILLED = 0
+
+-- Асы удалены
+NDefines.NAir.ACE_DEATH_CHANCE_BASE = 0
+NDefines.NAir.ACE_DEATH_BY_OTHER_ACE_CHANCE = 0
+NDefines.NAir.ACE_DEATH_CHANCE_PLANES_MULT = 0
+NDefines.NAir.ACE_EARN_CHANCE_BASE = 0
+NDefines.NAir.ACE_EARN_CHANCE_PLANES_MULT = 0
 
 -- База
 
