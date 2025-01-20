@@ -41,4 +41,27 @@ spriteTypes = {
 		name = "GFX_origion_swaptech_medium"
 		texturefile = "gfx/interface/technologies/basic_encryption.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_air_doctrine_origion_bg"
+		textureFile = "gfx//interface//air_doctrine_origion_bg.dds"
+		alwaystransparent = yes		
+	}
+	
+	corneredTileSpriteType = {
+		name = "GFX_fullborder_tiled_origion"
+		texturefile = "gfx//interface//fullborder_tiled.dds"
+		size = {
+			x = 190
+			y = 190
+		}
+		borderSize = {
+			x = 64
+			y = 64
+		}
+			
+		effectFile = gfx/FX/buttonstate_nodowneffect.lua	
+		allwaystransparent = yes
+		tilingCenter = yes
+	}
 }
