@@ -16,7 +16,7 @@ ideas = {
 		}
 		industrial_destruction_spirit = {
 			ledger = air
-			visible = { has_tech = air_superiority }
+			#visible = { has_tech = air_superiority } #TODO
 			available = { has_air_academy = yes }
 			research_bonus = {
 				heavy_air = 0.05
@@ -274,7 +274,7 @@ ideas = {
 		strategic_strike_spirit = { 
 			ledger = air
 			available = { has_air_force_command = yes }
-			visible = { has_tech = air_superiority }
+			#visible = { has_tech = air_superiority } #TODO
 			modifier = {
 				air_strategic_bomber_bombing_factor = 0.1
 			}
