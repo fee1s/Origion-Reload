@@ -1812,21 +1812,7 @@ focus_tree = {
 			hidden_effect = {
 				SOV = {
 					country_event = { id = germany.11 }
-					# custom_effect_tooltip = needs_approval
 				}
-				every_other_country = {
-					limit = {
-						NOT = { tag = GER }
-						has_government = fascism
-					}
-					add_opinion_modifier = { target = GER modifier = MR_pact_fascists }
-				}
-				diplomatic_relation = { country = SOV relation = non_aggression_pact }
-				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
-				USA = {
-					set_country_flag = { flag = USA_MR_window days = 60 value = 1 }
-				}
-				country_event = { id = news.32 }
 			}
 			custom_effect_tooltip = GER_mol_rib_pact_tt
 		}
