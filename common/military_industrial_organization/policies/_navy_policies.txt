@@ -61,6 +61,7 @@ mio_policy_navy_stable_platforms = {
 		same_as_mio = {
 			naval_light_gun_hit_chance_factor = 0.025
 			naval_heavy_gun_hit_chance_factor = 0.025
+			naval_torpedo_hit_chance_factor = 0.025
 		}
 	}
 }
@@ -108,6 +109,8 @@ mio_policy_navy_coastal_battlefleet = {
 		same_as_mio = {
 			build_cost_ic = -0.1
 			naval_range = -0.25
+			armor_value = -0.05
+			max_strength = -0.05
 		}
 	}
 }
