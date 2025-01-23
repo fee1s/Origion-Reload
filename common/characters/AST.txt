@@ -69,24 +69,6 @@ characters={
 		}
 	}
 
-	AST_leslie_morshead={
-		name=AST_leslie_morshead
-		portraits={
-			army={
-				large="GFX_AST_leslie_morshead"
-				small=GFX_portrait_AST_leslie_morshead_small
-			}
-		}
-		corps_commander={
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			planning_skill=5
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-
 	AST_thomas_blamey={
 		name=AST_thomas_blamey
 		portraits={
@@ -124,46 +106,7 @@ characters={
 			legacy_id=-1
 		}
 	}
-
-	AST_alan_vasey={
-		name=AST_alan_vasey
-		portraits={
-			army={
-				large="GFX_AST_alan_vasey"
-				small=GFX_portrait_AST_alan_vasey_small
-			}
-		}
-		corps_commander={
-			traits={ hill_fighter }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-
-	AST_horace_robertson={
-		name=AST_horace_robertson
-		portraits={
-			army={
-				large="GFX_AST_horace_robertson"
-				small=GFX_portrait_AST_horace_robertson_small
-			}
-		}
-		corps_commander={
-
-			traits={ desert_fox }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=-1
-		}
-	}
-
+	
 	AST_john_northcott={
 		name=AST_john_northcott
 		portraits={
@@ -183,6 +126,25 @@ characters={
 		}
 	}
 
+	AST_horace_robertson={
+		name=AST_horace_robertson
+		portraits={
+			army={
+				large="GFX_AST_horace_robertson"
+				small=GFX_portrait_AST_horace_robertson_small
+			}
+		}
+		corps_commander={
+			traits={ commando infantry_leader Trickster jungle_rat ranger }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
 	AST_harold_farncomb={
 		name=AST_harold_farncomb
 		portraits={
@@ -191,14 +153,14 @@ characters={
 				small=GFX_portrait_AST_harold_farncomb_small
 			}
 		}
-		navy_leader={
-			traits={ aviation_enthusiast naval_lineage }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=-1
+		navy_leader = {
+			traits = { navy_career_officer seawolf }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 5
+			legacy_id = -1
 		}
 	}
 
@@ -388,7 +350,7 @@ characters={
 				original_tag = AST
 			}
 			traits = {
-				navy_chief_decisive_battle_2
+				navy_chief_commerce_raiding_3
 			}
 			cost = 100
 			ai_will_do = {
