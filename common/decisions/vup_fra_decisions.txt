@@ -1,62 +1,8 @@
 FRA_annex = {
-	FRA_abuz = {
-		icon = generic_ignite_civil_war
-		available = {
-			OR = {
-			has_tech = concentrated_industry3
-			has_tech = dispersed_industry3
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = GER
-				}
-			}
-		}
-		fire_only_once = yes
-		days_mission_timeout = 1430
-		timeout_effect = {
-			add_stability = -1
-			add_war_support = -1
-			ENG = {
-				add_ideas = ENG_DEF
-			}
-			set_global_flag = fall_of_france
-			set_global_flag = flag_franco_british_union
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = FRA
-					}
-					ENG = {
-						add_state_core = PREV
-					}
-				}
-			}
-			FRA = {
-				every_unit_leader = {
-					set_unit_leader_flag = flag_former_french_general
-					set_nationality = ENG
-				}
-			}
-			ENG = {
-				annex_country = { target = FRA transfer_troops = yes }
-			}
-			custom_effect_tooltip = FRA_franco_british_cores
-			hidden_effect = {
-				ENG = { set_cosmetic_tag = FRA_UK }
-				GER = { 
-					country_event = { hours = 6 id = news.35 }
-				}
-			}	
-		}
-	}
 	FRA_evakuation = {
 		icon = generic_army_support
 		available = {
 		    has_capitulated = yes
-			date > 1939.1.1 
 		}
 		fire_only_once = yes
 		days_remove = -1

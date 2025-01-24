@@ -1,7 +1,7 @@
 ﻿division_template = {
-	name = "District Force"				# For 2-brigade Military Districts
+	name = "Gyalogdandár"				# Infantry Brigade
 
-	division_names_group = SAF_GAR_01
+	division_names_group = HUN_INF_02
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -13,15 +13,24 @@
 	}
 }
 
-##### Starting Production #####
+### Starting Production ###
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
-			creator = "SAF"
+			creator = "HUN"
+		}
+		requested_factories = 2
+		progress = 0.68
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HUN"
 		}
 		requested_factories = 1
-		progress = 0.20
+		progress = 0.60
 		efficiency = 100
 	}
 }

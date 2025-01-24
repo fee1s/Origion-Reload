@@ -190,7 +190,8 @@ if = {
 	}
 }
 
-set_convoys = 10
+set_convoys = 150
+
 1939.1.1 = {
 	
 	remove_ideas = neutrality_idea
@@ -463,4 +464,24 @@ if = {
 	if = {
 		limit = { has_dlc = "Man the Guns" }
 	}
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 303
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 10663
+}
+
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+	amount = 70
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 36
 }

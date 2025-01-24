@@ -52,18 +52,6 @@ add_timed_idea = {
     idea = winter_debuff
     days = 2434
 }
-	if = {
-		limit = {
-			has_dlc = "Arms Against Tyranny"
-		}
-		add_ideas = BUL_army_restrictions_aat
-	}
-	if = {
-		limit = {
-			NOT = {	has_dlc = "Arms Against Tyranny" }
-		}
-		add_ideas = BUL_army_restrictions
-	}
 	add_ideas = { #DLC
 		BUL_second_national_catastrophe
 		BUL_imro_01
@@ -517,4 +505,24 @@ if = {
 	}
 
 	
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 90
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 3138
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 24
+}
+
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+	amount = 42
 }

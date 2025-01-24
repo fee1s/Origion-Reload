@@ -765,14 +765,14 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_tech = oil_processing
+			date > 1940.6.1
 		}
 		completion_reward = {
 			add_ideas = GER_synthetic_oil
 			add_tech_bonus = {
 				name = GER_synthetic_oil
-				bonus = 3.0
-				uses = 1
+				bonus = 1.5
+				uses = 4
 				technology = oil_processing
 				technology = improved_oil_processing
 				technology = advanced_oil_processing
@@ -1253,33 +1253,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
-		complete_tooltip = {
-			air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = air_sup_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = battlefield_support_tree
-			}
-			every_state = {
-				limit = { has_state_flag = GER_air_innovation_2air }
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_state = {
-				limit = { has_state_flag = GER_air_innovation_6air }
-				add_building_construction = {
-					type = air_base
-					level = 6
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = available_chief_of_airforce
-			show_ideas_tooltip = ritter_von_greim
-		}
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -1292,68 +1265,30 @@ focus_tree = {
 				uses = 2
 				category = battlefield_support_tree
 			}
-
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							air_base > 3
-							air_base < 9
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 5
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 6
-						instant_build = yes
-					}
-					set_state_flag = GER_air_innovation_6air
-				}				
-			}
-
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-				}
+			
+			42 = {
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 10
 					instant_build = yes
 				}
-				set_state_flag = GER_air_innovation_2air
 			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-				}
+			
+			763 = {
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 4
 					instant_build = yes
 				}
-				set_state_flag = GER_air_innovation_2air
 			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 2
-					air_base < 9
-				}
+			
+			64 = {
 				add_building_construction = {
 					type = air_base
-					level = 2
+					level = 4
 					instant_build = yes
 				}
-				set_state_flag = GER_air_innovation_2air
-			}
+			}			
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = ritter_von_greim
 			custom_effect_tooltip = available_military_high_command
@@ -1534,15 +1469,16 @@ focus_tree = {
 		completion_reward = { 
 			add_tech_bonus = {
 				name = bomber_bonus
-				bonus = 1.0
+				bonus = 3.0
 				uses = 1
-				category = light_fighter			
+				technology = advanced_small_airframe			
 			}	
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 0.5
 				uses = 2
-				category = plane_modules_tech	
+				technology = engines_4
+				technology = aa_cannon_3
 			}
 		}	
 	}
@@ -1564,7 +1500,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = { 
-			add_ideas = GER_CAS
+			swap_ideas = {
+				remove_idea = ger_reichsluftfahrtministerium
+				add_idea = ger_reichsluftfahrtministerium_second
+			}
 		}	
 	}
 
@@ -1812,7 +1751,21 @@ focus_tree = {
 			hidden_effect = {
 				SOV = {
 					country_event = { id = germany.11 }
+					# custom_effect_tooltip = needs_approval
 				}
+				every_other_country = {
+					limit = {
+						NOT = { tag = GER }
+						has_government = fascism
+					}
+					add_opinion_modifier = { target = GER modifier = MR_pact_fascists }
+				}
+				diplomatic_relation = { country = SOV relation = non_aggression_pact }
+				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
+				USA = {
+					set_country_flag = { flag = USA_MR_window days = 60 value = 1 }
+				}
+				country_event = { id = news.32 }
 			}
 			custom_effect_tooltip = GER_mol_rib_pact_tt
 		}
@@ -2612,10 +2565,6 @@ focus_tree = {
 						FRA = {
 							controls_state = 20
 							controls_state = 21
-							
-							NOT = {
-								has_government = fascism
-							}
 						}
 						
 						FRA = {
@@ -2652,11 +2601,13 @@ focus_tree = {
 				}
 				
 				ITA = {
-					surrender_progress > 0.45
+					surrender_progress > 0.35
 				}
 				
-				ROM = {
-					surrender_progress > 0.30
+				if = { limit = { ROM = { exists = yes } }
+					ROM = {
+						surrender_progress > 0.30
+					}
 				}
 				
 				hidden_trigger = { date > 1943.2.18 }
@@ -3731,7 +3682,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_ROM_bochka
+		id = GER_ROM_bochka # бочки убрал нахуй, дается бафф на запасы топляка
 		icon = GFX_focus_generic_stockpile_fuel
 		prerequisite = {
 			focus = GER_ROM_oil
@@ -3749,30 +3700,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			84 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = fuel_silo
-					level = 2
-					instant_build = yes
-				}
-			}
-			79 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = fuel_silo
-					level = 2
-					instant_build = yes
-				}
-			}
-			81 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = fuel_silo
-					level = 2
-					instant_build = yes
-				}
-			}
+			ROM = { add_ideas = rom_oil_reserves }
 		}
 	}
 	

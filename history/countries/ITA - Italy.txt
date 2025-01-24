@@ -41,6 +41,28 @@ add_ideas = {
 	partial_economic_mobilisation
 }
 
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+
+	create_equipment_variant = {
+		name = "Origion Italy Medium"
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = flying_boat_medium
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+	}
+}
+
 #######################################
 ############ MISSIOLINIS ##############
 #######################################
@@ -846,33 +868,8 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-    type = medium_plane_airframe_1
-	amount = 560
-	variant_name = "SM.81 Origion"
-}
-
-
-### VARIANTS ###
-# 1936 Start #
-#plane variants
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-	create_equipment_variant = {
-		name = "SM.81 Origion" #
-		type = medium_plane_airframe_1
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			fixed_auxiliary_weapon_slot_2 = small_bomb_bay
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = empty
-			special_type_slot_2 = empty
-			special_type_slot_3 = empty
-			special_type_slot_4 = empty
-		}
-		icon = "GFX_ITA_early_bomber_medium"
-	}
+	type = train_equipment_1
+	amount = 87
 }
 
 if = {
@@ -1457,4 +1454,10 @@ if = {
 			}
 		}
 	}
+}
+
+add_equipment_to_stockpile = {
+    type = medium_plane_airframe_1
+	amount = 560
+	variant_name = "Origion Italy Medium"
 }

@@ -1482,13 +1482,7 @@
 
 		available = {
 			has_idea = ROM_king_carol_ii_hedonist
-			OR = {
-				democratic > 0.35
-				communism > 0.35
-				fascism > 0.35
-			}
-			is_subject = no
-			
+			fascism > 0.35
 		}
 
 		bypass = {
@@ -1546,7 +1540,7 @@
 			remove_ideas = ROM_the_sentinel_of_the_motherland
 			add_timed_idea = { idea = ROM_king_carol_emptied_accounts days = 360 }
 			hidden_effect = {
-				news_event = { id = news.323 days = 1 }
+				GER = { add_to_faction = ROM }
 			}
 		}
 	}

@@ -425,20 +425,6 @@ characters={
 				small="GFX_idea_HUN_sandor_magyarossy"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = HUN_sandor_magyarossy
-			allowed = {
-				original_tag = HUN
-			}
-			traits = {
-				air_air_superiority_2
-			}
-			cost =  100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	HUN_gusztav_jany={
@@ -481,21 +467,6 @@ characters={
 				small="GFX_idea_HUN_jeno_ratz"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = HUN_jeno_ratz
-			ledger = air
-			allowed = {
-				original_tag = HUN
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	HUN_henrik_werth={
@@ -513,7 +484,7 @@ characters={
 				original_tag = HUN
 			}
 			traits = {
-				army_cavalry_2
+				army_logistics_2
 			}
 			cost = 100
 			ai_will_do = {

@@ -32,6 +32,7 @@ set_technology = {
 	trench_warfare = 1
 	fleet_in_being = 1
 	fuel_silos = 1
+	basic_train = 1
 }
 
 if = {
@@ -185,7 +186,7 @@ add_offsite_building = { type = industrial_complex level = 10 }
 	}
 }
 
-set_convoys = 25
+set_convoys = 150
 set_politics = {
 	ruling_party = democratic
 	last_election = "1933.5.17"
@@ -238,4 +239,14 @@ recruit_character = SAF_jan_smuts
 	recruit_character = SAF_jan_smuts
 	promote_character = SAF_jan_smuts
 	retire_character = SAF_j_b_m_hertzog
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 810	
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 25
 }

@@ -115,32 +115,9 @@ ideas = {
 			}
 		}
 
-		HUN_hungarian_monarchy_democratic = {			
-			allowed = {
-				original_tag = HUN
-				always = no
-			}
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			available = {
-				OR = {
-					has_government = democratic
-					AND = {
-						has_government = neutrality
-						NOT = { has_completed_focus = HUN_responsible_government }
-					}
-				}
-			}
+		HUN_hungarian_monarchy_fascism = {		
+			picture = HUN_hungarian_monarchy_fascism
 			
-			modifier = {
-				democratic_drift = 0.02
-				stability_factor = 0.1
-			}
-		}
-
-		HUN_hungarian_monarchy_fascism = {			
 			allowed = {
 				original_tag = HUN
 				always = no
@@ -148,20 +125,26 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-
-			available = {
-				OR = {
-					has_government = fascism
-					AND = {
-						has_government = neutrality
-						NOT = { has_completed_focus = HUN_renounce_the_treaty_of_trianon }
-					}
-				}
+			
+			modifier = {
+				fascism_drift = 0.05
+				stability_factor = 0.1
+			}
+		}
+		
+		HUN_hungarian_monarchy_fascism_taken_before_king = {		
+			picture = HUN_hungarian_monarchy_fascism
+			
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
 			}
 			
 			modifier = {
-				fascism_drift = 0.034
-				stability_factor = 0.1
+				fascism_drift = 0.05
 			}
 		}
 
