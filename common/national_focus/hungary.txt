@@ -1462,10 +1462,6 @@ focus_tree = {
 
 		}
 
-		bypass = {
-			wuw_HUN_does_not_have_trianon = yes
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1474,27 +1470,6 @@ focus_tree = {
 
 			add_ideas = HUN_secret_rearmament
 			custom_effect_tooltip = HUN_secret_rearmament_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_idea = HUN_levente_associations
-				}
-				swap_ideas = {
-					remove_idea = HUN_levente_associations
-					add_idea = HUN_levente_associations_secret_rearmament
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					has_idea = HUN_levente_associations_act_of_defense
-				}
-				swap_ideas = {
-					remove_idea = HUN_levente_associations_act_of_defense
-					add_idea = HUN_levente_associations_act_of_defense_and_secret_rearmament
-				}
-			}
 
 		}
 	}
@@ -1530,77 +1505,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "Arms Against Tyranny"
-					}
-				}
-				IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_wuw
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_wuw
-						add_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
-						add_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_aat_wuw
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_aat_wuw
-						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
-						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
-					}
-				}
-			}
-
 			air_experience = 15
 			add_doctrine_cost_reduction = {
 				name = wuw_HUN_undercover_air_maneuvers
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					wuw_HUN_does_not_have_trianon = no
-				}
-				custom_effect_tooltip = available_theorist
-				show_ideas_tooltip = HUN_gyorgy_jendrassik
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				custom_effect_tooltip = available_military_high_command
-				show_ideas_tooltip = HUN_sandor_magyarossy
 			}
 
 		}
@@ -1717,28 +1627,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		bypass = {
-			OR = {
-				wuw_HUN_does_not_have_trianon = yes
-				has_idea = HUN_bled_agreement_wuw
-				AND = {
-					ROM = {
-						OR = {
-							exists = no
-							is_puppet = yes
-						}
-					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
-						}
-					}
-				}
-			}
 		}
 
 		cancel_if_invalid = yes

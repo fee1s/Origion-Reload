@@ -1204,7 +1204,9 @@
 		cost = 3
 		
 		available = {
-		    36 = { is_controlled_by = JAP }
+			336 = { is_controlled_by = JAP }
+			640 = { is_controlled_by = JAP }
+			288 = { is_controlled_by = JAP }
 			333 = { is_controlled_by = JAP }
 			334 = { is_controlled_by = JAP }
 			672 = { is_controlled_by = JAP }
@@ -1331,7 +1333,6 @@
 			    tooltip = AST_operation_cartwheel_tt
 				any_state = {
 			        is_controlled_by = JAP
-			        #is_core_of = AST
 			        is_australian_main_state = yes
 			    }
 			}
