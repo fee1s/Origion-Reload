@@ -512,6 +512,9 @@ carrier_experience_malus_min = {
 pride_of_the_fleet = {
 	experience_gain_navy_unit_factor = 0.25
 	critical_receive_chance = -0.5
+	naval_defense_factor = 0.05
+	naval_damage_factor = 0.05
+	air_attack_factor = 0.10
 }
 
 
@@ -522,6 +525,7 @@ pride_of_the_fleet_country = {
 pride_of_the_fleet_sunk_temporary = {
 	# country
 	war_support_factor = -0.10
+	stability = -0.05
 }
 
 water_modifier_shark_infested = {
@@ -529,9 +533,8 @@ water_modifier_shark_infested = {
 }
 
 screening_bonus = {
-  naval_retreat_speed = 0.2
-  convoy_retreat_speed = 0.2
-  naval_hit_chance = 0.4
+navy_screen_defence_factor = 0.1
+ naval_speed_factor = 0.15
 }
 
 capital_screening_bonus = {

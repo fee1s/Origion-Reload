@@ -48,7 +48,7 @@ ideas = {
 			available = { has_naval_academy = yes }
 			visible = { has_tech = fleet_in_being }
 			modifier = {
-				navy_capital_ship_defence_factor = 0.1
+				navy_capital_ship_defence_factor = 0.04
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -78,7 +78,7 @@ ideas = {
 			available = { has_naval_academy = yes }
 			visible = { has_tech = base_strike }
 			modifier = {
-				sortie_efficiency = 0.12
+				sortie_efficiency = 0.04
 				navy_carrier_air_targetting_factor = 0.1
 			}
 			ai_will_do = {
@@ -107,7 +107,7 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
-				naval_detection = 0.14
+				naval_detection = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -123,10 +123,9 @@ ideas = {
 		jeune_ecole_spirit = {
 			ledger = navy
 			research_bonus = {
-				dd_tech = 0.20
 			}
 			modifier = {
-				ship_hull_light_design_cost_factor = -0.6
+				navy_screen_attack_factor = 0.02
 			}
 			ai_will_do = {
 				factor = 1
@@ -159,8 +158,11 @@ ideas = {
 		flexible_contracts_spirit = {
 			ledger = navy
 			modifier = {
-				naval_manufacturer_cost_factor = -0.8
-				ship_hull_cruiser_design_cost_factor = -0.6
+			}
+			equipment_bonus = {
+				cl_tech = {
+					build_cost_ic = -0.05 instant = yes
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -174,7 +176,7 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "Man the Guns" }
 			research_bonus = {
-				ship_modules_tech = 0.20
+				naval_equipment = 0.20
 			}
 			ai_will_do = {
 				factor = 1
@@ -219,12 +221,10 @@ ideas = {
 		fleet_in_being_navy_spirit = {
 			ledger = navy
 			visible = { has_tech = fleet_in_being }
-			research_bonus = {
-				bb_tech = 0.20
-				ca_tech = 0.20 
-			}
-			modifier = {
-				ship_hull_heavy_design_cost_factor = -0.6
+			equipment_bonus = {
+				bb_tech = {
+					build_cost_ic = -0.02 instant = yes
+				}
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -237,11 +237,8 @@ ideas = {
 		trade_interdiction_navy_spirit = {
 			ledger = navy
 			visible = { has_tech = trade_interdiction }
-			research_bonus = {
-				ss_tech = 0.20
-			}
 			modifier = {
-				ship_hull_submarine_design_cost_factor = -0.6
+				convoy_raiding_efficiency_factor = 0.02
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -254,11 +251,11 @@ ideas = {
 		base_strike_navy_spirit = {
 			ledger = navy
 			visible = { has_tech = base_strike }
-			research_bonus = {
-				cv_tech = 0.20
-			}
-			modifier = {
-				ship_hull_carrier_design_cost_factor = -0.6
+				
+			equipment_bonus = {		
+				cv_tech = {
+					build_cost_ic = -0.02 instant = yes
+				}
 			}
 			ai_will_do = {
 				factor = 1.5
