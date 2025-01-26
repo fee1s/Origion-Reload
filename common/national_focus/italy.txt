@@ -6130,24 +6130,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
 
 		completion_reward = {
-			add_political_power = 150
 			add_war_support = 0.14
 			add_stability = 0.2
 			add_command_power = 65
 			army_experience = 45
 			air_experience = 15
-
-			unlock_decision_category_tooltip = ETH_italian_occupation_category
-
-			hidden_effect = {
-				every_controlled_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_core_of = ETH
-					}
-					set_state_flag = ITA_can_electrify_state_flag
-				}
-			}
 		}
 	}
 	

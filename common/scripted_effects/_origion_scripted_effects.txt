@@ -1,0 +1,192 @@
+
+# Скриптед_эффекты на объявления войны по различным десиженам и ивентам, авто-призыв обоих сторон и т.д
+
+declare_war_on_all_allies = { # по ивенту не работает если че
+	if = {
+		#Make sure we dont declare war on UK a second time
+		limit = {
+			NOT = {
+				has_war_with = ENG
+			}
+		}
+		log = "[?ROOT.GetName] was NOT at war with ENG"
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
+	}
+	if = {
+		limit = {
+			has_war = yes
+		}
+		ROOT_call_allies_both_sides = yes
+	}
+}
+
+ROOT_call_allies_both_sides = {
+	ROOT_call_all_allies_against_ENG = yes
+	ENG_call_all_allies_against_ROOT = yes
+}
+
+ROOT_call_all_allies_against_ENG = {
+	for_each_scope_loop = {
+		array = ROOT.allies
+		if = {
+			limit = {
+				NOT = {
+					original_tag = BUL
+				}
+			}
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = ENG
+			}
+		}
+	}
+}
+
+ROOT_call_all_allies_against_DEN_NOR = {
+	for_each_scope_loop = {
+		array = ROOT.allies
+		if = {
+			limit = {
+				NOT = {
+					original_tag = BUL
+				}
+			}
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = DEN
+			}
+			
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = NOR
+			}
+		}
+	}
+}
+
+ROOT_call_all_allies_against_benelux = {
+	for_each_scope_loop = {
+		array = ROOT.allies
+		if = {
+			limit = {
+				NOT = {
+					original_tag = BUL
+				}
+			}
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = HOL
+			}
+			
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = BEL
+			}
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = LUX
+			}
+		}
+	}
+}
+
+ENG_call_all_allies_against_ROOT = {
+	for_each_scope_loop = {
+		array = ENG.allies
+		if = {
+			limit = {
+				NOT = {
+					original_tag = BUL
+				}
+			}
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = ROOT
+			}
+		}
+	}
+}
+
+USA_join_to_war = {
+	if = {
+		limit = { 
+			USA = { is_in_faction = no }
+		}
+		
+		ENG = { add_to_faction = USA }
+		USA = { set_faction_leader = yes }
+	}
+	
+	for_each_scope_loop = {
+		array = USA.allies
+		add_to_war = {
+			targeted_alliance = USA
+			enemy = JAP
+		}
+	}
+	
+	if = {
+		limit = { GER = { exists = yes } }
+		
+		USA = {
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = GER
+			}
+		}
+	}
+}
+
+ITA_join_to_war = {	
+	GER = { add_to_faction = ITA }
+	
+	ITA = { 
+		declare_war_on = {
+			target = ENG
+			type = annex_everything
+		}
+		
+		for_each_scope_loop = {
+			array = ENG.allies
+			
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = ITA
+			}
+		}
+	}
+}
+
+# Авто-шаблоны
+
+fighter_1940 = {
+	create_equipment_variant = {
+		name = "Истребитель 1940го" 
+		type = small_plane_airframe_2
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = fuel_tanks_small
+			special_type_slot_2 = armor_plate_small		
+			special_type_slot_3 = armor_plate_small		
+		}
+	}					
+}
+Cas_1940 = {
+	create_equipment_variant = {
+		name = "Штурмовик 1940го" 
+		type = small_plane_cas_airframe_2
+		modules = {
+			fixed_main_weapon_slot = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_2 = heavy_bomb_locks
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = fuel_tanks_small
+		}
+	}					
+}

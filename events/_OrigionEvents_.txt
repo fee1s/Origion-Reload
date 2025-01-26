@@ -354,43 +354,8 @@ news_event = { # вступление италии в войну против с
 	}
 	
 	immediate = {
-		if = {
-			limit = {
-				GER = { is_faction_leader = yes }
-			}
-			
-			GER = { add_to_faction = ITA }
-		}
-		
-		ITA = {
-			set_rule = {
-				can_join_factions = yes
-			}
-			
-			if = {
-				limit = {
-					ENG = { exists = yes }
-				}
-				
-				declare_war_on = {
-					target = ENG
-					type = annex_everything
-				}
-			}
-			for_each_scope_loop = {
-				array = ENG.allies
-				if = {
-					limit = {
-						NOT = {
-							original_tag = BUL
-						}
-					}
-				}
-				add_to_war = {
-					targeted_alliance = ENG
-					enemy = ITA
-				}
-			}
+		ITA = {	
+			ITA_join_to_war = yes
 		}
 		
 		458 = {
@@ -1339,38 +1304,48 @@ news_event = { # вступление италии в войну против с
 			}
 		}
 
-		ITA = {
-			add_timed_idea = {
-				idea = africa_supply_buff
-				days = 180
-			}
-		}
+		#ITA = {
+		#	add_timed_idea = {
+		#		idea = africa_supply_buff
+		#		days = 180
+		#	}
+		#}
 		
-		GER = {
-			add_timed_idea = {
-				idea = africa_supply_buff
-				days = 180
-			}
-		}
+		#GER = {
+		#	add_timed_idea = {
+		#		idea = africa_supply_buff
+		#		days = 180
+		#	}
+		#}
 	
-		HUN = {
-			add_timed_idea = {
-				idea = africa_supply_buff
-				days = 180
-			}
-		}
+		#HUN = {
+		#	add_timed_idea = {
+		#		idea = africa_supply_buff
+		#		days = 180
+		#	}
+		#}
 		
-		ROM = {
-			add_timed_idea = {
-				idea = africa_supply_buff
-				days = 180
-			}
-		}
+		#ROM = {
+		#	add_timed_idea = {
+		#		idea = africa_supply_buff
+		#		days = 180
+		#	}
+		#}
 		
-		BUL = {
-			add_timed_idea = {
-				idea = africa_supply_buff
-				days = 180
+		#BUL = {
+		#	add_timed_idea = {
+		#		idea = africa_supply_buff
+		#		days = 180
+		#	}
+		#}
+		
+		ENG = { 
+			every_state = {
+				limit = {
+					is_italian_eth_state = yes
+				}
+				
+				ENG = { transfer_state = PREV }
 			}
 		}
 		
@@ -1555,7 +1530,7 @@ country_event = { # передача стейтов на ост-фронте о�
 	}
 }
 
-news_event = {
+news_event = { # авто-вступление юсы в войну, если упал лондон
 	id = origion.11
 	title = origion.11.t
 	desc = origion.11.d
