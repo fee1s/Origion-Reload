@@ -16,15 +16,10 @@ ideas = {
 		}
 		industrial_destruction_spirit = {
 			ledger = air
-			#visible = { has_tech = air_superiority } #TODO
 			available = { has_air_academy = yes }
-			research_bonus = {
-				heavy_air = 0.05
-			}
 			modifier = {
-				large_plane_airframe_design_cost_factor = -0.75
-				#strat_bomber_equipment_design_cost_factor = -0.75
-				#jet_strat_bomber_equipment_design_cost_factor = -0.75
+				strategic_bomb_visibility = -0.05
+				air_bombing_targetting = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -36,16 +31,10 @@ ideas = {
 		}
 		dive_bombing_spirit = {
 			ledger = air
-			visible = { has_tech = formation_flying }
 			available = { has_air_academy = yes }
-			research_bonus = {
-				cas_bomber = 0.05
-			}
 			modifier = {
-				small_plane_cas_airframe_design_cost_factor = -0.75
-				cv_small_plane_cas_airframe_design_cost_factor = -0.75
-				#CAS_equipment_design_cost_factor = -0.75
-				#cv_CAS_equipment_design_cost_factor = -0.75
+				air_cas_present_factor = 0.1
+				ground_attack_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -57,15 +46,10 @@ ideas = {
 		}
 		material_destruction_spirit = {
 			ledger = air
-			visible = { has_tech = force_rotation }
 			available = { has_air_academy = yes }
-			research_bonus = {
-				tactical_bomber = 0.05
-			}
 			modifier = {
-				medium_plane_airframe_design_cost_factor = -0.75
-				#tac_bomber_equipment_design_cost_factor = -0.75
-				#jet_tac_bomber_equipment_design_cost_factor = -0.75
+				air_weather_penalty = -0.1
+				naval_strike_targetting_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -96,6 +80,7 @@ ideas = {
 			ledger = air
 			available = { has_air_academy = yes }
 			modifier = {
+				air_accidents_factor = -0.25
 				air_training_xp_gain_factor = 0.25
 			}
 			ai_will_do = {
@@ -110,8 +95,7 @@ ideas = {
 			ledger = air
 			available = { has_air_academy = yes }
 			modifier = {
-				experience_gain_air = 0.1
-				airforce_intel_to_others = -5
+				experience_gain_air = 0.25
 			}
 			ai_will_do = {
 				factor = 1
@@ -124,9 +108,16 @@ ideas = {
 		air_crew_surveys_spirit = {
 			ledger = air
 			available = { has_air_academy = yes }
-			modifier = {
-				air_doctrine_cost_factor = -0.15
-				air_accidents_factor = -0.25
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.015
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.015
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.015
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -143,8 +134,8 @@ ideas = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				ground_attack_factor = 0.05
-				air_escort_efficiency = 0.05
+				air_cas_efficiency = 0.05
+				air_close_air_support_org_damage_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -156,10 +147,9 @@ ideas = {
 		}
 		cag_night_fighting_spirit = {
 			ledger = air
-			visible = { tag = ENG }
 			modifier = {
-				air_carrier_night_penalty_reduction_factor = 0.33
-				carrier_night_traffic = 0.5
+				air_carrier_night_penalty_reduction_factor = 0.15
+				air_night_penalty = -0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -173,7 +163,7 @@ ideas = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				air_wing_xp_loss_when_killed_factor = -0.25
+				air_home_defence_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -187,8 +177,8 @@ ideas = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				air_superiority_detect_factor = 0.1
-				air_mission_efficiency = 0.1
+				air_superiority_detect_factor = 0.05
+				air_mission_efficiency = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -198,40 +188,12 @@ ideas = {
 				}
 			}
 		}
-		steel_wings_steel_hearts_spirit = {
-			ledger = air
-			visible = { has_government = communism }
-			available = { has_air_force_command = yes }
-			modifier = {
-				air_untrained_pilots_penalty_factor = -0.33
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
-		home_defence_spirit = {
-			ledger = air
-			available = { has_air_force_command = yes }
-			modifier = {
-				ace_effectiveness_factor = 0.5
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
+		
 		air_power_projection_spirit = {
 			ledger = air
 			available = { has_air_force_command = yes }
 			modifier = {
-				air_power_projection_factor = 0.1
+				air_power_projection_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -244,9 +206,8 @@ ideas = {
 		massed_strike_spirit = {
 			ledger = air
 			available = { has_air_force_command = yes }
-			visible = { has_tech = force_rotation }
 			modifier = {
-				army_bonus_air_superiority_factor = 0.05
+				army_bonus_air_superiority_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -259,9 +220,9 @@ ideas = {
 		continuous_strike_spirit = {
 			ledger = air
 			available = { has_air_force_command = yes }
-			visible = { has_tech = formation_flying }
 			modifier = {
-				air_cas_efficiency = 0.25
+				air_night_penalty = -0.05
+				air_weather_penalty = -0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -274,7 +235,6 @@ ideas = {
 		strategic_strike_spirit = { 
 			ledger = air
 			available = { has_air_force_command = yes }
-			#visible = { has_tech = air_superiority } #TODO
 			modifier = {
 				air_strategic_bomber_bombing_factor = 0.1
 			}

@@ -1554,3 +1554,36 @@ country_event = { # передача стейтов на ост-фронте о�
 		}
 	}
 }
+
+news_event = {
+	id = origion.11
+	title = origion.11.t
+	desc = origion.11.d
+	picture = GFX_news_event_soldiers_marching
+	
+	major = yes
+	
+	trigger = {
+		126 = { 
+		    controller = {
+			    ORIGION_is_in_faction_with_axis = yes
+			}
+		}
+		NOT = { has_global_flag = fall_of_london }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_london
+		hidden_effect = {
+		    USA_join_to_war = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = origion.11.a
+	}
+}

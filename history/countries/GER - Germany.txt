@@ -285,7 +285,7 @@ set_war_support = 0.3
 		#air
 		formation_flying = 1		
 		dive_bombing = 1
-		direct_ground_support = 1
+		formation_flying = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -400,6 +400,7 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+	ger_reichsluftfahrtministerium
 #	SWE_historical_trade_with_Germany_dummy CUT
 }
 add_ideas = GER_mefo_bills_1
@@ -1121,4 +1122,9 @@ add_equipment_to_stockpile = {
     type = medium_plane_airframe_0
 	amount = 515
 	variant_name = "Do 23"
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 86
 }

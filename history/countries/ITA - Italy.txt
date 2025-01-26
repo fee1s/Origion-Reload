@@ -41,6 +41,28 @@ add_ideas = {
 	partial_economic_mobilisation
 }
 
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+
+	create_equipment_variant = {
+		name = "Origion Italy Medium"
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = flying_boat_medium
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+	}
+}
+
 #######################################
 ############ MISSIOLINIS ##############
 #######################################
@@ -224,7 +246,7 @@ add_dynamic_modifier = { modifier = ITA_regio_esercito_dynamic_modifier }
 
 #REGIA AERONAUTICA
 set_variable = { ITA_ra_air_ace_generation_chance_factor = 0.1 }
-set_variable = { ITA_ra_air_superiority_bonus_in_combat = 0.05 }
+set_variable = { ITA_ra_formation_flying_bonus_in_combat = 0.05 }
 set_variable = { ITA_ra_air_doctrine_cost_factor = 0.1 }
 set_variable = { ITA_ra_air_nav_efficiency = -0.1 }
 set_variable = { ITA_ra_air_night_penalty = 0.15 }
@@ -236,7 +258,7 @@ set_variable = { ITA_ra_air_mission_xp_gain_factor = 0 }
 set_variable = { ITA_ra_strategic_bomb_visibility = 0 }
 set_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0 }
 set_variable = { ITA_ra_air_range_factor = 0 }
-set_variable = { ITA_ra_air_superiority_efficiency = 0 }
+set_variable = { ITA_ra_formation_flying_efficiency = 0 }
 set_variable = { ITA_ra_air_intercept_efficiency = 0 }
 
 add_dynamic_modifier = { modifier = ITA_regia_aeronautica_dynamic_modifier }
@@ -543,7 +565,7 @@ if = {
 		
 		#Air
 		force_rotation = 1
-		fighter_baiting = 1
+		formation_flying = 1
 		low_echelon_support = 1
 		dispersed_fighting = 1
 
@@ -846,33 +868,8 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-    type = medium_plane_airframe_1
-	amount = 560
-	variant_name = "SM.81 Origion"
-}
-
-
-### VARIANTS ###
-# 1936 Start #
-#plane variants
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-	create_equipment_variant = {
-		name = "SM.81 Origion" #
-		type = medium_plane_airframe_1
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			fixed_auxiliary_weapon_slot_2 = small_bomb_bay
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = empty
-			special_type_slot_2 = empty
-			special_type_slot_3 = empty
-			special_type_slot_4 = empty
-		}
-		icon = "GFX_ITA_early_bomber_medium"
-	}
+	type = train_equipment_1
+	amount = 87
 }
 
 if = {
@@ -1457,4 +1454,10 @@ if = {
 			}
 		}
 	}
+}
+
+add_equipment_to_stockpile = {
+    type = medium_plane_airframe_1
+	amount = 560
+	variant_name = "Origion Italy Medium"
 }

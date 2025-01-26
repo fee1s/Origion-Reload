@@ -1325,21 +1325,6 @@ characters={
 				small="GFX_idea_sholto_douglas"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = sholto_douglas
-			ledger = air
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				air_air_superiority_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	ENG_trafford_leigh_mallory={
@@ -1347,21 +1332,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_trafford_leigh_mallory"
-			}
-		}
-		advisor={	
-			slot = high_command
-			idea_token = trafford_leigh_mallory
-			ledger = air
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				air_bomber_interception_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -1381,7 +1351,7 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				air_naval_strike_2
+				air_naval_strike_3
 			}
 			cost = 100
 			ai_will_do = {
@@ -1395,21 +1365,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_louis_mountbatten"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = louis_mountbatten
-			ledger = army
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				navy_amphibious_assault_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

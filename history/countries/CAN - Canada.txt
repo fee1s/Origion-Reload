@@ -250,7 +250,7 @@ if = {
 		#doctrines
 		#Air
 		force_rotation = 1
-		fighter_baiting = 1
+		formation_flying = 1
 
 		grand_battle_plan = 1
 		trench_warfare = 1
@@ -310,7 +310,7 @@ set_popularities = {
 	communism = 1
 }
 
-set_convoys = 100
+set_convoys = 150
 set_stability = 0.5
 
 ### VARIANTS ###
@@ -405,4 +405,14 @@ if = {
 			}
 		}
 	}
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 2700
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 32
 }

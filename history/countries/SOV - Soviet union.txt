@@ -1157,7 +1157,7 @@ add_ideas = {
 		#Air
 		formation_flying = 1		
 		dive_bombing = 1
-		direct_ground_support = 1
+		formation_flying = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -1223,7 +1223,7 @@ add_ideas = {
 }
 
 
-set_convoys = 50
+set_convoys = 250
 
 set_politics = {
 	ruling_party = communism
@@ -1239,8 +1239,6 @@ set_popularities = {
 
 create_faction = Comintern
 add_to_faction = SOV
-add_to_faction = MON
-add_to_faction = TAN
 
 if = {
 	limit = {
@@ -1814,4 +1812,9 @@ add_equipment_to_stockpile = {
     type = medium_plane_airframe_0
 	amount = 615
 	variant_name = "DB-3 Origion"
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 126
 }

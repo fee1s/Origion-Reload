@@ -328,7 +328,7 @@ add_ideas = NO_asia_eng
 
 		#doctrines
 		#Air
-		air_superiority = 1
+		formation_flying = 1
 		home_defence = 1
 		naval_strike_tactics = 1
 
@@ -1600,11 +1600,16 @@ add_equipment_to_stockpile = {
 
 add_equipment_to_stockpile = {
     type = infantry_equipment_1
-	amount = 12131
+	amount = 6131
 }
 
 add_equipment_to_stockpile = {
     type = medium_plane_airframe_1
 	amount = 570
 	variant_name = "Bristol Blenheim Origion"
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 194
 }

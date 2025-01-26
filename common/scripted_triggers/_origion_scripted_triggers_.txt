@@ -21,6 +21,40 @@ ORIGION_is_in_faction_with_allies = {
 		original_tag = FRA
 	}
 }
+ORIGION_is_in_faction_with_axis = {
+	OR = {
+		original_tag = GER
+		original_tag = ITA
+		original_tag = JAP
+		original_tag = BUL
+		original_tag = ROM
+		original_tag = HUN
+	}
+}
+
+ORIGION_not_playable_country = {
+	OR = {
+		original_tag = SPR
+		original_tag = SWE
+		original_tag = PER
+		original_tag = YUG
+		original_tag = GRE
+		original_tag = ALB
+		original_tag = DEN
+		original_tag = NOR
+		original_tag = FIN
+		original_tag = HOL
+		original_tag = BEL
+		original_tag = LUX
+		original_tag = POL
+		original_tag = CZE
+		original_tag = AUS
+		original_tag = EST
+		original_tag = CHI
+		original_tag = COL
+	}
+}
+
 is_french_north_africa = {
 	OR = {
 		state = 458
@@ -31,6 +65,20 @@ is_french_north_africa = {
 	    state = 513
 		state = 665
 		state = 783
+	}
+}
+is_australian_main_state = {
+	OR = {
+		state = 285
+		state = 517
+		state = 519
+		state = 520
+		state = 521
+		state = 522
+		state = 870
+		state = 871
+		state = 872
+		state = 873
 	}
 }
 axis_lost_africa_trigger = {

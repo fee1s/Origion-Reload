@@ -33,6 +33,8 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	basic_train = 1
+	gw_artillery = 1
 }
 
 recruit_character = RAJ_lord_linlithgow
@@ -143,7 +145,7 @@ if = {
 	}
 }
 
-set_convoys = 20
+set_convoys = 150
 
 set_cosmetic_tag = RAJ_UK # British Raj
 
@@ -220,7 +222,7 @@ set_cosmetic_tag = RAJ_UK # British Raj
 		#doctrines
 		#Air
 		force_rotation = 1
-		fighter_baiting = 1
+		formation_flying = 1
 		grand_battle_plan = 1
 
 		trench_warfare = 1
@@ -280,4 +282,14 @@ if = {
 		female = yes
 		nationalities = { RAJ }
 	}
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 8970
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 64
 }

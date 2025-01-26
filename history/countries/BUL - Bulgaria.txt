@@ -52,30 +52,12 @@ add_timed_idea = {
     idea = winter_debuff
     days = 2434
 }
-	if = {
-		limit = {
-			has_dlc = "Arms Against Tyranny"
-		}
-		add_ideas = BUL_army_restrictions_aat
-	}
-	if = {
-		limit = {
-			NOT = {	has_dlc = "Arms Against Tyranny" }
-		}
-		add_ideas = BUL_army_restrictions
-	}
 	add_ideas = { #DLC
 		BUL_second_national_catastrophe
 		BUL_imro_01
 		volunteer_only
 		not_infantary_volontroopers
 	}
-
-	#Army limitations due to Treaty of Neuilly sur Seine
-	set_rule = { #DLC
-		can_not_declare_war = yes
-	}
-	country_lock_all_division_template = yes
 
 	#SET FLAGS AND VARIABLES
 	#Internal Affairs
@@ -452,7 +434,7 @@ if = {
 		#doctrines
 		#Air
 		force_rotation = 1
-		fighter_baiting = 1
+		formation_flying = 1
 				
 		grand_battle_plan = 1
 		trench_warfare = 1
@@ -517,4 +499,24 @@ if = {
 	}
 
 	
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 90
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 3138
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 24
+}
+
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+	amount = 42
 }

@@ -681,7 +681,6 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 10 }
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = fiat
 			show_ideas_tooltip = lancia
@@ -6993,16 +6992,18 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
 			}
-			add_political_power = 70
+			
 			BUL_zveno_low_loyalty_increase_effect = yes
 			BUL_bs_low_loyalty_decrease_effect = yes
 			BUL_bzns_low_loyalty_increase_effect = yes
 			BUL_nsm_low_loyalty_increase_effect = yes
 			custom_effect_tooltip = BUL_appoint_right_wing_ministers_tt
+			
+			hidden_effect = { GER = { add_to_faction = BUL } }
 		}
 	}
 
@@ -7014,7 +7015,7 @@ focus_tree = {
 		relative_position_id = BUL_appoint_right_wing_ministers
 		x = -3
 		y = 1
-		cost = 5
+		cost = 10
 
 		available = {
 			has_government = fascism

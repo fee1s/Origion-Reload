@@ -190,7 +190,8 @@ if = {
 	}
 }
 
-set_convoys = 10
+set_convoys = 150
+
 1939.1.1 = {
 	
 	remove_ideas = neutrality_idea
@@ -208,7 +209,7 @@ set_convoys = 10
 		#doctrines
 		#Air
 		force_rotation = 1
-		fighter_baiting = 1
+		formation_flying = 1
 		
 		grand_battle_plan = 1
 		trench_warfare = 1
@@ -273,7 +274,7 @@ set_convoys = 10
 		complete_national_focus = ROM_danubian_transport_network
 		complete_national_focus = ROM_malaxa
 		complete_national_focus = ROM_flexible_foreign_policy
-		complete_national_focus = ROM_air_superiority
+		complete_national_focus = ROM_formation_flying
 		complete_national_focus = ROM_expand_the_galati_shipyards
 		complete_national_focus = ROM_trade_treaty_with_germany
 		complete_national_focus = ROM_iar_80
@@ -463,4 +464,24 @@ if = {
 	if = {
 		limit = { has_dlc = "Man the Guns" }
 	}
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 303
+}
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment_1
+	amount = 10663
+}
+
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+	amount = 70
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 36
 }
