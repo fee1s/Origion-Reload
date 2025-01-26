@@ -98,18 +98,18 @@ NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3
 NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 3
 NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 3
 
-NDefines.NNavy.REPAIR_AND_RETURN_PRIO_LOW_COMBAT = 0.4 -- % of total Strength. When below, navy will go to home base to repair (in combat).
-NDefines.NNavy.REPAIR_AND_RETURN_PRIO_MEDIUM_COMBAT = 0.45 -- % of total Strength. When below, navy will go to home base to repair (in combat).
-NDefines.NNavy.REPAIR_AND_RETURN_PRIO_HIGH_COMBAT = 0.5 -- % of total Strength. When below, navy will go to home base to repair (in combat).
-NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_LOW = 0.2 -- % of total damaged ships, that will be sent for repair-and-return in one call.
-NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_MEDIUM = 0.4 -- % of total damaged ships, that will be sent for repair-and-return in one call.
-NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_HIGH = 0.8 -- % of total damaged ships, that will be sent for repair-and-return in one call.
-NDefines.NNavy.REPAIR_AND_RETURN_UNIT_DYING_STR = 0.4 -- Str below this point is considering a single ship "dying", and a high priority to send to repair.
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_LOW_COMBAT = 0.2 -- % of total Strength. When below, navy will go to home base to repair (in combat).
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_MEDIUM_COMBAT = 0.225 -- % of total Strength. When below, navy will go to home base to repair (in combat).
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_HIGH_COMBAT = 0.25 -- % of total Strength. When below, navy will go to home base to repair (in combat).
+NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_LOW = 0.1 -- % of total damaged ships, that will be sent for repair-and-return in one call.
+NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_MEDIUM = 0.2 -- % of total damaged ships, that will be sent for repair-and-return in one call.
+NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_HIGH = 0.4 -- % of total damaged ships, that will be sent for repair-and-return in one call.
+NDefines.NNavy.REPAIR_AND_RETURN_UNIT_DYING_STR = 0.2 -- Str below this point is considering a single ship "dying", and a high priority to send to repair.
 
 NDefines.NNavy.BASE_ESCAPE_SPEED = 0.01 -- daily base escape speed (gained as percentagE)
-NDefines.NNavy.SPEED_TO_ESCAPE_SPEED = 0.5 -- ratio to converstion from ship speed to escape speed (divided by hundred)
-NDefines.NNavy.ESCAPE_SPEED_PER_COMBAT_DAY = 0.6 -- daily increase in escape speed during combat duration
-NDefines.NNavy.MAX_ESCAPE_SPEED_FROM_COMBAT_DURATION = 6.0 -- max escape speed that will be gained from combat duration
+NDefines.NNavy.SPEED_TO_ESCAPE_SPEED = 0.25 -- ratio to converstion from ship speed to escape speed (divided by hundred)
+NDefines.NNavy.ESCAPE_SPEED_PER_COMBAT_DAY = 0.3 -- daily increase in escape speed during combat duration
+NDefines.NNavy.MAX_ESCAPE_SPEED_FROM_COMBAT_DURATION = 3.0 -- max escape speed that will be gained from combat duration
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00 -- Корабли не могут получить ранение на тренировке
 
@@ -121,18 +121,46 @@ NDefines.NNavy.SUPPLY_NEED_FACTOR = 1.5 -- Множитель потребнос
 
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
 
-NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 90 -- Попадание Авиков по линейке (от 250)
-NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 160 -- Попадание Авиков по Авикам (от 250)
-
+NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 190 -- Попадание Авиков по линейке (от 250)
+NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 60 -- Попадание Авиков по Авикам (от 250)
+NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.70 -- снижение урона пво от мор авиации
+NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.26 -- cнижение урона от мор авиации при получении повреждений
+NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 8 -- частота атаки авианосного соединения в часах
+NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.0, 2.0, 1.0 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)
+NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_HEAVY_SHIPS = 1.1 -- приоритет атаки торпед по тяжам
+NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.4 -- приоритет атаки торпед по лт флоту
+NDefines.NNavy.GUN_HIT_PROFILES = {110.0, 90.0, 75.0 } -- 1 харднесс, 2- торпеды 3-лайт атака, чем больше значение, тем дольше бой и меньше попаданий
+NDefines.NNavy.BASE_POSITIONING = 1.0 -- максимальное размещение
+NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR = 0.01 -- увеличивает обнаружение между 2 флотами, сторона с большим обнаружением получает бонус
+NDefines.NNavy.MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION = 0.0 -- уменьшает бонус от обнаружения
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.80 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
+NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.98 -- максимальный штраф от размещения
+NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.05 -- штраф, за более большое авиа соединение
+NDefines.NNavy.BASE_CARRIER_SORTIE_EFFICIENCY = 0.2
+NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс штраф за большее количество самолетов у противника на авиках
+NDefines.NNavy.POSITIONING_PENALTY_FOR_SHIPS_JOINED_COMBAT_AFTER_IT_STARTS = 0.01 -- каждый корабль в бою который получает штраф к размещению
+NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- максимальный штраф за новые суда
+NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- накопленный штраф за новые суда который будет уменьшаться
+NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.95 -- штраф нанесения урона при плохом размещении
+NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.5 -- понижение щитка при понижении размещения
+NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35 -- дебафф на пво флота от размещения
+NDefines.NNavy.SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING = 2.0 -- размещение лодок
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0.00001
+NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2 -- кол-во требуемых кораблей охранения на 1 тяж корабль
+
+--урон и криты от процента пробоя 
+
+NDefines.NNavy.NAVY_PIERCING_THRESHOLDS = { 1.00, 0.80, 0.75, 0.65, 0.50, 0.35 }
+NDefines.NNavy.NAVY_PIERCING_THRESHOLD_CRITICAL_VALUES = { 2.00, 1.00, 0.80, 0.70, 0.50, 0.15 }
+NDefines.NNavy.NAVY_PIERCING_THRESHOLD_DAMAGE_VALUES = { 1.00, 1.00, 0.80, 0.70, 0.50, 0.15 }
 
 -- Подлодочные дефайны
 
 NDefines.NNavy.SUB_DETECTION_CHANCE_BASE = 8 -- (ванила 6)
 NDefines.NNavy.ESCAPE_SPEED_SUB_BASE = 0.04 -- Скорость отступления подлодок (0.08 - ванила)
 NDefines.NNavy.ESCAPE_SPEED_HIDDEN_SUB = 0.09 -- Скорость отступления невидимых подлодок (0.18 - ванила)
-NDefines.NNavy.SUBMARINE_BASE_TORPEDO_REVEAL_CHANCE = 0.055	-- шанс на обнаружение при выпуске торпеды (единица это 100%)
+NDefines.NNavy.SUBMARINE_BASE_TORPEDO_REVEAL_CHANCE = 0.045	-- шанс на обнаружение при выпуске торпеды (единица это 100%)
 
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 1.5	-- Перемножает остальные статы на детект подлодок, скейлит детекд от кол-во самолетов в регионе. (ванила 1.0)
 
