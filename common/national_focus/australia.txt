@@ -12,7 +12,7 @@
 	
 	default = no
 	
-	continuous_focus_position = { x = 50 y = 1400 }
+	continuous_focus_position = { x = 50 y = 1100 }
 	
 	#shared_focus = bracing_for_the_inevitable
 	
@@ -862,7 +862,7 @@
 		icon = GFX_focus_research
 		prerequisite = { focus = NZL_think_big }
 		prerequisite = { focus = AST_Papya_cicvilian_expand }
-		x = 3
+		x = 2
 		y = 4
 		relative_position_id = NZL_national_roads_board
 
@@ -1889,11 +1889,11 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 25
+			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = AST_promote_reservists
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
