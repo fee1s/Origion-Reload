@@ -12,6 +12,24 @@ origion_rerol_dec_cat = {
 		}
 	}
 }
+Origion_fast_templates = { #авто-шаблоны сисикал
+    allowed = {
+    }
+	
+    visible = {
+    }
+}
+Epsilon_decions = {
+	icon =  generic_propaganda
+
+	allowed = {
+		
+	}
+	
+	visible = {
+		
+	}
+}
 USA_kambeck = {
 	
 	icon = military_operation
@@ -24,5 +42,69 @@ USA_kambeck = {
 	
 	visible = {
 		USA = { has_full_control_of_state = 948 }
+	}
+}
+ENG_annex = {
+	
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+		original_tag = ENG
+	}
+	visible = {
+		COL = { has_full_control_of_state = 948 }
+	}
+}
+FRA_annex = {
+	
+	icon = military_operation
+	picture = generic_army_support
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		COL = { has_full_control_of_state = 948 }
+	}
+}
+HUN_annex = {
+	
+	icon = military_operation
+	picture = generic_army_support
+	
+	allowed = {
+		original_tag = HUN
+	}
+	
+	visible = {
+		COL = { has_full_control_of_state = 948 }
+	}
+}
+SOV_annex = {
+	
+	icon = military_operation
+	
+	picture = generic_army_support
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	visible = {
+		COL = { has_full_control_of_state = 948 }
+	}
+}
+USA_annex = {
+	
+	icon = military_operation
+	picture = generic_army_support
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		COL = { has_full_control_of_state = 948 }
 	}
 }

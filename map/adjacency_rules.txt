@@ -78,7 +78,7 @@ adjacency_rule =
 	}
 	neutral =
 	{
-		army = yes
+		army = no
 		navy = no
 		submarine = no
 		trade = yes
@@ -118,9 +118,9 @@ adjacency_rule =
 	}
 	neutral =
 	{
-		army = yes
-		navy = yes
-		submarine = yes
+		army = no
+		navy = no
+		submarine = no
 		trade = yes
 	}
 	
@@ -148,14 +148,14 @@ adjacency_rule =
 	{
 		army = no
 		navy = no
-		submarine = yes
+		submarine = no
 		trade = no
 	}
 	enemy =
 	{
 		army = no
 		navy = no
-		submarine = yes
+		submarine = no
 		trade = no
 	}
 	friend =
@@ -167,9 +167,9 @@ adjacency_rule =
 	}
 	neutral =
 	{
-		army = yes
+		army = no
 		navy = no
-		submarine = yes
+		submarine = no
 		trade = yes
 	}
 	
@@ -183,6 +183,11 @@ adjacency_rule =
 adjacency_rule =
 {
 	name = "DANISH_BELTS_STRAIT"
+	
+	is_friend = {
+		original_tag = SOV
+		has_war = no
+	}
 
 	contested =
 	{
@@ -216,7 +221,7 @@ adjacency_rule =
 	required_provinces = { 394 }
 	
 	icon = 2431
-	offset = { -16 0 30 }
+	offset = { -24 0 38 }
 }
 
 #Panama Canal
