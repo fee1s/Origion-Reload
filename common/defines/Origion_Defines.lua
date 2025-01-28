@@ -25,9 +25,10 @@ NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость тре
 -- Воздух
 
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.45 -- Умеменьшить размены в воздухе
+NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.35 -- Умеменьшить размены в воздухе
 
 NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 1.7 -- портстрайк бафф
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 2.55 -- бафф морбобров по дамагу по организации
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 2.15 -- бафф морбобров по дамагу по организации
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.7 -- бафф морбобров по дамагу
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 1.2 -- множитель получаемого опыта авиации (всего)
@@ -108,7 +109,7 @@ NDefines.NNavy.REPAIR_AND_RETURN_UNIT_DYING_STR = 0.2 -- Str below this point is
 
 NDefines.NNavy.BASE_ESCAPE_SPEED = 0.01 -- daily base escape speed (gained as percentagE)
 NDefines.NNavy.SPEED_TO_ESCAPE_SPEED = 0.25 -- ratio to converstion from ship speed to escape speed (divided by hundred)
-NDefines.NNavy.ESCAPE_SPEED_PER_COMBAT_DAY = 0.3 -- daily increase in escape speed during combat duration
+NDefines.NNavy.ESCAPE_SPEED_PER_COMBAT_DAY = 0.15 -- daily increase in escape speed during combat duration
 NDefines.NNavy.MAX_ESCAPE_SPEED_FROM_COMBAT_DURATION = 3.0 -- max escape speed that will be gained from combat duration
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00 -- Корабли не могут получить ранение на тренировке
@@ -117,27 +118,37 @@ NDefines.NNavy.NAVY_VISIBILITY_BONUS_ON_RETURN_FOR_REPAIR = 0.01 -- Заметн
 
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.0 -- Адмиралы не качаются
 
-NDefines.NNavy.SUPPLY_NEED_FACTOR = 1.5 -- Множитель потребности саплая (Ванила - 4)
+NDefines.NNavy.SUPPLY_NEED_FACTOR = 1.0 -- Множитель потребности саплая (Ванила - 4)
 
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
 
 NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 190 -- Попадание Авиков по линейке (от 250)
 NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 60 -- Попадание Авиков по Авикам (от 250)
-NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.70 -- снижение урона пво от мор авиации
-NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.26 -- cнижение урона от мор авиации при получении повреждений
+
+NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.75 -- снижение урона пво от мор авиации
+NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.25 -- cнижение урона от мор авиации при получении повреждений
+
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 4.5 -- Бафф на навалы от авиков
+
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 8 -- частота атаки авианосного соединения в часах
-NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.0, 2.0, 1.0 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)
-NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_HEAVY_SHIPS = 1.1 -- приоритет атаки торпед по тяжам
-NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.4 -- приоритет атаки торпед по лт флоту
-NDefines.NNavy.GUN_HIT_PROFILES = {110.0, 90.0, 75.0 } -- 1 харднесс, 2- торпеды 3-лайт атака, чем больше значение, тем дольше бой и меньше попаданий
+NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.2, 2.25, 1.2 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)
+
+NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_HEAVY_SHIPS = 1 -- приоритет атаки торпед по тяжам
+NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.25 -- приоритет атаки торпед по лт флоту
+
+NDefines.NNavy.GUN_HIT_PROFILES = { 95.0, 155.0, 110.0 } -- 1 харднесс, 2- торпеды 3-лайт атака, чем больше значение, тем дольше бой и меньше попаданий
+
 NDefines.NNavy.BASE_POSITIONING = 1.0 -- максимальное размещение
 NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR = 0.01 -- увеличивает обнаружение между 2 флотами, сторона с большим обнаружением получает бонус
 NDefines.NNavy.MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION = 0.0 -- уменьшает бонус от обнаружения
-NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.80 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
-NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.98 -- максимальный штраф от размещения
+
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.90 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
+NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 1.00 -- максимальный штраф от размещения
 NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.05 -- штраф, за более большое авиа соединение
+
 NDefines.NNavy.BASE_CARRIER_SORTIE_EFFICIENCY = 0.2
 NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс штраф за большее количество самолетов у противника на авиках
+
 NDefines.NNavy.POSITIONING_PENALTY_FOR_SHIPS_JOINED_COMBAT_AFTER_IT_STARTS = 0.01 -- каждый корабль в бою который получает штраф к размещению
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- максимальный штраф за новые суда
 NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- накопленный штраф за новые суда который будет уменьшаться
@@ -145,15 +156,43 @@ NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.95 -- штраф нан
 NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.5 -- понижение щитка при понижении размещения
 NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35 -- дебафф на пво флота от размещения
 NDefines.NNavy.SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING = 2.0 -- размещение лодок
+
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0
 NDefines.NNavy.NAVAL_MINES_PLANTING_SPEED_MULT = 0.00001
+
 NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2 -- кол-во требуемых кораблей охранения на 1 тяж корабль
+
+NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- Стоимость назначения гордости
+NDefines.NNavy.PRIDE_OF_THE_FLEET_LOST_TEMP_MODIFIER_DURATION = 0			-- Длительность дебаффа от гордости
 
 --урон и криты от процента пробоя 
 
-NDefines.NNavy.NAVY_PIERCING_THRESHOLDS = { 1.00, 0.80, 0.75, 0.65, 0.50, 0.35 }
-NDefines.NNavy.NAVY_PIERCING_THRESHOLD_CRITICAL_VALUES = { 2.00, 1.00, 0.80, 0.70, 0.50, 0.15 }
-NDefines.NNavy.NAVY_PIERCING_THRESHOLD_DAMAGE_VALUES = { 1.00, 1.00, 0.80, 0.70, 0.50, 0.15 }
+NDefines.NNavy.NAVY_PIERCING_THRESHOLDS = {
+	2.00,
+	1.00,
+	0.75,
+	0.60,
+	0.10,
+	0.00
+}
+
+NDefines.NNavy.NAVY_PIERCING_THRESHOLD_CRITICAL_VALUES = {
+	2.00,
+	1.00,
+	0.80,
+	0.65,
+	0.10,
+	0.00
+}
+
+NDefines.NNavy.NAVY_PIERCING_THRESHOLD_DAMAGE_VALUES = {
+	1.00,
+	1.00,
+	0.75,
+	0.65,
+	0.35,
+	0.25
+}
 
 -- Подлодочные дефайны
 
