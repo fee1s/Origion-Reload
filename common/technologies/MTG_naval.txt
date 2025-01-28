@@ -124,12 +124,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
 
 		allow = {
-			date > 1939.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
@@ -161,7 +161,7 @@ technologies = {
 	advanced_ship_hull_light = {
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		enable_equipments = {
@@ -171,7 +171,7 @@ technologies = {
 			light_ship_engine_4
 		}
 
-		research_cost = 2
+		research_cost = 1
 
 		start_year = 1944
 
@@ -203,7 +203,9 @@ technologies = {
 
 	smoke_generator = {
 
-		naval_retreat_speed = 0.2
+		naval_retreat_speed = 0.30
+		navy_screen_defence_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
 
 		research_cost = 0.75
 
@@ -640,12 +642,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
 
 		allow = {
-			date > 1939.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
@@ -684,12 +686,12 @@ technologies = {
 		enable_equipment_modules = {
 			cruiser_ship_engine_4
 		}
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		folder = {
@@ -781,12 +783,12 @@ technologies = {
 		}
 
 
-		research_cost = 0.9
+		research_cost = 0.5
 
 		start_year = 1940
 
 		allow = {
-			date > 1940.05.01
+			date > 1938.05.01
 		}
 
 		folder = {
@@ -906,7 +908,7 @@ technologies = {
 				localization_key = SP_UNLOCK_PROJECT
 			}
 		}
-		research_cost = 1.75
+		research_cost = 1
 
 		start_year = 1922
 
@@ -1048,12 +1050,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
 
 		allow = {
-			date > 1939.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
@@ -1099,12 +1101,12 @@ technologies = {
 				}
 			}	
 		}
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		folder = {
@@ -1155,7 +1157,7 @@ technologies = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 1.25
+		research_cost = 1
 
 		start_year = 1936
 
@@ -1207,7 +1209,7 @@ technologies = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.25
-		research_cost = 1.25
+		research_cost = 1
 
 		folder = {
 			name = mtgnavalfolder
@@ -1252,13 +1254,13 @@ technologies = {
 		}
 
 		allow = {
-			date > 1940.01.01
+			date > 1938.01.01
 		}
 
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.25
-		research_cost = 1.25
+		research_cost = 1
 
 		folder = {
 			name = mtgnavalfolder
@@ -1413,12 +1415,12 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
 
 		allow = {
-			date > 1939.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
@@ -1463,12 +1465,12 @@ early_ship_hull_carrier = {
 				}
 			}
 		}
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		folder = {
@@ -1643,12 +1645,12 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2.0
+		research_cost = 1
 
 		start_year = 1940
 
 		allow = {
-			date > 1939.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
@@ -1689,12 +1691,12 @@ early_ship_hull_carrier = {
 			sp_naval_nuclear_submarine 
 		}
 
-		research_cost = 2.0
+		research_cost = 1
 
 		start_year = 1944
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		folder = {
