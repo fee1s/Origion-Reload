@@ -1077,11 +1077,6 @@
 		completion_reward = {
 			979 = {
 				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
 					type = coastal_bunker
 					province = {
 						all_provinces = yes
@@ -1123,11 +1118,6 @@
 				}
 			}
 			523 = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
 				add_building_construction = {
 					type = coastal_bunker
 					province = {
@@ -1432,7 +1422,7 @@
 	
 	focus = {
 		id = AST_preparation_for_the_crusader
-		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		icon = GFX_focus_AST_crusader
 		prerequisite = { focus = AST_lose_in_africa }
 		prerequisite = { focus = AST_citizen_military_forces }
 		x = -3
