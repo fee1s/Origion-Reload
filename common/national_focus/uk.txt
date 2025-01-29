@@ -1018,7 +1018,7 @@ focus_tree = {
 			has_dlc = "Man the Guns"
 		}
 		available = {
-			date > 1942.01.01
+			date > 1941.06.01
 		}
 		available_if_capitulated = yes
 		completion_reward = {
@@ -1031,16 +1031,17 @@ focus_tree = {
 
 				modules = {
 					fixed_ship_battery_slot = ship_heavy_battery_4
-					fixed_ship_anti_air_slot = ship_anti_air_4
+					fixed_ship_anti_air_slot = ship_anti_air_3
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_radar_slot = ship_radar_4
 					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_bb_3
+					fixed_ship_secondaries_slot = dp_ship_secondaries_3
+					fixed_ship_armor_slot = ship_armor_bb_4
 					front_1_custom_slot = ship_heavy_battery_4
-					mid_1_custom_slot = ship_heavy_battery_4
-					mid_2_custom_slot = ship_heavy_battery_4
-					mid_3_custom_slot = ship_heavy_battery_4
+					mid_1_custom_slot = dp_ship_secondaries_3
+					mid_2_custom_slot = ship_airplane_launcher_3
+					mid_3_custom_slot = ship_airplane_launcher_3
+					mid_4_custom_slot = dp_ship_secondaries_3
 					rear_1_custom_slot = ship_heavy_battery_4
 				}
 			}
