@@ -3346,6 +3346,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
+			date > 1939.02.14
 		}
 		x = 0
 		y = 1
@@ -3354,35 +3355,38 @@ focus_tree = {
 		ai_will_do = {
 			factor = 9
 		}
+		
 		completion_reward = {
+			hidden_effect = { set_technology = { improved_ship_hull_heavy = 1 } }
 			#Equipment Variant
 				create_equipment_variant = {
-					name = "Kaiushnik Class"
-					type = ship_hull_heavy_2
+					name = "Bismarck Class"
+					type = ship_hull_heavy_3
 					parent_version = 0
 					name_group = ROM_CV_HISTORICAL
 					modules = {
-						fixed_ship_battery_slot = ship_heavy_battery_2
+						fixed_ship_battery_slot = ship_heavy_battery_3
 						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = heavy_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_2
-						fixed_ship_armor_slot = ship_armor_bc_2
-						front_1_custom_slot = ship_heavy_battery_2
-						mid_1_custom_slot = ship_heavy_battery_2
-						mid_2_custom_slot = ship_heavy_battery_2
-						rear_1_custom_slot = ship_heavy_battery_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+						fixed_ship_radar_slot = ship_radar_2
+						fixed_ship_engine_slot = heavy_ship_engine_3
+						fixed_ship_secondaries_slot = dp_ship_secondaries_3
+						fixed_ship_armor_slot = ship_armor_bb_3
+						front_1_custom_slot = ship_heavy_battery_3
+						mid_1_custom_slot = ship_heavy_battery_3
+						mid_2_custom_slot = ship_heavy_battery_3
+						mid_3_custom_slot = dp_ship_secondaries_3
+						rear_1_custom_slot = ship_airplane_launcher_2
 					}
 				}
 				#Line Production
 				add_equipment_production = {
 					equipment = {
-						type = ship_hull_heavy_2
+						type = ship_hull_heavy_3
 						creator = "GER"
-						version_name = "Kaiushnik Class"
+						version_name = "Bismarck Class"
 					}
-					name = "Nizzi nubik"
+					name = "Bismarck"
 					requested_factories = 1
 					progress = 0.80
 					amount = 1
@@ -3390,11 +3394,11 @@ focus_tree = {
 				#Line Production
 				add_equipment_production = {
 					equipment = {
-						type = ship_hull_heavy_2
+						type = ship_hull_heavy_3
 						creator = "GER"
-						version_name = "Kaiushnik Class"
+						version_name = "Bismarck Class"
 					}
-					name = "Adolfys"
+					name = "Tirpitz"
 					requested_factories = 1
 					progress = 0.80
 					amount = 1
@@ -3402,9 +3406,9 @@ focus_tree = {
 			else = {
 				add_equipment_production = {
 					equipment = {
-						type = battleship_2
+						type = battleship_3
 						creator = "GER"
-						version_name = "Kaiushnik Class"
+						version_name = "Bismarck Class"
 					}
 					requested_factories = 1
 					progress = 0.80
@@ -3412,9 +3416,9 @@ focus_tree = {
 				}
 				add_equipment_production = {
 					equipment = {
-						type = battleship_2
+						type = battleship_3
 						creator = "GER"
-						version_name = "Kaiushnik Class"
+						version_name = "Bismarck Class"
 					}
 					requested_factories = 1
 					progress = 0.80
