@@ -52,23 +52,6 @@ equipment_modules = {
 		}
 	}
 
-	tank_gas_turbine_engine = {
-		abbreviation = "tur"
-		category = tank_engine_type
-		sfx = sfx_ui_sd_module_engine
-
-		add_stats = {
-			build_cost_ic = 3
-			fuel_consumption = 4
-			reliability = -0.1
-			maximum_speed = 0.5
-		}
-
-		multiply_stats = {
-			maximum_speed = 0.25
-		}
-	}
-
 	###Armor Types
 
 	tank_riveted_armor = {

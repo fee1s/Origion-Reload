@@ -1,11 +1,6 @@
 spriteTypes = {
 
 	### generic equipment archetypes ###
-
-	SpriteType = {
-		name = "GFX_modern_equipment_conversion_medium"
-		texturefile = "gfx/interface/technologies/equipment_conversion_3.dds"
-	}
 	
 	SpriteType = {
 		name = "GFX_psi_corps_swaptech_medium"
@@ -47,12 +42,28 @@ spriteTypes = {
 		textureFile = "gfx//interface//air_doctrine_origion_bg.dds"
 		alwaystransparent = yes		
 	}
-	
+
 	SpriteType = {
-		name = "GFX_ship_hull_supercarrier_medium"
-		texturefile = "gfx/interface/technologies/modern_carrier.dds"
+		name = "GFX_guided_anti_ship_missile_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_air_torpedoe_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_tank_buster_1_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_anti_tank_gun1.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_tank_buster_2_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_anti_tank_gun2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rocket_rails_medium"
+		texturefile = "gfx/interface/technologies/rocket_rails.dds"
+	}
+	
+
 	corneredTileSpriteType = {
 		name = "GFX_fullborder_tiled_origion"
 		texturefile = "gfx//interface//fullborder_tiled.dds"
