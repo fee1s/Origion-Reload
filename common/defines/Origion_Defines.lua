@@ -13,7 +13,7 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 512;
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 512;
 
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.08; -- Урон по прочности, 28.01 - x1.35 от ванилы
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.10; -- Урон по прочности, 28.01 - x1.5 от ванилы
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спецуры
 
