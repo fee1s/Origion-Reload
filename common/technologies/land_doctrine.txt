@@ -18,6 +18,14 @@ technologies = {
 			breakthrough = 0.10
 		}
 		
+		allow = { 
+			if = {
+				limit = { original_tag = SOV }
+				
+				NOT = { original_tag = SOV }
+			}
+		}
+		
 		planning_speed = 0.3
 		army_speed_factor = 0.10
 		enable_tactic = tactic_unexpected_thrust
@@ -735,9 +743,6 @@ technologies = {
 	volkssturm = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		available = {
-			has_completed_focus = {focus = GER_totalen_krieg}
-		}
 		
 		conscription = 0.01
 		minimum_training_level = -0.1
@@ -757,8 +762,11 @@ technologies = {
 			land_doctrine
 			cat_mobile_warfare
 		}
-
 		
+		allow = { 
+			ROOT = { has_completed_focus = GER_totalen_krieg }
+		}
+
 		folder = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 14 }
@@ -895,6 +903,14 @@ technologies = {
 		
 		category_front_line = {
 			soft_attack = 0.1
+		}
+		
+		allow = { 
+			if = {
+				limit = { original_tag = SOV }
+				
+				NOT = { original_tag = SOV }
+			}
 		}
 		
 		enable_tactic = tactic_barrage
@@ -1794,6 +1810,14 @@ technologies = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
+		
+		allow = { 
+			if = {
+				limit = { original_tag = SOV }
+				
+				NOT = { original_tag = SOV }
+			}
+		}
 
 		
 		folder = {
@@ -2641,6 +2665,14 @@ technologies = {
 		categories = {
 			land_doctrine
 			cat_mass_assault
+		}
+		
+		allow = { 
+			if = {
+				limit = { NOT = { original_tag = SOV } }
+				
+				original_tag = SOV
+			}
 		}
 
 		
