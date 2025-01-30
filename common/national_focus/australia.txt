@@ -329,6 +329,12 @@
 				}
 				set_state_flag = AST_expand_lithgow_small_arms_factory_AF
 			}
+			518 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 
@@ -2450,6 +2456,12 @@
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = Cockatoo_doe
+			518 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 	
@@ -2511,6 +2523,12 @@
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = evans_deakin_co
+			518 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 	
@@ -2604,6 +2622,12 @@
 				uses = 3
 				category = submarine_doctrine
 			}
+			285 = {
+				add_resource = {
+					type = steel
+					amount = 3
+				}
+			}
 		}
 	}
 	
@@ -2634,6 +2658,12 @@
 				uses = 1
 				category = dd_tech
 			}
+			285 = {
+				add_resource = {
+					type = steel
+					amount = 3
+				}
+			}
 		}
 	}
 	
@@ -2663,6 +2693,12 @@
 				ahead_reduction = 2
 				uses = 1
 				category = ss_tech
+			}
+			285 = {
+				add_resource = {
+					type = steel
+					amount = 3
+				}
 			}
 		}
 	}
@@ -2700,6 +2736,18 @@
 				cost_reduction = 0.5
 				uses = 3
 				category = naval_doctrine
+			}
+			634 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+			634 = {
+				add_resource = {
+					type = tungsten
+					amount = 16
+				}
 			}
 		}
 	}
@@ -2741,6 +2789,12 @@
 				category = bb_tech
 				category = cv_tech
 			}
+			284 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
 		}
 	}
 	
@@ -2780,6 +2834,12 @@
 				uses = 1
 				category = cl_tech
 			}
+			284 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 
@@ -2804,6 +2864,12 @@
 
 		completion_reward = {
 			add_ideas = AST_naval_auxiliary_patrol
+			522 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+			}
 		}
 	}
 }		

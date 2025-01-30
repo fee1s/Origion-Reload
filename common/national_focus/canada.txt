@@ -523,13 +523,14 @@
 		y = 3
 		relative_position_id = CAN_crown_corporations
 
-		cost = 20
+		cost = 5
 
 		ai_will_do = {
 			factor = 75
 		}
 
 		available = {
+			date > 1939.01.1
 		}
 		
 		bypass = {
@@ -956,7 +957,9 @@
 		}
 
 		available = {
-			threat > 0.05
+			GER = {
+				has_completed_focus = GER_rhineland
+			}
 		}
 		
 		bypass = {
@@ -1080,9 +1083,7 @@
 		}
 
 		available = {
-			OR = {
-				threat > 0.75
-			}
+			date >  1939.09.1
 		}
 		
 		bypass = {
@@ -1134,7 +1135,9 @@
 		}
 
 		available = {
-			threat > 0.2
+			GER = {
+				has_completed_focus = GER_anschluss
+			}
 		}
 		
 		bypass = {
@@ -3926,6 +3929,14 @@
 				uses = 1
 				category = air_doctrine
 			}
+			276 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 
 		completion_reward = {
@@ -3949,6 +3960,14 @@
 				cost_reduction = 1
 				uses = 1
 				category = air_doctrine
+			}
+			276 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3987,6 +4006,14 @@
 				uses = 2
 				category = light_fighter
 			}
+			276 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -4022,6 +4049,14 @@
 
 		completion_reward = {
 			add_ideas = CAN_the_plan
+			682 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -4067,6 +4102,14 @@
 			uses = 1
 			category = plane_modules_tech	
 			}
+			862 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -4104,6 +4147,14 @@
 				cost_reduction = 1
 				uses = 1
 				category = air_doctrine
+			}
+			465 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 
@@ -4158,7 +4209,16 @@
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CAN_fairchild_aircraft_ltd
+			464 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
+		
 	}
 
 	focus = {
@@ -4201,6 +4261,14 @@
 			}
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CAN_handley_page
+			486 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -4239,6 +4307,14 @@
 				uses = 3
 				category = rocketry
 				category = jet_technology
+			}
+			276 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -4308,6 +4384,12 @@
 					instant_build = yes
 				}
 				set_state_flag = CAN_halifax_shipyards_DY
+				276 = {
+					add_resource = {
+						type = steel
+						amount = 4
+					}
+				}
 			}
 		}
 	}
@@ -4347,6 +4429,12 @@
 				uses = 1
 				category = dd_tech
 			}
+			465 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 
@@ -4358,7 +4446,7 @@
 		y = 1
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -4384,6 +4472,12 @@
 				uses = 2
 				category = cl_tech
 			}
+			468 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
 		}
 	}
 
@@ -4395,7 +4489,7 @@
 		y = 1
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -4421,6 +4515,16 @@
 				uses = 3
 				category = bb_tech
 			}
+			470 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
 		}
 	}
 
@@ -4432,7 +4536,7 @@
 		y = 2
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -4474,6 +4578,12 @@
 					}
 				}
 			}
+			473 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
 		}
 	}
 
@@ -4505,7 +4615,13 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CAN_trade_fleet			
+			add_ideas = CAN_trade_fleet
+			465 ={
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}		
 		}
 	}
 
@@ -4519,7 +4635,7 @@
 		y = 3
 		relative_position_id = CAN_halifax_shipyards
 
-		cost = 20
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4544,11 +4660,17 @@
 				limit = {
 					has_state_flag = CAN_united_shipyards_DY
 				}
-				add_extra_state_shared_building_slots = 20
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 20
+					level = 2
 					instant_build = yes
+				}
+			}
+			465 = {
+					add_resource = {
+						type = steel
+						amount = 6
 				}
 			}
 		}
@@ -4564,13 +4686,19 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 20
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 20
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = CAN_united_shipyards_DY
+			}
+			465 = {
+					add_resource = {
+						type = steel
+						amount = 6
+				}
 			}
 		}
 	}

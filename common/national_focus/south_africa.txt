@@ -219,7 +219,6 @@
 		id = SAF_expand_the_cape_corps
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = SAF_reconstitute_the_cape_corps }
-		mutually_exclusive = { focus = SAF_outlaw_strikes }
 		x = 0
 		y = 5
 		relative_position_id = SAF_war_measures_act
@@ -251,7 +250,6 @@
 		id = SAF_outlaw_strikes
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = SAF_work_for_all_poor }
-		mutually_exclusive = { focus = SAF_expand_the_cape_corps }
 		x = 2
 		y = 5
 		relative_position_id = SAF_war_measures_act
@@ -3013,6 +3011,14 @@
 				uses = 1
 				category = air_doctrine
 			}
+			894 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3020,7 +3026,6 @@
 		id = SAF_improve_the_hawker_hartbees
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = SAF_commit_to_the_five_year_plan }
-		mutually_exclusive = { focus = SAF_replace_the_blenheim  }
 		x = -1
 		y = 1
 		relative_position_id = SAF_commit_to_the_five_year_plan
@@ -3054,6 +3059,14 @@
 				technology = fighter2
 				technology = fighter3
 			}
+			894 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3061,7 +3074,6 @@
 		id = SAF_replace_the_blenheim
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = SAF_commit_to_the_five_year_plan }
-		mutually_exclusive = { focus = SAF_improve_the_hawker_hartbees  }
 		x = 1
 		y = 1
 		relative_position_id = SAF_commit_to_the_five_year_plan
@@ -3093,6 +3105,14 @@
 				category = tactical_bomber
 				category = cas_bomber
 				category = naval_bomber
+			}
+			541 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3132,6 +3152,14 @@
 				uses = 1
 				category = cat_battlefield_support
 			}
+			895 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3168,6 +3196,14 @@
 				bonus = 1.0
 				uses = 1
 				category = cas_bomber
+			}
+			893 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3206,6 +3242,14 @@
 				uses = 1
 				category = naval_bomber
 			}
+			894 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -3243,6 +3287,14 @@
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
+			}
+			895 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3304,20 +3356,20 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = SAF_seaward_defence_force_DY
-			}			
-			add_doctrine_cost_reduction = {
-				name = SAF_seaward_defence_force
-				cost_reduction = 0.5
-				uses = 1
-				category = naval_doctrine
 			}
+			719 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}			
 		}
 	}
 
@@ -3325,7 +3377,7 @@
 		id = SAF_protect_the_trade
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = SAF_seaward_defence_force }
-		mutually_exclusive = { focus = SAF_disrupt_the_trade }
+
 		x = -1
 		y = 1
 		relative_position_id = SAF_seaward_defence_force
@@ -3356,6 +3408,12 @@
 				uses = 1
 				category = convoy_defense_tree
 			}
+			681 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 
@@ -3363,7 +3421,6 @@
 		id = SAF_disrupt_the_trade
 		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = SAF_seaward_defence_force }
-		mutually_exclusive = { focus = SAF_protect_the_trade }
 		x = 1
 		y = 1
 		relative_position_id = SAF_seaward_defence_force
@@ -3397,6 +3454,12 @@
 				cost_reduction = 0.5
 				uses = 1
 				category = cat_trade_interdiction
+			}
+			681 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
 			}
 		}
 	}
@@ -3484,6 +3547,12 @@
 					set_state_flag = SAF_expand_the_simons_town_base_NB
 				}
 			}
+			275 =	{
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 
@@ -3521,6 +3590,12 @@
 				ahead_reduction = 2
 				uses = 1
 				category = dd_tech
+			}
+			275 =	{
+				add_resource = {
+					type = steel
+					amount = 4
+				}
 			}
 		}
 	}
@@ -3564,6 +3639,12 @@
 				uses = 1
 				category = ss_tech
 			}
+			275 =	{
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
 		}
 	}
 
@@ -3571,7 +3652,6 @@
 		id = SAF_prepare_overseas_offensive
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = SAF_anti_submarine_tactics }
-		mutually_exclusive = { focus = SAF_strengthen_the_cape_garrison_artillery }
 		x = -1
 		y = 4
 		relative_position_id = SAF_seaward_defence_force
@@ -3609,6 +3689,12 @@
 				category = marine_tech
 				category = tp_tech
 			}
+			893 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
 		}
 	}
 
@@ -3616,7 +3702,6 @@
 		id = SAF_strengthen_the_cape_garrison_artillery
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = SAF_submarine_warfare }
-		mutually_exclusive = { focus = SAF_prepare_overseas_offensive }
 		x = 1
 		y = 4
 		relative_position_id = SAF_seaward_defence_force
@@ -3662,6 +3747,12 @@
 					}
 					level = 1
 					instant_build = yes
+				}
+			}
+			893 = {
+				add_resource = {
+					type = steel
+					amount = 8
 				}
 			}
 		}
