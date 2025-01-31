@@ -1545,7 +1545,7 @@
 		y = 1
 		relative_position_id = AST_civil_construction_corps
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 15
@@ -1683,20 +1683,15 @@
 			if = {
 				limit = { has_idea = AST_great_depression_1 }
 				remove_ideas = AST_great_depression_1
-				add_ideas = AST_all_in
 			}
 			if = {
 				limit = { has_idea = AST_great_depression_2 }
 				remove_ideas = AST_great_depression_2
-				add_ideas = AST_all_in
 				
 			}
 			if = {
 				limit = { has_idea = AST_great_depression_3 }
-				swap_ideas = {
-					remove_idea = AST_great_depression_3
-					add_idea = AST_all_in
-				}
+				remove_ideas = AST_great_depression_3
 			}
 		}
 	}
@@ -2243,10 +2238,10 @@
 		completion_reward = {
 			air_experience = 25
 			521 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2275,10 +2270,10 @@
 		completion_reward = {
 			air_experience = 25
 			872 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2347,10 +2342,10 @@
 			}
 			
 			522 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2380,10 +2375,10 @@
 			air_experience = 50
 
 			519 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2740,13 +2735,13 @@
 			634 = {
 				add_resource = {
 					type = steel
-					amount = 20
+					amount = 12
 				}
 			}
 			634 = {
 				add_resource = {
 					type = tungsten
-					amount = 16
+					amount = 8
 				}
 			}
 		}

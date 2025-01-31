@@ -550,14 +550,23 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { naval_bomber }
 
-		add_stats = {
-			air_agility = -10
-			weight = 6
-			naval_strike_attack = 12
-		}
 		allow_mission_type = {
 			naval_bomber
 			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				naval_bomber
+				port_strike
+			}
+			add_stats = {
+				air_agility = -10
+				weight = 6
+				naval_strike_attack = 12
+			}
+			add_average_stats = {
+				naval_strike_targetting = 4
+			}
 		}
 	}
 
@@ -568,14 +577,23 @@ equipment_modules = {
 		add_equipment_type = { naval_bomber }
 		parent = torpedo_mounting
 
-		add_stats = {
-			air_agility = -10
-			weight = 10
-			naval_strike_attack = 18
-		}
 		allow_mission_type = {
 			naval_bomber
 			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				naval_bomber
+				port_strike
+			}
+			add_stats = {
+				air_agility = -10
+				weight = 10
+				naval_strike_attack = 18
+			}
+			add_average_stats = {
+				naval_strike_targetting = 8
+			}
 		}
 	}
 
@@ -586,14 +604,23 @@ equipment_modules = {
 		add_equipment_type = { naval_bomber }
 		parent = torpedo_mounting_2
 
-		add_stats = {
-			air_agility = -10
-			weight = 15
-			naval_strike_attack = 24
-		}
 		allow_mission_type = {
 			naval_bomber
 			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				naval_bomber
+				port_strike
+			}
+			add_stats = {
+				air_agility = -10
+				weight = 15
+				naval_strike_attack = 24
+			}
+			add_average_stats = {
+				naval_strike_targetting = 12
+			}
 		}
 	}
 
@@ -604,14 +631,23 @@ equipment_modules = {
 		add_equipment_type = { naval_bomber }
 		parent = torpedo_mounting_3
 
-		add_stats = {	
-			air_agility = -10
-			weight = 20
-			naval_strike_attack = 30
-		}
 		allow_mission_type = {
 			naval_bomber
 			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				naval_bomber
+				port_strike
+			}
+			add_stats = {
+				air_agility = -10
+				weight = 20
+				naval_strike_attack = 30
+			}
+			add_average_stats = {
+				naval_strike_targetting = 16
+			}
 		}
 	}
 

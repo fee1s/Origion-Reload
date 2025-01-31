@@ -859,8 +859,8 @@ ideas = {
 			picture = SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility
 			
 			modifier = {
-				industrial_capacity_factory = 0.1
-				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.075
+				production_factory_efficiency_gain_factor = 0.075
 			}
 		}
 		
@@ -887,10 +887,9 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-			    consumer_goods_expected_value = -0.05
-				local_resources_factor = 0.15
+			    consumer_goods_expected_value = -0.025
+				local_resources_factor = 0.075
 				army_core_defence_factor = 0.05
-				production_lack_of_resource_penalty_factor = -0.15
 			}
 		}
 		
@@ -903,15 +902,13 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-			    stability_weekly = -0.005
-				war_support_weekly = -0.005
-			    consumer_goods_expected_value = -0.05
-				local_resources_factor = 0.3
+			    stability_weekly = -0.003
+				war_support_weekly = -0.003
+			    consumer_goods_expected_value = -0.035
+				local_resources_factor = 0.1
 				army_core_defence_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.3
-				supply_factor = 0.25
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
+				supply_factor = 0.1
+				industrial_capacity_factory = 0.075
 			}
 		}
 		
