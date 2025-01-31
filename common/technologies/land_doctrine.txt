@@ -792,8 +792,8 @@ technologies = {
 	volkssturm = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		available = {
-			has_completed_focus = {focus = GER_totalen_krieg}
+		allow = {
+			has_completed_focus = GER_totalen_krieg
 		}
 		
 		conscription = 0.01
@@ -2880,6 +2880,8 @@ technologies = {
 			leads_to_tech = deep_operations
 			research_cost_coeff = 1
 		}
+		
+		allow = { has_completed_focus = SOV_desperate_measures }
 
 		doctrine = yes	
 		research_cost = 4.5
@@ -2959,7 +2961,8 @@ technologies = {
 			land_doctrine
 			cat_mass_assault
 		}
-
+	
+		allow = { has_completed_focus = SOV_the_sacred_war }
 		
 		folder = {
 			name = land_doctrine_folder
@@ -3002,7 +3005,9 @@ technologies = {
 			leads_to_tech = vast_offensives
 			research_cost_coeff = 1
 		}
-
+		
+		allow = { date > 1942.2.1 }
+		
 		doctrine = yes	
 		research_cost = 4.5
 		
@@ -3054,7 +3059,8 @@ technologies = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
-
+		
+		allow = { has_completed_focus = SOV_lessons_of_war } 
 		
 		enable_tactic = tactic_tactical_withdrawal
 		
@@ -3125,6 +3131,7 @@ technologies = {
 			cat_mass_assault
 		}
 
+		allow = { date > 1942.9.1 }
 		
 		folder = {
 			name = land_doctrine_folder
@@ -3175,6 +3182,8 @@ technologies = {
 			max_organisation = 3
 			maximum_speed = 0.1
 		}	
+		
+		allow = { date > 1942.12.1 }
 		
 		enable_tactic = tactic_backhand_blow
 		
@@ -3229,6 +3238,8 @@ technologies = {
 			soft_attack = 0.10
 			hard_attack = 0.05
 		}
+		
+		allow = { has_completed_focus = SOV_the_glory_of_the_red_army }
 		
 		max_planning = 0.05
 		

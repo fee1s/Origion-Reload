@@ -314,14 +314,30 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { armor_officer war_hero }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 4
-			legacy_id = 0
+		field_marshal={
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = giovanni_messe
+			ledger = army
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
+			}
 		}
 	}
 
