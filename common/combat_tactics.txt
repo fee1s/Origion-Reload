@@ -415,11 +415,7 @@ tactic_blitz = {
 		is_attacker = yes
 		hardness > 0.5
 		phase = no
-		OR = {
-			skill > 2
 			has_trait = panzer_leader
-			skill_advantage > 1
-		}
 		OWNER = { NOT = { has_tech = masterful_blitz } } #Soviet improved version of blitz will replace this
 	}
 	
@@ -437,7 +433,7 @@ tactic_blitz = {
 	}
 	
 	picture = blitz
-	countered_by = tactic_elastic_defense
+	countered_by = tactic_tactical_withdrawal
 	
 	attacker_movement_speed = 0.5
 	attacker = 0.15
@@ -462,6 +458,8 @@ tactic_elastic_defense = { #counters blitz
 		factor = 4
 	}
 	picture = elastic_defence
+	
+	countered_by = tactic_blitz
 	
 	attacker_movement_speed = -0.25
 	attacker = -0.15
@@ -725,6 +723,7 @@ tactic_guerrilla_tactics = { #People's army defender tactic. also for German vol
 		factor = 4
 	}
 	picture = tactic_guerrilla_tactics
+	countered_by = tactic_breakthrough
 	
 	combat_width = -0.5
 	attacker = -0.3
@@ -735,9 +734,9 @@ tactic_human_wave_tactics = { #People's army attacker tactic
 	is_attacker = yes
 	trigger = {
 		is_attacker = yes
+		hardness > 0.5
 		phase = no
-		frontage_full = yes
-		has_reserves = yes
+		has_trait = panzer_leader
 	}
 	
 	active = no
@@ -747,9 +746,11 @@ tactic_human_wave_tactics = { #People's army attacker tactic
 	}
 	picture = tactic_human_wave_tactics
 	
-	combat_width = 0.5
-	attacker = 0.1 
-	defender = 0.1
+	countered_by = tactic_delay
+	
+	attacker_movement_speed = 0.3
+	attacker = 0.10
+	defender = -0.10
 }
 
 tactic_banzai_charge = { #Special Japan attacker tactic
@@ -804,7 +805,10 @@ tactic_planned_attack = { #GBP -> Armor attacker tactic
 	}
 	picture = tactic_planned_attack
 	
+	countered_by = tactic_tactical_withdrawal
+	
 	attacker = 0.15 
+	defender = -0.10
 }
 
 tactic_relentless_assault = { #Deep battle attacker tactic
@@ -909,10 +913,8 @@ tactic_masterful_blitz = { #Improved version of Blitz for Soviets
 	}
 	
 	picture = SOV_tank_desant_blitz
-	countered_by = tactic_elastic_defense
 	
 	attacker_movement_speed = 0.5
-	combat_width = 0.1
-	attacker = 0.2
+	attacker = 0.25
 	defender = -0.2
 }

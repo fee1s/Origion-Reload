@@ -182,9 +182,13 @@ technologies = {
 
 	improved_light_battery = {
 
-		research_cost = 1
+		research_cost = 0.5
 
-		start_year = 1939
+		start_year = 1938
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		path = {
 			leads_to_tech = improved_light_shell
@@ -235,6 +239,10 @@ technologies = {
 		research_cost = 0.5
 
 		start_year = 1942
+
+		allow = {
+			date > 1939.01.01
+		}
 
 		path = {
 			leads_to_tech = advanced_light_battery
@@ -294,6 +302,10 @@ technologies = {
 		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		enable_equipment_modules = {
 			ship_light_battery_4
@@ -425,6 +437,10 @@ technologies = {
 
 		start_year = 1939
 
+		allow = {
+			date > 1938.01.01
+		}
+
 		path = {
 			leads_to_tech = improved_medium_shell
 			research_cost_coeff = 1
@@ -468,6 +484,10 @@ technologies = {
 		research_cost = 0.5
 
 		start_year = 1942
+
+		allow = {
+			date > 1939.01.01
+		}
 
 		path = {
 			leads_to_tech = advanced_medium_battery
@@ -516,6 +536,10 @@ technologies = {
 		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		enable_equipment_modules = {
 			ship_medium_battery_4
@@ -602,6 +626,10 @@ technologies = {
 
 		start_year = 1939
 
+		allow = {
+			date > 1938.01.01
+		}
+
 		path = {
 			leads_to_tech = improved_heavy_shell
 			research_cost_coeff = 1
@@ -649,6 +677,10 @@ technologies = {
 		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		enable_equipment_modules = {
 			ship_heavy_battery_4
@@ -734,6 +766,10 @@ technologies = {
 		research_cost = 0.5
 
 		start_year = 1942
+
+		allow = {
+			date > 1939.01.01
+		}
 
 		path = {
 			leads_to_tech = advanced_heavy_battery
@@ -825,7 +861,11 @@ technologies = {
 
 		research_cost = 1
 
-		start_year = 1939
+		start_year = 1940
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		enable_equipment_modules = {
 			dp_light_battery_3
@@ -876,6 +916,10 @@ technologies = {
 
 		start_year = 1944
 
+		allow = {
+			date > 1941.01.01
+		}
+
 		enable_equipment_modules = {
 			dp_light_battery_4
 			dp_ship_secondaries_4
@@ -916,9 +960,13 @@ technologies = {
 
 	basic_dp_medium_battery = {
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		enable_equipment_modules = {
 			dp_ship_medium_1
@@ -1038,16 +1086,16 @@ technologies = {
 		}
 
 		destroyer = {
-			torpedo_attack = 0.2
+			torpedo_attack = 0.05
 		}
 		submarine = {
-			torpedo_attack = 0.2
+			torpedo_attack = 0.05
 		}
 		light_cruiser = {
-			torpedo_attack = 0.2
+			torpedo_attack = 0.05
 		}
 		heavy_cruiser = {
-			torpedo_attack = 0.2
+			torpedo_attack = 0.05
 		}
 
 
@@ -1093,24 +1141,28 @@ technologies = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1
 
 		start_year = 1942
 		destroyer = {
-			naval_torpedo_hit_chance_factor = 0.1
+			torpedo_attack = 0.05
 		}
 		submarine = {
-			naval_torpedo_hit_chance_factor = 0.1
+			torpedo_attack = 0.05
 		}
 		light_cruiser = {
-			naval_torpedo_hit_chance_factor = 0.1
+			torpedo_attack = 0.05
 		}
 		heavy_cruiser = {
-			naval_torpedo_hit_chance_factor = 0.1
+			torpedo_attack = 0.05
 		}
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { x = 2 y = 16 }
+		}
+
+		allow = {
+			date > 1940.01.01
 		}
 
 		ai_will_do = {
@@ -1145,12 +1197,16 @@ technologies = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 2.5
+		research_cost = 1
 
 		start_year = 1940
 
 
 		naval_torpedo_reveal_chance_factor = -0.25
+
+		allow = {
+			date > 1938.01.01
+		}
 
 
 		folder = {
@@ -1225,7 +1281,7 @@ technologies = {
 	}
 	advanced_ship_torpedo_launcher = {
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
 
@@ -1242,7 +1298,9 @@ technologies = {
 			ship_torpedo_3
 		}
 
-
+		allow = {
+			date > 1939.01.01
+		}
 
 		folder = {
 			name = mtgnavalsupportfolder
@@ -1268,7 +1326,7 @@ technologies = {
 	}
 	modern_ship_torpedo_launcher = {
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
 
@@ -1280,6 +1338,9 @@ technologies = {
 			custom_effect_tooltip = torpedo_advice_tt
 		}
 
+		allow = {
+			date > 1941.01.01
+		}
 
 		folder = {
 			name = mtgnavalsupportfolder
@@ -1577,7 +1638,6 @@ technologies = {
 		}
 		destroyer = {
 			lg_attack = 0.05
-			hg_attack = 0.05
 		}
 		xp_research_type = navy
 		xp_boost_cost = 50
@@ -1606,485 +1666,6 @@ technologies = {
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 			mio_cat_tech_all_destroyer_and_modules
-		}
-	}
-
-
-#   # ### #  # ###  ##
-## ##  #  ## # #   #
-# # #  #  # ## ##   #
-#   #  #  #  # #     #
-#   # ### #  # ### ##
-
-	basic_naval_mines = {
-
-		research_cost = 2
-
-		start_year = 1922
-
-		path = {
-			leads_to_tech = improved_naval_mines
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = submarine_mine_laying
-			research_cost_coeff = 1
-		}
-
-		enable_equipment_modules = {
-			ship_mine_layer_1
-		}
-
-		enable_equipment_modules = {
-			ship_mine_sweeper_1
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 1 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 2
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-			mio_cat_tech_all_screen_ship_and_modules
-			mio_cat_tech_all_cruiser_and_modules
-			mio_cat_tech_all_destroyer_and_modules
-		}
-	}
-
-	submarine_mine_laying = {
-
-		research_cost = 2
-
-		start_year = 1922
-
-		path = {
-			leads_to_tech = improved_submarine_mine_laying
-			research_cost_coeff = 1
-		}
-
-		enable_equipment_modules = {
-			ship_mine_layer_sub
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 4 y = 1 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-			ship_modules_tech
-			mio_cat_tech_all_submarine_and_modules
-		}
-	}
-
-	improved_submarine_mine_laying = {
-
-		research_cost = 2
-
-		start_year = 1940
-
-		submarine = {
-			mines_planting = 0.2
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 4 y = 13 }
-		}
-
-		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-			ship_modules_tech
-			mio_cat_tech_all_submarine_and_modules
-		}
-	}
-
-	improved_naval_mines = {
-
-		research_cost = 2
-
-		start_year = 1936
-
-		path = {
-			leads_to_tech = advanced_naval_mines
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = degaussing
-			research_cost_coeff = 1
-		}
-
-
-
-		naval_mines_damage_factor = 0.2 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 6 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 2
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-			mio_cat_tech_all_screen_ship_and_modules
-			mio_cat_tech_all_cruiser_and_modules
-			mio_cat_tech_all_destroyer_and_modules
-		}
-	}
-
-	degaussing = {
-
-		research_cost = 1
-
-		start_year = 1938
-
-		naval_mines_effect_reduction = 0.5
-
-
-		destroyer = {
-			sub_detection = 0.1
-			}
-		light_cruiser = {
-			sub_detection = 0.1
-			}
-		heavy_cruiser = {
-			sub_detection = 0.1
-			}
-			
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 10 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 5
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minesweeping
-			naval_equipment
-			mio_cat_tech_all_capital_ship_and_modules
-			mio_cat_tech_all_screen_ship_and_modules
-			mio_cat_tech_all_submarine_and_modules
-			mio_cat_tech_all_carrier_and_modules
-			mio_cat_tech_all_cruiser_and_modules
-			mio_cat_tech_all_destroyer_and_modules
-		}
-	}
-
-	advanced_naval_mines = {
-
-		research_cost = 2
-
-		start_year = 1942
-
-		path = {
-			leads_to_tech = modern_naval_mines
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = airdrop_mines
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = airdrop_mines_bba
-			research_cost_coeff = 1
-		}
-
-		naval_mines_damage_factor = 0.2 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 15 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = USA
-					tag = ENG
-				}
-				factor = 5
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-			mio_cat_tech_all_screen_ship_and_modules
-			mio_cat_tech_all_cruiser_and_modules
-			mio_cat_tech_all_destroyer_and_modules
-		}
-	}
-
-	airdrop_mines = {
-		allow_branch = {
-			NOT = { has_dlc = "By Blood Alone" }
-		}
-
-		research_cost = 2
-
-		start_year = 1942
-
-		category_nav_bomber = {
-			mines_planting = 0.05
-		}
-		category_tac_bomber = {
-			mines_planting = 0.08
-		}
-		category_strat_bomber = {
-			mines_planting = 0.13
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 15 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-				}
-				factor = 7
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-		}
-	}
-
-	airdrop_mines_bba = {
-		allow_branch = {
-			has_dlc = "By Blood Alone"
-		}
-
-		research_cost = 1
-
-		start_year = 1942
-
-		enable_equipment_modules = {
-			airdropped_mines
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 15 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-				}
-				factor = 7
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-		}
-	}
-
-	modern_naval_mines = {
-
-		research_cost = 2
-
-		start_year = 1945
-
-		path = {
-			leads_to_tech = airsweep_mines
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = airsweep_mines_bba
-			research_cost_coeff = 1
-		}
-
-		naval_mines_damage_factor = 0.2 # more boom for the boom box
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 0 y = 19 }
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-		}
-
-		categories = {
-			naval_mines
-			naval_minelaying
-			naval_equipment
-			mio_cat_tech_all_screen_ship_and_modules
-			mio_cat_tech_all_cruiser_and_modules
-			mio_cat_tech_all_destroyer_and_modules
-		}
-	}
-
-	airsweep_mines = {
-		allow_branch = {
-			NOT = { has_dlc = "By Blood Alone" }
-		}
-
-		research_cost = 2
-
-		start_year = 1944
-
-		category_nav_bomber = {
-			mines_sweeping = 0.1
-		}
-
-		category_tac_bomber = {
-			mines_sweeping = 0.15
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 19 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		categories = {
-			naval_mines
-			naval_minesweeping
-			naval_equipment
-		}
-	}
-
-	airsweep_mines_bba = {
-		allow_branch = {
-			has_dlc = "By Blood Alone"
-		}
-
-		research_cost = 1
-
-		start_year = 1944
-
-		enable_equipment_modules = {
-			demining_coil
-		}
-
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { x = 2 y = 19 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		categories = {
-			naval_mines
-			naval_minesweeping
-			naval_equipment
 		}
 	}
 

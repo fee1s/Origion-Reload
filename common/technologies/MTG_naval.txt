@@ -124,9 +124,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -156,6 +160,10 @@ technologies = {
 
 	advanced_ship_hull_light = {
 
+		allow = {
+			date > 1941.01.01
+		}
+
 		enable_equipments = {
 			ship_hull_light_4
 		}
@@ -163,7 +171,7 @@ technologies = {
 			light_ship_engine_4
 		}
 
-		research_cost = 2
+		research_cost = 1
 
 		start_year = 1944
 
@@ -195,7 +203,9 @@ technologies = {
 
 	smoke_generator = {
 
-		naval_retreat_speed = 0.2
+		naval_retreat_speed = 0.30
+		navy_screen_defence_factor = 0.05
+		navy_capital_ship_defence_factor = 0.05
 
 		research_cost = 0.75
 
@@ -587,7 +597,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		research_cost = 1.5
 
 		start_year = 1936
@@ -632,13 +641,14 @@ technologies = {
 			leads_to_tech = advanced_ship_hull_cruiser
 			research_cost_coeff = 1
 		}
-		sub_technologies = {
-			torpedo_cruiser_mtg 
-		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -676,9 +686,13 @@ technologies = {
 		enable_equipment_modules = {
 			cruiser_ship_engine_4
 		}
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -717,6 +731,9 @@ technologies = {
 			custom_effect_tooltip = airplane_launcher_advice_tt
 		}
 
+		path = {
+			leads_to_tech = modern_airplane_launcher
+		}
 
 		research_cost = 0.75
 
@@ -725,6 +742,58 @@ technologies = {
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = 0 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				has_navy_size = { size < 20 }
+				factor = 0.1
+			}
+			modifier = {
+				factor = 3.5
+				OR = {
+					tag = GER
+					tag = JAP
+					tag = USA
+				}
+			}
+		}
+
+		categories = {
+			naval_equipment
+			cl_tech
+			ca_tech
+			ship_modules_tech
+			mio_cat_tech_all_capital_ship_and_modules
+			mio_cat_tech_all_screen_ship_and_modules
+			mio_cat_tech_all_cruiser_and_modules
+		}
+	}
+
+	modern_airplane_launcher = {
+
+
+		enable_equipment_modules = {
+			ship_airplane_launcher_3
+		}
+		on_research_complete = {
+			custom_effect_tooltip = airplane_launcher_advice_tt
+		}
+
+
+		research_cost = 0.5
+
+		start_year = 1940
+
+		allow = {
+			date > 1938.05.01
+		}
+
+		folder = {
+			name = mtgnavalfolder
+			position = {  x = 0 y = 8 }
 		}
 
 		ai_will_do = {
@@ -839,7 +908,7 @@ technologies = {
 				localization_key = SP_UNLOCK_PROJECT
 			}
 		}
-		research_cost = 1.75
+		research_cost = 1
 
 		start_year = 1922
 
@@ -895,6 +964,10 @@ technologies = {
 			research_cost_coeff = 1
 			ignore_for_layout = yes
 		}
+
+		sub_technologies = {
+			ship_hull_super_heavy
+		}
 		
 		research_cost = 1.5
 
@@ -903,9 +976,6 @@ technologies = {
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = 0 y = 8 }
-		}
-		sub_technologies = {
-			ship_hull_super_heavy
 		}
 
 		ai_will_do = {
@@ -980,9 +1050,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -1027,9 +1101,13 @@ technologies = {
 				}
 			}	
 		}
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -1079,7 +1157,7 @@ technologies = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
-		research_cost = 1.25
+		research_cost = 1
 
 		start_year = 1936
 
@@ -1123,11 +1201,15 @@ technologies = {
 			custom_effect_tooltip = heavy_armor_advice_tt
 		}
 
+		path = {
+			leads_to_tech = modern_heavy_armor_scheme
+			research_cost_coeff = 1
+		}
 
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.25
-		research_cost = 1.25
+		research_cost = 1
 
 		folder = {
 			name = mtgnavalfolder
@@ -1146,6 +1228,57 @@ technologies = {
 			}
 			modifier = {
 				has_tech = improved_ship_hull_heavy
+				factor = 2
+			}
+		}
+
+		categories = {
+			naval_armor
+			naval_equipment
+			bb_tech
+			bc_tech
+			ship_modules_tech
+			mio_cat_tech_all_capital_ship_and_modules
+		}
+	}
+
+	modern_heavy_armor_scheme = {
+
+		enable_equipment_modules = {
+			ship_armor_bb_4
+			ship_armor_bc_4
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = heavy_armor_advice_tt
+		}
+
+		allow = {
+			date > 1938.01.01
+		}
+
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.25
+		research_cost = 1
+
+		folder = {
+			name = mtgnavalfolder
+			position = {  x = 0 y = 20 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 4
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+			}
+			modifier = {
+				has_tech = modern_ship_hull_heavy
 				factor = 2
 			}
 		}
@@ -1282,9 +1415,13 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -1328,9 +1465,13 @@ early_ship_hull_carrier = {
 				}
 			}
 		}
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -1451,6 +1592,10 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
+		sub_technologies = {
+			cruiser_submarines
+		}
+
 		research_cost = 1.5
 
 		start_year = 1936
@@ -1500,13 +1645,13 @@ early_ship_hull_carrier = {
 			research_cost_coeff = 1
 		}
 
-		sub_technologies = {
-			cruiser_submarines
-		}
-
-		research_cost = 2.0
+		research_cost = 1
 
 		start_year = 1940
+
+		allow = {
+			date > 1938.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
@@ -1546,9 +1691,13 @@ early_ship_hull_carrier = {
 			sp_naval_nuclear_submarine 
 		}
 
-		research_cost = 2.0
+		research_cost = 1
 
 		start_year = 1944
+
+		allow = {
+			date > 1941.01.01
+		}
 
 		folder = {
 			name = mtgnavalfolder
