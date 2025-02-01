@@ -237,16 +237,13 @@ focus_tree = {
 		prerequisite = { focus = USA_wpa }
         search_filters = {FOCUS_FILTER_RESEARCH}
         completion_reward = {
-			add_ideas = usa_rubber_reserve_company_idea
-			
-            modify_building_resources = {
-               building = synthetic_refinery
-               resource = rubber
-               amount = 3
-            }
+			swap_ideas = {
+				add_idea = usa_rubber_reserve_company_idea_second
+				remove_idea = usa_rubber_reserve_company_idea_first
+			}
 			
             add_tech_bonus = {
-                name = JAP_coal_liquification
+                name = USA_rubber_reserve_company
                 bonus = 1.0
                 uses = 4
                 category = synth_resources
@@ -1130,9 +1127,14 @@ focus_tree = {
 		}
 		
 		completion_reward = {	
-			GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
-					remove_dynamic_modifier = { modifier = GER_atlantikwall_dynamic_modifier }
-				}
+			#GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
+			#		remove_dynamic_modifier = { modifier = GER_atlantikwall_dynamic_modifier }
+			#	}
+			#}
+			
+			swap_ideas = {
+				add_idea = usa_europe_first
+				remove_idea = usa_asia_first
 			}
 		}
 	}

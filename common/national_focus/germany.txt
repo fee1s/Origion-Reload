@@ -58,25 +58,6 @@ focus_tree = {
 		id = GER_atlantikwall
 		icon = GFX_goal_generic_defence
 		prerequisite = {focus = GER_ussr_war_goal}
-		available = {
-			OR = {
-				has_full_control_of_state = 19
-				has_full_control_of_state = 23
-				has_full_control_of_state = 30
-				has_full_control_of_state = 14
-				has_full_control_of_state = 15
-				has_full_control_of_state = 29
-				has_full_control_of_state = 6
-				has_full_control_of_state = 7
-				has_full_control_of_state = 36
-				has_full_control_of_state = 99
-				has_full_control_of_state = 110
-				has_full_control_of_state = 142
-				has_full_control_of_state = 143
-				has_full_control_of_state = 144
-				has_full_control_of_state = 785
-			}
-		}
 		cancel_if_invalid = yes
 		x = 1
 		y = 1
@@ -87,11 +68,12 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = GER_atlantikwall_idea
-			GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
-					add_dynamic_modifier = { modifier = GER_atlantikwall_dynamic_modifier }
-				}
-			}
+			USA = { add_ideas = usa_asia_first }
+			
+			#GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
+			#		add_dynamic_modifier = { modifier = GER_atlantikwall_dynamic_modifier }
+			#	}
+			#}
 		}
 	}
 
@@ -1321,14 +1303,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 1.0
-				uses = 1
-				category = light_fighter			
-			}
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 1
-				category = cat_air_engine			
+				uses = 2
+				technology = improved_small_airframe	
+				technology = engines_3					
 			}
 			mio:GER_messerschmitt_organization = {
 				add_mio_funds = 2000

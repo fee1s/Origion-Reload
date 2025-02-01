@@ -194,21 +194,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-			slot = army_chief
-			idea_token = pietro_badoglio
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = {
-				army_chief_morale_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 1.000
-			}
-		}
-
 		field_marshal = {
 			traits = { old_guard inflexible_strategist politically_connected defensive_doctrine organizer }
 			skill = 1
@@ -236,7 +221,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				army_chief_defensive_1
+				army_chief_defensive_2
 			}
 			cost = 50
 			ai_will_do = {
@@ -349,21 +334,6 @@ characters = {
 				large = GFX_portrait_ITA_ugo_cavallero
 			}
 		}
-
-		advisor = {
-			slot = army_chief
-			idea_token = ugo_cavallero
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = {
-				army_chief_organizational_1 # Was army_chief_maneuver_2 (replaced by Alberto Pariani)
-			}
-			cost = 50
-			ai_will_do = {
-				base = 1.000
-			}
-		}
 		
 		corps_commander = {
 			traits = { old_guard career_officer trait_cautious organisational_leader }
@@ -393,6 +363,21 @@ characters = {
 			planning_skill = 4
 			logistics_skill = 3
 			legacy_id = 0
+		}
+		
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = sebastiano_visconti_prasca
+			ledger = army
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
 		}
 	}
 

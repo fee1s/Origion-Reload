@@ -77,6 +77,40 @@ ideas = {
 			}
 		}
 		
+		usa_asia_first = {
+			picture = ETH_conservative_high_command
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
+			}
+			
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.25
+				defense_bonus_against = -0.25
+			}
+		}
+		
+		usa_europe_first = {
+			picture = ETH_conservative_high_command
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+		
 		usa_new_law_is_in_development = {
 			picture = generic_constitutional_guarantees
 			
@@ -97,14 +131,25 @@ ideas = {
 			}
 		}
 		
-		usa_rubber_reserve_company_idea = {
+		usa_rubber_reserve_company_idea_first = {
 			allowed = { always = no }
 			removal_cost = -1
 			
 			picture = ARG_establish_the_free_association
 			
 			modifier = {
-				production_speed_synthetic_refinery_factor = 0.5
+				production_speed_synthetic_refinery_factor = -0.5
+			}
+		}
+		
+		usa_rubber_reserve_company_idea_second = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = ARG_establish_the_free_association
+			
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.25
 			}
 		}
 		

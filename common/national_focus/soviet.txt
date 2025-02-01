@@ -1558,18 +1558,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 100
+			air_experience = 250	
+			
 			add_tech_bonus = {
-			name = bomber_bonus
-			bonus = 1.0
-			uses = 1
-			category = light_fighter
-			}	
-			add_tech_bonus = {
-			name = bomber_bonus
-			bonus = 1.0
-			uses = 1
-			category = cat_air_engine	
+				name = SOV_transpolar_flights
+				bonus = 1.0
+				uses = 2
+				technology = improved_small_airframe	
+				technology = engines_3					
 			}		
 		}
 	}
@@ -5679,8 +5675,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_army_attack_factor = 0.1 }
-			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.1 }
+			add_to_variable = { SOV_the_red_army_army_attack_factor = 0.05 }
+			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.05 }
 			add_to_variable = { SOV_the_red_army_army_breakthrough_factor = 0.1 }
 			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
 			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
