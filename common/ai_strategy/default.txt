@@ -1423,20 +1423,8 @@ put_garrisons_on_high_prio = {
 
 default_spyplanes_production = {
 	enable = {
-		OR = {
-			has_tech = scout_plane1
-			has_tech = photo_reconnaisance
-		}
+		has_tech = scout_plane1
 		is_major = yes
-		#OR = {
-		#	has_equipment = {
-		#		scout_plane_equipment > 50
-		#	}
-		#	has_deployed_air_force_size = {
-		#		size > 50
-		#		type = scout_plane
-		#	}
-		#}
 	}
 
 	abort_when_not_enabled = yes
@@ -1462,10 +1450,7 @@ default_spyplanes_production = {
 
 minors_dont_spy = {
 	enable = {
-		OR = {
-			has_tech = scout_plane1
-			has_tech = photo_reconnaisance
-		}
+		has_tech = scout_plane1
 		is_major = no
 	}
 
