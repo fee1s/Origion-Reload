@@ -114,17 +114,18 @@ characters={
 			}
 		}
 		advisor={
-			slot = army_chief
+			slot = high_command
 			idea_token = alan_brooke
+			ledger = army
 			allowed = {
 				original_tag = ENG
 			}
 			traits = {
-				army_chief_maneuver_3
+				army_CombinedArms_2
 			}
-			cost = 200
+			cost = 100
 			ai_will_do = {
-				factor = 0.50
+				factor = 8.000
 			}
 		}
 		
@@ -640,21 +641,6 @@ characters={
 			}
 			army={
 				large=GFX_portrait_ENG_archibald_wavell
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = archibald_wavell
-			ledger = army
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				army_regrouping_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 		

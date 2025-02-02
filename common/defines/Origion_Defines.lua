@@ -13,7 +13,7 @@ NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 512;
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 512;
 
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.10; -- Урон по прочности, 28.01 - x1.5 от ванилы
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.07; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки)
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спецуры
 
@@ -36,7 +36,7 @@ NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
-NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.04 -- Общий множитель скорости дивизий, ванила это 0.05
+NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель скорости дивизий, ванила это 0.05
 
 -- Воздух
 
@@ -57,7 +57,7 @@ NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5 -- Кол-в
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.035 -- шанс попадания зсу-атаки по касам
 
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Моментальная развертка авиа-крыльев
-NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.08 -- Скорость перелета авиа-крыльев между филдами (увеличено, ванила - 0.02)
+NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 5.0 -- Скорость перелета авиа-крыльев между филдами (увеличено, ванила - 0.02)
 
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0 
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR	= 0

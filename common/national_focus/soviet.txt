@@ -285,10 +285,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_1_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_1 }
-			}
+			date > 1936.12.1
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -312,9 +309,6 @@ focus_tree = {
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SOV_lazar_kaganovich
 		}
 	}
 
@@ -395,12 +389,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			SOV_third_five_year_plan_available = yes
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_2_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_2 }
-			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+			date > 1937.2.1
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -459,12 +448,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
 		available = {
-			SOV_third_five_year_plan_available = yes
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_3_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_3 }
-			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+			date > 1937.6.1
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -527,12 +511,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			SOV_third_five_year_plan_available = yes
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_4_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_4 }
-			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
+			date > 1938.1.1
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -750,20 +729,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
 		cost = 5
-
-		available = {
-			any_owned_state = {
-				has_resources_amount = {
-					resource = steel
-					amount > 0
-				}
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -850,15 +815,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_steel_casting_industry
 		cost = 5
-
-		available = {
-			has_tech = rubber_processing
-			has_full_control_of_state = 219 #MOSCOW
-			OR = {
-				has_full_control_of_state = 260 #VORONEZH
-				has_full_control_of_state = 223 #TULA
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -868,51 +824,11 @@ focus_tree = {
         	   resource = rubber
         	   amount = 3
         	}
-			# ADD SYNTHETICS IN HISTORICAL STATES (VORONEZH AND TULA)
-			if = {
-				limit = {
-					has_full_control_of_state = 260 #VORONEZH
-				}
-				260 = { #VORONEZH
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 1
-						instant_build = yes
-					}
-				}
-				if = {
-					limit = {
-						has_full_control_of_state = 254 #RYAZAN
-						has_full_control_of_state = 258 #LIPETSK
-					}
-					# Moscow - Voronezh
-					build_railway = {
-						path = { 6380 6414 9348 9282 11268 9330 3356 6279 6230 6398 6341 413 3527 }
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 223 #TULA
-				}
-				223 = { #TULA
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 1
-						instant_build = yes
-					}
-				}
-				# Moscow - Tula
-				build_railway = {
-					path = { 6380 6414 9348 6290 6396 6262 }
-				}
-			}
+			
 			add_tech_bonus = {
 				name = SOV_synthetic_rubber
-				bonus = 0.75
-				uses = 2
+				bonus = 1
+				uses = 4
 				category = cat_synth_rubber
 			}
 		}
@@ -937,59 +853,6 @@ focus_tree = {
 			set_variable = { SOV_fyp_fuel_gain_factor_from_states = 0.05 }
 			set_variable = { SOV_fyp_production_oil_factor = 0.05 }
 			custom_effect_tooltip = SOV_oil_production_ns_tt
-			
-			set_temp_variable = { SOV_silos_from_focus = 0 }
-			every_owned_state = {
-				limit ={
-					is_fully_controlled_by = ROOT
-					has_resources_amount = {
-						resource = oil
-						amount > 0
-					}
-					infrastructure < 3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes						
-				}
-				hidden_effect = {
-					if = {
-						limit = {
-							check_variable = { SOV_silos_from_focus = 2 compare = less_than_or_equals }
-						}				
-						add_building_construction = {
-							type = fuel_silo
-							level = 1
-							instant_build = yes						
-						}
-						add_to_temp_variable = { SOV_silos_from_focus = 1 }
-					}
-				}
-				custom_effect_tooltip = SOV_oil_production_silo_tt
-			}
-			#Build Railways in Caucasus
-			if = {
-				limit = {
-					has_full_control_of_state = 229 #BAKU
-					has_full_control_of_state = 230 #ARMENIA
-					has_full_control_of_state = 231 #GEORGIA
-				}
-				# Baku - Tbilisi
-				build_railway = {
-					path = { 7661 1536 4614 4477 11645 11674 1539 11708 1599 }
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 232 #DAGESTAN
-					has_full_control_of_state = 821 #CHECHNYA-INGUSHETIA
-				}
-				# Makhachkala (Hub province) - Grozny
-				build_railway = {
-					path = { 3668 3682 3672 }
-				}
-			}
 		}
 	}
 
@@ -5571,9 +5434,8 @@ focus_tree = {
 		cost = 10
     
 	    completion_reward = {
-            add_to_variable = { SOV_the_red_army_army_attack_factor = 0.15 }
-			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.15 }
-			add_to_variable = { SOV_the_red_army_mobilization_speed = 0.25 }
+            add_to_variable = { SOV_the_red_army_army_attack_factor = 0.1 }
+			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.1 }
 			add_to_variable = { SOV_the_red_army_army_morale_factor = 0.1 }
 			add_to_variable = { SOV_the_red_army_conscription_factor = 0.15 }
 			
@@ -11010,41 +10872,6 @@ focus_tree = {
 			}	
 		}
 		
-		available = {
-				has_completed_focus = SOV_the_centre
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				date > 1937.1.1 
-				date < 1939.1.1 
-				else = {
-					if = {
-						limit = {
-							has_completed_focus = SOV_covert_support_for_spanish_poum
-						}
-						country_exists = SPC
-						NOT = { has_war_with = SPC }
-					}
-					else = {
-						country_exists = SPD
-						NOT = { has_war_with = SPD }
-					}
-				}
-			}
-			else = {
-				any_other_country = {
-					original_tag = SPR
-					has_civil_war = yes
-					NOT = { has_war_with = ROOT }
-					OR = {
-						has_government = democratic
-						has_government = communism
-					}
-				}
-			}
-		}
-		
 		search_filters = {}
 
 		completion_reward = {
@@ -11158,14 +10985,11 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 5 }
 			SOV = { add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 545 } }
-			hidden_effect = { GER = { country_event = { id = NSB_soviet_soviet_german_trade_agreement.1 hours = 1 } } }
 			
-			GER = {
-				add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 545 } #Technically 1 year but really 18 months for Soviet payment 
-				capital_scope = {
-					add_dynamic_modifier = { modifier = SOV_soviet_imports }
+			hidden_effect = {
+				GER = {
+					add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 545 } #Technically 1 year but really 18 months for Soviet payment 
 				}
 			}
 		}
