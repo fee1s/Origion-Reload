@@ -1291,10 +1291,8 @@ ideas = {
 			}
 
 			modifier = {
-				subversive_activites_upkeep = -0.5
-				operative_slot = 1
-				root_out_resistance_effectiveness_factor = 0.1
-				resistance_damage_to_garrison = -0.05
+				offensive_war_stability_factor = 0.15
+				weekly_casualties_war_support = 0.005
 			}
 		}
 
@@ -1902,19 +1900,8 @@ ideas = {
 				has_war_with = SOV
 			}
 
-			on_remove = {
-				var:SOV_capital_for_soviet_imports = { #This is where the German capital is stored and where Soviet Imports state modifier was added
-					if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_soviet_imports }
-						}
-						remove_dynamic_modifier = { modifier = SOV_soviet_imports }
-					}
-				}
-			}
-
 			modifier = {
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.15
 			}
 		}
 

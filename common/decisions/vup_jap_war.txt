@@ -24,6 +24,9 @@ JAP_operation = {
 			hidden_effect = {
 				sound_effect = psi_usa_war
 				USA_join_to_war = yes # скриптед_эффект, юса вступает в алайсы, призывает всех в войну и вступает в европейскую войну
+				ENG = { transfer_state = 334 transfer_state = 986 }
+				AST = { transfer_state = 669 }
+				USA = { annex_country = { target = INS } }
 			}
 		}
 	}
