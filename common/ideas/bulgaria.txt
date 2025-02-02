@@ -248,62 +248,6 @@ ideas = {
 			}
 		}
 
-		BUL_imro_03 = { #Even less severe NS due to repression
-			picture = bul_imro
-			name = BUL_imro_02
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				tag = BUL
-			}
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.1
-			}
-		}
-
-		BUL_imro_04 = { #Less severe NS due to cooperation
-			picture = bul_imro
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				tag = BUL
-			}
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.1
-				opinion_gain_monthly_factor = -0.15
-			}
-		}
-
-		BUL_imro_05 = { #Even less severe NS due to cooperation
-			picture = bul_imro
-			name = BUL_imro_04
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				tag = BUL
-			}
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.1
-				opinion_gain_monthly_factor = -0.25
-				trade_opinion_factor = -0.15
-			}
-		}
-
 		BUL_tsar_boris_positive_01 = {
 			picture = bul_tsar_boris_positive
 
