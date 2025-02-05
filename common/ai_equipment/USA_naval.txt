@@ -108,7 +108,6 @@ USA_destroyers = {
 		}
 		role_icon_index = 2
 		enable = { 
-			has_tech = improved_dp_light_battery
 			not = { has_tech = improved_ship_hull_light }
 		}
 		target_variant = {
@@ -149,7 +148,6 @@ USA_destroyers = {
 		}
 		role_icon_index = 2
 		enable = { 
-			has_tech = advanced_dp_light_battery
 			not = { has_tech = advanced_ship_hull_light }
 		}
 		target_variant = {
@@ -190,7 +188,6 @@ USA_destroyers = {
 		}
 		role_icon_index = 2
 		enable = { 
-			has_tech = advanced_dp_light_battery
 			has_tech = advanced_ship_hull_light
 		}
 		target_variant = {
@@ -636,10 +633,6 @@ USA_naval_light_AA_cruiser = {
 			}
 		}
 		role_icon_index = 2
-		
-		enable = {
-			has_tech = basic_dp_light_battery
-		}
 		
 		target_variant = {
 			match_value = 2500.0
@@ -1602,10 +1595,6 @@ USA_naval_mine_sweeper = {
 			}
 		}
 		role_icon_index = 5
-		
-		enable = {
-			has_tech = basic_dp_light_battery
-		}
 		
 		target_variant = {
 			match_value = 2000.0
