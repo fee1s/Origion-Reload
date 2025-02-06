@@ -49,7 +49,7 @@ ideas = {
 			available = { has_naval_academy = yes }
 			visible = { has_tech = fleet_in_being }
 			modifier = {
-				navy_capital_ship_defence_factor = 0.04
+				naval_critical_score_chance_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -94,7 +94,7 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
-				critical_receive_chance = -0.05
+				critical_receive_chance = -0.20
 				naval_light_gun_hit_chance_factor = 0.02
 				naval_heavy_gun_hit_chance_factor = 0.02
 				naval_torpedo_hit_chance_factor = 0.02
@@ -111,7 +111,7 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
-				navy_org = 5
+				navy_org = 10
 				naval_detection = 0.10
 			}
 			ai_will_do = {
@@ -128,9 +128,9 @@ ideas = {
 		jeune_ecole_spirit = {
 			ledger = navy
 			research_bonus = {
+				ca_tech = 0.1
 			}
 			modifier = {
-				navy_screen_attack_factor = 0.02
 			}
 			ai_will_do = {
 				factor = 1
@@ -163,10 +163,10 @@ ideas = {
 		flexible_contracts_spirit = {
 			ledger = navy
 			modifier = {
+				military_industrial_organization_funds_gain = 0.35
 			}
 			equipment_bonus = {
 				cl_tech = {
-					build_cost_ic = -0.05 instant = yes
 				}
 			}
 			ai_will_do = {
@@ -181,7 +181,7 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "Man the Guns" }
 			research_bonus = {
-				naval_equipment = 0.10
+				ship_modules_tech = 0.10
 			}
 			ai_will_do = {
 				factor = 1
@@ -194,8 +194,8 @@ ideas = {
 		naval_reform_spirit = {
 			ledger = navy
 			modifier = {
-				experience_gain_navy_factor = 0.10
-				navy_capital_ship_attack_factor = 0.02
+				experience_gain_navy_factor = 0.15
+				
 			}
 			ai_will_do = {
 				factor = 1
@@ -227,10 +227,10 @@ ideas = {
 		fleet_in_being_navy_spirit = {
 			ledger = navy
 			visible = { has_tech = fleet_in_being }
-			equipment_bonus = {
-				bb_tech = {
-					build_cost_ic = -0.02 instant = yes
-				}
+			research_bonus = {
+				bb_tech = 0.10
+			}
+			modifier = {
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -243,8 +243,10 @@ ideas = {
 		trade_interdiction_navy_spirit = {
 			ledger = navy
 			visible = { has_tech = trade_interdiction }
+			research_bonus = {
+				ss_tech = 0.10
+			}
 			modifier = {
-				convoy_raiding_efficiency_factor = 0.02
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -257,11 +259,10 @@ ideas = {
 		base_strike_navy_spirit = {
 			ledger = navy
 			visible = { has_tech = base_strike }
-				
-			equipment_bonus = {		
-				cv_tech = {
-					build_cost_ic = -0.02 instant = yes
-				}
+			research_bonus = {
+				cv_tech = 0.10
+			}
+			modifier = {
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -291,8 +292,8 @@ ideas = {
 		night_fighting_spirit = {
 			ledger = navy
 			modifier = {
-				night_spotting_chance = 0.03
-				naval_night_attack = 0.05
+				night_spotting_chance = 0.05
+				naval_night_attack = 0.10
 			}
 			ai_will_do = {
 				factor = 1
@@ -306,8 +307,8 @@ ideas = {
 			ledger = navy
 			visible = { has_tech = base_strike }
 			modifier = {
-				naval_retreat_speed_after_initial_combat = 0.1
-				naval_retreat_chance_after_initial_combat = 0.1
+				naval_retreat_speed_after_initial_combat = 0.3
+				naval_retreat_chance_after_initial_combat = 0.3
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -340,9 +341,8 @@ ideas = {
 			ledger = navy
 			visible = { has_tech = trade_interdiction }
 			modifier = {
-				screening_without_screens = 0.2
-				naval_retreat_speed = 0.1
-				naval_retreat_chance = 0.1
+				naval_retreat_speed = 0.2
+				naval_retreat_chance = 0.6
 			}
 			ai_will_do = {
 				factor = 1
@@ -356,10 +356,9 @@ ideas = {
 			ledger = navy
 			visible = { has_tech = fleet_in_being }
 			modifier = {
-				naval_retreat_chance = -0.1
-				naval_retreat_speed = -0.1
-				naval_torpedo_hit_chance_factor = 0.1
-				naval_hit_chance = 0.1
+				naval_retreat_chance = -0.35
+				naval_torpedo_hit_chance_factor = 0.15
+				naval_hit_chance = 0.05
 			}
 			ai_will_do = {
 				factor = 1.5
