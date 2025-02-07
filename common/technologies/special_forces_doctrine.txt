@@ -9,9 +9,6 @@ technologies = {
 		mountaineers_special_forces_contribution_factor = -0.25
 		category_mountaineers = {
 			supply_consumption = -0.02
-		}
-		category_special_forces = {
-			max_organisation = 5
 			soft_attack = 0.05
 		}
 		enable_subunits = {
@@ -86,8 +83,6 @@ technologies = {
 			leads_to_tech = special_forces_recon
 			research_cost_coeff = 1
 		}
-
-		xor = { rangers }
 		
 		rangers_support = {
 			acclimatization_cold_climate_gain_factor = 0.15
@@ -132,8 +127,6 @@ technologies = {
 			leads_to_tech = special_forces_recon
 			research_cost_coeff = 1
 		}
-
-		xor = { ski_troops }
 		
 		rangers_support = {
 			mountain = {
@@ -228,8 +221,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		xor = { mountaineers_combat_2 }
-		
 		doctrine = yes	
 		research_cost = 4.5
 
@@ -268,18 +259,16 @@ technologies = {
 		artillery = {
 			battalion_mult = {
 				category = category_mountaineers
-				breakthrough = 0.15
+				breakthrough = 0.1
 			}
 		}
 		
 		rangers_support = {
 			battalion_mult = {
 				category = category_line_artillery
-				soft_attack = 0.15
+				soft_attack = 0.1
 			}
 		}
-		
-		xor = { mountaineers_combat_1 }
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -310,7 +299,8 @@ technologies = {
 		xp_unlock_cost = 60
 		
 		category_mountaineers = {
-			max_organisation = 5
+			acclimatization_cold_climate_gain_factor = 0.05
+			acclimatization_hot_climate_gain_factor = 0.05
 		}
 		
 		force_use_small_tech_layout = yes
@@ -356,13 +346,16 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		category_mountaineers = {
-			soft_attack = 0.10
+			soft_attack = 0.05
+			mountain = {
+				soft_attack = 0.05
+				defence = 0.1
+			}
+			hill = {
+				soft_attack = 0.05
+				defence = 0.1
+			}
 		}
-		
-		mountaineers_special_forces_contribution_factor = -0.25
-		special_forces_training_time_factor = -0.20
-		
-		xor = { mountaineers_keystone_2 }
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -392,15 +385,19 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 60
 		
-		special_forces_cap = 0.1 # 0.06 было
-		special_forces_out_of_supply_factor = -0.1
-		special_forces_attack_factor = 0.05
-		acclimatization_hot_climate_gain_factor = 0.10
-		acclimatization_cold_climate_gain_factor = 0.10
+		category_mountaineers = {
+			hard_attack = 0.05
+			mountain = {
+				attack = 0.05
+				defence = 0.10
+			}
+			hill = {
+				soft_attack = 0.05
+				defence = 0.1
+			}
+		}
 		
 		force_use_small_tech_layout = yes
-
-		xor = { mountaineers_keystone_1 }
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -458,9 +455,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		marines_special_forces_contribution_factor = -0.25
 		naval_invasion_capacity = 5
-		category_special_forces = {
+		category_marines = {
 			soft_attack = 0.05
 		}
 		
@@ -506,15 +502,13 @@ technologies = {
 		xp_research_type = navy
 		xp_unlock_cost = 60
 		
-		xor = { marines_shore_parties }
-		
 		force_use_small_tech_layout = yes
 		
 		pioneer_support = {
 			jungle = {
-				attack = 0.15
-				defence = 0.10
-				movement = 0.10
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
 			}
 		}
 		
@@ -552,8 +546,6 @@ technologies = {
 		xp_research_type = navy
 		xp_unlock_cost = 60
 		
-		xor = { marines_jungle_troops }
-		
 		force_use_small_tech_layout = yes
 		
 		path = {
@@ -563,9 +555,9 @@ technologies = {
 		
 		pioneer_support = {
 			amphibious = {
-				attack = 0.25
-				defence = 0.15
-				movement = 0.20
+				attack = 0.1
+				defence = 0.1
+				movement = 0.2
 			}
 		}
 		
@@ -609,12 +601,10 @@ technologies = {
 			leads_to_tech = marines_expeditionary 
 			research_cost_coeff = 1
 		}
-		
-		unit_marine_design_cost_factor = -0.50
 
 		marine = {
-			max_organisation = 5
-			soft_attack = 0.1
+			acclimatization_hot_climate_gain_factor = 0.1
+			acclimatization_cold_climate_gain_factor = 0.1
 		}
 			
 		doctrine = yes	
@@ -653,18 +643,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		xor = { marines_expeditionary }
-		
-		enable_subunits = {
-			marine_commando
-		}
-		
 		on_research_complete = {
 			custom_effect_tooltip = SF_MARINES_exfiltration_effect_tt
 		}
 		
-		acclimatization_cold_climate_gain_factor = 0.1
-		acclimatization_hot_climate_gain_factor = 0.1
+		acclimatization_cold_climate_gain_factor = 0.05
+		acclimatization_hot_climate_gain_factor = 0.05
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -701,8 +685,6 @@ technologies = {
 			leads_to_tech = marines_expeditionary_blowtorch 
 			research_cost_coeff = 1
 		}
-		
-		xor = { marines_commandoes }
 
 		special_forces_cap = 0.1 # 0.06 было
 		naval_invasion_planning_bonus_speed = 0.2
@@ -761,10 +743,6 @@ technologies = {
 			cat_marines_doctrine
 		}
 		
-		on_research_complete = {
-			custom_effect_tooltip = SF_marine_demoliton_effect_TT
-		}
-		
 		folder = {
 			name = special_forces_doctrine_folder
 			position = { x = -1 y = 8 }
@@ -796,13 +774,11 @@ technologies = {
 		pioneer_support = {
 			battalion_mult = {
 				category = category_line_artillery
-				max_organisation = 2
 				add = yes
 			}
 		}
 		
-		shore_bombardment_bonus = 0.10
-		special_forces_attack_factor = 0.05
+		shore_bombardment_bonus = 0.05
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -838,8 +814,6 @@ technologies = {
 		
 		amphibious_mechanized = {
 			breakthrough = 0.1
-			soft_attack = 0.5
-			hard_attack = 0.5
 		}
 		
 		pioneer_support = {
@@ -979,8 +953,7 @@ technologies = {
 		transport_plane = {
 			air_defence = 0.20
 		}
-		category_special_forces = {
-			max_organisation = 5
+		category_paratroopers = {
 			soft_attack = 0.05
 		}
 		
@@ -1045,16 +1018,17 @@ technologies = {
 			leads_to_tech = paras_airborne_light_armor
 			research_cost_coeff = 1
 		}
-
-		xor = { paras_combat_drop }
 		
 		doctrine = yes	
 		research_cost = 4.5
 		
-		paratroopers_special_forces_contribution_factor = -0.10
-		
 		on_research_complete = {
 			custom_effect_tooltip = SF_PARAS_sabotage_effect_tt
+		}
+
+		category_paratroopers = {
+			acclimatization_cold_climate_gain_factor = 0.05
+			acclimatization_hot_climate_gain_factor = 0.05
 		}
 		
 		categories = {
@@ -1084,8 +1058,6 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		
-		xor = { paras_dispersed_drop }
-		
 		path = {
 			leads_to_tech = paras_airborne_light_armor
 			research_cost_coeff = 1
@@ -1093,8 +1065,6 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 4.5
-		
-		paratroopers_special_forces_contribution_factor = -0.10
 		
 		on_research_complete = {
 			custom_effect_tooltip = SF_PARAS_combat_effect_tt
@@ -1106,6 +1076,13 @@ technologies = {
 			cat_paratroopers_doctrine
 		}
 		
+		category_paratroopers = {
+			defense = 0.1
+			urban = {
+				attack = 0.05
+			}
+		}
+
 		folder = {
 			name = special_forces_doctrine_folder
 			position = { x = 1 y = 2 }
@@ -1180,8 +1157,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		xor = { paras_combat_2 }
-		
 		signal_company = {
 			battalion_mult = {
 				category = category_paratroopers
@@ -1232,8 +1207,6 @@ technologies = {
 			}
 		}
 		
-		xor = { paras_combat_1 }
-		
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -1271,8 +1244,7 @@ technologies = {
 		}
 		
 		category_paratroopers = {
-			max_organisation = 5
-			supply_consumption = -0.02
+			supply_consumption = -0.05
 		}
 		
 		acclimatization_hot_climate_gain_factor = 0.10
@@ -1349,11 +1321,11 @@ technologies = {
 		force_use_small_tech_layout = yes
 		
 		category_paratroopers = {
-			soft_attack = 0.15
-			breakthrough = 0.15
+			soft_attack = 0.05
+			breakthrough = 0.05
 		}
 		
-		special_forces_training_time_factor = 0.20
+		special_forces_training_time_factor = -0.20
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -1385,10 +1357,16 @@ technologies = {
 		xp_unlock_cost = 60
 		
 		force_use_small_tech_layout = yes
-		
-		paratroopers_special_forces_contribution_factor = -0.20
+
 		special_forces_training_time_factor = -0.10
-		special_forces_attack_factor = 0.05
+		
+		category_paratroopers = {
+			soft_attack = 0.1
+			urban = {
+				attack = 0.1
+				defence = 0.1
+			}
+		}
 			
 		doctrine = yes	
 		research_cost = 2.25
