@@ -8,64 +8,6 @@
 
  #################### 
 
-
-GER_porsche_organization = {
-	include = generic_heavy_tank_organization
-	icon = GFX_idea_porsche
-	
-	allowed = {	
-		tag = GER 
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = GER } }
-			}
-			FROM = { NOT = { has_war_with = GER } }
-		}
-	}
-}
-
-GER_henschel_organization = {
-	include = generic_mobile_tank_organization
-	icon = GFX_idea_henschel
-	
-	allowed = {	
-		tag = GER 
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = GER } }
-			}
-			FROM = { NOT = { has_war_with = GER } }
-		}
-	}
-}
-
-GER_man_organization = {
-	include = generic_medium_tank_organization
-	icon = GFX_idea_GER_MAN
-	
-	allowed = {	
-		tag = GER
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = GER } }
-			}
-			FROM = { NOT = { has_war_with = GER } }
-		}
-	}
-}
-
 #Benz 
 GER_daimler_benz_organization = {
 	include = generic_tank_organization
@@ -287,44 +229,6 @@ GER_junkers_organization = {
 		} 
 	}
 }
-
-GER_focke_wulf_organization = {
-	include = generic_multi_role_aircraft_organization
-	icon = GFX_idea_focke_wulf
-	
-	allowed = {	
-		tag = GER 
-	}
-}
-
-GER_heinkel_organization = {
-	include = generic_medium_aircraft_organization
-	icon = GFX_idea_heinkel
-	
-	allowed = {	
-		tag = GER 
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = GER } }
-			}
-			FROM = { NOT = { has_war_with = GER } }
-		}
-	}
-}
-
-GER_dornier_organization = {
-	include = generic_naval_aircraft_organization
-	icon = GFX_idea_dornier
-	
-	allowed = {	
-		tag = GER 
-	}
-}
-
 
 ################################### 
 
