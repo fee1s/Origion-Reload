@@ -492,76 +492,6 @@
 		}
 	}
 
-	focus = {
-		id = SAF_secure_interests_in_africa
-		icon = GFX_goal_tfv_saf_secure_interests_in_africa
-		prerequisite = { focus = SAF_suppress_the_stormjaers }
-		prerequisite = { focus = SAF_desert_equipment }
-		x = -3
-		y = 4
-		relative_position_id = SAF_support_the_policy_of_appeasement
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-			NOT = { has_war_with = ENG }
-			ENG = { is_puppet = no }
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-		ENG = { custom_effect_tooltip = needs_approval 
-				country_event = tfv_south_africa.1
-				}
-				542 = {
-						add_core_of = SAF
-					}
-				545 = {
-						add_core_of = SAF
-					}
-				771 = {
-						add_core_of = SAF
-					}
-				770 = {
-						add_core_of = SAF
-					}
-				546 = {
-						add_core_of = SAF
-					}
-				905 = {
-						add_core_of = SAF
-					}
-				547 = {
-						add_core_of = SAF
-					}
-				903 = {
-						add_core_of = SAF
-					}
-				904 = {
-						add_core_of = SAF
-					}
-				548 = {
-						add_core_of = SAF
-					}
-					981 = {
-						add_core_of = SAF
-					}
-		}
-	}
-
 	############################
 	## SHARED POLITICS SECTION #
 	############################
@@ -814,10 +744,11 @@
 	focus = {
 		id = SAF_voortrekker_monument
 		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = SAF_native_laws_amendment_act focus = SAF_support_ossewabrandwag }
-		x = -1
+		prerequisite = { focus = SAF_desert_equipment }
+		prerequisite = { focus = SAF_suppress_the_stormjaers  }
+		x = 0
 		y = 2
-		relative_position_id = SAF_support_the_afrikaner_broederbond
+		relative_position_id = SAF_joint_air_training_scheme
 
 		cost = 10
 

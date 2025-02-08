@@ -1,169 +1,30 @@
-ENG_annex = {
-	ENG_ALL_DOMINION = {
-		icon = eng_ally_imperialist_coup
-
+ENG_house_of_commons = {
+	ENG_FRA_union = {
+		icon = GFX_decision_eng_abdication_crisis
 		available = {
-			has_completed_focus = ENG_imperial_conference
-			
+			FRA = { is_ai = yes has_capitulated = yes }
 		}
+		
 		fire_only_once = yes
-		days_remove    = -1
 		complete_effect = {
-		CAN = {add_ideas = {Free_dominion}}	
-		SAF = {add_ideas = {Free_dominion}}	
-		NZL = {add_ideas = {Free_dominion}}
-		RAJ = {add_ideas = {Free_dominion}}
-		AST = {add_ideas = {Free_dominion}}	
-		}
-	}
-	ENG_WIN_Africa = {
-		icon = generic_army_support
-		available = {
-			448 = { is_controlled_by = ENG }
-			661 = { is_controlled_by = ENG }
-			449 = { is_controlled_by = ENG }
-			450 = { is_controlled_by = ENG }
-			662 = { is_controlled_by = ENG }
-			663 = { is_controlled_by = ENG }
-			451 = { is_controlled_by = ENG }
-		}
-			target_trigger = {
-				FROM = {
-					OR = {
-						original_tag = ITA
-					}
-				}
-			}
-		fire_only_once = yes
-		days_remove = -1
-		complete_effect = {
-			ENG = { 
-				transfer_state = 461
-				transfer_state = 462
-				transfer_state = 513
-				transfer_state = 459
-				transfer_state = 460
-				transfer_state = 458
-				transfer_state = 665
-			}				
-		}
-	}
-	ENG_SAF_chrome = {
-		icon = generic_army_support
-		available = {
-			any_other_country = {
-				original_tag = SAF
-				exists = yes
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = SAF
-				}
-			}
-		}
-		fire_only_once = yes
-		days_remove    = -1
-		complete_effect = {
-		SAF = {give_resource_rights = { receiver = ENG state = 719 }}				
-		}
-	}
-	ENG_HOL_allum = {
-		icon = generic_army_support
-		available = {
-		    data > 1940.1.1
-			any_other_country = {
-				original_tag = HOL
-				exists = yes
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = HOL
-				}
-			}
-		}
-		fire_only_once = yes
-		days_remove = -1
-		complete_effect = {
-		HOL = {give_resource_rights = { receiver = ENG state = 309 }}				
-		}
-	}
-	ENG_annex_RAJ = {
-		icon = category_eng_appeal_to_imperial_loyalists
-		available = {
-		    date > 1938.1.1
-			RAJ = { is_ai = yes }
-			any_other_country = {
-				original_tag = RAJ
-				exists = yes
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = RAJ
-				}
-			}
-		}
-		fire_only_once = yes
-		days_remove = -1
-		complete_effect = {
-			RAJ = {
-				every_unit_leader = {
-					set_unit_leader_flag = flag_former_french_general
-					set_nationality = ENG
-				}
-			}
 			ENG = {
-				annex_country = { target = RAJ transfer_troops = yes }
+				annex_country = { target = FRA transfer_troops = yes }
 			}
-            annex_country = { target = RAJ }
-			every_state = {
-				limit = {
-					is_core_of = RAJ
-				}
-				ENG = {
-					add_state_core = PREV
-				}
-			}		
+
+			hidden_effect = { army_experience = 500 }
 		}
 	}
 	ENG_annex_CAN = {
-		icon = category_eng_appeal_to_imperial_loyalists
+		icon = GFX_decision_eng_ally_imperialist_coup
 		available = {
 		    date > 1938.1.1
-			CAN = { is_ai = yes }
-			any_other_country = {
-				original_tag = CAN
-				exists = yes
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = CAN
-				}
-			}
+			CAN = { is_ai = yes exists = yes }
 		}
 		fire_only_once = yes
-		days_remove = -1
 		complete_effect = {
-		    add_research_slot = 1
-			set_technology = { mechanised_infantry  = 1 }
-			army_experience = 200
-			CAN = {
-				every_unit_leader = {
-					set_unit_leader_flag = flag_former_french_general
-					set_nationality = ENG
-				}
-			}
 			ENG = {
 				annex_country = { target = CAN transfer_troops = yes }
 			}	
-			annex_country = { target = CAN }
 			every_state = {
 				limit = {
 					is_core_of = CAN
@@ -171,81 +32,26 @@ ENG_annex = {
 				ENG = {
 					add_state_core = PREV
 				}
-			}		
-		}
-	}
-	ENG_annex_SAF = {
-		icon = category_eng_appeal_to_imperial_loyalists
-		available = {
-		    date > 1938.1.1
-			SAF = { is_ai = yes }
-			any_other_country = {
-				original_tag = SAF
-				exists = yes
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = SAF
-				}
-			}
-		}
-		fire_only_once = yes
-		days_remove = -1
-		complete_effect = {
-			SAF = {
-				every_unit_leader = {
-					set_unit_leader_flag = flag_former_french_general
-					set_nationality = ENG
-				}
-			}
-			ENG = {
-				annex_country = { target = SAF transfer_troops = yes }
 			}	
-			annex_country = { target = SAF }
-			every_state = {
-				limit = {
-					is_core_of = SAF
-				}
-				ENG = {
-					add_state_core = PREV
-				}
-			}			
+			hidden_effect = {
+				add_research_slot = 1
+				set_technology = { mechanised_infantry = 1 }
+				army_experience = 500
+			}
 		}
 	}
 
 	ENG_annex_AST = {
-		icon = category_eng_appeal_to_imperial_loyalists
+		icon = GFX_decision_eng_ally_imperialist_coup
 		available = {
 		    date > 1938.1.1
-			AST = { is_ai = yes }
-			any_other_country = {
-				original_tag = AST
-				exists = yes
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = AST
-				}
-			}
+			AST = { is_ai = yes exists = yes }
 		}
 		fire_only_once = yes
-		days_remove = -1
 		complete_effect = {
-		    add_research_slot = 1
-			AST = {
-				every_unit_leader = {
-					set_unit_leader_flag = flag_former_french_general
-					set_nationality = ENG
-				}
-			}
 			ENG = {
 				annex_country = { target = AST transfer_troops = yes }
 			}	
-         annex_country = { target = AST }
 			every_state = {
 				limit = {
 					is_core_of = AST
@@ -256,107 +62,45 @@ ENG_annex = {
 			}			
 		}
 	}
-	
-	ENG_annex_NZL = {
-		icon = category_eng_appeal_to_imperial_loyalists
+	ENG_annex_RAJ = {
+		icon = GFX_decision_eng_ally_imperialist_coup
 		available = {
 		    date > 1938.1.1
-			NZL = { is_ai = yes }
-			AST = { is_ai = yes }
-			
-			hidden_trigger = {
-				any_other_country = {
-					original_tag = NZL
-					exists = yes
-				}
-			}
-			
-			FROM = {
-				all_core_state = {
-					is_fully_controlled_by = FROM
-				}
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = NZL
-				}
-			}
+			RAJ = { is_ai = yes exists = yes }
 		}
 		fire_only_once = yes
-		days_remove = -1
 		complete_effect = {
 			ENG = {
-				annex_country = { target = NZL transfer_troops = yes }
+				annex_country = { target = RAJ transfer_troops = yes }
 			}
 			every_state = {
 				limit = {
-					is_core_of = NZL
+					is_core_of = RAJ
 				}
 				ENG = {
 					add_state_core = PREV
 				}
-			}			
+			}		
 		}
 	}
 	
-	ENG_FRA_union = {
-		icon = category_eng_appeal_to_imperial_loyalists
+	ENG_annex_SAF = {
+		icon = GFX_decision_eng_ally_imperialist_coup
 		available = {
 		    date > 1938.1.1
-			FRA = { is_ai = yes }
-			NOT = {
-				FRA = { has_government = fascism }
-			}
-			any_other_country = {
-				original_tag = FRA
-				exists = yes
-			}
-			OR = {
-				AND = {
-					NOT = {16 = { is_controlled_by = FRA }}
-					NOT = {31 = { is_controlled_by = FRA }}
-				}
-			}
-		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					original_tag = FRA
-				}
-			}
+			SAF = { is_ai = yes exists = yes }
 		}
 		fire_only_once = yes
-		days_remove = -1
 		complete_effect = {
-			add_ideas = ENG_DEF
-			set_global_flag = fall_of_france
-			set_global_flag = flag_franco_british_union
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = FRA
-					}
-					ENG = {
-						add_state_core = PREV
-					}
-				}
-			}
-			FRA = {
-				every_unit_leader = {
-					set_unit_leader_flag = flag_former_french_general
-					set_nationality = ENG
-				}
-			}
 			ENG = {
-				annex_country = { target = FRA transfer_troops = yes }
+				annex_country = { target = SAF transfer_troops = yes }
 			}
-			custom_effect_tooltip = FRA_franco_british_cores
-			hidden_effect = {
-				ENG = { set_cosmetic_tag = FRA_UK }
-				GER = { 
-					country_event = { hours = 6 id = news.35 }
+			every_state = {
+				limit = {
+					is_core_of = SAF
+				}
+				ENG = {
+					add_state_core = PREV
 				}
 			}			
 		}
