@@ -763,6 +763,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				clicksound = click_close
 				oversound = ui_menu_over
+				hide = yes
 			}
 
 			iconType = {
@@ -806,7 +807,7 @@ guiTypes = {
 			# Here, several buttons are put in the container "after_intel_agency_button", to be easily moved if the player don't have the DLC requiered by "intel_agency_button".
 			containerWindowType = {
 				name = "after_intel_agency_button"
-				position = { x=56 y=0 }
+				position = { x=0 y=0 }
 				
 				buttonType = {
 					name = "technology_button"
