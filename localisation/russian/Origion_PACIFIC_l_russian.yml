@@ -1,0 +1,105 @@
+﻿l_russian:
+
+#Ивенты
+
+origion_pacific.1.t: "Подготовка к войне"
+origion_pacific.1.d: "Нам поступило сообщение о приближающейся войне с Японией"
+origion_pacific.1.a: "Придётся подготовиться"
+
+origion_pacific.2.t: "Война на Тихом океане"
+origion_pacific.2.d: "После множества месяцев напряженной дипломатической борьбы и растущего напряжения на Тихом океане, события достигли своей кульминации. Япония, стремясь расширить свою империю и обеспечить доступ к важным ресурсам Юго-Восточной Азии, осуществила внезапное нападение на военно-морскую базу Пёрл-Харбор. Это нападение стало решающим моментом, которое втянуло Соединенные Штаты Америки в глобальный конфликт. Мир оказался на пороге новой эры войны."
+origion_pacific.2.a: "Так уж и быть"
+
+origion_pacific.3.t: "Мы захватили вражеский регион"
+origion_pacific.3.d: ""
+origion_pacific.3.a: "Круто"
+
+origion_pacific.4.t: "Враг захватил наш регион"
+origion_pacific.4.d: ""
+origion_pacific.4.a: "Не круто"
+
+origion_pacific.5.t: "Выбор главы генштаба"
+origion_pacific.5.d: "Мы можем выбрать главу генштаба который будет выбирать время для начала операций на Тихоокеанском театре."
+origion_pacific.5.a: "США"
+origion_pacific.5.b: "Австралия"
+origion_pacific.5.c: "Канада"
+origion_pacific.5.d: "Индия"
+origion_pacific.5.e: "Южная Африка"
+origion_pacific.5.f: "Оставить как есть"
+
+origion_pacific.6.t: "О том как работает Тихоокеанский фронт"
+origion_pacific.6.d: "На карте указаны стратегические регионы, захват которых будет давать бонус своей стороне и дебаф другой. \nСо старта войны §CСоюзники§! имеют под контролем 11 регионов, а §RЯпония§! 9 (компенсируется это тем что мейн и Китай не считаются стратегическими регионами и их нельзя захватить).\n\nДля захвата региона необходимо контроллировать все провинции которые в него входят. \nКол-во контроллируемых регионов напрямую влияет на модификаторы США и Японии, а также важно для открытия некоторых фокусов и особенно §RОперации "Оверлорд"§!."
+origion_pacific.6.a: "Понятно"
+
+### Решения
+
+Pacific_dec_cat: "Операции"
+Pacific_start_mission: "Нападение Японии"
+Pacific_operation_carthwheel_dec: "Операция "Колесница""
+Pacific_operation_watchtower_dec: "Операция "Сторожевая башня""
+Pacific_operation_dracula_dec: "Операция "Дракула""
+Pacific_operation_iceberg_dec: "Операция "Айсберг""
+
+# Гуишки и локализация к ним
+
+open_asia_map_tooltip_loc: "Тихоокеанская война"
+asia_map_name: "Война в Тихом океане"
+
+progress_bar_name_loc_ALLY: "Союзники контролируют: \n§Y[?ALLY_pacific_controlled_regions]§! регионов"
+progress_bar_name_loc_JAP: "Япония контролирует: \n§Y[?JAP_pacific_controlled_regions]§! регионов"
+
+
+
+asia_map_tt_JAP: "§RКонтроллируется Японией§!"
+asia_map_tt_ALLY: "§BКонтроллируется Союзниками§!"
+
+asia_map_birma_scripted_tt: "Бирма \n--------\n§Y[?288.GetName]§! \n§Y[?640.GetName]§! \n§Y[?432.GetName]§! \n§Y[?434.GetName]§!\n--------\n[asia_map_birma_scripted_loc_tt]"
+asia_map_raj_scripted_tt: "Индия \n--------\n[asia_map_raj_scripted_loc_tt]"
+asia_map_taiwan_scripted_tt: "Тайвань \n--------\n[asia_map_taiwan_scripted_loc_tt]"
+asia_map_phi_scripted_tt: "Филиппины \n--------\n[asia_map_phi_scripted_loc_tt]"
+asia_map_papua_scripted_tt: "Новая Гвинея \n--------\n§Y[?669.GetName]§! \n§Y[?979.GetName]§! \n§Y[?523.GetName]§! \n§Y[?737.GetName]§!\n--------\n[asia_map_papua_scripted_loc_tt]"
+asia_map_australia_scripted_tt: "Австралия \n--------\n[asia_map_australia_scripted_loc_tt]"
+asia_map_hawai_scripted_tt: "Гавайи \n--------\n[asia_map_hawai_scripted_loc_tt]"
+asia_map_okinawa_scripted_tt: "Окинава \n--------\n[asia_map_okinawa_scripted_loc_tt]"
+asia_map_iwojima_scripted_tt: "Иводзима \n--------\n[asia_map_iwojima_scripted_loc_tt]"
+asia_map_malaya_scripted_tt: "Британская Малайа \n--------\n§Y[?333.GetName]§! \n§Y[?334.GetName]§! \n§Y[?336.GetName]§!\n--------\n[asia_map_malaya_scripted_loc_tt]" # Малайа + Борнео
+asia_map_indochina_scripted_tt: "Индокитай \n--------\n§Y[?724.GetName]§! \n§Y[?289.GetName]§! \n§Y[?868.GetName]§! \n§Y[?869.GetName]§!\n§Y[?670.GetName]§!\n§Y[?671.GetName]§!\n§Y[?741.GetName]§!\n§Y[?286.GetName]§!\n--------\n[asia_map_indochina_scripted_loc_tt]" # Сиам + Индокитай
+asia_map_solomon_scripted_tt: "Соломоновы острова \n--------\n[asia_map_solomon_scripted_loc_tt]"
+asia_map_sumatra_scripted_tt: "Суматра \n--------\n[asia_map_sumatra_scripted_loc_tt]"
+asia_map_jawa_scripted_tt: "Ява \n--------\n§Y[?335.GetName]§! \n§Y[?667.GetName]§! \n§Y[?721.GetName]§!\n--------\n[asia_map_jawa_scripted_loc_tt]"
+asia_map_mariana_scripted_tt: "Марианские острова \n--------\n§Y[?638.GetName]§! \n§Y[?646.GetName]§!\n--------\n[asia_map_mariana_scripted_loc_tt]"
+asia_map_caroline_scripted_tt: "Каролинские острова \n--------\n[asia_map_caroline_scripted_loc_tt]"
+asia_map_marshall_scripted_tt: "Маршалловы острова \n--------\n[asia_map_marshall_scripted_loc_tt]"
+asia_map_palau_scripted_tt: "Палау \n--------\n[asia_map_palau_scripted_loc_tt]"
+asia_map_newzeland_scripted_tt: "Новая Зеландия \n--------\n[asia_map_newzeland_scripted_loc_tt]"
+asia_map_markus_scripted_tt: "Остров Маркуса \n--------\n[asia_map_markus_scripted_loc_tt]"
+
+progress_bar_USA_tt: "Соединённые Штаты Америки \n--------\n[progress_bar_USA_scripted_loc_tt]\n--------"
+progress_bar_USA_key_tt: "§Y$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$§!: [?USA.pacific_dm_consumer_goods_expected_value|%=Y1-] \n\n §Y$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$§!: [?USA.pacific_dm_industrial_capacity_factory|%=Y0+] \n\n §Y$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$§!: [?USA.pacific_dm_industrial_capacity_dockyard|%=Y0+]"
+progress_bar_JAP_tt: "Японская Империя \n--------\n[progress_bar_JAP_scripted_loc_tt]\n--------"
+progress_bar_JAP_key_tt: "§Y$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$§!: [?JAP.pacific_dm_consumer_goods_expected_value|%=Y1-] \n\n §Y$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$§!: [?JAP.pacific_dm_industrial_capacity_factory|%=Y0+] \n\n §Y$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$§!: [?JAP.pacific_dm_industrial_capacity_dockyard|%=Y0+]"
+
+head_commander_ALLY: "Мы являемся главой генштаба"
+pacific_war_started_dd_flag: "Открытие §YТихоокенаского фронта§!"
+pacific_war_started_dd_tt: "С открытия §YТихоокенаского фронта§! прошло как минимум §Y180 дней§!.\nНа данный момент прошло: [?pacific_war_started_dd_flag:days|Y0]"
+
+# Тултипы
+
+pacific_start_event_tt: "§RЯпония нападёт на нас в течении следующего месяца§!"
+
+USA_fall_of_the_western_wall_tt: "§CСоюзники§! контролируют как минимум §Y17 стратегических регионов§! в Тихом океане"
+
+Pacific_operation_carthwheel_tt: "Мы начнём массированное контрнаступление в Новой Гвинее. \nВ случае успеха: \nВ случае провала:"
+Pacific_operation_watchtower_tt: "Мы начнём массированное контрнаступление на Соломоновых островах. \nВ случае успеха: \nВ случае провала:"
+Pacific_operation_dracula_tt: "Мы начнём массированное контрнаступление в Бирме. \nВ случае успеха: \nВ случае провала:"
+Pacific_operation_iceberg_tt: "Мы подготовим масштабную высадку на Иводзиму и Окинаву. \nВ случае успеха: \nВ случае провала:"
+
+# Динамические модификаторы
+
+pacific_warfare_dm: "Война на Тихом океане"
+pacific_warfare_state_defense_dm: "Плохо спланированное наступление"
+pacific_warfare_state_attack_dm: "Спланированное наступление"
+pacific_warfare_defense_JAP_dm: "Крепость"
+pacific_warfare_asia_construct_debuff_dm: "Сложный рельеф"
+
+atlantikwall_dm: "Атлантический вал"

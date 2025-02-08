@@ -1,0 +1,269 @@
+Pacific_dec_cat = {
+	Pacific_start_mission = {
+		icon = GFX_decision_eng_puppet_usa
+		priority = 105
+		fire_only_once = yes
+		days_mission_timeout = 30
+		
+		activation = {
+		    always = no
+		}
+		
+		visible = {
+		    has_country_flag = asia_map_open_flag
+		}
+		
+		available = {
+            always = no
+        }		
+		timeout_effect = {
+		    
+		}
+	}
+	### ОПЕРАЦИИ СОЮЗНИКОВ ###
+	Pacific_operation_carthwheel_dec = { # НОВАЯ ГВИНЕЯ
+		icon = GFX_decision_eng_puppet_usa
+		priority = 103
+		#fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = pacific_war_started_dd_tt
+				has_country_flag = {
+					flag = pacific_war_started_dd_flag
+					days > 365
+				}
+			}
+			any_state = {
+				OR = {
+			        state = 669
+	                state = 979
+	                state = 523
+	                state = 737
+				}
+				is_controlled_by = JAP
+		    }
+		}
+		
+		highlight_states = {
+		    highlight_state_targets = {
+			    state = 669
+				state = 979
+				state = 523
+				state = 737
+			} 
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = Pacific_operation_carthwheel_tt
+			every_country = {
+			    limit = {
+				    ORIGION_is_in_faction_with_allies = yes
+				}
+			    every_state = {
+				    limit = {
+					    OR = {
+				            state = 669
+	                        state = 979
+	                        state = 523
+	                        state = 737
+					    }
+					}
+		            add_dynamic_modifier = { 
+		        	    modifier = pacific_warfare_state_attack_dm 
+		        		scope = PREV
+						days = 30
+		        	}
+		        }
+			}
+			hidden_effect = {
+			    activate_mission = Pacific_operation_carthwheel_mission
+			}
+		}
+	}
+	Pacific_operation_carthwheel_mission = { # НОВАЯ ГВИНЕЯ
+	    name = Pacific_operation_carthwheel_dec
+		icon = GFX_decision_eng_puppet_usa
+		priority = 1000
+		fire_only_once = yes
+		
+		activation = {
+		    always = no
+		}
+		
+		is_good = no
+		
+		available = {
+		    JAP = {
+			    NOT = { controls_state = 669 }
+	            NOT = { controls_state = 979 }
+	            NOT = { controls_state = 523 }
+	            NOT = { controls_state = 737 }
+			}
+		}
+		
+		days_mission_timeout = 30
+		
+		highlight_states = {
+		    highlight_state_targets = {
+			    state = 669
+				state = 979
+				state = 523
+				state = 737
+			} 
+		}
+		
+		complete_effect = { # Если миссия выполнена
+			add_stability = 0.05
+		}
+		timeout_effect = { # Если миссия не успеоа выполниться
+		    add_stability = -0.05
+		}
+	}
+	Pacific_operation_watchtower_dec = { # ГУАДАЛКАНАЛ
+		icon = GFX_decision_eng_puppet_usa
+		priority = 102
+		#fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = pacific_war_started_dd_tt
+				has_country_flag = {
+					flag = pacific_war_started_dd_flag
+					days > 365
+				}
+			}
+		}
+		
+		highlight_states = {
+		    highlight_state_targets = {
+			    state = 634
+			} 
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_watchtower_tt
+		    every_country = {
+			    limit = {
+				    ORIGION_is_in_faction_with_allies = yes
+				}
+			    634 = {
+		            add_dynamic_modifier = { 
+		        	    modifier = pacific_warfare_state_attack_dm 
+		        		scope = PREV
+						days = 30
+		        	}
+		        }
+			}
+		}
+	}
+	Pacific_operation_dracula_dec = { # БИРМА
+		icon = GFX_decision_eng_puppet_usa
+		priority = 100
+		fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = pacific_war_started_dd_tt
+				has_country_flag = {
+					flag = pacific_war_started_dd_flag
+					days > 365
+				}
+			}
+		}
+		
+		highlight_states = {
+		    highlight_state_targets = {
+			    state = 288
+				state = 640
+				state = 432
+				state = 434
+			} 
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_dracula_tt
+		    every_country = {
+			    limit = {
+				    ORIGION_is_in_faction_with_allies = yes
+				}
+			    every_state = {
+				    limit = {
+					    OR = {
+				            state = 288
+	                        state = 640
+	                        state = 432
+	                        state = 434
+					    }
+					}
+		            add_dynamic_modifier = { 
+		        	    modifier = pacific_warfare_state_attack_dm 
+		        		scope = PREV
+						days = 30
+		        	}
+		        }
+			}
+		}
+	}
+	Pacific_operation_iceberg_dec = { # ИВОДЗИМА, ОКИНАВА И ТАЙВАНЬ
+		icon = GFX_decision_eng_puppet_usa
+		priority = 98
+		fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = pacific_war_started_dd_tt
+				has_country_flag = {
+					flag = pacific_war_started_dd_flag
+					days > 365
+				}
+			}
+		}
+		
+		highlight_states = {
+		    highlight_state_targets = {
+			    state = 645
+			    state = 526
+				state = 524
+			} 
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_iceberg_tt
+			645 = {
+		        remove_dynamic_modifier = { 
+		       	    modifier = pacific_warfare_defense_JAP_dm 
+		       		scope = JAP
+		      	}
+		    }
+			526 = {
+		        remove_dynamic_modifier = { 
+		       	    modifier = pacific_warfare_defense_JAP_dm 
+		       		scope = JAP
+		      	}
+		    }
+			524 = {
+		        remove_dynamic_modifier = { 
+		       	    modifier = pacific_warfare_defense_JAP_dm 
+		       		scope = JAP
+		      	}
+		    }
+		}
+	}
+}

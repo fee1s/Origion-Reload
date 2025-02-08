@@ -68,12 +68,37 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			USA = { add_ideas = usa_asia_first }
-			
-			#GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
-			#		add_dynamic_modifier = { modifier = GER_atlantikwall_dynamic_modifier }
-			#	}
-			#}
+			GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = USA
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = ENG
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = FRA
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = CAN
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = AST
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = SAF
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = RAJ
+					}
+				}
+			}
 		}
 	}
 

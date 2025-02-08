@@ -32,6 +32,17 @@ on_actions = {
 				}
 		    }
 	    }
+		effect = {
+		    every_state = {
+			    limit = {
+				    is_on_continent = asia
+					NOT = { is_core_of = SOV }
+				}
+				add_dynamic_modifier = {
+				    modifier = pacific_warfare_asia_construct_debuff_dm
+				}
+			}
+		}
 	}
 	on_startup = { ### NO ASIA
 	    effect = {

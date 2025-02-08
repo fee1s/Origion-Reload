@@ -1,0 +1,232 @@
+guiTypes = {
+    containerWindowType = {
+		name = "asia_map_open_container"
+		position = { x = -700 y = 4 }
+		Orientation = UPPER_RIGHT
+		buttonType = {
+			name = "asia_map_open"
+			quadTextureSprite = "GFX_generic_box_125"
+			position = { x = 0 y = 0 }
+			scale=1.1
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		instantTextboxType = {
+			name = "title"
+			position = {x=3 y=5}
+			font = "hoi_16mbs"
+			text = "[open_asia_map_tooltip]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+	}
+	containerWindowType = {
+		name = "asia_map_ui_window"
+		position = {x=1300 y=36}
+		size = { width=1500 height=1500}
+		
+		background = {
+			name = "Background"
+		    spriteType = "GFX_asia_menu_bg"
+		}
+		
+		instantTextBoxType = { # Заголовок
+			name = "asia_map_name_box"
+			text = "asia_map_name"
+			position = { x=306 y=17 }
+			maxWidth = 300
+			format = center
+			font = "hoi_36header"
+		}
+
+		iconType = { # Карта
+			name = "asia_map_bg"
+			spriteType = "GFX_asia_map_bg" 
+			position = { x=22 y=62 }
+			scale = 0.55
+		}
+		buttonType = { # Бирма
+			name = "asia_map_birma"
+			quadTextureSprite = "GFX_map_gui_asia_birma" 
+			position = { x=138 y=201 }
+			pdx_tooltip_delayed = "asia_map_birma_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Тайвань
+			name = "asia_map_taiwan"
+			quadTextureSprite = "GFX_map_gui_asia_taiwan" 
+			position = { x=311 y=226 }
+			pdx_tooltip_delayed = "asia_map_taiwan_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Индия
+			name = "asia_map_raj"
+			quadTextureSprite = "GFX_map_gui_asia_raj" 
+			position = { x=22 y=150 }
+			pdx_tooltip_delayed = "asia_map_raj_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Гвинея
+			name = "asia_map_papua"
+			quadTextureSprite = "GFX_map_gui_asia_papua" 
+			position = { x=362 y=374 }
+			pdx_tooltip_delayed = "asia_map_papua_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Австралия
+			name = "asia_map_australia"
+			quadTextureSprite = "GFX_map_gui_asia_australia" 
+			position = { x=288 y=435 }
+			pdx_tooltip_delayed = "asia_map_australia_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Филиппины
+			name = "asia_map_phi"
+			quadTextureSprite = "GFX_map_gui_asia_phi" 
+			position = { x=292 y=263 }
+			pdx_tooltip_delayed = "asia_map_phi_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Гавайи
+			name = "asia_map_hawai"
+			quadTextureSprite = "GFX_map_gui_asia_hawai" 
+			position = { x=775 y=234 }
+			pdx_tooltip_delayed = "asia_map_hawai_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Окинава
+			name = "asia_map_okinawa"
+			quadTextureSprite = "GFX_map_gui_asia_okinawa" 
+			position = { x=345 y=204 }
+			pdx_tooltip_delayed = "asia_map_okinawa_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Малайа
+			name = "asia_map_malaya"
+			quadTextureSprite = "GFX_map_gui_asia_malaya" 
+			position = { x=197 y=333 }
+			pdx_tooltip_delayed = "asia_map_malaya_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Индокитай
+			name = "asia_map_indochina"
+			quadTextureSprite = "GFX_map_gui_asia_indochina" 
+			position = { x=182 y=239 }
+			pdx_tooltip_delayed = "asia_map_indochina_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Соломоновы острова
+			name = "asia_map_solomon"
+			quadTextureSprite = "GFX_map_gui_asia_solomon" 
+			position = { x=503 y=403 }
+			pdx_tooltip_delayed = "asia_map_solomon_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Новая Зеландия
+			name = "asia_map_newzeland"
+			quadTextureSprite = "GFX_map_gui_asia_newzeland" 
+			position = { x=581 y=525 }
+			pdx_tooltip_delayed = "asia_map_newzeland_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Иводзима
+			name = "asia_map_iwojima"
+			quadTextureSprite = "GFX_map_gui_asia_iwojima" 
+			position = { x=432 y=221 }
+			pdx_tooltip_delayed = "asia_map_iwojima_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Каролинские острова
+			name = "asia_map_caroline"
+			quadTextureSprite = "GFX_map_gui_asia_caroline" 
+			position = { x=405 y=318 }
+			pdx_tooltip_delayed = "asia_map_caroline_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Марианские острова
+			name = "asia_map_mariana"
+			quadTextureSprite = "GFX_map_gui_asia_mariana" 
+			position = { x=448 y=278 }
+			pdx_tooltip_delayed = "asia_map_mariana_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Маршалловы острова
+			name = "asia_map_marshall"
+			quadTextureSprite = "GFX_map_gui_asia_marshall" 
+			position = { x=549 y=307 }
+			pdx_tooltip_delayed = "asia_map_marshall_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Палау
+			name = "asia_map_palau"
+			quadTextureSprite = "GFX_map_gui_asia_palau" 
+			position = { x=384 y=327 }
+			pdx_tooltip_delayed = "asia_map_palau_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Суматра
+			name = "asia_map_sumatra"
+			quadTextureSprite = "GFX_map_gui_asia_sumatra" 
+			position = { x=169 y=345 }
+			pdx_tooltip_delayed = "asia_map_sumatra_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Ява
+			name = "asia_map_jawa"
+			quadTextureSprite = "GFX_map_gui_asia_jawa" 
+			position = { x=225 y=410 }
+			pdx_tooltip_delayed = "asia_map_jawa_scripted_tt"
+			scale = 0.55
+		}
+		buttonType = { # Маркус
+			name = "asia_map_markus"
+			quadTextureSprite = "GFX_map_gui_asia_markus" 
+			position = { x=502 y=231 }
+			pdx_tooltip_delayed = "asia_map_markus_scripted_tt"
+			scale = 0.55
+		}
+		
+		buttonType = { # 
+			name = "asia_map_help_open"
+			quadTextureSprite = GFX_help_button
+			position = { x=50 y=725 }
+		}
+		
+		instantTextBoxType = { # 
+			name = "progress_bar_name_box"
+			text = "[progress_bar_name]"
+			position = { x=306 y=625 }
+			maxWidth = 300
+			format = center
+			font = "hoi_36header"
+		}
+		
+		iconType = {
+            name = "progress_bar_USA"
+            spriteType = "GFX_progress_bar_USA"
+            position = {x = 40 y=680}
+        }
+		iconType = {
+            name = "progress_bar_JAP"
+            spriteType = "GFX_progress_bar_JAP"
+            position = {x = 40 y=680}
+        }
+
+		
+		iconType = {
+			name = flag_USA
+			quadTextureSprite ="GFX_shield_medium"
+			position = { x= 40 y = 620 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip_delayed = "progress_bar_USA_tt"
+		}
+		iconType = {
+			name = flag_JAP
+			quadTextureSprite ="GFX_shield_medium"
+			position = { x= 790 y = 620 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip_delayed = "progress_bar_JAP_tt"
+		}
+	}
+}

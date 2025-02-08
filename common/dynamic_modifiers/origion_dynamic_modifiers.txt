@@ -1,0 +1,38 @@
+### PACIFIC WARFARE
+
+pacific_warfare_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_generic_navy_carrier_bonus
+	
+	consumer_goods_expected_value = pacific_dm_consumer_goods_expected_value
+	industrial_capacity_factory = pacific_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = pacific_dm_industrial_capacity_dockyard
+	
+	local_resources_factor = pacific_dm_local_resources_factor
+	production_lack_of_resource_penalty_factor = pacific_dm_production_lack_of_resource_penalty_factor
+}
+pacific_warfare_state_defense_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+    army_attack_factor = -0.5
+}
+pacific_warfare_state_attack_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_GER_blitzkrieg
+    army_attack_factor = 0.2
+}
+pacific_warfare_defense_JAP_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+    army_attack_factor = 3
+}
+pacific_warfare_asia_construct_debuff_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense
+    state_production_speed_air_base_factor = -1
+}
+atlantikwall_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+    army_attack_factor = -2
+}
