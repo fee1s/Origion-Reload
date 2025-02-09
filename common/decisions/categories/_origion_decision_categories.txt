@@ -13,20 +13,11 @@ origion_rerol_dec_cat = {
 	}
 }
 Origion_fast_templates = { #авто-шаблоны сисикал
-    allowed = {
-    }
-	
-    visible = {
-    }
 }
 Epsilon_decions = {
 	icon =  generic_propaganda
 
 	allowed = {
-		
-	}
-	
-	visible = {
 		
 	}
 }
@@ -39,21 +30,16 @@ USA_kambeck = {
 	allowed = {
 		original_tag = USA
 	}
-	
-	visible = {
-		USA = { has_full_control_of_state = 948 }
-	}
 }
-ENG_annex = {
+ENG_house_of_commons = {
 	
-	icon = eng_appeal_to_imperial_loyalists
+	icon = GFX_decision_category_usa_congress
 
 	allowed = {
 		original_tag = ENG
 	}
-	visible = {
-		COL = { has_full_control_of_state = 948 }
-	}
+	
+	priority = 15
 }
 FRA_annex = {
 	
@@ -62,10 +48,6 @@ FRA_annex = {
 	
 	allowed = {
 		original_tag = FRA
-	}
-	
-	visible = {
-		COL = { has_full_control_of_state = 948 }
 	}
 }
 HUN_annex = {
@@ -76,24 +58,6 @@ HUN_annex = {
 	allowed = {
 		original_tag = HUN
 	}
-	
-	visible = {
-		COL = { has_full_control_of_state = 948 }
-	}
-}
-SOV_annex = {
-	
-	icon = military_operation
-	
-	picture = generic_army_support
-	
-	allowed = {
-		original_tag = SOV
-	}
-	
-	visible = {
-		COL = { has_full_control_of_state = 948 }
-	}
 }
 USA_annex = {
 	
@@ -102,9 +66,5 @@ USA_annex = {
 	
 	allowed = {
 		original_tag = USA
-	}
-	
-	visible = {
-		COL = { has_full_control_of_state = 948 }
 	}
 }

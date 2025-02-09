@@ -629,9 +629,13 @@ technologies = {
 	
 	marines2 = {
 
+
 		marine = {
 			max_organisation = 5
 			soft_attack = 0.05
+		}
+		enable_subunits = {
+			marine_commando
 		}
 		path = {
 			leads_to_tech = marines3

@@ -1221,44 +1221,8 @@ characters={
 
 
 	### POLITICAL ADVISORS ###
-
-	USA_cordell_hull={	
-		name=USA_cordell_hull
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_6"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = USA_cordell_hull
-			allowed  = {
-				original_tag = USA
-			}
-			traits  = {
-				captain_of_industry
-			}
-		}
-	}
-
-	USA_henry_stimson={
-		name=USA_henry_stimson
-		portraits={
-			army={
-				small=GFX_portrait_USA_henry_stimson_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = USA_henry_stimson
-			allowed  = {
-				original_tag = USA
-			}
-			traits  = {
-				war_industrialist 
-			}
-		}
-	}
+		
+	#Earl Bowder up ther
 
 	USA_robert_taft={
 		name=USA_robert_taft
@@ -1278,41 +1242,34 @@ characters={
 			}
 		}
 	}
-
-	USA_donald_nelson={
-		name=USA_donald_nelson
+	
+	USA_victor_perlo={
+		name=USA_victor_perlo
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
+				small=GFX_portrait_USA_victor_perlo_small
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = USA_donald_nelson
+			idea_token = victor_perlo
 			allowed  = {
 				original_tag  = USA
 			}
-			traits  = {
-				popular_figurehead 
+			available  = {
+				has_completed_focus = USA_militarized_WPA
 			}
-		}
-	}
-
-	USA_harry_white={
-		name=USA_harry_white
-		portraits={
-			army={
-				small="GFX_idea_USA_harry_white"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = harry_white
-			allowed  = {
-				original_tag  = USA
+			visible  = {
+				has_dlc = "Man the Guns"
 			}
 			traits  = {
-				technocrat
+				economist 
+			}
+			cost  = 0.000
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 0.000
 			}
 		}
 	}
@@ -1328,54 +1285,48 @@ characters={
 			slot = political_advisor
 			idea_token = USA_henry_morgenthau
 			allowed  = {
-				original_tag = USA
+				original_tag  = USA
 			}
 			traits  = {
 				financial_expert 
 			}
 		}
 	}
-	
-	USA_victor_perlo={
-		name=USA_victor_perlo
+
+	USA_henry_stimson={
+		name=USA_henry_stimson
 		portraits={
 			army={
-				small=GFX_portrait_USA_victor_perlo_small
+				small=GFX_portrait_USA_henry_stimson_small
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = victor_perlo
+			idea_token = USA_henry_stimson
 			allowed  = {
 				original_tag  = USA
 			}
-			available = {
-				has_war_with = JAP
-			}
 			traits  = {
-				economist 
+				war_industrialist 
 			}
 		}
 	}
 
-	USA_joseph_patterson={
-		name=USA_joseph_patterson
+	USA_donald_nelson={
+		name=USA_donald_nelson
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_4"
+				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = USA_joseph_patterson
+			idea_token = USA_donald_nelson
 			allowed  = {
-				original_tag = USA
-			}
-			available = {
-				date > 1944.6.1
+				original_tag  = USA
 			}
 			traits  = {
-				american_caesar
+				armaments_organizer 
 			}
 		}
 	}

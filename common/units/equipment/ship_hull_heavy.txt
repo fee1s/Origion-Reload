@@ -95,11 +95,6 @@ equipments = {
 		}
 
 		module_count_limit = {
-			category = ship_airplane_launcher
-			count < 3
-		}
-
-		module_count_limit = {
 			category = ship_heavy_battery
 			count < 5
 		}
@@ -267,13 +262,11 @@ equipments = {
 					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
-					ship_airplane_launcher
 				}
 			}
 			mid_2_custom_slot = {
 				required = no
 				allowed_module_categories = {
-					ship_airplane_launcher
 					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
@@ -284,6 +277,7 @@ equipments = {
 				allowed_module_categories = {
 					ship_anti_air
 					ship_heavy_battery
+					ship_airplane_launcher
 				}
 			}
 		}
@@ -345,7 +339,6 @@ equipments = {
 					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
-					ship_airplane_launcher
 					ship_heavy_battery
 				}
 			}
@@ -416,7 +409,6 @@ equipments = {
 					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
-					ship_airplane_launcher
 					ship_heavy_battery
 				}
 			}
@@ -487,7 +479,6 @@ equipments = {
 					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
-					ship_airplane_launcher
 					ship_heavy_battery
 				}
 			}
@@ -578,24 +569,17 @@ equipments = {
 			mid_1_custom_slot = {
 				required = no
 				allowed_module_categories = {
-					ship_anti_air
 					ship_secondaries
 					ship_dp_secondaries
 				}
 			}
 			mid_2_custom_slot = mid_1_custom_slot
 			mid_3_custom_slot = mid_1_custom_slot
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_airplane_launcher
-				}
-			}
+			rear_1_custom_slot = mid_1_custom_slot
+			
 			rear_2_custom_slot = {
 				required = no
 				allowed_module_categories = {
-					ship_anti_air
 					ship_airplane_launcher
 				}
 			}

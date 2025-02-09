@@ -459,7 +459,6 @@ ship_heavy_battery_3 = {
 		    ship_light_medium_battery
 		    dp_light_battery
 		    ship_light_battery  
-			ship_torpedo
 		}
 
 		can_convert_from = {
@@ -494,8 +493,7 @@ ship_heavy_battery_3 = {
 		forbid_module_categories = {
 		    ship_light_medium_battery
 		    dp_light_battery
-		    ship_light_battery 
-			ship_torpedo
+		    ship_light_battery  
 		}
 
 		can_convert_from = {
@@ -534,7 +532,6 @@ ship_heavy_battery_3 = {
 		    ship_light_medium_battery
 		    dp_light_battery
 		    ship_light_battery  
-			ship_torpedo
 		}
 
 		can_convert_from = {
@@ -579,7 +576,6 @@ ship_heavy_battery_3 = {
 		    ship_light_medium_battery
 		    dp_light_battery
 		    ship_light_battery 
-			ship_torpedo
 		}
 
 		can_convert_from = {
@@ -615,7 +611,7 @@ ship_heavy_battery_3 = {
 		}
 
 		forbid_module_categories = {
-		    ship_medium_battery
+		     ship_medium_battery
 		}
 
 		can_convert_from = {
@@ -799,7 +795,7 @@ ship_heavy_battery_3 = {
 
 		
 		add_stats = {
-			lg_attack = 3
+			lg_attack = 4.5
 			build_cost_ic = 180
 		}
 		
@@ -808,7 +804,7 @@ ship_heavy_battery_3 = {
 		}
 
 		add_average_stats = {
-			lg_armor_piercing = 5.5
+			lg_armor_piercing = 6
 		}
 		
 		can_convert_from = {
@@ -825,7 +821,7 @@ ship_heavy_battery_3 = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			lg_attack = 4
+			lg_attack = 5.5
 			build_cost_ic = 240
 		}
 		multiply_stats = {
@@ -833,7 +829,7 @@ ship_heavy_battery_3 = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 7
+			lg_armor_piercing = 7.5
 		}
 		
 		can_convert_from = {
@@ -850,7 +846,7 @@ ship_heavy_battery_3 = {
 		gfx = dp_secondary_battery_1
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			lg_attack = 2
+			lg_attack = 3
 			anti_air_attack = 1
 			build_cost_ic = 180
 		}
@@ -860,7 +856,7 @@ ship_heavy_battery_3 = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 3
+			lg_armor_piercing = 4
 		}
 		
 		can_convert_from = {
@@ -883,7 +879,7 @@ ship_heavy_battery_3 = {
 		gfx = dp_secondary_battery_2
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			lg_attack = 3
+			lg_attack = 4
 			anti_air_attack = 2
 			build_cost_ic = 240
 		}
@@ -893,7 +889,7 @@ ship_heavy_battery_3 = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 5
+			lg_armor_piercing = 6
 		}
 		
 		can_convert_from = {
@@ -916,7 +912,7 @@ ship_heavy_battery_3 = {
 		gfx = dp_secondary_battery_3
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			lg_attack = 4
+			lg_attack = 5
 			anti_air_attack = 2.5
 			build_cost_ic = 300
 		}
@@ -926,7 +922,7 @@ ship_heavy_battery_3 = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 5.5
+			lg_armor_piercing = 6.5
 		}
 		
 		can_convert_from = {
@@ -949,7 +945,7 @@ ship_heavy_battery_3 = {
 		gfx = dp_secondary_battery_4
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			lg_attack = 4.5
+			lg_attack = 5.5
 			anti_air_attack = 3
 			build_cost_ic = 360
 		}
@@ -959,7 +955,7 @@ ship_heavy_battery_3 = {
 		}
 		
 		add_average_stats = {
-			lg_armor_piercing = 7
+			lg_armor_piercing = 7.5
 		}
 		
 		can_convert_from = {
@@ -973,7 +969,7 @@ ship_heavy_battery_3 = {
 		}
 		critical_parts = { damaged_secondaries }
 	}
-		ship_anti_ship_5 = {
+	ship_anti_ship_5 = { # ахахах колдер моддинг
 		abbreviation = "sba"
 		category = ship_dp_secondaries
 		gui_category = ship_secondaries
@@ -987,11 +983,11 @@ ship_heavy_battery_3 = {
 		multiply_stats = {
 			naval_speed = -0.05
 		}
-		
+			
 		add_average_stats = {
 			lg_armor_piercing = 18
 		}
-		
+			
 		can_convert_from = {
 			module_category = ship_secondaries_1
 			convert_cost_ic = 5000
@@ -1010,8 +1006,9 @@ ship_heavy_battery_3 = {
 			module_category = ship_dp_secondaries_4
 			convert_cost_ic = 5000
 		}
+		
 		critical_parts = { damaged_secondaries }
-	}
+	}	
 
 
  ##  #  # ### ###      ##  ### ###  
@@ -2328,9 +2325,9 @@ ship_heavy_battery_3 = {
 		multiply_stats = {
 			naval_speed = -0.05
 		}
-		build_cost_resources = {
-			steel = 1
-		}
+		#build_cost_resources = {
+		#	steel = 1
+		#}
 		dismantle_cost_ic = 700
 	}
 

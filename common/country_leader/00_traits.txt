@@ -42,69 +42,6 @@
 ###Todo remove commented advisor experience gains
 
 leader_traits = {
-	
-	#General
-
-	captain_of_industry = {
-		sprite = 10
-		production_speed_industrial_complex_factor = 0.1
-		production_speed_infrastructure_factor = 0.1
-		production_speed_rail_way_factor = 0.1
-		production_speed_synthetic_refinery_factor = 0.1
-	}
-
-	war_industrialist = {
-		sprite = 10
-		production_speed_arms_factory_factor = 0.1
-		production_speed_dockyard_factor = 0.1
-		production_speed_fuel_silo_factor = 0.1
-	}
-
-	silent_workhorse = {
-		sprite = 10
-		political_power_factor = 0.15
-	}
-
-	#AXIS
-
-	prince_of_terror = {
-		sprite = 13
-		army_core_attack_factor = 0.05
-		army_core_defence_factor = 0.05
-		conscription = 0.01	
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	smooth_talking_charmer = {
-		sprite = 10
-		local_resources_factor = 0.1
-	}
-
-	armaments_organizer = {
-		sprite = 10
-		production_factory_efficiency_gain_factor = 0.05
-	}
-
-	#GER
-
-	propaganda_expert = {
-		sprite = 10
-		war_support_factor = 0.10
-		fascism_drift = 0.1
-	}
-
-	amateur_aviator_hess = {
-		sprite = 1
-		political_power_factor = 0.05
-		equipment_bonus = {
-			small_plane_airframe = {
-				build_cost_ic = -0.05
-			}
-		}
-	}
 
     GER_speer_rework = {
 		sprite = 10
@@ -113,115 +50,6 @@ leader_traits = {
 		line_change_production_efficiency_factor = 0.1
 	}
 	
-	#ITA
-
-	hierarch_minister_of_justice = {
-		sprite = 10
-		political_power_factor = 0.1
-		research_speed_factor = 0.1
-	}
-
-	hierarch_minister_of_corporations = {
-		sprite = 10
-		industrial_capacity_factory = 0.05
-		industrial_capacity_dockyard = 0.05
-	}
-
-	#JAP
-
-	ideological_crusader = {
-		sprite = 10
-		stability_weekly = 0.005
-		war_support_weekly = 0.005
-	}
-
-	JAP_tojo = {
-		sprite = 10
-		production_speed_buildings_factor = 0.1
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
-	}
-
-	#Allies
-
-	popular_figurehead = {
-		sprite = 10
-		stability_factor = 0.15
-	}
-
-	technocrat = {
-		sprite = 10
-		global_building_slots_factor = 0.2
-	}
-
-	financial_expert = {
-		sprite = 10
-		consumer_goods_expected_value = -0.05
-	}
-
-	#ENG
-
-	rearmer = {
-		sprite = 10
-		political_power_factor = -0.25
-		equipment_bonus = {
-			small_plane_airframe = {
-				build_cost_ic = -0.05
-			}
-		}
-	}
-
-	colonial_lawyer = {
-		sprite = 10
-		consumer_goods_expected_value = 0.1
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
-	}
-
-	#USA
-
-	economist = {
-		sprite = 10
-		production_factory_max_efficiency_factor = 0.05
-		consumer_goods_expected_value = -0.05
-	}
-
-	american_caesar = {
-		sprite = 10
-		army_attack_factor = 0.05
-		army_defence_factor = 0.05
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	###
 
 	dictator = {
@@ -1143,6 +971,23 @@ leader_traits = {
 		}
 	}
 
+	popular_figurehead2 = {
+		sprite = 13
+		stability_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	popular_figurehead3 = {
+		sprite = 13
+		stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	american_caesar = {
 		random = no
 		high_command_cost_factor = -0.25
@@ -3168,7 +3013,15 @@ leader_traits = {
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
 
-
+	hierarch_minister_of_justice = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		political_power_factor = 0.05
+		improve_relations_maintain_cost_factor = -0.5
+		resistance_decay = 0.05
+		custom_modifier_tooltip = ITA_hierarch_bop_tt
+	}
 
 	hierarch_minister_of_education = {
 		random = no
@@ -3180,7 +3033,15 @@ leader_traits = {
 		custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
 
-
+	hierarch_minister_of_corporations = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.05
+		fascism_drift = 0.05
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		custom_modifier_tooltip = ITA_hierarch_bop_tt
+	}
 
 	minister_of_peasants = {
 		random = no
@@ -5998,6 +5859,21 @@ leader_traits = {
 		}
 	}
 
+	fascist_demagogue = {
+		random = no
+		# Boosts Fascism
+		sprite = 13
+		fascism_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				tag = USA
+				NOT = { has_completed_focus = USA_america_first }
+				factor = 0
+			}
+		}
+	}
 	staunch_monarchist = {
 		random = no
 		# Boosts Unaligned
@@ -6063,6 +5939,14 @@ leader_traits = {
 		}
 	}
 
+	popular_figurehead = {
+		sprite = 13
+		stability_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	anti_communist_crusader = {
 		sprite = 13
 		stability_factor = 0.05
@@ -6073,9 +5957,44 @@ leader_traits = {
 		}
 	}
 
-	
+	propaganda_expert = {
+		sprite = 13
+		war_support_factor = 0.10
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	technocrat = {
+		sprite = 13
 
+		production_speed_industrial_complex_factor = 0.05
+		research_speed_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	silent_workhorse = {
+		random = yes
+		sprite = 13
+		political_power_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	prince_of_terror = {
+		sprite = 13
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	ROM_conductor = {
 		random = no
@@ -6127,7 +6046,28 @@ leader_traits = {
 		}
 	}
 
+	smooth_talking_charmer = {
+		random = yes
+		sprite = 13
+		improve_relations_maintain_cost_factor = -0.5
+		trade_opinion_factor = 0.10
+		political_power_factor = 0.05
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ideological_crusader = {
+		random = yes
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 1.0
+		party_popularity_stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
 
 	fortification_engineer = {
 		sprite = 10
@@ -6138,6 +6078,55 @@ leader_traits = {
 
 		ai_will_do = {
 			factor = 1
+		}
+	}
+
+	war_industrialist = {
+		sprite = 10
+		random = yes
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+		production_speed_fuel_silo_factor = 0.1
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	captain_of_industry = {
+		sprite = 10
+		random = yes
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.8
+				date < 1939.1.1
+			}
+		}
+	}
+
+	financial_expert = {
+		sprite = 10
+		random = yes
+		consumer_goods_factor = -0.15
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	economist = {
+		sprite = 10
+		random = yes
+		production_factory_max_efficiency_factor = 0.05
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 2
 		}
 	}
 
@@ -6152,6 +6141,17 @@ leader_traits = {
 		}
 	}
 
+	armaments_organizer = {
+		sprite = 10
+		random = yes
+		conversion_cost_civ_to_mil_factor = -0.2
+		production_speed_supply_node_factor = 0.1
+		# civ_to_mil_industry_conversion_rate = -1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	reluctant_interventionist = {
 		random = yes
 		stability_factor = 0.05
@@ -6377,6 +6377,19 @@ leader_traits = {
 		}
 	}
 
+	princess_of_terror = {
+		random = no
+		sprite = 13
+
+		resistance_damage_to_garrison = -0.25
+		foreign_subversive_activites = -0.3
+		non_core_manpower = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	socialist_novelist = {
 		random = no
 		sprite = 13
@@ -6420,6 +6433,17 @@ leader_traits = {
 
 		stability_factor = 0.05
 		consumer_goods_factor = -0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	old_figurehead = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.15
 
 		ai_will_do = {
 			factor = 1
@@ -7468,6 +7492,18 @@ leader_traits = {
 		}
 	}
 
+	colonial_lawyer = {
+		random = no
+		sprite = 13
+		
+		autonomy_gain = -0.1
+		stability_factor = 0.15
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 	teacher_and_independence_advocate = {
 		random = no
 		sprite = 13
@@ -8080,6 +8116,19 @@ leader_traits = {
 		industrial_capacity_factory = 0.1 
 		communism_drift = 0.03
 	}
+
+
+	#Hess
+	amateur_aviator_hess = {
+		sprite = 1
+		political_power_factor = 0.15
+		equipment_bonus = {
+			medium_plane_fighter_airframe = {
+				build_cost_ic = -0.025
+			}
+		}
+	}
+
 
 	###
 

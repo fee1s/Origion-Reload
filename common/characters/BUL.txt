@@ -1318,21 +1318,83 @@ characters = {
 ##        ##     ## ##        ##     ##     ##  ##    ## ##     ## ##          ##     ## ##     ##   ## ##    ##  ##    ## ##     ## ##    ##  ##    ## 
 ##         #######  ######## ####    ##    ####  ######  ##     ## ########    ##     ## ########     ###    ####  ######   #######  ##     ##  ######  
 
-	BUL_dobri_bozhilov = {
-		name = BUL_dobri_bozhilov
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_dobri_bozhilov"
+
+	BUL_georgi_ivanov_kyoseivanov = {
+		instance = {
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			advisor = {
+			slot = political_advisor
+			idea_token = BUL_georgi_ivanov_kyoseivanov
+			allowed = {
+					has_dlc = "Battle for the Bosporus"
+					original_tag = BUL
+				}
+				available = {
+					NOT = {
+						has_government = communism 
+					}
+				}
+				visible = {
+					NOT = {
+						has_country_leader  = {
+							character = BUL_georgi_ivanov_kyoseivanov
+						}
+					}
+				}
+				traits = {
+					tsars_puppet 
+				}
+			}
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					incompetent_leader
+				}
+			}
+			name = BUL_georgi_ivanov_kyoseivanov
+			portraits = {
+				army = {
+					small = "GFX_idea_bul_georgi_kyoseivanov"
+				}
+				civilian = {
+					large = "GFX_portrait_bul_georgi_kyoseivanov"
+				}
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = BUL_dobri_bozhilov
+
+		instance = {
 			allowed = {
-				original_tag = BUL
+				NOT = {
+					has_dlc = "Battle for the Bosporus"
+				}
 			}
-			traits = {
-				captain_of_industry 
+			advisor = {
+				slot = political_advisor
+				idea_token = BUL_georgi_ivanov_kyoseivanov
+				allowed = {
+					NOT = {
+						has_dlc = "Battle for the Bosporus"
+					}
+					original_tag = BUL
+				}
+				traits = {
+					backroom_backstabber 
+				}
+				ai_will_do = {
+					factor = 0.000
+				}
+			}
+			name = BUL_georgi_ivanov_kyoseivanov
+			portraits = {
+				army = {
+					small = "GFX_idea_generic_political_advisor_europe_3"
+				}
+				civilian = {
+					large = "GFX_portrait_bul_georgi_kyoseivanov"
+				}
 			}
 		}
 	}
@@ -1344,90 +1406,400 @@ characters = {
 				small = "GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = BUL_valko_chervenkov
+	}
+
+	BUL_nikola_petkov = {
+		instance = {
 			allowed = {
-				original_tag = BUL
+				has_dlc = "Battle for the Bosporus"
 			}
-			traits = {
-				war_industrialist 
+			
+			name = BUL_nikola_petkov
+
+			portraits = {
+				army = {
+					small = "GFX_idea_bul_nikola_petkov"
+				}
+			}
+
+			advisor = {
+				slot = political_advisor
+				idea_token = BUL_nikola_petkov
+				allowed = {
+					has_dlc = "Battle for the Bosporus"
+					original_tag = BUL
+				}
+				available = {
+					has_country_flag = BUL_appointed_bzns_members_flag 
+				}
+				traits = {
+					leader_of_the_agrarian_union 
+				}
+				ai_will_do = {
+					base = 3.000
+				}
+			}
+		}
+
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Battle for the Bosporus" }
+			}
+
+			name = BUL_nikola_petkov
+
+			portraits = {
+				civilian = {
+					large = GFX_portrait_BUL_nikola_petkov
+				}
+			}
+
+			country_leader = {
+				ideology = socialism
+				expire = "1965.1.1.1"
+				id = -1
 			}
 		}
 	}
 
-	BUL_kimon_georgiev = {
-		name = BUL_kimon_georgiev
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_kimon_georgiev"
-			}
-		}
+	BUL_vasil_kolarov = {
 		advisor = {
 			slot = political_advisor
-			idea_token = BUL_kimon_georgiev
+			idea_token = BUL_vasil_kolarov
 			allowed = {
+				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
+			visible = { always = no }
+			available = {
+				NOT = {
+					has_completed_focus = BUL_power_to_the_tsar 
+				}
+			}
 			traits = {
-				silent_workhorse 
+				communist_revolutionary 
+			}
+			ai_will_do = {
+				base = 1.000
+				modifier = {
+					factor = 3.000
+					OR = {
+						BUL_is_communist_stalinist_ai = yes 
+						BUL_is_communist_balkan_ai = yes 
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							BUL_is_communist_stalinist_ai = yes 
+							BUL_is_communist_balkan_ai = yes 
+						}
+					}
+				}
+			}
+		}
+		name = BUL_vasil_kolarov
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_vasil_kolarov"
+			}
+		}
+	}
+
+	BUL_valko_chervenkov = {
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_valko_chervenkov
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			visible = { always = no }
+			available = {
+				has_completed_focus = BUL_appoint_communist_ministers 
+			}
+			traits = {
+				captain_of_industry 
+			}
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+		name = BUL_valko_chervenkov
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_valko_chervenkov"
+			}
+		}
+	}
+
+	BUL_todor_pavlov = {
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_todor_pavlov
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			available = {
+				has_country_flag = BUL_appointed_bs_members_flag 
+				NOT = {
+					has_government = fascism 
+				}
+			}
+			traits = {
+				marxist_philosopher 
+			}
+			visible = { always = no }
+			ai_will_do = {
+				base = 3.000
+				modifier = {
+					factor = 0
+					BUL_is_historical_ai = yes
+					#NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system } #Better not to hire him Boris, he'll definitely make it easier for the Fatherland Front later on, even though you won't be there to see it
+				}
+			}
+		}
+		name = BUL_todor_pavlov
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_todor_pavlov"
 			}
 		}
 	}
 
 	BUL_ivan_dochev = {
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_ivan_dochev
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			available = {
+				NOT = {
+					has_completed_focus = BUL_oppose_the_royal_dictatorship 
+				}
+			}
+			traits = {
+				fascist_demagogue 
+			}
+			ai_will_do = {
+				base = 1.000
+				modifier = {
+					factor = 3.000
+					BUL_is_fascist_axis_ai = yes 
+				}
+			}
+		}
 		name = BUL_ivan_dochev
 		portraits = {
 			army = {
 				small = "GFX_idea_bul_ivan_dochev"
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = BUL_ivan_dochev
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				prince_of_terror 
-			}
-		}
-	}
-
-	BUL_nikola_petkov = {
-		name = BUL_nikola_petkov
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_nikola_petkov"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = BUL_nikola_petkov
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				smooth_talking_charmer 
-			}
-		}
 	}
 
 	BUL_aleksandar_tsankov = {
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_aleksandar_tsankov
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			available = {
+				has_country_flag = BUL_appointed_nsm_members_flag 
+				NOT = {
+					has_government = communism 
+				}
+			}
+			traits = {
+				statism_adept 
+			}
+			ai_will_do = {
+				base = 3.000
+			}
+		}
 		name = BUL_aleksandar_tsankov
 		portraits = {
 			army = {
 				small = "GFX_idea_bul_aleksandar_tsankov"
 			}
+			civilian = {
+				large = "GFX_portrait_bul_aleksandar_tsankov"
+			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = BUL_aleksandar_tsankov
+	}
+
+	BUL_dobri_bozhilov = {
+		instance = {
 			allowed = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = BUL_dobri_bozhilov
+				allowed = {
+					has_dlc = "Battle for the Bosporus"
+					original_tag = BUL
+				}
+				available = {
+					NOT = {
+						has_completed_focus = BUL_oppose_the_royal_dictatorship 
+					}
+				}
+				traits = {
+					captain_of_industry 
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			name = BUL_dobri_bozhilov
+			portraits = {
+				army = {
+					small = "GFX_idea_bul_dobri_bozhilov"
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
+			advisor = {
+			slot = political_advisor
+			idea_token = BUL_dobri_bozhilov
+			allowed = {
+				NOT = {
+					has_dlc = "Battle for the Bosporus"
+				}
 				original_tag = BUL
 			}
+				traits = {
+					captain_of_industry 
+				}
+			}
+			name = BUL_dobri_bozhilov
+			portraits = {
+				army = {
+					small = "GFX_idea_generic_political_advisor_europe_2"
+				}
+			}
+		}
+	}
+	
+	BUL_bogdan_filov_fascism = { #TODO_Manu: THIS GUY IS SPLIT INTO TWO VERSIONS -> SHOULD UNIFY
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_bogdan_filov_fascism
+			name = BUL_bogdan_filov 
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			available = {
+			}
+			visible = {
+				always = no
+			}
 			traits = {
-				armaments_organizer 
+				ambitious_negotiator_fascism 
+			}
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.000
+					is_historical_focus_on = yes 
+					date < 1940.01.01
+				}
+			}
+		}
+		name = BUL_bogdan_filov
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_bogdan_filov"
+			}
+		}
+	}
+	
+	BUL_bogdan_filov = {
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_bogdan_filov
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			available = {
+			}
+			visible = {
+				always = no
+			}
+			traits = {
+				ambitious_negotiator_neutrality 
+			}
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.000
+					is_historical_focus_on = yes 
+					date < 1940.01.01
+				}
+			}
+		}
+		country_leader = {
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					political_manipulator 
+				}
+		}
+		name = BUL_bogdan_filov
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_bogdan_filov"
+			}
+			civilian = {
+				large = "GFX_portrait_bul_bogdan_filov"
+			}
+		}
+	}
+	
+	BUL_kimon_georgiev = {
+		advisor = {
+			slot = political_advisor
+			idea_token = BUL_kimon_georgiev
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			available = {
+				has_country_flag = BUL_appointed_zveno_members_flag 
+				NOT = {
+					has_country_leader = {
+						character = BUL_kimon_georgiev
+						ruling_only = yes 
+					}
+				}
+			}
+			traits = {
+				technocrat 
+			}
+			ai_will_do = {
+				factor = 3.000
+			}
+		}
+		name = BUL_kimon_georgiev
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_kimon_georgiev"
+			}
+			civilian = {
+				large = "GFX_portrait_bul_kimon_georgiev"
 			}
 		}
 	}

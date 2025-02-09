@@ -692,44 +692,36 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
-	RAJ_john_mathai={
-		name=RAJ_john_mathai
-		portraits={
-			army={
-				small="GFX_idea_RAJ_john_mathai" #small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_john_mathai
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				captain_of_industry 
-			}
-		}
-	}
-
 	RAJ_bhimrao_ramji_ambedkar={
 		name=RAJ_bhimrao_ramji_ambedkar
 		portraits={
 			army={
 				smalL="GFX_idea_RAJ_bhimrao_ramji_ambedkar" #small="GFX_idea_generic_political_advisor_india_1"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_john_edward_golightly
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				war_industrialist 
-			}
-		}	
+		}		
 	}
 
+	RAJ_karam_singh_mann={
+		name=RAJ_karam_singh_mann
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_india_2"
+			}
+		}
+	}
+
+	RAJ_subhas_chanda_bose={
+		name=RAJ_subhas_chanda_bose
+		portraits={
+			army={
+				small="GFX_idea_RAJ_subhas_chanda_bose" #small="GFX_idea_generic_political_advisor_india_1"
+			}
+			civilian ={
+				large = "GFX_RAJ_subhas_chandra_bose" #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism)
+			}
+		}		
+	}
+	
 	RAJ_john_edward_golightly={
 		name=RAJ_john_edward_golightly
 		portraits={
@@ -748,7 +740,7 @@ characters={
 			}
 		}
 	}
-
+	
 	RAJ_chakravarti_rajagopalachari={
 		name=RAJ_chakravarti_rajagopalachari
 		portraits={
@@ -768,25 +760,43 @@ characters={
 		}
 	}
 
-	RAJ_karam_singh_mann={
-		name=RAJ_karam_singh_mann
+	RAJ_mahatma_mohandas_gandhi={
+		name=RAJ_mahatma_mohandas_gandhi
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_india_2"
+				small="GFX_idea_RAJ_mahatma_mohandas_gandhi" #small="GFX_idea_generic_political_advisor_arab_3"
+			}
+		}		
+	}
+
+	RAJ_john_mathai={
+		name=RAJ_john_mathai
+		portraits={
+			army={
+				small="GFX_idea_RAJ_john_mathai" #small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = RAJ_john_edward_golightly
+			idea_token = RAJ_john_mathai
 			allowed = {
 				original_tag = RAJ
 			}
 			traits = {
-				technocrat 
+				captain_of_industry 
 			}
 		}
 	}
 
+	RAJ_sir_mohammed_iqbal={
+		name=RAJ_sir_mohammed_iqbal
+		portraits={
+			army={
+				small="GFX_idea_RAJ_sir_mohammed_iqbal" #small="GFX_idea_generic_political_advisor_arab_3"
+			}
+		}
+	}
+	
 	RAJ_agha_khan_iii={
 		name=RAJ_agha_khan_iii
 		portraits={
@@ -801,8 +811,10 @@ characters={
 				original_tag = RAJ
 			}
 			traits = {
-				financial_expert 
+				ideological_crusader 
 			}
 		}
 	}
+	
+	#Illusive Gentleman auto-generated
 }

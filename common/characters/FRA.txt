@@ -1003,21 +1003,186 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
-	FRA_felix_gouin={
-		name=FRA_felix_gouin
+	# Thorez up there
+
+	FRA_leon_blum={
+		name=FRA_leon_blum
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_4"
+				small="GFX_idea_leon_blum"
+			}
+			civilian = {
+				large="GFX_portrait_fra_leon_blum"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = FRA_felix_gouin
+			idea_token = leon_blum
 			allowed  = {
 				original_tag  = FRA
 			}
 			traits  = {
-				captain_of_industry 
+				democratic_reformer 
+			}
+			do_effect  = {
+				NOT  = {
+					has_government  = democratic 
+				}
+			}
+			ai_will_do  = {
+				factor  = 0.000
+			}
+		}
+	}
+
+	FRA_marcel_bucard={
+		name=FRA_marcel_bucard
+		portraits={
+			army={
+				small="GFX_idea_marcel_bucard"
+			}
+		}
+	}
+
+	FRA_rene_massigli={
+		name=FRA_rene_massigli
+		portraits={
+			army={
+				small="GFX_idea_rene_massigli"
+			}
+		}
+	}
+
+	FRA_georges_bonnet={
+		name=FRA_georges_bonnet
+		portraits={
+			army={
+				small="GFX_idea_georges_bonnet"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = georges_bonnet
+			allowed  = {
+				original_tag  = FRA
+			}
+			available  = {
+				has_completed_focus  = FRA_buy_time
+			}
+			cost  = 75.000
+			traits  = {
+				appeaser 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_charles_maurras={
+		name=FRA_charles_maurras
+		portraits={
+			army={
+				small=GFX_portrait_FRA_charles_maurras_small
+			}
+		}		
+	}
+
+	FRA_philippe_henriot={
+		name=FRA_philippe_henriot
+		portraits={
+			army={
+				small="GFX_idea_FRA_philippe_henriot"
+			}
+		}
+	}
+
+	FRA_pierre_pucheu={
+		name=FRA_pierre_pucheu
+		portraits={
+			army={
+				small="GFX_idea_FRA_pierre_pucheu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_pierre_pucheu
+			allowed  = {
+				original_tag  = FRA
+			}
+			cost  = 150.000
+			traits  = {
+				technocrat 
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+	
+	FRA_gaston_henry_haye={
+		name=FRA_gaston_henry_haye
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = FRA_gaston_henry_haye
+			allowed  = {
+				original_tag  = FRA
+			}
+			traits  = {
+				silent_workhorse 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	FRA_jacques_duclos={
+		name=FRA_jacques_duclos
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
+				large=GFX_portrait_FRA_jacques_duclos #Used only as Operative atm
+			}
+		}
+	}
+
+	FRA_paul_baudouin={
+		name=FRA_paul_baudouin
+		portraits={
+			army={
+				small="GFX_idea_FRA_paul_baudouin"
+			}
+		}
+	}
+
+	FRA_vincent_auriol={
+		name=FRA_vincent_auriol
+		portraits={
+			army={
+				small="GFX_idea_FRA_vincent_auriol"
+			}
+		}
+	}
+
+	FRA_roger_salengro={
+		name=FRA_roger_salengro
+		portraits={
+			army={
+				small="GFX_idea_FRA_roger_salengro"
 			}
 		}
 	}
@@ -1038,81 +1203,68 @@ characters={
 			traits  = {
 				war_industrialist 
 			}
-		}
-	}
-
-	FRA_gaston_henry_haye={
-		name=FRA_gaston_henry_haye
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_5"
+			on_add  = {
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_gaston_henry_haye
-			allowed  = {
-				original_tag  = FRA
+			do_effect  = {
 			}
-			traits  = {
-				silent_workhorse 
+			ai_will_do  = {
+				factor  = 1.000
 			}
 		}
 	}
 
-	FRA_leon_blum={
-		name=FRA_leon_blum
+	FRA_felix_gouin={
+		name=FRA_felix_gouin
 		portraits={
 			army={
-				small="GFX_idea_leon_blum"
+				small="GFX_idea_generic_political_advisor_europe_4"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = leon_blum
+			idea_token = FRA_felix_gouin
 			allowed  = {
 				original_tag  = FRA
 			}
 			traits  = {
-				popular_figurehead 
+				captain_of_industry 
+			}
+			on_add  = {
+			}
+			do_effect  = {
+			}
+			ai_will_do  = {
+				factor  = 1.000
 			}
 		}
 	}
 
-	FRA_georges_bonnet={
-		name=FRA_georges_bonnet
+	FRA_charles_tillon={
+		name=FRA_charles_tillon
 		portraits={
 			army={
-				small="GFX_idea_georges_bonnet"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = georges_bonnet
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				technocrat 
+				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
 	}
 
-	FRA_pierre_pucheu={
-		name=FRA_pierre_pucheu
+	FRA_paul_reynaud={
+		name=FRA_paul_reynaud
 		portraits={
 			army={
-				small="GFX_idea_FRA_pierre_pucheu"
+				small=GFX_portrait_FRA_paul_reynaud_small
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_pierre_pucheu
-			allowed  = {
-				original_tag  = FRA
+			civilian = {
+				large = GFX_portrait_FRA_paul_reynaud
 			}
-			traits  = {
-				financial_expert 
+		}		
+	}
+	
+	FRA_maurice_gauche={
+		name=FRA_maurice_gauche
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
 	}
