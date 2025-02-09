@@ -46,34 +46,6 @@ characters={
 		}
 	}
 
-	ROM_armand_calinescu={
-		name=ROM_armand_calinescu
-		portraits={
-			civilian={
-				large="GFX_Portrait_romania_armand_calinescu"
-			}
-			army={
-				small="GFX_idea_ROM_armand_calinescu"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_armand_calinescu
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				prince_of_terror 
-			}
-		}
-
-		country_leader={
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
 	ROM_octavian_goga={
 		name=ROM_octavian_goga
 		portraits={
@@ -485,45 +457,6 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
-	# Calinescu up there
-
-	ROM_iuliu_maniu={
-		name=ROM_iuliu_maniu
-		portraits={
-			army={
-				small="GFX_idea_ROM_iuliu_maniu"
-			}
-		}
-	}
-
-	ROM_gheorghe_gheorghiu_dej={
-		name=ROM_gheorghe_gheorghiu_dej
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_gheorghiu_dej"
-			}
-		}
-	}
-
-	ROM_gheorghe_argeseanu={
-		name=ROM_gheorghe_argeseanu
-		portraits={
-			army={
-				small="GFX_idea_ROM_gheorghe_argeseanu"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_gheorghe_argeseanu
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				silent_workhorse 
-			}
-		}
-	}
-
 	ROM_nicolae_malaxa={
 		name=ROM_nicolae_malaxa
 		portraits={
@@ -544,6 +477,82 @@ characters={
 		}
 	}
 
+	ROM_iuliu_maniu={
+		name=ROM_iuliu_maniu
+		portraits={
+			army={
+				small="GFX_idea_ROM_iuliu_maniu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_gheorghe_argeseanu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	ROM_gheorghe_gheorghiu_dej={
+		name=ROM_gheorghe_gheorghiu_dej
+		portraits={
+			army={
+				small="GFX_idea_ROM_gheorghe_gheorghiu_dej"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_gheorghe_argeseanu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				silent_workhorse 
+			}
+		}
+	}
+
+	ROM_armand_calinescu={
+		name=ROM_armand_calinescu
+		portraits={
+			army={
+				small="GFX_idea_ROM_armand_calinescu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_armand_calinescu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				prince_of_terror 
+			}
+		}
+	}
+
+	ROM_gheorghe_argeseanu={
+		name=ROM_gheorghe_argeseanu
+		portraits={
+			army={
+				small="GFX_idea_ROM_gheorghe_argeseanu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_gheorghe_argeseanu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				smooth_talking_charmer 
+			}
+		}
+	}
+
 	ROM_petru_groza={
 		name=ROM_petru_groza
 		portraits={
@@ -551,42 +560,14 @@ characters={
 				small="GFX_idea_ROM_petru_groza"
 			}
 		}
-	}
-
-	ROM_mihail_sturdza={
-		name=ROM_mihail_sturdza
-		portraits={
-			army={
-				small="GFX_idea_ROM_mihail_sturdza"
-			}
-		}
 		advisor={
 			slot = political_advisor
-			idea_token = ROM_mihail_sturdza
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus = ROM_appoint_german_friendly_government
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
+			idea_token = ROM_gheorghe_argeseanu
 			allowed = {
 				original_tag = ROM
 			}
 			traits = {
-				fascist_demagogue 
-			}
-			ai_will_do = {
-				factor = 0.000
+				armaments_organizer 
 			}
 		}
 	}

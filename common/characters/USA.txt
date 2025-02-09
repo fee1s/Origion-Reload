@@ -1221,8 +1221,44 @@ characters={
 
 
 	### POLITICAL ADVISORS ###
-		
-	#Earl Bowder up ther
+
+	USA_cordell_hull={	
+		name=USA_cordell_hull
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_6"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_cordell_hull
+			allowed  = {
+				original_tag = USA
+			}
+			traits  = {
+				captain_of_industry
+			}
+		}
+	}
+
+	USA_henry_stimson={
+		name=USA_henry_stimson
+		portraits={
+			army={
+				small=GFX_portrait_USA_henry_stimson_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_henry_stimson
+			allowed  = {
+				original_tag = USA
+			}
+			traits  = {
+				war_industrialist 
+			}
+		}
+	}
 
 	USA_robert_taft={
 		name=USA_robert_taft
@@ -1242,75 +1278,6 @@ characters={
 			}
 		}
 	}
-	
-	USA_victor_perlo={
-		name=USA_victor_perlo
-		portraits={
-			army={
-				small=GFX_portrait_USA_victor_perlo_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = victor_perlo
-			allowed  = {
-				original_tag  = USA
-			}
-			available  = {
-				has_completed_focus = USA_militarized_WPA
-			}
-			visible  = {
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				economist 
-			}
-			cost  = 0.000
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
-	}
-
-	USA_henry_morgenthau={
-		name=USA_henry_morgenthau
-		portraits={
-			army={
-				small=GFX_portrait_USA_henry_morgenthau_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = USA_henry_morgenthau
-			allowed  = {
-				original_tag  = USA
-			}
-			traits  = {
-				financial_expert 
-			}
-		}
-	}
-
-	USA_henry_stimson={
-		name=USA_henry_stimson
-		portraits={
-			army={
-				small=GFX_portrait_USA_henry_stimson_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = USA_henry_stimson
-			allowed  = {
-				original_tag  = USA
-			}
-			traits  = {
-				war_industrialist 
-			}
-		}
-	}
 
 	USA_donald_nelson={
 		name=USA_donald_nelson
@@ -1326,7 +1293,89 @@ characters={
 				original_tag  = USA
 			}
 			traits  = {
-				armaments_organizer 
+				popular_figurehead 
+			}
+		}
+	}
+
+	USA_harry_white={
+		name=USA_harry_white
+		portraits={
+			army={
+				small="GFX_idea_USA_harry_white"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = harry_white
+			allowed  = {
+				original_tag  = USA
+			}
+			traits  = {
+				technocrat
+			}
+		}
+	}
+
+	USA_henry_morgenthau={
+		name=USA_henry_morgenthau
+		portraits={
+			army={
+				small=GFX_portrait_USA_henry_morgenthau_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_henry_morgenthau
+			allowed  = {
+				original_tag = USA
+			}
+			traits  = {
+				financial_expert 
+			}
+		}
+	}
+	
+	USA_victor_perlo={
+		name=USA_victor_perlo
+		portraits={
+			army={
+				small=GFX_portrait_USA_victor_perlo_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = victor_perlo
+			allowed  = {
+				original_tag  = USA
+			}
+			available = {
+				has_war_with = JAP
+			}
+			traits  = {
+				economist 
+			}
+		}
+	}
+
+	USA_joseph_patterson={
+		name=USA_joseph_patterson
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_joseph_patterson
+			allowed  = {
+				original_tag = USA
+			}
+			available = {
+				date > 1944.6.1
+			}
+			traits  = {
+				american_caesar
 			}
 		}
 	}
