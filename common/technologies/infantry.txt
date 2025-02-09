@@ -18,12 +18,6 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_0
 		}
-
-		enable_equipment_modules = {
-			tank_heavy_machine_gun
-			secondary_turret_hmg
-			additional_machine_guns
-		}
 		
 		enable_subunits = {
 			infantry
@@ -1250,6 +1244,11 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+
+		enable_equipment_modules = {
+			additional_machine_guns
+			secondary_turret_hmg
+		}	
 		
 		path = {
 			leads_to_tech = support_weapons2
@@ -1341,6 +1340,10 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+
+		enable_equipment_modules = {
+			tank_heavy_machine_gun
+		}	
 		
 		path = {
 			leads_to_tech = support_weapons3

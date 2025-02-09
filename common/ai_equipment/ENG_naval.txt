@@ -240,7 +240,8 @@ ENG_destroyers = {
 		}
 
 		role_icon_index = 2
-		enable = {
+		enable = { 
+			has_tech = advanced_dp_light_battery
 			not = { has_tech = advanced_ship_hull_light }
 		}
 		target_variant = {
@@ -279,6 +280,9 @@ ENG_destroyers = {
 				factor = 10
 				has_war = yes
 			}
+		}
+		enable = {
+			has_tech = advanced_dp_light_battery
 		}
 		role_icon_index = 2
 		
@@ -529,6 +533,10 @@ ENG_naval_light_cruiser = {
 			}
 		}
 		role_icon_index = 2
+
+		enable = {
+			has_tech = advanced_dp_light_battery
+		}
 		
 		target_variant = {
 			match_value = 1200.0
@@ -854,6 +862,10 @@ ENG_naval_light_AA_cruiser = {
 		}
 		
 		role_icon_index = 2
+
+		enable = {
+			has_tech = advanced_dp_light_battery
+		}
 		
 		target_variant = {
 			match_value = 2500.0
@@ -2051,6 +2063,11 @@ naval_mine_sweeper = {
 			}
 		}
 		role_icon_index = 5
+
+		enable = {
+			has_tech = advanced_dp_light_battery
+			has_tech = basic_naval_mines
+		}
 		
 		target_variant = {
 			match_value = 2000.0

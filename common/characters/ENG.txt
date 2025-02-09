@@ -1409,11 +1409,35 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
+	# Churchill up there
+
+	# Mosley up there
+
+	# Pollit up there
+
+	ENG_clement_attlee={
+		name=ENG_clement_attlee
+		portraits={
+			army={
+				small="GFX_idea_clement_attlee"
+			}
+		}		
+	}
+	
 	ENG_john_beckett={
 		name=ENG_john_beckett
 		portraits={
 			army={
 				small="GFX_idea_john_beckett"
+			}
+		}
+	}
+
+	ENG_philip_kerr={
+		name=ENG_philip_kerr
+		portraits={
+			army={
+				small="GFX_idea_ENG_philip_kerr"
 			}
 		}
 		advisor={
@@ -1423,7 +1447,26 @@ characters={
 				original_tag  = ENG
 			}
 			traits  = {
-				captain_of_industry 
+				silent_workhorse 
+			}
+			ai_will_do  = {
+				factor  = 2.000
+				modifier  = {
+					has_country_leader = {
+						character = ENG_stanley_baldwin
+						ruling_only = yes 
+					}
+					factor  = 10.000
+				}
+			}
+		}		
+	}
+
+	ENG_nevile_henderson={
+		name=ENG_nevile_henderson
+		portraits={
+			army={
+				small="GFX_idea_ENG_nevile_henderson"
 			}
 		}
 	}
@@ -1444,62 +1487,8 @@ characters={
 			traits  = {
 				war_industrialist 
 			}
-		}
-	}
-
-	ENG_clement_attlee={
-		name=ENG_clement_attlee
-		portraits={
-			army={
-				small="GFX_idea_clement_attlee"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_philip_kerr
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				silent_workhorse 
-			}
-		}
-	}
-
-	ENG_philip_kerr={
-		name=ENG_philip_kerr
-		portraits={
-			army={
-				small="GFX_idea_ENG_philip_kerr"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_philip_kerr
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				popular_figurehead 
-			}
-		}		
-	}
-
-	ENG_nevile_henderson={
-		name=ENG_nevile_henderson
-		portraits={
-			army={
-				small="GFX_idea_ENG_nevile_henderson"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_philip_kerr
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				technocrat 
+			ai_will_do  = {
+				factor  = 2.000
 			}
 		}
 	}
@@ -1518,26 +1507,7 @@ characters={
 				original_tag  = ENG
 			}
 			traits  = {
-				financial_expert 
-			}
-		}
-	}
-
-	ENG_david_lloyd_george={
-		name=ENG_david_lloyd_george
-		portraits={
-			army={
-				small="GFX_idea_ENG_david_lloyd_george"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_philip_kerr
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				colonial_lawyer 
+				armaments_organizer 
 			}
 		}
 	}
@@ -1555,11 +1525,426 @@ characters={
 			allowed  = {
 				original_tag  = ENG
 			}
-			available = {
-				date > 1940.6.1
+			traits  = {
+				quartermaster_general 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	ENG_mary_sophia_allen={
+		name=ENG_mary_sophia_allen
+		portraits={
+			army={
+				small="GFX_idea_ENG_mary_sophia_allen"
+			}
+		}
+	}
+
+	ENG_george_orwell={
+		name=ENG_george_orwell
+		portraits={
+			army={
+				small="GFX_idea_ENG_george_orwell"
+			}
+		}
+	}
+
+	ENG_sylvia_pankhurst={
+		name=ENG_sylvia_pankhurst
+		portraits={
+			army={
+				small="GFX_idea_ENG_sylvia_pankhurst"
+			}
+		}
+	}
+
+	ENG_david_lloyd_george={
+		name=ENG_david_lloyd_george
+		portraits={
+			army={
+				small="GFX_idea_ENG_david_lloyd_george"
+			}
+		}
+	}
+
+# Communist ministers, intentionally without loc so they are 'randomized'
+
+	ENG_random_communist_minister_1={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_1
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_1 
+			}
+			allowed  = {
+				original_tag  = ENG
 			}
 			traits  = {
-				rearmer 
+				propaganda_bungler 
+			}
+		}
+	}
+	ENG_random_communist_minister_2={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_2
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_2 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				silent_mule 
+			}
+		}
+	}
+	ENG_random_communist_minister_3={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_3
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_3 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				baron_of_terror 
+			}
+		}
+	}
+	ENG_random_communist_minister_4={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_4
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_4 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				compassionate_commoner 
+			}
+		}
+	}
+	ENG_random_communist_minister_5={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_5
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_5 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				backroom_windbag 
+			}
+		}
+	}
+	ENG_random_communist_minister_6={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_6
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_6 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				smooth_talking_con_man 
+			}
+		}
+	}
+	ENG_random_communist_minister_7={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_7
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_7 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				ideological_groupie 
+			}
+		}
+	}
+
+	ENG_random_communist_minister_8={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_8
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_8 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				fortification_armchair_general 
+			}
+		}
+	}
+	ENG_random_communist_minister_9={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_9
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_9 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				war_profiteer 
+			}
+		}
+	}
+
+	ENG_random_communist_minister_10={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_10
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_10 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				lieutenant_of_industry 
+			}
+		}
+	}
+
+	ENG_random_communist_minister_11={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_11
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_11 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				finance_graduate 
+			}
+		}
+	}
+
+	ENG_random_communist_minister_12={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_12
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_12 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				armaments_aficionado 
+			}
+		}
+	}
+
+	ENG_random_communist_minister_13={
+		portraits={
+			army={
+				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_random_communist_minister_13
+			visible  = {
+				has_country_flag  = ENG_trade_unions_demand_minister_appointment_13 
+			}
+			allowed  = {
+				original_tag  = ENG
+			}
+			traits  = {
+				quartermaster_trainee 
+			}
+		}
+	}
+
+	ENG_corgis_1={
+		name=ENG_corgis_1
+		portraits={
+			army={
+				small="GFX_idea_ENG_corgis_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_corgis_1
+			available  = {
+				has_government  = neutrality 
+				has_completed_focus  = ENG_the_kings_party 
+				has_country_leader  = {
+					name = "Elizabeth II"
+					ruling_only  = yes 
+				}
+			}
+			visible  = {
+				has_country_leader  = {
+					name = "Elizabeth II"
+					ruling_only  = yes 
+				}
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				face_licker 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	ENG_corgis_2={
+		name=ENG_corgis_2
+		portraits={
+			army={
+				small="GFX_idea_ENG_corgis_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_corgis_2
+			available  = {
+				has_government  = neutrality 
+				has_completed_focus  = ENG_the_kings_party 
+				has_country_leader  = {
+					name = "Elizabeth II"
+					ruling_only  = yes 
+				}
+			}
+			visible  = {
+				has_country_leader  = {
+					name = "Elizabeth II"
+					ruling_only  = yes 
+				}
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				heels_nipper 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+	ENG_corgis_3={
+		name=ENG_corgis_3
+		portraits={
+			army={
+				small="GFX_idea_ENG_corgis_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_corgis_3
+			available  = {
+				has_government  = neutrality 
+				has_completed_focus  = ENG_the_kings_party 
+				has_country_leader  = {
+					name = "Elizabeth II"
+					ruling_only  = yes 
+				}
+			}
+			visible  = {
+				has_country_leader  = {
+					name = "Elizabeth II"
+					ruling_only  = yes 
+				}
+			}
+			allowed  = {
+				original_tag  = ENG
+				has_dlc = "Man the Guns"
+			}
+			traits  = {
+				snuggler 
+			}
+			ai_will_do  = {
+				factor  = 1.000
 			}
 		}
 	}

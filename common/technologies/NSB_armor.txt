@@ -778,6 +778,9 @@ technologies = {
 			modern_armor
 		}
 
+		enable_equipment_modules = {
+			tank_super_heavy_cannon
+		}
 		research_cost = 2.5
 		start_year = 1945
 
@@ -1035,68 +1038,6 @@ technologies = {
 				factor = 1.2
 				date > "1946.1.1"
 			}
-		}
-
-		categories = {
-			armor
-			mio_cat_tech_all_armor_and_modules
-			cat_heavy_armor
-			mio_cat_tech_heavy_armor_and_modules
-		}
-	}
-
-	super_heavy_tank_chassis = { #Maus
-
-		enable_equipments = {
-			super_heavy_tank_chassis_1
-			super_heavy_tank_destroyer_chassis_1
-			super_heavy_tank_artillery_chassis_1
-			super_heavy_tank_aa_chassis_1
-		}
-
-		enable_subunits = {
-			super_heavy_armor
-		}
-
-		enable_equipment_modules = {
-			tank_super_heavy_cannon
-		}
-
-		research_cost = 2.5
-		start_year = 1943
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 8 y = @1943 }
-		}
-
-		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-				}
-				if = {
-					limit = {
-						has_completed_focus = ITA_capo_supremo
-					}
-					ITA_add_il_duce_sh_tank_template_and_production = yes
-				}
-				else_if = {
-					limit = {
-						has_completed_focus = ITA_modern_musculus
-					}
-					ITA_add_modern_musculus_sh_tank_template_and_production = yes
-				}
-				else_if = {
-					limit = {
-						has_completed_focus = ITA_a_time_for_war
-					}
-					ITA_add_hand_of_god_sh_tank_template_and_production = yes
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 0 # Hitler cries on the inside
 		}
 
 		categories = {

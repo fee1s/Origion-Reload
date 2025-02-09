@@ -57,6 +57,30 @@ ITA_fiat_organization = {
 			BUL = { has_completed_focus = BUL_contract_foreign_companies }
 		}
 	}
+	
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_tank_general_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			ITA = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 
@@ -91,6 +115,30 @@ ITA_crda_organization = {
 			ITA_is_northern_designer = yes
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ITA_cantiere_oto_organization = {
@@ -106,6 +154,30 @@ ITA_cantiere_oto_organization = {
 			controls_state = 158 #PIEDMONT (Genova)
 		}
 		ITA_is_northern_designer = yes
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
 	}
 }
 
@@ -123,6 +195,30 @@ ITA_navalmeccanica_organization = {
 		}
 		ITA_is_southern_designer = yes
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_screen_ship_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_modernize_the_mezzogiorno
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 } 
 
 ITA_cantiere_navale_di_ancona_organization = {
@@ -138,6 +234,30 @@ ITA_cantiere_navale_di_ancona_organization = {
 			controls_state = 157 # ABRUZZO (Ancona)		
 		}
 		ITA_is_southern_designer = yes
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_general_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_modernize_the_mezzogiorno
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
 	}
 }
 
@@ -155,6 +275,30 @@ ITA_cantieri_navali_tosi_organization = {
 			
 		}
 		ITA_is_southern_designer = yes
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_ship_submarine_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_modernize_the_mezzogiorno
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
 	}
 }
 
@@ -242,6 +386,30 @@ ITA_savoia_marchetti_organization = {
 			production_cost_factor = -0.1
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_general_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ITA_crda_cant_organization = {
@@ -257,6 +425,30 @@ ITA_crda_cant_organization = {
 			controls_state = 736 #LITORALE (Trieste)
 		}
 		ITA_is_southern_designer = yes
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_plane_naval_bomber_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
 	}
 }
 
@@ -307,6 +499,30 @@ ITA_beretta_organization = {
 			ITA_is_northern_designer = yes
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_infantry_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ITA_lancia_organization = {
@@ -339,6 +555,30 @@ ITA_lancia_organization = {
 		IF = {
 			limit = { FROM = { original_tag = BUL } }
 			BUL = { has_completed_focus = BUL_contract_foreign_companies }
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_motorized_mechanized_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			ITA = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -378,6 +618,30 @@ ITA_breda_organization = {
 			ITA_is_northern_designer = yes
 		}
 	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_artillery_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
 }
 
 ITA_brescia_arsenal_organization = {
@@ -393,5 +657,29 @@ ITA_brescia_arsenal_organization = {
 			controls_state = 159 #LOMBARDIA
 		}
 		ITA_is_northern_designer = yes
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_industrialization_program
+		name = ITA_new_industrialization_program
+		icon = GFX_generic_mio_department_icon_infantry_production
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_industrialization_program
+				has_completed_focus = ITA_strengthen_northern_industry
+			}
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
 	}
 }
