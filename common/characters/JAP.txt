@@ -1103,29 +1103,6 @@ characters={
 		}
 	}
 
-	JAP_hideki_tojo={
-		name=JAP_hideki_tojo
-		portraits={
-			army={
-				small="GFX_idea_hideki_tojo"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = hideki_tojo
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				army_chief_morale_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
 	### NAVY CHIEFS ###
 
 	JAP_fushimi_hiroyasu={
@@ -1382,31 +1359,42 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
-	JAP_sanzo_nosaka={
-		name=JAP_sanzo_nosaka
+	JAP_chiune_sugihara={
+		name=JAP_chiune_sugihara
 		portraits={
 			army={
-				small="GFX_idea_sanzo_nosaka"
+				small="GFX_idea_generic_political_advisor_asia_3"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_chiune_sugihara
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				captain_of_industry
+			}
+		}	
 	}
 
-	JAP_kijuro_shidehara={
-		name=JAP_kijuro_shidehara
+	JAP_takuo_godo={
+		name=JAP_takuo_godo
 		portraits={
 			army={
-				small="GFX_idea_kijuro_shidehara"
+				small="GFX_idea_takuo_godo"
 			}
 		}
-	}
-
-	JAP_kingoro_hashimoto={
-		name=JAP_kingoro_hashimoto
-		portraits={
-			army={
-				small="GFX_idea_kingoro_hashimoto"
+		advisor={
+			slot = political_advisor
+			idea_token = JAP_takuo_godo
+			allowed = {
+				original_tag = JAP
 			}
-		}		
+			traits = {
+				war_industrialist 
+			}
+		}
 	}
 
 	JAP_mitsumasa_yonai={
@@ -1444,42 +1432,85 @@ characters={
 			traits = {
 				prince_of_terror 
 			}
-			ai_will_do = {
-				factor = 0.300
-			}
 		}
 	}
 
-	JAP_chiune_sugihara={
-		name=JAP_chiune_sugihara
+	JAP_sanzo_nosaka={
+		name=JAP_sanzo_nosaka
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_asia_3"
-			}
-		}		
-	}
-
-	JAP_takuo_godo={
-		name=JAP_takuo_godo
-		portraits={
-			army={
-				small="GFX_idea_takuo_godo"
+				small="GFX_idea_sanzo_nosaka"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = political_advisor
-			idea_token = takuo_godo
+			idea_token = JAP_sanzo_nosaka
 			allowed = {
 				original_tag = JAP
 			}
 			traits = {
-				war_industrialist 
-			}
-			ai_will_do = {
-				factor = 3.000
+				smooth_talking_charmer
 			}
 		}
 	}
 
-	# Illusive Gentleman auto-generated
+	JAP_kijuro_shidehara={
+		name=JAP_kijuro_shidehara
+		portraits={
+			army={
+				small="GFX_idea_kijuro_shidehara"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kijuro_shidehara
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				armaments_organizer
+			}
+		}
+	}
+
+	JAP_kingoro_hashimoto={
+		name=JAP_kingoro_hashimoto
+		portraits={
+			army={
+				small="GFX_idea_kingoro_hashimoto"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kingoro_hashimoto
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				ideological_crusader
+			}
+		}
+	}
+
+	JAP_hideki_tojo={
+		name=JAP_hideki_tojo
+		portraits={
+			army={
+				small="GFX_idea_hideki_tojo"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = hideki_tojo
+			allowed = {
+				original_tag = JAP
+			}
+			available = {
+				date > 1940.7.1
+			}
+			traits = {
+				JAP_tojo
+			}
+		}
+	}
 }

@@ -609,42 +609,47 @@ characters={
 
 	### POLITICAL ADVISORS ###	
 
-	CAN_chuck_crate={
-		name=CAN_chuck_crate
+	CAN_c_d_howe={
+		name=CAN_c_d_howe
 		portraits={
 			army={
-				small="GFX_idea_generic_fascist_demagogue_commonwealth_2d"
+				small="GFX_idea_CAN_c_d_howe" #small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CAN_c_d_howe
+			allowed = {
+				original_tag = CAN
+			}
+			available = {
+				has_completed_focus = CAN_crown_corporations 
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}
+	}
+
+	CAN_james_ilsley={
+		name=CAN_james_ilsley
+		portraits={
+			army={
+				small="GFX_idea_CAN_james_ilsley" #small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CAN_james_ilsley
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				war_industrialist 
 			}
 		}
 	}
 	
-	CAN_robert_manion={
-		name=CAN_robert_manion
-		portraits={
-			army={
-				small="GFX_idea_CAN_robert_manion" #small="GFX_idea_generic_democratic_reformer_commonwealth_2d"
-			}
-		}
-	}
-
-	CAN_william_kashtan={
-		name=CAN_william_kashtan
-		portraits={
-			army={
-				small="GFX_idea_CAN_william_kashtan" #small="GFX_idea_generic_communist_revolutionary_commonwealth_2d"
-			}
-		}
-	}
-
-	CAN_ian_a_mackenzie={
-		name=CAN_ian_a_mackenzie
-		portraits={
-			army={
-				small="GFX_idea_CAN_ian_a_mackenzie" #small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-	}
-
 	CAN_r_b_bennett={
 		name=CAN_r_b_bennett
 		portraits={
@@ -660,25 +665,6 @@ characters={
 			}
 			traits = {
 				silent_workhorse 
-			}
-		}
-	}
-
-	CAN_newton_wesley_rowell={
-		name=CAN_newton_wesley_rowell
-		portraits={
-			army={
-				small="GFX_idea_CAN_newton_wesley_rowell" #small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = CAN_newton_wesley_rowell
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				ideological_crusader 
 			}
 		}
 	}
@@ -703,22 +689,21 @@ characters={
 		}		
 	}
 
-	CAN_james_ilsley={
-		name=CAN_james_ilsley
+	CAN_newton_wesley_rowell={
+		name=CAN_newton_wesley_rowell
 		portraits={
 			army={
-				small="GFX_idea_CAN_james_ilsley" #small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_idea_CAN_newton_wesley_rowell" #small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = CAN_james_ilsley
+			idea_token = CAN_newton_wesley_rowell
 			allowed = {
 				original_tag = CAN
-				has_dlc = "Together for Victory"
 			}
 			traits = {
-				war_industrialist 
+				technocrat 
 			}
 		}
 	}
@@ -730,31 +715,16 @@ characters={
 				small="GFX_idea_CAN_louis_st_laurent" #small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
-	}
-
-	CAN_c_d_howe={
-		name=CAN_c_d_howe
-		portraits={
-			army={
-				small="GFX_idea_CAN_c_d_howe" #small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
 		advisor={
 			slot = political_advisor
 			idea_token = CAN_c_d_howe
-			cost = 50.000
 			allowed = {
 				original_tag = CAN
-				has_dlc = "Together for Victory"
-			}
-			available = {
-				has_completed_focus = CAN_crown_corporations 
 			}
 			traits = {
-				captain_of_industry 
+				financial_expert 
 			}
 		}
 	}
 
-	# Illusive Gentleman auto-generated
 }

@@ -1604,436 +1604,11 @@ characters = {
 		}
 	}
 
-
-	### POLITICAL ADVISORS ###
-
-	# Mario Roatta is up there (Military High Command)
-
-	# Luigi Longo up there (MHC)
-
-	ITA_gian_galeazzo_ciano = {
-		name = ITA_gian_galeazzo_ciano
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_gian_galeazzo_ciano_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_gian_galeazzo_ciano
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				NOT = {
-					has_country_leader_with_trait = mussolini_minister_of_foreign_affairs
-				}
-				ITA_government_is_somewhat_fascist = yes
-			}
-			cost = 75
-			traits = {
-				hierarch_minister_of_foreign_affairs
-			}
-			on_add = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_decrease_effect = yes
-					}
-				}
-			}
-			on_remove = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_increase_effect = yes
-					}
-				}
-			}
-			ai_will_do = {
-				base = 0.3
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
-		}
-	}
-
-	ITA_dino_grandi = {
-		name = ITA_dino_grandi
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_dino_grandi_small
-			}
-			civilian = {
-				large = GFX_portrait_ITA_dino_grandi
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_dino_grandi
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				NOT = {
-					has_country_leader_with_trait = mussolini_minister_of_justice
-				}
-				ITA_government_is_somewhat_fascist = yes
-				if =  {
-					limit = { 
-						has_dlc = "By Blood Alone"
-					}
-					ITA_is_advisor_available = yes
-				}
-			}
-			
-			cost = 75
-			traits = {
-				hierarch_minister_of_justice 
-			}
-			on_add = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_decrease_effect = yes
-					}
-				}
-			}
-			on_remove = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_increase_effect = yes
-					}
-				}
-			}
-			ai_will_do = {
-				base = 0.3
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
-		}
-	}
-
-	ITA_giuseppe_bottai = {
-		name = ITA_giuseppe_bottai
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_giuseppe_botai_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_giuseppe_bottai
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_completed_focus = ITA_legge_bottai
-				NOT = {
-					has_country_leader_with_trait = mussolini_minister_of_education
-				}
-			}
-			cost = 75
-			traits = {
-				hierarch_minister_of_education # Hierarch / Minister of Education
-			}
-			on_add = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_decrease_effect = yes
-					}
-				}
-			}
-			on_remove = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_increase_effect = yes
-					}
-				}
-			}
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
-		}
-	}
-
-	ITA_renato_ricci = {
-		name = ITA_renato_ricci
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_renato_ricci_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_renato_ricci
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_completed_focus = ITA_security_militias
-				NOT = {
-					has_country_leader_with_trait = mussolini_minister_of_corporations
-				}
-				ITA_government_is_really_fascist = yes
-			}
-			cost = 75
-			traits = {
-				hierarch_minister_of_corporations # Leader of Blackshirts and Military Police
-			}
-			on_add = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_decrease_effect = yes
-					}
-				}
-			}
-			on_remove = {
-				owner = {
-					hidden_effect = {
-						ITA_bop_medium_increase_effect = yes
-					}
-				}
-			}
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
-		}
-	}
-
-	ITA_mario_roatta = {
-		name = ITA_mario_roatta
-		portraits = {
-		#TODO_Manu: In the past we were not able to make this work. I hope that you, people from the future who are seeing this, will be able to use your knowledge and sci-fi technology to make this work. Good luck comrades. 
-		#Edit: But don't duplicate this character or my cursed spirit will come to haunt you.
-			civilian = {
-				small = GFX_idea_ita_mario_roatta_political_advisor
-			}
-			army = {
-				small = GFX_idea_mario_roatta
-				large = GFX_portrait_ITA_mario_roatta
-			}
-		}
-
-		corps_commander = {
-			traits = { politically_connected }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { ITA_government_is_really_fascist = yes }
-		}
-	}
-
-	ITA_giovanni_marinelli = {
-		name = ITA_giovanni_marinelli
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_giovanni_marinelli_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_giovanni_marinelli
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_somewhat_fascist = yes
-			}
-			traits = {
-				prince_of_terror
-			}
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
-		}		
-	}
-
-	ITA_giacomo_acerbo = {
-		name = ITA_giacomo_acerbo
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_giacomo_acerbo_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_giacomo_acerbo
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_really_fascist = yes
-			}
-			traits = {
-				war_industrialist 
-			}
-			ai_will_do = {
-				base = 3.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
-		}
-	}
-	
-	ITA_paolo_thaon_di_revel = {
-		name = ITA_paolo_thaon_di_revel
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_paolo_thaon_di_revel_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_paolo_thaon_di_revel
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_government_is_somewhat_fascist = yes
-			}
-			traits = {
-				quartermaster_general 
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
-		}
-	}
-
 	ITA_carlo_favagrossa = {
 		name = ITA_carlo_favagrossa
 		portraits = {
 			army = {
 				small = GFX_portrait_ITA_carlo_favagrossa_small
-			}
-		}
-	}
-
-	ITA_alberto_beneduce = {
-		name = ITA_alberto_beneduce
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_alberto_beneduce_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_alberto_beneduce
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			
-			available = {
-			}
-			
-			traits = {
-				captain_of_industry
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
-		}
-	}
-
-	ITA_guido_jung = {
-		name = ITA_guido_jung
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_guido_jung_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_guido_jung
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_government = fascism
-				NOT = { has_completed_focus = ITA_pact_of_steel }
-			}
-			traits = {
-				financial_expert
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_historical_ai = yes
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2573,6 +2148,160 @@ characters = {
 			legacy_id = -1
 			visible = {
 				always = no #Used for unit_leader events
+			}
+		}
+	}
+
+	### POLITICAL ADVISORS ###
+
+	ITA_alberto_beneduce = {
+		name = ITA_alberto_beneduce
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_alberto_beneduce_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_alberto_beneduce
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+
+	ITA_giacomo_acerbo = {
+		name = ITA_giacomo_acerbo
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giacomo_acerbo_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_giacomo_acerbo
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	ITA_giuseppe_bottai = {
+		name = ITA_giuseppe_bottai
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giuseppe_botai_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_giuseppe_bottai
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+
+	ITA_giovanni_marinelli = {
+		name = ITA_giovanni_marinelli
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_giovanni_marinelli_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_giovanni_marinelli
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				prince_of_terror
+			}
+		}
+	}
+
+	ITA_guido_jung = {
+		name = ITA_guido_jung
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_guido_jung_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_guido_jung
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+		}
+	}
+
+	ITA_paolo_thaon_di_revel = {
+		name = ITA_paolo_thaon_di_revel
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_paolo_thaon_di_revel_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_paolo_thaon_di_revel
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				armaments_organizer 
+			}
+		}
+	}
+
+	ITA_dino_grandi = {
+		name = ITA_dino_grandi
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_dino_grandi_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_dino_grandi
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				hierarch_minister_of_justice 
+			}
+		}
+	}
+
+	ITA_renato_ricci = {
+		name = ITA_renato_ricci
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_renato_ricci_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_renato_ricci
+			allowed = {
+				original_tag = ITA
+			}
+			traits = {
+				hierarch_minister_of_corporations
 			}
 		}
 	}

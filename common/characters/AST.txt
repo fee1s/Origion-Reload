@@ -519,21 +519,40 @@ characters={
 
 	### POLITICAL ADVISORS ###
 
-	AST_alexander_hore_ruthven={
-		name=AST_alexander_hore_ruthven
+	AST_arthur_calwell={
+		name=AST_arthur_calwell
 		portraits={
 			army={
-				small="GFX_idea_AST_alexander_hore_ruthven" #small="GFX_idea_generic_political_advisor_europe_1"
+				small="GFX_idea_AST_arthur_calwell" #small="GFX_idea_generic_democratic_reformer_western_european_2d"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = AST_alexander_hore_ruthven
+			idea_token = AST_arthur_calwell
 			allowed = {
 				original_tag = AST
 			}
 			traits = {
-				quartermaster_general 
+				captain_of_industry 
+			}
+		}		
+	}
+
+	AST_jack_beasley={
+		name=AST_jack_beasley
+		portraits={
+			army={
+				small="GFX_idea_AST_jack_beasley" #small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_jack_beasley
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				war_industrialist 
 			}
 		}		
 	}
@@ -551,65 +570,67 @@ characters={
 			allowed = {
 				original_tag = AST
 			}
-			cost = 100.000
 			traits = {
 				silent_workhorse 
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_support_the_policy_of_appeasement 
-				}
 			}
 		}		
 	}
 
-	AST_jack_beasley={
-		name=AST_jack_beasley
+	AST_robert_g_menzies={
+		name=AST_robert_g_menzies
 		portraits={
 			army={
-				small="GFX_idea_AST_jack_beasley" #small="GFX_idea_generic_political_advisor_europe_3"
+				small="GFX_idea_AST_robert_g_menzies" #small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = AST_jack_beasley
+			idea_token = AST_robert_g_menzies
 			allowed = {
 				original_tag = AST
-				has_dlc = "Together for Victory"
 			}
 			traits = {
-				war_industrialist 
+				popular_figurehead 
 			}
 		}		
 	}
-	
-	AST_arthur_calwell={
-		name=AST_arthur_calwell
+
+	AST_alexander_hore_ruthven={
+		name=AST_alexander_hore_ruthven
 		portraits={
 			army={
-				small="GFX_idea_AST_arthur_calwell" #small="GFX_idea_generic_democratic_reformer_western_european_2d"
+				small="GFX_idea_AST_alexander_hore_ruthven" #small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = AST_arthur_calwell
+			idea_token = AST_alexander_hore_ruthven
 			allowed = {
 				original_tag = AST
 			}
 			traits = {
-				captain_of_industry 
-			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
+				technocrat 
 			}
 		}		
 	}
+
+	AST_ben_chifley={
+		name=AST_ben_chifley
+		portraits={
+			army={
+				small="GFX_idea_AST_ben_chifley" #small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_ben_chifley
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				financial_expert 
+			}
+		}		
+	}
+
 }

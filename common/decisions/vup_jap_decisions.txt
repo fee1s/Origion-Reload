@@ -10,18 +10,18 @@ JAP_annex = {
 		}
 		is_good = yes
 		fire_only_once = yes
-		days_mission_timeout = 60
+		days_mission_timeout = 90
 		timeout_effect = {
 			JAP = {
 				transfer_state = 608
-				transfer_state = 598
 				transfer_state = 614
 				transfer_state = 597
 				transfer_state = 743
-				transfer_state = 608
-				transfer_state = 607
-				transfer_state = 606
+				transfer_state = 598
 				transfer_state = 613
+				transfer_state = 607			
+				transfer_state = 606
+				transfer_state = 620
 			}
 			
 			hidden_effect = {
@@ -42,49 +42,13 @@ JAP_annex = {
 		fire_only_once = yes
 		days_mission_timeout = 180
 		timeout_effect = {
-			transfer_state = 591
-			transfer_state = 594
-			transfer_state = 599
-			transfer_state = 592
-			transfer_state = 593
-			transfer_state = 595
-			transfer_state = 600
-			transfer_state = 602
-			transfer_state = 620
-			transfer_state = 749
-			transfer_state = 596
-			transfer_state = 728
-			transfer_state = 729
-			transfer_state = 750
-			transfer_state = 603
-			transfer_state = 748
-			transfer_state = 325
-			
-			hidden_effect = {
-				army_experience = 50
-				air_experience = 100
-			}
-		}
-	}
-	JAP_CHI_attack3 = {
-		icon = GFX_decision_generic_operation
-		available = {
-			date > 1945.1.1
-			has_completed_focus = JAP_intervene_in_china
-		}
-		activation = {
-			has_completed_focus = JAP_intervene_in_china
-		}
-		fire_only_once = yes
-		days_mission_timeout = 300
-		timeout_effect = {
 			annex_country = { target = CHI }
 			add_named_threat = {
 				threat = 30
 			}
 			
 			hidden_effect = {
-				army_experience = 100
+				army_experience = 50
 				air_experience = 100
 			}
 		}

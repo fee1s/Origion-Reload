@@ -503,6 +503,16 @@ characters={
 				small="GFX_idea_HUN_kalman_kanya"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_lajos_remenyi_schneller
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}
 	}
 
 	HUN_lajos_remenyi_schneller={
@@ -519,25 +529,6 @@ characters={
 				original_tag = HUN
 			}
 			traits = {
-				captain_of_industry 
-			}
-		}
-	}
-
-	HUN_vilmos_roder={
-		name=HUN_vilmos_roder
-		portraits={
-			army={
-				small="GFX_idea_HUN_vilmos_roder"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = HUN_vilmos_roder
-			allowed = {
-				original_tag = HUN
-			}
-			traits = {
 				war_industrialist 
 			}
 		}
@@ -550,6 +541,16 @@ characters={
 				small="GFX_idea_HUN_gusztav_gratz"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_lajos_remenyi_schneller
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				silent_workhorse 
+			}
+		}
 	}
 
 	HUN_kalman_daranyi={
@@ -557,6 +558,16 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_HUN_kalman_daranyi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = HUN_lajos_remenyi_schneller
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				prince_of_terror 
 			}
 		}
 	}
@@ -575,7 +586,7 @@ characters={
 				original_tag = HUN
 			}
 			traits = {
-				silent_workhorse 
+				smooth_talking_charmer 
 			}
 		}
 	}
@@ -587,35 +598,15 @@ characters={
 				small="GFX_idea_HUN_laszlo_rajk"
 			}
 		}
-	}
-
-	HUN_jozsef_szell={
-		name=HUN_jozsef_szell
-		portraits={
-			army={
-				small="GFX_idea_HUN_jozsef_szell"
-			}
-		}
-	}
-	
-	HUN_gyula_gombos_de_jakfa={
-		name=HUN_gyula_gombos_de_jakfa
-		portraits={
-			army={
-				small="GFX_idea_HUN_gyula_gombos_de_jakfa"
-			}
-		}
 		advisor={
 			slot = political_advisor
-			idea_token = HUN_gyula_gombos_de_jakfa
+			idea_token = HUN_lajos_remenyi_schneller
 			allowed = {
 				original_tag = HUN
 			}
 			traits = {
-				fascist_demagogue 
+				armaments_organizer 
 			}
 		}
 	}
-
-	# Illusive Gentleman auto-generated
 }
