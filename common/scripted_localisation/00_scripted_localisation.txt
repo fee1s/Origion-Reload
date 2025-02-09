@@ -8,6 +8,359 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
+defined_text = { # Country
+	name = GetAlliesIran
+	text = {
+		trigger = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+		}
+		localization_key = GFX_iran_green
+	}
+	
+	text = {
+		trigger = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+		}
+		localization_key = GFX_iran_red
+	}
+}
+
+defined_text = { # Country
+	name = GetAlliesNorway
+	text = {
+		trigger = {
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+		}
+		localization_key = GFX_norway_green
+	}
+	
+	text = {
+		trigger = {
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+		}
+		localization_key = GFX_norway_red
+	}
+}
+
+defined_text = { # Country
+	name = GetAlliesAsia
+	text = {
+		trigger = {
+			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+		}
+		localization_key = GFX_asia_green
+	}
+	
+	text = {
+		trigger = {
+			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+		}
+		localization_key = GFX_asia_red
+	}
+}
+
+defined_text = { # Country
+	name = GetAlliesIranRouteColor
+	text = {
+		trigger = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+		}
+		localization_key = GetAlliesIranRouteYes
+	}
+	text = {
+		trigger = {	
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+		}
+		localization_key = GetAlliesIranRouteNo
+	}
+}
+
+defined_text = { # Country
+	name = GetAlliesNorwayRouteColor
+	text = {
+		trigger = {
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+		}
+		localization_key = GetAlliesNorwayRouteYes
+	}
+	text = {
+		trigger = {
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+		}
+		localization_key = GetAlliesNorwayRouteNo
+	}
+}
+
+defined_text = { # Country
+	name = GetAlliesAsiaRouteColor
+	text = {
+		trigger = {
+			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+		}
+		localization_key = GetAlliesAsiaRouteYes
+	}
+	
+	text = {
+		trigger = {
+			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+		}
+		localization_key = GetAlliesAsiaRouteNo
+	}
+}
+
+defined_text = { # Country
+	name = GetMaxCapacity # определение текущей пропускной способности
+	text = {
+		trigger = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+		}
+	
+		localization_key = GetMaxIsFourty
+	}
+	
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+						NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+					}
+					GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+					JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+				}
+				
+				AND = {
+					OR = {
+						NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+						NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+					}
+					GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+					JAP = { OR = { controls_state = 524 controls_state = 526 } }
+				}
+				
+				AND = {
+					AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+					GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+					JAP = { OR = { controls_state = 524 controls_state = 526 } }
+				}
+			}
+		}
+		localization_key = GetMaxIsSixty
+	}
+	
+	
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+						NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+					}
+					GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+					JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+				}
+				
+				AND = {
+					AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+					GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+					JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+				}
+				
+				AND = {
+					AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+					GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+					JAP = { OR = { controls_state = 524 controls_state = 526 } }
+				}
+			}
+		}
+		localization_key = GetMaxIsEighty
+	}
+	
+	text = {
+		trigger = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+		}
+		localization_key = GetMaxIsHundred
+	}
+}
+
+defined_text = { # Country
+	name = GetCurrentCapacity
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 0 }
+		}
+		localization_key = GetCurrentIsZero
+	}
+	
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 20 }
+			maximum_lend_lease_is_fourty = yes
+		}
+		localization_key = GetCurrentIsEight
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 40 }
+			maximum_lend_lease_is_fourty = yes
+		}
+		localization_key = GetCurrentIsSixteen
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 60 }
+			maximum_lend_lease_is_fourty = yes
+		}
+		localization_key = GetCurrentIsTwentyFour
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 80 }
+			maximum_lend_lease_is_fourty = yes
+		}
+		localization_key = GetCurrentIsThirtyTwo
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 100 }
+			maximum_lend_lease_is_fourty = yes
+		}
+		localization_key = GetCurrentIsFourty
+	}
+	
+	
+	
+	
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 20 }
+			maximum_lend_lease_is_sixty = yes
+		}
+		localization_key = GetCurrentIsTwelwe
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 40 }
+			maximum_lend_lease_is_sixty = yes
+		}
+		localization_key = GetCurrentIsTwentyFour
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 60 }
+			maximum_lend_lease_is_sixty = yes
+		}
+		localization_key = GetCurrentIsThirtySix
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 80 }
+			maximum_lend_lease_is_sixty = yes
+		}
+		localization_key = GetCurrentIsFourtyEight
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 100 }
+			maximum_lend_lease_is_sixty = yes
+		}
+		localization_key = GetCurrentIsSixty
+	}
+
+
+
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 20 }
+			maximum_lend_lease_is_eighty = yes
+		}
+		localization_key = GetCurrentIsSixteen
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 40 }
+			maximum_lend_lease_is_eighty = yes
+		}
+		localization_key = GetCurrentIsThirtyTwo
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 60 }
+			maximum_lend_lease_is_eighty = yes
+		}
+		localization_key = GetCurrentIsFourtyEight
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 80 }
+			maximum_lend_lease_is_eighty = yes
+		}
+		localization_key = GetCurrentIsSixtyFour
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 100 }
+			maximum_lend_lease_is_eighty = yes
+		}
+		localization_key = GetCurrentIsEighty
+	}
+	
+
+
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 20 }
+			maximum_lend_lease_is_hundred = yes
+		}
+		localization_key = GetCurrentIsTwenty
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 40 }
+			maximum_lend_lease_is_hundred = yes
+		}
+		localization_key = GetCurrentIsFourty
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 60 }
+			maximum_lend_lease_is_hundred = yes
+		}
+		localization_key = GetCurrentIsSixty
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 80 }
+			maximum_lend_lease_is_hundred = yes
+		}
+		localization_key = GetCurrentIsEighty
+	}
+	text = {
+		trigger = {
+			check_variable = { ENG.lend_lease_side_progress = 100 }
+			maximum_lend_lease_is_hundred = yes
+		}
+		localization_key = GetCurrentIsHundred
+	}
+	
+}
+
 #MM: UNUSED after WW (replaced by GetKfdWagenNames)
 defined_text = { # Country
 	name = GetKdfWagenName

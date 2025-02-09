@@ -2460,6 +2460,23 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = uk_operation_countenance 
+		
+		prerequisite = { focus = uk_counter_offensive_cairo focus = uk_defeat_of_the_italian_corps }
+		
+		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
+		
+		relative_position_id = uk_protect_suez
+		x = 0
+		y = 2
+		cost = 5
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_operation_countenance
+		}
+	}
 
 	focus = {
 		id = ENG_steady_as_she_goes
@@ -2686,11 +2703,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ENG_operation_crusader
-		
-		available = {
-			date > 1942.2.1
-		}
+		id = uk_operation_crusader
 		
 		icon = GFX_focus_SWE_refuge_from_war
 		
@@ -2705,15 +2718,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_we_shall_fight_on_the_beaches }
 		
 		completion_reward = { 
-			add_timed_idea = { idea = uk_operation_crusader days = 60 }
-			
-			hidden_effect = { 
-				CAN = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
-				AST = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
-				RAJ = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
-				SAF = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
-				FRA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
-			}
+			unlock_decision_tooltip = ENG_operation_crusader
 		}
 	}
 	

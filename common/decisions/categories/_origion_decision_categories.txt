@@ -39,8 +39,23 @@ ENG_house_of_commons = {
 		original_tag = ENG
 	}
 	
-	priority = 15
+	priority = 10
 }
+
+ORG_allies_lend_lease_to_sov = {
+	
+	icon = GFX_decision_category_usa_intervention_mandate
+	scripted_gui = allies_lend_lease_to_sov_sg
+	
+	allowed = {
+		OR = { original_tag = ENG original_tag = USA }
+	}
+	
+	priority = 15
+	
+	visible = { always = yes }
+}
+
 FRA_annex = {
 	
 	icon = military_operation

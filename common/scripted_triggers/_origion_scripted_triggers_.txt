@@ -171,3 +171,71 @@ is_controlled_by_axis = {
 		is_controlled_by = JAP
 	}
 }
+
+maximum_lend_lease_is_fourty = {
+	OR = {
+		NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+		NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+	}
+	GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+	JAP = { OR = { controls_state = 524 controls_state = 526 } }
+}
+
+maximum_lend_lease_is_sixty = {
+	OR = {
+		AND = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+		}	
+		
+		AND = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+		}
+	
+		AND = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+		}
+	}
+}
+
+maximum_lend_lease_is_eighty = {
+	OR = {
+		AND = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+		}
+		
+		AND = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+		}
+		
+		AND = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+		}
+	}
+}
+
+maximum_lend_lease_is_hundred = {
+	AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+	GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+	JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+}

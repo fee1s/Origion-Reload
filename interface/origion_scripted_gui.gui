@@ -1,0 +1,95 @@
+guiTypes = {
+	containerWindowType = {
+		name = "allies_lend_lease_to_sov_sg_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 215 }
+	  
+		buttonType = {   
+			name = "allies_lend_lease_to_sov_iran"
+			spriteType = "allies_lend_lease_to_sov_iran"
+			position = { x = 200 y = 32 } 
+			scale = 0.4
+		}
+		
+		buttonType = {   
+			name = "allies_lend_lease_to_sov_norway"
+			spriteType = "allies_lend_lease_to_sov_norway"
+			position = { x = 15 y = 32 }   
+			scale = 0.45
+		}
+
+		buttonType = {    
+			name = "allies_lend_lease_to_sov_asia"
+			spriteType = "allies_lend_lease_to_sov_asia"
+			position = { x = 360 y = 38 }    
+			scale = 0.8
+		}
+		
+		instantTextBoxType = {
+			name = "iran_route_title"
+			position = { x = 190 y = 12 } 
+			maxHeight = 20
+			maxWidth = 180
+			font = "hoi_16mbs"
+			format = left
+			text = "[GetAlliesIranRouteColor]"
+			pdx_tooltip = iran_route_history
+		}	
+		
+		instantTextBoxType = {
+			name = "asia_route_title"
+			position = { x = 345 y = 12 } 
+			maxHeight = 20
+			maxWidth = 180
+			font = "hoi_16mbs"
+			format = left
+			text = "[GetAlliesAsiaRouteColor]"
+			pdx_tooltip = asia_route_history
+		}
+		
+		instantTextBoxType = {
+			name = "norway_route_title"
+			position = { x = 24 y = 12 } 
+			maxHeight = 20
+			maxWidth = 180
+			font = "hoi_16mbs"
+			format = left
+			text = "[GetAlliesNorwayRouteColor]"
+			pdx_tooltip = norway_route_history
+		}
+		
+		instantTextBoxType = {
+			name = "progress_bar_lend_lease_title"
+			position = { x = 19 y = 170 } 
+			maxHeight = 20
+			maxWidth = 340
+			font = "hoi_16mbs"
+			format = left
+			text = progress_bar_lend_lease_tt
+		}
+		
+		iconType = {
+            name = "progress_bar_lend_lease"
+            spriteType = "GFX_progress_bar_lend_lease"
+            position = { x = 18 y= 190 }
+        }
+		
+		instantTextBoxType = {
+			name = "equipment_log_title"
+			position = { x = 360 y = 145 } 
+			maxHeight = 20
+			maxWidth = 340
+			font = "hoi_16mbs"
+			format = left
+			text = equipment_log_name_tt
+		}
+		
+		iconType = {     
+			name = "equipment_log" 
+			position = { x = 400  y = 160 }  
+			spriteType = "GFX_theatre_combat_log_icon"
+			scale = 1.5
+			pdx_tooltip = equipment_log_tt
+		}	
+	}
+}

@@ -1562,6 +1562,21 @@ news_event = { # авто-вступление юсы в войну, если у
 	}
 }
 
+news_event = {
+	id = origion.12
+	title = origion.12.t
+	desc = origion.12.desc
+	picture = GFX_news_event_SOV_invasion_iran
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = origion.12.a
+	}
+}
+
 country_event = { # начало барбароссы
 	id = origion.14
 	title = origion.14.t
