@@ -646,9 +646,11 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = SF_MARINES_exfiltration_effect_tt
 		}
-		
-		acclimatization_cold_climate_gain_factor = 0.05
-		acclimatization_hot_climate_gain_factor = 0.05
+		marine_commando = {
+		max_organisation = 10
+		acclimatization_cold_climate_gain_factor = 0.15
+		acclimatization_hot_climate_gain_factor = 0.15
+		}
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -658,7 +660,6 @@ technologies = {
 			marine_tech
 			cat_marines_doctrine
 		}
-
 		
 		folder = {
 			name = special_forces_doctrine_folder
@@ -672,7 +673,17 @@ technologies = {
 		ai_research_weights = {
 			#artillery = 4.0
 		}
-	}
+
+		allow = { 
+			if = {
+				limit = { NOT = { original_tag = JAP original_tag = USA } } 
+			or = {
+				original_tag = JAP
+				original_tag = USA
+					}
+				}
+			}
+		}
 	
 	marines_expeditionary = {
 		
@@ -731,7 +742,7 @@ technologies = {
 		}
 		
 		marine_commando = {
-			breakthrough = 0.15
+			breakthrough = 0.20
 		}
 		
 		doctrine = yes	
@@ -813,7 +824,7 @@ technologies = {
 		allow_branch = { has_dlc = "Man the Guns" }
 		
 		amphibious_mechanized = {
-			breakthrough = 0.1
+			max_organisation = 3
 		}
 		
 		pioneer_support = {
