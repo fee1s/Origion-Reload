@@ -633,7 +633,7 @@ equipment_modules = {
 
 	tank_auto_cannon = {
 		abbreviation = "ac1"
-		category = tank_small_main_armament
+		category = tank_small_armored_car_armament
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -647,14 +647,14 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		xp_cost = 0
 		can_convert_from = {
-			module_category = tank_small_main_armament
+			module_category = tank_small_armored_car_armament
 			convert_cost_ic = 1.5
 		}
 	}
 
 	tank_auto_cannon_2 = {
 		abbreviation = "ac2"
-		category = tank_small_main_armament
+		category = tank_small_armored_car_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_auto_cannon
 		add_stats = {
@@ -668,7 +668,7 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		xp_cost = 0
 		can_convert_from = {
-			module_category = tank_small_main_armament
+			module_category = tank_small_armored_car_armament
 			convert_cost_ic = 2
 		}
 	}
