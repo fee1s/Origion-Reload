@@ -973,8 +973,7 @@ ideas = {
 			}
 					
 			modifier = {
-				consumer_goods_factor = -0.15
-				political_power_factor = -0.15
+				consumer_goods_factor = -0.1
 				out_of_supply_factor = -0.1
 			}
 		}
@@ -993,8 +992,7 @@ ideas = {
 			}
 					
 			modifier = {
-				consumer_goods_factor = -0.05
-				political_power_factor = 0.1
+			global_building_slots_factor = 0.15
 			}
 		}
 
@@ -1012,11 +1010,9 @@ ideas = {
 			}
 					
 			modifier = {
-				monthly_population = 0.3
-				political_power_factor = 0.15
-				drift_defence_factor = 0.15
-				democratic_acceptance = -50
-				communism_acceptance = -50
+				monthly_population = 0.25
+				conscription_factor = 0.1
+
 			}
 		}
 
@@ -1041,11 +1037,7 @@ ideas = {
 			}
 					
 			modifier = {
-				custom_modifier_tooltip = ITA_camicie_nere_mp_tt
-				resistance_garrison_penetration_chance = -0.1
-				resistance_damage_to_garrison = -0.1
-				conscription_factor = 0.15
-				fascism_drift = 0.02
+				conscription_factor = 0.2
 			}
 		}
 
@@ -1075,7 +1067,6 @@ ideas = {
 				resistance_garrison_penetration_chance = -0.1
 				resistance_damage_to_garrison = -0.1
 				conscription_factor = 0.15
-				fascism_drift = 0.02
 				modifier_army_sub_unit_militia_max_org_factor = 0.05
 			}
 		}
@@ -1103,12 +1094,8 @@ ideas = {
 					
 			modifier = {
 				custom_modifier_tooltip = ITA_camicie_nere_mp_tt
-				resistance_garrison_penetration_chance = -0.1
-				resistance_damage_to_garrison = -0.1
-				conscription_factor = 0.15
-				fascism_drift = 0.02
-				modifier_army_sub_unit_militia_max_org_factor = 0.05
-				non_core_manpower = 0.1
+				conscription_factor = 0.20
+				non_core_manpower = 0.15
 			}
 		}
 

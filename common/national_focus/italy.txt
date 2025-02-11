@@ -169,7 +169,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_ministry_of_italian_africa
-		cost = 10
+		cost = 5
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -848,7 +848,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -866,7 +866,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -898,7 +898,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -916,7 +916,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1856,13 +1856,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				ITA_add_citta_dell_aria_templates = yes
 			}
 		}
 	}
@@ -2967,7 +2960,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_timed_idea = { idea = ITA_battaglia_del_grano days = 730 }
+			add_ideas = { ITA_battaglia_del_grano }
 		}
 	}
 
@@ -2985,51 +2978,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			if = { #Latium
-				limit = {
-					2 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						} 
-					}
-				}
-				2 = {
-					add_extra_state_shared_building_slots = 2
-				}
-			}
-			if = { #Campania
-				limit = {
-					117 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						} 
-					}
-				}
-				117 = {
-					add_extra_state_shared_building_slots = 2
-				}
-			}
-
-			if = { #Tuscany
-				limit = {
-					162 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						} 
-					}
-				}
-				162 = {
-					add_extra_state_shared_building_slots = 2
-				}
-			}
-
-			add_timed_idea = { idea = ITA_battaglia_per_la_terra days = 730 }
+			add_ideas = { ITA_battaglia_per_la_terra }
 		}
 	}
 
@@ -3047,8 +2996,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_timed_idea = { idea = ITA_battaglia_per_la_nascite days = 730 }
-			add_political_power = 25
+			add_ideas = { ITA_battaglia_per_la_nascite }
 		}
 	}
 
