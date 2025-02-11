@@ -49,14 +49,18 @@ defined_text = { # Country
 	name = GetAlliesAsia
 	text = {
 		trigger = {
-			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+			524 = { is_controlled_by_allies = yes }
+			526 = { is_controlled_by_allies = yes }
 		}
 		localization_key = GFX_asia_green
 	}
 	
 	text = {
 		trigger = {
-			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+			OR = {
+				524 = { is_controlled_by_allies = no }
+				526 = { is_controlled_by_allies = no }
+			}
 		}
 		localization_key = GFX_asia_red
 	}
@@ -101,14 +105,18 @@ defined_text = { # Country
 	name = GetAlliesAsiaRouteColor
 	text = {
 		trigger = {
-			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+			524 = { is_controlled_by_allies = yes }
+			526 = { is_controlled_by_allies = yes }
 		}
 		localization_key = GetAlliesAsiaRouteYes
 	}
 	
 	text = {
 		trigger = {
-			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+			OR = {
+				524 = { is_controlled_by_allies = no }
+				526 = { is_controlled_by_allies = no }
+			}
 		}
 		localization_key = GetAlliesAsiaRouteNo
 	}
@@ -123,7 +131,10 @@ defined_text = { # Country
 				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
 			}
 			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-			JAP = { OR = { controls_state = 524 controls_state = 526 } }
+			OR = {
+				524 = { is_controlled_by_allies = no }
+				526 = { is_controlled_by_allies = no }
+			}
 		}
 	
 		localization_key = GetMaxIsFourty
@@ -138,7 +149,8 @@ defined_text = { # Country
 						NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
 					}
 					GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-					JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+					524 = { is_controlled_by_allies = yes }
+					526 = { is_controlled_by_allies = yes }
 				}
 				
 				AND = {
@@ -147,13 +159,19 @@ defined_text = { # Country
 						NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
 					}
 					GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-					JAP = { OR = { controls_state = 524 controls_state = 526 } }
+					OR = {
+						524 = { is_controlled_by_allies = no }
+						526 = { is_controlled_by_allies = no }
+					}
 				}
 				
 				AND = {
 					AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
 					GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-					JAP = { OR = { controls_state = 524 controls_state = 526 } }
+					OR = {
+						524 = { is_controlled_by_allies = no }
+						526 = { is_controlled_by_allies = no }
+					}
 				}
 			}
 		}
@@ -170,19 +188,24 @@ defined_text = { # Country
 						NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
 					}
 					GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-					JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+					524 = { is_controlled_by_allies = yes }
+					526 = { is_controlled_by_allies = yes }
 				}
 				
 				AND = {
 					AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
 					GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-					JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+					524 = { is_controlled_by_allies = yes }
+					526 = { is_controlled_by_allies = yes }
 				}
 				
 				AND = {
 					AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
 					GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-					JAP = { OR = { controls_state = 524 controls_state = 526 } }
+					OR = {
+						524 = { is_controlled_by_allies = no }
+						526 = { is_controlled_by_allies = no }
+					}
 				}
 			}
 		}
@@ -193,7 +216,8 @@ defined_text = { # Country
 		trigger = {
 			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
 			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
-			JAP = { NOT = { controls_state = 524 controls_state = 526 } }
+			524 = { is_controlled_by_allies = yes }
+			526 = { is_controlled_by_allies = yes }
 		}
 		localization_key = GetMaxIsHundred
 	}

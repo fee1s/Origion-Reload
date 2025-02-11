@@ -60,26 +60,6 @@ SOV_propaganda_campaigns = {
 	}
 }
 
-SOV_gosproyektstroy_decision_category = {
-	priority = 29
-
-	icon = generic_industry
-
-	picture = SOV_civil_puppet_interaction 
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		OR = {
-			has_idea = SOV_gosproyektstroy_1
-			has_country_flag = SOV_gosproyektstroy_level_2_flag
-			has_country_flag = SOV_gosproyektstroy_level_3_flag
-		}
-	}
-}
-
 SOV_industry_relocation = {
 	priority = 12
 
@@ -263,23 +243,6 @@ SOV_soviet_aid_decision_category = { #Dec cat for Sinkiang (mission dummies go h
 
 	allowed = {
 		original_tag = SIK
-	}
-}
-
-SOV_national_academy_of_sciences_dec_cat = {
-	priority = 30
-
-	icon = SOV_soviet_academy_of_sciences
-
-	picture = GFX_decision_cat_picture_soviet_national_academy_of_sciences 
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		has_completed_focus = SOV_national_academies_of_sciences
-		has_civil_war = no
 	}
 }
 

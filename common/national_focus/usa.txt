@@ -217,6 +217,8 @@ focus_tree = {
 			USA_great_depression_level_down = yes
 			custom_effect_tooltip = USA_nyse_global_building_slots_factor_tt
 			add_to_variable = { USA_nyse_global_building_slots_factor = 0.15 }
+			
+			hidden_effect = { add_ideas = export_focus }
 		}
 	}
 
@@ -2118,7 +2120,7 @@ focus_tree = {
 					ENG = { exists = yes }
 				}
 				ENG = {
-					NOT = {has_full_control_of_state = 126}
+					NOT = { has_full_control_of_state = 126 }
 				}
 			}
 			else = {
@@ -2126,8 +2128,7 @@ focus_tree = {
 			}
 		}		
 		completion_reward = {
-		custom_effect_tooltip = USA_total_war_reward_tt
-		add_ideas = militarized_keinsianstvo_mobilisation
+			add_ideas = militarized_keinsianstvo_mobilisation
 		}
 	}
 	focus = {
@@ -2142,11 +2143,6 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = yes
-		available = {
-			ENG = {
-				NOT = {has_full_control_of_state = 126}
-			}
-		}
 		completion_reward = {
 			add_to_tech_sharing_group = commonwealth_research
 			custom_effect_tooltip = allies_total_war_reward_tt
@@ -2170,11 +2166,8 @@ focus_tree = {
 			        add_ideas = allies_total_war
 					add_ideas = tot_economic_mobilisation
 				}
+				
 				ENG = {
-			        add_ideas = allies_total_war
-					add_ideas = tot_economic_mobilisation
-			    }
-				NZL = {
 			        add_ideas = allies_total_war
 					add_ideas = tot_economic_mobilisation
 			    }
@@ -2193,11 +2186,6 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = yes
-		available = {
-			ENG = {
-				NOT = {has_full_control_of_state = 126}
-			}
-		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = GER_autarky

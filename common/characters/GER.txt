@@ -1377,6 +1377,11 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
+			visible = { 
+				not = {
+					has_completed_focus = GER_demand_sudetenland 
+				}
+			}
 			available = {
 				has_completed_focus = GER_four_year_plan 
 				not = {
@@ -1520,13 +1525,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				NOT = {
-					has_country_flag = flight_of_hess 
-				}
-				OR = {
-					has_government = fascism 
-					has_country_flag = GER_reinstated_nazi_leadership 
-				}
+				FRA = { has_capitulated = no }
 			}
 			traits = {
 				amateur_aviator_hess

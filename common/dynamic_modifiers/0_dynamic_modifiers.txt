@@ -611,14 +611,13 @@ SOV_third_five_year_plan_civilian_dynamic_modifier = { #NATIONAL SPIRIT - Civili
 SOV_third_five_year_plan_military_dynamic_modifier = { #NATIONAL SPIRIT - Military
 	enable = { always = yes }
 
-	icon = GGFX_idea_SOV_third_five_year_plan_military_ccp_2d_sov_compatibility
+	icon = GFX_idea_SOV_third_five_year_plan_military_ccp_2d_sov_compatibility
 
-	#PREVIOUS
-	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1 (turned to 0 with Optmize Production Lines)
+	#PREVIOUS -> Third Five Year Plan
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
 	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
 	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.1
-	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0
-	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.05
 	
 	#INITIAL -> Shift to Armaments Production
 	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10
@@ -787,6 +786,7 @@ SOV_soviet_airforce_dynamic_modifier = { #NATIONAL SPIRIT
 	air_cas_present_factor = SOV_soviet_airforce_air_cas_present_factor #0.1 -> Ground Support
 	strategic_bomb_visibility = SOV_soviet_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
 	air_mission_efficiency = SOV_soviet_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_superiority_efficiency = SOV_soviet_airforce_air_superiority_efficiency # ориджен
 	air_nav_efficiency = SOV_soviet_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
 }
 
@@ -814,6 +814,7 @@ SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier = { #NATIONAL SPI
 	air_cas_present_factor = SOV_soviet_airforce_air_cas_present_factor #0.1 -> Ground Support
 	strategic_bomb_visibility = SOV_soviet_airforce_strategic_bomb_visibility #-0.1 -> Long Range Aircraft
 	air_mission_efficiency = SOV_soviet_airforce_air_mission_efficiency #0.1 -> The Modern War in the Skies
+	air_superiority_efficiency = SOV_soviet_airforce_air_superiority_efficiency # ориджен
 	air_nav_efficiency = SOV_soviet_airforce_air_nav_efficiency #0.1 -> Expand the Morskaya Aviatsiya
 }
 
@@ -1116,6 +1117,7 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 
 	#FUTURE
 	army_morale_factor = SOV_the_red_army_army_morale_factor #сисикал_совок_нерф
+	org_loss_at_low_org_factor = SOV_the_red_army_org_loss_at_low_org_factor
 	mobilization_speed = SOV_the_red_army_mobilization_speed #0.05 -> Strengthen the Mobilization Plan
 	conscription_factor = SOV_the_red_army_conscription_factor #0.03 -> Strengthen the Mobilization Plan
 	modifier_army_sub_unit_cavalry_speed_factor = SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor # 0.05 -> Restore Cossack Units
@@ -1365,4 +1367,11 @@ JAP_emperor_army_dm = {
 	conscription_factor = JAP_army_conscription_factor
 	army_attack_factor = JAP_army_attack_factor
 	army_defence_factor = JAP_army_defence_factor
+}
+
+sea_invasion_prohibited_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_demilitarize_zone
+	
+    army_attack_factor = -3
 }

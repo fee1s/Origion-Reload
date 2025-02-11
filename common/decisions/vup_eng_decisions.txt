@@ -106,6 +106,52 @@ ENG_house_of_commons = {
 		}
 	}
 	
+	ENG_operation_torch = {
+		available = { date > 1941.6.1 }
+		icon = GFX_decision_eng_puppet_usa
+		
+		visible = { USA = { exists = no } }
+		
+		complete_effect = {
+			ENG = {
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+			}
+			
+			ITA = {
+				transfer_state = 460 
+				transfer_state = 513
+				transfer_state = 459
+			}
+			
+			hidden_effect = { 
+				GER = { annex_country = { target = VIC transfer_troops = no } }
+				
+				461 = {
+					add_building_construction = {
+						type = naval_base
+						level = 6
+						province = 7069
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = air_base
+						level = 6
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
 	ENG_operation_crusader = {
 		icon = GFX_decision_eng_puppet_usa
 		available = {

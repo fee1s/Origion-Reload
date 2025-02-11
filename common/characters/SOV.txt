@@ -1173,38 +1173,6 @@ characters = {
 				large = GFX_portrait_SOV_gordey_levchenko
 			}
 		}
-		advisor = {
-			slot = high_command
-			idea_token = gordey_levchenko
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 406
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
 
 		navy_leader = {
 			traits = { green_water_expert }
@@ -1226,38 +1194,6 @@ characters = {
 			}
 			army = {
 				large = GFX_portrait_SOV_arseny_golovko
-			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = arseniy_golovko
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 409.000
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				navy_amphibious_assault_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
 			}
 		}
 
@@ -1283,38 +1219,6 @@ characters = {
 				large = GFX_portrait_SOV_vladimir_kasatonov
 			}
 		}
-		advisor = {
-			slot = high_command
-			idea_token = vladimir_kasatonov
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 403.000
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				navy_submarine_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
 
 		navy_leader = {
 			traits = { seawolf }
@@ -1333,22 +1237,6 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_stepan_krasovsky"
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = stepan_krasovsky
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-				cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -1643,22 +1531,6 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_pavel_zhigarev"
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = pavel_zhigarev
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				air_airborne_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

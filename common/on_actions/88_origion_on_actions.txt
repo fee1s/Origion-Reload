@@ -1,4 +1,58 @@
 on_actions = {
+	on_naval_invasion = { 
+		effect ={ 
+			if = { 
+				limit = {
+					OR = {
+						off_сhannel_coastline = yes
+					}
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+					to_state = 64 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 64
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { off_сhannel_coastline = yes } } transfer_state_to = ENG }  
+				}				
+			}
+			
+			if = { 
+				limit = {
+					OR = {
+						norwegian_coastline = yes
+					}
+					SOV = { has_war = no }
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 126 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 126
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { norwegian_coastline = yes } } transfer_state_to = GER }  
+				}				
+			}
+		}
+	}
     on_startup = {
 		effect = {
 			COL = {

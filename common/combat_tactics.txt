@@ -279,9 +279,9 @@ tactic_tactical_withdrawal = { #counters encirclement
 	
 	phase = tactical_withdrawal
 	
-	combat_width = -0.25
-	attacker = -0.25
-	defender = -0.05
+	attacker_movement_speed = -0.25
+	attacker = -0.3
+	defender = 0.1
 }
 ###tactical withdrawal tactics
 tactic_tw_attack = { 
@@ -725,9 +725,9 @@ tactic_guerrilla_tactics = { #People's army defender tactic. also for German vol
 	picture = tactic_guerrilla_tactics
 	countered_by = tactic_breakthrough
 	
-	combat_width = -0.5
-	attacker = -0.3
-	defender = -0.4
+	attacker_movement_speed = -0.25
+	attacker = -0.35
+	defender = -0.15
 }
 
 tactic_human_wave_tactics = { #People's army attacker tactic
@@ -807,6 +807,7 @@ tactic_planned_attack = { #GBP -> Armor attacker tactic
 	
 	countered_by = tactic_tactical_withdrawal
 	
+	attacker_movement_speed = 0.15
 	attacker = 0.15 
 	defender = -0.10
 }

@@ -349,6 +349,42 @@ ideas = {
 				production_speed_naval_base_factor = -1.5
 				lend_lease_tension = 1
 			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				cv_small_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				small_plane_cas_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				cv_small_plane_cas_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				small_plane_naval_bomber_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				medium_plane_scout_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+			}
 		}
 		
 		peace_training = {
@@ -413,15 +449,14 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_intervene_in_china
+			picture = ARG_british_influences
 			allowed_civil_war = {
 				
 			}		
 			removal_cost = -1
 			modifier = {
-				global_building_slots_factor = 0.40
-				conscription = 0.03
-				special_forces_cap = 0.10
+				global_building_slots_factor = 0.25
+				conscription = 0.05
 				surrender_limit = 1
 			}
 		}
@@ -430,7 +465,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-			picture = jap_intervene_in_china
+			picture = ARG_british_influences
 
 			allowed_civil_war = {
 			}		
@@ -440,7 +475,6 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 				global_building_slots_factor = 0.25
 				conscription = 0.05
-				special_forces_cap = 0.10
 				production_factory_max_efficiency_factor = 0.05
 			}
 		}

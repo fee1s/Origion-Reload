@@ -77,28 +77,6 @@ Epsilon_decions = { # Общие решения
 			}
 		}
 	}
-	SOV_Sacred_War = {
-        icon = generic_army_support
-        available = {
-			tag = SOV
-            has_war = yes
-            date > 1941.5.1
-        }
-        visible = {
-            SOV = { is_ai = yes }
-			original_tag = SOV
-        }
-        fire_only_once = yes
-        days_remove = -1
-        cost = 0
-        ai_will_do = {
-            factor = 10
-        }
-        complete_effect = {
-			add_ideas = tot_economic_mobilisation
-            add_ideas = Sacred_War
-        }
-    }
 }
 Origion_fast_templates = { # Рещения на шаблоны
 	

@@ -498,11 +498,11 @@ set_variable = { SOV_fyp_factory_requirement_tier_5 = 200 }
 
 #THIRD FIVE YEAR PLAN NATIONAL SPIRIT VARS
 set_variable = { SOV_fyp_production_factory_efficiency_gain_factor = -0.15 }
-set_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 }
-set_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
-set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.05 }
+set_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.15 }
+set_variable = { SOV_fyp_consumer_goods_factor = 0 }
+set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0 }
 
-set_variable = { SOV_fyp_industrial_concern_cost_factor = -0.15 } #-> Third Five Year Plan
+set_variable = { SOV_fyp_industrial_concern_cost_factor = 0 } #-> Third Five Year Plan
 set_variable = { SOV_fyp_local_resources_factor = 0 } #-> Increase State Reserves
 set_variable = { SOV_fyp_line_change_production_efficiency_factor = 0 } #-> Industrial Modernization
 set_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.1 } #-> Shift to Armaments Production
@@ -518,12 +518,12 @@ add_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
 
 #SOVIET AIRFORCE NATIONAL SPIRIT VARS
 set_variable = { SOV_soviet_airforce_air_accidents_factor = 0.75 }
-set_variable = { SOV_soviet_airforce_air_ace_generation_chance_factor = -0.5 }
+set_variable = { SOV_soviet_airforce_air_ace_generation_chance_factor = 0 } #неактуально на моде
 set_variable = { SOV_soviet_airforce_air_night_penalty = 0.3 }
 set_variable = { SOV_soviet_airforce_air_weather_penalty = 0.3 }
-set_variable = { SOV_soviet_airforce_air_wing_xp_loss_when_killed_factor = 0.3 }
-set_variable = { SOV_soviet_airforce_air_mission_xp_gain_factor = 0.1 }
-set_variable = { SOV_soviet_airforce_air_training_xp_gain_factor = -0.1 }
+set_variable = { SOV_soviet_airforce_air_wing_xp_loss_when_killed_factor = 0 } #неактуально на моде
+set_variable = { SOV_soviet_airforce_air_mission_xp_gain_factor = 0 } #неактуально на моде
+set_variable = { SOV_soviet_airforce_air_training_xp_gain_factor = 0 } #неактуально на моде
 
 set_variable = { SOV_soviet_airforce_aircraft_manufacturer_cost_factor = 0 } #-> Expand the Aircraft Industry
 set_variable = { SOV_soviet_airforce_air_fuel_consumption_factor = 0 } #-> Modernize Aircraft Factories / Intensify Pilot Training Program
@@ -533,6 +533,7 @@ set_variable = { SOV_soviet_airforce_air_strategic_bomber_night_penalty = 0 } #-
 set_variable = { SOV_soviet_airforce_air_cas_present_factor = 0 } #-> Ground Support
 set_variable = { SOV_soviet_airforce_strategic_bomb_visibility = 0 } #-> Long Range Aircraft
 set_variable = { SOV_soviet_airforce_air_mission_efficiency = 0 } #-> The Modern War in the Skies
+set_variable = { SOV_soviet_airforce_air_superiority_efficiency = -0.15 } # ориджен
 set_variable = { SOV_soviet_airforce_air_nav_efficiency = 0 } #-> Expand the Morskaya Aviatsiya
 
 add_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier }
@@ -577,6 +578,7 @@ set_variable = { SOV_the_red_army_army_defence_factor = -0.15 } #сисикал
 set_variable = { SOV_the_red_army_army_breakthrough_factor = -0.075 } #сисикал
 
 set_variable = { SOV_the_red_army_army_morale_factor = 0 } #сисикал
+set_variable = { SOV_the_red_army_org_loss_at_low_org_factor = 0 } #сисикал
 set_variable = { SOV_the_red_army_mobilization_speed = 0 } #-> Strengthen the Mobilization Plan
 set_variable = { SOV_the_red_army_conscription_factor = 0 } #-> Strengthen the Mobilization Plan
 set_variable = { SOV_the_red_army_modifier_army_sub_unit_cavalry_speed_factor = 0 } #-> Restore Cossack Units

@@ -1583,32 +1583,25 @@ war_measures = {
         }
 
         available = {
-			OR = {
-				has_idea = tot_economic_mobilisation
-				
-				hidden_trigger = {
-					OR = {
-						has_idea = national_security_mobilisation
-						has_idea = militarized_keinsianstvo_mobilisation
-						has_idea = totaler_krieg_economic_mobilisation
-						has_idea = italy_totalen_krieg_economic_mobilisation
-						has_idea = minors_totalen_krieg_economic_mobilisation
-					}
-				}
-			}
+			has_idea = tot_economic_mobilisation
         }
+		
         visible = {
             has_war = yes
         }
+		
         cost = 100
         days_remove = -1
+		
         remove_trigger = {
             has_war = no
         }
+		
         modifier = {
             conscription = 0.03
             stability_factor = -0.05
         }
+		
         ai_will_do = {
 			factor = 1
 
@@ -1617,14 +1610,6 @@ war_measures = {
 				has_manpower < 100000
 			}
 		}
-		complete_effect = {
-			if = {
-				limit = {
-					tag = CAN
-				}
-				country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
-			}
-        }
    }
 
     war_bonds = {

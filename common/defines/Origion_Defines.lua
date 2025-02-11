@@ -111,6 +111,10 @@ NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 96.0 -- Скорость разв
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0.75;
 
+NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.55
+NDefines.NAir.FUEL_COST_MULT = 0.3
+NDefines.NNavy.FUEL_COST_MULT = 0.15
+
 -- Флотские дефайны
 
 NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3 

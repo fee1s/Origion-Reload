@@ -1498,182 +1498,6 @@ news_event = {
 	}
 }
 
-# Hindenburg Disaster
-news_event = {
-	id = news.42
-	title = news.42.t
-	desc = news.42.d
-	picture = GFX_news_event_025
-	
-	major = yes
-	
-	is_triggered_only = yes
-
-	immediate = {
-		set_global_flag = hindenburg_destroyed
-	}
-	
-	option = {
-		name = news.42.a
-	}
-}
-
-# Hindenburg Disaster Averted
-news_event = {
-	id = news.43
-	title = news.43.t
-	desc = news.43.d
-	picture = GFX_news_event_hindenburg_intact
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		set_global_flag = hindenburg_survives
-	}
-	
-	option = {
-		name = news.43.a
-	}
-}
-
-# Flight of Rudolf Hess
-news_event = {
-	id = news.44
-	title = news.44.t
-	desc = news.44.d
-	picture = GFX_news_event_029
-	
-	major = yes
-	
-	is_triggered_only = yes
-
-	show_major = {
-		NOT = { tag = GER }
-	}
-	
-	option = {
-		name = news.44.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.44.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.44.c
-		trigger = { TAG = ENG }
-	}
-}
-
-# Rudolf Hess Killed
-news_event = {
-	id = news.45
-	title = news.45.t
-	desc = news.45.d
-	picture = GFX_news_event_029
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	show_major = {
-		NOT = { tag = GER }
-	}	
-	
-	option = {
-		name = news.45.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.45.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.45.c
-		trigger = { TAG = ENG }
-	}
-}
-
-# Flight of Rudolf Hess (Hindenburg)
-news_event = {
-	id = news.46
-	title = news.44.t
-	desc = news.46.d
-	picture = GFX_news_event_026
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	show_major = {
-		NOT = { tag = GER }
-	}
-
-	option = {
-		name = news.38.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.44.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.44.c
-		trigger = { TAG = ENG }
-	}
-}
-
-# Rudolf Hess Killed (Hindenburg)
-news_event = {
-	id = news.47
-	title = news.45.t
-	desc = news.47.d
-	picture = GFX_news_event_026
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	show_major = {
-		NOT = { tag = GER }
-	}
-
-	option = {
-		name = news.38.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.47.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.47.c
-		trigger = { TAG = ENG }
-	}
-}
-
 # Amelia Earhart Disappears
 news_event = {
 	id = news.48
@@ -1707,206 +1531,6 @@ news_event = {
 	
 	option = {
 		name = news.49.a
-	}
-}
-
-# Hindenburg Trigger (HIDDEN)
-news_event = {
-	id = news.51
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.5.5
-		date < 1939.5.5
-		country_exists = USA
-		country_exists = GER
-		USA = { has_war = no }
-		GER = { has_war = no }
-		GER = { has_civil_war = no }
-		NOT = { has_global_flag = hindenburg_destroyed }
-		NOT = { has_global_flag = hindenburg_event_in_progress }
-	}
-
-	mean_time_to_happen = {
-		days = 240
-	}
-	
-	immediate = {
-		random_list = {
-			70 = {
-				modifier = {
-					factor = 0
-					has_global_flag = GER_air_safety_regulations_flag
-				}
-				USA = { news_event = { id = news.42 } }
-			}
-			30 = { USA = { news_event = { id = news.43 } } }
-		}
-	}
-	
-	option = {
-		name = news.51.a
-	}
-}
-
-# Rudolf Hess Trigger (HIDDEN)
-news_event = {
-	id = news.52
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		country_exists = ENG
-		country_exists = GER
-		country_exists = SOV
-		GER = { 
-			has_war_with = ENG 
-			NOT = { has_war_with = SOV }
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = GER_adolf_hitler }
-		}
-		has_global_flag = fall_of_france
-		NOT = { has_global_flag = hindenburg_survives }
-		ENG = { # No Sea Lion
-			controls_state = 127
-			controls_state = 123
-			controls_state = 126
-			controls_state = 338
-			controls_state = 125
-			controls_state = 129
-			controls_state = 128
-			controls_state = 122
-			controls_state = 132
-			controls_state = 130
-			controls_state = 131
-			controls_state = 121
-			controls_state = 133
-			controls_state = 136
-			controls_state = 120
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	immediate = {
-		random_list = {
-			50 = { 
-				ENG = { news_event = { id = news.44 } }
-				GER = { country_event = { id = germany.107 } }
-			}
-			50 = { 
-				ENG = { news_event = { id = news.45 } } 
-				GER = { country_event = { id = germany.108 } }
-			}
-		}
-	}
-	
-	option = {
-		name = news.52.a
-	}
-}
-
-# Rudolf Hess Hindenburg Trigger (HIDDEN)
-news_event = {
-	id = news.53
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		country_exists = ENG
-		country_exists = GER
-		country_exists = SOV
-		GER = { 
-			has_war_with = ENG 
-			NOT = { has_war_with = SOV }
-			has_government = fascism
-		}
-		has_global_flag = fall_of_france
-		has_global_flag = hindenburg_survives
-		ENG = { # No Sea Lion
-			controls_state = 127
-			controls_state = 123
-			controls_state = 126
-			controls_state = 338
-			controls_state = 125
-			controls_state = 129
-			controls_state = 128
-			controls_state = 122
-			controls_state = 132
-			controls_state = 130
-			controls_state = 131
-			controls_state = 121
-			controls_state = 133
-			controls_state = 136
-			controls_state = 120
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	immediate = {
-		random_list = {
-
-			#Flight in Hinden
-			15 = { 
-				ENG = { news_event = { id = news.46 } } 
-				GER = { country_event = { id = germany.109 } }
-			}
-			15 = { 
-				ENG = { news_event = { id = news.47 } } 
-				GER = { country_event = { id = germany.110 } }
-			}
-
-			#Ordinary flight
-			35 = { 
-				ENG = { news_event = { id = news.44 } }
-				GER = { country_event = { id = germany.107 } }
-			}
-			35 = { 
-				ENG = { news_event = { id = news.45 } } 
-				GER = { country_event = { id = germany.108 } }
-			}
-
-		}
-	}
-	
-	option = {
-		name = news.53.a
-	}
-}
-
-# Amelia Earhart Trigger (HIDDEN)
-news_event = {
-	id = news.54
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.7.1
-		NOT = { has_global_flag = earhart_disappeared}
-		country_exists = USA
-		USA = { has_war = no }
-		NOT = { has_country_flag = amelia_active_ace }
-	}
-	
-	immediate = {
-		random_list = {
-			50 = { ENG = { news_event = { id = news.48 } } }
-			50 = { ENG = { news_event = { id = news.49 } } }
-		}
-	}
-	
-	option = {
-		name = news.54.a
 	}
 }
 
@@ -3101,7 +2725,7 @@ news_event = {
 	}
 }
 
-# The Fall of Gibraltar (Germany)
+# The Fall of Gibraltar (Для всех, ориджен)
 news_event = {
 	id = news.112
 	title = news.112.t
@@ -3111,14 +2735,33 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		118 = { is_controlled_by = GER }
-		118 = { is_owned_by = ENG }
-		GER = { has_war_with = ENG }
+		118 = { 
+		    controller = {
+			    ORIGION_is_in_faction_with_axis = yes
+			}
+		}
 		NOT = { has_global_flag = fall_of_gibraltar_ger }
 	}
 	
 	immediate = {
 		set_global_flag = fall_of_gibraltar_ger
+		every_state = {
+			limit = {
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = GER }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = JAP }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ITA }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = HUN }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ROM }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = BUL }
+			}
+			
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = GER }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = JAP }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ITA }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = HUN }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ROM }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = BUL }
+		}
 	}
 	
 	mean_time_to_happen = {
