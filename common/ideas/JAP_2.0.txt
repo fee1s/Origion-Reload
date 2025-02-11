@@ -144,7 +144,7 @@ ideas = {
 		JAP_stagnation_economic_0 = {
 			picture = ARG_political_corruption_modifier 
 			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
+				has_country_flag = JAP_stagnation_cancel
 			}
 			modifier = {
 				consumer_goods_expected_value = 0.05
@@ -166,7 +166,18 @@ ideas = {
 		JAP_stagnation_economic_2 = {
 			picture = ARG_political_corruption_modifier 
 			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
+				has_country_flag = JAP_stagnation_cancel
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		JAP_stagnation_economic_3 = {
+			picture = ARG_political_corruption_modifier 
+			cancel = {
+				has_country_flag = JAP_stagnation_cancel
 			}
 			modifier = {
 				consumer_goods_expected_value = 0.2
@@ -174,38 +185,26 @@ ideas = {
 				industrial_capacity_dockyard = -0.2
 			}
 		}
-		JAP_stagnation_economic_3 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.3
-				industrial_capacity_factory = -0.3
-				industrial_capacity_dockyard = -0.3
-			}
-		}
 		JAP_stagnation_economic_4 = {
 			picture = ARG_political_corruption_modifier 
 			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
+				has_country_flag = JAP_stagnation_cancel
 			}
 			modifier = {
-				consumer_goods_expected_value = 0.4
-				industrial_capacity_factory = -0.4
-				industrial_capacity_dockyard = -0.4
+				consumer_goods_expected_value = 0.25
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
 			}
 		}
 		JAP_stagnation_economic_5 = {
 			picture = ARG_political_corruption_modifier 
 			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
+				has_country_flag = JAP_stagnation_cancel
 			}
 			modifier = {
-				consumer_goods_expected_value = 0.5
-				industrial_capacity_factory = -0.5
-				dockyard_capacity_factory = -0.5
-				industrial_capacity_dockyard = -0.5
+				consumer_goods_expected_value = 0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
 			}
 		}
 	JAP_unified_fighter_development = {

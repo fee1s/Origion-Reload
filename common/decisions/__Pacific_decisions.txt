@@ -1,7 +1,7 @@
 Pacific_dec_cat = {
 	Pacific_start_mission = {
 		icon = GFX_decision_eng_puppet_usa
-		priority = 105
+		priority = 106
 		fire_only_once = yes
 		days_mission_timeout = 30
 		
@@ -21,6 +21,87 @@ Pacific_dec_cat = {
 		}
 	}
 	### ОПЕРАЦИИ СОЮЗНИКОВ ###
+	Pacific_operation_downfall_dec = { # ВЫСАДКА В ЯПОНИЮ
+		icon = GFX_decision_eng_puppet_usa
+		priority = 105
+		fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		
+		available = {
+		    has_full_control_of_state = 524
+			has_full_control_of_state = 526
+			has_full_control_of_state = 645
+			original_tag = USA
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_downfall_tt
+			set_global_flag = operation_downfall
+			news_event = { id = origion_pacific.9 }
+		}
+	}
+	Pacific_operation_iceberg_dec = { # ИВОДЗИМА, ОКИНАВА И ТАЙВАНЬ
+		icon = GFX_decision_eng_puppet_usa
+		priority = 104
+		fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+			always = no
+		}
+		
+		available = {
+		    custom_trigger_tooltip = {
+			    tooltip = USA_operation_iceberg_tt
+				check_variable = {
+					ALLY_pacific_controlled_regions > 10
+				}
+			}
+			custom_trigger_tooltip = {
+			    tooltip = generic_skip_one_line_tt
+			}
+			custom_trigger_tooltip = {
+				tooltip = pacific_war_started_dd_tt
+				has_country_flag = {
+					flag = pacific_war_started_dd_flag
+					days > 365
+				}
+			}
+		}
+		
+		highlight_states = {
+		    highlight_state_targets = {
+			    state = 645
+			    state = 526
+				state = 524
+			} 
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_iceberg_tt
+			645 = {
+		        remove_dynamic_modifier = { 
+		       	    modifier = pacific_warfare_defense_JAP_dm 
+		       		scope = JAP
+		      	}
+		    }
+			526 = {
+		        remove_dynamic_modifier = { 
+		       	    modifier = pacific_warfare_defense_JAP_dm 
+		       		scope = JAP
+		      	}
+		    }
+			524 = {
+		        remove_dynamic_modifier = { 
+		       	    modifier = pacific_warfare_defense_JAP_dm 
+		       		scope = JAP
+		      	}
+		    }
+		}
+	}
 	Pacific_operation_carthwheel_dec = { # НОВАЯ ГВИНЕЯ
 		icon = GFX_decision_eng_puppet_usa
 		priority = 103
@@ -28,6 +109,7 @@ Pacific_dec_cat = {
 		
 		visible = {
 		    ORIGION_is_in_faction_with_allies = yes
+			always = no
 		}
 		
 		available = {
@@ -131,6 +213,7 @@ Pacific_dec_cat = {
 		
 		visible = {
 		    ORIGION_is_in_faction_with_allies = yes
+			always = no
 		}
 		
 		available = {
@@ -172,6 +255,7 @@ Pacific_dec_cat = {
 		
 		visible = {
 		    ORIGION_is_in_faction_with_allies = yes
+			always = no
 		}
 		
 		available = {
@@ -215,55 +299,6 @@ Pacific_dec_cat = {
 		        	}
 		        }
 			}
-		}
-	}
-	Pacific_operation_iceberg_dec = { # ИВОДЗИМА, ОКИНАВА И ТАЙВАНЬ
-		icon = GFX_decision_eng_puppet_usa
-		priority = 98
-		fire_only_once = yes
-		
-		visible = {
-		    ORIGION_is_in_faction_with_allies = yes
-		}
-		
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = pacific_war_started_dd_tt
-				has_country_flag = {
-					flag = pacific_war_started_dd_flag
-					days > 365
-				}
-			}
-		}
-		
-		highlight_states = {
-		    highlight_state_targets = {
-			    state = 645
-			    state = 526
-				state = 524
-			} 
-		}
-		
-		complete_effect = {
-		    custom_effect_tooltip = Pacific_operation_iceberg_tt
-			645 = {
-		        remove_dynamic_modifier = { 
-		       	    modifier = pacific_warfare_defense_JAP_dm 
-		       		scope = JAP
-		      	}
-		    }
-			526 = {
-		        remove_dynamic_modifier = { 
-		       	    modifier = pacific_warfare_defense_JAP_dm 
-		       		scope = JAP
-		      	}
-		    }
-			524 = {
-		        remove_dynamic_modifier = { 
-		       	    modifier = pacific_warfare_defense_JAP_dm 
-		       		scope = JAP
-		      	}
-		    }
 		}
 	}
 }

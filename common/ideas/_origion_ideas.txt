@@ -1010,5 +1010,111 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 			}
 		}
+		
+		USA_JAP_debuff_1 = {
+		    name = USA_JAP_debuff_name
+			desc = USA_JAP_debuff_desc_name
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = GER_attack_usa
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+		}
+		USA_JAP_debuff_2 = {
+		    name = USA_JAP_debuff_name
+			desc = USA_JAP_debuff_desc_name
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = GER_attack_usa
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.1
+			}
+		}
+		USA_JAP_debuff_3 = {
+		    name = USA_JAP_debuff_name
+			desc = USA_JAP_debuff_desc_name
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = GER_attack_usa
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.3
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+		USA_JAP_debuff_4 = {
+		    name = USA_JAP_debuff_name
+			desc = USA_JAP_debuff_desc_name
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = GER_attack_usa
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.4
+				defense_bonus_against = -0.4
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.2
+				defense_bonus_against = -0.2
+			}
+		}
+		USA_JAP_debuff_5 = {
+		    name = USA_JAP_debuff_name
+			desc = USA_JAP_debuff_desc_name
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = GER_attack_usa
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = -0.25
+				defense_bonus_against = -0.25
+			}
+		}
 	}
 }

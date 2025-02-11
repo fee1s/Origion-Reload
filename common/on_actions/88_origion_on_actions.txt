@@ -32,14 +32,216 @@ on_actions = {
 				}
 		    }
 	    }
-		effect = {
-		    every_state = {
-			    limit = {
-				    is_on_continent = asia
-					NOT = { is_core_of = SOV }
+	}
+	on_naval_invasion = { 
+		effect ={ 
+			if = { 
+				limit = {
+					is_japan_main_state = yes
+					NOT = { has_global_flag = operation_downfall }
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 361
+				} 
+				every_country = {
+					delete_unit = {
+						state = 361
+						disband = yes
+					} 
 				}
-				add_dynamic_modifier = {
-				    modifier = pacific_warfare_asia_construct_debuff_dm
+				PREV = { 
+					if = { limit = { OR = { is_japan_main_state = yes } } transfer_state_to = JAP }  
+				}				
+			}
+		}
+	}
+	on_weekly_USA = {
+	    effect = {
+		    if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions < 9
+					    }
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_1
+					}
+					remove_ideas = USA_JAP_debuff_1
+				}
+			}
+			if = {
+			    limit = {
+				    OR = {
+					    check_variable  = {
+					        JAP_pacific_controlled_regions = 9
+					    }
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 10
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 11
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 12
+					    }
+					}
+					OR = {
+						NOT = { has_ideas = USA_JAP_debuff_2 }
+						NOT = { has_ideas = USA_JAP_debuff_3 }
+						NOT = { has_ideas = USA_JAP_debuff_4 }
+						NOT = { has_ideas = USA_JAP_debuff_5 }
+					}
+				}
+				if = {
+				    limit = {
+					    NOT = { has_idea = USA_JAP_debuff_1 }
+					}
+					add_ideas = USA_JAP_debuff_1
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_2
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_2
+						add_idea = USA_JAP_debuff_1
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 13
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 14
+					    }
+					}
+					OR = {
+						NOT = { has_ideas = USA_JAP_debuff_4 }
+						NOT = { has_ideas = USA_JAP_debuff_5 }
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_1
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_1
+						add_idea = USA_JAP_debuff_2
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_3
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_3
+						add_idea = USA_JAP_debuff_2
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 15
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 16
+					    }
+					}
+					OR = {
+					    NOT = { has_ideas = USA_JAP_debuff_1 }
+						NOT = { has_ideas = USA_JAP_debuff_5 }
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_2
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_2
+						add_idea = USA_JAP_debuff_3
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_4
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_4
+						add_idea = USA_JAP_debuff_3
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 17
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 18
+					    }
+					}
+					OR = {
+					    NOT = { has_ideas = USA_JAP_debuff_1 }
+						NOT = { has_ideas = USA_JAP_debuff_2 }
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_3
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_3
+						add_idea = USA_JAP_debuff_4
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_5
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_5
+						add_idea = USA_JAP_debuff_4
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 19
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 20
+					    }
+					}
+					OR = {
+					    NOT = { has_ideas = USA_JAP_debuff_1 }
+						NOT = { has_ideas = USA_JAP_debuff_2 }
+						NOT = { has_ideas = USA_JAP_debuff_3 }
+					}
+				}
+				if = {
+				    limit = {
+					    has_idea = USA_JAP_debuff_4
+					}
+				    swap_ideas = {
+					    remove_idea = USA_JAP_debuff_4
+						add_idea = USA_JAP_debuff_5
+					}
 				}
 			}
 		}

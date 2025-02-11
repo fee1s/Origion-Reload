@@ -2,8 +2,7 @@ JAP_annex = {
 	JAP_CHI_attack1 = {
 		icon = GFX_decision_generic_operation
 		available = {
-			date > 1945.1.1
-			has_completed_focus = JAP_intervene_in_china
+			always = no
 		}
 		activation = {
 			has_completed_focus = JAP_intervene_in_china
@@ -33,8 +32,7 @@ JAP_annex = {
 	JAP_CHI_attack2 = {
 		icon = GFX_decision_generic_operation
 		available = {
-			date > 1945.1.1
-			has_completed_focus = JAP_intervene_in_china
+			always = no
 		}
 		activation = {
 			has_completed_focus = JAP_intervene_in_china
@@ -69,8 +67,7 @@ JAP_annex = {
 	JAP_CHI_attack3 = {
 		icon = GFX_decision_generic_operation
 		available = {
-			date > 1945.1.1
-			has_completed_focus = JAP_intervene_in_china
+			always = no
 		}
 		activation = {
 			has_completed_focus = JAP_intervene_in_china

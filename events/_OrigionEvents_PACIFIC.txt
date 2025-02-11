@@ -29,7 +29,6 @@ news_event = { # Начало войны
 	title = origion_pacific.2.t
 	desc = origion_pacific.2.d
 	picture = GFX_news_event_pacific
-	#picture = GFX_news_event_carrier
 	
 	major = yes
 	
@@ -37,9 +36,6 @@ news_event = { # Начало войны
 	
 	immediate = {
 		hidden_effect = {
-		    USA = {
-		        set_country_flag = head_commander_ALLY
-		    }
 			every_country = {
 		    	limit = {
 				    OR = {
@@ -69,31 +65,7 @@ news_event = { # Начало войны
 	}
 }
 
-country_event = { # Регион захвачен - радуемся
-	id = origion_pacific.3
-	title = origion_pacific.3.t
-	desc = origion_pacific.3.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = origion_pacific.3.a
-	}
-}
-
-country_event = { # Регион захвачен - плачем
-	id = origion_pacific.4
-	title = origion_pacific.4.t
-	desc = origion_pacific.4.d
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = origion_pacific.4.a
-	}
-}
-
-country_event = {
+country_event = { # Гайд на пацифик
 	id = origion_pacific.6
 	title = origion_pacific.6.t
 	desc = origion_pacific.6.d
@@ -102,6 +74,135 @@ country_event = {
 	
 	option = {
 		name = origion_pacific.6.a
+	}
+}
+
+news_event = { # Падение Окинавы
+	id = origion_pacific.7
+	title = origion_pacific.7.t
+	desc = origion_pacific.7.d
+	picture = GFX_news_event_okinawa
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+	    any_country = {
+		    ORIGION_is_in_faction_with_allies = yes
+		    has_full_control_of_state = 526
+		}
+		NOT = { has_global_flag = fall_of_okinawa }
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    set_global_flag = fall_of_okinawa
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	
+	option = {
+		name = origion_pacific.7.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	option = {
+		name = origion_pacific.7.b
+		trigger = {
+		    tag = JAP
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+}
+
+news_event = { # Падение Иводзимы
+	id = origion_pacific.8
+	title = origion_pacific.8.t
+	desc = origion_pacific.8.d
+	picture = GFX_news_event_iwojima
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+	    any_country = {
+		    ORIGION_is_in_faction_with_allies = yes
+		    has_full_control_of_state = 645
+		}
+		NOT = { has_global_flag = fall_of_iwojima }
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    set_global_flag = fall_of_iwojima
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	
+	option = {
+		name = origion_pacific.8.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	option = {
+		name = origion_pacific.8.b
+		trigger = {
+		    tag = JAP
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+}
+
+news_event = { # Высадка в Японию
+	id = origion_pacific.9
+	title = origion_pacific.9.t
+	desc = origion_pacific.9.d
+	picture = GFX_news_event_downfall
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	    hidden_effect = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	
+	option = {
+		name = origion_pacific.9.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	option = {
+		name = origion_pacific.9.b
+		trigger = {
+		    tag = JAP
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
 	}
 }
 
@@ -387,14 +488,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = birma_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -415,14 +514,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = birma_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -444,14 +541,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = taiwan_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -472,14 +567,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = taiwan_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -499,25 +592,14 @@ country_event = { # Скрытый ивент, тригериться на за�
 					}
 					clr_global_flag = papua_conquered_JAP
 				}
-				every_state = {
-		   	    	limit = {
-					    is_australian_main_state = yes
-					}
-		   			add_dynamic_modifier = { 
-					    modifier = pacific_warfare_state_defense_dm 
-						scope = JAP
-					}
-				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = papua_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -536,25 +618,14 @@ country_event = { # Скрытый ивент, тригериться на за�
 					}
 					clr_global_flag = papua_conquered_ALLY
 				}
-				every_state = {
-		   	    	limit = {
-					    is_australian_main_state = yes
-					}
-		   			remove_dynamic_modifier = { 
-					    modifier = pacific_warfare_state_dm_1 
-						scope = JAP
-					}
-				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = papua_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -576,14 +647,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = raj_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -604,14 +673,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					} 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = raj_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -633,14 +700,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = australia_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -661,14 +726,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = australia_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -690,14 +753,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = hawai_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -718,14 +779,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = hawai_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -747,14 +806,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = phi_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -775,14 +832,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = phi_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -804,14 +859,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = okinawa_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -832,14 +885,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = okinawa_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -861,14 +912,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = iwojima_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -889,14 +938,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = iwojima_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -918,14 +965,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = malaya_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -946,14 +991,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = malaya_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -975,14 +1018,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = indochina_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1003,14 +1044,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = indochina_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1032,14 +1071,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = solomon_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1060,14 +1097,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = solomon_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1089,14 +1124,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = sumatra_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1117,14 +1150,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = sumatra_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1146,14 +1177,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = jawa_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1174,14 +1203,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = jawa_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1203,14 +1230,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = mariana_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1231,14 +1256,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = mariana_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1260,14 +1283,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = caroline_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1288,14 +1309,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = caroline_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1317,14 +1336,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = marshall_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1345,14 +1362,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = marshall_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1374,14 +1389,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = palau_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1402,14 +1415,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = palau_conquered_JAP
 				pacific_war_JAP_side = yes
@@ -1431,14 +1442,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_USA_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				set_global_flag = newzeland_conquered_ALLY
 				pacific_war_USA_side = yes
@@ -1459,14 +1468,12 @@ country_event = { # Скрытый ивент, тригериться на за�
 				}
 				JAP = { 
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.3 hours = 6 }
 				}
 				every_country = { 
 				    limit = {
 					    ORIGION_is_in_faction_with_allies = yes
 					}
 				    pacific_war_JAP_side_bar = yes 
-					country_event = { id = origion_pacific.4 hours = 6 }
 				}
 				set_global_flag = newzeland_conquered_JAP
 				pacific_war_JAP_side = yes

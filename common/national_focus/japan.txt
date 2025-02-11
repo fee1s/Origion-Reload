@@ -167,7 +167,7 @@ focus_tree = {
 		will_lead_to_war_with = ENG
 		will_lead_to_war_with = MAL
 		will_lead_to_war_with = INS
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -409,19 +409,12 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
+			custom_trigger_tooltip = {
+			    tooltip = JAP_exploit_the_southern_resource_area_trigger_tt
+				check_variable = {
+					JAP_pacific_controlled_regions > 15
+				}
+			}
 		}
 		bypass = {
 		}
@@ -431,6 +424,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = JAP_exploit_the_southern_resource_area_tt
+			add_to_variable = { JAP_consumer_goods_expected_value = -0.05}
+			add_to_variable = { JAP_production_factory_efficiency_gain_factor = 0.1}
+			add_to_variable = { JAP_production_factory_max_efficiency_factor = 0.1}
 		}
 	}
 

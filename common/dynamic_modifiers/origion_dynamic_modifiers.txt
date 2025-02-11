@@ -24,15 +24,10 @@ pacific_warfare_state_attack_dm = {
 pacific_warfare_defense_JAP_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense
-    army_attack_factor = 3
-}
-pacific_warfare_asia_construct_debuff_dm = {
-	enable = { always = yes }
-	icon = GFX_modifiers_SOV_civilian_labor_in_defense
-    state_production_speed_air_base_factor = -1
+    army_attack_factor = 1
 }
 atlantikwall_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense
-    army_attack_factor = -2
+    army_attack_factor = -1
 }
