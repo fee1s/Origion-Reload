@@ -150,81 +150,6 @@ characters={
 		}
 	}
 
-	CAN_leonard_w_murray={
-		name=CAN_leonard_w_murray
-		portraits={
-			army={
-				large="GFX_CAN_leonard_warren_murray"
-				small=GFX_portrait_CAN_leonard_w_murray_small
-			}
-		}
-		navy_leader={
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=-1
-		}
-	}
-
-	CAN_ht_bailliegrohman={
-		name=CAN_ht_bailliegrohman
-		portraits={
-			army={
-				large=GFX_portrait_CAN_ht_bailliegrohman
-				small=GFX_portrait_CAN_ht_bailliegrohman_small
-			}
-		}
-		navy_leader={
-			traits={ spotter }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=-1
-		}
-	}
-
-	CAN_james_d_prentice={
-		name=CAN_james_d_prentice
-		portraits={
-			army={
-				large="GFX_CAN_james_prentice"
-				small=GFX_portrait_CAN_james_d_prentice_small
-			}
-		}
-		navy_leader={
-			traits={ spotter }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=-1
-		}
-	}
-
-	CAN_harry_dewolf={
-		name=CAN_harry_dewolf
-		portraits={
-			army={
-				large="GFX_CAN_harry_dewolf"
-				small=GFX_portrait_CAN_harry_dewolf_small
-			}
-		}
-		navy_leader={
-			traits={ bold superior_tactician }
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=5
-			legacy_id=-1
-		}
-	}
-
 
 	### THEORISTS ###
 
@@ -365,80 +290,6 @@ characters={
 			}
 		}
 	}
-
-
-	### NAVY CHIEFS ###
-
-	CAN_percy_nelles={
-		name=CAN_percy_nelles
-		portraits={
-			army={
-				small="GFX_idea_CAN_percy_nelles" #small="GFX_idea_generic_navy_europe_3"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = CAN_percy_nelles
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	CAN_alasdair_murray={
-		name=CAN_alasdair_murray
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = CAN_alasdair_murray
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	CAN_george_jones={
-		name=CAN_george_jones
-		portraits={
-			army={
-				small="GFX_idea_CAN_george_jones" #small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAN_george_jones
-			allowed = {
-				original_tag = CAN
-				has_dlc = "Together for Victory"
-			}
-			traits = {
-				navy_anti_submarine_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
 
 	### AIR CHIEFS ###
 
@@ -606,6 +457,118 @@ characters={
 		}
 	}
 
+	### NAVY CHIEFS ###
+
+	CAN_percy_nelles={
+		name=CAN_percy_nelles
+		portraits={
+			army={
+				small="GFX_idea_CAN_percy_nelles" #small="GFX_idea_generic_navy_europe_3"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ercy_nelles
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost = 100
+		}
+	}
+
+	CAN_alasdair_murray={
+		name=CAN_alasdair_murray
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = alasdair_murray
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+	}
+
+	### ADNIRALS ###
+
+	CAN_leonard_w_murray={
+		name=CAN_leonard_w_murray
+		portraits={
+			army={
+				large="GFX_CAN_leonard_warren_murray"
+				small=GFX_portrait_CAN_leonard_w_murray_small
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = leonard_w_murray
+			ledger = navy
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	CAN_ht_bailliegrohman={
+		name=CAN_ht_bailliegrohman
+		portraits={
+			army={
+				large=GFX_portrait_CAN_ht_bailliegrohman
+				small=GFX_portrait_CAN_ht_bailliegrohman_small
+			}
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	CAN_james_d_prentice={
+		name=CAN_james_d_prentice
+		portraits={
+			army={
+				large="GFX_CAN_james_prentice"
+				small=GFX_portrait_CAN_james_d_prentice_small
+			}
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
 
 	### POLITICAL ADVISORS ###	
 

@@ -105,25 +105,6 @@ characters={
 		}
 	}
 
-	SAF_guy_hallifax={
-		name=SAF_guy_hallifax
-		portraits={
-			army={
-				large="GFX_SAF_guy_halifax"
-				small=GFX_portrait_SAF_guy_hallifax_small
-			}
-		}
-		navy_leader={
-			traits={ battleship_adherent }
-			skill=3
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=-1
-		}
-	}
-
 
 	### THEORISTS ###
 
@@ -176,56 +157,6 @@ characters={
 			}
 		}		
 	}
-
-
-	### NAVY CHIEFS ###
-
-	SAF_pierre_oliver_knoll={
-		name=SAF_pierre_oliver_knoll
-		portraits={
-			army={
-				small="GFX_idea_SAF_pierre_oliver_knoll" #small="GFX_idea_generic_navy_europe_2"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = SAF_pierre_oliver_knoll
-			allowed = {
-				original_tag = SAF
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	SAF_cornelis_van_zuigenbrogge={
-		name=SAF_cornelis_van_zuigenbrogge
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = SAF_cornelis_van_zuigenbrogge
-			allowed = {
-				original_tag = SAF
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
 
 	### AIR CHIEFS ###
 
@@ -326,6 +257,39 @@ characters={
 		}		
 	}
 
+	### ADNIRALS ###
+
+	SAF_guy_hallifax={
+		name=SAF_guy_hallifax
+		portraits={
+			army={
+				large="GFX_SAF_guy_halifax"
+				small=GFX_portrait_SAF_guy_hallifax_small
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = guy_hallifax
+			ledger = navy
+			allowed = {
+				original_tag = SAF
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
 	SAF_marinus_van_osterkamp={
 		name=SAF_marinus_van_osterkamp
 		portraits={
@@ -333,47 +297,56 @@ characters={
 				small="GFX_idea_SAF_marinus_van_osterkamp" #small="GFX_idea_generic_air_europe_3"
 			}
 		}
-		advisor={	
-			slot = high_command
-			idea_token = SAF_marinus_van_osterkamp
-			ledger = navy
+		advisor={
+			slot = navy_chief
+			idea_token = marinus_van_osterkamp
 			allowed = {
 				original_tag = SAF
 			}
 			traits = {
-				air_naval_strike_2
+				navy_chief_decisive_battle_1
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}	
 	}
 
 	SAF_jeannot_de_la_tourier={
 		name=SAF_jeannot_de_la_tourier
 		portraits={
 			army={
-				small="GFX_idea_SAF_jeannot_de_la_tourier" #small="GFX_idea_generic_navy_europe_2"
+				small="GFX_idea_SAF_jeannot_de_la_tourier" small="GFX_idea_generic_navy_europe_2"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = SAF_jeannot_de_la_tourier
-			ledger = navy
+			slot = navy_chief
+			idea_token = jeannot_de_la_tourier
 			allowed = {
 				original_tag = SAF
 			}
 			traits = {
-				navy_screen_2
+				navy_chief_commerce_raiding_1
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
 	}
-
 
 	### POLITICAL ADVISORS ###
 

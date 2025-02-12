@@ -473,153 +473,6 @@ characters={
 		}
 	}
 
-	FRA_francois_darlan={
-		name=FRA_francois_darlan
-		portraits={
-			army={
-				large=GFX_portrait_FRA_francois_darlan
-				small="GFX_idea_francois_darlan"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = francois_darlan
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-
-		navy_leader={
-			traits={ bold naval_lineage superior_tactician }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=102
-		}
-	}
-
-	FRA_jeanmarie_charles_abrial={
-		name=FRA_jeanmarie_charles_abrial
-		portraits={
-			army={
-				large=GFX_portrait_FRA_jeanmarie_charles_abrial
-				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
-			}
-		}
-		navy_leader={
-			traits={ chief_engineer superior_tactician }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	FRA_jeanpierre_esteva={
-		name=FRA_jeanpierre_esteva
-		portraits={
-			army={
-				large=GFX_portrait_FRA_jeanpierre_esteva
-				small=GFX_portrait_FRA_jeanpierre_esteva_small
-			}
-		}
-		navy_leader={
-			traits={ aviation_enthusiast }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	FRA_rene_emile_godfroy={
-		name=FRA_rene_emile_godfroy
-		portraits={
-			army={
-				large=GFX_portrait_FRA_rene_emile_godfroy
-				small=GFX_portrait_FRA_rene_emile_godfroy_small
-			}
-			army={
-				small="GFX_idea_rene_emile_godfroy"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = rene_emile_godfroy
-			ledger = navy
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				navy_screen_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ old_guard_navy gentlemanly battleship_adherent spotter }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	FRA_jean_de_laborde={
-		name=FRA_jean_de_laborde
-		portraits={
-			navy={
-				small="GFX_idea_jean_de_laborde"
-			}
-			army={
-				large=GFX_portrait_FRA_jean_de_laborde
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = jean_de_laborde
-			ledger = navy
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				navy_capital_ship_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ aviation_enthusiast naval_lineage }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=0
-		}
-	}
-
 
 	### THEORISTS ###
 
@@ -650,25 +503,6 @@ characters={
 		}
 	}
 
-	FRA_jean_decoux={
-		name=FRA_jean_decoux
-		portraits={
-			army={
-				small="GFX_idea_jean_decoux"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = jean_decoux
-			ledger = navy
-			allowed = {
-				original_tag = FRA
-			}
-			traits = { naval_theorist }
-		}		
-	}
-
 	FRA_jean_marie_bergeret={
 		name=FRA_jean_marie_bergeret
 		portraits={
@@ -685,28 +519,6 @@ characters={
 				original_tag = FRA
 			}
 			traits = { air_warfare_theorist }
-		}
-	}
-
-	FRA_louis_kahn={
-		name=FRA_louis_kahn
-		portraits={
-			army={
-				small="GFX_idea_louis_kahn"
-			}
-		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = louis_kahn
-			ledger = navy
-			allowed = {
-				original_tag = FRA
-			}
-			
-			traits = {
-				grand_fleet_proponent
-			}
 		}
 	}
 
@@ -757,57 +569,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-	}
-
-
-	### NAVY CHIEFS ###
-
-	# Darlan Up there
-
-	FRA_marcel_gensoul={
-		name=FRA_marcel_gensoul
-		portraits={
-			army={
-				small="GFX_idea_marcel_gensoul"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = marcel_gensoul
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				navy_chief_naval_aviation_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	
-	FRA_jean_marie_abrial={
-		name=FRA_jean_marie_abrial
-		portraits={
-			army={
-				small="GFX_idea_jean_marie_abrial"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = jean_marie_abrial
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -920,30 +681,6 @@ characters={
 			}
 			traits = {
 				air_tactical_bombing_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	FRA_emile_muselier={
-		name=FRA_emile_muselier
-		portraits={
-			army={
-				small="GFX_idea_emile_muselier"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = emile_muselier
-			ledger = navy
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				navy_fleet_logistics_2
 			}
 			cost = 100
 			ai_will_do = {

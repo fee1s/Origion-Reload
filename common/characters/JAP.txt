@@ -673,268 +673,6 @@ characters={
 		}
 	}
 
-	JAP_isoroku_yamamoto={
-		name=JAP_isoroku_yamamoto
-		portraits={
-			navy={
-				small="GFX_idea_isoroku_yamamoto"
-			}
-			army={
-				large=GFX_portrait_JAP_isoroku_yamamoto
-			}
-		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = isoroku_yamamoto
-			ledger = navy
-			allowed = {
-				original_tag = JAP
-			}
-			
-			traits = {
-				naval_aviation_pioneer
-			}
-		}
-		
-		navy_leader={
-			traits={ bold aviation_enthusiast superior_tactician spotter air_controller flight_deck_manager }
-			skill=5
-			attack_skill=5
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=6
-			legacy_id=0
-		}
-	}
-
-	JAP_mineichi_koga={
-		name=JAP_mineichi_koga
-		portraits={
-			army={
-				large=GFX_portrait_JAP_mineichi_koga
-				small=GFX_portrait_JAP_mineichi_koga_small
-			}
-		}
-		navy_leader={
-			traits={ bold battleship_adherent superior_tactician spotter }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=4
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
-
-	JAP_kiyoshi_hasegawa={
-		name=JAP_kiyoshi_hasegawa
-		portraits={
-			army={
-				large=GFX_portrait_JAP_kiyoshi_hasegawa
-				small=GFX_portrait_JAP_kiyoshi_hasegawa_small
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	JAP_shigeyoshi_inoue={
-		name=JAP_shigeyoshi_inoue
-		portraits={
-			army={
-				large=GFX_portrait_JAP_shigeyoshi_inoue
-				small=GFX_portrait_JAP_shigeyoshi_inoue_small
-			}
-		}
-		navy_leader={
-			traits={ navy_career_officer aviation_enthusiast }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
-
-	JAP_nobutake_kondo={
-		name=JAP_nobutake_kondo
-		portraits={
-			army={
-				large=GFX_portrait_JAP_nobutake_kondo
-				small=GFX_portrait_JAP_nobutake_kondo_small
-			}
-		}
-		navy_leader={
-			traits={ battleship_adherent naval_lineage fly_swatter }
-			skill=3
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	JAP_takeo_takagi={
-		name=JAP_takeo_takagi
-		portraits={
-			army={
-				large=GFX_portrait_JAP_takeo_takagi
-				small=GFX_portrait_JAP_takeo_takagi_small
-			}
-		}
-		navy_leader={
-			traits={ spotter }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
-
-	JAP_soemu_toyoda={
-		name=JAP_soemu_toyoda
-		portraits={
-			navy={
-				small="GFX_idea_soemu_toyoda"
-			}
-			army={
-				large=GFX_portrait_JAP_soemu_toyoda
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = soemu_toyoda
-			ledger = navy
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ old_guard_navy bold ironside }
-			skill=3
-			attack_skill=5
-			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	JAP_jisaburo_ozawa={
-		name=JAP_jisaburo_ozawa
-		portraits={
-			army={
-				large=GFX_portrait_JAP_jisaburo_ozawa
-				small=GFX_portrait_JAP_jisaburo_ozawa_small
-			}
-		}
-		navy_leader={
-			traits={ bold navy_career_officer aviation_enthusiast blockade_runner superior_tactician }
-			skill=5
-			attack_skill=8
-			defense_skill=6
-			maneuvering_skill=4
-			coordination_skill=6
-			legacy_id=0
-		}
-	}
-
-	JAP_zengo_yoshida={
-		name=JAP_zengo_yoshida
-		portraits={
-			army={
-				large=GFX_portrait_JAP_zengo_yoshida
-				small=GFX_portrait_JAP_zengo_yoshida_small
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	JAP_hiroaki_abe={
-		name=JAP_hiroaki_abe
-		portraits={
-			army={
-				large=GFX_portrait_JAP_hiroaki_abe
-				small=GFX_portrait_JAP_hiroaki_abe_small
-			}
-		}
-		navy_leader={
-			traits={ battleship_adherent }
-			skill=2
-			attack_skill=3
-			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=1
-			legacy_id=0
-		}
-	}
-
-	JAP_tadashige_daigo={
-		name=JAP_tadashige_daigo
-		portraits={
-			army={
-				large=GFX_portrait_JAP_tadashige_daigo
-				small=GFX_portrait_JAP_tadashige_daigo_small
-			}
-		}
-		navy_leader={
-			traits={ navy_career_officer seawolf }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=0
-		}
-	}
-
-	JAP_gengo_hyakutake={
-		name=JAP_gengo_hyakutake
-		portraits={
-			army={
-				large=GFX_portrait_JAP_gengo_hyakutake
-				small=GFX_portrait_JAP_gengo_hyakutake_small
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
 
 	### THEORISTS ###
 
@@ -942,26 +680,6 @@ characters={
 
 	# Terauchi up there
 
-	# Yamamoto up there
-
-	JAP_minoru_genda={
-		name=JAP_minoru_genda
-		portraits={
-			army={
-				small="GFX_idea_minoru_genda"
-			}
-		}
-		advisor={
-		cost = 100
-		slot = theorist
-		idea_token = minoru_genda
-		ledger = navy
-			allowed = {
-				original_tag = JAP
-			}
-			traits = { naval_theorist }
-		}
-	}
 
 	JAP_yoshitoshi_tokugawa={
 		name=JAP_yoshitoshi_tokugawa
@@ -1103,78 +821,6 @@ characters={
 		}
 	}
 
-	### NAVY CHIEFS ###
-
-	JAP_fushimi_hiroyasu={
-		name=JAP_fushimi_hiroyasu
-		portraits={
-			army={
-				small="GFX_idea_fushimi_hiroyasu"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = fushimi_hiroyasu
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				navy_chief_naval_aviation_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
-	JAP_osami_nagano={
-		name=JAP_osami_nagano
-		portraits={
-			army={
-				small="GFX_idea_osami_nagano"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = osami_nagano
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				navy_chief_commerce_raiding_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
-	JAP_shigetaro_shimada={
-		name=JAP_shigetaro_shimada
-		portraits={
-			army={
-				small="GFX_idea_shigetaro_shimada"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = shigetaro_shimada
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
-
 	### AIR CHIEFS ###
 
 	# Doihara up there
@@ -1260,30 +906,6 @@ characters={
 		}
 	}
 
-	JAP_nishizo_tsukahara={
-		name=JAP_nishizo_tsukahara
-		portraits={
-			army={
-				small="GFX_idea_nishizo_tsukahara"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = nishizo_tsukahara
-			ledger = navy
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				air_naval_strike_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	
 	JAP_tateo_kato={
 		name=JAP_tateo_kato
 		portraits={
@@ -1307,6 +929,68 @@ characters={
 			}
 		}
 	}
+
+	### NAVY CHIEFS ###
+
+	JAP_fushimi_hiroyasu={
+		name=JAP_fushimi_hiroyasu
+		portraits={
+			army={
+				small="GFX_idea_fushimi_hiroyasu"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = fushimi_hiroyasu
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+		}
+	}
+
+	JAP_osami_nagano={
+		name=JAP_osami_nagano
+		portraits={
+			army={
+				small="GFX_idea_osami_nagano"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = osami_nagano
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+	}
+
+	JAP_shigetaro_shimada={
+		name=JAP_shigetaro_shimada
+		portraits={
+			army={
+				small="GFX_idea_shigetaro_shimada"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = shigetaro_shimada
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+		}
+	}
 	
 	JAP_matome_ugaki={
 		name=JAP_matome_ugaki
@@ -1326,9 +1010,6 @@ characters={
 				navy_screen_2
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
 		}
 	}
 	
@@ -1350,12 +1031,114 @@ characters={
 				navy_carrier_2
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
 		}
 	}
 
+	### ADNIRALS ###
+
+	JAP_isoroku_yamamoto={
+		name=JAP_isoroku_yamamoto
+		portraits={
+			navy={
+				small="GFX_idea_isoroku_yamamoto"
+			}
+			army={
+				large=GFX_portrait_JAP_isoroku_yamamoto
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = isoroku_yamamoto
+			ledger = navy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+			cost = 150
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside inshore_fighter }
+			skill=8
+			attack_skill=8
+			defense_skill=6
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=0
+		}
+	}
+
+	JAP_jisaburo_ozawa={
+		name=JAP_jisaburo_ozawa
+		portraits={
+			army={
+				large=GFX_portrait_JAP_jisaburo_ozawa
+				small=GFX_portrait_JAP_jisaburo_ozawa_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = jisaburo_ozawa
+			ledger = navy
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+			cost =  100
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside inshore_fighter }
+			skill=8
+			attack_skill=8
+			defense_skill=6
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=0
+		}
+	}
+
+	JAP_takeo_takagi={
+		name=JAP_takeo_takagi
+		portraits={
+			army={
+				large=GFX_portrait_JAP_takeo_takagi
+				small=GFX_portrait_JAP_takeo_takagi_small
+			}
+		}
+		navy_leader={
+			traits={ fleet_protector superior_tactician }
+			skill=4
+			attack_skill=4
+			defense_skill=6
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+
+	JAP_soemu_toyoda={
+		name=JAP_soemu_toyoda
+		portraits={
+			navy={
+				small="GFX_idea_soemu_toyoda"
+			}
+			army={
+				large=GFX_portrait_JAP_soemu_toyoda
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner seawolf }
+			skill=4
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=0
+		}
+	}
 
 	### POLITICAL ADVISORS ###
 

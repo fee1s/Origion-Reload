@@ -219,26 +219,6 @@ characters = {
 ##     ## ##   ###  ##     ##       ##       ##       ##     ## ##     ## ##       ##    ##  ##    ## 
  #######  ##    ## ####    ##       ######## ######## ##     ## ########  ######## ##     ##  ######  
 
-
-	BUL_atanas_shalapatov = {
-		name = BUL_atanas_shalapatov
-		portraits = {
-			army = {
-				large = "GFX_portrait_bul_atanas_shalapatov"
-				small = GFX_portrait_BUL_atanas_shalapatov_small
-			}
-		}
-		navy_leader = {
-			traits = { old_guard_navy gentlemanly }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			maneuvering_skill = 2
-			coordination_skill = 2
-			legacy_id = -1
-		}
-	}
-
 	BUL_nikola_mihov = {
 		name = BUL_nikola_mihov
 		portraits = {
@@ -493,84 +473,6 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_bul_theodosi_daskalov"
-			}
-		}
-	}
-
-	BUL_georgi_petsov = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			advisor = {
-				cost = 100
-				slot = theorist
-				idea_token = BUL_georgi_petsov
-				ledger = navy
-				allowed = {
-					has_dlc = "Battle for the Bosporus"
-					original_tag = BUL
-				}
-				
-				traits = {
-					naval_theorist
-				}
-			}
-			name = BUL_georgi_petsov
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_georgi_petsov"
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			advisor = {
-				cost = 100
-				slot = theorist
-				idea_token = BUL_georgi_petsov
-				ledger = navy
-				allowed = {
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					original_tag = BUL
-				}
-				
-				traits = {
-					naval_theorist
-				}
-			}
-			name = BUL_georgi_petsov
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_navy_europe_1"
-				}
-			}
-		}
-	}
-
-	BUL_sava_ivanov = {
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = BUL_sava_ivanov
-			ledger = navy
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			
-			traits = {
-				naval_aviation_pioneer
-			}
-		}
-		name = BUL_sava_ivanov
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_sava_ivanov"
 			}
 		}
 	}
@@ -859,43 +761,6 @@ characters = {
 		}
 	}
 
-###################
-### CHIEFS NAVY ###
-###################
-
-	BUL_asen_toshev = {
-		advisor = {
-			slot = navy_chief
-			idea_token = BUL_asen_toshev
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			traits = {
-				navy_chief_reform_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
-		}
-		name = BUL_asen_toshev
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_asen_toshev"
-			}
-		}
-	}
-
 #######################
 ### CHIEFS AIRFORCE ###
 #######################
@@ -1060,35 +925,6 @@ characters = {
 				army = {
 					small = "GFX_idea_generic_air_europe_2"
 				}
-			}
-		}
-	}
-
-	BUL_stefan_tsanev = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_stefan_tsanev
-			ledger = navy
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			traits = {
-				navy_anti_submarine_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
-		}
-		name = BUL_stefan_tsanev
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_stefan_tsanev"
 			}
 		}
 	}
@@ -1431,122 +1267,4 @@ characters = {
 			}
 		}
 	}
-
-                                                                                                                                                              
-  ####   ######  #    #  ######  #####   #   ####       #    #    ##    #    #  #  #       #         ##        #####   ######   ####   #####   #       ###### 
- #    #  #       ##   #  #       #    #  #  #    #      #    #   #  #   ##   #  #  #       #        #  #       #    #  #       #    #  #    #  #       #      
- #       #####   # #  #  #####   #    #  #  #           #    #  #    #  # #  #  #  #       #       #    #      #    #  #####   #    #  #    #  #       #####  
- #  ###  #       #  # #  #       #####   #  #           #    #  ######  #  # #  #  #       #       ######      #####   #       #    #  #####   #       #      
- #    #  #       #   ##  #       #   #   #  #    #       #  #   #    #  #   ##  #  #       #       #    #      #       #       #    #  #       #       #      
-  ####   ######  #    #  ######  #    #  #   ####         ##    #    #  #    #  #  ######  ######  #    #      #       ######   ####   #       ######  ###### 
-                                                                                                                                                              
-
-	BUL_ivan_gaidimitriv = {
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = BUL_ivan_gaidimitriv
-			ledger = air
-			allowed = {
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
-				}
-				original_tag = BUL
-			}
-			
-			traits = {
-				air_warfare_theorist
-			}
-		}
-
-		name = BUL_ivan_gaidimitriv
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_air_europe_1"
-			}
-		}
-	}
-
-	BUL_bonyu_stoev_pironkov = {
-		advisor = {
-			slot = navy_chief
-			idea_token = BUL_bonyu_stoev_pironkov
-			allowed = {
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
-				}
-				original_tag = BUL
-			}
-			traits = {
-				navy_naval_air_defense_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = BUL_bonyu_stoev_pironkov
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_navy_europe_2"
-			}
-		}
-	}
-
-	BUL_nikola_totev_markov = {
-		advisor = {
-			slot = navy_chief
-			idea_token = BUL_nikola_totev_markov
-			allowed = {
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
-				}
-				original_tag = BUL
-			}
-			traits = {
-				navy_chief_decisive_battle_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = BUL_nikola_totev_markov
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_navy_europe_1"
-			}
-		}
-	}	
-	
-	BUL_blagoi_ivanov = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_blagoi_ivanov
-			ledger = army
-			allowed = {
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
-				}
-				original_tag = BUL
-			}
-			traits = {
-				army_regrouping_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = BUL_blagoi_ivanov
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_4"
-			}
-		}
-	}
-
 }
-
-
-

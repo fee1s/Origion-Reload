@@ -704,191 +704,6 @@ characters={
 		}
 	}
 
-	GER_karl_donitz={
-		name=GER_karl_donitz
-		portraits={
-			army={
-				large=GFX_portrait_GER_karl_donitz
-				small=GFX_portrait_GER_karl_donitz_small
-			}
-			army={
-				small="GFX_idea_donitz"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = donitz
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				navy_chief_commerce_raiding_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 0.100
-			}
-		}
-		
-		navy_leader={
-			traits={ navy_career_officer seawolf blockade_runner }
-			skill=5
-			attack_skill=5
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=5
-			legacy_id=26
-		}
-	}
-
-	GER_erich_raeder={
-		name=GER_erich_raeder
-		portraits={
-			army={
-				large=GFX_portrait_GER_erich_raeder
-				small=GFX_portrait_GER_erich_raeder_small
-			}
-			army={
-				small="GFX_idea_raeder"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = raeder
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.100
-			}
-		}
-		
-		navy_leader={
-			traits={ battleship_adherent naval_lineage }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=27
-		}
-	}
-
-	GER_alfred_saalwachter={
-		name=GER_alfred_saalwachter
-		portraits={
-			army={
-				large=GFX_portrait_GER_alfred_saalwachter
-				small=GFX_portrait_GER_alfred_saalwachter_small
-			}
-			army={
-				small="GFX_idea_alfred_saalwachter"
-			}
-		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = alfred_saalwachter
-			ledger = navy
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				submarine_specialist
-			}
-		}
-		
-		navy_leader={
-			traits={ old_guard_navy bold }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=28
-		}
-	}
-
-	GER_hermann_boehm={
-		name=GER_hermann_boehm
-		portraits={
-			army={
-				large=GFX_portrait_GER_hermann_boehm
-				small=GFX_portrait_GER_hermann_boehm_small
-			}
-		}
-		navy_leader={
-			traits={ craven superior_tactician }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=4
-			coordination_skill=2
-			legacy_id=29
-		}
-	}
-
-	GER_wilhelm_marschall={
-		name=GER_wilhelm_marschall
-		portraits={
-			army={
-				large=GFX_portrait_GER_wilhelm_marschall
-				small=GFX_portrait_GER_wilhelm_marschall_small
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy bold }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=30
-		}
-	}
-
-	GER_gunther_lutjens={
-		name=GER_gunther_lutjens
-		portraits={
-			army={
-				large=GFX_portrait_GER_gunther_lutjens
-				small=GFX_portrait_GER_gunther_lutjens_small
-			}
-			army={
-				small="GFX_idea_gunther_lutjens"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = gunther_lutjens
-			ledger = navy
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				navy_fleet_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ gentlemanly navy_career_officer superior_tactician }
-			skill=3
-			attack_skill=4
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=4
-			legacy_id=31
-		}
-	}
-
 	GER_alexander_von_falkenhausen = {
 		name = CHI_alexander_von_falkenhausen
 		portraits = {
@@ -1026,25 +841,6 @@ characters={
 			traits = {
 				dive_bomber
 			}
-		}
-	}
-
-	GER_otto_ciliax={
-		name=GER_otto_ciliax
-		portraits={
-			army={
-				small="GFX_idea_otto_ciliax"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = otto_ciliax
-			ledger = navy
-			allowed = {
-				original_tag = GER
-			}
-			traits = { naval_theorist }
 		}
 	}
 
@@ -1360,8 +1156,98 @@ characters={
 			}
 		}		
 	}
-	
 
+	### NAVY CHIEFS ###
+
+	GER_otto_ciliax={
+		name=GER_otto_ciliax
+		portraits={
+			army={
+				small="GFX_idea_otto_ciliax"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = otto_ciliax
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+			cost = 150
+		}
+	}
+
+	### ADNIRALS ###
+
+	GER_karl_donitz={
+		name=GER_karl_donitz
+		portraits={
+			army={
+				large=GFX_portrait_GER_karl_donitz
+				small=GFX_portrait_GER_karl_donitz_small
+			}
+			army={
+				small="GFX_idea_donitz"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = donitz
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				navy_chief_commerce_raiding_3
+			}
+			cost = 100
+		}
+		navy_leader={
+			traits={ blockade_runner seawolf }
+			skill=8
+			attack_skill=10
+			defense_skill=4
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=26
+		}
+	}
+
+	GER_erich_raeder={
+		name=GER_erich_raeder
+		portraits={
+			army={
+				large=GFX_portrait_GER_erich_raeder
+				small=GFX_portrait_GER_erich_raeder_small
+			}
+			army={
+				small="GFX_idea_raeder"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = raeder
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+	
 	### POLITICAL ADVISORS ###
 
 	GER_hjalmar_schacht={

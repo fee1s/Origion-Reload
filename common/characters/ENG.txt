@@ -673,231 +673,6 @@ characters={
 		}
 	}
 
-	ENG_james_fownes_somerville={
-		name=ENG_james_fownes_somerville
-		portraits={
-			army={
-				large=GFX_portrait_ENG_james_fownes_somerville
-				small=GFX_portrait_ENG_james_fownes_somerville_small
-			}
-		}
-		navy_leader={
-			traits={ navy_career_officer aviation_enthusiast superior_tactician }
-			skill=5
-			attack_skill=4
-			defense_skill=3
-			maneuvering_skill=4
-			coordination_skill=5
-			legacy_id=983
-		}
-	}
-
-	ENG_henry_harwood={
-		name=ENG_henry_harwood
-		portraits={
-			navy={
-				small="GFX_idea_henry_harwood"
-			}
-			army={
-				large=GFX_portrait_ENG_henry_harwood
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = henry_harwood
-			ledger = navy
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				navy_screen_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.700
-			}
-		}
-		
-		navy_leader={
-			traits={ old_guard_navy bold }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=984
-		}
-	}
-
-	ENG_andrew_cunningham={
-		name=ENG_andrew_cunningham
-		portraits={
-			navy={
-				small="GFX_idea_andrew_cunningham"
-			}
-			army={
-				large=GFX_portrait_ENG_andrew_cunningham
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = andrew_cunningham
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				navy_chief_naval_aviation_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.500
-			}
-		}
-		
-		navy_leader={
-			traits={ gunnery_expert bold navy_career_officer blockade_runner superior_tactician }
-			skill=5
-			attack_skill=5
-			defense_skill=4
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=985
-		}
-	}
-
-	ENG_bruce_fraser={
-		name=ENG_bruce_fraser
-		portraits={
-			army={
-				large=GFX_portrait_ENG_bruce_fraser
-				small=GFX_portrait_ENG_bruce_fraser_small
-			}
-		}
-		navy_leader={
-			traits={ aviation_enthusiast naval_lineage blockade_runner }
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=4
-			coordination_skill=4
-			legacy_id=986
-		}
-	}
-
-	ENG_john_tovey={
-		name=ENG_john_tovey
-		portraits={
-			army={
-				large=GFX_portrait_ENG_john_tovey
-				small=GFX_portrait_ENG_john_tovey_small
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly naval_lineage superior_tactician }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=2
-			coordination_skill=5
-			legacy_id=987
-		}
-	}
-
-	ENG_bernard_rawlings={
-		name=ENG_bernard_rawlings
-		portraits={
-			army={
-				large=GFX_portrait_ENG_bernard_rawlings
-				small=GFX_portrait_ENG_bernard_rawlings_small
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=988
-		}
-	}
-
-	ENG_john_cunningham={
-		name=ENG_john_cunningham
-		portraits={
-			army={
-				large=GFX_portrait_ENG_john_cunningham
-				small=GFX_portrait_ENG_john_cunningham_small
-			}
-		}
-		navy_leader={
-			traits={ navy_career_officer green_water_expert }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			maneuvering_skill=4
-			coordination_skill=3
-			legacy_id=989
-		}
-	}
-
-	ENG_charles_forbes={
-		name=ENG_charles_forbes
-		portraits={
-			army={
-				large=GFX_portrait_ENG_charles_forbes
-				small=GFX_portrait_ENG_charles_forbes_small
-			}
-		}
-		navy_leader={
-			traits={ gunnery_expert fly_swatter }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=3
-			legacy_id=990
-		}
-	}
-
-	ENG_algernon_willis={
-		name=ENG_algernon_willis
-		portraits={
-			army={
-				large=GFX_portrait_ENG_algernon_willis
-				small=GFX_portrait_ENG_algernon_willis_small
-			}
-		}
-		navy_leader={
-			traits={ battleship_adherent spotter }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=991
-		}
-	}
-
-	ENG_arthur_power={
-		name=ENG_arthur_power
-		portraits={
-			army={
-				large=GFX_portrait_ENG_arthur_power
-				small=GFX_portrait_ENG_arthur_power_small
-			}
-		}
-		navy_leader={
-			traits={ gunnery_expert }
-			skill=2
-			attack_skill=3
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=2
-			legacy_id=992
-		}
-	}
-
 
 	### THEORISTS ###
 
@@ -1150,57 +925,6 @@ characters={
 	}
 
 
-	### NAVY CHIEFS ###
-
-	# Andrew Cunningham up there
-
-	ENG_ernle_chatfield={
-		name=ENG_ernle_chatfield
-		portraits={
-			army={
-				small="GFX_idea_ernle_chatfield"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = ernle_chatfield
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	ENG_dudley_pound={
-		name=ENG_dudley_pound
-		portraits={
-			army={
-				small="GFX_idea_dudley_pound"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = dudley_pound
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-
 	### AIR CHIEFS ###
 
 	ENG_cyril_newall={
@@ -1322,59 +1046,11 @@ characters={
 		}
 	}
 
-	ENG_frederick_bowhill={
-		name=ENG_frederick_bowhill
-		portraits={
-			army={
-				small="GFX_idea_frederick_bowhill"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = frederick_bowhill
-			ledger = navy
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				air_naval_strike_3
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
 	ENG_louis_mountbatten={ #This guy is duplicated in RAJ
 		name=ENG_louis_mountbatten
 		portraits={
 			army={
 				small="GFX_idea_louis_mountbatten"
-			}
-		}
-	}
-
-	ENG_max_horton={
-		name=ENG_max_horton
-		portraits={
-			army={
-				small="GFX_idea_max_horton"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = max_horton
-			ledger = navy
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
 			}
 		}
 	}
@@ -1406,6 +1082,216 @@ characters={
 		}
 	}
 
+	### NAVY CHIEFS ###
+
+	ENG_ernle_chatfield={
+		name=ENG_ernle_chatfield
+		portraits={
+			army={
+				small="GFX_idea_ernle_chatfield"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ernle_chatfield
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+		}
+	}
+
+	ENG_dudley_pound={
+		name=ENG_dudley_pound
+		portraits={
+			army={
+				small="GFX_idea_dudley_pound"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = dudley_pound
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost =  100
+		}
+	}
+
+	ENG_arthur_power={
+		name=ENG_arthur_power
+		portraits={
+			army={
+				small=GFX_portrait_ENG_arthur_power_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = arthur_power
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost =  100
+		}
+	}
+
+	ENG_john_tovey={
+		name=ENG_john_tovey
+		portraits={
+			army={
+				large=GFX_portrait_ENG_john_tovey
+				small=GFX_portrait_ENG_john_tovey_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = john_tovey
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+		}
+	}
+
+	ENG_bernard_rawlings={
+		name=ENG_bernard_rawlings
+		portraits={
+			army={
+				large=GFX_portrait_ENG_bernard_rawlings
+				small=GFX_portrait_ENG_bernard_rawlings_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = bernard_rawlings
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_carrier_2
+			}
+			cost = 100
+		}
+	}
+
+	### ADNIRALS ###
+
+	ENG_andrew_cunningham={
+		name=ENG_andrew_cunningham
+		portraits={
+			navy={
+				small="GFX_idea_andrew_cunningham"
+			}
+			army={
+				large=GFX_portrait_ENG_andrew_cunningham
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = andrew_cunningham
+			ledger = navy
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+			cost = 150
+		}
+		
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+
+	ENG_james_fownes_somerville={
+		name=ENG_james_fownes_somerville
+		portraits={
+			army={
+				large=GFX_portrait_ENG_james_fownes_somerville
+				small=GFX_portrait_ENG_james_fownes_somerville_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = james_fownes_somerville
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+			cost =  100
+		}
+
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+
+	ENG_henry_harwood={
+		name=ENG_henry_harwood
+		portraits={
+			navy={
+				small="GFX_idea_henry_harwood"
+			}
+			army={
+				large=GFX_portrait_ENG_henry_harwood
+			}
+		}
+		navy_leader={
+			traits={ fleet_protector superior_tactician }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	ENG_bruce_fraser={
+		name=ENG_bruce_fraser
+		portraits={
+			army={
+				large=GFX_portrait_ENG_bruce_fraser
+				small=GFX_portrait_ENG_bruce_fraser_small
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner seawolf }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
 
 	### POLITICAL ADVISORS ###
 

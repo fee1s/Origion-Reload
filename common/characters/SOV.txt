@@ -1098,167 +1098,11 @@ characters = {
 		}
 	}
 
-######################
-#### NAVY LEADRES ####
-######################
-
-	SOV_filipp_oktyabrsky = {
-		name = SOV_filipp_oktyabrsky
-		portraits = {
-			army = {
-				large = GFX_portrait_SOV_filipp_oktyabrsky
-				small=GFX_portrait_SOV_filipp_oktyabrsky_small
-			}
-		}
-		navy_leader = {
-			traits = { ironside ground_pounder }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 2
-			maneuvering_skill = 1
-			coordination_skill = 1
-			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_sergey_gorshkov = {
-		name = SOV_sergey_gorshkov
-		portraits = {
-			navy = {
-				small = "GFX_idea_sergey_gorshkov"
-			}
-			army = {
-				large = GFX_portrait_SOV_sergey_gorshkov
-			}
-		}
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = sergey_gorshkov
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = { naval_theorist }
-		}
-
-		navy_leader = {
-			traits = { bold navy_career_officer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			maneuvering_skill = 3
-			coordination_skill = 2
-			legacy_id = 411
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_gordey_levchenko = {
-		name = SOV_gordey_levchenko
-		portraits = {
-			navy = {
-				small = "GFX_idea_gordey_levchenko"
-			}
-			army = {
-				large = GFX_portrait_SOV_gordey_levchenko
-			}
-		}
-
-		navy_leader = {
-			traits = { green_water_expert }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 1
-			coordination_skill = 2
-			legacy_id = 406
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_arseny_golovko = {
-		name = SOV_arseny_golovko
-		portraits = {
-			navy = {
-				small = "GFX_idea_arseniy_golovko"
-			}
-			army = {
-				large = GFX_portrait_SOV_arseny_golovko
-			}
-		}
-
-		navy_leader = {
-			traits = { spotter arctic_water_expert }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			maneuvering_skill = 3
-			coordination_skill = 3
-			legacy_id = 409
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
-	SOV_vladimir_kasatonov = {
-		name = SOV_vladimir_kasatonov
-		portraits = {
-			navy = {
-				small = "GFX_idea_vladimir_kasatonov"
-			}
-			army = {
-				large = GFX_portrait_SOV_vladimir_kasatonov
-			}
-		}
-
-		navy_leader = {
-			traits = { seawolf }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			maneuvering_skill = 2
-			coordination_skill = 2
-			legacy_id = 403
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
-		}
-	}
-
 	SOV_stepan_krasovsky = {
 		name = SOV_stepan_krasovsky
 		portraits = {
 			army = {
 				small = "GFX_idea_stepan_krasovsky"
-			}
-		}
-	}
-
-	SOV_vladimir_tributs = {
-		name = SOV_vladimir_tributs
-		portraits = {
-			army = {
-				small = "GFX_idea_vladimir_tributs"
-			}
-		}
-
-		advisor = {
-			cost = 150
-			slot = theorist
-			idea_token = vladimir_tributs
-			ledger = navy
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				grand_fleet_proponent
 			}
 		}
 	}
@@ -1336,54 +1180,6 @@ characters = {
 		}		
 	}
 
-	SOV_ivan_yumashev = {
-		name = SOV_ivan_yumashev
-		portraits = {
-			army = {
-				small = "GFX_idea_ivan_yumashev"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = ivan_yumashev
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
-	SOV_nikolay_kuznetsov = {
-		name = SOV_nikolay_kuznetsov
-		portraits = {
-			army = {
-				small = "GFX_idea_nikolay_kuznetsov"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = nikolay_kuznetsov
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 0.200
-			}
-		}		
-	}
-
 	SOV_yakov_smushkevich = {
 		name = SOV_yakov_smushkevich
 		portraits = {
@@ -1452,30 +1248,6 @@ characters = {
 		}		
 	}
 
-	SOV_mikhail_frinovsky = {
-		name = SOV_mikhail_frinovsky
-		portraits = {
-			army = {
-				small = "GFX_idea_mikhail_frinovsky"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = mikhail_frinovsky
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				navy_chief_commerce_raiding_1
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 0.200
-			}
-		}
-	}
-
 	SOV_igor_kurchatov = {
 		name = SOV_igor_kurchatov
 		portraits = {
@@ -1533,35 +1305,6 @@ characters = {
 				small = "GFX_idea_pavel_zhigarev"
 			}
 		}
-	}
-
-	SOV_pyotr_smirnov = {
-		name = SOV_pyotr_smirnov
-		portraits = {
-			army = {
-				small = "GFX_idea_pyotr_smirnov"
-			}
-		}
-
-		advisor = {
-			slot = navy_chief
-			idea_token = pyotr_smirnov
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				NOT = {
-					has_country_flag = purge_1_group_a
-				}
-			}
-			traits = {
-				navy_chief_naval_aviation_1
-			}
-				cost = 50
-			ai_will_do = {
-				factor = 0.200
-			}
-		}		
 	}
 
 	SOV_aleksandr_yegorov = {
@@ -3762,6 +3505,146 @@ characters = {
 			ai_will_do = {
 				factor = 0.000
 			}
+		}
+	}
+
+	### NAVY CHIEFS ###
+
+	SOV_ivan_yumashev = {
+		name = SOV_ivan_yumashev
+		portraits = {
+			army = {
+				small = "GFX_idea_ivan_yumashev"
+			}
+		}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = ivan_yumashev
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+		}
+	}
+
+	SOV_mikhail_frinovsky = {
+		name = SOV_mikhail_frinovsky
+		portraits = {
+			army = {
+				small = "GFX_idea_mikhail_frinovsky"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = mikhail_frinovsky
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+	}
+
+	
+	### ADNIRALS ###
+
+	SOV_filipp_oktyabrsky = {
+		name = SOV_filipp_oktyabrsky
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_filipp_oktyabrsky
+				small=GFX_portrait_SOV_filipp_oktyabrsky_small
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = vladimir_tributs
+			ledger = navy
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+
+	SOV_sergey_gorshkov = {
+		name = SOV_sergey_gorshkov
+		portraits = {
+			navy = {
+				small = "GFX_idea_sergey_gorshkov"
+			}
+			army = {
+				large = GFX_portrait_SOV_sergey_gorshkov
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+
+	SOV_gordey_levchenko = {
+		name = SOV_gordey_levchenko
+		portraits = {
+			navy = {
+				small = "GFX_idea_gordey_levchenko"
+			}
+			army = {
+				large = GFX_portrait_SOV_gordey_levchenko
+			}
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	SOV_arseny_golovko = {
+		name = SOV_arseny_golovko
+		portraits = {
+			navy = {
+				small = "GFX_idea_arseniy_golovko"
+			}
+			army = {
+				large = GFX_portrait_SOV_arseny_golovko
+			}
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
 		}
 	}
 }

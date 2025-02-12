@@ -236,67 +236,6 @@ characters={
 		}
 	}
 
-
-	### NAVY CHIEFS ###
-
-	ROM_nicolae_sova={
-		name=ROM_nicolae_sova
-		portraits={
-			army={
-				small="GFX_idea_ROM_nicolae_sova"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = ROM_nicolae_sova
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	ROM_horia_macellariu={
-		name=ROM_horia_macellariu
-		portraits={
-			army={
-				small="GFX_idea_ROM_horia_macellariu"
-				large="GFX_Portrait_romania_horia_macellariu"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = ROM_horia_macellariu
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ gentlemanly spotter }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=1
-			legacy_id=-1
-		}
-	}
-
-
 	### AIR CHIEFS ###
 
 	ROM_ermil_gheorghiu={
@@ -430,6 +369,68 @@ characters={
 		}
 	}
 
+	### ADNIRALS ###
+
+	ROM_nicolae_sova={
+		name=ROM_nicolae_sova
+		portraits={
+			army={
+				small="GFX_idea_ROM_nicolae_sova"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = nicolae_sova
+			ledger = navy
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	ROM_horia_macellariu={
+		name=ROM_horia_macellariu
+		portraits={
+			army={
+				small="GFX_idea_ROM_horia_macellariu"
+				large="GFX_Portrait_romania_horia_macellariu"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = horia_macellariu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost = 100
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
 	ROM_gheorghe_vasiliu={
 		name=ROM_gheorghe_vasiliu
 		portraits={
@@ -438,22 +439,26 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = ROM_gheorghe_vasiliu
-			ledger = air
+			slot = navy_chief
+			idea_token = gheorghe_vasiliu
 			allowed = {
 				original_tag = ROM
 			}
 			traits = {
-				air_airborne_2
+				navy_chief_commerce_raiding_1
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
 		}
 	}
-
 
 	### POLITICAL ADVISORS ###
 

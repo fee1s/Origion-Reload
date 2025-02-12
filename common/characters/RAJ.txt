@@ -112,25 +112,6 @@ characters={
 		}
 	}
 
-	RAJ_herbert_fitzherbert={
-		name=RAJ_herbert_fitzherbert
-		portraits={
-			army={
-				large="GFX_RAJ_herbert_fitzherbert"
-				small=GFX_portrait_RAJ_herbert_fitzherbert_small
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=2
-			legacy_id=-1
-		}
-	}
-
 	### Empty characters that can become unit leaders later ###
 
 	RAJ_lakshmi_sahgal = {
@@ -227,28 +208,6 @@ characters={
 			
 			traits = {
 				air_warfare_theorist
-			}
-		}
-	}
-
-	RAJ_bahadur_jayla_of_khoch_bahur={
-		name=RAJ_bahadur_jayla_of_khoch_bahur
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_arab_1"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = RAJ_bahadur_jayla_of_khoch_bahur
-			ledger = navy
-			allowed = {
-				original_tag = RAJ
-			}
-			
-			traits = {
-				naval_theorist
 			}
 		}
 	}
@@ -399,102 +358,6 @@ characters={
 		}
 	}
 
-
-	### NAVY CHIEFS ###
-
-	RAJ_louis_mountbatten={
-		name=RAJ_louis_mountbatten
-		portraits={
-			army={
-				small="GFX_idea_RAJ_louis_mountbatten" #small="GFX_idea_generic_navy_europe_2"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_louis_mountbatten
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	RAJ_william_e_parry={
-		name=RAJ_william_e_parry
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_william_e_parry
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	RAJ_bhaskar_soman={
-		name=RAJ_bhaskar_soman
-		portraits={
-			army={
-				small="GFX_idea_RAJ_bhaskar_soman" #small="GFX_idea_generic_navy_arab_3"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_bhaskar_soman
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	RAJ_ram_dass_katari={
-		name=RAJ_ram_dass_katari
-		portraits={
-			army={
-				small="GFX_idea_RAJ_ram_dass_katari" #small="GFX_idea_generic_navy_arab_2"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_ram_dass_katari
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	
-
 	### AIR CHIEFS ###
 
 	RAJ_bruce_w_mcpherson={
@@ -617,30 +480,6 @@ characters={
 		}
 	}
 
-	RAJ_aspy_merwan_engineer={
-		name=RAJ_aspy_merwan_engineer
-		portraits={
-			army={
-				small="GFX_idea_RAJ_aspy_merwan_engineer" #small="GFX_idea_generic_air_arab_2"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = RAJ_aspy_merwan_engineer
-			ledger = navy
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				air_naval_strike_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
 	RAJ_mehar_singh={
 		name=RAJ_mehar_singh
 		portraits={
@@ -665,30 +504,96 @@ characters={
 		}
 	}
 
-	RAJ_w_h_gould_bradford={
-		name=RAJ_w_h_gould_bradford
+	### ADNIRALS ###
+
+	RAJ_herbert_fitzherbert={
+		name=RAJ_herbert_fitzherbert
+		portraits={
+			army={
+				large="GFX_RAJ_herbert_fitzherbert"
+				small=GFX_portrait_RAJ_herbert_fitzherbert_small
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = erbert_fitzherbert
+			ledger = navy
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	RAJ_william_e_parry={
+		name=RAJ_william_e_parry
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = RAJ_w_h_gould_bradford
-			ledger = navy
+			slot = navy_chief
+			idea_token = william_e_parry
 			allowed = {
 				original_tag = RAJ
 			}
 			traits = {
-				navy_anti_submarine_2
+				navy_chief_decisive_battle_1
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
 	}
 
+	RAJ_louis_mountbatten={
+		name=RAJ_louis_mountbatten
+		portraits={
+			army={
+				small="GFX_idea_RAJ_louis_mountbatten" #small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = louis_mountbatten
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
 
 	### POLITICAL ADVISORS ###
 
