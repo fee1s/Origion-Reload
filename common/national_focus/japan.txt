@@ -2343,17 +2343,14 @@ focus_tree = {
 		}
 		available = {
 			has_tech = improved_fire_control_system
-			has_tech = improved_dp_light_battery
 			has_tech = centimetric_radar
-			date > 1940.1.1
 		}
-		bypass = {
-		}
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_timed_idea = { idea = JAP_first_air_fleet days = 900 }
+			add_ideas = JAP_first_air_fleet
 			custom_effect_tooltip = JAP_first_air_fleet_tt
 				hidden_effect = {
 					set_technology = { improved_ship_hull_carrier = 1 }
@@ -2377,6 +2374,7 @@ focus_tree = {
 						mid_2_custom_slot = ship_deck_space
 					}
 				}
+				
 			#Line Production
 			add_equipment_production = {
 				equipment = {
@@ -2494,26 +2492,16 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = JAP_supremacy_of_the_battlefleet
-		cost = 5\
-		
-		available = {
-			date > 1940.1.1
-		}
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 			has_tech = improved_fire_control_system
-			has_tech = improved_dp_light_battery
 			has_tech = centimetric_radar
 		}
-		bypass = {
-			AND = {
-				has_tech = heavy_battleship
-				has_tech = heavy_battleship2
-			}
-		}
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2557,17 +2545,17 @@ focus_tree = {
 						fixed_ship_battery_slot = ship_super_heavy_battery_1
 						fixed_ship_anti_air_slot = ship_anti_air_2
 						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-						fixed_ship_radar_slot = ship_radar_2
+						fixed_ship_radar_slot = ship_radar_3
 						fixed_ship_engine_slot = heavy_ship_engine_3
 						fixed_ship_secondaries_slot = dp_ship_secondaries_3
 						fixed_ship_armor_slot = ship_armor_shbb
 						front_1_custom_slot = ship_super_heavy_battery_1
 						front_2_custom_slot = ship_super_heavy_battery_1
-						mid_1_custom_slot = ship_anti_air_2
+						mid_1_custom_slot = dp_ship_secondaries_3
 						mid_2_custom_slot = dp_ship_secondaries_3
 						mid_3_custom_slot = dp_ship_secondaries_3
-						rear_1_custom_slot = ship_airplane_launcher_2
-						rear_2_custom_slot = ship_airplane_launcher_2
+						rear_1_custom_slot = dp_ship_secondaries_3
+						rear_2_custom_slot = ship_airplane_launcher_3
 					}
 				}
 				custom_effect_tooltip = JAP_yamato_tt
@@ -2625,14 +2613,6 @@ focus_tree = {
 				bonus = 3.0
 				uses = 1
 				category = cl_tech	
-				category = ca_tech	
-			}
-			add_tech_bonus = {
-				name = JAP_cruiser_modernization
-				bonus = 2.0
-				uses = 1
-				technology = advanced_medium_battery
-				technology = basic_dp_medium_battery
 			}
 		}
 	}
@@ -2670,9 +2650,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 2
-		}
-		available = {
-			date > 1940.1.1
 		}
 		bypass = {
 		}

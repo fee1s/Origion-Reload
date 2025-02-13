@@ -1437,7 +1437,7 @@ news_event = { # начало блау новости
 		name = origion.6.a
 	}
 	
-	immediate = { hidden_effect = { sound_effect = psi_blau_speech } }
+	# immediate = { hidden_effect = { sound_effect = psi_blau_speech } }
 }
 
 news_event = { # напряга за марко поло в ноу азии
@@ -1591,5 +1591,41 @@ country_event = { # начало барбароссы
  
 	option = {
 		name = origion.14.a
+	}
+}
+
+news_event = { # Начало войны
+	id = origion.15
+	title = origion.15.t
+	desc = origion.15.d
+	picture = GFX_news_event_pacific
+	
+	major = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = origion.15.a
+	}
+}
+news_event = { # Downfall
+	id = origion.16
+	title = origion.16.t
+	desc = origion.16.d
+	picture = GFX_news_event_downfall
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = origion.16.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+	}
+	option = {
+		name = origion.16.b
+		trigger = {
+		    tag = JAP
+		}
 	}
 }

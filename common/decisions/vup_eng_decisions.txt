@@ -198,10 +198,11 @@ ENG_house_of_commons = {
     ENG_altantikwall_fall_no_asia = {
 		icon = GFX_decision_eng_puppet_usa
 		available = {
-			axis_lost_africa_trigger = yes
+			NOT = { 115 = { is_controlled_by = ITA } }
 		}
+		
 		visible = {
-		    has_global_flag = NO_ASIA_FLAG # Доступно только в режиме без Азии, обычно этим ЮСА занимается
+		   has_global_flag = NO_ASIA_FLAG 
 		}
 		
 		fire_only_once = yes
@@ -237,6 +238,26 @@ ENG_house_of_commons = {
 					}
 				}
 			}
+		}
+	}
+	
+	ENG_operation_downfall = { # ВЫСАДКА В ЯПОНИЮ
+		icon = GFX_decision_eng_puppet_usa
+		fire_only_once = yes
+		
+		visible = {
+		    NOT = { has_global_flag = NO_ASIA_FLAG }
+		}
+		
+		available = {
+		    has_full_control_of_state = 524
+			has_full_control_of_state = 526
+			has_full_control_of_state = 645
+		}
+		
+		complete_effect = {
+			news_event = { id = origion.16 }
+			set_global_flag = operation_downfall
 		}
 	}
 }
