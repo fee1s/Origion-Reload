@@ -1,0 +1,60 @@
+add_namespace = origion_pacific
+country_event = { # Подготовка к войне
+	id = origion_pacific.1 
+	title = origion_pacific.1.t
+	desc = origion_pacific.1.d
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = origion_pacific.14.a
+	}
+}
+news_event = { # Начало войны
+	id = origion_pacific.2
+	title = origion_pacific.2.t
+	desc = origion_pacific.2.d
+	picture = GFX_news_event_pacific
+	
+	major = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = origion_pacific.2.a
+	}
+}
+news_event = { # Высадка в Японию
+	id = origion_pacific.9
+	title = origion_pacific.9.t
+	desc = origion_pacific.9.d
+	picture = GFX_news_event_downfall
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	    hidden_effect = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	
+	option = {
+		name = origion_pacific.9.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	option = {
+		name = origion_pacific.9.b
+		trigger = {
+		    tag = JAP
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+}

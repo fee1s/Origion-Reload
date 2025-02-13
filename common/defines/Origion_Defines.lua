@@ -10,8 +10,9 @@ NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before 
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 512;
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 512;
+
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999;
 
 NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.07; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки)
 
@@ -37,6 +38,10 @@ NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель скорости дивизий, ванила это 0.05
+
+NDefines.NMilitary.ACCLIMATIZATION_IN_COMBAT_SPEED_FACTOR = 1.5 -- Множитель получения акклиматизации от боев
+NDefines.NMilitary.ACCLIMATIZATION_SPEED_GAIN = 0.015 -- Общий множитель получения акклиматизации
+NDefines.NMilitary.ACCLIMATIZATION_LOSS_SPEED_FACTOR = 4.0 -- Скорость потери акклиматизации 
 
 -- Воздух
 

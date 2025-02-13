@@ -783,16 +783,16 @@ focus_tree = {
 		id = SOV_increase_aircraft_production
 
 		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = SOV_expand_the_aircraft_industry }
+		prerequisite = { focus = SOV_expand_aviation_institutes }
 		x = 0
 		y = 2
 		relative_position_id = SOV_expand_the_aircraft_industry
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_intensify_pilot_training_program }
 
 		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			has_completed_focus = SOV_lessons_of_war 
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -876,16 +876,16 @@ focus_tree = {
 		id = SOV_intensify_pilot_training_program
 
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = SOV_foster_flying_clubs }
+		prerequisite = { focus = SOV_expand_aviation_institutes }
 		x = 0
 		y = 2
 		relative_position_id = SOV_foster_flying_clubs
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_increase_aircraft_production }
 
 		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			has_completed_focus = SOV_lessons_of_war
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -911,7 +911,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-
+			date > 1942.02.01
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -936,7 +936,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_long_range_aircraft }
 
 		available = {
-
+			date > 1942.09.01
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -966,6 +966,10 @@ focus_tree = {
 
 		mutually_exclusive = { focus = SOV_ground_support }
 		
+		available = {
+			date > 1942.09.01
+		}
+		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
@@ -993,7 +997,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-
+			has_completed_focus = SOV_the_glory_of_the_red_army
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}

@@ -1,0 +1,24 @@
+Pacific_dec_cat = {
+	### ОПЕРАЦИИ СОЮЗНИКОВ ###
+	Pacific_operation_downfall_dec = { # ВЫСАДКА В ЯПОНИЮ
+		icon = GFX_decision_eng_puppet_usa
+		priority = 105
+		fire_only_once = yes
+		
+		visible = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		
+		available = {
+		    has_full_control_of_state = 524
+			has_full_control_of_state = 526
+			has_full_control_of_state = 645
+			original_tag = USA
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_downfall_tt
+			set_global_flag = operation_downfall
+			news_event = { id = origion_pacific.9 }
+		}
+	}

@@ -87,6 +87,33 @@ on_actions = {
 		    }
 	    }
 	}
+	on_naval_invasion = { 
+		effect ={ 
+			if = { 
+				limit = {
+					is_japan_main_state = yes
+					NOT = { has_global_flag = operation_downfall }
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 361
+				} 
+				every_country = {
+					delete_unit = {
+						state = 361
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { is_japan_main_state = yes } } transfer_state_to = JAP }  
+				}				
+			}
+		}
+	}
 	on_startup = { ### NO ASIA
 	    effect = {
 		    if = {
