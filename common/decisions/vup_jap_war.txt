@@ -7,25 +7,47 @@ JAP_operation = {
 			has_completed_focus = JAP_strike_on_the_southern_resource_area
 			date > 1941.5.1
 		}
+		
 		fire_only_once = yes
-		is_good = yes
+		
+		days_remove = 30
+		
+		modifier = {
+		    army_speed_factor = 1
+			dig_in_speed_factor = 1
+			naval_invasion_prep_speed = 1
+			supply_factor = 0.5
+		}	
 		
 		complete_effect = {
-			declare_war_on = {
-				target = USA
-				type = annex_everything
+			every_country = {
+			    limit = {
+				    ORIGION_is_in_faction_with_allies = yes
+				}
+				
+		    	country_event = origion.17
 			}
-			activate_mission = JAP_stagnation_economic_0
-			add_timed_idea = { idea = JAP_surprise_attack days = 90 }
-			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+		}
+		
+		remove_effect = {
+			news_event = { id = origion.15 }
 			
 			hidden_effect = {
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+				}
+				
 				sound_effect = psi_usa_war
 				USA_join_to_war = yes # скриптед_эффект, юса вступает в алайсы, призывает всех в войну и вступает в европейскую войну
+				
 				ENG = { transfer_state = 334 transfer_state = 986 }
 				AST = { transfer_state = 669 }
 				USA = { annex_country = { target = INS } }
-				news_event = { id = origion.15 }
+				
+				activate_mission = JAP_stagnation_economic_0
+				add_timed_idea = { idea = JAP_surprise_attack days = 90 }
+				add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
 			}
 		}
 	}

@@ -792,7 +792,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_intensify_pilot_training_program }
 
 		available = {
-			has_completed_focus = SOV_lessons_of_war 
+			date > 1942.02.01
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -885,7 +885,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_increase_aircraft_production }
 
 		available = {
-			has_completed_focus = SOV_lessons_of_war
+			date > 1942.02.01
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -911,7 +911,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			date > 1942.02.01
+			has_completed_focus = SOV_the_sacred_war
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -936,7 +936,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_long_range_aircraft }
 
 		available = {
-			date > 1942.09.01
+			has_completed_focus = SOV_lessons_of_war
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -967,7 +967,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_ground_support }
 		
 		available = {
-			date > 1942.09.01
+			has_completed_focus = SOV_lessons_of_war
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}

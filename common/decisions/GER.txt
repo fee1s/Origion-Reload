@@ -404,8 +404,8 @@ GER_operations = {
 			has_completed_focus = GER_ussr_war_goal
 			date > 1941.6.1
 		}
-		cost = 0
 		days_remove = 21
+		
 		complete_effect = {
 			hidden_effect = {
 				SOV = {
@@ -413,6 +413,7 @@ GER_operations = {
 				}
 			}
 		}
+		
 		remove_effect = {
 			GER = {
                 declare_war_on = {

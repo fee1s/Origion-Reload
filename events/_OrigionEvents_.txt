@@ -1629,3 +1629,20 @@ news_event = { # Downfall
 		}
 	}
 }
+
+country_event = { # Подозрительная активность в Пасифике..
+	id = origion.17
+	title = origion.17.t
+	desc = origion.17.d
+	picture = GFX_report_event_ast_navy
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = origion.17.a
+	}
+}
