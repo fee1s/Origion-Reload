@@ -53,6 +53,7 @@ NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.95 -- бафф морбобров �
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.45 -- бафф морбобров по дамагу
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 1.2 -- множитель получаемого опыта авиации (всего)
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самолетики не могут получить ранение на тренировке
 
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.055 -- бафф касых по дамагу
 NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.045 -- бафф касых по дамагу по организации
@@ -112,7 +113,7 @@ NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0;
 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 
-NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 96.0 -- Скорость развертки дивизий, ванила 62
+NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 105.0 -- Скорость развертки дивизий, ванила 62
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0.75;
 
@@ -144,7 +145,7 @@ NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 7.5 -- Криты
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.75 -- снижение урона пво от мор авиации
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.25 -- cнижение урона от мор авиации при получении повреждений
 
-NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 4 -- Бафф на навалы от авиков
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 5 -- Бафф на навалы от авиков
 
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 8 -- частота атаки авианосного соединения в часах
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.8, 2.2, 1.4 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)
@@ -180,6 +181,11 @@ NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2 -- кол-во �
 
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- Стоимость назначения гордости
 NDefines.NNavy.PRIDE_OF_THE_FLEET_LOST_TEMP_MODIFIER_DURATION = 0			-- Длительность дебаффа от гордости
+
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.5
+
+NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.05 -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.025 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
 --урон и криты от процента пробоя 
 
@@ -253,7 +259,7 @@ NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 150
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
-NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300
+NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 900
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 
 NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.15; -- Множитель починки кораблей от морской базы, ванила - 0.05
