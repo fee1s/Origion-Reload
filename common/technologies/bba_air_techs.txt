@@ -391,6 +391,10 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_guns
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -417,6 +421,10 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_guns
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -471,6 +479,10 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_guns
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -603,6 +615,7 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
 		}
 	}
 
@@ -629,6 +642,7 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
 		}
 	}
 
@@ -655,6 +669,7 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
 		}
 	}
 
@@ -677,6 +692,7 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
 		}
 	}
 
@@ -703,6 +719,12 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_engine
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -729,6 +751,12 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_engine
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -758,6 +786,12 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_engine
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -787,6 +821,12 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_engine
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 
@@ -808,11 +848,15 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { x = 0 y = 14 }
 		}
-		on_research_complete = {
-			custom_effect_tooltip = JET_ENGINES_RESEARCHED
-		}
+
 		categories = {
 			jet_technology
+			mio_cat_all_light_fighter_and_modules
+			mio_cat_all_cas_and_modules
+			mio_cat_all_naval_bomber_and_modules
+			mio_cat_all_medium_aircraft_and_modules
+			mio_cat_all_heavy_aircraft_and_modules
+			mio_cat_all_light_aircraft_and_modules
 		}
 	}
 }

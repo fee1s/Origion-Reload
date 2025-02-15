@@ -408,23 +408,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		
 		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
+			OR = {
+				has_full_control_of_state = 439	
+				has_full_control_of_state = 674
+			}
 		}
-		bypass = {
-		}
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
