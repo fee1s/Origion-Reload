@@ -2610,11 +2610,7 @@ focus_tree = {
 					surrender_progress > 0.35
 				}
 				
-				if = { limit = { ROM = { exists = yes } }
-					ROM = {
-						surrender_progress > 0.30
-					}
-				}
+				46 = { NOT = { is_controlled_by_axis = yes } }
 				
 				hidden_trigger = { date > 1943.2.18 }
 			}

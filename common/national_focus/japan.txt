@@ -1882,27 +1882,17 @@ focus_tree = {
 				has_completed_focus = JAP_purge_the_kodoha_faction
 			}
 		}
-		available = {
-		}
-		bypass = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		
 		completion_reward = {
 			air_experience = 300
 			add_tech_bonus = {
 				name = JAP_fighter_modernization
 				bonus = 1.0
-				uses = 1
-				category = light_fighter		
-			}
-			add_tech_bonus = {
-				name = JAP_fighter_modernization
-				bonus = 1.0
-				uses = 1
-				category = cat_heavy_fighter	
+				uses = 2
+				technology = improved_small_airframe
+				technology = improved_medium_airframe
 			}
 		}
 	}
