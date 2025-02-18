@@ -66,16 +66,16 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 1742;7868;sea;2510;-1;-1;-1;-1;;Sakhalin-Siberia
 12661;7884;sea;8538;-1;-1;-1;-1;;Kodiak-Alaska
 11985;1025;sea;7932;-1;-1;-1;-1;;Japan-Kyushu
-4094;7212;sea;8791;-1;-1;-1;-1;;Shikoku-Chugoku
-9965;7072;sea;8791;-1;-1;-1;-1;;Shikoku-Kansai
+4094;7212;sea;7932;-1;-1;-1;-1;;Shikoku-Chugoku
+9965;7072;sea;7932;-1;-1;-1;-1;;Shikoku-Kansai
 1399;1515;sea;220;-1;-1;-1;-1;;Kurils 1
 1515;13037;sea;5614;-1;-1;-1;-1;;Kurils 2
 13037;4646;sea;4465;-1;-1;-1;-1;;Kurils-Hokkaido
 9952;1117;sea;2658;-1;-1;-1;-1;;Niigata-Sado
-10092;7046;sea;8791;-1;-1;-1;-1;;Kyushu-Shikoku
+10092;7046;sea;7932;-1;-1;-1;-1;;Kyushu-Shikoku
 4198;12032;sea;8472;-1;-1;-1;-1;;Kanoya-Yokushima
 11948;1177;sea;2708;-1;-1;-1;-1;;Jeju-Korea
-10124;1123;sea;8499;-1;-1;-1;-1;;Okinawa 1
+10124;1123;sea;8318;-1;-1;-1;-1;;Okinawa 1
 1123;7115;sea;8318;-1;-1;-1;-1;;Okinawa 2
 13518;13519;sea;13524;-1;-1;-1;-1;;Kenik 1
 11265;3288;sea;13523;-1;-1;-1;-1;;Kenik 2
@@ -260,13 +260,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12774;13082;impassable;-1;-1;-1;-1;-1;;
 12774;4891;impassable;-1;-1;-1;-1;-1;;
 5345;5322;;-1;-1;-1;-1;-1;CHINA_TAIWAN;CHINA-TAIWAN
-2829;5367;;-1;-1;-1;-1;-1;TAIWAN_OKINAWA;TAIWAN-OKINAWA
-2829;8623;;-1;-1;-1;-1;-1;TAIWAN_OKINAWA;TAIWAN-OKINAWA
-2829;8548;;-1;-1;-1;-1;-1;TAIWAN_OKINAWA;TAIWAN-OKINAWA
-2829;8525;;-1;-1;-1;-1;-1;TAIWAN_OKINAWA;TAIWAN-OKINAWA
-8472;8150;;-1;-1;-1;-1;-1;OKINAWA_JAPAN;OKINAWA-JAPAN
-8472;8318;;-1;-1;-1;-1;-1;OKINAWA_JAPAN;OKINAWA-JAPAN
-8499;8318;;-1;-1;-1;-1;-1;OKINAWA_JAPAN;OKINAWA-JAPAN
+2829;8343;;-1;-1;-1;-1;-1;TAIWAN_OKINAWA;TAIWAN-OKINAWA
+8472;8150;;-1;-1;-1;-1;-1;OKINAWA_JAPAN;OKINAWA-JAPAN-1
+8472;8318;;-1;-1;-1;-1;-1;OKINAWA_JAPAN;OKINAWA-JAPAN-2
+8499;8318;;-1;-1;-1;-1;-1;OKINAWA_JAPAN;OKINAWA-JAPAN-3
 8791;7932;;-1;-1;-1;-1;-1;INNER_JAPAN_1;INNER-Japan-1
 5946;6824;;-1;-1;-1;-1;-1;INNER_JAPAN_2;INNER-Japan-2
 5922;4465;;-1;-1;-1;-1;-1;INNER_JAPAN_3;INNER-Japan-3

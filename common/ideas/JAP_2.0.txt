@@ -14,14 +14,31 @@ ideas = {
 			picture = eng_preparing_the_second_front
 			
 			modifier = {
-				convoy_retreat_speed = 1
-				convoy_retreat_speed = 1
+				convoy_retreat_speed = 3
 				supply_factor = 0.30
 				army_attack_factor = 0.30
 				army_defence_factor = 0.30
 				air_attack_factor = 0.15
 				air_defence_factor = 0.15
 				air_mission_efficiency = 0.15
+			}
+		}
+		
+		JAP_tokyo_express = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				convoy_retreat_speed = 0.25
+				supply_factor = 0.1
 			}
 		}
 		
@@ -129,6 +146,40 @@ ideas = {
 				support_equipment = {
 					instant = yes
 					build_cost_ic = -0.05
+				}
+			}
+		}
+		JAP_osaka_arsenal_upgrade = {
+		    name = JAP_osaka_arsenal
+			removal_cost = -1
+			picture = MEX_callistas 
+			allowed = {
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = -0.05
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = -0.05
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = -0.05
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+					reliability = -0.05
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+					reliability = -0.05
 				}
 			}
 		}

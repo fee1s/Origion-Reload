@@ -68,7 +68,30 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
+			GER = {
+			    every_state = { 
+				    limit = { 
+					    OR = { 
+						state = 806 
+						state = 19 
+						state = 23 
+						state = 30 
+						state = 14 
+						state = 15 
+						state = 785 
+						state = 29 
+						state = 6 
+						state = 35 
+						state = 7 
+						state = 36 
+						state = 56 
+						state = 59 
+						state = 58 
+						state = 909 
+						state = 912 
+						state = 99 
+						} 
+					}
 					add_dynamic_modifier = { 
 					    modifier = atlantikwall_dm 
 						scope = USA
@@ -97,6 +120,12 @@ focus_tree = {
 					    modifier = atlantikwall_dm 
 						scope = RAJ
 					}
+				}
+				every_country = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					set_variable = { atlantikwall_dm_army_attack_factor = -0.5 }
 				}
 			}
 		}

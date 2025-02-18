@@ -2,14 +2,13 @@ JAP_operation = {
 	
 	JAP_strike_on_the_southern_resource_area_decision = {
 		icon = GFX_decision_eng_puppet_usa
-		priority = 104
+		priority = 105
 		available = {
 			has_completed_focus = JAP_strike_on_the_southern_resource_area
-			date > 1941.5.1
+			date > 1941.4.1
 		}
 		
 		fire_only_once = yes
-		
 		days_remove = 30
 		
 		modifier = {
@@ -17,37 +16,68 @@ JAP_operation = {
 			dig_in_speed_factor = 1
 			naval_invasion_prep_speed = 1
 			supply_factor = 0.5
-		}	
+		}
 		
 		complete_effect = {
+			hidden_effect = {
+				USA = {
+		    	    add_dynamic_modifier = { 
+					    modifier = pacific_warfare_dm 
+					}
+					set_variable = { USA.pacific_dm_local_resources_factor = 0 }
+					set_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = 0 }
+				}
+				JAP = {
+				    set_country_flag = asia_map_open_flag
+		    		add_dynamic_modifier = { modifier = pacific_warfare_dm }
+					set_variable = { JAP.pacific_dm_industrial_capacity_factory = 0}
+					set_variable = { JAP.pacific_dm_industrial_capacity_dockyard = 0}
+					set_variable = { USA_side_progress = 50 }
+		    		set_variable = { JAP_side_progress = 50 }
+					set_variable = { ALLY_pacific_controlled_regions = 11 }
+			        set_variable = { JAP_pacific_controlled_regions = 11 }
+				}
+			    AST = { transfer_state = 669 } # Западная Новая Гвинея
+				JAP = { transfer_state = 638 } # Гуам
+				### СОЮЗНИКИ ###
+				set_global_flag = birma_conquered_ALLY
+				set_global_flag = raj_conquered_ALLY
+				set_global_flag = papua_conquered_ALLY
+				set_global_flag = australia_conquered_ALLY
+				set_global_flag = newzeland_conquered_ALLY
+				set_global_flag = phi_conquered_ALLY
+				set_global_flag = hawai_conquered_ALLY
+				set_global_flag = malaya_conquered_ALLY
+				set_global_flag = solomon_conquered_ALLY
+				set_global_flag = sumatra_conquered_ALLY
+				set_global_flag = jawa_conquered_ALLY
+				### ЯПОНИЯ ###
+				set_global_flag = taiwan_conquered_JAP
+				set_global_flag = okinawa_conquered_JAP
+				set_global_flag = iwojima_conquered_JAP
+				set_global_flag = indochina_conquered_JAP
+				set_global_flag = caroline_conquered_JAP
+				set_global_flag = mariana_conquered_JAP
+				set_global_flag = marshall_conquered_JAP
+				set_global_flag = palau_conquered_JAP
+				set_global_flag = markus_conquered_JAP
+			}
 			every_country = {
 			    limit = {
 				    ORIGION_is_in_faction_with_allies = yes
 				}
-				
-		    	country_event = origion.17
+				set_variable = { USA_side_progress = 50 }
+		    	set_variable = { JAP_side_progress = 50 }
+				set_variable = { ALLY_pacific_controlled_regions = 11 }
+			    set_variable = { JAP_pacific_controlled_regions = 11 }
+		    	country_event = { 
+		    	    id = origion.17
+		    	}
 			}
 		}
-		
 		remove_effect = {
-			news_event = { id = origion.15 }
-			
-			hidden_effect = {
-				declare_war_on = {
-					target = USA
-					type = annex_everything
-				}
-				
-				sound_effect = psi_usa_war
-				USA_join_to_war = yes # скриптед_эффект, юса вступает в алайсы, призывает всех в войну и вступает в европейскую войну
-				
-				ENG = { transfer_state = 334 transfer_state = 986 }
-				AST = { transfer_state = 669 }
-				USA = { annex_country = { target = INS } }
-				
-				activate_mission = JAP_stagnation_economic_0
-				add_timed_idea = { idea = JAP_surprise_attack days = 90 }
-				add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+		    news_event = { 
+		        id = origion.15
 			}
 		}
 	}
@@ -665,6 +695,7 @@ JAP_operation = {
 
 JAP_economic_stagnation = {
 	JAP_stagnation_economic_0_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
 		days_mission_timeout = 120
 		is_good = no
@@ -686,6 +717,7 @@ JAP_economic_stagnation = {
 		}
 	}
 	JAP_stagnation_economic_1_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
 		days_mission_timeout = 120
 		is_good = no
@@ -708,6 +740,7 @@ JAP_economic_stagnation = {
 		}
 	}
 	JAP_stagnation_economic_2_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
 		days_mission_timeout = 120
 		is_good = no
@@ -730,6 +763,7 @@ JAP_economic_stagnation = {
 		}	
 	}
 	JAP_stagnation_economic_3_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
 		days_mission_timeout = 120
 		is_good = no
@@ -752,6 +786,7 @@ JAP_economic_stagnation = {
 		}
 	}
 	JAP_stagnation_economic_4_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
 		days_mission_timeout = 120
 		is_good = no
@@ -774,6 +809,7 @@ JAP_economic_stagnation = {
 		}
 	}
 	JAP_stagnation_economic_5_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
 		days_mission_timeout = 120
 		is_good = no
@@ -795,3 +831,58 @@ JAP_economic_stagnation = {
 		}
 	}
 }
+JAP_annex = {
+	JAP_CHI_attack1 = {
+		icon = GFX_decision_generic_operation
+		available = {
+			date > 1945.1.1
+			has_completed_focus = JAP_intervene_in_china
+		}
+		activation = {
+			has_completed_focus = JAP_intervene_in_china
+		}
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			JAP = {
+				transfer_state = 608
+				transfer_state = 614
+				transfer_state = 597
+				transfer_state = 743
+				transfer_state = 598
+				transfer_state = 613			
+				transfer_state = 606
+			}
+			
+			hidden_effect = {
+				army_experience = 150
+				air_experience = 100
+			}
+		}
+	}
+	JAP_CHI_attack2 = {
+		icon = GFX_decision_generic_operation
+		available = {
+			date > 1945.1.1
+			has_completed_focus = JAP_intervene_in_china
+		}
+		activation = {
+			has_completed_focus = JAP_intervene_in_china
+		}
+		fire_only_once = yes
+		days_mission_timeout = 180
+		timeout_effect = {
+			annex_country = { target = CHI }
+			add_named_threat = {
+				threat = 30
+			}
+			
+			hidden_effect = {
+				army_experience = 150
+				air_experience = 100
+			}
+		}
+	}
+}
+

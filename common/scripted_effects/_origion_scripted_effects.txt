@@ -190,3 +190,41 @@ Cas_1940 = {
 		}
 	}					
 }
+
+###
+
+###
+
+pacific_war_JAP_side_bar = { # Свдигает баланс сил в сторону Японии
+	add_to_variable = { USA_side_progress = -4.5 }
+	add_to_variable = { JAP_side_progress = 4.5 }
+	add_to_variable = { ALLY_pacific_controlled_regions = -1 }
+	add_to_variable = { JAP_pacific_controlled_regions = 1 }
+}
+pacific_war_USA_side_bar = { # Свдигает баланс сил в сторону США
+	add_to_variable = { USA_side_progress = 4.5 }
+	add_to_variable = { JAP_side_progress = -4.5 }
+	add_to_variable = { ALLY_pacific_controlled_regions = 1 }
+	add_to_variable = { JAP_pacific_controlled_regions = -1 }
+}
+
+pacific_war_JAP_side = { # Улучшает динамический модификатор у Японии и ухудшает у США
+	#JAP = {
+	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_factory = 0.025 }
+	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_dockyard = 0.025 }
+	#}
+	USA = {
+		add_to_variable = { USA.pacific_dm_local_resources_factor = -0.05 }
+		add_to_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = 0.05 }
+	}
+}
+pacific_war_USA_side = { # Улучшает динамический модификатор у США и ухудшает у Японии
+	#JAP = {
+	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_factory = -0.025 }
+	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_dockyard = -0.025 }
+	#}
+	USA = {
+		add_to_variable = { USA.pacific_dm_local_resources_factor = 0.05 }
+		add_to_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = -0.05 }
+	}
+}

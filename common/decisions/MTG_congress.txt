@@ -532,5 +532,21 @@ USA_congress = {
 				}
 			}
 		}
+	}
+    USA_operation_downfall = { # ВЫСАДКА В ЯПОНИЮ
+		icon = GFX_decision_eng_puppet_usa
+		fire_only_once = yes
+		
+		available = {
+		    has_full_control_of_state = 524
+			has_full_control_of_state = 526
+			has_full_control_of_state = 645
+		}
+		
+		complete_effect = {
+		    custom_effect_tooltip = Pacific_operation_downfall_tt
+			set_global_flag = operation_downfall
+			news_event = { id = origion.16 }
+		}
 	}	
 }

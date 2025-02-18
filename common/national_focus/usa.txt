@@ -1112,6 +1112,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		
+		allow_branch = {
+		    always = no
+		}
+		
 		prerequisite = { focus = USA_build_the_pentagon }
 		
 		relative_position_id = USA_build_the_pentagon
@@ -1121,30 +1125,6 @@ focus_tree = {
 		    has_full_control_of_state = 524
 			has_full_control_of_state = 526
 			has_full_control_of_state = 645
-			#OR = {
-			    #custom_trigger_tooltip = {
-				#    tooltip = USA_fall_of_the_western_wall_tt
-				#	check_variable = {
-				#		ALLY_pacific_controlled_regions > 15
-				#	}
-				#}
-				#custom_trigger_tooltip = {
-				#    tooltip = generic_skip_one_line_tt
-				#	always = no
-				#}
-				#SOV = {
-				#    OR = {
-				#	    NOT = { controls_state = 217 }
-				#	    NOT = { controls_state = 219 }
-				#	    NOT = { controls_state = 195 }
-				#	}
-				#}
-				#custom_trigger_tooltip = {
-				#    tooltip = generic_skip_one_line_tt
-				#	always = no
-				#}
-				#date > 1943.1.1
-			#}
 		}
 		
 		completion_reward = {	

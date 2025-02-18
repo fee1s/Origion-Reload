@@ -1603,8 +1603,42 @@ news_event = { # Начало войны
 	major = yes
 	
 	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+		    	limit = {
+				    OR = {
+					    ORIGION_is_in_faction_with_allies = yes
+						tag = JAP
+					}
+				}
+				set_country_flag  = pacific_war_started_dd_flag
+			}
+		    JAP = {
+		        declare_war_on = {
+		 	    	target = USA
+			    	type = annex_everything
+			    }
+			    add_timed_idea = { idea = JAP_surprise_attack days = 90 }
+			    add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+			}
+			sound_effect = psi_usa_war
+			USA_join_to_war = yes
+		}
+	}
+	
 	option = {
 		name = origion.15.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+	}
+	option = {
+		name = origion.15.a
+		trigger = {
+		    tag = JAP
+		}
 	}
 }
 news_event = { # Downfall
@@ -1636,14 +1670,19 @@ country_event = { # Подозрительная активность в Пас�
 	desc = origion.17.d
 	picture = GFX_report_event_ast_navy
 	
-	major = yes
-	
 	is_triggered_only = yes
 	
-	fire_only_once = yes
+	immediate = {
+	    hidden_effect = {
+		    set_country_flag = asia_map_open_flag
+			activate_mission = Pacific_start_mission
+		}
+	}
 	
 	option = {
 		name = origion.17.a
+		custom_effect_tooltip = pacific_start_event_tt
+		activate_mission_tooltip = Pacific_start_mission
 	}
 }
 
@@ -1678,5 +1717,99 @@ news_event = { # Технологии 1941 года доступны
 	
 	option = {
 		name = origion.19.a
+	}
+}
+
+news_event = { # Падение Окинавы
+	id = origion.20
+	title = origion.20.t
+	desc = origion.20.d
+	picture = GFX_news_event_okinawa
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+	    any_country = {
+		    ORIGION_is_in_faction_with_allies = yes
+		    has_full_control_of_state = 526
+		}
+		NOT = { has_global_flag = fall_of_okinawa }
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    set_global_flag = fall_of_okinawa
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	
+	option = {
+		name = origion.20.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	option = {
+		name = origion.20.b
+		trigger = {
+		    tag = JAP
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+}
+
+news_event = { # Падение Иводзимы
+	id = origion.21
+	title = origion.21.t
+	desc = origion.21.d
+	picture = GFX_news_event_iwojima
+	
+	major = yes
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+	    any_country = {
+		    ORIGION_is_in_faction_with_allies = yes
+		    has_full_control_of_state = 645
+		}
+		NOT = { has_global_flag = fall_of_iwojima }
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    set_global_flag = fall_of_iwojima
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	
+	option = {
+		name = origion.21.a
+		trigger = {
+		    NOT = { tag = JAP }
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
+	}
+	option = {
+		name = origion.21.b
+		trigger = {
+		    tag = JAP
+		}
+		effect_tooltip = {
+		    JAP = { add_stability = -0.1 }
+		}
 	}
 }

@@ -1,0 +1,684 @@
+defined_text = {
+	name = progress_bar_USA_scripted_loc_tt
+	text = {
+		localization_key = progress_bar_USA_key_tt
+	}
+}
+defined_text = {
+	name = progress_bar_JAP_scripted_loc_tt
+	text = {
+		localization_key = progress_bar_JAP_key_tt
+	}
+}
+defined_text = {
+	name = open_asia_map_tooltip
+	text = {
+		localization_key = "GFX_JAP_co_prosper"
+	}
+}
+defined_text = {
+	name = progress_bar_name
+	text = {
+	    trigger = {
+		    ORIGION_is_in_faction_with_allies = yes
+		}
+		localization_key = progress_bar_name_loc_ALLY
+	}
+	text = {
+	    trigger = {
+		    tag = JAP
+		}
+		localization_key = progress_bar_name_loc_JAP
+	}
+}
+### БИРМА ###
+defined_text = {
+	name = asia_map_birma_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = birma_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = birma_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_birma_texture
+	text = {
+	    trigger = {
+		    has_global_flag = birma_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_birma_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = birma_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_birma_ALLY"
+	}
+}
+### ИНДИЯ ###
+defined_text = {
+	name = asia_map_raj_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = raj_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = raj_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_raj_texture
+	text = {
+	    trigger = {
+		    has_global_flag = raj_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_raj_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = raj_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_raj_ALLY"
+	}
+}
+### ТАЙВАНЬ ###
+defined_text = {
+	name = asia_map_taiwan_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = taiwan_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = taiwan_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_taiwan_texture
+	text = {
+	    trigger = {
+		    has_global_flag = taiwan_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_taiwan_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = taiwan_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_taiwan_ALLY"
+	}
+}
+### ГВИНЕЯ ###
+defined_text = {
+	name = asia_map_papua_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = papua_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = papua_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_papua_texture
+	text = {
+	    trigger = {
+		    has_global_flag = papua_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_papua_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = papua_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_papua_ALLY"
+	}
+}
+### АВСТРАЛИЯ ###
+defined_text = {
+	name = asia_map_australia_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = australia_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = australia_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_australia_texture
+	text = {
+	    trigger = {
+		    has_global_flag = australia_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_australia_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = australia_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_australia_ALLY"
+	}
+}
+### ФИЛИППИНЫ ###
+defined_text = {
+	name = asia_map_phi_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = phi_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = phi_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_phi_texture
+	text = {
+	    trigger = {
+		    has_global_flag = phi_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_phi_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = phi_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_phi_ALLY"
+	}
+}
+### ГАВАЙИ ###
+defined_text = {
+	name = asia_map_hawai_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = hawai_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = hawai_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_hawai_texture
+	text = {
+	    trigger = {
+		    has_global_flag = hawai_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_hawai_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = hawai_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_hawai_ALLY"
+	}
+}
+### ОКИНАВА ###
+defined_text = {
+	name = asia_map_okinawa_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = okinawa_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = okinawa_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_okinawa_texture
+	text = {
+	    trigger = {
+		    has_global_flag = okinawa_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_okinawa_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = okinawa_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_okinawa_ALLY"
+	}
+}
+### ИВОДЗИМА ###
+defined_text = {
+	name = asia_map_iwojima_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_iwojima_texture
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_iwojima_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_iwojima_ALLY"
+	}
+}
+### МАЛАЙА ###
+defined_text = {
+	name = asia_map_malaya_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = malaya_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = malaya_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_malaya_texture
+	text = {
+	    trigger = {
+		    has_global_flag = malaya_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_malaya_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = malaya_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_malaya_ALLY"
+	}
+}
+### ИНДОКИТАЙ ###
+defined_text = {
+	name = asia_map_indochina_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = indochina_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = indochina_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_indochina_texture
+	text = {
+	    trigger = {
+		    has_global_flag = indochina_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_indochina_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = indochina_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_indochina_ALLY"
+	}
+}
+### СОЛОМОНОВЫ ОСТРОВА ###
+defined_text = {
+	name = asia_map_solomon_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = solomon_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = solomon_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_solomon_texture
+	text = {
+	    trigger = {
+		    has_global_flag = solomon_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_solomon_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = solomon_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_solomon_ALLY"
+	}
+}
+### НОВАЯ ЗЕЛАНДИЯ ###
+defined_text = {
+	name = asia_map_newzeland_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = newzeland_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = newzeland_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_newzeland_texture
+	text = {
+	    trigger = {
+		    has_global_flag = newzeland_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_newzeland_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = newzeland_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_newzeland_ALLY"
+	}
+}
+### ИВОДЗИМА ###
+defined_text = {
+	name = asia_map_iwojima_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_iwojima_texture
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_iwojima_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = iwojima_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_iwojima_ALLY"
+	}
+}
+### СУМАТРА ###
+defined_text = {
+	name = asia_map_sumatra_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = sumatra_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = sumatra_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_sumatra_texture
+	text = {
+	    trigger = {
+		    has_global_flag = sumatra_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_sumatra_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = sumatra_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_sumatra_ALLY"
+	}
+}
+### ЯВА ###
+defined_text = {
+	name = asia_map_jawa_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = jawa_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = jawa_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_jawa_texture
+	text = {
+	    trigger = {
+		    has_global_flag = jawa_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_jawa_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = jawa_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_jawa_ALLY"
+	}
+}
+### КАРОЛИНСКИЕ ОСТРОВА ###
+defined_text = {
+	name = asia_map_caroline_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = caroline_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = caroline_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_caroline_texture
+	text = {
+	    trigger = {
+		    has_global_flag = caroline_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_caroline_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = caroline_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_caroline_ALLY"
+	}
+}
+### МАРИАНСКИЕ ОСТРОВА ###
+defined_text = {
+	name = asia_map_mariana_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = mariana_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = mariana_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_mariana_texture
+	text = {
+	    trigger = {
+		    has_global_flag = mariana_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_mariana_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = mariana_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_mariana_ALLY"
+	}
+}
+### МАРШАЛЛОВЫ ОСТРОВА ###
+defined_text = {
+	name = asia_map_marshall_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = marshall_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = marshall_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_marshall_texture
+	text = {
+	    trigger = {
+		    has_global_flag = marshall_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_marshall_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = marshall_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_marshall_ALLY"
+	}
+}
+### ПАЛАУ ###
+defined_text = {
+	name = asia_map_palau_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = palau_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = palau_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_palau_texture
+	text = {
+	    trigger = {
+		    has_global_flag = palau_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_palau_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = palau_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_palau_ALLY"
+	}
+}
+### ОСТРОВ МАРКУСА ###
+defined_text = {
+	name = asia_map_markus_scripted_loc_tt
+	text = {
+	    trigger = {
+		    has_global_flag = markus_conquered_JAP
+		}
+		localization_key = asia_map_tt_JAP
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = markus_conquered_ALLY
+		}
+		localization_key = asia_map_tt_ALLY
+	}
+}
+defined_text = {
+	name = get_asia_map_markus_texture
+	text = {
+	    trigger = {
+		    has_global_flag = markus_conquered_JAP
+		}
+		localization_key = "GFX_map_gui_asia_markus_JAP"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = markus_conquered_ALLY
+		}
+		localization_key = "GFX_map_gui_asia_markus_ALLY"
+	}
+}

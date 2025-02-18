@@ -690,3 +690,26 @@ ORG_allies_lend_lease_to_sov = {
 		}
 	}
 }
+Pacific_dec_cat = {
+	Pacific_start_mission = {
+		icon = GFX_decision_eng_puppet_usa
+		priority = 106
+		fire_only_once = yes
+		days_mission_timeout = 30
+		
+		activation = {
+		    always = no
+		}
+		
+		visible = {
+		    has_country_flag = asia_map_open_flag
+		}
+		
+		available = {
+            always = no
+        }		
+		timeout_effect = {
+		    
+		}
+	}
+}

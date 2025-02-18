@@ -1,0 +1,1274 @@
+add_namespace = origion_hidden
+
+country_event = { # Скрытый ивент, тригериться на захват региона
+	id = origion_hidden.1
+	
+	hidden = yes
+	major = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+	    has_country_flag = pacific_war_started_dd_flag
+		OR = {
+		    any_country = {
+		        controls_birma = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = birma_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = birma_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_taiwan = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = taiwan_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = taiwan_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_papua = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = papua_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = papua_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_raj = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = raj_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = raj_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_australia = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = australia_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = australia_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_hawai = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = hawai_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = hawai_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_phi = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = phi_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = phi_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_okinawa = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = okinawa_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = okinawa_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_iwojima = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = iwojima_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = iwojima_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_malaya = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = malaya_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = malaya_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_indochina = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = indochina_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = indochina_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_solomon = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = solomon_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = solomon_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_sumatra = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = sumatra_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = sumatra_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_jawa = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = jawa_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = jawa_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_mariana = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = mariana_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = mariana_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_caroline = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = caroline_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = caroline_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_marshall = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = marshall_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = marshall_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_palau = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = palau_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = palau_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_newzeland = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = newzeland_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = newzeland_conquered_JAP }
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    ### БИРМА ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_birma = yes
+			        }
+					NOT = { has_global_flag = birma_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = birma_conquered_JAP
+					}
+					clr_global_flag = birma_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = birma_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_birma = yes
+			        }
+					NOT = { has_global_flag = birma_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = birma_conquered_ALLY
+					}
+					clr_global_flag = birma_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = birma_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ТАЙВАНЬ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_taiwan = yes
+			        }
+					NOT = { has_global_flag = taiwan_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = taiwan_conquered_JAP
+					}
+					clr_global_flag = taiwan_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = taiwan_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_taiwan = yes
+			        }
+					NOT = { has_global_flag = taiwan_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = taiwan_conquered_ALLY
+					}
+					clr_global_flag = taiwan_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = taiwan_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ГВИНЕЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_papua = yes
+			        }
+					NOT = { has_global_flag = papua_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = papua_conquered_JAP
+					}
+					clr_global_flag = papua_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = papua_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_papua = yes
+			        }
+					NOT = { has_global_flag = papua_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = papua_conquered_ALLY
+					}
+					clr_global_flag = papua_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = papua_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ИНДИЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_raj = yes
+			        }
+					NOT = { has_global_flag = raj_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = raj_conquered_JAP
+					}
+					clr_global_flag = raj_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = raj_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_raj = yes
+			        }
+					NOT = { has_global_flag = raj_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = raj_conquered_ALLY
+					}
+					clr_global_flag = raj_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					} 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = raj_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### АВСТРАЛИЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_australia = yes
+			        }
+					NOT = { has_global_flag = australia_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = australia_conquered_JAP
+					}
+					clr_global_flag = australia_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = australia_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_australia = yes
+			        }
+					NOT = { has_global_flag = australia_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = australia_conquered_ALLY
+					}
+					clr_global_flag = australia_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = australia_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ГАВАЙИ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_hawai = yes
+			        }
+					NOT = { has_global_flag = hawai_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = hawai_conquered_JAP
+					}
+					clr_global_flag = hawai_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = hawai_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_hawai = yes
+			        }
+					NOT = { has_global_flag = hawai_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = hawai_conquered_ALLY
+					}
+					clr_global_flag = hawai_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = hawai_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ГАВАЙИ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_phi = yes
+			        }
+					NOT = { has_global_flag = phi_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = phi_conquered_JAP
+					}
+					clr_global_flag = phi_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = phi_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_phi = yes
+			        }
+					NOT = { has_global_flag = phi_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = phi_conquered_ALLY
+					}
+					clr_global_flag = phi_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = phi_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ОКИНАВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_okinawa = yes
+			        }
+					NOT = { has_global_flag = okinawa_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = okinawa_conquered_JAP
+					}
+					clr_global_flag = okinawa_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = okinawa_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_okinawa = yes
+			        }
+					NOT = { has_global_flag = okinawa_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = okinawa_conquered_ALLY
+					}
+					clr_global_flag = okinawa_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = okinawa_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ИВОДЗИМА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_iwojima = yes
+			        }
+					NOT = { has_global_flag = iwojima_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = iwojima_conquered_JAP
+					}
+					clr_global_flag = iwojima_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = iwojima_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_iwojima = yes
+			        }
+					NOT = { has_global_flag = iwojima_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = iwojima_conquered_ALLY
+					}
+					clr_global_flag = iwojima_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = iwojima_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАЛАЙА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_malaya = yes
+			        }
+					NOT = { has_global_flag = malaya_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = malaya_conquered_JAP
+					}
+					clr_global_flag = malaya_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = malaya_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_malaya = yes
+			        }
+					NOT = { has_global_flag = malaya_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = malaya_conquered_ALLY
+					}
+					clr_global_flag = malaya_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = malaya_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ИНДОКИТАЙ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_indochina = yes
+			        }
+					NOT = { has_global_flag = indochina_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = indochina_conquered_JAP
+					}
+					clr_global_flag = indochina_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = indochina_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_indochina = yes
+			        }
+					NOT = { has_global_flag = indochina_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = indochina_conquered_ALLY
+					}
+					clr_global_flag = indochina_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = indochina_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### СОЛОМОНОВЫ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_solomon = yes
+			        }
+					NOT = { has_global_flag = solomon_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = solomon_conquered_JAP
+					}
+					clr_global_flag = solomon_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = solomon_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_solomon = yes
+			        }
+					NOT = { has_global_flag = solomon_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = solomon_conquered_ALLY
+					}
+					clr_global_flag = solomon_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = solomon_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### СУМАТРА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_sumatra = yes
+			        }
+					NOT = { has_global_flag = sumatra_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sumatra_conquered_JAP
+					}
+					clr_global_flag = sumatra_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = sumatra_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_sumatra = yes
+			        }
+					NOT = { has_global_flag = sumatra_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sumatra_conquered_ALLY
+					}
+					clr_global_flag = sumatra_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = sumatra_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ЯВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_jawa = yes
+			        }
+					NOT = { has_global_flag = jawa_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = jawa_conquered_JAP
+					}
+					clr_global_flag = jawa_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = jawa_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_jawa = yes
+			        }
+					NOT = { has_global_flag = jawa_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = jawa_conquered_ALLY
+					}
+					clr_global_flag = jawa_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = jawa_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАРИАНСКИЕ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_mariana = yes
+			        }
+					NOT = { has_global_flag = mariana_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = mariana_conquered_JAP
+					}
+					clr_global_flag = mariana_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = mariana_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_mariana = yes
+			        }
+					NOT = { has_global_flag = mariana_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = mariana_conquered_ALLY
+					}
+					clr_global_flag = mariana_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = mariana_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### КАРОЛИНСКИЕ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_caroline = yes
+			        }
+					NOT = { has_global_flag = caroline_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = caroline_conquered_JAP
+					}
+					clr_global_flag = caroline_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = caroline_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_caroline = yes
+			        }
+					NOT = { has_global_flag = caroline_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = caroline_conquered_ALLY
+					}
+					clr_global_flag = caroline_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = caroline_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАРШАЛЛОВЫ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_marshall = yes
+			        }
+					NOT = { has_global_flag = marshall_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = marshall_conquered_JAP
+					}
+					clr_global_flag = marshall_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = marshall_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_marshall = yes
+			        }
+					NOT = { has_global_flag = marshall_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = marshall_conquered_ALLY
+					}
+					clr_global_flag = marshall_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = marshall_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ПАЛАУ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_palau = yes
+			        }
+					NOT = { has_global_flag = marshall_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = palau_conquered_JAP
+					}
+					clr_global_flag = palau_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = palau_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_palau = yes
+			        }
+					NOT = { has_global_flag = palau_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = palau_conquered_ALLY
+					}
+					clr_global_flag = palau_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = palau_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### НОВАЯ ЗЕЛАНДИЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_newzeland = yes
+			        }
+					NOT = { has_global_flag = newzeland_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = newzeland_conquered_JAP
+					}
+					clr_global_flag = newzeland_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = newzeland_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_newzeland = yes
+			        }
+					NOT = { has_global_flag = newzeland_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = newzeland_conquered_ALLY
+					}
+					clr_global_flag = newzeland_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = newzeland_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+		}
+	}
+}
