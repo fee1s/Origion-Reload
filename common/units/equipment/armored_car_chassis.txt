@@ -41,7 +41,7 @@ armored_car_chassis = {
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_armored_car_armament
+					tank_small_main_armament
 				}
 			}
 			
@@ -155,13 +155,12 @@ armored_car_chassis = {
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
 		}
-
-		fuel_consumption = 0
+		fuel_consumption = 2.4
 		maximum_speed = 6
 		build_cost_ic = 1
 		reliability = 0.90
 		hardness = 0.8
-		armor_value = 15
+		armor_value = 4
 		resources = {
 			steel = 1
 		}
@@ -198,7 +197,7 @@ armored_car_chassis = {
 		maximum_speed = 8
 		build_cost_ic = 1.25
 		reliability = 0.95
-		armor_value = 20
+		armor_value = 5
 		resources = {
 			steel = 1
 		}
@@ -218,7 +217,7 @@ armored_car_chassis = {
 		build_cost_ic = 1.6
 		maximum_speed = 8
 		reliability = 1.15
-		armor_value = 20
+		armor_value = 6
 		resources = {
 			steel = 2
 		}

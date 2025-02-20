@@ -77,7 +77,6 @@ equipments = {
 				allowed_module_categories = {
 					tank_special_module
 					tank_radio_module
-					tank_secondary_turret
 				}
 			}
 
@@ -86,7 +85,6 @@ equipments = {
 				allowed_module_categories = {
 					tank_special_module
 					tank_radio_module
-					tank_secondary_turret
 				}
 			}
 
@@ -95,7 +93,6 @@ equipments = {
 				allowed_module_categories = {
 					tank_special_module
 					tank_radio_module
-					tank_secondary_turret
 				}
 			}
 
@@ -104,31 +101,8 @@ equipments = {
 				allowed_module_categories = {
 					tank_special_module
 					tank_radio_module
-					tank_secondary_turret
 				}
 			}
-
-			special_type_slot_9 = {
-				required = no
-				allowed_module_categories = {
-					tank_bashna_module
-				}
-			}
-
-			special_type_slot_10 = {
-				required = no
-				allowed_module_categories = {
-					tank_gun_module
-				}
-			}
-
-			special_type_slot_11 = {
-				required = no
-				allowed_module_categories = {
-					tank_nodoor_module
-				}
-			}
-			
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -140,7 +114,7 @@ equipments = {
 		}
 		module_count_limit = {
 			category = tank_secondary_turret
-			count < 2
+			count < 1
 		}
 		module_count_limit = {
 			module = amphibious_drive
@@ -178,6 +152,22 @@ equipments = {
 		module_count_limit = {
 			module = stabilizer
 			count < 2
+		}
+		module_count_limit = {
+			module = additional_machine_guns
+			count < 2
+		}
+		module_count_limit = {
+			module = extra_ammo_storage
+			count < 2
+		}
+		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 1
+		}
+		module_count_limit = {
+			module = secondary_turret_hmg
+			count < 1
 		}
 		default_modules = {
 			main_armament_slot = empty
@@ -411,12 +401,13 @@ equipments = {
 		}
 		module_count_limit = {
 			category = tank_secondary_turret
-			count < 3 #two secondary turrets only
+			count < 1
 		}
 		module_count_limit = {
 			module = amphibious_drive
 			count < 2
 		}
+
 		module_count_limit = {
 			module = wet_ammo_storage
 			count < 2
@@ -448,6 +439,22 @@ equipments = {
 		module_count_limit = {
 			module = stabilizer
 			count < 2
+		}
+		module_count_limit = {
+			module = additional_machine_guns
+			count < 2
+		}
+		module_count_limit = {
+			module = extra_ammo_storage
+			count < 2
+		}
+		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 1
+		}
+		module_count_limit = {
+			module = secondary_turret_hmg
+			count < 1
 		}
 		default_modules = {
 			main_armament_slot = empty
@@ -584,16 +591,14 @@ equipments = {
 			turret_type_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
 					tank_heavy_turret_type
 				}
 			}
-			
+
 			main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
+					tank_heavy_main_armament
 					tank_flamethrower
 				}
 			}
@@ -685,11 +690,15 @@ equipments = {
 			category = tank_radio_module
 			count < 2
 		}
-
+		module_count_limit = {
+			category = tank_secondary_turret
+			count < 1
+		}
 		module_count_limit = {
 			module = amphibious_drive
 			count < 2
 		}
+
 		module_count_limit = {
 			module = wet_ammo_storage
 			count < 2
@@ -698,11 +707,6 @@ equipments = {
 		module_count_limit = {
 			module = squeezebore_adaptor
 			count < 2
-		}
-
-		module_count_limit = {
-			category = tank_secondary_turret
-			count < 3
 		}
 
 		module_count_limit = {
@@ -725,6 +729,22 @@ equipments = {
 		}
 		module_count_limit = {
 			module = stabilizer
+			count < 2
+		}
+		module_count_limit = {
+			module = additional_machine_guns
+			count < 2
+		}
+		module_count_limit = {
+			module = extra_ammo_storage
+			count < 2
+		}
+		module_count_limit = {
+			module = secondary_turret_small_cannon
+			count < 2
+		}
+		module_count_limit = {
+			module = secondary_turret_hmg
 			count < 2
 		}
 		default_modules = {
