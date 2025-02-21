@@ -209,20 +209,12 @@ pacific_war_USA_side_bar = { # Свдигает баланс сил в стор�
 }
 
 pacific_war_JAP_side = { # Улучшает динамический модификатор у Японии и ухудшает у США
-	#JAP = {
-	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_factory = 0.025 }
-	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_dockyard = 0.025 }
-	#}
 	USA = {
 		add_to_variable = { USA.pacific_dm_local_resources_factor = -0.05 }
 		add_to_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = 0.05 }
 	}
 }
 pacific_war_USA_side = { # Улучшает динамический модификатор у США и ухудшает у Японии
-	#JAP = {
-	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_factory = -0.025 }
-	#    add_to_variable = { JAP.pacific_dm_industrial_capacity_dockyard = -0.025 }
-	#}
 	USA = {
 		add_to_variable = { USA.pacific_dm_local_resources_factor = 0.05 }
 		add_to_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = -0.05 }

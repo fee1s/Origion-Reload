@@ -83,18 +83,3 @@ USA_annex = {
 		original_tag = USA
 	}
 }
-Pacific_dec_cat = {
-	
-	icon = military_operation
-	picture = generic_army_support
-	
-	priority = 1000
-	
-	allowed = {
-		always = yes
-	}
-	visible = {
-	    has_country_flag = asia_map_open_flag
-		ORIGION_is_in_faction_with_allies = yes
-	}
-}

@@ -27,18 +27,18 @@ JAP_operation = {
 					set_variable = { USA.pacific_dm_local_resources_factor = 0 }
 					set_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = 0 }
 				}
+				
 				JAP = {
 				    set_country_flag = asia_map_open_flag
 		    		add_dynamic_modifier = { modifier = pacific_warfare_dm }
-					set_variable = { JAP.pacific_dm_industrial_capacity_factory = 0}
-					set_variable = { JAP.pacific_dm_industrial_capacity_dockyard = 0}
+					
 					set_variable = { USA_side_progress = 50 }
 		    		set_variable = { JAP_side_progress = 50 }
+					
 					set_variable = { ALLY_pacific_controlled_regions = 11 }
 			        set_variable = { JAP_pacific_controlled_regions = 11 }
 				}
-			    AST = { transfer_state = 669 } # Западная Новая Гвинея
-				JAP = { transfer_state = 638 } # Гуам
+				
 				### СОЮЗНИКИ ###
 				set_global_flag = birma_conquered_ALLY
 				set_global_flag = raj_conquered_ALLY
@@ -51,6 +51,7 @@ JAP_operation = {
 				set_global_flag = solomon_conquered_ALLY
 				set_global_flag = sumatra_conquered_ALLY
 				set_global_flag = jawa_conquered_ALLY
+				
 				### ЯПОНИЯ ###
 				set_global_flag = taiwan_conquered_JAP
 				set_global_flag = okinawa_conquered_JAP
@@ -78,6 +79,12 @@ JAP_operation = {
 		remove_effect = {
 		    news_event = { 
 		        id = origion.15
+			}
+			
+			hidden_effect = {
+				ENG = { transfer_state = 334 transfer_state = 986 }
+				AST = { transfer_state = 669 }
+				USA = { annex_country = { target = INS } }
 			}
 		}
 	}

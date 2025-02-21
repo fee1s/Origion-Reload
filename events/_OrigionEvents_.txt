@@ -1681,14 +1681,11 @@ country_event = { # Подозрительная активность в Пас�
 	immediate = {
 	    hidden_effect = {
 		    set_country_flag = asia_map_open_flag
-			activate_mission = Pacific_start_mission
 		}
 	}
 	
 	option = {
 		name = origion.17.a
-		custom_effect_tooltip = pacific_start_event_tt
-		activate_mission_tooltip = Pacific_start_mission
 	}
 }
 
@@ -1707,6 +1704,8 @@ news_event = { # Технологии 1938 года доступны
 	option = {
 		name = origion.18.a
 	}
+	
+	mean_time_to_happen = { days = 1 }
 }
 
 news_event = { # Технологии 1941 года доступны
@@ -1724,6 +1723,8 @@ news_event = { # Технологии 1941 года доступны
 	option = {
 		name = origion.19.a
 	}
+
+	mean_time_to_happen = { days = 1 }
 }
 
 news_event = { # Падение Окинавы
