@@ -20,7 +20,12 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спе
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0; -- Модификатор треньки (меньше - меньше опыта)
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 -- Бафф треньки (По умолчанию - 0.0015)
-NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0 -- Лок на прочачку генов
+
+NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.0 -- Лок на прочачку генов
+NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0.0
+NDefines.NMilitary.XP_GAIN_PER_OVERRUN_UNIT = 0.00
+NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.00
+
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
@@ -57,6 +62,9 @@ NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самол�
 
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.055 -- бафф касых по дамагу
 NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.045 -- бафф касых по дамагу по организации
+
+NDefines.NAir.AIR_WING_MAX_STATS_ATTACK = 9999 -- ванильный лок на максимальное кол-во статов в бою
+NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на максимальное кол-во статов в бою
 
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5 -- Кол-во касов от ШФ
 
