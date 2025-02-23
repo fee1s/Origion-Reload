@@ -2006,16 +2006,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		date > 1936.8.15
-		NOT = { has_global_flag = olympics_1936 }
-		NOT = { has_global_flag = civil_war_olympics }
-		country_exists = GER
-		country_exists = USA
-		GER = { has_war = no }
-		GER = { has_civil_war = no }
-		FRA = { has_war = no }
-		ENG = { has_war = no }
-		USA = { has_war = no }
+		always = no
 	}
 	
 	mean_time_to_happen = {

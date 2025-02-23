@@ -2781,7 +2781,7 @@ technologies = {
 			hard_attack = 0.05
 		}
 
-		enable_tactic = tactic_relentless_assault
+		enable_tactic = tactic_tactical_withdrawal
 		
 		path = {
 			leads_to_tech = deep_operations
@@ -2853,7 +2853,7 @@ technologies = {
 		
 		xp_research_type = army
 		xp_unlock_cost = 70
-		enable_tactic = tactic_blitz
+		enable_tactic = tactic_relentless_assault
 		
 		
 		path = {
@@ -2968,7 +2968,7 @@ technologies = {
 		
 		allow = { has_completed_focus = SOV_lessons_of_war } 
 		
-		enable_tactic = tactic_tactical_withdrawal
+		enable_tactic = tactic_blitz
 		
 		path = {
 			leads_to_tech = breakthrough_priority
@@ -3421,18 +3421,6 @@ technologies = {
 		xp_unlock_cost = 70
 		category_army = {
 			default_morale = 0.15
-		}
-		motorized = {
-			max_organisation = 3
-			max_strength = 0.45
-		}
-		mechanized = {
-			max_organisation = 3
-			max_strength = 0.45
-		}
-		amphibious_mechanized = {
-			max_organisation = 3
-			max_strength = 0.45
 		}
 		
 		enable_tactic = tactic_overwhelming_fire

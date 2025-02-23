@@ -8,7 +8,7 @@ NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before 
 
 --Army
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
@@ -20,6 +20,11 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спе
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0; -- Модификатор треньки (меньше - меньше опыта)
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 -- Бафф треньки (По умолчанию - 0.0015)
+
+NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.00015; -- Опыт дивизии, получаемый за один час боев
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.5, 0.7 } -- Ванильное значение - 0.1, 0.3, 0.75, 0.9
+
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.0 -- Удобный дефайн, не нужно ебаться с изменением шаблонов для конвертов
 
 NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.0 -- Лок на прочачку генов
 NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0.0
@@ -97,6 +102,7 @@ NDefines.NAir.AIR_WING_XP_RECON_MISSION_COMPLETED_GAIN = 0
 NDefines.NAir.AIR_WING_XP_LOSS_WHEN_KILLED = 0
 
 -- Асы удалены
+
 NDefines.NAir.ACE_DEATH_CHANCE_BASE = 0
 NDefines.NAir.ACE_DEATH_BY_OTHER_ACE_CHANCE = 0
 NDefines.NAir.ACE_DEATH_CHANCE_PLANES_MULT = 0
@@ -125,9 +131,12 @@ NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 105.0 -- Скорость раз�
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0.75;
 
-NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.55
-NDefines.NAir.FUEL_COST_MULT = 0.3
-NDefines.NNavy.FUEL_COST_MULT = 0.15
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 2;
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 1;
+
+NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.65 -- 0.5
+NDefines.NAir.FUEL_COST_MULT = 0.175 -- 0.35
+NDefines.NNavy.FUEL_COST_MULT = 0.05 -- 0.1
 
 -- Флотские дефайны
 
