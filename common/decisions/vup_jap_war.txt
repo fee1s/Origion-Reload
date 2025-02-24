@@ -722,6 +722,9 @@ JAP_economic_stagnation = {
 			activate_mission = JAP_stagnation_economic_1_des
 			add_ideas = JAP_stagnation_economic_0
 		}
+		complete_effect = {
+			set_country_flag = JAP_stagnation_cancel
+		}
 	}
 	JAP_stagnation_economic_1_des = {
 		name = JAP_stagnation_economic_0_name
@@ -744,6 +747,9 @@ JAP_economic_stagnation = {
 				remove_idea = JAP_stagnation_economic_0
 				add_idea = JAP_stagnation_economic_1
 			}
+		}
+		complete_effect = {
+			set_country_flag = JAP_stagnation_cancel
 		}
 	}
 	JAP_stagnation_economic_2_des = {
@@ -768,6 +774,9 @@ JAP_economic_stagnation = {
 				add_idea = JAP_stagnation_economic_2
 			}
 		}	
+		complete_effect = {
+			set_country_flag = JAP_stagnation_cancel
+		}
 	}
 	JAP_stagnation_economic_3_des = {
 		name = JAP_stagnation_economic_0_name
@@ -790,6 +799,9 @@ JAP_economic_stagnation = {
 				remove_idea = JAP_stagnation_economic_2
 				add_idea = JAP_stagnation_economic_3
 			}
+		}
+		complete_effect = {
+			set_country_flag = JAP_stagnation_cancel
 		}
 	}
 	JAP_stagnation_economic_4_des = {
@@ -814,6 +826,9 @@ JAP_economic_stagnation = {
 				add_idea = JAP_stagnation_economic_4
 			}
 		}
+		complete_effect = {
+			set_country_flag = JAP_stagnation_cancel
+		}
 	}
 	JAP_stagnation_economic_5_des = {
 		name = JAP_stagnation_economic_0_name
@@ -835,6 +850,9 @@ JAP_economic_stagnation = {
 				remove_idea = JAP_stagnation_economic_4
 				add_idea = JAP_stagnation_economic_5
 			}
+		}
+		complete_effect = {
+			set_country_flag = JAP_stagnation_cancel
 		}
 	}
 }
