@@ -2244,10 +2244,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		10 = { is_controlled_by = GER }
-		10 = { is_owned_by = POL }
-		GER = { has_war_with = POL }
-		NOT = { has_global_flag = fall_of_warsaw_ger }
+		always = no
 	}
 	
 	immediate = {
@@ -3926,7 +3923,6 @@ news_event = {
 	is_triggered_only = yes
 	trigger = {
 		NOT = { has_global_flag = liberation_of_warsaw }
-		has_global_flag = fall_of_warsaw_ger
 	}
 	
 	immediate = {

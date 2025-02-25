@@ -47,6 +47,8 @@ NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
+NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 10 -- Шанс нанести урон укреплению
+
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель скорости дивизий, ванила это 0.05
 
 NDefines.NMilitary.ACCLIMATIZATION_IN_COMBAT_SPEED_FACTOR = 1.5 -- Множитель получения акклиматизации от боев
@@ -198,6 +200,11 @@ NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2 -- кол-во �
 
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- Стоимость назначения гордости
 NDefines.NNavy.PRIDE_OF_THE_FLEET_LOST_TEMP_MODIFIER_DURATION = 0			-- Длительность дебаффа от гордости
+
+NDefines.NNavy.CARRIER_ONLY_COMBAT_ACTIVATE_TIME = 0
+NDefines.NNavy.CAPITAL_ONLY_COMBAT_ACTIVATE_TIME = 0
+
+NDefines.NNavy.ALL_SHIPS_ACTIVATE_TIME = 0 
 
 NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.5
 

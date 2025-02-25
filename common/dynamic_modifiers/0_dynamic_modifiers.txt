@@ -1390,3 +1390,14 @@ pacific_warfare_dm = {
 	local_resources_factor = pacific_dm_local_resources_factor
 	production_lack_of_resource_penalty_factor = pacific_dm_production_lack_of_resource_penalty_factor
 }
+
+ger_walled_city = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_defense
+	
+	max_dig_in_factor = 0.25
+	dig_in_speed_factor = 0.5
+	pocket_penalty = -0.25
+	no_supply_grace = 720
+}

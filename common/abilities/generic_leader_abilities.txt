@@ -1,8 +1,4 @@
 ability = {
-	
-		
-	
-	
 	staff_office_plan = {
 		name = ABILITY_STAFF_OFFICE_PLAN
 		desc = ABILITY_STAFF_OFFICE_PLAN_DESC
@@ -63,23 +59,6 @@ ability = {
 		cost = 0
 		duration = 240
 		cooldown = 720
-		
-		ai_will_do = {
-			factor = -1
-			modifier = {
-				FROM = {
-					command_power > 1.5
-				}
-				
-				set_temp_variable = { temp = num_units_offensive_combats }
-				check_variable = { temp > 6 }
-				set_temp_variable = { temp2 = num_units_offensive_combats_against@fort }
-				divide_temp_variable = { temp2 = temp }
-				check_variable = { temp2 > 0.5 }
-				
-				add = 2
-			}
-		}
 	}
 	
 	glider_planes = {
