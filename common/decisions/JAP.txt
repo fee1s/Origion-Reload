@@ -184,6 +184,7 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			add_ideas = JAP_prioritize_army_aircraft_construction
 			set_country_flag = JAP_prioritize_army_aircraft_construction
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_prioritize_naval_aircraft_construction = {
@@ -221,6 +222,7 @@ JAP_interservice_rivalry = {
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			add_ideas = JAP_prioritize_naval_aircraft_construction
 			set_country_flag = JAP_prioritize_naval_aircraft_construction
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_everybody_serves = {
@@ -260,6 +262,7 @@ JAP_interservice_rivalry = {
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_everybody_serves
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_draft_exemptions = {
@@ -300,6 +303,7 @@ JAP_interservice_rivalry = {
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_draft_exemptions
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_raiding_regiments = {
@@ -339,6 +343,7 @@ JAP_interservice_rivalry = {
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_raiding_regiments
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_special_air_landing_force = {
@@ -379,6 +384,7 @@ JAP_interservice_rivalry = {
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
 			set_country_flag = JAP_special_air_landing_force
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_favor_army = {
@@ -391,7 +397,6 @@ JAP_interservice_rivalry = {
 			}
 		}
 		cost = 30
-		fire_only_once = yes
 		ai_will_do = {
 			factor = 1
 		}
@@ -402,6 +407,7 @@ JAP_interservice_rivalry = {
             	value = -0.4
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_favor_navy = {
@@ -414,7 +420,6 @@ JAP_interservice_rivalry = {
 			}
 		}
 		cost = 30
-		fire_only_once = yes
 		ai_will_do = {
 			factor = 1
 		}
@@ -425,6 +430,7 @@ JAP_interservice_rivalry = {
             	value = 0.4
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
+			activate_mission = JAP_bop_timeout
 		}
 	}
 }
