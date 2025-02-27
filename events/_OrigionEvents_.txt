@@ -1820,3 +1820,22 @@ news_event = { # Падение Иводзимы
 		}
 	}
 }
+
+news_event = { # факел
+	id = origion.22
+	title = origion.22.t
+	desc = origion.22.d
+	picture = GFX_news_event_torch
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.22.a
+	}
+	
+	# immediate = { hidden_effect = { sound_effect = psi_blau_speech } }
+}

@@ -16,6 +16,8 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.5
 				production_speed_arms_factory_factor = -0.75
 				production_speed_dockyard_factor = -0.75
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
 				join_faction_tension = 0.20
 				lend_lease_tension = 1
 				send_volunteers_tension = 1
@@ -41,6 +43,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.35
 				production_speed_arms_factory_factor = -0.9
 				production_speed_dockyard_factor = -0.9
+				conversion_cost_civ_to_mil_factor = 0.9
+				conversion_cost_mil_to_civ_factor = 0.9
 			}
 			allowed_to_remove = {
 				always = no
@@ -63,6 +67,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.45
 				production_speed_arms_factory_factor = -0.8
 				production_speed_dockyard_factor = -0.8
+				conversion_cost_civ_to_mil_factor = 0.8
+				conversion_cost_mil_to_civ_factor = 0.8
 			}
 			
 			allowed_to_remove = {
@@ -86,6 +92,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = -0.35
 				production_speed_dockyard_factor = -0.15
+				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
 			}
 			
 			allowed_to_remove = {
@@ -104,7 +112,7 @@ ideas = {
 				consumer_goods_expected_value = 0.30
 				production_speed_arms_factory_factor = -0.15
 				production_speed_dockyard_factor = 0.25
-				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.15
 			}
 			
 			visible = {
@@ -130,7 +138,7 @@ ideas = {
 				production_speed_arms_factory_factor = -0.15
 				production_speed_dockyard_factor = 0.25
 				industrial_capacity_dockyard = 0.15
-				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.15
 			}
 			
 			allowed_to_remove = {
@@ -154,7 +162,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.15
 				production_speed_dockyard_factor = 0.35
 				industrial_capacity_dockyard = 0.15
-				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_civ_to_mil_factor = -0.15
 			}
 			
 			allowed_to_remove = {
@@ -179,6 +187,8 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
 				production_speed_dockyard_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
 			}
@@ -232,6 +242,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.25
 				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor= -0.1
 				fuel_gain_factor = -0.1
 			}
 
@@ -284,6 +295,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.2
 				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
 			}
 
 			cancel_if_invalid = no
@@ -356,7 +368,7 @@ ideas = {
 				army_attack_factor = 0.08
                 consumer_goods_expected_value = 0.10
                 production_speed_arms_factory_factor = 0.3
-                conversion_cost_civ_to_mil_factor = -0.5
+                conversion_cost_civ_to_mil_factor = -0.3
                 industrial_capacity_factory = 0.10
 				production_factory_efficiency_gain_factor = 0.1
             }
@@ -386,7 +398,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.10
 				production_speed_arms_factory_factor = 0.3
-				conversion_cost_civ_to_mil_factor= -0.5
+				conversion_cost_civ_to_mil_factor= -0.3
 				
 				army_core_defence_factor = 0.15	
 				stability_weekly = -0.003
@@ -424,7 +436,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.10
 				production_speed_arms_factory_factor = 0.3
-				conversion_cost_civ_to_mil_factor= -0.5
+				conversion_cost_civ_to_mil_factor= -0.3
 				
 				army_defence_factor = 0.05
 				army_attack_factor = 0.05	
@@ -453,6 +465,7 @@ ideas = {
             modifier = {
                 consumer_goods_expected_value = 0.10
                 production_speed_arms_factory_factor = 0.3
+                conversion_cost_civ_to_mil_factor = -0.3
                 industrial_capacity_factory = 0.10
                 industrial_capacity_dockyard = 0.10
                 production_factory_max_efficiency_factor = 0.10
@@ -483,6 +496,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.10
 				production_speed_arms_factory_factor = 0.20
 				production_speed_dockyard_factor = 0.40
+				conversion_cost_civ_to_mil_factor = -0.20
 				industrial_capacity_dockyard = 0.15
 				production_factory_max_efficiency_factor = 0.10
             }
@@ -510,7 +524,7 @@ ideas = {
             modifier = {
                 consumer_goods_expected_value = 0.10
                 production_speed_arms_factory_factor = 0.4
-                conversion_cost_civ_to_mil_factor = -0.8
+                conversion_cost_civ_to_mil_factor = -0.4
                 production_factory_max_efficiency_factor = 0.10
             }
 			

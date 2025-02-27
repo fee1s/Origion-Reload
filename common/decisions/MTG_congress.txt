@@ -490,7 +490,7 @@ USA_congress = {
 			USA_calc_stars = yes
 		}
 	}
-    USA_operation_torch = {
+    USA_operation_torch = { # ОПЕРАЦИЯ ФАКЕЛ
 		available = { has_completed_focus = USA_oper_torch }
 		icon = GFX_decision_eng_puppet_usa
 		
@@ -509,6 +509,8 @@ USA_congress = {
 			
 			hidden_effect = { 
 				GER = { annex_country = { target = VIC transfer_troops = no } }
+				
+				news_event = { id = origion.22 days = 2 }
 				
 				461 = {
 					add_building_construction = {
