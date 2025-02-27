@@ -114,21 +114,6 @@ characters={
 				large=GFX_portrait_JAP_shunroku_hata
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = shunroku_hata
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				army_concealment_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 		
 		field_marshal={
 			traits={ JAP_samurai_lineage offensive_doctrine }
@@ -185,6 +170,21 @@ characters={
 			army={
 				large=GFX_portrait_JAP_shizuichi_tanaka
 				small=GFX_portrait_JAP_shizuichi_tanaka_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = shizuichi_tanaka
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 8.000
 			}
 		}
 		corps_commander={
@@ -249,6 +249,22 @@ characters={
 				small=GFX_portrait_JAP_toshizo_nishio_small
 			}
 		}
+		
+		advisor={
+			slot = high_command
+			idea_token = toshizo_nishio
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
 		corps_commander={
 			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat Brilliant_Strategist naval_invader }
 			skill=6
@@ -285,6 +301,21 @@ characters={
 			army={
 				large=GFX_portrait_JAP_naruhiko_higashikuni
 				small=GFX_portrait_JAP_naruhiko_higashikuni_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = naruhiko_higashikuni
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		corps_commander={
@@ -608,21 +639,6 @@ characters={
 				large=GFX_portrait_JAP_hitoshi_imamura
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = hitoshi_imamura
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 3.000
-			}
-		}
 		
 		corps_commander={
 			traits={ commando infantry_officer infantry_leader Trickster naval_invader jungle_rat ranger }
@@ -855,20 +871,6 @@ characters={
 				small="GFX_idea_korechika_anami"
 			}
 		}
-		advisor={
-			slot = air_chief
-			idea_token = korechika_anami
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				air_chief_ground_support_2
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 
@@ -911,21 +913,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_tateo_kato"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = tateo_kato
-			ledger = air
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				air_air_combat_training_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 0.800
 			}
 		}
 	}
