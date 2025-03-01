@@ -1839,3 +1839,27 @@ news_event = { # факел
 	
 	# immediate = { hidden_effect = { sound_effect = psi_blau_speech } }
 }
+
+news_event = { # заморозки на восточном фронте
+	id = origion.23
+	title = origion.23.t
+	desc = origion.23.d
+	picture = GFX_news_event_freeze
+	
+	major = yes
+	
+	trigger = {
+		date > 1941.12.1
+		NOT = { has_global_flag = freeze_on_eastern_front }
+	}
+	
+	immediate = {
+		set_global_flag = freeze_on_eastern_front
+	}
+	
+	option = {
+		name = origion.23.a
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
