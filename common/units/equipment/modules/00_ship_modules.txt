@@ -2622,8 +2622,7 @@ ship_heavy_battery_3 = {
 		dismantle_cost_ic = 2500
 		
 		add_stats = {
-			armor_value = 13
-			naval_torpedo_enemy_critical_chance_factor = -0.05
+			armor_value = 10
 			naval_torpedo_damage_reduction_factor = 0.05
 		}
 	}
@@ -2635,13 +2634,12 @@ ship_heavy_battery_3 = {
 		multiply_stats = {
 			build_cost_ic = 0.15
 			naval_speed = -0.075
-			max_strength = 0.1
+			max_strength = 0.075
 		}
 		dismantle_cost_ic = 3000
 		
 		add_stats = {
 			armor_value = 15
-			naval_torpedo_enemy_critical_chance_factor = -0.10
 			naval_torpedo_damage_reduction_factor = 0.10
 		}
 		build_cost_resources = {
@@ -2655,14 +2653,13 @@ ship_heavy_battery_3 = {
 		parent = ship_armor_cruiser_2
 		multiply_stats = {
 			build_cost_ic = 0.2
-			naval_speed = -0.09
-			max_strength = 0.13
+			naval_speed = -0.1
+			max_strength = 0.1
 		}
 		dismantle_cost_ic = 3500
 		
 		add_stats = {
-			armor_value = 19
-			naval_torpedo_enemy_critical_chance_factor = -0.15
+			armor_value = 20
 			naval_torpedo_damage_reduction_factor = 0.15
 		}
 		build_cost_resources = {
@@ -2677,15 +2674,16 @@ ship_heavy_battery_3 = {
 		multiply_stats = {
 			build_cost_ic = 0.25
 			naval_speed = -0.125
+			max_strength = 0.125
 		}
 		dismantle_cost_ic = 4000
 		
 		add_stats = {
 			armor_value = 25
+			naval_torpedo_damage_reduction_factor = 0.2
 		}
 		build_cost_resources = {
 			steel = 1
-			chromium = 1
 		}
 	}
 	ship_armor_carrier_deck = {

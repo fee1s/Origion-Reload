@@ -73,6 +73,30 @@ on_actions = {
 					if = { limit = { OR = { is_japan_main_state = yes } } transfer_state_to = JAP }  
 				}				
 			}
+			if = { 
+				limit = {
+					OR = {
+						italian_coastline_above_naples = yes
+					}
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 126 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 126
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { italian_coastline_above_naples = yes } } transfer_state_to = ITA }  
+				}				
+			}
 		}
 	}
     on_startup = {

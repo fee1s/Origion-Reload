@@ -1371,14 +1371,19 @@ JAP_emperor_army_dm = {
 
 sea_invasion_prohibited_dm = {
 	enable = { always = yes }
-	icon = GFX_modifiers_demilitarize_zone
+	icon = GFX_modifiers_generic_defense
 	
     army_attack_factor = -3
 }
 
-atlantikwall_dm = {
+inappropriate_invasion_zone = {
 	enable = { always = yes }
 	icon = GFX_modifiers_demilitarize_zone
+}
+
+atlantikwall_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
 	
     army_attack_factor = GER.atlantikwall_dm_army_attack_factor
 }

@@ -2735,6 +2735,7 @@ news_event = {
 		set_global_flag = fall_of_gibraltar_ger
 		every_state = {
 			limit = {
+				is_core_of = ENG
 				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = GER }
 				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = JAP }
 				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ITA }

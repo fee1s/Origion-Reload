@@ -193,6 +193,26 @@ news_event = { # ось сдает африку до мая 1941
 		AST = {
 			complete_national_focus = AST_win_in_africa
 		}
+		every_state = {
+			limit = {
+				is_controlled_by = ITA
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = USA }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ENG }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = CAN }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = RAJ }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = AST }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = SAF }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = FRA }
+			}
+			
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = USA }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ENG }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = CAN }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = RAJ }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = AST }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = SAF }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = FRA }
+		}
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -341,6 +361,27 @@ news_event = { # ось сдает африку после мая 1941
 		}
 		AST = {
 			complete_national_focus = AST_win_in_africa
+		}
+		
+		every_state = {
+			limit = {
+				is_controlled_by = ITA
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = USA }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ENG }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = CAN }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = RAJ }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = AST }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = SAF }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = FRA }
+			}
+			
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = USA }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ENG }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = CAN }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = RAJ }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = AST }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = SAF }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = FRA }
 		}
 	}
 	
