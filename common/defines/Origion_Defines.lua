@@ -36,11 +36,11 @@ NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
 
-NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.225 -- Маленькая река
-NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.35 -- Большая река
+NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.175 -- Маленькая река
+NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая река
 
-NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.225
-NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.375
+NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.125 -- Скорость пересечения маленькой реки
+NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.2 -- Скорость пересечения большой реки
 
 NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение снаряги в дивках, объем пополнения
 
@@ -48,7 +48,7 @@ NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.25 -- Дебафф от красного воздуха (уменьшено)
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.15 -- Дебафф на скорость от красного воздуха (уменьшено)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.125 -- Дебафф на скорость от красного воздуха (уменьшено)
 
 NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 10 -- Шанс нанести урон укреплению
 

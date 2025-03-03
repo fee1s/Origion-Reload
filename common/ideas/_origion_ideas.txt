@@ -444,40 +444,33 @@ ideas = {
 				consumer_goods_expected_value = -0.03
 			}
 		}
-			
-		NO_asia_eng = {	
+		
+		eng_no_asia = {	
 			allowed = {
 				always = no
 			}
 			picture = ARG_british_influences
-			allowed_civil_war = {
-				
-			}		
+	
 			removal_cost = -1
 			modifier = {
-				conscription = 0.05
+				conscription = 0.1
 				surrender_limit = 1
 			}
 		}
 	
-		NO_asia_dominion = {	
+		minor_no_asia = {	
 			allowed = {
 				always = no
 			}
 			picture = ARG_british_influences
-
-			allowed_civil_war = {
-			}		
+			
 			removal_cost = -1
 			modifier = {
-				industrial_capacity_factory = 0.08
-				production_speed_buildings_factor = 0.15
+				conscription = 0.125
 				global_building_slots_factor = 0.25
-				conscription = 0.05
-				production_factory_max_efficiency_factor = 0.05
 			}
 		}
-				
+		
 		Steiner_counterattack = {
 		    picture = SWE_neither_death_nor_dishonor
 			allowed = {
@@ -531,7 +524,9 @@ ideas = {
 				defense_bonus_against = 0.10
 			}
 			modifier = {
-				army_speed_factor = 0.05
+				army_speed_factor = 0.075
+				supply_consumption_factor = -0.075
+				planning_speed = 0.125
 			}
 		}
 

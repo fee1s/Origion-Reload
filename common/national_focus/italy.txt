@@ -141,12 +141,34 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_political_power = 75
-			550 = {
+			451 = {
 				add_building_construction = {
-					type = infrastructure
-					level = 3
+					type = air_base
+					level = 6
 					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = 1130
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4136
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9992
 				}
 			}
 		}
@@ -165,28 +187,27 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-            550 = {
-                add_resource = {
-                    type = oil
-                    amount = 30
-                }
-	            add_resource = {
-                    type = rubber
-                    amount = 20
-                }
-            }
-            838 = {
-                add_resource = {
-                    type = rubber
-                    amount = 10
-                }
-            }
-            837 = {
-                add_resource = {
-                    type = rubber
-                    amount = 10
-                }
-            }
+			662 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			984 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			983 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -198,445 +219,29 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 2
-		available = {
-			OR = {
-				448 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				449 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				450 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				451 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			if = { #TRIPOLI
-				limit = {
-					448 = {
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				448 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = { #EL AGHELIA
-				limit = {
-					449 = {
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				449 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = { #BENGHASI
-				limit = {
-					450 = {
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				450 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = { #DERNA
-				limit = {
-					451 = {
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				451 = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_via_della_vittoria
-		icon = GFX_goal_reichsautobahn
-		prerequisite = { focus = ITA_litoranea_balbo }
-
-		x = 0
-		y = 1
-		relative_position_id = ITA_litoranea_balbo
-		cost = 3
-		available = {
-			451 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			452 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			451 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				if = {
-					limit = {
-						has_resistance = yes
-					}
-					add_compliance = 5
-				}
-			}
-			452 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				if = {
-					limit = {
-						has_resistance = yes
-					}
-					add_compliance = 5
-				}
-			}
-
-			# EXTRA STATES 
-
-			custom_effect_tooltip = ITA_via_della_vittoria_extra_states_tt
-
-			#LIBYA
-			if = {
-				limit = {
-					450 = { #BENGHASI
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				450 = { #BENGHASI
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					449 = { #EL AGHELIA
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				449 = { #EL AGHELIA
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					448 = { #TRIPOLI
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				448 = { #TRIPOLI
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-
-			#TUNISIA
-			if = {
-				limit = {
-					665 = { #GABES
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				665 = { #GABES
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					458 = { #TUNISIA
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				458 = { #TUNISIA
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			#ALGERIA
-			if = {
-				limit = {
-					460 = { #CONSTANTINE
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				460 = { #CONSTANTINE
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					459 = { #ALGIERS
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				459 = { #ALGIERS
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-
-			#MOROCCO
-			if = {
-				limit = {
-					461 = { #CASABLANCA
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				461 = { #CASABLANCA
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					290 = { #SPANISH AFRICA (Mediterranean coast of Morocco)
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				290 = { #SPANISH AFRICA (Mediterranean coast of Morocco)
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-
-			#EGYPT
-			if = {
-				limit = {
-					447 = { #ALEXANDRIA
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				447 = { #ALEXANDRIA
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					446 = { #CAIRO
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				446 = { #CAIRO
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-			if = {
-				limit = {
-					453 = { #SINAI
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				453 = { #SINAI
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							has_resistance = yes
-						}
-						add_compliance = 5
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_libyan_railway
-		icon = GFX_focus_generic_railroad
-		prerequisite = { focus = ITA_litoranea_balbo }
-		prerequisite = { focus = ITA_prospect_for_oil }
-		x = 1
-		y = 2
-		relative_position_id = ITA_litoranea_balbo
 		cost = 5
-		available = {
-			448 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			449 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			450 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			451 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			# Tripoli - Tobruk
-			build_railway = {
-				path = { 1149 4194 7209 9980 1118 1041 4047 10046 10117 12088 4057 1198 1127 4120 11954 10123 12094 4151 1204 7082 9992 1130 }
-			}
-
-			custom_effect_tooltip = ITA_libyan_railway_state_modifier_tt
-			every_state = {
-				limit = {
-					OR = {
-						#LIBYA
-						state = 448 #TRIPOLI
-						state = 449 #EL AGHELIA
-						state = 450 #BENGHASI
-						state = 451 #DERNA
-						#TUNISIA
-						state = 665 #GABES
-						state = 458 #TUNISIA
-						#ALGERIA
-						state = 460 #CONSTANTINE
-						state = 459 #ALGIERS
-						#EGYPT
-						state = 452 #MATROUH
-						state = 447 #ALEXANDRIA
-						state = 446 #CAIRO
-					}
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				add_dynamic_modifier = { modifier = ITA_libyan_railway_modifier days = 730 scope = ITA }
-			}
+            662 = {
+	            add_resource = {
+                    type = rubber
+                    amount = 6
+                }
+            }
+            984 = {
+                add_resource = {
+                    type = rubber
+                    amount = 10
+                }
+            }
+            983 = {
+                add_resource = {
+                    type = rubber
+                    amount = 8
+                }
+            }
 		}
 	}
 
@@ -648,73 +253,273 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_regional_development
-		cost = 3
+		cost = 5
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 22
-				state = 662
-			}
-			add_resource = {
-				type = oil
-				amount = 30
-				state = 661
-			}
-			add_resource = {
-				type = oil
-				amount = 25
-				state = 663
-			}	
+            662 = {
+	            add_resource = {
+                    type = oil
+                    amount = 12
+                }
+            }
+            984 = {
+                add_resource = {
+                    type = oil
+                    amount = 18
+                }
+            }
+            983 = {
+                add_resource = {
+                    type = oil
+                    amount = 14
+                }
+            }	
+		}
+	}
+	
+	focus = {
+		id = ITA_evacuation_oil_libya
+		icon = GFX_focus_generic_develop_libya
+		prerequisite = { focus = ITA_prospect_for_oil }
+		prerequisite = { focus = ITA_litoranea_balbo }
 
-			662 = {
-				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
-				set_state_flag = sirte_oil_developed
+		x = 0
+		y = 2
+		relative_position_id = ITA_regional_development
+		cost = 10
+		
+		available = { date > 1941.12.1 }
+		
+		bypass = { axis_lost_africa_trigger = yes }
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_evacuation_oil_libya_tt
+			
+			hidden_effect = {
+				if = { limit = { controls_state = 662 } 
+					662 = {
+						add_resource = {
+							type = oil
+							amount = -22
+						}	
+						add_resource = {
+							type = rubber
+							amount = -6
+						}
+					}
+					
+					47 = {
+						add_resource = {
+							type = oil
+							amount = 22
+						}
+						add_resource = {
+							type = rubber
+							amount = 6
+						}
+					}
+				}
+				
+				if = { limit = { controls_state = 984 }
+					984 = {
+						add_resource = {
+							type = oil
+							amount = -36
+						}
+						add_resource = {
+							type = rubber
+							amount = -10
+						}
+					}
+					
+					185 = {
+						add_resource = {
+							type = oil
+							amount = 36
+						}
+						add_resource = {
+							type = rubber
+							amount = 10
+						}
+					}
+				}
+				
+				if = { limit = { controls_state = 983 }				
+					983 = {
+						add_resource = {
+							type = oil
+							amount = -24
+						}
+						add_resource = {
+							type = rubber
+							amount = -8
+						}
+					}	
+					
+					44 = {
+						add_resource = {
+							type = oil
+							amount = 24
+						}
+						add_resource = {
+							type = rubber
+							amount = 8
+						}
+					}
+				}
 			}
 		}
 	}
-
+	
 	focus = {
-		id = ITA_libyan_refineries
-		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = ITA_prospect_for_oil }
+		id = ITA_trophies_north_african_company
+		
+		icon = GFX_focus_generic_the_suez
+		
+		prerequisite = { focus = ITA_evacuation_oil_libya }
 
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = ITA_prospect_for_oil
-		cost = 3
-
-		available = {
-			450 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-				NOT = {
-					has_state_flag = benghazi_oil_developed
-				}
-			}
-			has_tech = synth_oil_experiments
-		}
+		
+		relative_position_id = ITA_evacuation_oil_libya
+		cost = 5
+		
+		available = { has_idea = triumph_egypt_idea }
+		
+		bypass = { axis_lost_africa_trigger = yes }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 4
-				state = 450
-			}
-			450 = {
-				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
-				set_state_flag = benghazi_oil_developed
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 2
-					instant_build = yes
+			custom_effect_tooltip = ITA_trophies_north_african_company_tt
+			
+			hidden_effect = {
+				if = { limit = { controls_state = 447 } 
+					447 = {
+						add_resource = {
+							type = oil
+							amount = -21
+						}	
+						add_resource = {
+							type = steel
+							amount = -14
+						}
+						add_resource = {
+							type = tungsten
+							amount = -16
+						}
+					}
+					
+					186 = {
+						add_resource = {
+							type = oil
+							amount = 21
+						}	
+						add_resource = {
+							type = steel
+							amount = 14
+						}
+						add_resource = {
+							type = tungsten
+							amount = 16
+						}
+					}
 				}
-			}	
+				
+				if = { limit = { controls_state = 907 } 
+					907 = {
+						add_resource = {
+							type = oil
+							amount = -14
+						}	
+						add_resource = {
+							type = steel
+							amount = -7
+						}
+						add_resource = {
+							type = tungsten
+							amount = -8
+						}
+					}
+					
+					731 = {
+						add_resource = {
+							type = oil
+							amount = 14
+						}	
+						add_resource = {
+							type = steel
+							amount = 7
+						}
+						add_resource = {
+							type = tungsten
+							amount = 8
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ITA_baghdad_gold
 		
+		icon = GFX_focus_CONGO_gold_and_diamonds
+		
+		prerequisite = { focus = ITA_evacuation_oil_libya }
+
+		x = 1
+		y = 1
+		
+		relative_position_id = ITA_evacuation_oil_libya
+		cost = 5
+		
+		available = { has_idea = triumph_egypt_idea }
+		
+		bypass = { axis_lost_africa_trigger = yes }
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_baghdad_gold_tt
+			
+			hidden_effect = {
+				if = { limit = { controls_state = 291 } 
+					291 = {
+						add_resource = {
+							type = oil
+							amount = -16
+						}
+					}
+					
+					805 = {
+						add_resource = {
+							type = oil
+							amount = 16
+						}	
+					}
+				}
+				
+				if = { limit = { controls_state = 676 } 
+					676 = {
+						add_resource = {
+							type = oil
+							amount = -8
+						}
+					}
+					
+					805 = {
+						add_resource = {
+							type = oil
+							amount = 8
+						}	
+					}
+				}
+			}
 		}
 	}
 
@@ -798,9 +603,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ITA_industria_della_gomma_sintetica
-				bonus = 0.75
+				bonus = 1
 				uses = 2
-				category = cat_synth_oil
+				category = synth_resources
 			}
 			2 = {
 				add_extra_state_shared_building_slots = 1
@@ -1370,7 +1175,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -3135,70 +2940,6 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
-		Id = ITA_move_oil
-		icon = GFX_focus_generic_resource_extraction
-		prerequisite = { focus = ITA_prospect_for_oil }
-
-			available = {
-			date > 1942.01.01
-		}
-
-		relative_position_id = ITA_prospect_for_oil
-		x = 1
-		y = 2
-		cost = 5
-
-		completion_reward = {
-
-			661 = {
-				add_resource = {
-					type = oil
-					amount = -27
-				}
-			}
-
-			159 = {
-				add_resource = {
-					type = oil
-					amount = 27
-				}
-			}
-
-			661 = {
-				add_resource = {
-					type = oil
-					amount = -30
-				}
-			}
-
-			158 = {
-				add_resource = {
-					type = oil
-					amount = 30
-				}
-			}
-			
-			663 = {
-				add_resource = {
-					type = oil
-					amount = -34
-				}
-			}
-
-			2 = {
-				add_resource = {
-					type = oil
-					amount = 34
-				}
-			}
-
-		}
-	}
-
-
-	
 
 	focus = {
 		Id = ITA_use_prom

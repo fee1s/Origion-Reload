@@ -17,8 +17,11 @@ ENG_house_of_commons = {
 	ENG_annex_CAN = {
 		icon = GFX_decision_eng_ally_imperialist_coup
 		available = {
-		    date > 1938.1.1
-			CAN = { is_ai = yes exists = yes }
+			if = { limit = { USA = { exists = yes } } 
+				date > 1938.1.1
+				CAN = { is_ai = yes exists = yes }
+			}
+			else = { CAN = { is_ai = yes exists = yes } }
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -87,8 +90,11 @@ ENG_house_of_commons = {
 	ENG_annex_SAF = {
 		icon = GFX_decision_eng_ally_imperialist_coup
 		available = {
-		    date > 1938.1.1
-			SAF = { is_ai = yes exists = yes }
+			if = { limit = { USA = { exists = yes } } 
+				date > 1938.1.1
+				SAF = { is_ai = yes exists = yes }
+			}
+			else = { SAF = { is_ai = yes exists = yes } }
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -101,6 +107,12 @@ ENG_house_of_commons = {
 				}
 				ENG = {
 					add_state_core = PREV
+				}
+			}
+			hidden_effect = {
+				if = { limit = { USA = { exists = no } } 
+					add_research_slot = 1
+					army_experience = 500
 				}
 			}			
 		}
