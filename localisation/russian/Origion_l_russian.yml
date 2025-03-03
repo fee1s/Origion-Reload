@@ -122,11 +122,10 @@ asia_map_palau_scripted_tt: "Палау \n--------\n[asia_map_palau_scripted_loc
 asia_map_newzeland_scripted_tt: "Новая Зеландия \n--------\n[asia_map_newzeland_scripted_loc_tt]"
 asia_map_markus_scripted_tt: "Остров Маркуса \n--------\n[asia_map_markus_scripted_loc_tt]"
 
-progress_bar_USA_tt: "Соединённые Штаты Америки \n--------\n[progress_bar_USA_scripted_loc_tt]\n--------"
-progress_bar_USA_key_tt: "§Y$MODIFIER_LOCAL_RESOURCES_FACTOR$§!: [?USA.pacific_dm_local_resources_factor|%=Y0+] \n\n§Y$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$§!: [?USA.pacific_dm_production_lack_of_resource_penalty_factor|%=Y0-] \n--------\nТекущий модификатор §YАтлантического вала§!: [?GER.atlantikwall_dm_army_attack_factor|+%=]"
-progress_bar_JAP_tt: "Японская Империя"
-
-#progress_bar_USA_key_tt: "§Y$MODIFIER_LOCAL_RESOURCES_FACTOR$§!: [?USA.pacific_dm_local_resources_factor|%=Y0+] \n\n§Y$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$§!: [?USA.pacific_dm_production_lack_of_resource_penalty_factor|%=Y0-] \n--------\nТекущий модификатор §YАтлантического вала§!: [?GER.atlantikwall_dm_army_attack_factor|+%=]"
+progress_bar_USA_tt: "§BСоединённые Штаты Америки§! \n--------\n[progress_bar_USA_scripted_loc_tt]\n--------"
+progress_bar_USA_key_tt: "$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?USA.pacific_dm_local_resources_factor|%=Y0+] \n\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: [?USA.pacific_dm_production_lack_of_resource_penalty_factor|%=Y0-] \n--------\nТекущий модификатор §YАтлантического вала§!: [?GER.atlantikwall_dm_army_attack_factor|+%=]"
+progress_bar_JAP_tt: "§RЯпонская Империя§! \n--------\n[progress_bar_JAP_scripted_loc_tt]\n--------"
+progress_bar_JAP_key_tt: "Текущий показатель модификатора §Y$JAP_stagnation_dm$§!: \n\n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: [?JAP_stagnation_consumer_goods_expected_value|%=Y1] \n\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?JAP_stagnation_industrial_capacity_factory|%=Y0+] \n\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?JAP_stagnation_industrial_capacity_dockyard|%=Y0+]"
 
 ###
 
@@ -550,12 +549,12 @@ operation_ketsugo_dm:0 "Операция Кецуго"
 no_jap_asian_wal_dm:0 "Тихоокеанский вал"
 JAP_defend_supply:0 "§YЗащитить пути снабжения§!"
 JAP_support_equipment:0 "Развитие вспомогательного оборудования"
+JAP_pacific_warfare_focus:0 "Подготовка к войне в джунглях"
+JAP_za_imperatora:0 "§YПровозгласить§! §CКайскую Империю§!"
+JAP_za_imperatora_desc:0 "Ты нашел пасхалку :3"
 
 JAP_operation:0 "Японские операции в Азии"
 JAP_operation_desc:0 "С каждым днем Япония все ближе к своей судьбе. Мы вступаем в новую эру, где решимость и сила станут основой нашего процветания. Япония не только защитит свои интересы, но и построит славное будущее. Вера в Империю непобедима, и великие операции, которые мы готовим, — лишь начало. Наша победа неизбежна!"
-
-
-
 JAP_strike_on_the_southern_resource_area_decision:0 "§RТора! Тора! Тора!§!"
 JAP_strike_midyei:0 "§RМидуэйское сражение§!"
 JAP_wal_indonesia:0 "§YУкрепить Индонезию§!"
@@ -565,16 +564,12 @@ JAP_wal_phillipins:0 "§YУкрепить Филипинны§!"
 JAP_wal_ins_2:0 "§YУкрепить Океанию§!"
 JAP_strike_USSR:0 "§R«Кан-Току-Эн»§!"
 
-JAP_stagnation_economic_0:0 "§YСтагнирующая экономика§!"
-JAP_stagnation_economic_1:0 "§YНапряженная экономика§!"
-JAP_stagnation_economic_2:0 "§OУставшая экономика§!"
-JAP_stagnation_economic_3:0 "§OРазрушающаяся экономика§!"
-JAP_stagnation_economic_4:0 "§RЭкономика на грани краха§!"
-JAP_stagnation_economic_5:0 "§RЭкономический коллапс§!"
-
 JAP_economic_stagnation:0 "Экономическая стагнация"
+JAP_economic_stagnation_desc:0 "Экономическая стагнация активируется §Y1 мая 1941 г.§! \nКаждые §Y3 месяца§! модификатор §Y$JAP_stagnation_dm$§! будет изменяться на \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y+2.5%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-10.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-10.0%§!\n\n Если по достижению §Y21 апреля 1943 г.§! модификатор не будет снят, §Rто его эффекты останутся навсегда§!."
 JAP_stagnation_economic_0_name:0 "§YНарастание кризисных явлений в экономике§!"
-JAP_secure_china_eco_tt:0 "\§Y$JAP_zaibatsu_dm$§! изменится на \nОжидаемое количество заводов, перепрофилированных на гражданские нужды: §Y-5.0%§! \n\n"
+JAP_stagnation_dm: "Стагнирующая экономика"
+JAP_stagnation_start_tt: "Будет получен национальный дух §Y$JAP_stagnation_dm$§!, что даст \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y+2.5%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-10.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-10.0%§!\n\n"
+JAP_stagnation_effect_tt: "§Y$JAP_stagnation_dm$§! измениться на \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y+2.5%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-10.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-10.0%§!\n\n"
 
 JAP_surprise_attack:0 "Неожиданная атака"
 JAP_fanatism_army:0 "Японский фанатизм"
@@ -582,12 +577,9 @@ JAP_disciplined_army:0 "Дисциплинированная армия"
 JAP_army_expansion:0 "Модернизация армии"
 JAP_unified_fighter_development_2:0 "Модернизация авиапромышленности"
 JAP_zero_range:0 "Японская палубная авиация"
-
 JAP_tokyo_express:0 "«Токийский экспресс»"
-JAP_pacific_warfare_focus:0 "Подготовка к войне в джунглях"
 
-JAP_za_imperatora:0 "§YПровозгласить§! §CКайскую Империю§!"
-JAP_za_imperatora_desc:0 "Ты нашел пасхалку :3"
+JAP_secure_china_eco_tt:0 "\§Y$JAP_zaibatsu_dm$§! изменится на \nОжидаемое количество заводов, перепрофилированных на гражданские нужды: §Y-5.0%§! \n\n"
 
 ### Тултип для ВБ/Австралии
 
@@ -621,10 +613,9 @@ AST_counter_raiding_idea:0 "Контр-рейдерство"
 AST_operation_cartwheel_idea:0 "§CОперация "Колесница"§!"
 
 AST_remove_isolation_dec:0 "Выход из чрезвычайного положения"
-
 AST_operation_cartwheel_tt:0 "§YЯпония вторглась в Австралию§!"
 
-AST_operation_cartwheel_tt:0 "§YЯпония вторглась в Австралию§!"#модули
+#модули
 
 ship_anti_ship_5:0 "Тяжелые вспомогательные орудия"
 ship_anti_air_5:0 "ПВО V"

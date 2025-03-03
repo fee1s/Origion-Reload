@@ -1369,6 +1369,15 @@ JAP_emperor_army_dm = {
 	army_defence_factor = JAP_army_defence_factor
 }
 
+JAP_stagnation_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_ARG_political_corruption_modifier
+	
+	consumer_goods_expected_value = JAP_stagnation_consumer_goods_expected_value
+	industrial_capacity_factory = JAP_stagnation_industrial_capacity_factory
+	industrial_capacity_dockyard = JAP_stagnation_industrial_capacity_dockyard
+}
+
 sea_invasion_prohibited_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense

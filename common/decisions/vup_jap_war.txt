@@ -80,7 +80,6 @@ JAP_operation = {
 		    news_event = { 
 		        id = origion.15
 			}
-			
 			hidden_effect = {
 				ENG = { transfer_state = 334 transfer_state = 986 }
 				AST = { transfer_state = 669 }
@@ -704,34 +703,41 @@ JAP_economic_stagnation = {
 	JAP_stagnation_economic_0_des = {
 		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
-		days_mission_timeout = 120
-		is_good = no
+		days_mission_timeout = 90
+		is_good = yes
 		fire_only_once = yes
 		activation = {
-			has_war = yes
+			date > 1941.5.1
 		}
-		
 		available = {
-			OR = {
-				has_full_control_of_state = 439	
-				has_full_control_of_state = 674
+			hidden_trigger = {
+		        always = no
 			}
-		}
+	    }
 		
 		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_1_des
-			add_ideas = JAP_stagnation_economic_0
-		}
-		complete_effect = {
-			set_country_flag = JAP_stagnation_cancel
+			custom_effect_tooltip = JAP_stagnation_start_tt
+			hidden_effect = {
+			    add_dynamic_modifier = {
+			    	modifier = JAP_stagnation_dm
+			    }
+			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.025 }
+		        set_variable = { JAP_stagnation_industrial_capacity_factory = -0.1 }
+		        set_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.1 }
+			}
+			activate_mission = JAP_stagnation_economic_mission_des
+			set_country_flag = {
+				flag = JAP_stagnation_step
+				value = 1
+			}
 		}
 	}
-	JAP_stagnation_economic_1_des = {
+	JAP_stagnation_economic_mission_des = {
 		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
-		days_mission_timeout = 120
+		days_mission_timeout = 90
 		is_good = no
-		fire_only_once = yes
+		fire_only_once = no
 		activation = {
 			always = no
 		}
@@ -742,117 +748,28 @@ JAP_economic_stagnation = {
 			}
 		}
 		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_2_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_0
-				add_idea = JAP_stagnation_economic_1
+			custom_effect_tooltip = JAP_stagnation_effect_tt
+			JAP_stagnation_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = {
+						    flag = JAP_stagnation_step
+						    value = 7
+				    	}
+					}
+				}
+			    activate_mission = JAP_stagnation_economic_mission_des
+				modify_country_flag = {
+					flag = JAP_stagnation_step
+					value = 1
+				}
 			}
 		}
 		complete_effect = {
-			set_country_flag = JAP_stagnation_cancel
-		}
-	}
-	JAP_stagnation_economic_2_des = {
-		name = JAP_stagnation_economic_0_name
-		icon = GFX_decision_revolt
-		days_mission_timeout = 120
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		available = {
-			OR = {
-				has_full_control_of_state = 439	
-				has_full_control_of_state = 674
+			remove_dynamic_modifier = {
+				modifier = JAP_stagnation_dm
 			}
-		}
-		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_3_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_1
-				add_idea = JAP_stagnation_economic_2
-			}
-		}	
-		complete_effect = {
-			set_country_flag = JAP_stagnation_cancel
-		}
-	}
-	JAP_stagnation_economic_3_des = {
-		name = JAP_stagnation_economic_0_name
-		icon = GFX_decision_revolt
-		days_mission_timeout = 120
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		available = {
-			OR = {
-				has_full_control_of_state = 439	
-				has_full_control_of_state = 674
-			}
-		}
-		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_4_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_2
-				add_idea = JAP_stagnation_economic_3
-			}
-		}
-		complete_effect = {
-			set_country_flag = JAP_stagnation_cancel
-		}
-	}
-	JAP_stagnation_economic_4_des = {
-		name = JAP_stagnation_economic_0_name
-		icon = GFX_decision_revolt
-		days_mission_timeout = 120
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		available = {
-			OR = {
-				has_full_control_of_state = 439	
-				has_full_control_of_state = 674
-			}
-		}
-		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_5_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_3
-				add_idea = JAP_stagnation_economic_4
-			}
-		}
-		complete_effect = {
-			set_country_flag = JAP_stagnation_cancel
-		}
-	}
-	JAP_stagnation_economic_5_des = {
-		name = JAP_stagnation_economic_0_name
-		icon = GFX_decision_revolt
-		days_mission_timeout = 120
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		available = {
-			OR = {
-				has_full_control_of_state = 439	
-				has_full_control_of_state = 674
-			}
-		}
-		timeout_effect = {
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_4
-				add_idea = JAP_stagnation_economic_5
-			}
-		}
-		complete_effect = {
-			set_country_flag = JAP_stagnation_cancel
 		}
 	}
 }
@@ -860,9 +777,10 @@ JAP_annex = {
 	JAP_CHI_attack1 = {
 		icon = GFX_decision_generic_operation
 		available = {
-			date > 1945.1.1
-			has_completed_focus = JAP_intervene_in_china
-		}
+			hidden_trigger = {
+		        always = no
+			}
+	    }
 		activation = {
 			has_completed_focus = JAP_intervene_in_china
 		}
@@ -889,9 +807,10 @@ JAP_annex = {
 	JAP_CHI_attack2 = {
 		icon = GFX_decision_generic_operation
 		available = {
-			date > 1945.1.1
-			has_completed_focus = JAP_intervene_in_china
-		}
+			hidden_trigger = {
+		        always = no
+			}
+	    }
 		activation = {
 			has_completed_focus = JAP_intervene_in_china
 		}
