@@ -1809,22 +1809,6 @@ technologies = {
 		enable_equipment_modules = {
 			tank_half_track_suspension
 		}
-		
-		motorized = {
-			hardness = 1.0
-		}
-		mot_artillery_brigade = {
-			hardness = 1.0
-		}
-		mot_anti_tank_brigade = {
-			hardness = 1.0
-		}
-		mot_anti_air_brigade = {
-			hardness = 1.0
-		}
-		mot_rocket_artillery_brigade = {
-			hardness = 1.0
-		}
 
 		path = {
 			leads_to_tech = mechanised_infantry2
@@ -1945,7 +1929,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1942
-		allow = { date > 1940.1.1 }
+		allow = { date > 1941.1.1 }
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1942 }
@@ -2217,6 +2201,10 @@ technologies = {
 		enable_equipments = {
 			armored_car_chassis_0
 		}
+		enable_equipment_modules = {
+			tank_small_cannon
+			tank_auto_cannon
+		}
 		
 		allow_branch = { has_dlc = "La Resistance" }
 		path = {
@@ -2247,13 +2235,15 @@ technologies = {
 		enable_equipments = {
 			armored_car_chassis_1
 		}
+		enable_equipment_modules = {
+			tank_small_cannon_2
+			tank_auto_cannon_2
+		}
 		
 		path = {
 			leads_to_tech = armored_car3
 			research_cost_coeff = 1
 		}
-
-		allow = { date > 1938.1.1 }
 
 		research_cost = 2
 		start_year = 1940
@@ -2278,10 +2268,14 @@ technologies = {
 		enable_equipments = {
 			armored_car_chassis_2
 		}
+		enable_equipment_modules = {
+			tank_small_cannon_3
+			tank_auto_cannon_3
+		}
 
 		research_cost = 2
 		start_year = 1942
-		allow = { date > 1941.1.1 }
+		allow = { date > 1940.1.1 }
 		folder = {
 			name = infantry_folder
 			position = { x = 4 y = @1942 }

@@ -2517,12 +2517,8 @@ technologies = {
 	attritional_containment = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		infantry = {
-			combat_width = -0.4
-		}
 		land_reinforce_rate = 0.05
 		
-
 		path = {
 			leads_to_tech = infiltration_in_depth 
 			research_cost_coeff = 1
@@ -2628,7 +2624,6 @@ technologies = {
 		
 		land_reinforce_rate = 0.02
 		minimum_training_level = -0.1
-		weekly_casualties_war_support = 0.001
 		
 		enable_tactic = tactic_infantry_charge
 
@@ -2676,7 +2671,6 @@ technologies = {
 		out_of_supply_factor = -0.15
 		category_light_infantry = {
 			max_organisation = 5
-			defense = 0.1
 			dig_in_speed_factor = 0.15
 		}
 		
@@ -2722,12 +2716,15 @@ technologies = {
 		
 		motorized = {
 			max_organisation = 3
+			breakthrough = 0.05
 		}
 		mechanized = {
 			max_organisation = 3
+			breakthrough = 0.05
 		}
 		amphibious_mechanized = {
 			max_organisation = 3
+			breakthrough = 0.05
 		}
 
 		category_light_infantry = {
@@ -2784,7 +2781,7 @@ technologies = {
 			hard_attack = 0.05
 		}
 
-		enable_tactic = tactic_relentless_assault
+		enable_tactic = tactic_tactical_withdrawal
 		
 		path = {
 			leads_to_tech = deep_operations
@@ -2856,7 +2853,7 @@ technologies = {
 		
 		xp_research_type = army
 		xp_unlock_cost = 70
-		enable_tactic = tactic_blitz
+		enable_tactic = tactic_relentless_assault
 		
 		
 		path = {
@@ -2963,7 +2960,6 @@ technologies = {
 		infantry = {
 			soft_attack = 0.05
 			breakthrough = 0.1
-			default_morale = 0.05
 		}
 		category_all_armor = {
 			soft_attack = 0.05
@@ -2972,7 +2968,7 @@ technologies = {
 		
 		allow = { has_completed_focus = SOV_lessons_of_war } 
 		
-		enable_tactic = tactic_tactical_withdrawal
+		enable_tactic = tactic_blitz
 		
 		path = {
 			leads_to_tech = breakthrough_priority
@@ -3025,7 +3021,6 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 3
 			breakthrough = 0.10
-			defence = 0.05
 		}
 		
 		
@@ -3203,15 +3198,15 @@ technologies = {
 		attrition = -0.1 #take 10% less attrition losses
 		
 		motorized = {
-			max_organisation = 3
+			max_organisation = 10
 			max_strength = 0.25
 		}
 		mechanized = {
-			max_organisation = 3
+			max_organisation = 10
 			max_strength = 0.25
 		}
 		amphibious_mechanized = {
-			max_organisation = 3
+			max_organisation = 10
 			max_strength = 0.25
 		}
 
@@ -3288,16 +3283,6 @@ technologies = {
 			max_strength = 2
 		}
 		
-		motorized = {
-			max_organisation = 3
-		}
-		mechanized = {
-			max_organisation = 3
-		}
-		amphibious_mechanized = {
-			max_organisation = 3
-		}
-		
 		anti_tank = {
 			hard_attack = 0.5
 		}
@@ -3344,16 +3329,6 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 			max_strength = 2.5
-		}
-		
-		motorized = {
-			max_organisation = 3
-		}
-		mechanized = {
-			max_organisation = 3
-		}
-		amphibious_mechanized = {
-			max_organisation = 3
 		}
 		
 		category_all_armor = {
@@ -3447,18 +3422,6 @@ technologies = {
 		category_army = {
 			default_morale = 0.15
 		}
-		motorized = {
-			max_organisation = 3
-			max_strength = 0.45
-		}
-		mechanized = {
-			max_organisation = 3
-			max_strength = 0.45
-		}
-		amphibious_mechanized = {
-			max_organisation = 3
-			max_strength = 0.45
-		}
 		
 		enable_tactic = tactic_overwhelming_fire
 		
@@ -3501,5 +3464,4 @@ technologies = {
 			always = no
 		}
 	}
-	
 }

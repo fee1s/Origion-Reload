@@ -64,6 +64,11 @@ technologies = {
 			wet_ammo_storage
 			smoke_launchers
 			expanded_fuel_tank
+			tank_auto_cannon
+			tank_anti_air_cannon
+			tank_small_cannon
+			secondary_turret_small_cannon
+			tank_close_support_gun
 		}
 		enable_subunits = {
 			light_armor
@@ -247,6 +252,11 @@ technologies = {
 			light_tank_destroyer_chassis_2
 			light_tank_artillery_chassis_2
 			light_tank_aa_chassis_2
+		}
+		enable_equipment_modules = {
+			tank_auto_cannon_2
+			tank_anti_air_cannon_2
+			tank_small_cannon_2
 		}
 
 		path = {
@@ -465,6 +475,11 @@ technologies = {
 			light_tank_artillery_chassis_3
 			light_tank_aa_chassis_3
 		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_3
+			tank_small_cannon_3
+			tank_auto_cannon_3
+		}
 
 		research_cost = 2
 		start_year = 1941
@@ -472,6 +487,10 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = -1 y = 8 }
+		}
+
+		allow = {
+			date > 1940.01.01
 		}
 
 		ai_will_do = {
@@ -513,7 +532,11 @@ technologies = {
 			medium_tank_artillery_chassis_1
 			medium_tank_aa_chassis_1
 		}
-
+		enable_equipment_modules = {
+			tank_high_velocity_cannon
+			tank_medium_howitzer
+			tank_medium_cannon
+		}
 		enable_subunits = {
 			medium_armor
 		}
@@ -621,7 +644,12 @@ technologies = {
 			medium_tank_artillery_chassis_2
 			medium_tank_aa_chassis_2
 		}
-
+		enable_equipment_modules = {
+			tank_medium_cannon_2
+			tank_high_velocity_cannon_2
+			tank_medium_howitzer_2
+			tank_anti_air_cannon_2
+		}
 		path = {
 			leads_to_tech = advanced_medium_tank_chassis
 			research_cost_coeff = 1
@@ -631,7 +659,7 @@ technologies = {
 		start_year = 1940
 
 		allow = {
-			date > 1938.01.01
+			date > 1940.01.01
 		}
 
 		folder = {
@@ -711,7 +739,12 @@ technologies = {
 			medium_tank_artillery_chassis_3
 			medium_tank_aa_chassis_3
 		}
-
+		enable_equipment_modules = {
+			tank_medium_cannon_3
+			tank_high_velocity_cannon_3
+			tank_heavy_howitzer
+			tank_anti_air_cannon_3
+		}
 		path = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
@@ -721,7 +754,7 @@ technologies = {
 		start_year = 1943
 
 		allow = {
-			date > 1941.01.01
+			date > 1942.01.01
 		}
 
 		folder = {
@@ -785,7 +818,7 @@ technologies = {
 		start_year = 1945
 
 		allow = {
-			date > 1943.01.01
+			date > 1944.01.01
 		}
 
 		folder = {
@@ -829,7 +862,11 @@ technologies = {
 			heavy_tank_artillery_chassis_1
 			heavy_tank_aa_chassis_1
 		}
-
+		enable_equipment_modules = {
+			tank_heavy_cannon
+			tank_medium_howitzer
+			tank_anti_air_cannon
+		}
 		enable_subunits = {
 			heavy_armor
 		}
@@ -917,7 +954,11 @@ technologies = {
 			heavy_tank_artillery_chassis_2
 			heavy_tank_aa_chassis_2
 		}
-
+		enable_equipment_modules = {
+			tank_heavy_cannon_2
+			tank_anti_air_cannon_2
+			tank_medium_howitzer_2
+		}
 		path = {
 			leads_to_tech = advanced_heavy_tank_chassis
 			research_cost_coeff = 1
@@ -932,7 +973,7 @@ technologies = {
 		start_year = 1940
 
 		allow = {
-			date > 1938.01.01
+			date > 1940.01.01
 		}
 
 		folder = {
@@ -993,7 +1034,11 @@ technologies = {
 			heavy_tank_artillery_chassis_3
 			heavy_tank_aa_chassis_3
 		}
-
+		enable_equipment_modules = {
+			tank_heavy_cannon_3
+			tank_heavy_howitzer
+			tank_anti_air_cannon_3
+		}
 		path = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
@@ -1003,7 +1048,7 @@ technologies = {
 		start_year = 1943
 
 		allow = {
-			date > 1941.01.01
+			date > 1942.01.01
 		}
 
 		folder = {
