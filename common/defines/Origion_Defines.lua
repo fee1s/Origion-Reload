@@ -8,35 +8,56 @@ NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before 
 
 --Army
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 512;
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 512;
+NDefines.NMilitary.BASE_NIGHT_ATTACK_PENALTY = -0.25
 
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.07; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки)
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999;
+
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.05; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки)
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спецуры
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0; -- Модификатор треньки (меньше - меньше опыта)
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 -- Бафф треньки (По умолчанию - 0.0015)
-NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0 -- Лок на прочачку генов
+
+NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.00015; -- Опыт дивизии, получаемый за один час боев
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.1, 0.3, 0.5, 0.7 } -- Ванильное значение - 0.1, 0.3, 0.75, 0.9
+
+NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.0 -- Удобный дефайн, не нужно ебаться с изменением шаблонов для конвертов
+
+NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.0 -- Лок на прочачку генов
+NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0.0
+NDefines.NMilitary.XP_GAIN_PER_OVERRUN_UNIT = 0.00
+NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.00
+
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
 
-NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.225 -- Маленькая река
-NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.35 -- Большая река
+NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.175 -- Маленькая река
+NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая река
 
-NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.225
-NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.375
+NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.125 -- Скорость пересечения маленькой реки
+NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.2 -- Скорость пересечения большой реки
 
 NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение снаряги в дивках, объем пополнения
 
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.25 -- Дебафф от красного воздуха (уменьшено)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.125 -- Дебафф на скорость от красного воздуха (уменьшено)
+
+NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 10 -- Шанс нанести урон укреплению
+
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель скорости дивизий, ванила это 0.05
+
+NDefines.NMilitary.ACCLIMATIZATION_IN_COMBAT_SPEED_FACTOR = 1.5 -- Множитель получения акклиматизации от боев
+NDefines.NMilitary.ACCLIMATIZATION_SPEED_GAIN = 0.015 -- Общий множитель получения акклиматизации
+NDefines.NMilitary.ACCLIMATIZATION_LOSS_SPEED_FACTOR = 4.0 -- Скорость потери акклиматизации 
 
 -- Воздух
 
@@ -48,9 +69,13 @@ NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.95 -- бафф морбобров �
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.45 -- бафф морбобров по дамагу
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 1.2 -- множитель получаемого опыта авиации (всего)
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самолетики не могут получить ранение на тренировке
 
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.055 -- бафф касых по дамагу
 NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.045 -- бафф касых по дамагу по организации
+
+NDefines.NAir.AIR_WING_MAX_STATS_ATTACK = 9999 -- ванильный лок на максимальное кол-во статов в бою
+NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на максимальное кол-во статов в бою
 
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5 -- Кол-во касов от ШФ
 
@@ -83,6 +108,7 @@ NDefines.NAir.AIR_WING_XP_RECON_MISSION_COMPLETED_GAIN = 0
 NDefines.NAir.AIR_WING_XP_LOSS_WHEN_KILLED = 0
 
 -- Асы удалены
+
 NDefines.NAir.ACE_DEATH_CHANCE_BASE = 0
 NDefines.NAir.ACE_DEATH_BY_OTHER_ACE_CHANCE = 0
 NDefines.NAir.ACE_DEATH_CHANCE_PLANES_MULT = 0
@@ -107,9 +133,16 @@ NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0;
 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 
-NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 96.0 -- Скорость развертки дивизий, ванила 62
+NDefines.NMilitary.TRAINING_EXPERIENCE_SCALE = 105.0 -- Скорость развертки дивизий, ванила 62
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0.75;
+
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 2;
+NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 1;
+
+NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.65 -- 0.5
+NDefines.NAir.FUEL_COST_MULT = 0.175 -- 0.35
+NDefines.NNavy.FUEL_COST_MULT = 0.05 -- 0.1
 
 -- Флотские дефайны
 
@@ -135,7 +168,7 @@ NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 7.5 -- Криты
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.75 -- снижение урона пво от мор авиации
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.25 -- cнижение урона от мор авиации при получении повреждений
 
-NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 4 -- Бафф на навалы от авиков
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 5 -- Бафф на навалы от авиков
 
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 8 -- частота атаки авианосного соединения в часах
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.8, 2.2, 1.4 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)
@@ -171,6 +204,16 @@ NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 2 -- кол-во �
 
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- Стоимость назначения гордости
 NDefines.NNavy.PRIDE_OF_THE_FLEET_LOST_TEMP_MODIFIER_DURATION = 0			-- Длительность дебаффа от гордости
+
+NDefines.NNavy.CARRIER_ONLY_COMBAT_ACTIVATE_TIME = 0
+NDefines.NNavy.CAPITAL_ONLY_COMBAT_ACTIVATE_TIME = 0
+
+NDefines.NNavy.ALL_SHIPS_ACTIVATE_TIME = 0 
+
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.5
+
+NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.05 -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
+NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.025 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
 --урон и криты от процента пробоя 
 
@@ -244,7 +287,7 @@ NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 150
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0;
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0;
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1 
-NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 300
+NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 900
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 
 NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.15; -- Множитель починки кораблей от морской базы, ванила - 0.05
@@ -388,5 +431,3 @@ NDefines.NCountry.RESISTANCE_STRENGTH_FROM_UNIT = 0.0
 NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 0
 
 NDefines.NTechnology.BASE_TECH_COST = 100
-NDefines.NGraphics.GRADIENT_BORDERS_THICKNESS_STATE = 10.0
-NDefines.NGraphics.BORDER_WIDTH = 1.5

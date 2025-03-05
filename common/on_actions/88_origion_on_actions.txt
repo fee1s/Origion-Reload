@@ -1,4 +1,104 @@
 on_actions = {
+	on_naval_invasion = { 
+		effect ={ 
+			if = { 
+				limit = {
+					OR = {
+						off_сhannel_coastline = yes
+					}
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+					to_state = 64 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 64
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { off_сhannel_coastline = yes } } transfer_state_to = ENG }  
+				}				
+			}
+			if = { 
+				limit = {
+					OR = {
+						norwegian_coastline = yes
+					}
+					SOV = { has_war = no }
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 126 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 126
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { norwegian_coastline = yes } } transfer_state_to = GER }  
+				}				
+			}
+			if = { 
+				limit = {
+					is_japan_main_state = yes
+					NOT = { has_global_flag = operation_downfall }
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 361
+				} 
+				every_country = {
+					delete_unit = {
+						state = 361
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { is_japan_main_state = yes } } transfer_state_to = JAP }  
+				}				
+			}
+			if = { 
+				limit = {
+					OR = {
+						italian_coastline_above_naples = yes
+					}
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+						}
+					}
+					to_state = 126 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 126
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { italian_coastline_above_naples = yes } } transfer_state_to = ITA }  
+				}				
+			}
+		}
+	}
     on_startup = {
 		effect = {
 			COL = {
@@ -32,6 +132,144 @@ on_actions = {
 				}
 		    }
 	    }
+	}
+	on_weekly_USA = {
+	    effect = {
+		    if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 1
+					    }
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 2
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = 0.1 }
+			}
+		    if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 3
+					    }
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 4
+					    }
+					}
+				}
+				every_country = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					set_variable = { atlantikwall_dm_army_attack_factor = -0.05 }
+				}
+			}
+		    if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 5
+					    }
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 6
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.2 }
+			}
+		    if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 7
+					    }
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 8
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.35 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+					    check_variable  = {
+					        JAP_pacific_controlled_regions = 9
+					    }
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 10
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 11
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 12
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 13
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.5 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 14
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 15
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.6 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 16
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 17
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.7 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 18
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 19
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.8 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+				        check_variable  = {
+					        JAP_pacific_controlled_regions = 20
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 21
+					    }
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 22
+					    }
+					}
+				}
+				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.9 }
+			}
+		}
 	}
 	on_startup = { ### NO ASIA
 	    effect = {
