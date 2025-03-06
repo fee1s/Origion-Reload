@@ -2072,8 +2072,7 @@ leader_traits = {
 	tsar_unifier = { #Tsar Boris III
 		random = no
 		war_support_factor = -0.1
-		neutrality_drift = 0.05
-		drift_defence_factor = 0.25
+		stability_factor = -0.1
 	}
 
 	old_coup_maker = { #Kimon Georgiev (Zveno)
@@ -2108,10 +2107,8 @@ leader_traits = {
 
 	hardened_officer = { #Kimon Georgiev and Hristo Lukov
 		random = no
-		conscription_factor = 0.05
+		conscription_factor = 0.1
 		army_core_defence_factor = 0.05
-		dig_in_speed_factor = 0.05
-		max_dig_in = 5
 	}
 
 	incompetent_leader = { #Georgi Kyoseivanov
@@ -2217,10 +2214,9 @@ leader_traits = {
 	leader_of_the_agrarian_union = {
 		random = no
 		sprite = 13
-		democratic_drift = 0.05
-		political_power_factor = 0.1
-		global_building_slots_factor = 0.1
-		min_export = -0.1
+		global_building_slots_factor = 0.2
+		local_resources_factor = 0.1
+		fascism_drift = 0.05
 	}
 
 	industry_reformer = {
@@ -2251,8 +2247,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		fascism_drift = 0.05
-		political_power_factor = 0.1
-		consumer_goods_factor = -0.15
+		production_factory_efficiency_gain_factor = 0.05
+		consumer_goods_factor = -0.1
 	}
 
 	nazi_sympathizer = {

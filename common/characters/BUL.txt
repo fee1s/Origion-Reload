@@ -117,8 +117,6 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-			}
 			traits = {
 				democratic_reformer 
 			}
@@ -456,14 +454,6 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				NOT = {
-					has_completed_focus = BUL_oppose_the_royal_dictatorship
-				}
-				NOT = {
-					has_government = communism
-				}
-			}
 			
 			traits = {
 				military_theorist
@@ -557,11 +547,6 @@ characters = {
 					has_dlc = "Battle for the Bosporus"
 					original_tag = BUL
 				}
-				available = {
-					NOT = {
-						has_government = communism
-					}
-				}
 				traits = {
 					army_chief_defensive_2
 				}
@@ -623,11 +608,6 @@ characters = {
 				allowed = {
 					has_dlc = "Battle for the Bosporus"
 					original_tag = BUL
-				}
-				available = {
-					NOT = {
-						has_government = communism
-					}
 				}
 				traits = {
 					army_chief_maneuver_2
@@ -710,9 +690,6 @@ characters = {
 					has_dlc = "Battle for the Bosporus"
 					original_tag = BUL
 				}
-				available = {
-					has_country_flag = BUL_zveno_bolstered_flag
-				}
 				traits = {
 					army_chief_offensive_2
 				}
@@ -773,11 +750,6 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
-			}
 			traits = {
 				air_chief_reform_1
 			}
@@ -805,9 +777,6 @@ characters = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
-			}
-			available = {
-				has_country_flag = BUL_zveno_bolstered_flag
 			}
 			traits = {
 				air_chief_safety_2
@@ -837,10 +806,6 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				has_government = communism
-				has_country_flag = BUL_back_from_the_scw_flag
-			}
 			visible = { always = no }
 			traits = {
 				air_chief_ground_support_3
@@ -866,69 +831,6 @@ characters = {
 ### MILITARY HIGH COMMAND ###
 #############################
 
-	BUL_stoyan_stoyanov = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			advisor = {
-				slot = high_command
-				idea_token = BUL_stoyan_stoyanov
-				ledger = air
-				allowed = {
-					has_dlc = "Battle for the Bosporus"
-					original_tag = BUL
-				}
-				traits = {
-					air_bomber_interception_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-					modifier = {
-						factor = 0.100
-						BUL_save_money_for_decisions = yes
-					}
-				}
-			}
-			name = BUL_stoyan_stoyanov
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_stoyan_stoyanov"
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			advisor = {
-				slot = high_command
-				idea_token = BUL_stoyan_stoyanov
-				ledger = air
-				allowed = {
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					original_tag = BUL
-				}
-				traits = {
-					air_air_combat_training_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			name = BUL_stoyan_stoyanov
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_air_europe_2"
-				}
-			}
-		}
-	}
-
 	BUL_ivan_sapundzhiev = {
 		advisor = {
 			slot = high_command
@@ -937,11 +839,6 @@ characters = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
-			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
 			}
 			traits = {
 				army_artillery_2
@@ -963,81 +860,6 @@ characters = {
 		}
 	}
 
-	BUL_atanas_zhilkov = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			advisor = {
-				slot = high_command
-				idea_token = BUL_atanas_pavlov_zhilkov_bftb
-				ledger = army
-				allowed = {
-					has_dlc = "Battle for the Bosporus"
-					original_tag = BUL
-				}
-				available = {
-					NOT = {
-						has_government = communism
-					}
-				}
-				traits = {
-					army_cavalry_3
-				}
-				cost = 200
-				ai_will_do = {
-					factor = 1.000
-					modifier = {
-						factor = 0.000
-						or = {
-							BUL_is_communist_stalinist_ai = yes
-							BUL_is_communist_balkan_ai = yes
-						}
-					}
-					modifier = {
-						factor = 0.100
-						BUL_save_money_for_decisions = yes
-					}
-				}
-			}
-			name = BUL_atanas_pavlov_zhilkov_bftb
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_atanas_zhilkov"
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			advisor = {
-				slot = high_command
-				idea_token = BUL_atanas_pavlov_zhilkov
-				ledger = army
-				allowed = {
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					original_tag = BUL
-				}
-				traits = {
-					army_cavalry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			name = BUL_atanas_pavlov_zhilkov
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_army_europe_5"
-				}
-			}
-		}
-	}
-
 	BUL_trifon_trifonov = {
 		advisor = {
 			slot = high_command
@@ -1046,11 +868,6 @@ characters = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
-			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
 			}
 			traits = {
 				army_logistics_2
@@ -1090,9 +907,6 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				has_country_flag = BUL_zveno_bolstered_flag
-			}
 			traits = {
 				army_armored_2
 			}
@@ -1121,9 +935,6 @@ characters = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
-			}
-			available = {
-				has_country_flag = BUL_zveno_bolstered_flag
 			}
 			traits = {
 				army_infantry_2
@@ -1243,8 +1054,11 @@ characters = {
 			allowed = {
 				original_tag = BUL
 			}
+			available = {
+			    has_completed_focus = BUL_utmost_optimization
+			}
 			traits = {
-				smooth_talking_charmer 
+				leader_of_the_agrarian_union 
 			}
 		}
 	}
@@ -1262,8 +1076,11 @@ characters = {
 			allowed = {
 				original_tag = BUL
 			}
+			available = {
+			    has_completed_focus = BUL_corporatism
+			}
 			traits = {
-				armaments_organizer 
+				statism_adept
 			}
 		}
 	}
