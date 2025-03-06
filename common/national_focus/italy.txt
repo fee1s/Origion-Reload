@@ -1219,13 +1219,6 @@ focus_tree = {
 				add_ideas = ITA_hidden_arty_production_ns
 			}
 
-			add_tech_bonus = {
-				name = ITA_increase_artillery_production
-				bonus = 1
-				uses = 2
-				technology = antitank4
-                technology = antitank5
-			}
 
 			random_core_state = {
 				limit = {
@@ -1445,10 +1438,11 @@ focus_tree = {
 			}
 
 			add_tech_bonus = {
-				name = ITA_self_propelled_guns
+				name = ITA_increase_artillery_production
 				bonus = 1
-				uses = 1
-				category = artillery
+				uses = 2
+				technology = antitank4
+                technology = antitank5
 			}
 
 			random_core_state = {
