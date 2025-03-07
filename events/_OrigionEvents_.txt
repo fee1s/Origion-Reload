@@ -1738,13 +1738,20 @@ news_event = { # Технологии 1938 года доступны
 	
 	major = yes
 	
-	trigger = { date > 1937.12.30 }
+	trigger = { 
+	    date > 1937.12.30 
+		NOT = { has_global_flag = 1938_tech }
+	}
+	
+	immediate = {
+	    set_global_flag = 1938_tech
+	}
 	
 	option = {
 		name = origion.18.a
 	}
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # Технологии 1941 года доступны
@@ -1755,13 +1762,20 @@ news_event = { # Технологии 1941 года доступны
 	
 	major = yes
 	
-	trigger = { date > 1940.12.30 }
+	trigger = { 
+	    date > 1940.12.30 
+		NOT = { has_global_flag = 1941_tech }
+	}
+	
+	immediate = {
+	    set_global_flag = 1941_tech
+	}
 	
 	option = {
 		name = origion.19.a
 	}
 
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # Падение Окинавы
