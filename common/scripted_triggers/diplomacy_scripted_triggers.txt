@@ -131,10 +131,68 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = { 
-	always = no
-}
-DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = { 
-	always = no
+	if = { # Япония не дает лицензии никому
+		limit = {
+			OR = {
+			    ORIGION_is_in_faction_with_axis = yes
+				ORIGION_is_in_faction_with_allies = yes
+				original_tag = SOV
+			}
+			
+            FROM = { original_tag = JAP }
+        }
+		always = no
+	}
+	
+	if = { # Совок не дает лицензии никому
+		limit = {
+			OR = {
+			    ORIGION_is_in_faction_with_axis = yes
+				ORIGION_is_in_faction_with_allies = yes
+			}
+			
+            FROM = { original_tag = SOV }
+        }
+		always = no
+	}
+	
+	if = { # Лицензии только внутри Алайсев
+		limit = {
+			OR = {
+				ORIGION_is_in_faction_with_axis = yes
+				original_tag = SOV
+			}
+			
+            FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
+	}
+	
+	if = { # Лицензии только внутри Оси
+		limit = {
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				original_tag = JAP
+				original_tag = SOV
+			}
+			
+            FROM = { ORIGION_is_in_faction_with_axis = yes }
+        }
+		always = no
+	}
+	
+	if = { # Неигровые нации
+		limit = {
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				ORIGION_is_in_faction_with_axis = yes
+				original_tag = SOV
+			}
+			
+            FROM = { ORIGION_not_playable_country = yes }
+        }
+		always = no
+	}
 }
 
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
