@@ -1566,9 +1566,10 @@ country_event = { # передача стейтов на ост-фронте о�
 	option = {
 		name = origion.10.a
 		ROM = {
-			every_controlled_state = {
+			every_state = {
 				limit = {
-					is_core_of = SOV				
+					is_core_of = SOV		
+                    is_fully_controlled_by = ROM					
 				}
 				GER = { set_state_controller = PREV }				
 			}		
