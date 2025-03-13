@@ -107,7 +107,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "asia_map_ui_window"
-		position = {x=-680 y=87} # position = {x=-920 y=90}
+		position = {x=-680 y=87}
 		size = { width=912 height=770}
 		
 		Orientation = UPPER_RIGHT
@@ -274,13 +274,6 @@ guiTypes = {
 			scale = 0.43
 		}
 		
-		buttonType = { # 
-			name = "asia_map_help_open"
-			quadTextureSprite = GFX_help_button
-			position = { x=50 y=725 }
-			hide = yes
-		}
-		
 		instantTextBoxType = { # 
 			name = "progress_bar_name_box"
 			text = "[progress_bar_name]"
@@ -315,6 +308,161 @@ guiTypes = {
 			position = { x= 568 y = 444 }
 			Orientation = "UPPER_LEFT"
 			pdx_tooltip = "progress_bar_JAP_tt"
+		}
+	}
+	containerWindowType = {
+		name = "africa_map_ui_window"
+		position = {x=-680 y=87}
+		size = { width=912 height=300}
+		
+		instantTextBoxType = { # Описание
+			name = "africa_map_info_box"
+			text = "africa_map_info"
+			position = { x=15 y=225 }
+			maxWidth = 300
+			format = left
+			font = "hoi_30header"
+		}
+		
+		buttonType = { # Марокко
+			name = "africa_map_morocco"
+			quadTextureSprite = "GFX_map_gui_africa_morocco_ALLY" 
+			position = { x=6 y=77 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_morocco_scripted_tt"
+		}
+		buttonType = { # Алжир
+			name = "africa_map_algeria"
+			quadTextureSprite = "GFX_map_gui_africa_algeria_ALLY"
+			position = { x=84 y=60 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_algeria_scripted_tt"
+		}
+		buttonType = { # Восточный Алжир
+			name = "africa_map_eastalgeria"
+			quadTextureSprite = "GFX_map_gui_africa_eastalgeria_ALLY"
+			position = { x=128 y=56 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_eastalgeria_scripted_tt"
+		}
+		buttonType = { # Тунис
+			name = "africa_map_tunis"
+			quadTextureSprite = "GFX_map_gui_africa_tunis_AXIS"
+			position = { x=155 y=54}
+			scale = 0.52
+			pdx_tooltip = "africa_map_tunis_scripted_tt"
+		}
+		buttonType = { # Ливия
+			name = "africa_map_libya"
+			quadTextureSprite = "GFX_map_gui_africa_libya_AXIS"
+			position = { x=181 y=95}
+			scale = 0.52
+			pdx_tooltip = "africa_map_libya_scripted_tt"
+		}
+		buttonType = { # Восточная Ливия
+			name = "africa_map_eastlibya"
+			quadTextureSprite = "GFX_map_gui_africa_eastlibya_AXIS"
+			position = { x=214 y=110}
+			scale = 0.52
+			pdx_tooltip = "africa_map_eastlibya_scripted_tt"
+		}
+		buttonType = { # Киренаика
+			name = "africa_map_kirenaika"
+			quadTextureSprite = "GFX_map_gui_africa_kirenaika_AXIS"
+			position = { x=258 y=95}
+			scale = 0.52
+			pdx_tooltip = "africa_map_kirenaika_scripted_tt"
+		}
+		buttonType = { # Матруха
+			name = "africa_map_matruh"
+			quadTextureSprite = "GFX_map_gui_africa_matruh_ALLY"
+			position = { x=299 y=105 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_matruh_scripted_tt"
+		}
+		buttonType = { # Каир
+			name = "africa_map_cairo"
+			quadTextureSprite = "GFX_map_gui_africa_cairo_ALLY"
+			position = { x=332 y=108 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_cairo_scripted_tt"
+		}
+		buttonType = { # Нил
+			name = "africa_map_nyle"
+			quadTextureSprite = "GFX_map_gui_africa_nyle_ALLY" 
+			position = { x=336 y=144 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_nyle_scripted_tt"
+		}
+		buttonType = { # Верхний Нил
+			name = "africa_map_upnyle"
+			quadTextureSprite = "GFX_map_gui_africa_upnyle_ALLY"
+			position = { x=330 y=186 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_upnyle_scripted_tt"
+		}
+		buttonType = { # Палестина
+			name = "africa_map_palestine"
+			quadTextureSprite = "GFX_map_gui_africa_palestine_ALLY"
+			position = { x=365 y=93 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_palestine_scripted_tt"
+		}
+		buttonType = { # Ирак
+			name = "africa_map_iraq"
+			quadTextureSprite = "GFX_map_gui_africa_iraq_ALLY"
+			position = { x=383 y=53 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_iraq_scripted_tt"
+		}
+		buttonType = { # Гибралтар
+			name = "africa_map_gibraltar"
+			quadTextureSprite = "GFX_map_gui_africa_gibraltar_ALLY"
+			position = { x=47 y=61 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_gibraltar_scripted_tt"
+		}
+		buttonType = { # Балеары
+			name = "africa_map_balearic"
+			quadTextureSprite = "GFX_map_gui_africa_balearic_AXIS"
+			position = { x=107 y=28 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_balearic_scripted_tt"
+		}
+		buttonType = { # Сардиния
+			name = "africa_map_sardinia"
+			quadTextureSprite = "GFX_map_gui_africa_sardinia_AXIS"
+			position = { x=163 y=0 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_sardinia_scripted_tt"
+		}
+		buttonType = { # Сицилия
+			name = "africa_map_sicily"
+			quadTextureSprite = "GFX_map_gui_africa_sicily_AXIS"
+			position = { x=198 y=46 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_sicily_scripted_tt"
+		}
+		buttonType = { # Мальта
+			name = "africa_map_malta"
+			quadTextureSprite = "GFX_map_gui_africa_malta_ALLY"
+			position = { x=210 y=65 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_malta_scripted_tt"
+		}
+		buttonType = { # Крит
+			name = "africa_map_crete"
+			quadTextureSprite = "GFX_map_gui_africa_crete_AXIS"
+			position = { x=287 y=70 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_crete_scripted_tt"
+		}
+		buttonType = { # Кипр
+			name = "africa_map_cyprus"
+			quadTextureSprite = "GFX_map_gui_africa_cyprus_ALLY"
+			position = { x=358 y=70 }
+			scale = 0.52
+			pdx_tooltip = "africa_map_cyprus_scripted_tt"
 		}
 	}
 }

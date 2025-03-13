@@ -1,213 +1,416 @@
-### GUI
-
+##################
+### AFRICA GUI ###
+##################
 spriteTypes = {
+    SpriteType = { # Карта
+	    name = "africa_sg_bg"
+	    texturefile = "gfx/gui/africa/AfricaMap.png"	
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_morocco_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_morocco_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_morocco_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_morocco_AXIS.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_morocco_NOTORCH"
+	   texturefile = "gfx/gui/africa/map_gui_africa_morocco_NOTORCH.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_algeria_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_algeria_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_algeria_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_algeria_AXIS.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_algeria_NOTORCH"
+	   texturefile = "gfx/gui/africa/map_gui_africa_algeria_NOTORCH.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_eastalgeria_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_eastalgeria_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_eastalgeria_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_eastalgeria_AXIS.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_eastalgeria_NOTORCH"
+	   texturefile = "gfx/gui/africa/map_gui_africa_eastalgeria_NOTORCH.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_gibraltar_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_gibraltar_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_gibraltar_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_gibraltar_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_nyle_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_nyle_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_nyle_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_nyle_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_upnyle_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_upnyle_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_upnyle_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_upnyle_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_tunis_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_tunis_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_tunis_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_tunis_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_libya_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_libya_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_libya_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_libya_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_eastlibya_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_eastlibya_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_eastlibya_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_eastlibya_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_kirenaika_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_kirenaika_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_kirenaika_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_kirenaika_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_matruh_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_matruh_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_matruh_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_matruh_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_cairo_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_cairo_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_cairo_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_cairo_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_palestine_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_palestine_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_palestine_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_palestine_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_iraq_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_iraq_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_iraq_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_iraq_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_sardinia_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_sardinia_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_sardinia_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_sardinia_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_crete_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_crete_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_crete_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_crete_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_cyprus_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_cyprus_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_cyprus_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_cyprus_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_malta_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_malta_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_malta_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_malta_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_balearic_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_balearic_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_balearic_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_balearic_AXIS.png"		
+	}
+	###
+	SpriteType = {
+	    name = "GFX_map_gui_africa_sicily_ALLY"
+	   texturefile = "gfx/gui/africa/map_gui_africa_sicily_ALLY.png"		
+	}
+	SpriteType = {
+	    name = "GFX_map_gui_africa_sicily_AXIS"
+	   texturefile = "gfx/gui/africa/map_gui_africa_sicily_AXIS.png"		
+	}
+	
+	
+###################
+### PACIFIC GUI ###
+###################
+
+	
 	SpriteType = { # Карта
 	    name = "GFX_asia_map_bg"
-	    texturefile = "gfx/interface/gui/map_gui_asia.png"	
+	    texturefile = "gfx/gui/pacific/map_gui_asia.png"	
 	}
 	SpriteType = { # Окно
 	    name = "GFX_asia_menu_bg"
 	   texturefile = "gfx/interface/asia_menu_bg.dds"		
 	}
-	SpriteType = { # Окно
+	SpriteType = { # Иконка
 	    name = "GFX_JAP_co_prosper"
 	   texturefile = "gfx/interface/ideas/JAP_co_prosper.png"		
 	}
 	### БИРМА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_birma_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_birma_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_birma_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_birma_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_birma_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_birma_ALLY.png"		
 	}
 	### ТАЙВАНЬ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_taiwan_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_taiwan_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_taiwan_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_taiwan_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_taiwan_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_taiwan_ALLY.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_taiwan_glow"
-	   texturefile = "gfx/interface/gui/map_gui_asia_taiwan_glow.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_taiwan_glow.png"		
 	}
 	### ИНДИЯ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_raj_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_raj_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_raj_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_raj_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_raj_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_raj_ALLY.png"		
 	}
 	### НОВАЯ ГВИНЕЯ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_papua_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_papua_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_papua_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_papua_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_papua_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_papua_ALLY.png"		
 	}
 	### АВСТРАЛИЯ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_australia_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_australia_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_australia_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_australia_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_australia_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_australia_ALLY.png"		
 	}
 	### ФИЛИППИНЫ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_phi_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_phi_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_phi_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_phi_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_phi_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_phi_ALLY.png"		
 	}
 	### ГАВАЙИ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_hawai_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_hawai_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_hawai_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_hawai_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_hawai_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_hawai_ALLY.png"		
 	}
 	### ОКИНАВА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_okinawa_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_okinawa_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_okinawa_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_okinawa_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_okinawa_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_okinawa_ALLY.png"		
 	}
 	### ИВОДЗИМА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_iwojima_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_iwojima_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_iwojima_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_iwojima_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_iwojima_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_iwojima_ALLY.png"		
 	}
 	### МАЛАЙА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_malaya_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_malaya_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_malaya_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_malaya_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_malaya_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_malaya_ALLY.png"		
 	}
 	### ИНДОКИТАЙ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_indochina_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_indochina_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_indochina_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_indochina_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_indochina_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_indochina_ALLY.png"		
 	}
 	### СОЛОМОНОВЫ ОСТРОВА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_solomon_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_solomon_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_solomon_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_solomon_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_solomon_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_solomon_ALLY.png"		
 	}
 	### НОВАЯ ЗЕЛАНДИЯ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_newzeland_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_newzeland_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_newzeland_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_newzeland_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_newzeland_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_newzeland_ALLY.png"		
 	}
 	### ИВОДЗИМА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_iwojima_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_iwojima_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_iwojima_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_iwojima_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_iwojima_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_iwojima_ALLY.png"		
 	}
 	### КАРОЛИНСКИЕ ОСТРОВА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_caroline_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_caroline_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_caroline_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_caroline_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_caroline_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_caroline_ALLY.png"		
 	}
 	### МАРИАНСКИЕ ОСТРОВА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_mariana_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_mariana_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_mariana_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_mariana_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_mariana_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_mariana_ALLY.png"		
 	}
 	### МАРШАЛЛОВЫ ОСТРОВА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_marshall_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_marshall_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_marshall_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_marshall_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_marshall_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_marshall_ALLY.png"		
 	}
 	### ПАЛАУ ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_palau_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_palau_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_palau_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_palau_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_palau_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_palau_ALLY.png"		
 	}
 	### СУМАТРА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_sumatra_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_sumatra_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_sumatra_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_sumatra_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_sumatra_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_sumatra_ALLY.png"		
 	}
 	### ЯВА ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_jawa_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_jawa_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_jawa_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_jawa_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_jawa_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_jawa_ALLY.png"		
 	}
 	### МАРКУС ###
 	SpriteType = {
 	    name = "GFX_map_gui_asia_markus_JAP"
-	   texturefile = "gfx/interface/gui/map_gui_asia_markus_JAP.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_markus_JAP.png"		
 	}
 	SpriteType = {
 	    name = "GFX_map_gui_asia_markus_ALLY"
-	   texturefile = "gfx/interface/gui/map_gui_asia_markus_ALLY.png"		
+	   texturefile = "gfx/gui/pacific/map_gui_asia_markus_ALLY.png"		
 	}
 	###
-	
 	###
     progressbartype = {
 		name = "GFX_progress_bar_USA"
@@ -224,4 +427,3 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress_reverse.lua" # Прогресс идёт справа налево
 	}
 }
-

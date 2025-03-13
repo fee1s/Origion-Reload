@@ -261,7 +261,7 @@ USA_day_D_reward_tt: "\n§CБудет добавлена операция на �
 JAP_war_chi_reward_tt: "В течении §Y180§! дн. §YЯпонская империя§! полностью окупирует государство §YКитайская республика§!. \n"
 SOV_auto_complete_relocate_industry: "Выполняет фокус §YЭвакуировать промышленность на Урал§!, если предшествующие фокусы выполнены."
 GER_fall_blau_tt: "\nВ течении летнего периода мы проведем совместную наступательную операцию против §YСоветского Союза§!."
-ITA_triumph_egypt_tt: "\nДемонстрация превосходства наших сил в регионе окажет §Gположительное влияние§! на §Yэкономику§! наших союзников!"
+ITA_triumph_egypt_tt: "\n§YМы продемонстрируем силу нашего оружия и укрепимся в районе Нила и Ближнего Востока§!\n\n"
 uk_defeat_of_the_italian_corps_tt: "\nСтраны «оси» также утратят §Gбылую славу§! за прежние §Yтриумфальные завоевания§!.."
 uk_counter_offensive_cairo_tt: "Страны «оси» утратят §Gбылую славу§! за прежние §Yтриумфальные завоевания§!.."
 uk_protect_suez_tt: "Создаст линию из §Y18-ти укреплений§! вдоль §YНила§!, а также §Yукрепит§! §YСуэцкий канал§!. Вы получите §Yавиабазу§! максимального уровня в этом регионе."
@@ -652,3 +652,43 @@ Pacific_operation_downfall_dec: "Операция §R"Даунфол"§!"
 pacific_start_event_tt: "§RЯпония нападёт на нас в течении следующего месяца§!"
 pacific_war_started_dd_tt: "С открытия §YТихоокенаского фронта§! прошло как минимум §Y365 дней§!.\nНа данный момент прошло: [?pacific_war_started_dd_flag:days|Y0]"
 Pacific_operation_downfall_tt: "Мы получим возможность сделать высадку в §RЯпонию§!"
+
+###
+
+triumph_in_africa_dm: "Успешное итальянское наступление"
+ORG_africa_dec_cat: "Североафриканский фронт"
+africa_map_info: "§BСоюзники§! контроллируют: §Y[?ALLY_africa_controlled_regions]§! регионов\n§RОсь§! контроллирует: §Y[?AXIS_africa_controlled_regions]§! регионов"
+
+africa_map_morocco_scripted_tt: "Марокко \n--------\n§Y[?461.GetName]§! \n§Y[?462.GetName]§! \n§Y[?783.GetName]§! \n--------\n[africa_map_morocco_scripted_loc_tt]"
+africa_map_algeria_scripted_tt: "Алжир \n--------\n§Y[?459.GetName]§! \n§Y[?513.GetName]§! \n--------\n[africa_map_algeria_scripted_loc_tt]"
+africa_map_eastalgeria_scripted_tt: "Восточный Алжир \n--------\n§Y[?460.GetName]§! \n§Y[?991.GetName]§! \n--------\n[africa_map_eastalgeria_scripted_loc_tt]"
+africa_map_tunis_scripted_tt: "Тунис \n--------\n§Y[?458.GetName]§! \n§Y[?665.GetName]§! \n--------\n[africa_map_tunis_scripted_loc_tt]"
+africa_map_libya_scripted_tt: "Ливия \n--------\n§Y[?448.GetName]§! \n§Y[?661.GetName]§! \n--------\n[africa_map_libya_scripted_loc_tt]"
+africa_map_eastlibya_scripted_tt: "Восточная Ливия \n--------\n§Y[?449.GetName]§! \n§Y[?662.GetName]§! \n--------\n[africa_map_eastlibya_scripted_loc_tt]"
+africa_map_kirenaika_scripted_tt: "Киренаика \n--------\n§Y[?450.GetName]§! \n§Y[?451.GetName]§! \n§Y[?663.GetName]§! \n§Y[?984.GetName]§! \n§Y[?983.GetName]§! \n--------\n[africa_map_kirenaika_scripted_loc_tt]"
+africa_map_matruh_scripted_tt: "Матрух \n--------\n§Y[?982.GetName]§! \n§Y[?985.GetName]§! \n§Y[?452.GetName]§! \n--------\n[africa_map_matruh_scripted_loc_tt]"
+africa_map_cairo_scripted_tt: "Каир \n--------\n§Y[?447.GetName]§! \n§Y[?907.GetName]§! \n§Y[?446.GetName]§!\n--------\n[africa_map_cairo_scripted_loc_tt]"
+africa_map_nyle_scripted_tt: "Нил \n--------\n§Y[?456.GetName]§! \n§Y[?457.GetName]§!\n--------\n[africa_map_nyle_scripted_loc_tt]"
+africa_map_upnyle_scripted_tt: "Верхний Нил \n--------\n§Y[?551.GetName]§! \n§Y[?883.GetName]§!\n--------\n[africa_map_upnyle_scripted_loc_tt]"
+africa_map_palestine_scripted_tt: "Палестина \n--------\n§Y[?453.GetName]§! \n§Y[?454.GetName]§! \n§Y[?455.GetName]§!\n--------\n[africa_map_palestine_scripted_loc_tt]"
+africa_map_iraq_scripted_tt: "Ирак \n--------\n§Y[?291.GetName]§! \n§Y[?676.GetName]§! \n§Y[?675.GetName]§! \n§Y[?680.GetName]§! \n§Y[?677.GetName]§! \n§Y[?554.GetName]§! \n§Y[?553.GetName]§!\n--------\n[africa_map_iraq_scripted_loc_tt]"
+africa_map_gibraltar_scripted_tt: "Гибралтар \n--------\n[africa_map_gibraltar_scripted_loc_tt]"
+africa_map_balearic_scripted_tt: "Балеарские острова \n--------\n[africa_map_balearic_scripted_loc_tt]"
+africa_map_sardinia_scripted_tt: "Сардиния \n--------\n§Y[?114.GetName]§! \n§Y[?1.GetName]§!\n--------\n[africa_map_sardinia_scripted_loc_tt]"
+africa_map_sicily_scripted_tt: "Сицилия \n--------\n[africa_map_sicily_scripted_loc_tt]"
+africa_map_malta_scripted_tt: "Мальта \n--------\n[africa_map_malta_scripted_loc_tt]"
+africa_map_crete_scripted_tt: "Крит \n--------\n[africa_map_crete_scripted_loc_tt]"
+africa_map_cyprus_scripted_tt: "Кипр \n--------\n[africa_map_cyprus_scripted_loc_tt]"
+
+africa_map_tt_NOTORCH: "Регион будет доступен после начала §Rоперации «Факел»§!"
+
+african_warfare_dm: "Североафриканская кампания"
+
+africa_map_small_step_add_tt: "Владение данным регионом изменяет модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §G+2.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G+1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+1.0%§! \n--------\n§BКонтроллируется Союзниками§!"
+africa_map_medium_step_add_tt: "Владение данным регионом изменяет модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §G+4.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G+2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+2.0%§! \n--------\n§BКонтроллируется Союзниками§!"
+
+africa_map_small_step_remove_tt: "Потеря данного региона изменит модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-2.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-1.0%§! \n--------\n§RКонтроллируется Осью§!"
+africa_map_medium_step_remove_tt: "Потеря данного региона изменит модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-4.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-2.0%§! \n--------\n§RКонтроллируется Осью§!"
+
+africa_map_gibraltar_step_add_tt: "Владение данным регионом изменяет модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §G+10.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G+5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§! \n--------\n§BКонтроллируется Союзниками§!"
+africa_map_gibraltar_step_remove_tt: "Потеря данного региона изменит модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-10.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-5.0%§! \n--------\n§RКонтроллируется Осью§!"

@@ -1405,6 +1405,25 @@ pacific_warfare_dm = {
 	production_lack_of_resource_penalty_factor = pacific_dm_production_lack_of_resource_penalty_factor
 }
 
+triumph_in_africa_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+	
+	army_attack_factor = 0.5
+}
+
+african_warfare_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_ITA_new_roman_empire_ns
+	
+	production_factory_max_efficiency_factor = african_warfare_dm_production_factory_max_efficiency_factor
+    industrial_capacity_factory = african_warfare_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = african_warfare_dm_industrial_capacity_dockyard
+	production_factory_efficiency_gain_factor = african_warfare_dm_production_factory_efficiency_gain_factor
+	fuel_gain_factor = african_warfare_dm_fuel_gain_factor
+	max_fuel_factor = african_warfare_dm_max_fuel_factor
+}
+
 ger_walled_city = {
 	enable = { always = yes }
 

@@ -6,6 +6,7 @@ news_event = { # триумф оси в египте
 	major = yes
 	fire_only_once = yes
 	trigger = {
+	    NOT = { has_global_flag = africa_triumph }
 		OR = {
 			447 = { is_controlled_by = ITA }
 			447 = { is_controlled_by = GER }
@@ -23,24 +24,10 @@ news_event = { # триумф оси в египте
 			446 = { is_controlled_by = GER }
 			446 = { is_controlled_by = ROM }
 		}
-		
-		ENG = {
-			NOT = {
-				has_completed_focus = uk_counter_offensive_cairo
-			}
-		}
-		
-		ENG = {
-			NOT = {
-				has_completed_focus = uk_defeat_of_the_italian_corps
-			}
-		}
 	}
 	
 	immediate = {
-		ITA = {
-			complete_national_focus = ITA_axis_triumph_egypt
-		}
+	    set_global_flag = africa_triumph
 		AST = {
 			complete_national_focus = AST_lose_in_africa
 		}
@@ -55,12 +42,6 @@ news_event = { # ось сдает африку до мая 1941
 	major = yes
 	fire_only_once = yes
 	trigger = {
-		date < 1941.05.1
-		ENG = {
-			NOT = {
-				has_completed_focus = uk_counter_offensive_cairo
-			}
-		}
 				OR = {
 					661 = { is_controlled_by = ENG }
 					661 = { is_controlled_by = FRA }
@@ -184,185 +165,12 @@ news_event = { # ось сдает африку до мая 1941
 	}
 	
 	immediate = {
-		ENG = {
-			complete_national_focus = uk_defeat_of_the_italian_corps
-		}
 		ITA = {
 			complete_national_focus = ITA_defense
 		}
 		AST = {
 			complete_national_focus = AST_win_in_africa
 		}
-		every_state = {
-			limit = {
-				is_controlled_by = ITA
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = USA }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ENG }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = CAN }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = RAJ }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = AST }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = SAF }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = FRA }
-			}
-			
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = USA }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ENG }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = CAN }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = RAJ }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = AST }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = SAF }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = FRA }
-		}
-	}
-	
-	mean_time_to_happen = { days = 1 }
-}
-
-news_event = { # ось сдает африку после мая 1941
-	id = origion.3
-	hidden = yes
-	major = yes
-	fire_only_once = yes
-	trigger = {
-		date > 1941.05.1
-		ENG = {
-			NOT = {
-				has_completed_focus = uk_defeat_of_the_italian_corps
-			}
-		}
-				OR = {
-					661 = { is_controlled_by = ENG }
-					661 = { is_controlled_by = FRA }
-					661 = { is_controlled_by = CAN }
-					661 = { is_controlled_by = RAJ }
-					661 = { is_controlled_by = AST }
-					661 = { is_controlled_by = NZL }
-					661 = { is_controlled_by = SAF }
-					661 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					448 = { is_controlled_by = ENG }
-					448 = { is_controlled_by = FRA }
-					448 = { is_controlled_by = CAN }
-					448 = { is_controlled_by = RAJ }
-					448 = { is_controlled_by = AST }
-					448 = { is_controlled_by = NZL }
-					448 = { is_controlled_by = SAF }
-					448 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					449 = { is_controlled_by = ENG }
-					449 = { is_controlled_by = FRA }
-					449 = { is_controlled_by = CAN }
-					449 = { is_controlled_by = RAJ }
-					449 = { is_controlled_by = AST }
-					449 = { is_controlled_by = NZL }
-					449 = { is_controlled_by = SAF }
-					449 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					662 = { is_controlled_by = ENG }
-					662 = { is_controlled_by = FRA }
-					662 = { is_controlled_by = CAN }
-					662 = { is_controlled_by = RAJ }
-					662 = { is_controlled_by = AST }
-					662 = { is_controlled_by = NZL }
-					662 = { is_controlled_by = SAF }
-					662 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					663 = { is_controlled_by = ENG }
-					663 = { is_controlled_by = FRA }
-					663 = { is_controlled_by = CAN }
-					663 = { is_controlled_by = RAJ }
-					663 = { is_controlled_by = AST }
-					663 = { is_controlled_by = NZL }
-					663	 = { is_controlled_by = SAF }
-					663	 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					450 = { is_controlled_by = ENG }
-					450 = { is_controlled_by = FRA }
-					450 = { is_controlled_by = CAN }
-					450 = { is_controlled_by = RAJ }
-					450 = { is_controlled_by = AST }
-					450 = { is_controlled_by = NZL }
-					450 = { is_controlled_by = SAF }
-					450 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					451 = { is_controlled_by = ENG }
-					451 = { is_controlled_by = FRA }
-					451 = { is_controlled_by = CAN }
-					451 = { is_controlled_by = RAJ }
-					451 = { is_controlled_by = AST }
-					451 = { is_controlled_by = NZL }
-					451	 = { is_controlled_by = SAF }
-					451 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					665 = { is_controlled_by = ENG }
-					665 = { is_controlled_by = FRA }
-					665 = { is_controlled_by = CAN }
-					665 = { is_controlled_by = RAJ }
-					665 = { is_controlled_by = AST }
-					665 = { is_controlled_by = NZL }
-					665 = { is_controlled_by = SAF }
-					665 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					458 = { is_controlled_by = ENG }
-					458 = { is_controlled_by = FRA }
-					458 = { is_controlled_by = CAN }
-					458 = { is_controlled_by = RAJ }
-					458 = { is_controlled_by = AST }
-					458 = { is_controlled_by = NZL }
-					458	 = { is_controlled_by = SAF }
-					458	 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					984 = { is_controlled_by = ENG }
-					984 = { is_controlled_by = FRA }
-					984 = { is_controlled_by = CAN }
-					984 = { is_controlled_by = RAJ }
-					984 = { is_controlled_by = AST }
-					984 = { is_controlled_by = NZL }
-					984	 = { is_controlled_by = SAF }
-					984	 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					983 = { is_controlled_by = ENG }
-					983 = { is_controlled_by = FRA }
-					983 = { is_controlled_by = CAN }
-					983 = { is_controlled_by = RAJ }
-					983 = { is_controlled_by = AST }
-					983 = { is_controlled_by = NZL }
-					983	 = { is_controlled_by = SAF }
-					983	 = { is_controlled_by = USA }
-				}
-	}
-	
-	immediate = {
-		ENG = {
-			complete_national_focus = uk_counter_offensive_cairo
-		}
-		ITA = {
-			complete_national_focus = ITA_defense
-		}
-		AST = {
-			complete_national_focus = AST_win_in_africa
-		}
-		
 		every_state = {
 			limit = {
 				is_controlled_by = ITA
@@ -404,6 +212,16 @@ news_event = { # вступление италии в войну против с
 		ITA = {	
 			ITA_join_to_war = yes
 		}
+		every_country = {
+		    limit = {
+		    	ORIGION_is_in_faction_with_axis = yes
+				NOT = { original_tag = JAP }
+		    }
+		    add_dynamic_modifier = {
+			    modifier = african_warfare_dm
+			}
+	    }
+		set_global_flag = africa_started
 		
 		458 = {
 			if = {
@@ -634,18 +452,6 @@ news_event = { # вступление италии в войну против с
 				add_dynamic_modifier = {
 					modifier = ENG_unpredictable_invasion
 					scope = SAF
-					days = 14
-				}
-			}
-			
-			if = {
-				limit = {
-					NZL = { exists = yes }
-				}
-				
-				add_dynamic_modifier = {
-					modifier = ENG_unpredictable_invasion
-					scope = NZL
 					days = 14
 				}
 			}
@@ -1350,41 +1156,6 @@ news_event = { # вступление италии в войну против с
 				}
 			}
 		}
-
-		#ITA = {
-		#	add_timed_idea = {
-		#		idea = africa_supply_buff
-		#		days = 180
-		#	}
-		#}
-		
-		#GER = {
-		#	add_timed_idea = {
-		#		idea = africa_supply_buff
-		#		days = 180
-		#	}
-		#}
-	
-		#HUN = {
-		#	add_timed_idea = {
-		#		idea = africa_supply_buff
-		#		days = 180
-		#	}
-		#}
-		
-		#ROM = {
-		#	add_timed_idea = {
-		#		idea = africa_supply_buff
-		#		days = 180
-		#	}
-		#}
-		
-		#BUL = {
-		#	add_timed_idea = {
-		#		idea = africa_supply_buff
-		#		days = 180
-		#	}
-		#}
 		
 		ENG = { 
 			every_state = {

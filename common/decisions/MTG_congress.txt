@@ -505,12 +505,25 @@ USA_congress = {
 				transfer_state = 460 
 				transfer_state = 513
 				transfer_state = 459
+				transfer_state = 991
 			}
 			
 			hidden_effect = { 
 				GER = { annex_country = { target = VIC transfer_troops = no } }
 				
+				every_country = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+				    add_to_variable = { ALLY_africa_controlled_regions = 1 }
+				    add_to_variable = { AXIS_africa_controlled_regions = 2 }
+				}
+				
 				news_event = { id = origion.22 days = 2 }
+				set_global_flag = operation_torch_flag
 				
 				461 = {
 					add_building_construction = {

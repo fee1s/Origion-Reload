@@ -2570,7 +2570,7 @@ focus_tree = {
 	focus = {
 		id = ITA_by_blood_alone
 		icon = GFX_focus_ITA_by_blood_alone
-		prerequisite = { focus = ITA_def_africa focus = ITA_defense focus = ITA_axis_triumph_egypt }
+		prerequisite = { focus = ITA_defense }
 		
 		x = -1
 		y = 1
@@ -2784,29 +2784,45 @@ focus_tree = {
 		x = -2
 		y = 1
 		
-		cost = 0
+		cost = 10
+		
+		allow_branch = {
+			always = no
+		}
 		
 		available = {
 		    axis_won_africa_trigger = yes
-			hidden_trigger = {
-			    always = no
-			}
 		}
 		
 		completion_reward = {
-		    ITA = { add_ideas = triumph_egypt_idea }
 			
 			custom_effect_tooltip = ITA_triumph_egypt_tt
-			
-			hidden_effect = {
-			    GER = { add_ideas = triumph_egypt_idea }
-				ROM = { add_ideas = triumph_egypt_idea }
-				HUN = { add_ideas = triumph_egypt_idea }
-				BUL = { add_ideas = triumph_egypt_idea }
-					
+			    every_country = {
+				    limit = {
+						ORIGION_is_in_faction_with_axis = yes
+					}
+					every_state = {
+						limit = {
+							OR = {
+								state = 446
+								state = 447
+								state = 453
+								state = 456
+								state = 457
+								state = 907
+							}
+						}
+						add_dynamic_modifier = {
+							modifier = triumph_in_africa_dm
+							scope = PREV
+							days = 365
+						}
+					}
+				}
+			hidden_effect = {			
 				sound_effect = psi_ita_triumph
-			}
-        }				
+            }
+		}				
 	}
 
 	focus = {

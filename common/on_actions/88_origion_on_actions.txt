@@ -392,6 +392,38 @@ on_actions = {
 	}
     on_startup = {
 		effect = {
+		    set_global_flag = morocco_controlled_ALLY
+			set_global_flag = nyle_controlled_ALLY
+			set_global_flag = upnyle_controlled_ALLY
+			set_global_flag = cairo_controlled_ALLY
+			set_global_flag = palestine_controlled_ALLY
+			set_global_flag = iraq_controlled_ALLY
+			set_global_flag = cyprus_controlled_ALLY
+			set_global_flag = matruh_controlled_ALLY
+			set_global_flag = gibraltar_controlled_ALLY
+			set_global_flag = malta_controlled_ALLY
+			
+			set_global_flag = algeria_controlled_AXIS
+			set_global_flag = eastalgeria_controlled_AXIS
+			set_global_flag = tunis_controlled_AXIS
+			set_global_flag = libya_controlled_AXIS
+			set_global_flag = eastlibya_controlled_AXIS
+			set_global_flag = kirenaika_controlled_AXIS
+			set_global_flag = crete_controlled_AXIS
+			set_global_flag = balearic_controlled_AXIS
+			set_global_flag = sardinia_controlled_AXIS
+			set_global_flag = sicily_controlled_AXIS
+			
+			every_country = {
+				limit = {
+					OR = {
+						ORIGION_is_in_faction_with_allies = yes
+						ORIGION_is_in_faction_with_axis = yes
+					}
+				}
+			    set_variable = { ALLY_africa_controlled_regions = 9 }
+			    set_variable = { AXIS_africa_controlled_regions = 8 }
+			}
 			COL = {
 				give_resource_rights = {
 					receiver = USA

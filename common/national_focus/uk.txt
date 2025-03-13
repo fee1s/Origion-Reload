@@ -2315,6 +2315,10 @@ focus_tree = {
 			focus = uk_protect_suez
 		}
 		
+		allow_branch = {
+		    always = no
+		}
+		
 		mutually_exclusive = {
 			focus = uk_counter_offensive_cairo
 		}
@@ -2409,6 +2413,10 @@ focus_tree = {
 			focus = uk_protect_suez
 		}
 		
+		allow_branch = {
+		    always = no
+		}
+		
 		mutually_exclusive = {
 			focus = uk_defeat_of_the_italian_corps
 		}
@@ -2464,13 +2472,21 @@ focus_tree = {
 	focus = {
 		id = uk_operation_countenance 
 		
-		prerequisite = { focus = uk_counter_offensive_cairo focus = uk_defeat_of_the_italian_corps }
+		prerequisite = {
+			focus = uk_protect_suez
+		}
 		
-		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
+		#prerequisite = { focus = uk_counter_offensive_cairo focus = uk_defeat_of_the_italian_corps }
+		
+		icon = GFX_focus_PER_push_to_deserts #GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
+		
+		available = {
+			axis_lost_africa_trigger = yes
+		}
 		
 		relative_position_id = uk_protect_suez
 		x = 0
-		y = 2
+		y = 1
 		cost = 5
 		
 		completion_reward = {

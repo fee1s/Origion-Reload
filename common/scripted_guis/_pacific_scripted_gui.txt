@@ -12,6 +12,10 @@ scripted_gui = {
 				else = {
 					ROOT = { clr_country_flag = asia_map_open }
 				}
+				if = {
+					limit = { ROOT = { has_country_flag = africa_map_open } }
+					ROOT = { clr_country_flag = africa_map_open }
+				}
 			}
 		}
 		triggers = {
@@ -26,13 +30,6 @@ scripted_gui = {
 		visible = {
 			ROOT = {
 				has_country_flag = asia_map_open
-			}
-		}
-		effects = {
-			asia_map_help_open_click = {
-				country_event = {
-				    id = origion_pacific.6
-				}
 			}
 		}
 		properties = {
