@@ -2570,13 +2570,17 @@ focus_tree = {
 	focus = {
 		id = ITA_by_blood_alone
 		icon = GFX_focus_ITA_by_blood_alone
-		prerequisite = { focus = ITA_defense }
-		
-		x = -1
+		prerequisite = { focus = ITA_pact_of_steel }
+
+		relative_position_id = ITA_pact_of_steel
+		x = 0
 		y = 1
-		relative_position_id = ITA_defense
 		cost = 5
 		available = {
+			OR = {
+				axis_lost_africa_trigger = yes
+				axis_won_africa_trigger = yes
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
@@ -2823,26 +2827,6 @@ focus_tree = {
 				sound_effect = psi_ita_triumph
             }
 		}				
-	}
-
-	focus = {
-		id = ITA_defense
-		icon = GFX_focus_generic_italy_first
-		prerequisite = { focus = ITA_pact_of_steel }
-
-		relative_position_id = ITA_pact_of_steel
-		x = 0
-		y = 1
-		cost = 0 
-		available = {
-			axis_lost_africa_trigger = yes
-			
-		}
-
-
-		completion_reward = {
-			add_ideas = { ITA_defence_idea }
-		}
 	}
 
 	focus = {

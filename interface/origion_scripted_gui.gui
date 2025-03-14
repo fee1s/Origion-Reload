@@ -318,10 +318,17 @@ guiTypes = {
 		instantTextBoxType = { # Описание
 			name = "africa_map_info_box"
 			text = "africa_map_info"
-			position = { x=15 y=225 }
+			position = { x=15 y=245 }
 			maxWidth = 300
 			format = left
 			font = "hoi_30header"
+		}
+		
+		buttonType = { # 
+			name = "africa_map_icon_info"
+			quadTextureSprite = "GFX_idea_ITA_new_roman_empire_ns" 
+			position = { x=15 y=165 }
+			pdx_tooltip = "africa_map_icon_info_scripted_name"
 		}
 		
 		buttonType = { # Марокко

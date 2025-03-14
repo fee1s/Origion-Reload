@@ -690,3 +690,176 @@ ORG_allies_lend_lease_to_sov = {
 		}
 	}
 }
+ORG_africa_dec_cat = {
+	USA_operation_torch = { # ОПЕРАЦИЯ ФАКЕЛ
+		available = { has_completed_focus = USA_oper_torch }
+		icon = GFX_decision_eng_puppet_usa
+		
+		visible = {
+			original_tag = USA
+		}
+		
+		complete_effect = {
+			USA = {
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+			}
+			
+			ITA = {
+				transfer_state = 460 
+				transfer_state = 513
+				transfer_state = 459
+				transfer_state = 991
+			}
+			
+			hidden_effect = { 
+				GER = { annex_country = { target = VIC transfer_troops = no } }
+				
+				every_country = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+				    add_to_variable = { ALLY_africa_controlled_regions = 1 }
+				    add_to_variable = { AXIS_africa_controlled_regions = 2 }
+				}
+				
+				news_event = { id = origion.22 days = 2 }
+				set_global_flag = operation_torch_flag
+				
+				461 = {
+					add_building_construction = {
+						type = naval_base
+						level = 6
+						province = 7069
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = air_base
+						level = 6
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	ENG_operation_torch = { # Torch No Asia 
+		available = { date > 1941.9.1 }
+		icon = GFX_decision_eng_puppet_usa
+		
+		visible = { 
+		    USA = { exists = no } 
+			original_tag = ENG
+		}
+		fire_only_once = yes
+		
+		complete_effect = {
+			ENG = {
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+			}
+			
+			ITA = {
+				transfer_state = 460 
+				transfer_state = 513
+				transfer_state = 459
+				transfer_state = 991
+			}
+			
+			hidden_effect = { 
+				GER = { annex_country = { target = VIC transfer_troops = no } }
+				set_global_flag = operation_torch_flag
+				every_country = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+				    add_to_variable = { ALLY_africa_controlled_regions = 1 }
+				    add_to_variable = { AXIS_africa_controlled_regions = 2 }
+				}
+				461 = {
+					add_building_construction = {
+						type = naval_base
+						level = 6
+						province = 7069
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = air_base
+						level = 6
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+    ENG_operation_crusader = {
+		icon = GFX_decision_eng_puppet_usa
+		available = {
+			has_completed_focus = uk_operation_crusader
+			date > 1942.1.1
+		}
+		visible = {
+			original_tag = ENG
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_timed_idea = { idea = uk_operation_crusader days = 60 }
+			
+			hidden_effect = { 
+				CAN = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				AST = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				RAJ = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				SAF = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				FRA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+			}		
+		}
+	}
+	
+	ENG_operation_countenance = {
+		icon = GFX_decision_eng_puppet_usa
+		available = {
+			has_completed_focus = uk_operation_countenance
+		}
+		visible = {
+			original_tag = ENG
+		}
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = uk_operation_countenance_tt
+			
+			hidden_effect = {
+				SOV = {
+					transfer_state = 419
+					transfer_state = 420
+					transfer_state = 266
+					transfer_state = 418
+					transfer_state = 416
+				}
+				
+				ENG = { annex_country = { target = PER } }	
+				news_event = { id = origion.12 days = 3 }
+			}
+		}
+	}
+}

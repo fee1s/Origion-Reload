@@ -69,9 +69,12 @@ ORG_africa_dec_cat = {
 		NOT = { original_tag = JAP }
 	}
 	
+	visible = {
+	    has_global_flag = africa_started
+	}
+	
 	priority = 1000
 	
-	visible = { always = yes }
 	visible_when_empty = yes
 }
 
