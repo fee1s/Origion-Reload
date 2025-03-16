@@ -11,10 +11,11 @@ technologies = {
 	@1944 = 16
 	@1945 = 18
 	@1946 = 20
-
-	@field_hospital_x = 8 #it is actually Y :D
-	@logistic_x = 10 #it is actually Y :D
-	@signal_x = 12 #it is actually Y :D
+	
+	@flamethrower_brigade_x = 8 #it is actually Y :D
+	@field_hospital_x = 10 #it is actually Y :D
+	@logistic_x = 12 #it is actually Y :D
+	@signal_x = 14 #it is actually Y :D
 
 
 	tech_support = {
@@ -52,6 +53,10 @@ technologies = {
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_flamethrower_brigade
 			research_cost_coeff = 1
 		}
 		research_cost = 1.0
@@ -167,14 +172,14 @@ technologies = {
 
 		enable_equipment_modules = {
 			dozer_blade
-			flamethrower
+			#flamethrower
 		}
 		
-		enable_subunits = { 
-			light_flame_tank
-			medium_flame_tank
-			heavy_flame_tank
-		}
+		#enable_subunits = { 
+		#	light_flame_tank
+		#	medium_flame_tank
+		#	heavy_flame_tank
+		#}
 
 		#enable_subunits = { #MM: Moved to Special Project sp_land_flamethrower_tank
 		#	light_flame_tank
@@ -251,30 +256,30 @@ technologies = {
 			}
 		}
 
-		light_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		medium_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		heavy_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
+		#light_flame_tank = {
+		#	urban = {
+		#		attack = 0.1
+		#	}
+		#	fort = {
+		#		attack = 0.10
+		#	}
+		#}
+		#medium_flame_tank = {
+		#	urban = {
+		#		attack = 0.1
+		#	}
+		#	fort = {
+		#		attack = 0.10
+		#	}
+		#}
+		#heavy_flame_tank = {
+		#	urban = {
+		#		attack = 0.1
+		#	}
+		#	fort = {
+		#		attack = 0.10
+		#	}
+		#}
 		path = {
 			leads_to_tech = tech_engineers4
 			research_cost_coeff = 1
@@ -327,30 +332,30 @@ technologies = {
 			}
 		}
 
-		light_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		medium_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
-		heavy_flame_tank = {
-			urban = {
-				attack = 0.1
-			}
-			fort = {
-				attack = 0.10
-			}
-		}
+		#light_flame_tank = {
+		#	urban = {
+		#		attack = 0.1
+		#	}
+		#	fort = {
+		#		attack = 0.10
+		#	}
+		#}
+		#medium_flame_tank = {
+		#	urban = {
+		#		attack = 0.1
+		#	}
+		#	fort = {
+		#		attack = 0.10
+		#	}
+		#}
+		#heavy_flame_tank = {
+		#	urban = {
+		#		attack = 0.1
+		#	}
+		#	fort = {
+		#		attack = 0.10
+		#	}
+		#}
 		research_cost = 2.0
 		start_year = 1945
 		folder = {
@@ -639,7 +644,7 @@ technologies = {
 	tech_military_police2 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			default_morale = 1.1
 		}
 		
 		path = {
@@ -672,7 +677,7 @@ technologies = {
 	tech_military_police3 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			default_morale = 1.1
 		}
 
 		path = {
@@ -704,7 +709,7 @@ technologies = {
 	tech_military_police4 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			default_morale = 1.1
 		}
 
 		research_cost = 2.0
@@ -923,6 +928,184 @@ technologies = {
 			}
 		}
 	}
+	
+	tech_flamethrower_brigade = {
+		enable_subunits = { 
+			flamethrower_brigade
+		}
+		
+		path = {
+			leads_to_tech = tech_flamethrower_brigade2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.25
+		start_year = 1936
+		folder = {
+			name = support_folder
+			position = { x = @flamethrower_brigade_x y = @1936 }
+		}
+		
+		categories = {
+			support_tech
+		}
+		
+		ai_will_do = {
+			base = 1
+			
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+	}
+	
+	tech_flamethrower_brigade2 = {
+		
+		path = {
+			leads_to_tech = tech_flamethrower_brigade3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1939
+		folder = {
+			name = support_folder
+			position = { x = @flamethrower_brigade_x y = @1939 }
+		}
+		
+		categories = {
+			support_tech
+		}
+		
+		flamethrower_brigade = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+	}
+	
+	tech_flamethrower_brigade3 = {
+		
+		path = {
+			leads_to_tech = tech_flamethrower_brigade4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1942
+		folder = {
+			name = support_folder
+			position = { x = @flamethrower_brigade_x y = @1942 }
+		}
+		
+		categories = {
+			support_tech
+		}
+		
+		flamethrower_brigade = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+	}
+	
+	tech_flamethrower_brigade4 = {
+
+		research_cost = 2.5
+		start_year = 1945
+		
+		folder = {
+			name = support_folder
+			position = { x = @flamethrower_brigade_x y = @1945 }
+		}
+		
+		categories = {
+			support_tech
+		}
+		
+		flamethrower_brigade = {
+			urban = {
+				attack = 0.1
+			}
+			fort = {
+				attack = 0.10
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+			
+			modifier = {
+				factor = 1.2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1939.1.1"
+			}
+		}
+	}
 
 	tech_field_hospital = {
 
@@ -949,8 +1132,6 @@ technologies = {
 		categories = {
 			support_tech
 			hospital_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -995,8 +1176,6 @@ technologies = {
 		categories = {
 			support_tech
 			hospital_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1041,8 +1220,6 @@ technologies = {
 		categories = {
 			support_tech
 			hospital_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1081,8 +1258,6 @@ technologies = {
 		categories = {
 			support_tech
 			hospital_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1148,8 +1323,6 @@ technologies = {
 		categories = {
 			support_tech
 			logistics_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1198,8 +1371,6 @@ technologies = {
 		categories = {
 			support_tech
 			logistics_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1253,8 +1424,6 @@ technologies = {
 		categories = {
 			support_tech
 			logistics_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1293,8 +1462,6 @@ technologies = {
 		categories = {
 			support_tech
 			logistics_tech
-			motorized_equipment
-			mio_cat_tech_all_motorized_mechanized
 		}
 		
 		ai_will_do = {
@@ -1338,7 +1505,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 12 y = @1936 }
+			position = { x = @signal_x y = @1936 }
 		}
 		
 		categories = {
@@ -1373,7 +1540,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 12 y = @1939 }
+			position = { x = @signal_x y = @1939 }
 		}
 		
 		categories = {
@@ -1417,7 +1584,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = support_folder
-			position = { x = 12 y = @1942 }
+			position = { x = @signal_x y = @1942 }
 		}
 		
 		categories = {
@@ -1456,7 +1623,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = support_folder
-			position = { x = 12 y = @1945 }
+			position = { x = @signal_x y = @1945 }
 		}
 		
 		categories = {
