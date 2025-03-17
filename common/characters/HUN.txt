@@ -16,13 +16,13 @@ characters={
 			}
 			country_leader={
 				ideology=oligarchism
-				traits={ fascist_sympathies anti_communist }
+				traits={ HUN_the_regent }
 				expire="1965.1.1.1"
 				id=500
 			}
 			country_leader={
 				ideology=fascism_ideology
-				traits={ anti_communist }
+				traits={ HUN_the_regent_2 }
 				expire="1965.1.1.1"
 				id=503
 			}
@@ -46,6 +46,37 @@ characters={
 				ideology=fascism_ideology
 				expire="1965.1.1.1"
 				id=500
+			}
+		}
+	}
+	
+	HUN_hermann_goring = {
+		name = HUN_hermann_goring
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_hermann_goring 
+				small = GFX_portrait_GER_hermann_goring_civilian_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = GER_hermann_goring_king_of_hun
+
+			allowed = {
+				original_tag = HUN
+			}
+			visible = {
+				has_completed_focus = wuw_HUN_join_the_axis
+			}
+			available = {
+				has_completed_focus = wuw_HUN_join_the_axis
+			}
+
+			can_be_fired = no
+
+			traits = {
+				HUN_apostolic_king_of_hungary_fascist_trait
 			}
 		}
 	}

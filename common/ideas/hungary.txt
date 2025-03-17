@@ -1,6 +1,102 @@
 ideas = {
 
 	country = {
+	
+	    HUN_power_to_the_regent_idea = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = HUN_hungarian_monarchy
+
+			modifier = {
+				political_power_factor = 0.05
+				conscription = 0.005
+			}
+		}
+
+		HUN_more_power_to_the_regent_idea = {
+			name = HUN_power_to_the_regent_idea
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = HUN_hungarian_monarchy
+
+			modifier = {
+				political_power_factor = 0.1
+				conscription = 0.01
+			}
+		}
+		
+		HUN_restricted_voting_rights = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = saf_history_of_segregation
+
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.05
+			}
+		}
+		
+		HUN_old_hungary_reclaimed = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_old_hungary_reclaimed
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		
+		HUN_promoted_hungarianism = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_promoted_hungarianism
+
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				army_core_attack_factor	= 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		HUN_arrow_cross_idea = {
+			allowed = {
+				original_tag = HUN
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = HUN_arrow_cross_idea
+
+			modifier = {
+				war_support_factor = 0.05
+				mobilization_speed = 0.2
+				training_time_factor = -0.2
+			}
+		}
 
 		HUN_treaty_of_triannon = {
 			allowed = {
@@ -317,7 +413,27 @@ ideas = {
 			modifier = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_industrial_complex_factor = 0.1
-				research_speed_factor = 0.10
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		HUN_invite_german_investors = {
+		    name = HUN_invite_foreign_investors
+			allowed = {
+				original_tag = HUN
+				always = no
+			}
+			picture = generic_foreign_capital
+
+			allowed_civil_war = {
+				
+			}
+			
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.2
+				local_resources_factor = 0.1
 			}
 		}
 

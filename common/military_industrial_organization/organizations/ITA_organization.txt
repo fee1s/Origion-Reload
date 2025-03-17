@@ -25,6 +25,10 @@ ITA_fiat_organization = {
 				has_dlc = "Battle for the Bosporus"
 			}
 			AND = {
+				tag = HUN 
+				has_dlc = "Battle for the Bosporus"
+			}
+			AND = {
 				tag = ETH 
 				has_dlc = "By Blood Alone"
 			}
@@ -55,6 +59,10 @@ ITA_fiat_organization = {
 		IF = {
 			limit = { FROM = { original_tag = BUL } }
 			BUL = { has_completed_focus = BUL_contract_foreign_companies }
+		}
+		IF = {
+			limit = { FROM = { original_tag = HUN } }
+			HUN = { has_completed_focus = wuw_HUN_license_fiat_tankettes }
 		}
 	}
 }
