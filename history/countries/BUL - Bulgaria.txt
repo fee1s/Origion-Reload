@@ -39,12 +39,12 @@ add_timed_idea = {
     idea = winter_debuff
     days = 2251
 }
-	add_ideas = { #DLC
-		BUL_second_national_catastrophe
-		BUL_imro_01
-		volunteer_only
-	}
-	round_variable = BUL_march_destination
+add_ideas = {
+	BUL_second_national_catastrophe
+	BUL_imro_01
+	BUL_army_restrictions
+	volunteer_only
+}
 	48 = { set_state_flag = BUL_initial_bulgarian_state_flag }
 	212 = { set_state_flag = BUL_initial_bulgarian_state_flag }
 	801 = { set_state_flag = BUL_initial_bulgarian_state_flag }
@@ -186,6 +186,9 @@ add_timed_idea = {
 }
 
 set_technology = { #VANILLA & DLC
+    mobile_warfare = 1
+    trade_interdiction = 1
+    formation_flying = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_support = 1		

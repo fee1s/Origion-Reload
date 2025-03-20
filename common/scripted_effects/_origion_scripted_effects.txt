@@ -31,16 +31,9 @@ ROOT_call_allies_both_sides = {
 ROOT_call_all_allies_against_ENG = {
 	for_each_scope_loop = {
 		array = ROOT.allies
-		if = {
-			limit = {
-				NOT = {
-					original_tag = BUL
-				}
-			}
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = ENG
-			}
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = ENG
 		}
 	}
 }
@@ -48,21 +41,13 @@ ROOT_call_all_allies_against_ENG = {
 ROOT_call_all_allies_against_DEN_NOR = {
 	for_each_scope_loop = {
 		array = ROOT.allies
-		if = {
-			limit = {
-				NOT = {
-					original_tag = BUL
-				}
-			}
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = DEN
-			}
-			
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = NOR
-			}
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = DEN
+		}
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = NOR
 		}
 	}
 }
@@ -70,25 +55,17 @@ ROOT_call_all_allies_against_DEN_NOR = {
 ROOT_call_all_allies_against_benelux = {
 	for_each_scope_loop = {
 		array = ROOT.allies
-		if = {
-			limit = {
-				NOT = {
-					original_tag = BUL
-				}
-			}
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = HOL
-			}
-			
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = BEL
-			}
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = LUX
-			}
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = HOL
+		}
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = BEL
+		}
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = LUX
 		}
 	}
 }
@@ -96,16 +73,9 @@ ROOT_call_all_allies_against_benelux = {
 ENG_call_all_allies_against_ROOT = {
 	for_each_scope_loop = {
 		array = ENG.allies
-		if = {
-			limit = {
-				NOT = {
-					original_tag = BUL
-				}
-			}
-			add_to_war = {
-				targeted_alliance = ENG
-				enemy = ROOT
-			}
+		add_to_war = {
+			targeted_alliance = ENG
+			enemy = ROOT
 		}
 	}
 }

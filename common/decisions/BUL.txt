@@ -26,7 +26,7 @@ BUL_macedonian_revolutionary_organizations = {
 			NOT = { has_country_flag = BUL_macedonian_affairs_ongoing_flag }
 		}
 
-		days_remove = 60
+		days_remove = 90
 
 		fire_only_once = yes
 
@@ -69,7 +69,7 @@ BUL_macedonian_revolutionary_organizations = {
 			NOT = { has_country_flag = BUL_macedonian_affairs_ongoing_flag }
 		}
 
-		days_remove = 60
+		days_remove = 90
 
 		fire_only_once = yes
 
@@ -78,7 +78,7 @@ BUL_macedonian_revolutionary_organizations = {
 			has_civil_war = no
 		}
 
-		cost = 25
+		cost = 50
 
 		complete_effect = {
 			set_country_flag = BUL_macedonian_affairs_ongoing_flag
@@ -123,13 +123,13 @@ BUL_macedonian_revolutionary_organizations = {
 			NOT = { has_country_flag = BUL_macedonian_affairs_ongoing_flag }		
 		}
 
-		days_remove = 60
+		days_remove = 90
 
 		visible = {
 			has_country_flag = { flag = BUL_repress_imro_flag value = 2 }
 		}
 
-		cost = 25
+		cost = 50
 
 		complete_effect = {
 			set_country_flag = BUL_macedonian_affairs_ongoing_flag
