@@ -2338,14 +2338,6 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2390,7 +2382,8 @@
 			add_tech_bonus = {
 				name = ROM_modern_at_guns
 				bonus = 1.0
-				uses = 2
+				uses = 3
+				technology = antitank3
 				technology = antitank4
                 technology = antitank5
 			}
@@ -2425,7 +2418,7 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-		add_ideas = ROM_mountainers_divisions
+			add_ideas = ROM_mountainers_divisions
 		}
 	}
 
@@ -2607,14 +2600,6 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2623,9 +2608,9 @@
 			add_tech_bonus = {
 				name = ROM_the_maresal
 				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = armor
+				uses = 2
+				technology = improved_medium_tank_chassis
+				technology = advanced_medium_tank_chassis
 			}
 		}
 	}

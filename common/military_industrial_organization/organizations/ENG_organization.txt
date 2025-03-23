@@ -73,32 +73,6 @@ ENG_vickers_armstrong_eng_organization = {
 	}
 }
 
-ENG_vauxhall_organization = {
-	include = generic_infantry_tank_organization
-	icon = GFX_idea_vauxhall
-
-	allowed = {	
-		tag = ENG
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-	}
-
-	initial_trait = {
-		equipment_bonus = {
-			armor_value = 0.05
-		}
-	}
-}
-
-
  ######  ##     ## #### ########   ######  
 ##    ## ##     ##  ##  ##     ## ##    ## 
 ##       ##     ##  ##  ##     ## ##       
@@ -384,36 +358,6 @@ ENG_de_havilland_organization = {
 		}
 	}
 }
-
-ENG_fairey_aviation_organization = {
-	include = generic_naval_aircraft_organization
-	icon = GFX_idea_fairey_aviation
-	
-	allowed = {	
-		tag = ENG 
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-	}
-}
-
-ENG_avro_organization = {
-	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_avro
-	allowed = {	
-		tag = ENG
-	}
-}
-
-
-
 
 ##     ##    ###    ######## ######## ########  #### ######## ##       
 ###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       

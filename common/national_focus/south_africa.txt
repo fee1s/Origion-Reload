@@ -2494,37 +2494,8 @@
 		available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_RESEARCH }
 
-		completion_reward = {
-			create_corps_commander = { 
-					name = "Mister Snikers"
-					gfx = GFX_Portrait_Africa_Generic_land_2
-					
-					traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
-					skill = 6
-					attack_skill = 5
-					defense_skill = 4
-					planning_skill = 4
-					logistics_skill = 4
-				}
-				create_corps_commander = { 
-					name = "Mister Mars"
-					gfx = GFX_Portrait_Africa_Generic_land_2
-					
-					traits = { career_officer infantry_officer infantry_leader Trickster}
-					skill = 6
-					attack_skill = 2
-					defense_skill = 4
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				
-			army_experience = 200
-			add_doctrine_cost_reduction = {
-				name = SAF_special_service_battalion
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
-			}
+		completion_reward = {	
+			army_experience = 250
 		}
 	}
 

@@ -47,8 +47,8 @@ NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.25 -- Дебафф от красного воздуха (уменьшено)
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.125 -- Дебафф на скорость от красного воздуха (уменьшено)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.2 -- Дебафф от красного воздуха (уменьшено)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.075 -- Дебафф на скорость от красного воздуха (уменьшено)
 
 NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 10 -- Шанс нанести урон укреплению
 

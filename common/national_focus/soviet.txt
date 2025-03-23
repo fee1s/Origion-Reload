@@ -1072,18 +1072,9 @@ focus_tree = {
 				bonus = 1
 				uses = 3
 				technology = improved_infantry_weapons_2
-				technology = improved_infantry_weapons
 				technology = advanced_infantry_weapons
 				technology = mechanised_infantry
-				technology = mechanised_infantry2
 			}
-
-			#add_tech_bonus = {
-			#	name = mech_army_bonus
-			#	bonus = 1.0
-			#	uses = 1
-			#	category = motorized_equipment
-			#}
 		}
 	}
 
@@ -1117,9 +1108,10 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SOV_superior_war_machines
-				bonus = 0.75
+				bonus = 1
 				uses = 2
-				category = armor
+				technology = armor_tech_3
+				technology = armor_tech_4
 			}
 		}
 	}
@@ -1146,9 +1138,10 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SOV_the_means_to_wage_war
-				bonus = 0.75
-				uses = 2
-				category = support_tech
+			    bonus = 1
+			    uses = 2
+				technology = tech_engineers4
+				technology = tech_flamethrower_brigade4
 			}
 		}
 	}
@@ -1528,201 +1521,195 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_move_industry_to_the_urals
-		icon = GFX_goal_reichsautobahn
+		id = SOV_southern_frontier
+		icon = GFX_SOV_the_southern_thrust_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = -3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
 		cost = 2
-
+		
 		available = {
-			has_equipment = { train_equipment > 59 } #10 trains per factory
-		}
-
-		select_effect = {
-			add_equipment_to_stockpile = {
-				type = train_equipment
-				amount = SOV_industrial_relocation_trains_focus_negative
-				producer = SOV
-			}
-			#Factories are removed immediately to keep consistency with how decisions work
-			219 = { #Moscow
-				remove_building = {
-					type = arms_factory
-					level = 1
-				}
-				remove_building = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 195
-				}
-				195 = { #Leningrad
-					remove_building = {
-						type = arms_factory
-						level = 1
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 1
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 202
-				}
-				202 = { #Kiev
-					remove_building = {
-						type = arms_factory
-						level = 1
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 1
-					}
-				}
+			OR = {
+				controls_state = 218
+				controls_state = 228
+				controls_state = 227
+				controls_state = 221
 			}
 		}
 		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		bypass = {
+			NOT = {
+				controls_state = 218
+				controls_state = 228
+				controls_state = 227
+				controls_state = 221
+			}
+		}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_southern_frontier_tt
 			hidden_effect = {
-				add_equipment_to_stockpile = {
-					type = train_equipment
-					amount = SOV_industrial_relocation_trains_focus
-					producer = SOV
-				}
-			}
-			custom_effect_tooltip = SOV_focus_select_effect_tt
-			effect_tooltip = {
-				219 = { #Moscow
-					remove_building = {
-						type = arms_factory
-						level = 1
-					}
-					remove_building = {
-						type = industrial_complex
-						level = 1
-					}
-				}
-				if = {
-					limit = {
-						has_full_control_of_state = 195
-					}
-					195 = { #Leningrad
-						remove_building = {
-							type = arms_factory
-							level = 1
+				218 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 9417 }
+							any_province_building_level = {
+								province = {
+									id = 9417
+								}
+								building = bunker
+								level < 1
+							}
 						}
-						remove_building = {
-							type = industrial_complex
-							level = 1
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 9417
+							instant_build = yes
 						}
 					}
-				}
-				if = {
-					limit = {
-						has_full_control_of_state = 202
-					}
-					202 = { #Kiev
-						remove_building = {
-							type = arms_factory
-							level = 1
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13432 }
+							any_province_building_level = {
+								province = {
+									id = 13432
+								}
+								building = bunker
+								level < 1
+							}
 						}
-						remove_building = {
-							type = industrial_complex
-							level = 1
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13432
+							instant_build = yes
 						}
 					}
-				}
-			}
-			custom_effect_tooltip = SOV_move_industry_to_the_urals_trains_tt
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13431 }
+							any_province_building_level = {
+								province = {
+									id = 13431
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13431
+							instant_build = yes
+						}
+					}
+				}	
 
-			custom_effect_tooltip = SOV_focus_complete_effect_tt
-			unlock_decision_category_tooltip = SOV_industry_relocation
+				228 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 13433 }
+							any_province_building_level = {
+								province = {
+									id = 13433
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13433
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 9461 }
+							any_province_building_level = {
+								province = {
+									id = 9461
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 9461
+							instant_build = yes
+						}
+					}
+				}	
 
-			random_controlled_state = {
-				limit = {
-					SOV_is_industrial_relocation_destiny_state = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			
-				hidden_effect = {
-					damage_building = { type = arms_factory damage = 0.25 }
-					damage_building = { type = industrial_complex damage = 0.25 }
-				}
-			}
-			if = {
-				limit = {
-					ROOT = { has_full_control_of_state = 195 } #Leningrad
-				}
-				random_controlled_state = { #Different State please thanks
-					limit = {
-						NOT = { state = PREV }
-						SOV_is_industrial_relocation_destiny_state = yes
+				227 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 6474 }
+							any_province_building_level = {
+								province = {
+									id = 6474
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 6474
+							instant_build = yes
+						}
 					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
+				}	
+
+				221 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 418 }
+							any_province_building_level = {
+								province = {
+									id = 418
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 418
+							instant_build = yes
+						}
 					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				
-					hidden_effect = {
-						damage_building = { type = arms_factory damage = 0.25 }
-						damage_building = { type = industrial_complex damage = 0.25 }
-					}
-				}
-			}
-			if = {
-				limit = {
-					ROOT = { has_full_control_of_state = 202 } #Leningrad
-				}
-				random_controlled_state = { #Different State please thanks
-					limit = {
-						NOT = { state = PREV }
-						SOV_is_industrial_relocation_destiny_state = yes
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				
-					hidden_effect = {
-						damage_building = { type = arms_factory damage = 0.25 }
-						damage_building = { type = industrial_complex damage = 0.25 }
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13429 }
+							any_province_building_level = {
+								province = {
+									id = 13429
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13429
+							instant_build = yes
+						}
 					}
 				}
 			}
-			custom_effect_tooltip = SOV_relocate_industry_repair_tt
 		}
 	}
 
@@ -1730,7 +1717,7 @@ focus_tree = {
 		id = SOV_the_road_of_life
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = SOV_leningrad_polytechnical_institute }
-		prerequisite = { focus = SOV_move_industry_to_the_urals }
+		prerequisite = { focus = SOV_southern_frontier }
 		x = 1
 		y = 1
 		relative_position_id = SOV_leningrad_polytechnical_institute
@@ -1757,252 +1744,111 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 2
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_improve_the_stalin_line }
 
 		available = {
 			OR = {
-				has_full_control_of_state = 188
-				has_full_control_of_state = 189
-				has_full_control_of_state = 814
-				has_full_control_of_state = 97
-				has_full_control_of_state = 94
-				has_full_control_of_state = 93
-				has_full_control_of_state = 91
-				has_full_control_of_state = 89
-				has_full_control_of_state = 80
-				has_full_control_of_state = 78
-				has_full_control_of_state = 766
+				controls_state = 91
+				controls_state = 94
+				controls_state = 11
+				controls_state = 97
 			}
 		}
 		
 		bypass = {
-			AND = {
-				NOT = {
-					has_full_control_of_state = 188
-					has_full_control_of_state = 189
-					has_full_control_of_state = 814
-					has_full_control_of_state = 97
-					has_full_control_of_state = 94
-					has_full_control_of_state = 93
-					has_full_control_of_state = 91
-					has_full_control_of_state = 89
-					has_full_control_of_state = 80
-					has_full_control_of_state = 78
-					has_full_control_of_state = 766
-				}
+			NOT = {
+				controls_state = 91
+				controls_state = 94
+				controls_state = 11
+				controls_state = 97
 			}
 		}
 		
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_the_molotov_line_tt
-
-			### LITHUANIA ###
-			if = { #If Memel is controlled, then add forts in Memel, if not, then go to Zemaitija
-				limit = {
-					188 = { is_fully_controlled_by = ROOT }
-				}
-				custom_effect_tooltip = SOV_molotov_line_forts_3
-				hidden_effect = {
-					188 = {
-						add_building_construction = {
-							type = bunker
-							level = 3
-							province = {
-								id = 3288
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			else = {
-				189 = { #ZEMAITIJA
-					if = {
-						limit = { is_fully_controlled_by = ROOT }
-						custom_effect_tooltip = SOV_molotov_line_forts_3
-						hidden_effect = {
-							add_building_construction = {
-								type = bunker
-								level = 1
-								province = {
-									id = 6314
-									id = 9499
-									id = 3337
-								}
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-			814 = { #Suduva
+			11 = {
 				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
+					limit = {
+						ROOT = { controls_province = 6296 }
+						any_province_building_level = {
 							province = {
-								id = 6407
-								id = 11312
+								id = 6296
 							}
-							instant_build = yes
+							building = bunker
+							level < 1
 						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						province = 6296
+						instant_build = yes
 					}
 				}
 			}
-
-			### POLAND ###
-			97 = { #Bialystok
+			
+			97 = {
 				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_6
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
+					limit = {
+						ROOT = { controls_province = 11301 }
+						any_province_building_level = {
 							province = {
-								id = 3254
-								id = 400
-								id = 11357
-								id = 11329
-								id = 11274
-								id = 290
+								id = 11301
 							}
-							instant_build = yes
+							building = bunker
+							level < 1
 						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						province = 11301
+						instant_build = yes
 					}
 				}
 			}
-			94 = { #Polesie
+			
+			94 = {
 				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
+					limit = {
+						ROOT = { controls_province = 3392 }
+						any_province_building_level = {
 							province = {
 								id = 3392
-								id = 6546
 							}
-							instant_build = yes
+							building = bunker
+							level < 1
 						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						province = 3392
+						instant_build = yes
 					}
 				}
 			}
-			93 = { #Wolyn
+			
+			91 = {
 				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
+					limit = {
+						ROOT = { controls_province = 11479 }
+						any_province_building_level = {
 							province = {
-								id = 11441
-								id = 422
+								id = 11479
 							}
-							instant_build = yes
+							building = bunker
+							level < 1
 						}
 					}
-				}
-			}
-			91 = { #Lwow
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 536
-								id = 9468
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			89 = { #Stanislawow
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_4
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 6431
-								id = 6460
-								id = 9425
-								id = 3743
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-
-			### ROMANIA ###
-			80 = { #Bucovina
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 9548
-								id = 577
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			### ROMANIA ###
-			78 = { #Bessarabia
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_5
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 3407
-								id = 3577
-								id = 565
-								id = 3707
-								id = 3724
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			766 = { #Southern Bessarabia
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_molotov_line_forts_2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 3704
-								id = 3701
-							}
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						province = 11479
+						instant_build = yes
 					}
 				}
 			}
@@ -2016,39 +1862,35 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 2
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_the_molotov_line }
 
 		available = {
 			OR = {
-				has_full_control_of_state = 209
-				has_full_control_of_state = 210
-				has_full_control_of_state = 207
-				has_full_control_of_state = 206
-				has_full_control_of_state = 202
-				has_full_control_of_state = 203
-				has_full_control_of_state = 834
-				has_full_control_of_state = 192
+				controls_state = 209
+				controls_state = 210
+				controls_state = 207
+				controls_state = 206
+				controls_state = 202
+				controls_state = 203
+				controls_state = 834
+				controls_state = 192
 			}
 		}
 		
 		bypass = {
-			AND = {
-				NOT = {
-					has_full_control_of_state = 209
-					has_full_control_of_state = 210
-					has_full_control_of_state = 207
-					has_full_control_of_state = 206
-					has_full_control_of_state = 202
-					has_full_control_of_state = 203
-					has_full_control_of_state = 834
-					has_full_control_of_state = 192
-				}
+			NOT = {
+				controls_state = 209
+				controls_state = 210
+				controls_state = 207
+				controls_state = 206
+				controls_state = 202
+				controls_state = 203
+				controls_state = 834
+				controls_state = 192
 			}
 		}
-		
-		search_filters = {}
 
 		completion_reward = {
 			202 = {
@@ -2199,24 +2041,17 @@ focus_tree = {
 	focus = {
 		id = SOV_the_defense_of_moscow
 		icon = GFX_focus_SOV_the_defense_of_moscow
-		prerequisite = { focus = SOV_move_industry_to_the_urals focus = SOV_improve_the_stalin_line focus = SOV_the_molotov_line }
+		prerequisite = { focus = SOV_southern_frontier focus = SOV_improve_the_stalin_line focus = SOV_the_molotov_line }
 		x = 1
 		y = 1
-		relative_position_id = SOV_move_industry_to_the_urals
+		relative_position_id = SOV_southern_frontier
 		cost = 2
 
 		available = {
 			219 = {
 				is_controlled_by = ROOT
-				
-				OR = {
-					any_neighbor_state = {
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-
-					SOV = { surrender_progress > 0.18 } #Keep an eye on this, might be too cheesy
-				}
 			}
+			has_war_with = GER
 		}
 		
 		bypass = {
@@ -2232,78 +2067,123 @@ focus_tree = {
 		completion_reward = {
 			219 = {
 				custom_effect_tooltip = SOV_defense_of_moscow_forts
+				
 				hidden_effect = {
-					add_building_construction = {
-						type = anti_air_building
-						level = 5
-						instant_build = yes
+					219 = {
+						if = {
+							limit = {
+								ROOT = { controls_province = 6380 }
+								any_province_building_level = {
+									province = {
+										id = 6380
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 6380
+								instant_build = yes
+							}
+						}
+						
+						if = {
+							limit = {
+								ROOT = { controls_province = 13421 }
+								any_province_building_level = {
+									province = {
+										id = 13421
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 13421
+								instant_build = yes
+							}
+						}
+						
+						if = {
+							limit = {
+								ROOT = { controls_province = 13422 }
+								any_province_building_level = {
+									province = {
+										id = 13422
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 13422
+								instant_build = yes
+							}
+						}
+						
+						if = {
+							limit = {
+								ROOT = { controls_province = 13420 }
+								any_province_building_level = {
+									province = {
+										id = 13420
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 13420
+								instant_build = yes
+							}
+						}
+						
+						if = {
+							limit = {
+								ROOT = { controls_province = 13424 }
+								any_province_building_level = {
+									province = {
+										id = 13424
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 13424
+								instant_build = yes
+							}
+						}
+						
+						if = {
+							limit = {
+								ROOT = { controls_province = 13423 }
+								any_province_building_level = {
+									province = {
+										id = 13423
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 13423
+								instant_build = yes
+							}
+						}
 					}
-					if = {
-						limit = {
-							ROOT = { controls_province = 6380 }
-						}
-						add_building_construction = {
-							type = bunker
-							level = 10
-							province = 6380
-							instant_build = yes
-						}
-					}
-					if = {
-						limit = {
-							ROOT = { controls_province = 13420 }
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13420
-							instant_build = yes
-						}
-					}
-					if = {
-						limit = {
-							ROOT = { controls_province = 13421 }
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13421
-							instant_build = yes
-						}
-					}
-					if = {
-						limit = {
-							ROOT = { controls_province = 13422 }
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13422
-							instant_build = yes
-						}
-					}
-					if = {
-						limit = {
-							ROOT = { controls_province = 13423 }
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13423
-							instant_build = yes
-						}
-					}
-					if = {
-						limit = {
-							ROOT = { controls_province = 13424 }
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13424
-							instant_build = yes
-						}
-					}				
 				}
 				add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
 			}
@@ -2320,23 +2200,21 @@ focus_tree = {
 		cost = 2
 
 		available = {
-			AND = {
-				OR = {
-					has_full_control_of_state = 195 #LENINGRAD
-					has_full_control_of_state = 208 #LUGA
-					has_full_control_of_state = 137 #CRIMEA
-				}
-				
-				SOV = { surrender_progress > 0.1 }
+			OR = {
+				controls_state = 195
+				controls_state = 208
+				controls_state = 137
 			}
+			
+			has_war_with = GER
 		}
 		
 		bypass = {
 			AND = {
 				NOT = {
-					has_full_control_of_state = 195 #LENINGRAD
-					has_full_control_of_state = 208 #LUGA
-					has_full_control_of_state = 137 #CRIMEA
+					controls_state = 195
+					controls_state = 208
+					controls_state = 137
 				}
 			}
 		}
@@ -2351,57 +2229,120 @@ focus_tree = {
 				195 = { #LENINGRAD
 					custom_effect_tooltip = SOV_defense_of_leningrad_forts
 					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = {
-								id = 3151
+						195 = {
+							if = {
+								limit = {
+									ROOT = { controls_province = 13437 }
+									any_province_building_level = {
+										province = {
+											id = 13437
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 5
+									province = 13437
+									instant_build = yes
+								}
 							}
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 8
-							province = 149
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 10
-							province = 13438
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = coastal_bunker
-							level = 10
-							province = {
-								id = 3151
-								id = 13438
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 3151 }
+									any_province_building_level = {
+										province = {
+											id = 3151
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 10
+									province = 3151
+									instant_build = yes
+								}
 							}
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 6174
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13439
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 10
-							province = 13437
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
-							instant_build = yes
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 149 }
+									any_province_building_level = {
+										province = {
+											id = 149
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 10
+									province = 149
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 13439 }
+									any_province_building_level = {
+										province = {
+											id = 13439
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 10
+									province = 13439
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 13438 }
+									any_province_building_level = {
+										province = {
+											id = 13438
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 10
+									province = 13438
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 3151 }
+									any_province_building_level = {
+										province = {
+											id = 3151
+										}
+										building = coastal_bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = coastal_bunker
+									level = 10
+									province = 3151
+									instant_build = yes
+								}
+							}
 						}
 					}
 					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
@@ -2418,18 +2359,7 @@ focus_tree = {
 						add_building_construction = {
 							type = bunker
 							level = 5
-							province = 9097
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = coastal_bunker
-							level = 5
-							province = 9097
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
+							province = 11186
 							instant_build = yes
 						}
 					}
@@ -2494,15 +2424,9 @@ focus_tree = {
 		available = {
 			217 = {
 				is_controlled_by = ROOT
-				
-				OR = {
-					any_neighbor_state = {
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-
-					SOV = { surrender_progress > 0.3 } 
-				}
 			}
+			
+			has_war_with = GER
 		}
 		
 		completion_reward = {
@@ -2579,117 +2503,29 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_protect_the_white_sea_baltic_canal
+		id = SOV_explosion_of_the_dhs
 		icon = GFX_focus_generic_provoke_border_clashes
+		
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = 2
 		y = 2
+		
 		relative_position_id = SOV_military_engineering_university
-		cost = 5
+		cost = 1
 
 		available = {
-			has_full_control_of_state = 215 #ONEGA
-			has_full_control_of_state = 216 #OLONETS
-			has_full_control_of_state = 264 #TIKHVIN
-			has_full_control_of_state = 195 #LENINGRAD
+			controls_state = 226
+			controls_state = 200
+			has_war_with = GER
 		}
 		
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_full_control_of_state = 215 #ONEGA
-				}
-				215 = { #ONEGA
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = {
-							id = 9045
-							id = 3078
-							id = 11212
-						}
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 1
-						province = 9045
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 216 #OLONETS
-				}
-				216 = { #OLONETS
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = {
-							id = 92
-							id = 11092
-						}
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 264 #TIKHVIN
-				}
-				264 = { #TIKHVIN
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = {
-							id = 9082
-							id = 9190
-							id = 11059
-						}
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 195 #LENINGRAD
-				}
-				195 = { #LENINGRAD
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = {
-							id = 149
-							id = 11068
-							id = 79
-						}
-						instant_build = yes
-					}
-				}
-			}
+			226 = { add_dynamic_modifier = { modifier = massive_flooding days = 210 } }
+			200 = { add_dynamic_modifier = { modifier = massive_flooding days = 210 } }	
+			
+			hidden_effect = { news_event = origion.24 hours = 3 }
 		}
 	}
 
@@ -2955,7 +2791,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		cost = 5
 
 		search_filters = {}
 
@@ -3024,19 +2860,7 @@ focus_tree = {
 		search_filters = {}
 		select_effect = {
 			hidden_effect = {
-				if = {
-					limit = {
-						AND = {
-							not = {
-								has_completed_focus = SOV_move_industry_to_the_urals
-							}
-							has_completed_focus = SOV_military_engineering_university
-						}
-					}
-					
-					complete_national_focus = SOV_move_industry_to_the_urals
-				}
-
+				soviet_starts_evacuation = yes
 				add_ideas = SOV_desperate_measures_ns		
 			}
 		}
@@ -3054,7 +2878,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_an_adaptable_army
-		icon = GFX_focus_prc_infiltration
+		icon = GFX_focus_generic_winter_warfare
 		prerequisite = { focus = SOV_rehabilitated_military }
 		prerequisite = { focus = SOV_the_sacred_war }
 		x = 1
@@ -3063,17 +2887,15 @@ focus_tree = {
 		cost = 5
 
 		available = {
-
+			date > 1941.11.1
 		}
 		
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_heat_attrition_factor = -0.1 }
-			add_to_variable = { SOV_the_red_army_winter_attrition_factor = -0.1 }
-			add_to_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.15 }
-			add_to_variable = { SOV_the_red_army_acclimatization_hot_climate_gain_factor = 0.15 }
-			add_to_variable = { SOV_the_red_army_terrain_penalty_reduction = 0.05 }
+			add_to_variable = { SOV_the_red_army_winter_attrition_factor = -0.35 }
+			add_to_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.5 }
+			
 			custom_effect_tooltip = SOV_an_adaptable_army_ns_tt
 		}
 	}
@@ -3096,8 +2918,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_army_attack_factor = 0.1 }
-			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.1 }
+			add_to_variable = { SOV_the_red_army_army_attack_factor = 0.075 }
+			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.075 }
 			add_to_variable = { SOV_the_red_army_army_breakthrough_factor = 0.075 }
 			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
 			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
@@ -3118,39 +2940,13 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_war = yes
+			surrender_progress > 0.25
 		}
-		
-		search_filters = {}
 
 		completion_reward = {
-			#Spawn Penal divisions
-			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
-			hidden_effect = {
-				set_technology = { penal_infantry = 1 popup = no }
-
-				division_template = {
-					name = "Shtrafnaya Chast"
-					division_names_group = SOV_PEN_01
-					is_locked = yes
-
-					regiments = {
-						penal_battalion = { x = 0 y = 0 }
-						penal_battalion = { x = 0 y = 1 }
-						penal_battalion = { x = 0 y = 2 }
-						penal_battalion = { x = 1 y = 0 }
-						penal_battalion = { x = 1 y = 1 }
-						penal_battalion = { x = 1 y = 2 }
-						penal_battalion = { x = 2 y = 0 }
-						penal_battalion = { x = 2 y = 1 }
-						penal_battalion = { x = 2 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-					}
-				}
-
-				SOV_spawn_penal_divisions_effect = yes
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 50000
 			}
 		}
 	}
@@ -4135,7 +3931,6 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = SOV_they_will_know_fear
-				ahead_reduction = 2
 				bonus = 1
 				uses = 1
 				technology = main_battle_tank_chassis

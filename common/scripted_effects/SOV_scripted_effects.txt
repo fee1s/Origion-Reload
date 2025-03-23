@@ -3391,19 +3391,6 @@ SOV_clean_military_offensive_effect = {
 	clear_variable = SOV_offensive_main_objective
 }
 
-SOV_spawn_penal_divisions_effect = {
-	hidden_effect = {
-		capital_scope = {
-			create_unit = {
-				division = "division_template = \"Shtrafnaya Chast\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
-				owner = ROOT
-				count = 4
-			}
-		}
-		set_country_flag = SOV_penal_units_raised_flag
-	}
-}
-
 SOV_anglo_soviet_invasion_add_ai_strategies_effect = { #Soviet / Anglo-Soviet invasion of Iran
 	if = {
 		limit = {

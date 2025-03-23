@@ -146,15 +146,17 @@ Origion_fast_templates = { # Рещения на шаблоны
 			name = "Танк 45W"
 				regiments = {
 					medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_tank_destroyer_brigade = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
-					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_tank_destroyer_brigade = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
-					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_tank_destroyer_brigade = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
-					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_tank_destroyer_brigade = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
-					medium_tank_destroyer_brigade = { x = 0 y = 4 }  medium_sp_anti_air_brigade = { x = 1 y = 4 }																				  mechanized = { x = 3 y = 4 }																									
+					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+					medium_tank_destroyer_brigade = { x = 0 y = 4 }  medium_sp_anti_air_brigade = { x = 1 y = 4 }													 mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
 				}			
 				support = {
 					engineer = { x = 0 y = 0 }
 					light_tank_recon = { x = 0 y = 1 }		
-					medium_flame_tank = { x = 0 y = 2 }
+					flamethrower_brigade = { x = 0 y = 2 }
+					field_hospital = { x = 0 y = 3 }
+					logistics_company = { x = 0 y = 4 }
 				}
 			}				
 		}
@@ -200,27 +202,52 @@ Origion_fast_templates = { # Рещения на шаблоны
 		available = { 
 			has_tech = improved_small_airframe
 			has_tech = aa_hmg
-			has_tech = range_improvements
-			has_tech = survivability_studies
 			has_tech = engines_3
 		}
 		complete_effect = {
 			fighter_1940 = yes
 		}
 	}
+	
+	Fast_fighter_1941_template = {
+		icon = GFX_decision_SWE_set_air_budget
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		available = { 
+			has_tech = improved_small_airframe
+			has_tech = aa_cannon_1
+			has_tech = engines_3
+		}
+		complete_effect = {
+			fighter_1941 = yes
+		}
+	}
 
-	Fast_cas_template = {
+	Fast_cas_template_1940 = {
 		icon = GFX_decision_generic_merge_plant_aircraft		
 		fire_only_once = no
 		visible = {	has_country_flag = templates_decisions_allowed_flag }
-			available = { 
+		available = { 
 			has_tech = improved_small_airframe
-			has_tech = engines_3
-			has_tech = range_improvements
 			has_tech = heavy_bombs
+			has_tech = engines_3
 		}
 		complete_effect = {
 			Cas_1940 = yes
+		}
+	}
+	
+	Fast_cas_template_1941 = {
+		icon = GFX_decision_generic_merge_plant_aircraft		
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		available = { 
+			has_tech = improved_small_airframe
+			has_tech = tank_buster_1
+			has_tech = engines_3
+		}
+		complete_effect = {
+			Cas_1941 = yes
 		}
 	}
 }
@@ -779,7 +806,10 @@ ORG_africa_dec_cat = {
 			
 			hidden_effect = { 
 				GER = { annex_country = { target = VIC transfer_troops = no } }
+				
+				news_event = { id = origion.22 days = 2 }
 				set_global_flag = operation_torch_flag
+				
 				every_country = {
 					limit = {
 						OR = {

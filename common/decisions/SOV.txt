@@ -9078,62 +9078,6 @@ SOV_comecon_dec_cat = {
 	}
 }
 
-
- ######   ########  ########    ###    ########    ########     ###    ######## ########  ####  #######  ######## ####  ######     ##      ##    ###    ########
-##    ##  ##     ## ##         ## ##      ##       ##     ##   ## ##      ##    ##     ##  ##  ##     ##    ##     ##  ##    ##    ##  ##  ##   ## ##   ##     ##
-##        ##     ## ##        ##   ##     ##       ##     ##  ##   ##     ##    ##     ##  ##  ##     ##    ##     ##  ##          ##  ##  ##  ##   ##  ##     ##
-##   #### ########  ######   ##     ##    ##       ########  ##     ##    ##    ########   ##  ##     ##    ##     ##  ##          ##  ##  ## ##     ## ########
-##    ##  ##   ##   ##       #########    ##       ##        #########    ##    ##   ##    ##  ##     ##    ##     ##  ##          ##  ##  ## ######### ##   ##
-##    ##  ##    ##  ##       ##     ##    ##       ##        ##     ##    ##    ##    ##   ##  ##     ##    ##     ##  ##    ##    ##  ##  ## ##     ## ##    ##
- ######   ##     ## ######## ##     ##    ##       ##        ##     ##    ##    ##     ## ####  #######     ##    ####  ######      ###  ###  ##     ## ##     ##
-
-
-SOV_great_patriotic_war = {
-
-	SOV_raise_penal_units = {
-		priority = 21
-
-		icon = GFX_decision_generic_arrest
-
-		ai_will_do = {
-			base = 5
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			has_country_flag = { flag = SOV_penal_units_raised_flag days > 365 }
-			custom_trigger_tooltip = {
-				tooltip = SOV_raise_penal_units_days_tt
-				has_country_flag = {
-					flag = SOV_penal_units_raised_flag
-					days > 365
-				}
-			}
-			any_enemy_country = { SOV_is_major_not_original_sov = yes }
-		}
-
-		visible = {
-			has_completed_focus = SOV_penal_battalions
-			any_enemy_country = { SOV_is_major_not_original_sov = yes }
-		}
-
-		cost = 50
-
-		days_remove = 35
-
-		complete_effect = {
-		}
-
-		remove_effect = {
-			clr_country_flag = SOV_penal_units_raised_flag
-			SOV_spawn_penal_divisions_effect = yes
-		}
-	}
-}
-
 ################################################################################
 
 	 ##  ##  #   # ### ### ###      ##  ### #   # ### #       #   #  ##  ###

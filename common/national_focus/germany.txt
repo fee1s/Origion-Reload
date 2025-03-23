@@ -1143,15 +1143,8 @@ focus_tree = {
 		completion_reward = {
 			# Balance research bonus for 2 techs under land_doctrine
 			
-			army_experience = 200
+			army_experience = 300
 
-			
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = walther_von_brauchitsch
 			custom_effect_tooltip = available_military_high_command
@@ -1173,21 +1166,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			SOV = {
-				country_event = { id = germany.75 days = 1 }
-				custom_effect_tooltip = needs_approval
-				effect_tooltip = {
-					# Trade influence with the USSR? Or simply let the opinion mod do the work
-					give_SOV_armor_research_bonuses = yes
+				country_event = { id = germany.75 }
+				add_tech_bonus = {
+					name = GER_soviet_treaty
+					bonus = 1.0
+					uses = 2
+					technology = improved_medium_tank_chassis
+					technology = advanced_medium_tank_chassis
 				}
 			}
 			
-			effect_tooltip = {
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 1.0
-					uses = 3
-					category = armor
-				}
+			add_tech_bonus = {
+				name = GER_soviet_treaty
+				bonus = 1.0
+				uses = 2
+				technology = improved_medium_tank_chassis
+				technology = armor_tech_3
 			}
 		}
 	}
@@ -1261,21 +1255,16 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 100
+			army_experience = 200
 			mio:GER_daimler_benz_organization = {
 				add_mio_funds = 1500
 			}
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
 			add_tech_bonus = {
-				name = mech_army_bonus
+				name = GER_tanks_for_blitz_crieg
 				bonus = 1.0
-				uses = 1
-				category = armor
+				uses = 2
+				technology = advanced_medium_tank_chassis
+				technology = armor_tech_4
 			}
 		}
 	}
@@ -1620,6 +1609,41 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = GER_second_vienna_awward
+		icon = GFX_focus_HUN_negotiate_the_restrictions
+		prerequisite = { focus = GER_swedish_trade_agreement }
+		
+		x = 0
+		y = 2
+		
+		relative_position_id = GER_swedish_trade_agreement
+		cost = 5
+		
+		available = { has_war = yes }
+
+		completion_reward = {
+			news_event = { id = news.15 }
+			
+			ROM = { give_resource_rights = { receiver = GER state = 46 } }
+			
+			hidden_effect = {
+				if = {
+					limit = { HUN = { exists = yes } }
+					
+					HUN = { transfer_state = 76 }
+				}
+				
+				if = {
+					limit = { BUL = { exists = yes } }
+					
+					BUL = { transfer_state = 77 }
+				}
+			}
+		}
+	}
+	
 	focus = {
 		id = GER_SPA_friend
 		icon = GFX_focus_intervention_spain_nationalists
@@ -1798,13 +1822,18 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
+		
 		ai_will_do = {
 			factor = 10
 		}
+		
 		search_filters = {
 			FOCUS_FILTER_ANNEXATION
 		}
+		
 		completion_reward = {
+			country_event = { id = news.56 }
+			
 			hidden_effect = {
 				69 = {
 					add_core_of = GER
@@ -1821,10 +1850,15 @@ focus_tree = {
 				}
 				transfer_state = 972
 				
-				HUN = { transfer_state = 664 }
+				if = {
+					limit = { HUN = { exists = yes } }
+					
+					HUN = { transfer_state = 664 }
+				}
 				
 				set_country_flag = sudetenland_acquired
 				play_peace_in_our_time_effect = yes
+				
 				USA = {
 					set_country_flag = {
 						flag = USA_munich_window
@@ -1832,13 +1866,11 @@ focus_tree = {
 						value = 1
 					}
 				}
-				country_event = {
-					id = news.56
+				
+				add_named_threat = {
+					threat = 3
+					name = GER_demand_sudetenland_threat
 				}
-			}
-			add_named_threat = {
-				threat = 3
-				name = GER_demand_sudetenland_threat
 			}
 		}
 	}
@@ -1863,22 +1895,42 @@ focus_tree = {
 			country_event = {
 				id = germany.55
 			}
-			custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
-			add_named_threat = {
-				threat = 5
-				name = GER_end_of_czechoslovakia
-			}
+			
 			hidden_effect = {
 				add_to_variable = {
 					var = GER_mefo_bill_counter
 					value = -5
 				}
+				
 				GER_mefo_bills_level_down = yes
+				
 				ENG = {
 					add_war_support = 0.1
 				}
+				
 				FRA = {
 					add_war_support = 0.1
+				}
+				
+				GER = {
+					add_war_support = 0.1
+				}
+				
+				GER = {
+					annex_country = { target = CZE }
+				}
+				
+				if = {
+					limit = { HUN = { exists = yes } }
+			
+					HUN = { transfer_state = 70 transfer_state = 71 transfer_state = 73 }
+				}
+				
+				POL = { transfer_state = 72 }
+				
+				add_named_threat = {
+					threat = 5
+					name = GER_end_of_czechoslovakia
 				}
 			}
 		}

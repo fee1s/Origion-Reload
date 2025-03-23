@@ -1339,17 +1339,12 @@ focus_tree = {
 				add_ideas = ITA_hidden_tankettes_ns
 			}
 
-			add_doctrine_cost_reduction = {
-				name = ITA_italian_tankettes
-				cost_reduction = 0.75
-				uses = 2
-				category = cat_grand_battle_plan
-			}
+			hidden_effect = { army_experience = 150 }
 
 			add_tech_bonus = {
 				name = ITA_italian_tankettes
-				bonus = 1.25
-				uses = 1
+				bonus = 1
+				uses = 2
 				technology = improved_medium_tank_chassis
 				technology = advanced_medium_tank_chassis
 			}
@@ -1514,13 +1509,7 @@ focus_tree = {
 				add_ideas = ITA_hidden_ferrea_mole_ns
 			}
 			army_experience = 50
-
-			add_tech_bonus = {
-				name = ITA_ferrea_mole_ferreo_cuore
-				bonus = 1
-				uses = 2
-				category = armor
-			}
+			
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT

@@ -775,41 +775,23 @@ country_event = {
 country_event = {
 	id = germany.55
 	title = germany.53.t
+	
 	desc = {
 		text = germany.55.d
 		trigger = { has_global_flag = end_of_czechoslovakia }
 	}
+	
 	desc = {
 		text = germany.55.d_2
 		trigger = { NOT = { has_global_flag = end_of_czechoslovakia } }
 	}
+	
 	picture = GFX_report_event_german_inspect_troops
 
 	is_triggered_only = yes
-
+	
 	option = {
 		name = germany.55.b
-		
-		ai_chance = {
-			factor = 10
-		}
-		
-		GER = {
-			annex_country = { target = CZE }
-		}
-		
-		HUN = {
-			transfer_state = 70
-			transfer_state = 71
-			transfer_state = 73
-		}
-		
-		add_war_support = 0.1
-		POL = { transfer_state = 72 }
-		
-		custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
-		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
-		GER_mefo_bills_level_down = yes
 	}
 }
 
@@ -1276,44 +1258,6 @@ country_event = {
 
 	option = {
 		name = germany.75.a	#sounds good
-		GER = {
-			country_event = { days = 1 id = germany.76 }
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = sov_ger_treaty
-			}
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = sov_ger_treaty_trade
-			}
-		}
-		# REVISIT Balance research bonus
-		give_SOV_armor_research_bonuses = yes
-	}
-}
-
-# Soviets Accept German-Soviet Treaty
-country_event = {
-	id = germany.76
-	title = germany.76.t
-	desc = germany.76.d
-	picture = GFX_report_event_physics_lab_02
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.76.a	#bah
-		# REVISIT Balance research bonus
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1.0
-			uses = 3
-			category = armor
-		}
-		SOV = {
-			add_opinion_modifier = { target = GER modifier = sov_ger_treaty }
-			add_opinion_modifier = { target = GER modifier = sov_ger_treaty_trade }
-		}
 	}
 }
 

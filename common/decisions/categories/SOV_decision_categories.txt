@@ -61,16 +61,11 @@ SOV_propaganda_campaigns = {
 }
 
 SOV_industry_relocation = {
-	priority = 12
 
 	icon = generic
 
 	allowed = {
 		original_tag = SOV
-	}
-
-	visible = {
-		has_completed_focus = SOV_move_industry_to_the_urals
 	}
 }
 
@@ -98,21 +93,6 @@ SOV_soviet_aid_to_poum_decision_category = { #Dec cat for aiding the POUM
 			}
 		}
 	}
-}
-
-SOV_great_patriotic_war = {
-	priority = 200
-
-	icon = sov_great_patriotic_war
-	
-	allowed = {
-		original_tag = SOV
-	}
-	visible = {
-		any_enemy_country = {
-			SOV_is_major_not_original_sov = yes
-		}
-	}	
 }
 
 SOV_diplomacy_baltic_decision_category = {

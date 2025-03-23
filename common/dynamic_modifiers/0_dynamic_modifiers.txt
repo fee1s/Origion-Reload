@@ -1434,3 +1434,12 @@ ger_walled_city = {
 	pocket_penalty = -0.25
 	no_supply_grace = 720
 }
+
+massive_flooding = { 
+	enable = { always = yes }
+	
+	icon = GFX_decision_hol_inundate_water_lines
+	
+	disable_strategic_redeployment = 1
+	army_speed_factor = -0.65
+}

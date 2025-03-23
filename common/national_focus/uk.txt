@@ -88,13 +88,9 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
-		}
-		
-		available = {
-			has_war = yes
 		}
 		
 		available_if_capitulated = yes
@@ -102,12 +98,12 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			air_experience = 25
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 1
-				uses = 3
-				category = radar_tech
+				uses = 2
+				technology = improved_centimetric_radar
+				technology = advanced_centimetric_radar
 			}
 		}
 	}
@@ -117,6 +113,9 @@ focus_tree = {
 		prerequisite = {
 			focus = radar_focus
 		}
+		
+		available = { date > 1940.9.1 }
+		
 		icon = GFX_goal_generic_scientific_exchange
 		x = -1
 		y = 1
@@ -129,8 +128,10 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			USA = {
-				country_event = britain.1
+			add_ideas = uk_tizards_mission
+			
+			if = { limit = { USA = { exists = yes } }
+				USA = { add_ideas = uk_tizards_mission }
 			}
 		}
 	}
@@ -159,7 +160,7 @@ focus_tree = {
 				name = maud_focus
 				bonus = 1
 				uses = 1
-				category = nuclear
+				technology = advanced_computing_machine
 			}
 		}
 	}
@@ -189,9 +190,6 @@ focus_tree = {
 
 	focus = {
 		id = UK_secret_focus
-		available = {
-			date > 1943.01.01
-		}
 		prerequisite = {
 			focus = maud_focus
 		}
@@ -203,7 +201,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = uk_extra_tech_slot
-		cost = 20
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -214,15 +212,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1
-				uses = 2
-				category = rocketry
-			}
-			add_tech_bonus = {
-				name = UK_secret_focus
-				bonus = 1
-				uses = 2
-				category = nuclear
+				bonus = 3
+				uses = 1
+				technology = modern_large_airframe
 			}
 		}
 	}
@@ -231,9 +223,6 @@ focus_tree = {
 		id = shadow_scheme_focus
 		prerequisite = {
 			focus = limited_rearmament_focus
-		}
-		available = {
-			date > 1936.3.1
 		}
 		continue_if_invalid = yes
 		available_if_capitulated = yes
@@ -394,14 +383,42 @@ focus_tree = {
 		}
 	}
 
-
 	focus = {
-		id = ENG_artillery_focus
-		icon = GFX_goal_generic_army_artillery2
+		id = ENG_tank_focus
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = limited_rearmament_focus }
 		x = 0
 		y = 1
 		relative_position_id = limited_rearmament_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			mio:ENG_vickers_armstrong_eng_organization = {
+				add_mio_size = 5
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				uses = 2
+				technology = improved_medium_tank_chassis
+				technology = advanced_medium_tank_chassis
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_artillery_focus
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = ENG_tank_focus }
+		x = -1
+		y = 1
+		relative_position_id = ENG_tank_focus
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -413,36 +430,46 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {	
 				bonus = 1
-				uses = 2
+				uses = 3
+				technology = antitank3
 				technology = antitank4
 				technology = antitank5
 			}
 		}
 	}
-
+	
 	focus = {
-		id = ENG_tank_focus
+		id = ENG_defense_program_BSA
 		prerequisite = {
-			focus = ENG_artillery_focus
+			focus = uk_extra_tech_slot
 		}
-		icon = GFX_goal_generic_army_tanks
-		x = 1
+		icon = GFX_focus_generic_purchase_mechanized_equipment
+		x = 0
 		y = 1
-		relative_position_id = ENG_artillery_focus
-		cost = 10
+		relative_position_id = uk_extra_tech_slot
+		cost = 5
+		
 		ai_will_do = {
 			factor = 1
 		}
+		
+		available_if_capitulated = yes
+		
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		available_if_capitulated = yes
+		
 		completion_reward = {
+			mio:ENG_rsaf_enfield_organization = {
+				add_mio_funds = 3350
+			}
 			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1
-				uses = 1
-				category = armor
+				name = ENG_defense_program_BSA
+				bonus = 1.0
+				uses = 3
+				technology = improved_infantry_weapons
+				technology = improved_infantry_weapons_2
+				technology = advanced_infantry_weapons
 			}
 		}
 	}
@@ -450,15 +477,13 @@ focus_tree = {
 	focus = {
 		id = ENG_motorized_focus
 		prerequisite = {
-			focus = ENG_artillery_focus
-		}
-		available = {
+			focus = ENG_tank_focus
 		}
 		icon = GFX_goal_generic_army_motorized
-		x = -1
+		x = 1
 		y = 1
-		relative_position_id = ENG_artillery_focus
-		cost = 10
+		relative_position_id = ENG_tank_focus
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -467,11 +492,51 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
+			mio:ENG_vauxhall_automotive_organization = {
+				add_mio_funds = 3350
+			}
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1
 				uses = 2
 				category = motorized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_mobilization_royal_engineers
+		prerequisite = {
+			focus = ENG_artillery_focus
+		}
+		
+		prerequisite = {
+			focus = ENG_motorized_focus
+		}
+		
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 2
+		
+		relative_position_id = ENG_tank_focus
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_mobilization_royal_engineers
+			    bonus = 1
+			    uses = 4
+				technology = tech_engineers3
+				technology = tech_flamethrower_brigade3
+				technology = tech_field_hospital3
+				technology = tech_logistics_company3
 			}
 		}
 	}
@@ -492,7 +557,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = limited_rearmament_focus
 		
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -582,7 +647,7 @@ focus_tree = {
 				name = bomber_command_focus
 				bonus = 1
 				uses = 1
-				category = tactical_bomber
+				technology = tank_buster_2
 			}
 		}
 	}
@@ -609,7 +674,7 @@ focus_tree = {
 				name = coastal_command_focus
 				bonus = 1
 				uses = 1
-				technology = air_torpedoe_2
+				technology = air_torpedoe_3
 			}
 		}
 	}
@@ -662,8 +727,10 @@ focus_tree = {
 			add_tech_bonus = {
 				name = uk_jet_focus
 				bonus = 1
-				uses = 4
-				category = jet_technology
+				uses = 3
+				technology = advanced_small_airframe
+				technology = engines_4
+				technology = jet_engines
 			}
 		}
 	}
@@ -759,14 +826,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = uk_amphibious_focus
 				bonus = 1
-				uses = 1
-				category = marine_tech
-			}
-			add_tech_bonus = {
-				name = uk_amphibious_focus
-				bonus = 1
 				uses = 2
-				category = tp_tech
+				technology = amphibious_tank_chassis
+				technology = amphibious_drive
 			}
 		}
 	}
@@ -1019,45 +1081,15 @@ focus_tree = {
 			has_dlc = "Man the Guns"
 		}
 		available = {
-			date > 1941.06.01
+			date > 1941.05.01
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = ENG_vanguard_tt
+			
 			hidden_effect = { set_technology = { advanced_ship_hull_heavy = 1 } }
 			
-			create_equipment_variant = {
-				name = "Vanguard"
-				type = ship_hull_heavy_4
-				parent_version = 0
-
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_4
-					fixed_ship_anti_air_slot = ship_anti_air_3
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_4
-					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries_3
-					fixed_ship_armor_slot = ship_armor_bb_4
-					front_1_custom_slot = ship_heavy_battery_4
-					mid_1_custom_slot = dp_ship_secondaries_3
-					mid_2_custom_slot = ship_airplane_launcher_3
-					mid_3_custom_slot = ship_airplane_launcher_3
-					mid_4_custom_slot = dp_ship_secondaries_3
-					rear_1_custom_slot = ship_heavy_battery_4
-				}
-			}
-
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_heavy_4
-					creator = "ENG"
-					version_name = "Vanguard"
-				}
-				name = "Vanguard"
-				requested_factories = 1
-				progress = 0.75
-				amount = 1
-			}
+			set_technology = { advanced_heavy_battery = 1 }
 		}
 	}
 
@@ -2001,14 +2033,14 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 5
 						province = 13389
 						instant_build = yes
 					}
 					
 					add_building_construction = {
 						type = coastal_bunker
-						level = 2
+						level = 5
 						province = 13389
 						instant_build = yes
 					}
@@ -2027,7 +2059,7 @@ focus_tree = {
 			}
 		}
 		icon = GFX_goal_generic_construct_military
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = uk_mediterranean_focus
 		cost = 2
@@ -2059,7 +2091,7 @@ focus_tree = {
 					add_building_construction = {
 						type = coastal_bunker
 						level = 3
-						province = 4076
+						province = 4135
 						instant_build = yes
 					}
 				}
@@ -2092,7 +2124,7 @@ focus_tree = {
 		}
 		icon = GFX_goal_generic_defence
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = uk_mediterranean_focus
 		cost = 5
 		ai_will_do = {
@@ -2161,7 +2193,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 5
 							province = 7011
 							instant_build = yes
 						}
@@ -2173,7 +2205,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 5
 							province = 12004
 							instant_build = yes
 						}
@@ -2257,10 +2289,331 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = uk_kena_aswan_defensive_line
+		
+		prerequisite = {
+			focus = uk_mediterranean_focus
+		}
+		
+		icon = GFX_focus_PER_desert_training
+		x = 2
+		y = 1
+		relative_position_id = uk_mediterranean_focus
+		cost = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			OR = {
+				controls_state = 907
+				controls_state = 456
+			}
+		}
+		
+		bypass = {
+			NOT = {
+				controls_state = 907
+				controls_state = 456
+			}
+		}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = uk_kena_aswan_defensive_line_tt
+			
+			hidden_effect = {
+				907 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 1151 }
+							any_province_building_level = {
+								province = {
+									id = 1151
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1151
+							instant_build = yes
+						}
+					}
+				}
+				
+				456 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 13395 }
+							any_province_building_level = {
+								province = {
+									id = 13395
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13395
+							instant_build = yes
+						}
+					}
+						
+					if = {
+						limit = {
+							ROOT = { controls_province = 1064 }
+							any_province_building_level = {
+								province = {
+									id = 1064
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 1064
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 7073 }
+							any_province_building_level = {
+								province = {
+									id = 7073
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 7073
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 10097 }
+							any_province_building_level = {
+								province = {
+									id = 10097
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 10097
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13399 }
+							any_province_building_level = {
+								province = {
+									id = 13399
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 13399
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13398 }
+							any_province_building_level = {
+								province = {
+									id = 13398
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 13398
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 1028 }
+							any_province_building_level = {
+								province = {
+									id = 1028
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 1028
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = uk_last_african_bastion
+		
+		prerequisite = {
+			focus = uk_kena_aswan_defensive_line
+		}
+		
+		icon = GFX_focus_ETH_consolidate_east_africa
+		x = -1
+		y = 1
+		relative_position_id = uk_kena_aswan_defensive_line
+		cost = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			OR = {
+				controls_state = 992
+				controls_state = 551	
+				controls_state = 883
+			}
+		}
+		
+		bypass = {
+			NOT = {
+				controls_state = 992
+				controls_state = 551	
+				controls_state = 883
+			}
+		}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = uk_last_african_bastion_tt
+			
+			hidden_effect = {
+				992 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 8105 }
+							any_province_building_level = {
+								province = {
+									id = 8105
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 8105
+							instant_build = yes
+						}
+					}
+				}
+				
+				883 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 1977 }
+							any_province_building_level = {
+								province = {
+									id = 1977
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1977
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 12725 }
+							any_province_building_level = {
+								province = {
+									id = 12725
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 12725
+							instant_build = yes
+						}
+					}
+				}
+				
+				551 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 12806 }
+							any_province_building_level = {
+								province = {
+									id = 12806
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 12806
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	focus = {
 		id = uk_malta_focus
 		prerequisite = {
-			focus = uk_mediterranean_focus
+			focus = uk_rock_focus
 		}
 		available = {
 			116 = {
@@ -2270,7 +2623,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		x = 1
 		y = 1
-		relative_position_id = uk_mediterranean_focus
+		relative_position_id = uk_rock_focus
 		cost = 2
 		available_if_capitulated = yes
 
@@ -2473,7 +2826,7 @@ focus_tree = {
 		id = uk_operation_countenance 
 		
 		prerequisite = {
-			focus = uk_protect_suez
+			focus = uk_protect_suez focus = uk_malta_focus focus = uk_last_african_bastion
 		}
 		
 		#prerequisite = { focus = uk_counter_offensive_cairo focus = uk_defeat_of_the_italian_corps }
@@ -2486,7 +2839,7 @@ focus_tree = {
 		
 		relative_position_id = uk_protect_suez
 		x = 0
-		y = 1
+		y = 2
 		cost = 5
 		
 		completion_reward = {
@@ -2647,9 +3000,6 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_issue_gasmasks
-		available = {
-			date > 1939.6.1
-		}
 		available_if_capitulated = yes
 		prerequisite = {
 			focus = ENG_home_defence
@@ -2676,8 +3026,8 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		completion_reward = {
-			add_war_support = 0.08
-			add_stability = 0.12
+			add_war_support = 0.1
+			add_stability = 0.15
 		}
 	}
 	
@@ -2721,7 +3071,7 @@ focus_tree = {
 	focus = {
 		id = uk_operation_crusader
 		
-		icon = GFX_focus_SWE_refuge_from_war
+		icon = GFX_focus_IRQ_liberate_north_africa
 		
 		cost = 5
 		relative_position_id = ENG_home_defence

@@ -196,6 +196,17 @@ ideas = {
 			}
 		}
 		
+		uk_tizards_mission = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = AFG_democratic_graduates
+			
+			modifier = {
+				research_speed_factor = 0.08
+			}
+		}
+		
 		uk_operation_crusader = {
 			allowed = {
 				always = no
@@ -451,7 +462,7 @@ ideas = {
 	
 			removal_cost = -1
 			modifier = {
-				conscription = 0.1
+				conscription = 0.125
 				surrender_limit = 1
 			}
 		}
@@ -464,7 +475,6 @@ ideas = {
 			
 			removal_cost = -1
 			modifier = {
-				conscription = 0.125
 				global_building_slots_factor = 0.25
 			}
 		}

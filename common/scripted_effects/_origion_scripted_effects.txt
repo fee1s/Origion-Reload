@@ -134,29 +134,62 @@ ITA_join_to_war = {
 
 fighter_1940 = {
 	create_equipment_variant = {
-		name = "Истребитель 1940го" 
+		name = "Истребитель 1940-го" 
 		type = small_plane_airframe_2
 		modules = {
 			fixed_main_weapon_slot = heavy_mg_4x
 			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
 			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
 			engine_type_slot = engine_3_1x
-			special_type_slot_1 = fuel_tanks_small
-			special_type_slot_2 = armor_plate_small		
-			special_type_slot_3 = armor_plate_small		
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = lmg_defense_turret		
 		}
 	}					
 }
+
+fighter_1941 = {
+	create_equipment_variant = {
+		name = "Истребитель 1941-го" 
+		type = small_plane_airframe_2
+		modules = {
+			fixed_main_weapon_slot = aa_cannon_1
+			fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = hmg_defense_turret		
+		}
+	}					
+}
+
 Cas_1940 = {
 	create_equipment_variant = {
-		name = "Штурмовик 1940го" 
+		name = "Штурмовик 1940-го" 
 		type = small_plane_cas_airframe_2
 		modules = {
 			fixed_main_weapon_slot = heavy_bomb_locks
 			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
 			fixed_auxiliary_weapon_slot_2 = heavy_bomb_locks
 			engine_type_slot = engine_3_1x
-			special_type_slot_1 = fuel_tanks_small
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small			
+		}
+	}					
+}
+
+Cas_1941 = {
+	create_equipment_variant = {
+		name = "Штурмовик 1941-го" 
+		type = small_plane_cas_airframe_2
+		modules = {
+			fixed_main_weapon_slot = tank_buster_1
+			fixed_auxiliary_weapon_slot_1 = tank_buster_1
+			fixed_auxiliary_weapon_slot_2 = tank_buster_1
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small			
 		}
 	}					
 }
@@ -339,3 +372,104 @@ africa_dm_gibraltar_step_remove_effect = { #
 	    add_to_variable = { AXIS_africa_controlled_regions = 1 }
 	}
 }
+
+soviet_starts_evacuation = { 
+	activate_mission = SOV_odessa_ir
+	activate_mission = SOV_balta_ir
+	activate_mission = SOV_vinnica_ir
+	activate_mission = SOV_proskurov_ir
+	activate_mission = SOV_stanislov_ir
+	activate_mission = SOV_lvov_ir
+	activate_mission = SOV_zhitomir_ir
+	activate_mission = SOV_south_bessarabia_ir
+	activate_mission = SOV_bessarabia_ir
+	activate_mission = SOV_bukovina_ir
+	activate_mission = SOV_volin_ir
+	activate_mission = SOV_polese_ir
+	activate_mission = SOV_belostok_ir
+	activate_mission = SOV_novogrudok_ir
+	activate_mission = SOV_suduva_ir
+	activate_mission = SOV_vileyka_ir
+	activate_mission = SOV_vilno_ir
+	activate_mission = SOV_kaunas_ir
+	activate_mission = SOV_aukshtaytia_ir
+	activate_mission = SOV_zemgale_ir
+	activate_mission = SOV_zhemaytia_ir
+	activate_mission = SOV_kurlandy_ir
+	activate_mission = SOV_crimea_ir
+	activate_mission = SOV_voroshilovgrad_ir
+	activate_mission = SOV_stalino_ir
+	activate_mission = SOV_zaporozhe_ir
+	activate_mission = SOV_herson_ir
+	activate_mission = SOV_harkiv_ir
+	activate_mission = SOV_dnepropetrovsk_ir
+	activate_mission = SOV_nikolaev_ir
+	activate_mission = SOV_poltava_ir
+	activate_mission = SOV_cherkassi_ir
+	activate_mission = SOV_sumi_ir
+	activate_mission = SOV_chernigov_ir
+	activate_mission = SOV_kiev_ir
+	activate_mission = SOV_bryansk_ir
+	activate_mission = SOV_mozir_ir
+	activate_mission = SOV_roslavl_ir
+	activate_mission = SOV_gomel_ir
+	activate_mission = SOV_bobruysk_ir
+	activate_mission = SOV_minsk_ir
+	activate_mission = SOV_smolensk_ir
+	activate_mission = SOV_vitebsk_ir
+	activate_mission = SOV_nevel_ir
+	activate_mission = SOV_pskov_ir
+	activate_mission = SOV_luga_ir
+	activate_mission = SOV_latgalia_ir
+	activate_mission = SOV_riga_ir
+	activate_mission = SOV_vidzeme_ir
+	activate_mission = SOV_tartu_ir
+	activate_mission = SOV_pyrnu_ir
+	activate_mission = SOV_viruma_ir
+	activate_mission = SOV_haryu_ir
+	activate_mission = SOV_saarema_ir
+	activate_mission = SOV_azerbaydzhan_ir
+	activate_mission = SOV_armenia_ir
+	activate_mission = SOV_dagestan_ir
+	activate_mission = SOV_gruzia_ir
+	activate_mission = SOV_chechnya_ir
+	activate_mission = SOV_osetya_ir
+	activate_mission = SOV_kabardino_ir
+	activate_mission = SOV_abhazia_ir
+	activate_mission = SOV_sochi_ir
+	activate_mission = SOV_astrahan_ir
+	activate_mission = SOV_elista_ir
+	activate_mission = SOV_stavropol_ir
+	activate_mission = SOV_krasnodar_ir
+	activate_mission = SOV_stalingrad_ir
+	activate_mission = SOV_volgodonsk_ir
+	activate_mission = SOV_rostov_ir
+	activate_mission = SOV_millerovo_ir
+	activate_mission = SOV_kamishin_ir
+	activate_mission = SOV_mihaylovka_ir
+	activate_mission = SOV_voronezh_ir
+	activate_mission = SOV_belgorod_ir
+	activate_mission = SOV_saratov_ir
+	activate_mission = SOV_tambov_ir
+	activate_mission = SOV_lipeck_ir
+	activate_mission = SOV_kursk_ir
+	activate_mission = SOV_orel_ir
+	activate_mission = SOV_penza_ir
+	activate_mission = SOV_ryazn_ir
+	activate_mission = SOV_tula_ir
+	activate_mission = SOV_kaluga_ir
+	activate_mission = SOV_gorkiy_ir
+	activate_mission = SOV_ivanovo_ir
+	activate_mission = SOV_moscow_ir
+	activate_mission = SOV_vyazma_ir
+	activate_mission = SOV_yaroslavl_ir
+	activate_mission = SOV_kalinin_ir
+	activate_mission = SOV_rzhev_ir
+	activate_mission = SOV_tihvin_ir
+	activate_mission = SOV_volhov_ir
+	activate_mission = SOV_novgorod_ir
+	activate_mission = SOV_leningrad_ir
+	activate_mission = SOV_karelia_ir
+}
+	
+	
