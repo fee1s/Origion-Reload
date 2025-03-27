@@ -9,25 +9,11 @@
  #################### 
 
 JAP_osaka_army_arsenal_organization = {
-	include = generic_tank_organization
+	include = axis_tank_organization
 	icon = GFX_idea_osaka_army_arsenal
 	allowed = {	
 		tag = JAP
 		has_dlc = "Arms Against Tyranny"
-	}
-} 
-
-JAP_heavy_tanks_organization = {
-	include = generic_heavy_tank_organization
-	icon = GFX_idea_osaka_army_arsenal
-	
-	allowed = {	
-			tag = JAP 
-
-	}
-
-	available = {
-	
 	}
 }
 

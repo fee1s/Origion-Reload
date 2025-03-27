@@ -1876,6 +1876,9 @@ focus_tree = {
 				controls_state = 203
 				controls_state = 834
 				controls_state = 192
+				controls_state = 224
+				controls_state = 207
+				controls_state = 242
 			}
 		}
 		
@@ -1889,6 +1892,9 @@ focus_tree = {
 				controls_state = 203
 				controls_state = 834
 				controls_state = 192
+				controls_state = 224
+				controls_state = 207
+				controls_state = 242
 			}
 		}
 
@@ -1992,6 +1998,25 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+				
+				if = {
+					limit = {
+						ROOT = { controls_province = 11561 }
+						any_province_building_level = {
+							province = {
+								id = 11561
+							}
+							building = bunker
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11561
+						instant_build = yes
+					}
+				}
 			}
 			
 			194 = {
@@ -2031,6 +2056,69 @@ focus_tree = {
 						type = bunker
 						level = 5
 						province = 11370
+						instant_build = yes
+					}
+				}
+			}
+			
+			207 = {
+				if = {
+					limit = {
+						ROOT = { controls_province = 11241 }
+						any_province_building_level = {
+							province = {
+								id = 11241
+							}
+							building = bunker
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11241
+						instant_build = yes
+					}
+				}
+			}
+			
+			242 = {
+				if = {
+					limit = {
+						ROOT = { controls_province = 306 }
+						any_province_building_level = {
+							province = {
+								id = 306
+							}
+							building = bunker
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 306
+						instant_build = yes
+					}
+				}
+			}
+			
+			224 = {
+				if = {
+					limit = {
+						ROOT = { controls_province = 9288 }
+						any_province_building_level = {
+							province = {
+								id = 9288
+							}
+							building = bunker
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 9288
 						instant_build = yes
 					}
 				}
@@ -2530,163 +2618,174 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_far_east_fortification
-		icon = GFX_goal_fortify_the_westwall
+		id = SOV_kursk_salient_forts
+		icon = GFX_focus_CHL_expand_the_forestry
+		
 		prerequisite = { focus = SOV_military_engineering_university }
 		x = 3
 		y = 1
 		relative_position_id = SOV_military_engineering_university
-		cost = 10
+		
+		cost = 5
 
 		available = {
 			OR = {
-				has_full_control_of_state = 563
-				has_full_control_of_state = 561
-				has_full_control_of_state = 657
-				has_full_control_of_state = 409
-				has_full_control_of_state = 408
+				controls_state = 220
+				controls_state = 222
+				controls_state = 224
 			}
 		}
 		
-		search_filters = {}
+		bypass = {
+			NOT = {
+				controls_state = 220
+				controls_state = 222
+				controls_state = 224
+			}
+		}
 
 		completion_reward = {
-			563 = { #CHITA
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_far_east_fortification_forts_4
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 4719
-								id = 12622
+			custom_effect_tooltip = SOV_kursk_salient_forts_tt
+			hidden_effect = {
+				220 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 3580 }
+							any_province_building_level = {
+								province = {
+									id = 3580
+								}
+								building = bunker
+								level < 1
 							}
-							instant_build = yes
 						}
 						add_building_construction = {
 							type = bunker
-							level = 2
-							province = {
-								id = 10559
+							level = 8
+							province = 3580
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 9260 }
+							any_province_building_level = {
+								province = {
+									id = 9260
+								}
+								building = bunker
+								level < 1
 							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9260
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 580 }
+							any_province_building_level = {
+								province = {
+									id = 580
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 580
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 11526 }
+							any_province_building_level = {
+								province = {
+									id = 11526
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11526
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 6543 }
+							any_province_building_level = {
+								province = {
+									id = 6543
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6543
+							instant_build = yes
+						}
+					}
+				}
+				
+				222 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 9355 }
+							any_province_building_level = {
+								province = {
+									id = 9355
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 9355
+							instant_build = yes
+						}
+					}
+				}
+				
+				224 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 3335 }
+							any_province_building_level = {
+								province = {
+									id = 3335
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 3335
 							instant_build = yes
 						}
 					}
 				}
 			}
-			561 = { #AMUR
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_far_east_fortification_forts_4
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 12543
-								id = 7851
-								id = 10678
-							}
-							instant_build = yes
-						}
-						add_building_construction = { #Set like this for stupid tooltip purposes
-							type = bunker
-							level = 1
-							province = {
-								id = 12657
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			657 = { #BIROBIDZHAN
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_far_east_fortification_forts_10
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 10655
-								id = 7801
-								id = 10722
-								id = 7672
-							}
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = {
-								id = 7763
-								id = 4725
-								id = 4805
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			409 = { #KHABAROVSK
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_far_east_fortification_forts_4
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = {
-								id = 12189
-							}
-							instant_build = yes
-						}
-						add_building_construction = {  #Set like this for stupid tooltip purposes
-							type = bunker
-							level = 2
-							province = {
-								id = 10466
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			408 = { #VLADIVOSTOK
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					custom_effect_tooltip = SOV_far_east_fortification_forts_10
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 1
-							province = {
-								id = 11643
-								id = 6686
-								id = 664
-								id = 6684
-								id = 3787
-								id = 6838
-							}
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = {
-								id = 3977
-								id = 957
-							}
-							instant_build = yes
-						}
-					}
-				}
-			}
-			# Other possible Provinces
-			#11879 (Border Conflict with Japan) 1755 (North Sakhalin)
 		}
 	}
 

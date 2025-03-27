@@ -178,12 +178,16 @@ NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.01 -- приор
 NDefines.NNavy.GUN_HIT_PROFILES = { 95.0, 210.0, 110.0 } -- 1 харднесс, 2- торпеды 3-лайт атака, чем больше значение, тем дольше бой и меньше попаданий
 
 NDefines.NNavy.BASE_POSITIONING = 1.0 -- максимальное размещение
+
 NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR = 0.01 -- увеличивает обнаружение между 2 флотами, сторона с большим обнаружением получает бонус
 NDefines.NNavy.MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION = 0.0 -- уменьшает бонус от обнаружения
 
-NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.90 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
-NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 1.00 -- максимальный штраф от размещения
-NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.05 -- штраф, за более большое авиа соединение
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.9 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
+
+NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.90 -- максимальный штраф от размещения
+NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0 -- штраф, за более большое авиа соединение
+
+NDefines.NNavy.MIN_SHIPS_FOR_HIGHER_SHIP_RATIO_PENALTY = 5 -- минимальное кол-во кораблей, чтобы работало размещение 
 
 NDefines.NNavy.BASE_CARRIER_SORTIE_EFFICIENCY = 0.2
 NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс штраф за большее количество самолетов у противника на авиках
@@ -191,9 +195,11 @@ NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс ш
 NDefines.NNavy.POSITIONING_PENALTY_FOR_SHIPS_JOINED_COMBAT_AFTER_IT_STARTS = 0.01 -- каждый корабль в бою который получает штраф к размещению
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- максимальный штраф за новые суда
 NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- накопленный штраф за новые суда который будет уменьшаться
-NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.95 -- штраф нанесения урона при плохом размещении
+
+NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.9 -- штраф нанесения урона при плохом размещении
 NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.5 -- понижение щитка при понижении размещения
 NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35 -- дебафф на пво флота от размещения
+
 NDefines.NNavy.SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING = 2.0 -- размещение лодок
 
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0

@@ -30,14 +30,19 @@ focus_tree = {
 	focus = {
 		id = RAJ_provincial_elections
 		icon = GFX_goal_generic_forceful_treaty
-		x = 0
-		y = 0
+		x = -10
+		y = 1
 
 		cost = 10
 
 		ai_will_do = {
 			factor = 20
 		}
+		
+		prerequisite = {
+		    focus = RAJ_lessons_of_the_great_war
+		}
+		relative_position_id = RAJ_lessons_of_the_great_war
 
 		available = {
 			JAP = {
@@ -56,11 +61,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 100			
-			add_autonomy_ratio = {
-				value = 0.1
-				localization = RAJ_provincial_elections
-			}
+			add_political_power = 100	
 			swap_ideas = {
 				add_idea = RAJ_princely_states_election
 				remove_idea = RAJ_princely_states
@@ -89,10 +90,6 @@ focus_tree = {
 			
 		}
 
-		bypass = {
-			NOT = { is_subject_of = ENG }
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -100,51 +97,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_autonomy_ratio = {
-				value = 0.1
-				localization = RAJ_indian_national_congress
-			}
-			add_opinion_modifier = { target = ENG modifier = RAJ_indian_national_congress }
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RAJ_bhimrao_ramji_ambedkar
-			hidden_effect = { news_event = { id = news.283 hours = 12 } }
-		}
-	}
-
-	focus = {
-		id = RAJ_quit_india_movement
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = RAJ_swaraj focus = RAJ_cripps_mission }
-		x = -2
-		y = 1
-		relative_position_id = RAJ_cripps_mission
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			is_subject = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_ideas = RAJ_quit_india_movement
-			set_country_flag = RAJ_quit_india_movement
-			hidden_effect = {
-				news_event = { id = news.282 hours = 6 }
-			}
+			add_stability = 0.1
+			add_war_support = 0.1
 		}
 	}
 
@@ -160,7 +114,7 @@ focus_tree = {
 		id = RAJ_cripps_mission
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = RAJ_indian_national_congress }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = RAJ_indian_national_congress
 
@@ -168,25 +122,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-			OR = {
-				is_subject = yes
-				has_global_flag = ENG_decolonized
-			}
-		}
-
-		bypass = {
-			OR = {
-				NOT = {
-					OR = {
-						has_idea = RAJ_marginalized_muslim_community
-						has_idea = RAJ_marginalized_muslim_community_angry
-					}
-				}
-				is_subject = no
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -199,19 +134,15 @@ focus_tree = {
 			swap_ideas = {
 				add_idea = RAJ_marginalized_muslim_community_angry
 				remove_idea = RAJ_marginalized_muslim_community
-			}
-			add_autonomy_ratio = {
-				value =	0.05
-				localization = RAJ_cripps_mission
-		 	}		 	
+			}	 	
 		}
 	}
 
 	focus = {
 		id = RAJ_two_nation_theory
 		icon = GFX_focus_RAJ_two_nation_theory
-		prerequisite = { focus = RAJ_cripps_mission focus = RAJ_swaraj }
-		x = 0
+		prerequisite = { focus = RAJ_cripps_mission }
+		x = -2
 		y = 2
 		relative_position_id = RAJ_indian_national_congress
 
@@ -262,7 +193,7 @@ focus_tree = {
 		id = RAJ_princely_state_donations
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = RAJ_indian_national_congress }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = RAJ_indian_national_congress
 
@@ -332,10 +263,6 @@ focus_tree = {
 				add_idea = RAJ_princely_states_donations_troops
 				remove_idea = RAJ_princely_states_donations
 			}
-			add_autonomy_ratio = {
-				value = -0.05
-				localization = RAJ_imperial_service_troops
-			}
 		}
 	}
 
@@ -343,7 +270,7 @@ focus_tree = {
 		id = RAJ_british_army_support
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = RAJ_indian_national_congress }
-		x = 5
+		x = 2
 		y = 1
 		relative_position_id = RAJ_indian_national_congress
 
@@ -387,8 +314,8 @@ focus_tree = {
 		id = RAJ_red_eagle_division
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = RAJ_british_army_support }
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = RAJ_british_army_support
 
 		cost = 10
@@ -824,7 +751,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = RAJ_vickers_berthier_gun
 				bonus = 1.0
-				uses = 1
+				uses = 2
+				technology = improved_infantry_weapons_2
 				technology = advanced_infantry_weapons
 			}
 		}
@@ -1039,10 +967,15 @@ focus_tree = {
 	focus = {
 		id = RAJ_great_indian_peninsula_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 21
-		y = 0
+		x = 8
+		y = 1
 
 		cost = 5
+		
+		prerequisite = {
+		    focus = RAJ_lessons_of_the_great_war
+		}
+		relative_position_id = RAJ_lessons_of_the_great_war
 
 		ai_will_do = {
 			factor = 7
