@@ -2692,19 +2692,16 @@ ship_heavy_battery_3 = {
 		gfx = ship_cruiser_armor
 		
 		multiply_stats = {
-			build_cost_ic = 0.1
+			build_cost_ic = 0.125
+			naval_speed = -0.125
+			max_strength = 0.125
 		}
-		build_cost_resources = {
-			steel = 1
-		}
-		multiply_stats = {
-			naval_speed = -0.10
-		}
+		
 		add_stats = {
-			armor_value = 12
-			max_strength = 40
-			
+			armor_value = 25
+			naval_torpedo_damage_reduction_factor = -12.5
 		}
+		
 		dismantle_cost_ic = 2500
 	}
 }

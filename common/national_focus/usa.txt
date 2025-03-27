@@ -1015,33 +1015,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
 		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = USA_detroit_arsenal_organization
-				mio:USA_detroit_arsenal_organization = {
-					add_mio_size = 5
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = detroit_arsenal
+			mio:USA_chrysler_organization = {
+				add_mio_size = 5
 			}
 		}
 	}

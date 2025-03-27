@@ -607,7 +607,7 @@ focus_tree = {
 		
 		continue_if_invalid = yes
 		icon = GFX_goal_generic_consumer_goods
-		x = 15
+		x = 14
 		y = 1
 		relative_position_id = uk_empire_focus
 		
@@ -3090,14 +3090,14 @@ focus_tree = {
 		relative_position_id = uk_colonial_focus
 
 		icon = GFX_focus_BEL_v_for_victory
-		x = 2
+		x = 3
 		y = 1
 		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			army_experience = 200
+			army_experience = 250
 		}
 	}
 	focus = {
@@ -3106,7 +3106,7 @@ focus_tree = {
 			focus = uk_noasia_focus
 		}
 		available = {
-		    date > 1939.1.1
+		    date > 1940.6.1
 		}
 		relative_position_id = uk_noasia_focus
 
@@ -3245,7 +3245,7 @@ focus_tree = {
 		relative_position_id = uk_colonial_focus
 
 		icon = GFX_focus_usa_focus_on_asia
-		x = 2
+		x = 3
 		y = 1
 		cost = 10
 

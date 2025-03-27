@@ -243,8 +243,8 @@ axis_tank_organization = {
 		all_parents = { generic_mio_trait_one_piece_hull_side_coverings }
 		
 		equipment_bonus = {
-			hardness = 0.05
-			defense = 0.05
+			armor_value = 0.05
+			breakthrough = 0.05
 		}
 	}
 
@@ -301,8 +301,7 @@ axis_tank_organization = {
 		
 		equipment_bonus = {
 			soft_attack = 0.05
-			breakthrough = 0.05
-			hardness = -0.05
+			breakthrough = 0.03
 		}
 	}
 
@@ -320,9 +319,8 @@ axis_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_high_explosive_shells }
 		
 		equipment_bonus = {
-			ap_attack = 0.1
+			hardness = 0.03
 			hard_attack = 0.05
-			hardness = 0.05
 		}
 	}
 }
@@ -409,6 +407,7 @@ allied_tank_organization = {
 		any_parent = { generic_mio_trait_crew_ergonomics }
 
 		equipment_bonus = {
+			defense = 0.02
 			breakthrough = 0.05
 		}
 	}
@@ -442,6 +441,7 @@ allied_tank_organization = {
 		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_standardized_components generic_mio_trait_command_upgrades }
 		equipment_bonus = {
 			hard_attack = 0.05
+			soft_attack = 0.05
 		}
 	}
 
@@ -459,9 +459,8 @@ allied_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_infantry_support_tanks }
 		
 		equipment_bonus = {
-			armor_value = 0.05
 			hard_attack = 0.05
-			hardness = 0.05
+			hardness = 0.03
 		}
 	}
 
@@ -480,8 +479,7 @@ allied_tank_organization = {
 		
 		equipment_bonus = {
 			soft_attack = 0.05
-			breakthrough = 0.05
-			hardness = -0.05
+			breakthrough = 0.03
 		}
 	}
 	
@@ -490,7 +488,7 @@ allied_tank_organization = {
 		name = generic_mio_trait_allied_production
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { FROM = { has_war = yes } }
+		available = { date > 1939.9.1 }
 		special_trait_background = yes
 
 		position = { x=-1 y=1 }
@@ -507,7 +505,7 @@ allied_tank_organization = {
 		name = generic_mio_trait_allied_production_2
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { FROM = { has_war = yes } }
+		available = { date > 1940.6.1 }
 		special_trait_background = yes
 
 		position = { x=0 y=2 }
@@ -595,7 +593,6 @@ allied_tank_organization = {
 		equipment_bonus = {
 			armor_value = 0.05
 			breakthrough = 0.05
-			hardness = 0.1
 		}
 	}
 
@@ -652,8 +649,6 @@ allied_tank_organization = {
 		
 		equipment_bonus = {
 			soft_attack = 0.03
-			breakthrough = 0.05
-			hardness = -0.05
 		}
 	}
 
@@ -671,9 +666,7 @@ allied_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_high_explosive_shells }
 		
 		equipment_bonus = {
-			ap_attack = 0.05
 			hard_attack = 0.03
-			hardness = 0.05
 		}
 	}
 }
@@ -760,6 +753,7 @@ soviet_tank_organization = {
 
 		equipment_bonus = {
 			breakthrough = 0.05
+			defense = 0.02
 		}
 	}
 	
@@ -776,7 +770,7 @@ soviet_tank_organization = {
 
 		production_bonus = {
 			production_efficiency_gain_factor = 0.1
-			production_efficiency_cap_factor = 0.05
+			production_efficiency_cap_factor = 0.1
 		}
 	}
 
@@ -791,9 +785,9 @@ soviet_tank_organization = {
 		
 		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_standardized_components generic_mio_trait_command_upgrades }
 		equipment_bonus = {
-			ap_attack = 0.1
-			hard_attack = 0.02
-			soft_attack = 0.02
+			ap_attack = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.05
 		}
 	}
 
@@ -811,8 +805,8 @@ soviet_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_infantry_support_tanks }
 		
 		equipment_bonus = {
-			hard_attack = 0.07
-			hardness = 0.05
+			hard_attack = 0.05
+			hardness = 0.03
 		}
 	}
 
@@ -830,8 +824,8 @@ soviet_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_anti_tank_specialization }
 		
 		equipment_bonus = {
-			soft_attack = 0.07
-			breakthrough = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.03
 		}
 	}
 	
@@ -840,7 +834,7 @@ soviet_tank_organization = {
 		name = generic_mio_trait_soviet_production
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { SOV = { has_completed_focus = SOV_merge_tank_and_materiel_plants } }
+		available = { FROM = { has_completed_focus = SOV_merge_tank_and_materiel_plants } }
 		special_trait_background = yes
 
 		position = { x=-1 y=1 }
@@ -858,7 +852,7 @@ soviet_tank_organization = {
 		name = generic_mio_trait_soviet_production_2
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { SOV = { has_war = yes } }
+		available = { FROM = { has_completed_focus = SOV_desperate_measures } }
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
@@ -867,7 +861,7 @@ soviet_tank_organization = {
 		all_parents = { generic_mio_trait_soviet_production }
 		production_bonus = {
 			production_cost_factor = -0.05
-			production_efficiency_cap_factor = 0.05
+			production_capacity_factor = 0.1
 			production_resource_need_factor = -0.05
 		}
 	}
@@ -877,7 +871,7 @@ soviet_tank_organization = {
 		name = generic_mio_trait_soviet_production_3
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { SOV = { has_completed_focus = SOV_lessons_of_war } }
+		available = { FROM = { has_completed_focus = SOV_lessons_of_war } }
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
@@ -886,6 +880,7 @@ soviet_tank_organization = {
 		all_parents = { generic_mio_trait_soviet_production_2 }
 		production_bonus = {
 			production_cost_factor = -0.05
+			production_efficiency_cap_factor = 0.05
 			production_resource_need_factor = -0.05
 		}
 	}
@@ -966,7 +961,6 @@ soviet_tank_organization = {
 		equipment_bonus = {
 			armor_value = 0.05
 			defense = 0.05
-			hardness = 0.05
 		}
 	}
 
@@ -984,7 +978,7 @@ soviet_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_reinforced_construction }
 		
 		equipment_bonus = {
-			breakthrough = 0.1
+			breakthrough = 0.05
 			reliability = 0.05
 		}
 	}
@@ -1003,8 +997,7 @@ soviet_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_improved_crew_ergonomics }
 		
 		equipment_bonus = {
-			armor_value = 0.05
-			hardness = 0.1
+			hardness = 0.05
 			reliability = -0.1
 		}
 	}
@@ -1023,8 +1016,7 @@ soviet_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_apcr_hvap_shells }
 		
 		equipment_bonus = {
-			soft_attack = 0.05
-			breakthrough = 0.05
+			soft_attack = 0.03
 		}
 	}
 
@@ -1042,55 +1034,17 @@ soviet_tank_organization = {
 		mutually_exclusive = { generic_mio_trait_high_explosive_shells }
 		
 		equipment_bonus = {
-			ap_attack = 0.1
-			hard_attack = 0.05
+			hard_attack = 0.03
 		}
 	}
 }
 
 # GENERIC TANK MANUFACTURER - Based on Daimler Benz
 generic_tank_organization = {
-	icon = GFX_idea_generic_tank_manufacturer_1
+	icon = GFX_idea_vickers_armstrong_eng
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = ROM } }
-		NOT = {
-			AND = {
-				tag = POL
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = AST tag = SAF tag = NZL tag = CAN }
-				has_dlc = "Together for Victory"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = BUL tag = GRE tag = TUR tag = HUN }
-				has_dlc = "Battle for the Bosporus"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { original_tag = FIN tag = NOR tag = SWE }
-				has_dlc = "Arms Against Tyranny"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = {
-					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
-				}
-				has_dlc = "Trial of Allegiance"
-			}
-		}
+		always = no
 	}
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
