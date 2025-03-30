@@ -494,7 +494,7 @@ allied_tank_organization = {
 		position = { x=-1 y=1 }
 		relative_position_id = generic_mio_trait_wide_tracks
 		
-		all_parents = { generic_mio_trait_wide_tracks generic_mio_trait_crew_ergonomics }
+		any_parent = { generic_mio_trait_wide_tracks generic_mio_trait_crew_ergonomics }
 		production_bonus = {
 			production_cost_factor = -0.05
 		}
@@ -840,7 +840,7 @@ soviet_tank_organization = {
 		position = { x=-1 y=1 }
 		relative_position_id = generic_mio_trait_wide_tracks
 		
-		all_parents = { generic_mio_trait_wide_tracks generic_mio_trait_crew_ergonomics }
+		any_parent = { generic_mio_trait_wide_tracks generic_mio_trait_crew_ergonomics }
 		production_bonus = {
 			production_cost_factor = -0.1
 			production_efficiency_gain_factor = 0.05

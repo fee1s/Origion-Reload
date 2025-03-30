@@ -187,7 +187,7 @@ NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.9 -- то, на 
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.90 -- максимальный штраф от размещения
 NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0 -- штраф, за более большое авиа соединение
 
-NDefines.NNavy.MIN_SHIPS_FOR_HIGHER_SHIP_RATIO_PENALTY = 5 -- минимальное кол-во кораблей, чтобы работало размещение 
+NDefines.NNavy.MIN_SHIPS_FOR_HIGHER_SHIP_RATIO_PENALTY = 0 -- чутка странный дефайн, может отрегулировать от какого кол-во кораблей начинает работать штраф за бОльшее соединение, именно для стороны со штрафом
 
 NDefines.NNavy.BASE_CARRIER_SORTIE_EFFICIENCY = 0.2
 NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс штраф за большее количество самолетов у противника на авиках
