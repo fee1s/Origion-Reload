@@ -9,7 +9,9 @@ NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before 
 --Army
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
+
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
+NDefines.NMilitary.TRAINING_ATTRITION = 0.00
 
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999;
@@ -42,7 +44,7 @@ NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая ре�
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.125 -- Скорость пересечения маленькой реки
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.2 -- Скорость пересечения большой реки
 
-NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение снаряги в дивках, объем пополнения
+NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 1000 -- Пополнение снаряги в дивках, объем пополнения
 
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0

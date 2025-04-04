@@ -21,6 +21,28 @@ Epsilon_decions = { # Общие решения
 		}
 	}
 	
+	SOV_meta_deployment = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			tag = SOV
+		}
+
+		fire_only_once = yes
+		
+		available = {
+			has_completed_focus = SOV_secret_protocol_of_the_MR_pact
+			has_manpower > 649999
+		}
+
+		complete_effect = {
+			SOV = {
+				add_manpower = -650000
+				load_oob = "SOV_deployment"
+			}
+		}
+	}
+	
 	CHI_attache = {
 		icon = generic_army_support
 		
@@ -781,7 +803,7 @@ ORG_africa_dec_cat = {
 		}
 	}
 	ENG_operation_torch = { # Torch No Asia 
-		available = { date > 1941.9.1 }
+		available = { date > 1941.5.1 }
 		icon = GFX_decision_eng_puppet_usa
 		
 		visible = { 
