@@ -462,6 +462,8 @@ focus_tree = {
 				uses = 2
 				technology = improved_medium_tank_chassis
 				technology = advanced_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -1176,6 +1178,9 @@ focus_tree = {
 				exists = no
 			}
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		icon = GFX_goal_generic_construct_civ_factory
 		x = -1
 		y = 1
@@ -1312,6 +1317,9 @@ focus_tree = {
 				exists = no
 			}
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 2
@@ -1360,6 +1368,9 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		completion_reward = {
 			CAN = {
@@ -1452,6 +1463,9 @@ focus_tree = {
 			RAJ = {
 				exists = no
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		complete_tooltip = {
 			random_country = {
@@ -1554,6 +1568,9 @@ focus_tree = {
 			AST = {
 				exists = no
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		icon = GFX_goal_generic_construct_civilian
 		x = 1
@@ -1690,6 +1707,9 @@ focus_tree = {
 			AST = {
 				exists = no
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		icon = GFX_goal_generic_construction
 		x = 0

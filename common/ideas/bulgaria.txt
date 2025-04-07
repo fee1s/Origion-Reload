@@ -557,7 +557,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = 0.1
-				political_power_gain = 0.25
+				political_power_gain = 0.15
 			}
 		}
 
@@ -1489,6 +1489,8 @@ ideas = {
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.05
 			} 
 		}
 
@@ -1509,7 +1511,7 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
 				consumer_goods_factor = -0.10
-				min_export = -0.15
+				local_resources_factor = 0.1
 			} 
 		}
 
@@ -1530,7 +1532,6 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.15
 				consumer_goods_factor = -0.15
-				min_export = -0.15
 				local_resources_factor = 0.15
 			} 
 		}

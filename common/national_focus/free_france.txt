@@ -46,7 +46,6 @@
 			}
 			else = {
 				add_manpower = 10000
-				add_legitimacy = 15
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -218,17 +217,6 @@
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				has_legitimacy > 90
-			}
-			else = {
-				num_of_factories > 24
-			}
 		}
 		
 		bypass = {
@@ -480,17 +468,6 @@
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				has_legitimacy > 40
-			}
-			else = {
-				num_of_factories > 14
-			}
 		}
 		
 		bypass = {

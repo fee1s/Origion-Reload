@@ -1347,6 +1347,8 @@ focus_tree = {
 				uses = 2
 				technology = improved_medium_tank_chassis
 				technology = advanced_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -2604,7 +2606,7 @@ focus_tree = {
 		cost = 2
 		
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		
 		available = {
@@ -2670,7 +2672,7 @@ focus_tree = {
 		cost = 5
 		
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		
 		completion_reward = {
@@ -2692,9 +2694,6 @@ focus_tree = {
 					BUL = {
 						transfer_state = 106
 						transfer_state = 803
-						transfer_state = 802
-						transfer_state = 108
-						transfer_state = 970
 					}
 				}
 				
@@ -2721,7 +2720,7 @@ focus_tree = {
 		cost = 5
 		
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		
 		completion_reward = {

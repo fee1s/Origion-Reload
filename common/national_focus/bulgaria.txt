@@ -155,6 +155,7 @@ focus_tree = {
 			    bonus = 1
 			    uses = 1
 				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
 			}
 		}
 	}
@@ -171,7 +172,7 @@ focus_tree = {
 		cost = 5
 		
 		available = {
-			has_war_with = SOV
+			date > 1941.1.1
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -180,6 +181,7 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -201,7 +203,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			air_experience = 25
-			army_experience = 25
+			army_experience = 50
 			212 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -226,7 +228,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		    air_experience = 25
-			army_experience = 25
+			army_experience = 50
 			48 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -251,7 +253,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		    air_experience = 25
-			army_experience = 25
+			army_experience = 50
 			801 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -281,7 +283,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = BUL_vasil_levsky_national_military_university
 			    cost_reduction = 0.5
-			    uses = 3
+			    uses = 4
 				category = land_doctrine
 			}
 			add_research_slot = 1
@@ -392,6 +394,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
+		    add_political_power = 25
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -437,7 +440,7 @@ focus_tree = {
 		cost = 5
 		relative_position_id = BUL_power_to_the_tsar
 		available = {
-			has_completed_focus = BUL_bulgarian_irredentism
+			has_completed_focus = BUL_promote_bulgarian_nationalism
 		}
 		
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -476,11 +479,11 @@ focus_tree = {
 		relative_position_id = BUL_appoint_right_wing_ministers
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
-			add_political_power = 35
+			add_political_power = 50
 			add_stability = 0.05
 			add_war_support = 0.05
 		}
@@ -655,7 +658,7 @@ focus_tree = {
 		relative_position_id = BUL_promote_bulgarian_nationalism
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -663,7 +666,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 		completion_reward = {
-		    add_political_power = 50
+		    add_political_power = 25
 			add_war_support = 0.1
 			swap_ideas = {
 				remove_idea = BUL_second_national_catastrophe
@@ -690,10 +693,6 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 10
-
-		available = {
-			has_government = fascism
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -719,7 +718,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			add_political_power = 70
+			add_political_power = 75
 			add_war_support = 0.05
 			add_popularity = {
 				ideology = fascism
@@ -737,7 +736,7 @@ focus_tree = {
 		relative_position_id = BUL_appoint_right_wing_ministers
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
 		
 		available = {
 			num_of_civilian_factories > 22
@@ -746,6 +745,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BUL_government_reforms_fascists_01
+			48 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 
@@ -772,7 +778,7 @@ focus_tree = {
 			48 = {
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 4
 				}
 				add_extra_state_shared_building_slots = 2
 			}
@@ -799,7 +805,16 @@ focus_tree = {
 				remove_idea = BUL_government_reforms_fascists_02
 				add_idea = BUL_government_reforms_fascists_03
 			}
+			48 = {
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+		
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = BUL_aleksandar_tsankov
 		}
@@ -829,9 +844,6 @@ focus_tree = {
 			}
 			add_state_core = 106
 			add_state_core = 803
-			add_state_core = 970
-			add_state_core = 802
-			add_state_core = 108
 			add_state_core = 731
 			add_state_core = 184
 		}
@@ -846,7 +858,7 @@ focus_tree = {
 		relative_position_id = BUL_bulgarian_administration_of_the_balkans
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
@@ -863,7 +875,7 @@ focus_tree = {
 		relative_position_id = BUL_restore_the_bulgarian_patriarchate
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			random_owned_state = {
@@ -897,7 +909,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-		    has_completed_focus = BUL_acquire_modern_tools
+		    has_completed_focus = BUL_the_path_towards_a_greater_bulgaria
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -930,10 +942,6 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -979,8 +987,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-
-
 		available = {
 			num_of_civilian_factories > 18
 		}
@@ -1004,7 +1010,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-
 		available = {
 			has_completed_focus = BUL_bulgarian_irredentism
 			num_of_civilian_factories > 24
@@ -1073,7 +1078,7 @@ focus_tree = {
 			48 = {
 				add_resource = {
 					type = steel
-					amount = 6
+					amount = 8
 				}
 				add_extra_state_shared_building_slots = 2
 			}
@@ -1148,10 +1153,18 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			106 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			211 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}

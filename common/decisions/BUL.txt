@@ -15,7 +15,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_eng_propaganda_campaigns
 
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 
 		allowed = { 
@@ -58,7 +58,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_generic_police_action
 
 		ai_will_do = {
-			base = 10
+			base = 100
 		}
 
 		allowed = { 
@@ -101,18 +101,7 @@ BUL_macedonian_revolutionary_organizations = {
 		icon = GFX_decision_oppression
 
 		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0
-				BUL_is_historical_ai = yes
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
+			base = 100
 		}
 
 		allowed = { 

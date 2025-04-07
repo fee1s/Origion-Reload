@@ -1,0 +1,57 @@
+BUL_historical_plan = {
+	name = "Bulgaria Historical Plan"
+	desc = "Tsar Boris III will lead the country towards the Axis, relying on German arbitration to expand Bulgarian borders peacefully, eventually signing the Tripartite Pact and delaying Bulgarian participation in the war."
+
+	allowed = {
+		original_tag = BUL
+		has_dlc = "Battle for the Bosporus"
+	}
+	enable = {
+		always = yes	
+	}
+
+	ai_national_focuses = {
+		BUL_power_to_the_tsar
+		BUL_appoint_right_wing_ministers
+		BUL_promote_bulgarian_nationalism
+		BUL_condemn_macedonian_organizations
+		BUL_the_path_towards_a_greater_bulgaria
+		
+		BUL_improve_the_road_system
+		BUL_invigorate_national_industry
+		BUL_increase_industry_investments
+		
+		BUL_bulgarian_irredentism
+		
+		BUL_acquire_modern_tools
+		BUL_negotiate_bulgarian_rearmament
+		BUL_vasil_levsky_national_military_university
+		
+		BUL_contract_foreign_companies
+		BUL_war_logistics
+		
+		BUL_utmost_optimization
+		
+		BUL_bulgarian_administration_of_the_balkans
+		BUL_restore_the_bulgarian_patriarchate
+		BUL_the_third_bulgarian_empire
+	}
+
+	research = {
+	    concentrated_industry_category = 8
+		construction_tech = 2
+	}
+
+	ideas = {
+	    BUL_dobri_bozhilov = 3
+	    BUL_pirin = 1.5
+		BUL_pirin_improved = 1.5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.25
+	}
+
+}
