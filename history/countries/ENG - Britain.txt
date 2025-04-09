@@ -778,16 +778,15 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Bristol Blenheim Origion" 
-			type = medium_plane_airframe_1
+			type = medium_plane_airframe_0
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay
-				fixed_auxiliary_weapon_slot_1 = bomb_locks
-				fixed_auxiliary_weapon_slot_2 = small_bomb_bay
-				fixed_auxiliary_weapon_slot_3 = empty
-				engine_type_slot = engine_2_2x
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty
-				special_type_slot_3 = empty
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+				fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+				engine_type_slot = engine_2_3x
+				special_type_slot_1 = fuel_tanks_medium
+				special_type_slot_2 = fuel_tanks_medium
+				special_type_slot_3 = fuel_tanks_medium
 				special_type_slot_4 = empty
 			}
 			icon = "GFX_ENG_heavy_fighter1_medium"
@@ -1224,7 +1223,7 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-    type = medium_plane_airframe_1
+    type = medium_plane_airframe_0
 	amount = 570
 	variant_name = "Bristol Blenheim Origion"
 }
