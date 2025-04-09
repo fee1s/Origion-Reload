@@ -1170,20 +1170,29 @@ focus_tree = {
 				add_tech_bonus = {
 					name = GER_soviet_treaty
 					bonus = 1.0
-					uses = 2
+					uses = 1
 					technology = improved_medium_tank_chassis
-					technology = advanced_medium_tank_chassis
 					technology = improved_heavy_tank_chassis
-					technology = advanced_heavy_tank_chassis
+				}
+				add_tech_bonus = {
+					name = GER_soviet_treaty
+					bonus = 1.0
+					uses = 1
+					technology = armor_tech_3
 				}
 			}
 			
 			add_tech_bonus = {
 				name = GER_soviet_treaty
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				technology = improved_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = GER_soviet_treaty
+				bonus = 1.0
+				uses = 1
 				technology = armor_tech_3
 			}
 		}
@@ -1265,9 +1274,14 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GER_tanks_for_blitz_crieg
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = GER_tanks_for_blitz_crieg
+				bonus = 1.0
+				uses = 1
 				technology = armor_tech_4
 			}
 		}

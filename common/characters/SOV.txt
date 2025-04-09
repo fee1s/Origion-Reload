@@ -1662,6 +1662,27 @@ characters = {
 			}
 		}
 	}
+	
+	SOV_vyacheslav_molotov = {
+		name = SOV_vyacheslav_molotov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_vyacheslav_molotov"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_vyacheslav_molotov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = { always = yes }
+			traits = {
+				technocrat 
+			}
+		}
+	}
 
 	SOV_lazar_kaganovich = {
 		name = SOV_lazar_kaganovich
@@ -1758,22 +1779,21 @@ characters = {
 			}
 		}
 
-			advisor = {
-				slot = political_advisor
-				idea_token = SOV_lavrenty_beriya
-				name = SOV_lavrenty_beriya
-				can_be_fired = no
-				allowed = {
-					original_tag = SOV
-				}
-				available = {
-					NOT = { has_idea = SOV_nikolay_yezhov }
-					NOT = { has_idea = SOV_genrikh_yagoda }
-				}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_lavrenty_beriya
+			name = SOV_lavrenty_beriya
+			can_be_fired = no
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_nikolay_yezhov }
+				NOT = { has_idea = SOV_genrikh_yagoda }
+			}
 
-				traits = {
-					head_of_the_nkvd_beriya_initial
-				}
+			traits = {
+				head_of_the_nkvd_beriya_initial
 			}
 		}
 	}
@@ -1783,30 +1803,6 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_soviet_vsevolod_merkulov"
-			}
-		}
-	}
-
-	SOV_vyacheslav_molotov = {
-		name = SOV_vyacheslav_molotov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_vyacheslav_molotov"
-			}
-		}
-		allowed_civil_war = {
-			has_government = communism
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_vyacheslav_molotov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = { always = yes }
-			traits = {
-				pc_for_foreign_affairs_molotov 
 			}
 		}
 	}
@@ -1975,27 +1971,6 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_SOV_patriarch_sergy"
-			}
-		}
-		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_patriarch_sergy
-			allowed = {
-				original_tag = SOV
-			}
-			visible = { always = yes }
-			available = {
-				has_completed_focus = SOV_patriarch_of_all_russia
-			}
-			traits = {
-				patriarch_of_moscow_and_all_russia 
 			}
 		}
 	}
@@ -2327,39 +2302,22 @@ characters = {
   ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
 
 	SOV_konstantin_rodzayevsky = {
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name = SOV_konstantin_rodzayevsky
+		name = SOV_konstantin_rodzayevsky
 
-			portraits = {
-				civilian = {
-					large = GFX_portrait_SOV_konstantin_rodzayevsky
-				}
-				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
-				}
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_konstantin_rodzayevsky
 			}
+			army = {
+				small = "GFX_idea_konstantin_rodzaevsky"
+			}
+		}
 
-			country_leader = {
+		country_leader = {
 				ideology = fascism_ideology
 				traits = { fascist_orchestrator }
 				expire = "1953.3.1.1"
 				id = -1
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-			name = SOV_konstantin_rodzayevsky
-
-			portraits = {
-				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
-				}
-			}
 		}
 	}
 

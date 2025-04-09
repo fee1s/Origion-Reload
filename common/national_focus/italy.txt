@@ -934,32 +934,36 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			159 = { #LOMBARDY (Milano)
-				add_building_construction = {
-					type = radar_station
-					level = 3
-					instant_build = yes
+			hidden_effect = {
+				158 = {
+					add_building_construction = {
+						type = radar_station
+						level = 5
+						instant_build = yes
+					}
 				}
-			}
-			2 = { #LATIUM (Rome)
-				add_building_construction = {
-					type = radar_station
-					level = 3
-					instant_build = yes
+				2 = { #LATIUM (Rome)
+					add_building_construction = {
+						type = radar_station
+						level = 5
+						instant_build = yes
+					}
 				}
-			}
-			115 = { #SICILY
-				add_building_construction = {
-					type = radar_station
-					level = 3
-					instant_build = yes
+				115 = { #SICILY
+					add_building_construction = {
+						type = radar_station
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
 			add_tech_bonus = {
 				name = ITA_milan_comms_industry
 				bonus = 1
-				uses = 1
-				category = radar_tech
+				uses = 3
+				technology = centimetric_radar
+				technology = improved_centimetric_radar
+				technology = advanced_centimetric_radar
 			}
 		}
 	}
@@ -1033,24 +1037,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_secret_weapons
-		cost = 10
-		available = {
-		}
+		cost = 5
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
 			add_tech_bonus = {
 				name = ITA_thermojet_research
-				bonus = 0.75
-				uses = 2
-				category = air_equipment
-			}
-			add_tech_bonus = {
-				name = ITA_thermojet_research
-				ahead_reduction = 2
 				bonus = 1.0
-				category = jet_technology
 				category = rocketry
 			}
 		}
@@ -1344,11 +1338,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ITA_italian_tankettes
 				bonus = 1
-				uses = 2
+				uses = 1
 				technology = improved_medium_tank_chassis
-				technology = advanced_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
-				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -1479,14 +1471,12 @@ focus_tree = {
 			add_to_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0.05 }
 			custom_effect_tooltip = ITA_modernize_ansaldo_facilities_military_industry_tt
 
-
-			158 = { #PIEDMONT (Genova)
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
+			add_tech_bonus = {
+				name = ITA_modernize_ansaldo_facilities
+				bonus = 1
+				uses = 1
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -2536,61 +2526,11 @@ focus_tree = {
 		relative_position_id = ITA_la_battaglia_del_grano
 
 		cost = 5
-		available = {
-			has_government = fascism
-			ITA_has_disbanded_blackshirts = no
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
 			add_ideas = ITA_camicie_nere
-			hidden_effect = {
-				set_technology = {
-					camicie_nere_security_militias = 1
-					popup = no
-				}
-			}
-		}
-	}
-
-####
-	
-	
-	
-	focus = {
-		id = ITA_by_blood_alone
-		icon = GFX_focus_ITA_by_blood_alone
-		prerequisite = { focus = ITA_pact_of_steel }
-
-		relative_position_id = ITA_pact_of_steel
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			OR = {
-				axis_lost_africa_trigger = yes
-				axis_won_africa_trigger = yes
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
-
-		completion_reward = {
-			# REGIO ESERCITO
-			add_to_variable = { ITA_re_army_morale_factor = 0.05 }
-			add_to_variable = { ITA_re_conscription_factor = 0.05 }
-			add_to_variable = { ITA_re_army_attack_factor = 0.05 }
-			custom_effect_tooltip = ITA_by_blood_alone_re_tt
-
-			add_stability = -0.1
-			add_war_support = 0.1
-			if = {
-				limit = {
-					NOT = { has_rule = can_use_kamikaze_pilots }
-				}
-				
-			}
 		}
 	}
 	
@@ -2768,6 +2708,354 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = ITA_tobruk_fortress
+		
+		prerequisite = {
+			focus = ITA_pact_of_steel
+		}
+		
+		icon = GFX_focus_GER_afrikakorps
+		x = -2
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			OR = {
+				controls_state = 451
+				controls_state = 663
+				controls_state = 984
+				controls_state = 983
+				controls_state = 450
+			}
+		}
+		
+		bypass = {
+			NOT = {
+				controls_state = 451
+				controls_state = 663
+				controls_state = 984
+				controls_state = 983
+				controls_state = 450
+			}
+		}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = ITA_tobruk_fortress_tt
+			
+			hidden_effect = {
+				451 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 1130 }
+							any_province_building_level = {
+								province = {
+									id = 1130
+								}
+								building = bunker
+								level < 6
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 1130
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 9992 }
+							any_province_building_level = {
+								province = {
+									id = 9992
+								}
+								building = bunker
+								level < 3
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9992
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 4136 }
+							any_province_building_level = {
+								province = {
+									id = 4136
+								}
+								building = bunker
+								level < 3
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 4136
+							instant_build = yes
+						}
+					}
+				}
+				
+				984 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11951 }
+							any_province_building_level = {
+								province = {
+									id = 11951
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11951
+							instant_build = yes
+						}
+					}
+				}
+				
+				983 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 13372 }
+							any_province_building_level = {
+								province = {
+									id = 13372
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13372
+							instant_build = yes
+						}
+					}
+				}
+				
+				450 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11954 }
+							any_province_building_level = {
+								province = {
+									id = 11954
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 11954
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 4120 }
+							any_province_building_level = {
+								province = {
+									id = 4120
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 4120
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 10123 }
+							any_province_building_level = {
+								province = {
+									id = 10123
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 10123
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ITA_marets_line
+		
+		prerequisite = {
+			focus = ITA_pact_of_steel
+		}
+		
+		icon = GFX_focus_GER_realize_mittelafrika
+		x = 0
+		y = 1
+		relative_position_id = ITA_pact_of_steel
+		cost = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			OR = {
+				controls_state = 458
+				controls_state = 665
+				controls_state = 448
+			}
+		}
+		
+		bypass = {
+			NOT = {
+				controls_state = 458
+				controls_state = 665
+				controls_state = 448
+			}
+		}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			custom_effect_tooltip = ITA_marets_line_tt
+			
+			hidden_effect = {
+				458 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11969 }
+							any_province_building_level = {
+								province = {
+									id = 11969
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 11969
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 9994 }
+							any_province_building_level = {
+								province = {
+									id = 9994
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 9994
+							instant_build = yes
+						}
+					}
+				}
+				
+				665 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 7005 }
+							any_province_building_level = {
+								province = {
+									id = 7005
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 7005
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 11957 }
+							any_province_building_level = {
+								province = {
+									id = 11957
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11957
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ITA_battle_of_mersa_matruh
+		
+		available = {
+			date > 1941.6.1
+			NOT = { controls_state = 907 } 
+		}
+		
+		relative_position_id = ITA_pact_of_steel
+		icon = GFX_focus_ITA_italian_hegemony
+		cost = 5
+		
+		x = -1
+		y = 2
+		
+		prerequisite = { focus = ITA_tobruk_fortress focus = ITA_marets_line }
+		
+		completion_reward = {
+			add_timed_idea = { idea = ita_operation_aida days = 60 }
+		}
+	}
+	
+	focus = {
 	    id = ITA_axis_triumph_egypt
 		icon = GFX_focus_ITA_imperial_recognition
 		prerequisite = { focus = ITA_pact_of_steel }
@@ -2834,21 +3122,7 @@ focus_tree = {
 				name = ITA_secret_weapons
 				bonus = 1.0
 				uses = 2
-				category = electronics
-				category = rocketry
 				category = nuclear
-			}
-			add_tech_bonus = {
-				name = synth_bonus
-				bonus = 1.0
-				uses = 1
-				category = synth_resources
-			}
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 2
-				category = armor
 			}
 		}
 	}

@@ -3639,64 +3639,12 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
-
-		ITA_ferrovie_dello_stato_italiane = {
-
-			picture = ITA_ferrovie_dello_stato_italiane
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			available = {
-				has_completed_focus = ITA_railway_innovations
-			}
-			
-			cost = 75
-
-			research_bonus = {
-				train_tech = 0.15
-			}
-			
-			traits = { railway_company }
-		}
-
-		ITA_agip = {
-
-			picture = ITA_agip
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			research_bonus = {
-				synth_resources = 0.1
-				industry = 0.05
-			}
-			
-			traits = { refinery_concern }
-		}		
-	
+	industrial_concern = {	
 		danieli = { #NORTH
 			
 			allowed = {
 				original_tag = ITA
 			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				controls_state = 160 #VENETO
-				ITA_is_northern_designer = yes
-			}
 			
 			research_bonus = {
 				industry = 0.15
@@ -3705,259 +3653,19 @@ ideas = {
 			traits = { industrial_concern }
 		}
 
-		ITA_danieli_improved = { #NORTH
-			name = danieli
-
-			picture = danieli
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
-			}
-
-			available = {
-				controls_state = 160 #VENETO
-				ITA_is_northern_designer_improved = yes
-			}
-			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-
-			modifier ={
-				industrial_capacity_factory = 0.03
-				industrial_capacity_dockyard = 0.03
-			}
-		}
 
 		ITA_terni_industria_ed_elettricita = { #SOUTH
-
 			picture = ITA_terni_industria_ed_elettricita
 			
 			allowed = {
 				original_tag = ITA
 			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_modernize_the_mezzogiorno
-					}
-				}
-			}
-
-			available = {
-				controls_state = 162 #TUSCANY (actually Terni)
-				ITA_is_southern_designer = yes
-			}
 			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		ITA_terni_industria_ed_elettricita_improved = { #SOUTH
-			name = ITA_terni_industria_ed_elettricita
-
-			picture = ITA_terni_industria_ed_elettricita
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_modernize_the_mezzogiorno
-			}
-
-			available = {
-				controls_state = 162 #TUSCANY (actually Terni)
-				ITA_is_southern_designer_improved = yes
-			}
-			
-			research_bonus = {
-				industry = 0.2
-				electronics = 0.1
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		ITA_italcementi = { #NORTH
-
-			picture = ITA_italcementi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				controls_state = 158 #PIEDMONT
-				ITA_is_northern_designer = yes
-			}
-
-			traits = { construction_company }
-		}
-
-		ITA_italcementi_improved = { #NORTH
-			name = ITA_italcementi
-
-			picture = ITA_italcementi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
-			}
-
-			available = {
-				controls_state = 158 #PIEDMONT
-				ITA_is_northern_designer_improved = yes
-			}
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_buildings_factor = 0.05
-			}
-		}
-
-		ITA_astaldi = { #SOUTH
-
-			picture = ITA_astaldi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_modernize_the_mezzogiorno
-					}
-				}
-			}
-
-			available = {
-				controls_state = 2 #LATIUM
-				ITA_is_southern_designer = yes
-			}
-
-			traits = { construction_company }
-		}
-
-		ITA_astaldi_improved = { #SOUTH
-			name = ITA_astaldi
-
-			picture = ITA_astaldi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_modernize_the_mezzogiorno
-			}
-
-			available = {
-				controls_state = 2 #LATIUM
-				ITA_is_southern_designer_improved = yes
-			}
-
-			traits = { construction_company }
-
-			research_bonus = {
-				electronics = 0.1
-			}
-
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-				production_speed_rail_way_factor = 0.1
-				production_speed_dockyard_factor = 0.1
-			}
-		}
-
-		ITA_ducati_energia = { #NORTH
-
-			picture = ITA_ducati_energia
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				controls_state = 161 #EMILIA ROMAGNA
-				ITA_is_northern_designer = yes
-			}
-
 			research_bonus = {
 				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
-		}
-
-		ITA_ducati_energia_improved = { #NORTH
-			name = ITA_ducati_energia
-
-			picture = ITA_ducati_energia
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
-			}
-
-			available = {
-				controls_state = 161 #EMILIA ROMAGNA
-				ITA_is_northern_designer_improved = yes
-			}
-
-			research_bonus = {
-				electronics = 0.2
-			}
-			
-			traits = { electronics_concern }
-
-			modifier = {
-				recon_factor = 0.05
-				coordination_bonus = 0.1
-			}
 		}
 	}
 }

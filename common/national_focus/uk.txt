@@ -457,12 +457,17 @@ focus_tree = {
 				add_mio_size = 5
 			}
 			add_tech_bonus = {
-				name = armor_bonus
+				name = ENG_tank_focus
 				bonus = 1
-				uses = 2
+				uses = 1
 				technology = improved_medium_tank_chassis
-				technology = advanced_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = ENG_tank_focus
+				bonus = 1
+				uses = 1
+				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
 			}
 		}
