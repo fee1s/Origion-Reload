@@ -26,7 +26,7 @@ technologies = {
 			}
 		}
 		
-		planning_speed = 0.3
+		planning_speed = 0.25
 		army_speed_factor = 0.10
 		enable_tactic = tactic_unexpected_thrust
 		org_loss_when_moving = -0.1
@@ -542,9 +542,6 @@ technologies = {
 		amphibious_mechanized = {
 			max_organisation = 3
 		}
-		
-		# faster planning
-		planning_speed = 0.1
 		
 		enable_tactic = tactic_overwhelming_fire
 		
@@ -2204,7 +2201,7 @@ technologies = {
 	central_planning = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		planning_speed = 0.2
+		planning_speed = 0.15
 		category_all_armor = {
 			default_morale = 0.1
 		}

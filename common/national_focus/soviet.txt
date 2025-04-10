@@ -2264,7 +2264,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_improve_the_stalin_line
-		cost = 2
+		cost = 1
 
 		available = {
 			OR = {
@@ -2291,7 +2291,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_full_control_of_state = 195 #LENINGRAD
+					controls_state = 195
 				}
 				195 = { #LENINGRAD
 					custom_effect_tooltip = SOV_defense_of_leningrad_forts
@@ -2418,7 +2418,7 @@ focus_tree = {
 			
 			if = {
 				limit = {
-					has_full_control_of_state = 208 #LUGA
+					controls_state = 208 #LUGA
 				}
 				208 = { #LUGA
 					custom_effect_tooltip = SOV_defense_of_luga_forts
@@ -2436,40 +2436,107 @@ focus_tree = {
 
 			if = {
 				limit = {
-					has_full_control_of_state = 137 #CRIMEA
+					controls_state = 137 #CRIMEA
 				}
 				137 = { #CRIMEA
 					custom_effect_tooltip = SOV_defense_of_crimea_forts
 					
 					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 10
-							province = 3686
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13430
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 13440
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = coastal_bunker
-							level = 5
-							province = 3686
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = anti_air_building
-							level = 5
-							instant_build = yes
+						137 = {
+							if = {
+								limit = {
+									ROOT = { controls_province = 3686 }
+									any_province_building_level = {
+										province = {
+											id = 3686
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 10
+									province = 3686
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 13430 }
+									any_province_building_level = {
+										province = {
+											id = 13430
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 8
+									province = 13430
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 13440 }
+									any_province_building_level = {
+										province = {
+											id = 13440
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 8
+									province = 13440
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 13535 }
+									any_province_building_level = {
+										province = {
+											id = 13535
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 5
+									province = 13535
+									instant_build = yes
+								}
+							}
+							
+							if = {
+								limit = {
+									ROOT = { controls_province = 13536 }
+									any_province_building_level = {
+										province = {
+											id = 13536
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 5
+									province = 13536
+									instant_build = yes
+								}
+							}
 						}
 					}
 					add_dynamic_modifier = { modifier = SOV_armored_battery_35 scope = SOV }
@@ -2512,7 +2579,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 5
+							level = 10
 							province = 13434
 							instant_build = yes
 						}
@@ -2523,7 +2590,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 5
+							level = 10
 							province = 13436
 							instant_build = yes
 						}
@@ -2545,7 +2612,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 5
+							level = 10
 							province = 13435
 							instant_build = yes
 						}
@@ -2556,8 +2623,56 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 5
+							level = 10
 							province = 3555
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 520 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 520
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 498 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 498
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 11474 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 11474
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 11484 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 11484
 							instant_build = yes
 						}
 					}
