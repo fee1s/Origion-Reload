@@ -1647,7 +1647,83 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
-				}	
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13538 }
+							any_province_building_level = {
+								province = {
+									id = 13538
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13538
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13539 }
+							any_province_building_level = {
+								province = {
+									id = 13539
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13539
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13540 }
+							any_province_building_level = {
+								province = {
+									id = 13540
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13540
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 6420 }
+							any_province_building_level = {
+								province = {
+									id = 6420
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 6420
+							instant_build = yes
+						}
+					}
+				}				
 
 				221 = {
 					if = {
@@ -1665,6 +1741,25 @@ focus_tree = {
 							type = bunker
 							level = 8
 							province = 418
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13541 }
+							any_province_building_level = {
+								province = {
+									id = 13541
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13541
 							instant_build = yes
 						}
 					}
@@ -2115,17 +2210,19 @@ focus_tree = {
 		cost = 2
 
 		available = {
-			219 = {
-				is_controlled_by = ROOT
+			OR = {
+				controls_state = 219
+				controls_state = 246
+				controls_state = 247
 			}
 			has_war_with = GER
 		}
 		
 		bypass = {
-			219 = {
-				NOT = {
-					is_controlled_by = ROOT
-				}
+			NOT = {
+				controls_state = 219
+				controls_state = 246
+				controls_state = 247
 			}
 		}
 		
@@ -2251,6 +2348,69 @@ focus_tree = {
 							}
 						}
 					}
+					
+					246 = {
+						if = {
+							limit = {
+								ROOT = { controls_province = 11349 }
+								any_province_building_level = {
+									province = {
+										id = 11349
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 8
+								province = 11349
+								instant_build = yes
+							}
+						}
+					}
+					
+					223 = {
+						if = {
+							limit = {
+								ROOT = { controls_province = 6262 }
+								any_province_building_level = {
+									province = {
+										id = 6262
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 8
+								province = 6262
+								instant_build = yes
+							}
+						}
+					}
+					
+					247 = {
+						if = {
+							limit = {
+								ROOT = { controls_province = 6245 }
+								any_province_building_level = {
+									province = {
+										id = 6245
+									}
+									building = bunker
+									level < 1
+								}
+							}
+							add_building_construction = {
+								type = bunker
+								level = 8
+								province = 6245
+								instant_build = yes
+							}
+						}
+					}
 				}
 				add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
 			}
@@ -2310,7 +2470,7 @@ focus_tree = {
 								}
 								add_building_construction = {
 									type = bunker
-									level = 5
+									level = 10
 									province = 13437
 									instant_build = yes
 								}
@@ -2407,6 +2567,27 @@ focus_tree = {
 									type = coastal_bunker
 									level = 10
 									province = 3151
+									instant_build = yes
+								}
+							}
+						}
+						
+						263 = {
+							if = {
+								limit = {
+									ROOT = { controls_province = 117 }
+									any_province_building_level = {
+										province = {
+											id = 117
+										}
+										building = bunker
+										level < 1
+									}
+								}
+								add_building_construction = {
+									type = bunker
+									level = 8
+									province = 117
 									instant_build = yes
 								}
 							}
