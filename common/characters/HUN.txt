@@ -50,6 +50,27 @@ characters={
 		}
 	}
 	
+	HUN_ferenc_szalasi = {
+
+		name = HUN_ferenc_szalasi
+
+		portraits = {
+			civilian = {
+				large = GFX_portrait_HUN_ferenc_szalasi
+			}
+			army = {
+				small = GFX_portrait_HUN_ferenc_szalasi_small
+			}
+		}
+
+		country_leader = {
+			ideology = nazism
+			traits = { HUN_national_socialist_irredentist }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
 	HUN_hermann_goring = {
 		name = HUN_hermann_goring
 		portraits = {
