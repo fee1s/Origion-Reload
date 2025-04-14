@@ -8,7 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=nazism
-			traits={ dictator }
+			traits={ GER_der_fuhrer }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -183,9 +183,6 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
-			available = {
-				has_completed_focus = GER_army_innovation
-			}
 			traits = {
 				army_armored_3
 			}
@@ -212,18 +209,6 @@ characters={
 			army={
 				large=GFX_portrait_GER_erich_von_manstein
 				small="GFX_idea_manstein"
-			}
-		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = manstein
-			ledger = army
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				mobile_warfare_expert
 			}
 		}
 		
@@ -931,9 +916,6 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
-			available = {
-				has_completed_focus = GER_army_innovation
-			}
 			traits = {
 				army_chief_maneuver_2
 			}
@@ -1000,9 +982,6 @@ characters={
 			idea_token = ritter_von_greim
 			allowed = {
 				original_tag = GER
-			}
-			available = {
-				has_completed_focus = GER_air_innovation
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -1166,18 +1145,6 @@ characters={
 				small="GFX_idea_otto_ciliax"
 			}
 		}
-		advisor={
-			slot = theorist
-			idea_token = otto_ciliax
-			ledger = navy
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				naval_aviation_pioneer
-			}
-			cost = 150
-		}
 	}
 
 	### ADNIRALS ###
@@ -1269,13 +1236,12 @@ characters={
 				}
 			}
 			available = {
-				has_completed_focus = GER_four_year_plan 
 				not = {
 					has_completed_focus = GER_demand_sudetenland 
 				}
 			}
 			traits = {
-				captain_of_industry 
+				GER_mefo_bills_architect 
 			}
 		}		
 	}
@@ -1294,7 +1260,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				war_industrialist 
+				GER_reich_minister_of_economy 
 			}
 		}		
 	}
@@ -1313,7 +1279,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				silent_workhorse 
+				GER_secretary_to_the_fuhrer 
 			}
 		}		
 	}
@@ -1335,7 +1301,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				prince_of_terror 
+				GER_director_reich_security 
 			}
 		}
 	}
@@ -1354,7 +1320,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				smooth_talking_charmer 
+				GER_reich_minister_foreign_affairs_ribbentrop 
 			}
 		}
 	}
@@ -1373,7 +1339,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				armaments_organizer 
+				GER_reich_engineer 
 			}
 		}
 	}
@@ -1392,7 +1358,7 @@ characters={
 				original_tag = GER
 			}
 			traits = {
-				propaganda_expert 
+				GER_reich_minister_of_propaganda 
 			}
 		}
 	}

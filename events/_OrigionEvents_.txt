@@ -769,3 +769,54 @@ news_event = { # совок взрывает гэс
 	
 	mean_time_to_happen = { days = 1 }
 }
+
+news_event = { # Операция "Двойная голова"
+	id = origion.25
+	title = origion.25.t
+	desc = origion.25.d
+	picture = GFX_news_event_fall_blau
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.25.a
+	}
+}
+
+news_event = { # Операция "Зоненблюме"
+	id = origion.26
+	title = origion.26.t
+	desc = origion.26.d
+	picture = GFX_news_event_fall_blau
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.26.a
+	}
+}
+
+news_event = { # Операция "Стража на Рейне"
+	id = origion.27
+	title = origion.27.t
+	desc = origion.27.d
+	picture = GFX_news_event_fall_blau
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.27.a
+	}
+}
