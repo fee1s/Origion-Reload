@@ -22,17 +22,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
-
-
-#### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
- ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
- ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
- ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##          ########  ########  ##     ## ## ## ## ##       ######### 
- ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ## 
- ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-#### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ## 
-
+	continuous_focus_position = { x = 1100 y = 800 }
 
 	focus = {
 		id = BUL_acquire_modern_tools
@@ -72,8 +62,11 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			army_experience = 200
 			remove_ideas = BUL_army_restrictions
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			army_experience = 250
 		}
 	}
 	
@@ -298,6 +291,13 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_tech_bonus = {
+				name = BUL_darzhavna_voenna_fabrika
+			    bonus = 1.0
+			    uses = 2
+				technology = improved_infantry_weapons_2
+				technology = advanced_infantry_weapons
+			}
 			212 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -306,15 +306,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = BUL_darzhavna_voenna_fabrika
-			    bonus = 1.0
-			    uses = 2
-				technology = improved_infantry_weapons_2
-				technology = advanced_infantry_weapons
-			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_dvf
 		}
 	}
 
@@ -330,14 +321,6 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			212 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = {
 				name = BUL_found_dvf_sopot
 			    bonus = 1.0
@@ -346,16 +329,21 @@ focus_tree = {
 				technology = antitank4
 				technology = antitank5
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_dvf_sopot
+			212 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = BUL_prussia_of_the_balkans
 
-		prerequisite = { focus = BUL_darzhavna_voenna_fabrika }
-		prerequisite = { focus = BUL_found_dvf_sopot }
+		prerequisite = { focus = BUL_darzhavna_voenna_fabrika focus = BUL_found_dvf_sopot }
 		icon = GFX_focus_BUL_prussia_of_the_balkans
 		relative_position_id = BUL_vasil_levsky_national_military_university
 		x = 0
@@ -418,6 +406,9 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -441,8 +432,11 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			add_stability = 0.05
 			custom_effect_tooltip = BUL_condemn_macedonian_organizations_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.05
 		}
 	}
 
@@ -455,10 +449,6 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-
-		available = {
-			date > 1937.6.1
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -523,13 +513,16 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			add_war_support = 0.05
+			add_ideas = BUL_military_dictatorship
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_stability = 0.1
+			add_war_support = 0.05
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
 			}
-			add_ideas = BUL_military_dictatorship
 		}
 	}
 	
@@ -588,7 +581,7 @@ focus_tree = {
 		relative_position_id = BUL_entering_totalen_krieg
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
@@ -662,24 +655,18 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 		completion_reward = {
-		    add_political_power = 25
-			add_war_support = 0.1
-			swap_ideas = {
+		    swap_ideas = {
 				remove_idea = BUL_second_national_catastrophe
 				add_idea = BUL_second_national_catastrophe_02
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_political_power = 25
+			add_war_support = 0.1
 		}
 	}
-
-
-########    ###     ######   ######  ####  ######  ########    ########  ########     ###    ##    ##  ######  ##     ## 
-##         ## ##   ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
-##        ##   ##  ##       ##        ##  ##          ##       ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
-######   ##     ##  ######  ##        ##   ######     ##       ########  ########  ##     ## ## ## ## ##       ######### 
-##       #########       ## ##        ##        ##    ##       ##     ## ##   ##   ######### ##  #### ##       ##     ## 
-##       ##     ## ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
-##       ##     ##  ######   ######  ####  ######     ##       ########  ##     ## ##     ## ##    ##  ######  ##     ## 
-
+	
 	focus = {
 		id = BUL_the_path_towards_a_greater_bulgaria
 
@@ -692,13 +679,15 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_war_support = 0.05
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
 			}
-			add_war_support = 0.05
-			
-			add_ideas = tot_economic_mobilisation
 		}
 	}
 
@@ -715,12 +704,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_political_power = 75
+			add_stability = 0.1
 			add_war_support = 0.05
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.2
 			}
-			add_stability = 0.1
 		}
 	}
 
@@ -741,6 +730,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BUL_government_reforms_fascists_01
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			48 = {
 				add_resource = {
 					type = steel
@@ -771,6 +763,9 @@ focus_tree = {
 				remove_idea = BUL_government_reforms_fascists_01
 				add_idea = BUL_government_reforms_fascists_02
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			48 = {
 				add_resource = {
 					type = steel
@@ -801,6 +796,9 @@ focus_tree = {
 				remove_idea = BUL_government_reforms_fascists_02
 				add_idea = BUL_government_reforms_fascists_03
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			48 = {
 				add_resource = {
 					type = steel
@@ -838,6 +836,9 @@ focus_tree = {
 				remove_idea = BUL_second_national_catastrophe_02
 				add_idea = BUL_bulgarian_irredentism
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_state_core = 106
 			add_state_core = 803
 			add_state_core = 731
@@ -911,17 +912,20 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		    add_ideas = BUL_national_industry_01
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			48 = {
 				add_building_construction = {
-					type = infrastructure
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
 			}
-			48 = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
@@ -960,11 +964,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_petrol_ad
-			show_ideas_tooltip = BUL_ira
-			show_ideas_tooltip = BUL_pirin
-			show_ideas_tooltip = BUL_vulkan_cement
 
 			add_ai_strategy = {
 				type = building_target
@@ -1007,7 +1006,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		available = {
-			has_completed_focus = BUL_bulgarian_irredentism
 			num_of_civilian_factories > 24
 		}
 		
@@ -1064,19 +1062,22 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = BUL_mineral_extraction_in_the_rhodopes
-				ahead_reduction = 2
-			    bonus = 1.0
-			    uses = 1
-			    technology = concentrated_industry5
-			}
 			48 = {
 				add_resource = {
 					type = steel
 					amount = 8
 				}
 				add_extra_state_shared_building_slots = 2
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = BUL_mineral_extraction_in_the_rhodopes
+				ahead_reduction = 2
+			    bonus = 1.0
+			    uses = 1
+			    technology = concentrated_industry5
 			}
 		}
 	}
@@ -1093,15 +1094,17 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			set_variable = { var = BUL_plovdiv_chromium_duration value = 30 }
+			unlock_decision_tooltip = BUL_mineral_extraction_in_the_rhodopes
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = BUL_mineral_extraction_in_the_rhodopes
 			    bonus = 1.0
 			    uses = 1
 			    technology = streamlined_line
-				technology = flexible_line
 			}
-			set_variable = { var = BUL_plovdiv_chromium_duration value = 30 }
-			unlock_decision_tooltip = BUL_mineral_extraction_in_the_rhodopes
 		}
 	}
 
