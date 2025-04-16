@@ -810,10 +810,11 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		conscription = 0.02
+		no_supply_grace = 72
 		infantry = {
-			combat_width = -0.3
-			defense = 0.1
+			urban = {
+				defense = 0.25
+			}
 		}
 		
 		path = {
@@ -2032,7 +2033,7 @@ technologies = {
 	assault_concentration = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		conscription = 0.03
+		conscription = 0.025
 		category_light_infantry = {
 			soft_attack = 0.05
 			default_morale = 0.1

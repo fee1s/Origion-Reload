@@ -1594,7 +1594,12 @@ war_measures = {
         days_remove = -1
 		
         remove_trigger = {
-            has_war = no
+			OR = {
+				has_war = no
+				has_idea = totaler_krieg_economic_mobilisation
+				has_idea = italy_totalen_krieg_economic_mobilisation
+				has_idea = minors_totalen_krieg_economic_mobilisation
+			}
         }
 		
         modifier = {
@@ -1610,7 +1615,7 @@ war_measures = {
 				has_manpower < 100000
 			}
 		}
-   }
+	}	
 
     war_bonds = {
 
