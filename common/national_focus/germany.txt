@@ -17,6 +17,11 @@ focus_tree = {
 			tag = GER
 		}
 	}
+	
+	initial_show_position = {
+		x = 24
+		y = 0
+	}
 
 	continuous_focus_position = { x = 3650 y = 1400 }
 
@@ -42,21 +47,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_four_year_plan
 		cost = 5
-		available = {
-			OR = {
-				has_full_control_of_state = 64 #Brandenburg
-				has_full_control_of_state = 59 #Hannover
-				has_full_control_of_state = 60 #Thüringen
-				has_full_control_of_state = 54 #Franken
-			}
-		}
-		bypass = {
-			has_civil_war = no
-			NOT = { has_full_control_of_state = 64 }
-			NOT = {	has_full_control_of_state = 59 }
-			NOT = {	has_full_control_of_state = 60 }
-			NOT = {	has_full_control_of_state = 54 }
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -691,7 +681,7 @@ focus_tree = {
 				tooltip = production_speed_arms_factory_factor_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_production_factory_efficiency_gain_factor = 0.03
+			    ger_economy_dm_production_factory_efficiency_gain_factor = 0.02
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			
@@ -833,9 +823,6 @@ focus_tree = {
 		}
 
 		available_if_capitulated = no
-		available = {
-			has_war = yes
-		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 		    custom_effect_tooltip = GER_modify_eco_modifier_tt
@@ -1088,7 +1075,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
-		cost = 5
+		cost = 3
 		available = {
 		}
 
@@ -1224,7 +1211,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = train_equipment
-				amount = 50
+				amount = 100
 			}
 			if = {
 			    limit = {
@@ -1233,7 +1220,7 @@ focus_tree = {
 				ITA = {
 				    add_equipment_to_stockpile = {
 				    	type = train_equipment
-				    	amount = 25
+				    	amount = 50
 				    }
 				}
 			}
@@ -1309,7 +1296,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_develop_modern_maneuver_warfare
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 10
 		}
@@ -1468,7 +1455,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		relative_position_id = GER_develop_modern_maneuver_warfare
-		cost = 5
+		cost = 3
 		available = {
 		}
 
@@ -1780,7 +1767,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		relative_position_id = GER_expanding_the_luftwaffe
-		cost = 5
+		cost = 3
 		available = {
 		}
 
@@ -1818,7 +1805,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -1841,7 +1828,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_plan_z
-		cost = 5
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -1874,7 +1861,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -1988,6 +1975,44 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = GER_seeherrschaft 
+		icon = GFX_focus_GER_seeherrschaft
+		#prerequisite = { focus = GER_plan_z }
+		#prerequisite = { focus = GER_trade_interdiction }
+		prerequisite = { focus = GER_strengthen_the_kriegsmarine }
+		
+		x = 0
+		y = 2
+		relative_position_id = GER_strengthen_the_kriegsmarine
+
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 4
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
 		id = GER_trade_interdiction
 
 		icon = GFX_focus_generic_trade_interdiction
@@ -1998,7 +2023,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_strengthen_the_kriegsmarine
-		cost = 5
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -2018,7 +2043,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_trade_interdiction
-		cost = 5
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
@@ -2040,9 +2065,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_u_boat_efforts
 		cost = 5
-		available = {
-		    has_war = yes
-		}
 
 		search_filters = {}
 
@@ -2556,7 +2578,7 @@ focus_tree = {
 		relative_position_id = GER_triumphal_march
 		cost = 2
 		
-		available = { date > 1940.1.1 }
+		available = { has_completed_focus = GER_operation_marita_zov }
 
 		completion_reward = {
 		    custom_effect_tooltip = ITA_divide_yugoslavia_tt
@@ -2629,7 +2651,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_before_war_with_USSR
-		cost = 5
+		cost = 2
 		completion_reward = {
 			unlock_decision_tooltip = Ger_fall_barbarossa
 		}
@@ -2641,7 +2663,6 @@ focus_tree = {
 		prerequisite = {focus = GER_ussr_war_goal}
 		available = {
 		    date > 1942.6.1
-			date < 1942.9.1
 		}
 		bypass = {
 		}
@@ -2833,6 +2854,26 @@ focus_tree = {
 				add_ideas = german_occupation
 				hidden_effect = { set_cosmetic_tag = ITA_repubblica_sociale_italiana }
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			hidden_effect = {
 			if = {
 				limit = { 39 = { is_controlled_by = ITA } }
@@ -2894,7 +2935,35 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+		    custom_effect_tooltip = GER_operation_margareta_tt
+			hidden_effect = {
+				HUN = {
+				    set_cosmetic_tag = HUN_german
+					retire_character = HUN_miklos_horthy
+				}
+			}
 			
+			HUN = { promote_character = HUN_ferenc_szalasi }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -3040,108 +3109,12 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
-		id = GER_operation_sea_lion
-		icon = GFX_focus_generic_naval_invasion
-		prerequisite = { focus = GER_war_with_eng }
-
-		x = 0
-		y = 2
-		relative_position_id = GER_war_with_eng
-		cost = 2
-
-		available = {
-			118 = {
-			    is_controlled_by_axis = yes
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = GER_atlantikwall
-		icon = GFX_goal_generic_defence
-		prerequisite = {focus = GER_war_with_eng}
-		cancel_if_invalid = yes
-		x = -1
-		y = 1
-		relative_position_id = GER_war_with_eng
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		
-		completion_reward = {
-			GER = {
-			    every_state = { 
-				    limit = { 
-					    OR = { 
-							state = 806 
-							state = 19 
-							state = 23 
-							state = 30 
-							state = 14 
-							state = 15 
-							state = 785 
-							state = 29 
-							state = 6 
-							state = 35 
-							state = 7 
-							state = 36 
-							state = 56 
-							state = 59 
-							state = 58 
-							state = 909 
-							state = 912 
-							state = 99 
-							state = 977 
-						} 
-					}
-					
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = USA
-					}
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = ENG
-					}
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = FRA
-					}
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = CAN
-					}
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = AST
-					}
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = SAF
-					}
-					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = RAJ
-					}
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = GER_die_wacht_am_rhein
 		icon = GFX_focus_GER_schlieffen_once_more
 		prerequisite = {
-            focus = GER_atlantikwall
+            focus = GER_war_with_eng
 		}
 		
 		available = {
@@ -3216,15 +3189,145 @@ focus_tree = {
 		bypass = {
 		}
 		cancel_if_invalid = yes
-		x = -1
-		y = 1
-		relative_position_id = GER_atlantikwall
+		x = 0
+		y = 2
+		relative_position_id = GER_war_with_eng
 		cost = 2
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
 			unlock_decision_tooltip = Ger_fall_die_wacht_am_rhein
+		}
+	}
+
+	focus = {
+		id = GER_operation_sea_lion
+		icon = GFX_focus_generic_naval_invasion
+		prerequisite = { focus = GER_war_with_eng }
+		
+		allow_branch = {
+		    always = no # когда-нибудь...
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = GER_war_with_eng
+		cost = 2
+
+		available = {
+			118 = {
+			    is_controlled_by_axis = yes
+			}
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_FRA_workpower
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = {focus = GER_war_with_eng}
+		cancel_if_invalid = yes
+		x = -1
+		y = 1
+		relative_position_id = GER_war_with_eng
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = GER_modify_eco_modifier_tt
+			add_to_variable = { 
+			    ger_economy_dm_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_production_speed_dockyard_factor = 0.05
+				tooltip = production_speed_dockyard_factor_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_industrial_capacity_factory = 0.025
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_atlantikwall
+		icon = GFX_goal_generic_defence
+		prerequisite = {focus = GER_FRA_workpower}
+		cancel_if_invalid = yes
+		x = 0
+		y = 2
+		relative_position_id = GER_FRA_workpower
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			GER = {
+			    every_state = { 
+				    limit = { 
+					    OR = { 
+							state = 806 
+							state = 19 
+							state = 23 
+							state = 30 
+							state = 14 
+							state = 15 
+							state = 785 
+							state = 29 
+							state = 6 
+							state = 35 
+							state = 7 
+							state = 36 
+							state = 56 
+							state = 59 
+							state = 58 
+							state = 909 
+							state = 912 
+							state = 99 
+							state = 977 
+						} 
+					}
+					
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = USA
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = ENG
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = FRA
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = CAN
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = AST
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = SAF
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = RAJ
+					}
+				}
+			}
 		}
 	}
 	
@@ -3262,13 +3365,13 @@ focus_tree = {
 		relative_position_id = GER_establish_the_afrikakorps
 		cost = 2
 		available = {
-			date > 1941.1.1
+			date > 1941.9.1
 		}
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			unlock_decision_tooltip = GER_operation_sonnenblume
+			unlock_decision_tooltip = Ger_fall_sonnenblume
 		}
 	}
 	
@@ -3412,8 +3515,8 @@ focus_tree = {
 		icon = GFX_focus_generic_aegean_sea_focus
 		prerequisite = { focus = GER_italian_defense_lines }
 
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		relative_position_id = GER_italian_defense_lines
 		cost = 10
 		available = {
@@ -3432,7 +3535,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = bunker
-						level = 3
+						level = 5
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -3441,7 +3544,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = coastal_bunker
-						level = 3
+						level = 5
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -3989,7 +4092,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_swedish_trade_agreement
-		cost = 3
+		cost = 5
 		available = {
 			has_completed_focus = GER_triumphal_march
 		}
