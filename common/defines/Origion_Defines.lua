@@ -80,7 +80,7 @@ NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на 
 
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5 -- Кол-во касов от ШФ
 
-NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.035 -- шанс попадания зсу-атаки по касам
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.0 -- шанс попадания зсу-атаки по касам
 
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Моментальная развертка авиа-крыльев
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 5.0 -- Скорость перелета авиа-крыльев между филдами (увеличено, ванила - 0.02)

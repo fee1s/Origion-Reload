@@ -139,6 +139,96 @@ adjacency_rule =
 	offset = { 1 0 -6 }
 }
 
+#Strait of Sicily
+adjacency_rule =
+{
+	name = "SICILIAN_NARROWS"
+
+	contested =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	enemy =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	is_disabled = {
+		AND = {
+			ORIGION_is_in_faction_with_allies = yes
+			446 = { is_controlled_by = ITA }
+			458 = { is_controlled_by = ITA }
+		}
+		tooltip = SICILIAN_NARROWS_tt
+	}
+	
+	required_provinces = { 11969 9994 7059 10074 }
+	
+	icon = 11969	
+	offset = { 25.0 0.0 10.0 }
+}
+
+#Strait of Messina
+adjacency_rule =
+{
+	name = "MESSINA_NARROWS"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 4159 9990 }
+	
+	icon = 4159	
+	offset = { 6.0 -2.0 2.0 }
+}
+
 adjacency_rule =
 {
 	name = "CHINA_TAIWAN"

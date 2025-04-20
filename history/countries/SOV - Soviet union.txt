@@ -579,6 +579,18 @@ if = {
 			special_type_slot_4 = empty
 		}
 	}
+	
+	create_equipment_variant = {
+		name = "Soviet Fighter Start"
+		type = small_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = fuel_tanks_small
+			special_type_slot_2 = lmg_defense_turret
+		}
+	}
 }
 
 if = {
@@ -681,6 +693,12 @@ add_equipment_to_stockpile = {
     type = medium_plane_airframe_0
 	amount = 615
 	variant_name = "DB-3 Origion"
+}
+
+add_equipment_to_stockpile = {
+    type = small_plane_airframe_1
+	amount = 5000
+	variant_name = "Soviet Fighter Start"
 }
 
 add_equipment_to_stockpile = {
