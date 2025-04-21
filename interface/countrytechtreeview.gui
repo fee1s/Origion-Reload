@@ -876,7 +876,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year1"
-						position = { x = 60 y = 2 }
+						position = { x = 60 y = 20 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -889,7 +889,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year2"
-						position = { x = 60 y = 140 }
+						position = { x = 60 y = 100 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -919,7 +919,7 @@ guiTypes = {
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
-						text = "1939"
+						text = "1940"
 						maxWidth = 80
 						maxHeight = 32
 						format = left
@@ -975,7 +975,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year1"
-						position = { x = 0 y = 2 }
+						position = { x = 0 y = 0 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -988,7 +988,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year2_left"
-						position = { x = 0 y = 140 }
+						position = { x = 0 y = 110 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -1001,7 +1001,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year3_left"
-						position = { x = 0 y = 278 }
+						position = { x = 0 y = 250 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -1014,11 +1014,11 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year4_left"
-						position = { x = 0 y = 420 }
+						position = { x = 0 y = 390 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
-						text = "1939"
+						text = "1940"
 						maxWidth = 80
 						maxHeight = 32
 						format = left
@@ -1027,7 +1027,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year5_left"
-						position = { x = 0 y = 560 }
+						position = { x = 0 y = 530 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -1040,7 +1040,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year6_left"
-						position = { x = 0 y = 698 }
+						position = { x = 0 y = 670 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -1053,7 +1053,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "armour_year7_left"
-						position = { x = 0 y = 838 }
+						position = { x = 0 y = 810 }
 						textureFile = ""
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
@@ -1089,7 +1089,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "armour_subtitle_medium"
-					position = { x = 150 y = 300 }
+					position = { x = 75 y = -45 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -1114,7 +1114,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "armour_subtitle_amphibious"
-					position = { x = -400 y = 305 }
+					position = { x = -350 y = 270 }
 					textureFile = ""
 					font = "hoi_33"
 					borderSize = {x = 0 y = 4}
@@ -2656,7 +2656,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_36header"
 				borderSize = {x = 0 y = 4}
-				text = "1933"
+				text = "1926"
 				maxWidth = 170
 				maxHeight = 32
 				format = left
@@ -2682,7 +2682,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_36header"
 				borderSize = {x = 0 y = 4}
-				text = "1940"
+				text = "1938"
 				maxWidth = 170
 				maxHeight = 32
 				format = left
@@ -2695,7 +2695,20 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_36header"
 				borderSize = {x = 0 y = 4}
-				text = "1944"
+				text = "1940"
+				maxWidth = 170
+				maxHeight = 32
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "airtech_year8"
+				position = { x = 30 y = 720 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 4}
+				text = "1942"
 				maxWidth = 170
 				maxHeight = 32
 				format = left
@@ -2708,7 +2721,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_36header"
 				borderSize = {x = 0 y = 4}
-				text = "1945"
+				text = "1944"
 				maxWidth = 170
 				maxHeight = 32
 				format = left
@@ -2721,7 +2734,7 @@ guiTypes = {
 				textureFile = ""
 				font = "hoi_36header"
 				borderSize = {x = 0 y = 4}
-				text = "1950"
+				text = "1945"
 				maxWidth = 170
 				maxHeight = 32
 				format = left
@@ -2740,7 +2753,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1933"
+					text = "1926"
 					maxWidth = 170
 					maxHeight = 32
 					format = right
@@ -2766,7 +2779,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1940"
+					text = "1938"
 					maxWidth = 170
 					maxHeight = 32
 					format = right
@@ -2779,7 +2792,20 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1944"
+					text = "1940"
+					maxWidth = 170
+					maxHeight = 32
+					format = right
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "airtech_year8"
+					position = { x = 60 y = 720 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1942"
 					maxWidth = 170
 					maxHeight = 32
 					format = right
@@ -2792,7 +2818,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1945"
+					text = "1944"
 					maxWidth = 170
 					maxHeight = 32
 					format = right
@@ -2805,7 +2831,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1950"
+					text = "1945"
 					maxWidth = 170
 					maxHeight = 32
 					format = right
@@ -2830,7 +2856,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "airtech_subtitle_weapons"
-				position = { x = 1155 y = 110 }
+				position = { x = 1125 y = 110 }
 				textureFile = ""
 				font = "hoi_33"
 				borderSize = {x = 0 y = 4}

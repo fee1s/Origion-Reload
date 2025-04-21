@@ -14,17 +14,17 @@ FRA_annex = {
 			set_capital = { state = 660 }
 			add_equipment_to_stockpile = {
 				type = convoy
-				amount = 300
+				amount = 500
 			}
-			army_experience = 200
+			army_experience = 350
 			660 = {
-			add_resource = {
-				type = steel
-				amount = 30
-			}				
-			add_resource = {
-				type = oil
-				amount = 20
+				add_resource = {
+					type = steel
+					amount = 30
+				}				
+				add_resource = {
+					type = oil
+					amount = 20
 				}
 			}
 			660 = {add_core_of = FRA}
@@ -41,6 +41,7 @@ FRA_annex = {
 			556 = {add_core_of = FRA}
 			898 = {add_core_of = FRA}
 			272 = {add_core_of = FRA}
+			796 = {add_core_of = FRA}
 			hidden_effect = {
 				transfer_state = 538 
 				transfer_state = 718
@@ -50,6 +51,7 @@ FRA_annex = {
 				transfer_state = 890
 				transfer_state = 769	
 				transfer_state = 768
+				transfer_state = 796 
 			}
 		}
 	}

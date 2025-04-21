@@ -802,27 +802,6 @@ ORG_africa_dec_cat = {
 				
 				news_event = { id = origion.22 days = 2 }
 				set_global_flag = operation_torch_flag
-				
-				461 = {
-					add_building_construction = {
-						type = naval_base
-						level = 6
-						province = 7069
-						instant_build = yes
-					}
-					
-					add_building_construction = {
-						type = air_base
-						level = 6
-						instant_build = yes
-					}
-					
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
 			}
 		}
 	}
@@ -865,26 +844,6 @@ ORG_africa_dec_cat = {
 					}
 				    add_to_variable = { ALLY_africa_controlled_regions = 1 }
 				    add_to_variable = { AXIS_africa_controlled_regions = 2 }
-				}
-				461 = {
-					add_building_construction = {
-						type = naval_base
-						level = 6
-						province = 7069
-						instant_build = yes
-					}
-					
-					add_building_construction = {
-						type = air_base
-						level = 6
-						instant_build = yes
-					}
-					
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
 				}
 			}
 		}
