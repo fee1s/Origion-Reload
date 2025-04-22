@@ -2615,34 +2615,23 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = ITA_divide_yugoslavia_tt
+			103 = { add_core_of = ITA }
+			853 = { add_core_of = ITA }
 			
-			hidden_effect = {
-				if = {
-					limit = { HUN = { is_ai = no } }
-				
-					HUN = {
-						transfer_state = 45
-						transfer_state = 764
-					}
-				}
-				
-				if = {
-					limit = { BUL = { is_ai = no } }
-				
-					BUL = {
-						transfer_state = 106
-						transfer_state = 803
-					}
-				}
-				
-				ITA = { annex_country = { target = YUG } }
-				
-				add_state_core = 103
-				add_state_core = 163
-				add_state_core = 105
-				
-				add_named_threat = { threat = 15 name = GER_fate_of_yugoslavia }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			YUG = {
+			    give_resource_rights = {
+			        receiver = ITA
+					state = 105
+			    }
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_offsite_building = {
+			    type = industrial_complex
+				level = 6
 			}
 		}
 	}
@@ -2663,22 +2652,23 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = ITA_subjugate_greece_tt
-
-			hidden_effect = {
-				if = {
-					limit = { BUL = { is_ai = no } }
-				
-					BUL = {
-						transfer_state = 184
-						transfer_state = 731
-					}
-				}
-				
-				ITA = { annex_country = { target = GRE } }
-				add_named_threat = { threat = 10 name = GER_fate_of_greece }
+			GRE = {
+			    give_resource_rights = {
+			        receiver = ITA
+					state = 47
+			    }
+				give_resource_rights = {
+			        receiver = ITA
+					state = 185
+			    }
 			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_offsite_building = {
+			    type = industrial_complex
+				level = 4
+			}
 		}
 	}
 		

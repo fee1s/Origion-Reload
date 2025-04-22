@@ -556,7 +556,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.1
+				stability_factor = 0.15
 				political_power_gain = 0.15
 			}
 		}
@@ -730,10 +730,48 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription_factor = 0.1
+				conscription_factor = 0.15
 				army_morale_factor = 0.1
-				dig_in_speed_factor = 0.05
-		        max_dig_in = 5
+			}
+		}
+		
+		BUL_prussia_of_the_balkans_02 = {
+			name = BUL_prussia_of_the_balkans_01
+			picture = bul_prussia_of_the_balkans
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				supply_factor = 0.05
+				conscription_factor = 0.15
+				army_morale_factor = 0.1
+			}
+		}
+		
+		BUL_prussia_of_the_balkans_03 = {
+			name = BUL_prussia_of_the_balkans_01
+			picture = bul_prussia_of_the_balkans
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			modifier = {
+				air_cas_present_factor = 0.05
+				conscription_factor = 0.15
+				army_morale_factor = 0.1
 			}
 		}
 
@@ -1393,8 +1431,39 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = 0.1
-				war_support_factor = 0.05
+				training_time_army_factor = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		
+		BUL_brannik_2 = {
+			name = BUL_brannik
+			picture = MEX_politicised_army
+
+			allowed = {
+				original_tag = BUL
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_completed_focus = BUL_found_the_brannik
+					has_government = neutrality
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.005
+				training_time_army_factor = -0.3
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -1466,10 +1535,10 @@ ideas = {
 			
 			modifier = {
 				war_support_weekly = 0.001
-				conscription = 0.05
+				conscription = 0.075
 				fascism_drift = 0.1
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
 			}
 		}
 
@@ -1533,6 +1602,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.15
 				consumer_goods_factor = -0.15
 				local_resources_factor = 0.15
+				min_export = -0.1
 			} 
 		}
 
@@ -2643,34 +2713,9 @@ ideas = {
 				has_dlc = "Battle for the Bosporus"
 			}
 
-			visible = {
-				NOT = { has_completed_focus = BUL_utmost_optimization }
-			}	
-			
-			research_bonus = {
-				electronics = 0.1
-			}
-			
-			traits = { electronics_developer }
-
-			modifier = {
-				custom_modifier_tooltip = BUL_national_industrial_concern_upgrade_tt
-			}	
-		}
-
-		BUL_ira_improved = {
-			name = BUL_ira
-
-			picture = bul_ira
-		
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			visible = {
+			available = {
 				has_completed_focus = BUL_utmost_optimization
-			}
+			}	
 			
 			research_bonus = {
 				electronics = 0.15
@@ -2679,10 +2724,9 @@ ideas = {
 			traits = { electronics_developer }
 
 			modifier = {
-				production_speed_radar_station_factor = 0.25
 				land_reinforce_rate = 0.05
 				production_factory_max_efficiency_factor = 0.05
-			}
+			}	
 		}
 
 		BUL_pirin = {
@@ -2694,35 +2738,10 @@ ideas = {
 				has_dlc = "Battle for the Bosporus"
 			}
 
-			visible = {
-				NOT = { has_completed_focus = BUL_utmost_optimization }
-			}
-
-			research_bonus = {
-				industry = 0.05
-			}
-			
-			traits = { construction_company }
-
-			modifier = {
-				custom_modifier_tooltip = BUL_national_industrial_concern_upgrade_tt
-			}
-		}
-
-		BUL_pirin_improved = {
-			name = BUL_pirin
-
-			picture = bul_pirin
-		
-			allowed = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			visible = {
+			available = {
 				has_completed_focus = BUL_utmost_optimization
 			}
-			
+
 			research_bonus = {
 				industry = 0.15
 			}
@@ -2734,5 +2753,4 @@ ideas = {
 			}
 		}
 	}
-
 }
