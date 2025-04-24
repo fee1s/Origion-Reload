@@ -312,10 +312,7 @@ country_event = {
 		NOT = { fascism > 0.7 }
 		check_has_focus_tree_to_switch_to_fascism = yes
 		NOT = {
-			AND = {
-				original_tag = SPR
-				has_dlc = "La Resistance"
-			}
+			original_tag = ROM
 		}
 	}
 
@@ -935,6 +932,7 @@ country_event = {
 		NOT = { has_government = fascism }
 		has_civil_war = no
 		check_has_focus_tree_to_switch_to_fascism = yes
+		NOT = { original_tag = ROM }
 	}
 
 	mean_time_to_happen = {

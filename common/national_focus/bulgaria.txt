@@ -22,7 +22,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 100 y = 1200 }
+	continuous_focus_position = { x = 1150 y = 950 }
 
 	focus = {
 		id = BUL_acquire_modern_tools
@@ -683,8 +683,8 @@ focus_tree = {
 		prerequisite = { focus = BUL_entering_totalen_krieg }
 		icon = GFX_focus_generic_tank_production
 		relative_position_id = BUL_entering_totalen_krieg
-		x = 2
-		y = 1
+		x = 1
+		y = 2
 		cost = 10
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -714,8 +714,8 @@ focus_tree = {
 		prerequisite = { focus = BUL_entering_totalen_krieg }
 		icon = GFX_focus_generic_mass_production
 		relative_position_id = BUL_entering_totalen_krieg
-		x = -2
-		y = 1
+		x = -1
+		y = 2
 		cost = 10
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -750,9 +750,12 @@ focus_tree = {
 		cost = 2
 		
 		available = {
-			any_state = {
-			  	is_core_of = BUL
-			   	NOT = { is_fully_controlled_by = BUL }
+			OR = {
+			    GER = { has_completed_focus = GER_totalen_krieg }
+			    any_state = {
+			      	is_core_of = BUL
+			       	NOT = { is_fully_controlled_by = BUL }
+			    }
 			}
 		}
 		
@@ -1129,10 +1132,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1255,14 +1258,37 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = BUL_friends_with_german_steel_stuff
+
+		prerequisite = { focus = BUL_cooperation_with_german_companies }
+
+		icon = GFX_focus_GER_vereinigte_stahlwerke
+		relative_position_id = BUL_cooperation_with_german_companies
+		x = -1
+		y = 1
+		cost = 10
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			48 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
 
 	focus = {
 		id = BUL_uranium_prospecting
 
-		prerequisite = { focus = BUL_cooperation_with_german_companies }
+		prerequisite = { focus = BUL_friends_with_german_steel_stuff }
 		icon = GFX_focus_generic_central_planning
-		relative_position_id = BUL_cooperation_with_german_companies
-		x = -2
+		relative_position_id = BUL_friends_with_german_steel_stuff
+		x = 0
 		y = 1
 		cost = 10
 		
@@ -1286,37 +1312,14 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BUL_friends_with_german_steel_stuff
+		id = BUL_todt_organisation
 
 		prerequisite = { focus = BUL_cooperation_with_german_companies }
 
-		icon = GFX_focus_GER_vereinigte_stahlwerke
-		relative_position_id = BUL_cooperation_with_german_companies
-		x = -1
-		y = 2
-		cost = 10
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
-		completion_reward = {
-			48 = {
-				add_resource = {
-					type = steel
-					amount = 12
-				}
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
-	
-	focus = {
-		id = BUL_war_industry
-
-		prerequisite = { focus = BUL_cooperation_with_german_companies }
-
-		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		icon = GFX_focus_GER_form_organization_todt
 		relative_position_id = BUL_cooperation_with_german_companies
 		x = 1
-		y = 2
+		y = 1
 		cost = 10
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
@@ -1340,13 +1343,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = BUL_todt_organisation
+		id = BUL_war_industry
 
-		prerequisite = { focus = BUL_cooperation_with_german_companies }
+		prerequisite = { focus = BUL_todt_organisation }
 
-		icon = GFX_focus_GER_form_organization_todt
-		relative_position_id = BUL_cooperation_with_german_companies
-		x = 2
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+		relative_position_id = BUL_todt_organisation
+		x = 0
 		y = 1
 		cost = 10
 		

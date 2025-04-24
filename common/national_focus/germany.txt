@@ -23,7 +23,7 @@ focus_tree = {
 		y = 0
 	}
 
-	continuous_focus_position = { x = 3650 y = 1400 }
+	continuous_focus_position = { x = 3650 y = 1300 }
 
 	
  ######   #######  ##     ## ##     ##  #######  ##    ##    ########  ########     ###    ##    ##  ######  ##     ## ########  ######  
@@ -1172,37 +1172,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_nationalize_ford_factories
-		icon = GFX_focus_generic_truck
-		prerequisite = { focus = GER_panzergrenadier }
-
-		x = -1
-		y = 2
-		relative_position_id = GER_panzergrenadier
-		cost = 5
-		continue_if_invalid = yes
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			51 = { #Rhineland
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
 		id = GER_kriegslokomotiven
 		icon = GFX_focus_GER_kriegslokomotive
 		prerequisite = { focus = GER_panzergrenadier }
 
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = GER_panzergrenadier
 		cost = 5
 
@@ -1264,7 +1239,7 @@ focus_tree = {
 		id = GER_infantry_weapon
 		icon = GFX_goal_rhineland
 		prerequisite = { focus = GER_panzergrenadier }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_panzergrenadier
 		cost = 5
@@ -1721,8 +1696,7 @@ focus_tree = {
 	focus = {
 		id = GER_aerodynamic_research_institute
 		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = GER_solve_the_logistical_bottlenecks }
-		prerequisite = { focus = GER_defense_of_the_reich }
+		prerequisite = { focus = GER_solve_the_logistical_bottlenecks focus = GER_defense_of_the_reich }
 
 		x = 0
 		y = 3
@@ -1861,7 +1835,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 5
+		cost = 3
 		available = {
 		}
 
@@ -1985,7 +1959,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_strengthen_the_kriegsmarine
 
-		cost = 10
+		cost = 3
 		available = {
 		}
 
@@ -2064,7 +2038,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_u_boat_efforts
-		cost = 5
+		cost = 3
 
 		search_filters = {}
 
@@ -2511,9 +2485,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = GER_danzig_or_war }
 
-		x = 1
-		y = 1
-		relative_position_id = GER_around_maginot
+		x = 0
+		y = 2
+		relative_position_id = GER_danzig_or_war
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2548,6 +2522,10 @@ focus_tree = {
 		cost = 2
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
+		
+		available = {
+		    date > 1940.6.1
+		}
 
 		completion_reward = {
 			custom_effect_tooltip = ITA_subjugate_greece_tt
@@ -2578,7 +2556,9 @@ focus_tree = {
 		relative_position_id = GER_triumphal_march
 		cost = 2
 		
-		available = { has_completed_focus = GER_operation_marita_zov }
+		available = {
+		    date > 1940.6.1
+		}
 
 		completion_reward = {
 		    custom_effect_tooltip = ITA_divide_yugoslavia_tt
@@ -2661,9 +2641,6 @@ focus_tree = {
 		id = GER_operation_Blau
 		icon = GFX_focus_GER_end_european_communism
 		prerequisite = {focus = GER_ussr_war_goal}
-		available = {
-		    date > 1942.6.1
-		}
 		bypass = {
 		}
 		x = -1
@@ -2675,6 +2652,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = Ger_fall_blau
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = decision_unlock_blau
 		}
 	}
 	
@@ -2682,9 +2663,6 @@ focus_tree = {
 		id = GER_operation_Double_Head
 		icon = GFX_focus_GER_end_european_communism
 		prerequisite = {focus = GER_ussr_war_goal}
-		available = {
-		    date > 1943.6.1
-		}
 		bypass = {
 		}
 		x = 1
@@ -2696,6 +2674,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			unlock_decision_tooltip = Ger_fall_doppelkopf
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = decision_unlock_doppelkopf
 		}
 	}
 	
@@ -2709,90 +2691,11 @@ focus_tree = {
 		y = 2
 		icon = GFX_focus_totalcum
 		available = {
-			OR = {
-				date > 1943.2.18
-				SOV = { surrender_progress < 0.35 }
-				GER = { surrender_progress > 0.15 }
-			}
-			
-		    OR = {
-				custom_trigger_tooltip = { # условие на дроп в вал
-					tooltip = GER_totalen_krieg_tt
-					OR = {
-						ENG = {
-							controls_state = 14
-							controls_state = 30
-							controls_state = 15
-						}
-						
-						FRA = {
-							controls_state = 14
-							controls_state = 30
-							controls_state = 15
-						}
-						
-						ENG = {
-							controls_state = 19
-							controls_state = 23
-							controls_state = 25
-						}
-						
-						FRA = {
-							controls_state = 19
-							controls_state = 23
-							controls_state = 25
-						}
-						
-						ENG = {
-							controls_state = 20
-							controls_state = 21
-						}
-						
-						FRA = {
-							controls_state = 20
-							controls_state = 21
-						}
-						
-						FRA = {
-							controls_state = 16
-						}
-						
-						ENG = {
-							controls_state = 16
-						}
-						
-						AND = {
-							OR = {
-								FRA = {
-									controls_state = 29
-								}
-								
-								ENG = {
-									controls_state = 29
-								}
-							}
-							
-							BEL = {
-								controls_state = 6
-							}
-							
-							HOL = {
-								controls_state = 7
-							}
-						}
-					}
+			custom_trigger_tooltip = {
+			    tooltip = GER_totalen_krieg_2_tt
+				hidden_trigger = {
+				    always = no
 				}
-				GER = {
-					surrender_progress > 0.00
-				}
-				
-				ITA = {
-					surrender_progress > 0.35
-				}
-				
-				46 = { NOT = { is_controlled_by_axis = yes } }
-				
-				hidden_trigger = { date > 1943.2.18 }
 			}
 		}
 		
@@ -2969,17 +2872,16 @@ focus_tree = {
 	
 	focus = {
 		id = GER_END
-		icon = GFX_focus_POL_reassert_silesian_claims
+		icon = GFX_focus_PER_communist_afghanistan_intervention
 		prerequisite = {
             focus = GER_totalen_krieg
 		}
 		
 		available = {
-			surrender_progress > 0.15
+		    surrender_progress > 0.1
 		}
 		bypass = {
 		}
-		cancel_if_invalid = yes
 		x = 1
 		y = 1
 		relative_position_id = GER_totalen_krieg
@@ -2990,7 +2892,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = Steiner_counterattack
-				days = 45
+				days = 60
 			}
 		}
 	}
@@ -3084,158 +2986,13 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_war_with_eng
-		icon = GFX_focus_attack_britain
-		prerequisite = {
-			focus = GER_triumphal_march
-		}
-		available = {
-			
-		}
-		bypass = {
-		}
+		id = GER_FRA_workpower
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = {focus = GER_triumphal_march}
 		cancel_if_invalid = yes
 		x = -3
 		y = 1
 		relative_position_id = GER_triumphal_march
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_timed_idea = {
-				idea = GER_NAVAL_LION
-				days = 120
-			}
-		}
-	}
-	
-	focus = {
-		id = GER_die_wacht_am_rhein
-		icon = GFX_focus_GER_schlieffen_once_more
-		prerequisite = {
-            focus = GER_war_with_eng
-		}
-		
-		available = {
-			custom_trigger_tooltip = { # условие на дроп в вал
-					tooltip = GER_totalen_krieg_tt
-					date > 1940.1.1
-					OR = {
-						ENG = {
-							controls_state = 14
-							controls_state = 30
-							controls_state = 15
-						}
-						
-						FRA = {
-							controls_state = 14
-							controls_state = 30
-							controls_state = 15
-						}
-						
-						ENG = {
-							controls_state = 19
-							controls_state = 23
-							controls_state = 25
-						}
-						
-						FRA = {
-							controls_state = 19
-							controls_state = 23
-							controls_state = 25
-						}
-						
-						ENG = {
-							controls_state = 20
-							controls_state = 21
-						}
-						
-						FRA = {
-							controls_state = 20
-							controls_state = 21
-						}
-						
-						FRA = {
-							controls_state = 16
-						}
-						
-						ENG = {
-							controls_state = 16
-						}
-						
-						AND = {
-							OR = {
-								FRA = {
-									controls_state = 29
-								}
-								
-								ENG = {
-									controls_state = 29
-								}
-							}
-							
-							BEL = {
-								controls_state = 6
-							}
-							
-							HOL = {
-								controls_state = 7
-							}
-						}
-					}
-				}
-		}
-		bypass = {
-		}
-		cancel_if_invalid = yes
-		x = 0
-		y = 2
-		relative_position_id = GER_war_with_eng
-		cost = 2
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			unlock_decision_tooltip = Ger_fall_die_wacht_am_rhein
-		}
-	}
-
-	focus = {
-		id = GER_operation_sea_lion
-		icon = GFX_focus_generic_naval_invasion
-		prerequisite = { focus = GER_war_with_eng }
-		
-		allow_branch = {
-		    always = no # когда-нибудь...
-		}
-
-		x = 0
-		y = 2
-		relative_position_id = GER_war_with_eng
-		cost = 2
-
-		available = {
-			118 = {
-			    is_controlled_by_axis = yes
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = GER_FRA_workpower
-		icon = GFX_focus_DEN_heavy_regulations
-		prerequisite = {focus = GER_war_with_eng}
-		cancel_if_invalid = yes
-		x = -1
-		y = 1
-		relative_position_id = GER_war_with_eng
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -3259,13 +3016,65 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_atlantikwall
-		icon = GFX_goal_generic_defence
-		prerequisite = {focus = GER_FRA_workpower}
+		id = GER_war_with_eng
+		icon = GFX_focus_attack_britain
+		prerequisite = {
+			focus = GER_FRA_workpower
+		}
+		available = {
+			
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		x = -1
+		y = 1
+		relative_position_id = GER_FRA_workpower
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = GER_NAVAL_LION
+				days = 120
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_die_wacht_am_rhein
+		icon = GFX_focus_GER_schlieffen_once_more
+		prerequisite = {
+            focus = GER_FRA_workpower
+		}
+		bypass = {
+		}
 		cancel_if_invalid = yes
 		x = 0
 		y = 2
 		relative_position_id = GER_FRA_workpower
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			unlock_decision_tooltip = Ger_fall_die_wacht_am_rhein
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = decision_unlock_wacht
+		}
+	}
+	
+	focus = {
+		id = GER_atlantikwall
+		icon = GFX_goal_generic_defence
+		prerequisite = {focus = GER_war_with_eng}
+		cancel_if_invalid = yes
+		x = -1
+		y = 1
+		relative_position_id = GER_war_with_eng
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -3364,14 +3173,15 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_establish_the_afrikakorps
 		cost = 2
-		available = {
-			date > 1941.9.1
-		}
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
 			unlock_decision_tooltip = Ger_fall_sonnenblume
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = decision_unlock_sonneblume
 		}
 	}
 	
@@ -3515,10 +3325,10 @@ focus_tree = {
 		icon = GFX_focus_generic_aegean_sea_focus
 		prerequisite = { focus = GER_italian_defense_lines }
 
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = GER_italian_defense_lines
-		cost = 10
+		cost = 5
 		available = {
 			
 		}
@@ -3880,7 +3690,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}

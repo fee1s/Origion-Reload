@@ -294,8 +294,7 @@ GER_operations = {
 	GER_fall_weserubung = {
 		icon = GFX_GER_so_decision
 		available = {
-			has_completed_focus = GER_weserubung
-			has_war = yes
+			has_completed_focus = GER_operation_weserubung
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -328,7 +327,6 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_around_maginot
-			has_war = yes
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -460,6 +458,7 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_operation_Blau
+			date > 1942.6.1
 			date < 1942.9.1
 		}
 		cost = 0
@@ -490,12 +489,15 @@ GER_operations = {
 				idea = GER_Blau
 				days = 75
 			}
+			custom_effect_tooltip = ger_operation_tt
 		}
 	}
 	Ger_fall_doppelkopf = {
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_operation_Double_Head
+			date > 1943.6.1
+			date < 1943.9.1
 		}
 		cost = 0
 		fire_only_once = yes
@@ -525,46 +527,22 @@ GER_operations = {
 				idea = GER_Doppelkopf
 				days = 75
 			}
+			custom_effect_tooltip = ger_operation_tt
 		}
 	}
 	Ger_fall_sonnenblume = {
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_operation_sonnenblume
+			date > 1940.6.1
+			date < 1941.1.1
 		}
 		cost = 0
 		fire_only_once = yes
 		complete_effect = {
-			hidden_effect = {
-				ITA = {
-					add_timed_idea = {
-						idea = GER_sonnenblume
-						days = 75
-					}
-				}
-				ROM = {
-					add_timed_idea = {
-						idea = GER_sonnenblume
-						days = 75
-					}
-				}
-				HUN = {
-					add_timed_idea = {
-						idea = GER_sonnenblume
-						days = 75
-					}
-				}
-				BUL = {
-					add_timed_idea = {
-						idea = GER_sonnenblume
-						days = 75
-					}
-				}
-				country_event = { id = origion.26 days = 3 }
-			}
 			add_timed_idea = {
 				idea = GER_sonnenblume
-				days = 75
+				days = 30
 			}
 		}
 	}
@@ -572,35 +550,71 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_die_wacht_am_rhein
+			custom_trigger_tooltip = {
+					tooltip = GER_totalen_krieg_tt
+			OR = {
+			    AND = {
+				    14 = {
+				        is_controlled_by_allies = yes
+				    }
+					15 = {
+				        is_controlled_by_allies = yes
+				    }
+					30 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				AND = {
+				    19 = {
+				        is_controlled_by_allies = yes
+				    }
+					23 = {
+				        is_controlled_by_allies = yes
+				    }
+					25 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				AND = {
+				    19 = {
+				        is_controlled_by_allies = yes
+				    }
+					23 = {
+				        is_controlled_by_allies = yes
+				    }
+					25 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				AND = {
+				    20 = {
+				        is_controlled_by_allies = yes
+				    }
+					21 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				16 = {
+				    is_controlled_by_allies = yes
+				}
+				AND = {
+				    29 = {
+				        is_controlled_by_allies = yes
+				    }
+					6 = {
+				        is_controlled_by_allies = yes
+				    }
+					7 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+			}
+			}
 		}
 		cost = 0
 		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = {
-				ITA = {
-					add_timed_idea = {
-						idea = GER_Die_wacht_am_rhein
-						days = 75
-					}
-				}
-				ROM = {
-					add_timed_idea = {
-						idea = GER_Die_wacht_am_rhein
-						days = 75
-					}
-				}
-				HUN = {
-					add_timed_idea = {
-						idea = GER_Die_wacht_am_rhein
-						days = 75
-					}
-				}
-				BUL = {
-					add_timed_idea = {
-						idea = GER_Die_wacht_am_rhein
-						days = 75
-					}
-				}
 				country_event = { id = origion.26 days = 3 }
 			}
 			add_timed_idea = {

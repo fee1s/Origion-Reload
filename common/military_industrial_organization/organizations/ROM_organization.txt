@@ -11,26 +11,13 @@
 ### POL_pzinz_organization -> see POL_organizations.txt
 
 ROM_leonidas_works_organization = {
-	include = generic_infantry_tank_organization
+	include = axis_tank_organization
 	icon = GFX_idea_ROM_leonidas_works
 	allowed = { 
 		tag = ROM
 		has_dlc = "Death or Dishonor"
 	}
 	available = {
-	}
-	initial_trait = {
-		name = ROM_mio_trait_mobile_tank_destroyers
-		
-		limit_to_equipment_type = { 
-			mio_cat_eq_all_tank_destroyers
-		}
-		
-		equipment_bonus = {
-			reliability = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.05
-		}
 	}
 }
 

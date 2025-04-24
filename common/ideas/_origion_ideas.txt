@@ -515,8 +515,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = -0.10
+				army_attack_factor = 0.25
+				army_defence_factor = -0.1
 			}
 		}
 				
@@ -591,43 +591,11 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = generic_acquire_tanks
-			targeted_modifier = {
-				tag = USA
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = ENG
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = FRA
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = CAN
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = AST
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = SAF
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = RAJ
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
 			modifier = {
-				army_speed_factor = 0.075
+				convoy_retreat_speed = 0.5
+				dig_in_speed_factor = 0.5
+				supply_factor = 0.15
+				planning_speed = 0.5
 			}
 		}
 		
@@ -641,42 +609,11 @@ ideas = {
 			removal_cost = -1
 			picture = generic_acquire_tanks
 			targeted_modifier = {
-				tag = USA
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = ENG
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = FRA
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = CAN
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = AST
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = SAF
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
-			}
-			targeted_modifier = {
-				tag = RAJ
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
+				tag = SOV
+				attack_bonus_against = -0.20
 			}
 			modifier = {
-				army_speed_factor = 0.075
+			    army_attack_factor = 0.1
 			}
 		}
 
