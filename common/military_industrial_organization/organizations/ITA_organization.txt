@@ -101,38 +101,6 @@ ITA_crda_organization = {
 	}
 }
 
-ITA_cantiere_oto_organization = {
-	include = generic_escort_ship_organization
-	icon = GFX_idea_ITA_oto
-	
-	allowed = {	
-		tag = ITA 
-	}
-	
-	available = {
-		FROM = {
-			controls_state = 158 #PIEDMONT (Genova)
-		}
-		ITA_is_northern_designer = yes
-	}
-}
-
-ITA_navalmeccanica_organization = {
-	include = generic_refurbishment_repair_organization
-	icon = GFX_idea_ITA_navalmeccanica
-	
-	allowed = {	
-		tag = ITA 
-	}
-	
-	available = {
-		FROM = {
-			controls_state = 117 # CAMPAGNA (Napoli)	
-		}
-		ITA_is_southern_designer = yes
-	}
-} 
-
 ITA_cantiere_navale_di_ancona_organization = {
 	include = generic_raider_ship_organization
 	icon = GFX_idea_ITA_cantera_navale_di_ancona
@@ -148,25 +116,6 @@ ITA_cantiere_navale_di_ancona_organization = {
 		ITA_is_southern_designer = yes
 	}
 }
-
-ITA_cantieri_navali_tosi_organization = {
-	include = generic_submarine_organization
-	icon = GFX_idea_ITA_cantieri_navali_tosi
-	
-	allowed = {	
-		tag = ITA 
-	}
-	
-	available = {
-		FROM = {
-			controls_state = 849 # PUGLIA (Taranto)
-			
-		}
-		ITA_is_southern_designer = yes
-	}
-}
-
-
 
 ###########################
 

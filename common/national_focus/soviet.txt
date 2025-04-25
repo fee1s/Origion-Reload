@@ -106,10 +106,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 10
-
-		available = {
-			date > 1937.2.1
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -150,10 +146,6 @@ focus_tree = {
 		cost = 10
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
-
-		available = {
-			date > 1937.6.1
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -213,10 +205,6 @@ focus_tree = {
 		y = 3
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
 		cost = 10
-
-		available = {
-			date > 1938.1.1
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -265,10 +253,6 @@ focus_tree = {
 		cost = 10
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
-
-		available = {
-			date > 1937.6.1
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -308,17 +292,12 @@ focus_tree = {
 		y = 3
 		relative_position_id = SOV_shift_to_armaments_production
 		cost = 10
-
-		available = {
-			date > 1938.01.01
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 } #Add efficiency gain
-			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.05 } #Add efficiency start
-			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.02 } #Add small output bonus
+			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.1 } #Add efficiency start
+			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.05 } #Add small output bonus
 			custom_effect_tooltip = SOV_optimize_production_lines_ns_tt
 
 			add_tech_bonus = {
