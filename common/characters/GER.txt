@@ -8,7 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=nazism
-			traits={ dictator }
+			traits={ GER_der_fuhrer }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -184,7 +184,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_army_innovation
+				has_completed_focus = GER_develop_modern_maneuver_warfare
 			}
 			traits = {
 				army_armored_3
@@ -875,23 +875,6 @@ characters={
 			army={
 				small="GFX_idea_wilhelm_keitel"
 			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = wilhelm_keitel
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = {
-				army_chief_drill_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
 		}		
 	}
 
@@ -923,23 +906,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_walther_von_brauchitsch"
-			}
-		}
-		advisor={	
-			slot = army_chief
-			idea_token = walther_von_brauchitsch
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				has_completed_focus = GER_army_innovation
-			}
-			traits = {
-				army_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -1000,9 +966,6 @@ characters={
 			idea_token = ritter_von_greim
 			allowed = {
 				original_tag = GER
-			}
-			available = {
-				has_completed_focus = GER_air_innovation
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -1088,7 +1051,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				has_completed_focus = GER_air_innovation
+				has_completed_focus = GER_expanding_the_luftwaffe
 			}
 			traits = {
 				air_close_air_support_2
@@ -1269,7 +1232,7 @@ characters={
 				}
 			}
 			available = {
-				has_completed_focus = GER_four_year_plan 
+				has_completed_focus = GER_the_four_year_plan 
 				not = {
 					has_completed_focus = GER_demand_sudetenland 
 				}
@@ -1411,7 +1374,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-				FRA = { has_capitulated = no }
+				date < 1940.1.1
 			}
 			traits = {
 				amateur_aviator_hess
