@@ -314,8 +314,11 @@ any_axis_capital_fallen_trigger = {
 		48 = {
 			is_controlled_by_axis = no
 		}
-		282 = {
-			is_controlled_by_axis = no
+		AND = {
+		    NOT = { has_global_flag = NO_ASIA_FLAG }
+			282 = {
+		    	is_controlled_by_axis = no
+		    }
 		}
 	}
 }

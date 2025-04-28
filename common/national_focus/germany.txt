@@ -363,8 +363,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.05
+			    ger_economy_dm_production_speed_arms_factory_factor = 0.025
 				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_production_speed_dockyard_factor = 0.025
+				tooltip = production_speed_dockyard_factor_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -429,7 +433,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_ideas = GER_synthetic_oil
+			custom_effect_tooltip = GER_modify_eco_modifier_tt
+			add_to_variable = { 
+			    ger_economy_dm_fuel_gain_factor_from_states = 0.50
+				tooltip = fuel_gain_from_states_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = GER_synthetic_oil
 				bonus = 1.5
@@ -496,7 +507,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
-			    ger_economy_dm_local_resources_factor = 0.1
+			    ger_economy_dm_min_export = -0.10
+				tooltip = min_export_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_local_resources_factor = 0.05
 				tooltip = local_resources_factor_tt
 			}
 			
@@ -576,11 +591,11 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -607,11 +622,11 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				random_select_amount = 3
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -642,11 +657,11 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				random_select_amount = 3
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -660,11 +675,12 @@ focus_tree = {
 	focus = {
 		id = GER_nationalized_war_industry
 		icon = GFX_focus_GER_prioritize_the_four_year_plan
-		prerequisite = { focus = GER_concentrated_armament_program focus = GER_establish_production_targets}
+		prerequisite = { focus = GER_concentrated_armament_program }
+		prerequisite = { focus = GER_establish_production_targets }
 		x = 0
 		y = 2
 		relative_position_id = GER_accelerate_the_rearmament_program
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 20
 		}
@@ -677,10 +693,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.025
-				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = { 
 			    ger_economy_dm_production_factory_efficiency_gain_factor = 0.02
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
@@ -692,15 +704,15 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -733,11 +745,11 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				random_select_amount = 3
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -774,11 +786,11 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				random_select_amount = 3
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -795,6 +807,7 @@ focus_tree = {
 		prerequisite = { focus = GER_create_rustungsstab }
 		prerequisite = { focus = GER_armament_rationalization }
 		prerequisite = { focus = GER_develop_heraeus_facilities }
+		prerequisite = { focus = GER_autarky_achieved }
 
 		x = 4
 		y = 1
@@ -814,7 +827,7 @@ focus_tree = {
 		icon = GFX_focus_GER_customs_union
 		prerequisite = { focus = GER_we_need_speer }
 
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = GER_we_need_speer
 		cost = 5
@@ -831,11 +844,15 @@ focus_tree = {
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_industrial_capacity_factory = 0.03
+			    ger_economy_dm_line_change_production_efficiency_factor = 0.02
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_industrial_capacity_factory = 0.02
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.02
+			    ger_economy_dm_production_speed_arms_factory_factor = 0.015
 				tooltip = production_speed_arms_factory_factor_tt
 			}
 			
@@ -850,7 +867,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				random_select_amount = 3
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -870,7 +887,7 @@ focus_tree = {
 		bypass = {
 		}
 		cancel_if_invalid = yes
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = GER_we_need_speer
 		cost = 5
@@ -882,10 +899,6 @@ focus_tree = {
 			add_to_variable = { 
 			    ger_economy_dm_production_speed_arms_factory_factor = 0.05
 				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = { 
-			    ger_economy_dm_production_speed_dockyard_factor = 0.05
-				tooltip = production_speed_dockyard_factor_tt
 			}
 		}
 	}
@@ -909,12 +922,36 @@ focus_tree = {
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_industrial_capacity_factory = 0.03
+			    ger_economy_dm_line_change_production_efficiency_factor = 0.02
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_industrial_capacity_factory = 0.02
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.02
+			    ger_economy_dm_production_speed_arms_factory_factor = 0.015
 				tooltip = production_speed_arms_factory_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -933,10 +970,7 @@ focus_tree = {
 		relative_position_id = GER_we_need_speer
 		x = 0
 		y = 2
-		cost = 5
-		available = {
-		    date > 1942.5.1
-		}
+		cost = 10
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
@@ -944,12 +978,16 @@ focus_tree = {
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_industrial_capacity_factory = 0.03
+			    ger_economy_dm_line_change_production_efficiency_factor = 0.02
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    ger_economy_dm_industrial_capacity_factory = 0.02
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.02
-				tooltip = production_speed_arms_factory_factor_tt
+			    ger_economy_dm_local_building_slots_factor = 0.1
+				tooltip = global_building_slots_factor_tt
 			}
 		}
 	}
@@ -969,9 +1007,6 @@ focus_tree = {
 		}
 		completion_reward = {	
 			add_ideas = inspection_in_tanks
-			mio:GER_daimler_benz_organization = {
-				add_mio_funds = 8000
-			}
 		}	
 	}
 
@@ -1011,9 +1046,6 @@ focus_tree = {
 		}
 		completion_reward = {	
 			add_ideas = inspection_in_air
-			mio:GER_messerschmitt_organization = {
-				add_mio_funds = 8000
-			}
 		}	
 	}	
 
@@ -1041,7 +1073,7 @@ focus_tree = {
 		relative_position_id = GER_weapon_comitets
 		x = 0
 		y = 2
-		cost = 5
+		cost = 10
 		available = {
 			OR = {
 				surrender_progress > 0.01
@@ -1057,12 +1089,12 @@ focus_tree = {
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_industrial_capacity_factory = 0.03
-				tooltip = industrial_capacity_factory_tt
+			    ger_economy_dm_line_change_production_efficiency_factor = 0.02
+				tooltip = line_change_production_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.02
-				tooltip = production_speed_arms_factory_factor_tt
+			    ger_economy_dm_industrial_capacity_factory = 0.03
+				tooltip = industrial_capacity_factory_tt
 			}
 		}
 	}
@@ -1165,8 +1197,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GER_panzergrenadier
 				bonus = 1
-				uses = 2
-				category = cat_mechanized_equipment
+				uses = 1
+				technology = mechanised_infantry
 			}
 		}
 	}
@@ -1382,8 +1414,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1.0
-				ahead_reduction = 1
-				uses = 2
+				uses = 1
 				technology = advanced_medium_tank_chassis	
 				technology = advanced_heavy_tank_chassis					
 			}
@@ -2004,7 +2035,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_arm_modifier_tt
 			add_to_variable = { 
-			    ger_wehrmacht_dm_navy_submarine_attack_factor = 0.05
+			    ger_wehrmacht_dm_navy_submarine_attack_factor = 0.025
 				tooltip = navy_submarine_attack_factor_tt
 			}
 		}
@@ -2045,7 +2076,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_arm_modifier_tt
 			add_to_variable = { 
-			    ger_wehrmacht_dm_navy_submarine_attack_factor = 0.1
+			    ger_wehrmacht_dm_navy_submarine_attack_factor = 0.05
 				tooltip = navy_submarine_attack_factor_tt
 			}
 		}
@@ -2876,10 +2907,6 @@ focus_tree = {
 		prerequisite = {
             focus = GER_totalen_krieg
 		}
-		
-		available = {
-		    surrender_progress > 0.1
-		}
 		bypass = {
 		}
 		x = 1
@@ -2890,10 +2917,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = Steiner_counterattack
-				days = 60
-			}
+			unlock_decision_tooltip = Ger_fall_die_END
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = decision_unlock_die_END
 		}
 	}
 	
@@ -3001,12 +3029,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
-			    ger_economy_dm_production_speed_arms_factory_factor = 0.05
+			    ger_economy_dm_production_speed_arms_factory_factor = 0.02
 				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = { 
-			    ger_economy_dm_production_speed_dockyard_factor = 0.05
-				tooltip = production_speed_dockyard_factor_tt
 			}
 			add_to_variable = { 
 			    ger_economy_dm_industrial_capacity_factory = 0.025
@@ -3438,7 +3462,7 @@ focus_tree = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
 			    ger_economy_dm_consumer_goods_expected_value = -0.015
-				tooltip = consumer_goods_factor_tt
+				tooltip = consumer_goods_expected_tt
 			}
 		}
 	}
@@ -3913,7 +3937,7 @@ focus_tree = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
 			add_to_variable = { 
 			    ger_economy_dm_consumer_goods_expected_value = -0.015
-				tooltip = consumer_goods_factor_tt
+				tooltip = consumer_goods_expected_tt
 			}
 		}
 	}
