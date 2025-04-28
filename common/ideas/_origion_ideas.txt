@@ -697,23 +697,26 @@ ideas = {
 		
 		Axis_trade = {
 			allowed = {
-			always = no
+				always = no
 			}
-			allowed_civil_war = {	
-			}
+			
 			removal_cost = -1
 			picture = gre_schachtplan
+			
 			modifier = {
-			fascism_drift = 0.01
+				fascism_drift = 0.1
 			}
+			
 			targeted_modifier = {
 				tag = GER
 				trade_cost_for_target_factor = -0.4
 			}
+			
             targeted_modifier = {
 				tag = HUN
                 trade_cost_for_target_factor = -0.4
 			}
+			
             targeted_modifier = {
 				tag = ROM
                 trade_cost_for_target_factor = -0.4
