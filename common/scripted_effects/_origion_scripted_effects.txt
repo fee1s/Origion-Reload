@@ -237,11 +237,10 @@ africa_dm_small_step_add_effect = { #
 		}
 		add_to_variable = { african_warfare_dm_fuel_gain_factor = 0.02 }
 		add_to_variable = { african_warfare_dm_max_fuel_factor = 0.01 }
-		
-		add_to_variable = { african_warfare_dm_industrial_capacity_factory = 0.01 }
-		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.01 }
-		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.01 }
-		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.01 }
+		add_to_variable = { african_warfare_dm_industrial_capacity_factory = 0.015 }
+		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.015 }
+		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.015 }
+		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.015 }
 	}
 	every_country = {
 		limit = {
@@ -260,12 +259,11 @@ africa_dm_small_step_remove_effect = { #
 			ORIGION_is_in_faction_with_axis = yes
 		}
 		add_to_variable = { african_warfare_dm_fuel_gain_factor = -0.02 }
-		add_to_variable = { african_warfare_dm_max_fuel_factor = -0.01 }
-		
-		add_to_variable = { african_warfare_dm_industrial_capacity_factory = -0.01 }
-		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.01 }
-		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.01 }
-		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.01 }
+		add_to_variable = { african_warfare_dm_max_fuel_factor = -0.015 }
+		add_to_variable = { african_warfare_dm_industrial_capacity_factory = -0.015 }
+		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.015 }
+		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.015 }
+		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.015 }
 	}
 	every_country = {
 		limit = {
@@ -345,8 +343,8 @@ africa_dm_gibraltar_step_add_effect = { #
 				ORIGION_is_in_faction_with_axis = yes
 			}
 		}
-	    add_to_variable = { ALLY_africa_controlled_regions = 1 }
-	    add_to_variable = { AXIS_africa_controlled_regions = -1 }
+	    add_to_variable = { ALLY_africa_controlled_regions = -1 }
+	    add_to_variable = { AXIS_africa_controlled_regions = 1 }
 	}
 }
 africa_dm_gibraltar_step_remove_effect = { # 
@@ -368,8 +366,8 @@ africa_dm_gibraltar_step_remove_effect = { #
 				ORIGION_is_in_faction_with_axis = yes
 			}
 		}
-	    add_to_variable = { ALLY_africa_controlled_regions = -1 }
-	    add_to_variable = { AXIS_africa_controlled_regions = 1 }
+	    add_to_variable = { ALLY_africa_controlled_regions = 1 }
+	    add_to_variable = { AXIS_africa_controlled_regions = -1 }
 	}
 }
 
