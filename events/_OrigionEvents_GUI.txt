@@ -394,6 +394,15 @@ country_event = { # Pacific Gui
 					}
 				    pacific_war_USA_side_bar = yes 
 				}
+				every_state = {
+			        limit = {
+				         is_core_of = AST
+				    }
+				    add_dynamic_modifier = { 
+				        modifier = sea_invasion_prohibited_JAP_dm 
+				    	scope = JAP
+				    }
+			    }
 				set_global_flag = papua_conquered_ALLY
 				pacific_war_USA_side = yes
 			}
@@ -420,6 +429,15 @@ country_event = { # Pacific Gui
 					}
 				    pacific_war_JAP_side_bar = yes 
 				}
+				every_state = {
+			        limit = {
+				         is_core_of = AST
+				    }
+				    remove_dynamic_modifier = { 
+				        modifier = sea_invasion_prohibited_JAP_dm 
+				    	scope = JAP
+				    }
+			    }
 				set_global_flag = papua_conquered_JAP
 				pacific_war_JAP_side = yes
 			}

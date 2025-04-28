@@ -1113,6 +1113,12 @@
 					    635 = { is_controlled_by_ROOT_or_ally = yes }
 					}
 			        transfer_state = 635
+					if = {
+					    limit = {
+						    country_exists = FRA
+						}
+						give_resource_rights = { receiver = FRA state = 635 }
+					}
 				}
 				if = {
 				    limit = {

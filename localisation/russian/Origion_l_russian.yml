@@ -107,7 +107,7 @@ asia_map_birma_scripted_tt: "Бирма \n--------\n§Y[?288.GetName]§! \n§Y[?
 asia_map_raj_scripted_tt: "Индия \n--------\n[asia_map_raj_scripted_loc_tt]"
 asia_map_taiwan_scripted_tt: "Тайвань \n--------\n[asia_map_taiwan_scripted_loc_tt]"
 asia_map_phi_scripted_tt: "Филиппины \n--------\n[asia_map_phi_scripted_loc_tt]"
-asia_map_papua_scripted_tt: "Новая Гвинея \n--------\n§Y[?669.GetName]§! \n§Y[?979.GetName]§! \n§Y[?523.GetName]§! \n§Y[?737.GetName]§!\n--------\n[asia_map_papua_scripted_loc_tt]"
+asia_map_papua_scripted_tt: "Новая Гвинея \n--------\n§Y[?669.GetName]§! \n§Y[?979.GetName]§! \n§Y[?523.GetName]§! \n§Y[?737.GetName]§!\n--------\n[asia_map_papua_scripted_loc_tt] \n--------\nВладение данным регионом предоставляет §RЯпонии§! возможность сделать высадку в §YАвстралию§! и §YНовую Зеландию§!"
 asia_map_australia_scripted_tt: "Австралия \n--------\n[asia_map_australia_scripted_loc_tt]"
 asia_map_hawai_scripted_tt: "Гавайи \n--------\n[asia_map_hawai_scripted_loc_tt]"
 asia_map_okinawa_scripted_tt: "Окинава \n--------\n[asia_map_okinawa_scripted_loc_tt]"
@@ -125,7 +125,7 @@ asia_map_newzeland_scripted_tt: "Новая Зеландия \n--------\n[asia_m
 asia_map_markus_scripted_tt: "Остров Маркуса \n--------\n[asia_map_markus_scripted_loc_tt]"
 
 progress_bar_USA_tt: "§BСоединённые Штаты Америки§! \n--------\n[progress_bar_USA_scripted_loc_tt]\n--------"
-progress_bar_USA_key_tt: "$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?USA.pacific_dm_local_resources_factor|%=Y0+] \n\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: [?USA.pacific_dm_production_lack_of_resource_penalty_factor|%=Y0-] \n--------\nТекущий модификатор §YАтлантического вала§!: [?GER.atlantikwall_dm_army_attack_factor|+%=]"
+progress_bar_USA_key_tt: "$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: [?USA.pacific_dm_consumer_goods_expected_value|%=Y1] \n\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?USA.pacific_dm_local_resources_factor|%=Y0+] \n\n$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: [?USA.pacific_dm_production_lack_of_resource_penalty_factor|%=Y0-] \n--------\nТекущий модификатор §YАтлантического вала§!: [?GER.atlantikwall_dm_army_attack_factor|+%=]"
 progress_bar_JAP_tt: "§RЯпонская Империя§! \n--------\n[progress_bar_JAP_scripted_loc_tt]\n--------"
 progress_bar_JAP_key_tt: "Текущий показатель модификатора §Y$JAP_stagnation_dm$§!: \n\n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: [?JAP_stagnation_consumer_goods_expected_value|%=Y1] \n\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?JAP_stagnation_industrial_capacity_factory|%=Y0+] \n\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: [?JAP_stagnation_industrial_capacity_dockyard|%=Y0+]"
 
@@ -159,6 +159,7 @@ ENG_operation_downfall:0 "Операция §Y«Даунфол»§!"
 ENG_altantikwall_fall_no_asia:0 "Операция §Y«Оверлорд»§!"
 
 sea_invasion_prohibited_dm:0 "§tНебезопасное вторжение§!"
+sea_invasion_prohibited_JAP_dm:0 "§tРастянутые пути снабжения§! \n\nДля эффективной высадки в этом регионе мы должны контроллировать §YНовую Гвинею§!"
 inappropriate_invasion_zone:0 "§RНеподходящая зона высадки§!"
 atlantikwall_dm:0 "§tСтроительство Атлантического вала§!"
 
@@ -201,6 +202,12 @@ INNER_JAPAN_3: "Курильские проливы"
 INNER_JAPAN_4: "Корейский пролив"
 AST_1: "Пролив Торреса"
 AST_2: "Дампир"
+RABAUL: "Пролив Святого Георгия"
+GUADALKANAL: "Гуадалканал"
+NEWCALEDONIA: "Новая Каледония"
+NEWZEALAND: "Пролив Кука"
+TASMANIA: "Тасманский пролив"
+LEEWIN: "Мыс Луин"
 SICILIAN_NARROWS: "Тунисский пролив"
 MESSINA_NARROWS: "Мессинский пролив"
 

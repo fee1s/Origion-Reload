@@ -413,7 +413,15 @@ on_actions = {
 			set_global_flag = balearic_controlled_AXIS
 			set_global_flag = sardinia_controlled_AXIS
 			set_global_flag = sicily_controlled_AXIS
-			
+			every_state = {
+			    limit = {
+				    is_core_of = AST
+				}
+				add_dynamic_modifier = { 
+				    modifier = sea_invasion_prohibited_JAP_dm 
+					scope = JAP
+				}
+			}
 			every_country = {
 				limit = {
 					OR = {
@@ -591,6 +599,130 @@ on_actions = {
 					}
 				}
 				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.9 }
+			}
+		}
+	}
+	on_weekly_USA = {
+	    effect = {
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 11
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.000 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 12
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.015 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 13
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.03 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 14
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.045 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 15
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.06 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 16
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.075 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 17
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.09 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 18
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.105 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 19
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.12 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 20
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.135 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 21
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.15 }
+			}
+			if = {
+			    limit = {
+				    OR = {
+						check_variable  = {
+					        JAP_pacific_controlled_regions = 22
+					    }
+					}
+				}
+				set_variable = { USA.pacific_dm_consumer_goods_expected_value = 0.165 }
 			}
 		}
 	}
