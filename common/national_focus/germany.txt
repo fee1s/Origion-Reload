@@ -517,50 +517,21 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			random_owned_controlled_state = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			66 = {
-				add_resource = {
-					type = aluminium
-					amount = 14
-				}
-			}
-			52 = {
-				add_resource = {
-					type = aluminium
-					amount = 12
-				}
-			}
-			42 = {
-				add_resource = {
-					type = steel
-					amount = 13
-				}
-			}
-			51 = {
-				add_resource = {
-					type = steel
-					amount = 15
-				}
-			}
-			60 = {
-				add_resource = {
-					type = chromium
-					amount = 12
 				}
 			}
 		}
@@ -727,7 +698,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_nationalized_war_industry
-		cost = 5
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -1086,7 +1057,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
-		cost = 3
+		cost = 5
 		available = {
 		}
 
@@ -1282,7 +1253,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_develop_modern_maneuver_warfare
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -1440,7 +1411,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		relative_position_id = GER_develop_modern_maneuver_warfare
-		cost = 3
+		cost = 5
 		available = {
 		}
 
@@ -1489,12 +1460,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = op_dest_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = battlefield_support_tree
-			}
+			air_experience = 50
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 1.0
@@ -1502,6 +1471,9 @@ focus_tree = {
 				technology = improved_small_airframe	
 				technology = engines_3					
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			mio:GER_messerschmitt_organization = {
 				add_mio_size = 2
 			}
@@ -1525,11 +1497,31 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = GER_dive_bombers
-				cost_reduction = 0.5
-				uses = 4
-				category = battlefield_support_tree
+			air_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GER_dive_bombers_tt
+			hidden_effect = { 
+				set_technology = { basic_large_airframe = 1 }
+				create_equipment_variant = {
+					name = "Heinkel He 177" 	
+					type = large_plane_airframe_1
+					modules = {
+						fixed_main_weapon_slot = large_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+						engine_type_slot = engine_2_4x
+						special_type_slot_1 = fuel_tanks_large
+						special_type_slot_2 = empty
+						special_type_slot_3 = empty
+						special_type_slot_4 = empty
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = large_plane_airframe_1
+					amount = 100
+					variant_name = "Heinkel He 177"
+					producer = GER
+				}
 			}
 		}
 	}
@@ -1711,7 +1703,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_form_the_jagdwaffe
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -1719,24 +1711,12 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_jet_prototypes
-				bonus = 1.0
+				name = GER_aerodynamic_research_institute
+				bonus = 1
 				uses = 2
-				category = jet_technology
-			}
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 3.0
-				uses = 1
-				technology = advanced_small_airframe			
+				technology = advanced_small_airframe
+				technology = engines_4				
 			}	
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 0.5
-				uses = 2
-				technology = engines_4
-				technology = aa_cannon_3
-			}
 		}
 	}
 
@@ -2709,7 +2689,7 @@ focus_tree = {
 			}
 		}
 		
-		cost = 2
+		cost = 0
 
 		completion_reward = {
 		    GER = {
@@ -3809,7 +3789,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_lider_faction
-		cost = 3
+		cost = 5
 		ai_will_do = {
 		}
 
@@ -3826,6 +3806,10 @@ focus_tree = {
 					receiver = GER 
 					state = 918 
 				}
+				give_resource_rights = {
+					receiver = GER 
+					state = 666 
+				}
 			}
 		}
 	}
@@ -3837,7 +3821,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_swedish_trade_agreement
-		cost = 3
+		cost = 5
 		available = {
 		}
 		completion_reward = {
