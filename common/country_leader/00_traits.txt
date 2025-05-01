@@ -1003,7 +1003,8 @@ leader_traits = {
 
 	hedonist = {
 		random = no
-		stability_factor = -0.05
+		stability_factor = -0.15
+		consumer_goods_expected_value = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -7844,9 +7845,9 @@ leader_traits = {
 	HUN_national_socialist_irredentist = {
 		random = no
 		sprite = 13
-		fascism_drift = 0.05
-		war_support_factor = 0.1
-		justify_war_goal_time = -0.15
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.05
 	}
 
 	HUN_veteran_president = {
@@ -10292,27 +10293,26 @@ leader_traits = {
 	GER_mefo_bills_architect = { #Schacht
 		sprite = 10
 		random = no
-		production_speed_arms_factory_factor = 0.1
-		production_speed_dockyard_factor = 0.1
-		consumer_goods_factor = -0.1
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
 	}
 
 	GER_reich_minister_of_economy = { #Funk 
 		sprite = 10
 		random = no
-		consumer_goods_factor = -0.1
-		production_speed_supply_node_factor = 0.15
-		production_lack_of_resource_penalty_factor = -0.05
-		industry_free_repair_factor = 0.15
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+		production_speed_fuel_silo_factor = 0.1
 	}
 
 	GER_director_reich_security = { #Himmler - Gestapo
 		sprite = 13
 		random = no
-		resistance_damage_to_garrison = -0.25
-		foreign_subversive_activites = -0.3
-		non_core_manpower = 0.02
-		subversive_activites_upkeep = -0.25
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		conscription = 0.015
 	}
 
 	GER_reichsfuhrer_ss = { #Himmler
@@ -10327,7 +10327,7 @@ leader_traits = {
 	GER_reich_minister_of_propaganda = { #Goebbels
 		sprite = 13
 		random = no
-		war_support_factor = 0.05
+		war_support_factor = 0.1
 		fascism_drift = 0.1
 	}
 
@@ -10358,8 +10358,8 @@ leader_traits = {
 	GER_secretary_to_the_fuhrer = { #Bormann 
 		sprite = 13
 		random = no
-		political_advisor_cost_factor = -0.1
-		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.05
+		political_power_factor = 0.15
 	}
 
 	GER_brown_eminence = { #Bormann 
@@ -10393,10 +10393,7 @@ leader_traits = {
 	GER_reich_engineer = { #Todt
 		sprite = 10
 		random = no
-		#production_speed_bunker_factor = 0.1
-		#production_speed_coastal_bunker_factor = 0.1
-		production_speed_industrial_complex_factor = 0.1
-		production_speed_infrastructure_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.05
 		production_speed_rail_way_factor = 0.1
 	}
 
@@ -10484,12 +10481,7 @@ leader_traits = {
 	GER_reich_minister_foreign_affairs_ribbentrop = { #Ribbentrop
 		random = no
 		sprite = 13
-		subversive_activites_upkeep = -0.25
-		drift_defence_factor = 0.25
-		justify_war_goal_time = -0.15
-		faction_trade_opinion_factor = 0.1
-		opinion_gain_monthly_same_ideology = 5
-
+		local_resources_factor = 0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -10795,14 +10787,10 @@ leader_traits = {
 	### HITLER ###
 	##############
 
-	GER_der_fuhrer = { #Literally a copy of Dictator, but with lower PP bonus (increases later)
+	GER_der_fuhrer = {
 		random = no
-		#Modifiers from Dictator (which this trait replaces)
+		political_power_factor = 0.25
 		weekly_casualties_war_support = 0.001
-		ai_desired_divisions_factor = 0.20
-		political_power_factor = 0.1
-		compliance_growth = -0.02
-		resistance_target = 0.05
 	}
 
 	GER_der_fuhrer_wehrmacht = {

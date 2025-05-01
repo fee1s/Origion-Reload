@@ -68,6 +68,18 @@ is_french_north_africa = {
 	}
 }
 
+is_southern_europe_shore = {
+	OR = {
+		state = 44
+		state = 805
+		state = 185
+		state = 47
+		state = 186
+	    state = 731
+		state = 184
+	}
+}
+
 is_australian_main_state = {
 	OR = {
 		state = 285
@@ -286,4 +298,27 @@ norwegian_coastline = {
 
 italian_coastline_above_naples = { 
 	OR = { state = 2 state = 157 state = 162 state = 161 state = 158 state = 160 state = 736 state = 852 state = 103 state = 163 state = 105 state = 934       state = 31 state = 22 state = 21 state = 851 state = 735 }
+}
+
+any_axis_capital_fallen_trigger = {
+	OR = {
+		2 = {
+			is_controlled_by_axis = no
+		}
+		43 = {
+			is_controlled_by_axis = no
+		}
+		46 = {
+			is_controlled_by_axis = no
+		}
+		48 = {
+			is_controlled_by_axis = no
+		}
+		AND = {
+		    NOT = { has_global_flag = NO_ASIA_FLAG }
+			282 = {
+		    	is_controlled_by_axis = no
+		    }
+		}
+	}
 }

@@ -768,3 +768,137 @@ news_event = { # совок взрывает гэс
 	
 	mean_time_to_happen = { days = 1 }
 }
+
+news_event = { # Цитадель
+	id = origion.25
+	title = origion.25.t
+	desc = origion.25.d
+	picture = GFX_news_event_citadel
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.25.a
+	}
+}
+
+news_event = { # Тотален
+	id = origion.26
+	title = origion.26.t
+	desc = origion.26.d
+	picture = GFX_news_event_goeb
+	is_triggered_only = no
+	
+	major = yes
+	fire_only_once = no
+	
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+	    NOT = { has_global_flag = totalen_krieg_flag }
+		GER = { has_war_with = SOV }
+		OR = {
+			date > 1943.2.17
+		    OR = {
+			    AND = {
+				    14 = {
+				        is_controlled_by_allies = yes
+				    }
+					15 = {
+				        is_controlled_by_allies = yes
+				    }
+					30 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				AND = {
+				    19 = {
+				        is_controlled_by_allies = yes
+				    }
+					23 = {
+				        is_controlled_by_allies = yes
+				    }
+					25 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				AND = {
+				    19 = {
+				        is_controlled_by_allies = yes
+				    }
+					23 = {
+				        is_controlled_by_allies = yes
+				    }
+					25 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				AND = {
+				    20 = {
+				        is_controlled_by_allies = yes
+				    }
+					21 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+				16 = {
+				    is_controlled_by_allies = yes
+				}
+				AND = {
+				    29 = {
+				        is_controlled_by_allies = yes
+				    }
+					6 = {
+				        is_controlled_by_allies = yes
+				    }
+					7 = {
+				        is_controlled_by_allies = yes
+				    }
+				}
+			}
+			AND = {
+			    date > 1942.9.1
+				count_triggers = {
+				    amount = 2
+					SOV = { controls_state = 812 }
+					SOV = { controls_state = 207 }
+					SOV = { controls_state = 221 }
+				}
+			}
+			GER = { surrender_progress > 0.0 }
+			any_axis_capital_fallen_trigger = yes
+		}
+	}
+	
+	immediate = {
+	    set_global_flag = totalen_krieg_flag
+		hidden_effect = {
+		    GER = {complete_national_focus = GER_totalen_krieg }
+		}
+	}
+ 
+	option = {
+		name = origion.26.a
+	}
+}
+
+news_event = { # Операция "Стража на Рейне"
+	id = origion.27
+	title = origion.27.t
+	desc = origion.27.d
+	picture = GFX_news_event_americans
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.27.a
+	}
+}

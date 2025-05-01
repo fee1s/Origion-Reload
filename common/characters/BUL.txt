@@ -278,14 +278,14 @@ characters = {
 				small = GFX_portrait_BUL_ivan_markov_small
 			}
 		}
-		corps_commander = {
-			traits = { trait_reckless cavalry_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 1205
+		corps_commander={
+			traits={ infantry_leader Trickster  }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=1205
 		}
 	}
 
@@ -296,15 +296,6 @@ characters = {
 				large = "GFX_portrait_bul_georgi_markov"
 				small = GFX_portrait_BUL_georgi_markov_small
 			}
-		}
-		corps_commander = {
-			traits = { old_guard infantry_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 1206
 		}
 	}
 
@@ -319,15 +310,6 @@ characters = {
 					large = "GFX_portrait_bul_asen_nikolov"
 					small = GFX_portrait_BUL_asen_nikolov_small
 				}
-			}
-			corps_commander = {
-				traits = { career_officer infantry_officer }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 3
-				legacy_id = 1207
 			}
 		}
 		instance = {
@@ -368,15 +350,6 @@ characters = {
 				small = GFX_portrait_BUL_nikola_stoychev_small
 			}
 		}
-		corps_commander = {
-			traits = { trait_cautious trait_BUL_tsar_loyalist }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 1209
-		}
 	}
 
 	BUL_damian_velchev = {
@@ -387,15 +360,6 @@ characters = {
 				small = GFX_portrait_BUL_damian_velchev_small
 			}
 		}
-		corps_commander = {
-			traits = { trait_reckless harsh_leader trait_BUL_zveno_member }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 1210
-		}
 	}
 
 	BUL_angel_dotsev = {
@@ -405,15 +369,6 @@ characters = {
 				large = "GFX_portrait_bul_angel_dotsev"
 				small = GFX_portrait_BUL_angel_dotsev_small
 			}
-		}
-		corps_commander = {
-			traits = { organizer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 1211
 		}
 	}
 
@@ -517,15 +472,6 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 			}
 			name = BUL_nikola_hadzipetkov
-			corps_commander = {
-				traits = { brilliant_strategist infantry_officer organizer }
-				skill = 4
-				attack_skill = 2
-				defense_skill = 4
-				planning_skill = 4
-				logistics_skill = 3
-				legacy_id = 1203
-			}
 			portraits = {
 				army = {
 					small = "GFX_idea_bul_nikola_hadzipetkov"
@@ -626,15 +572,6 @@ characters = {
 					small = "GFX_idea_bul_vasil_boydev"
 					large = "GFX_portrait_bul_vasil_boydev"
 				}
-			}
-			corps_commander = {
-				traits = { cavalry_officer trait_BUL_tsar_loyalist }
-				skill = 3
-				attack_skill = 3
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 2
-				legacy_id = 1204
 			}
 		}
 		instance = {
@@ -1052,9 +989,6 @@ characters = {
 			idea_token = BUL_nikola_petkov
 			allowed = {
 				original_tag = BUL
-			}
-			available = {
-			    has_completed_focus = BUL_utmost_optimization
 			}
 			traits = {
 				leader_of_the_agrarian_union 

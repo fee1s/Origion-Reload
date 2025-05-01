@@ -1424,6 +1424,52 @@ african_warfare_dm = {
 	max_fuel_factor = african_warfare_dm_max_fuel_factor
 }
 
+ger_economy_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_economy_of_conquest
+	
+	production_factory_max_efficiency_factor = ger_economy_dm_production_factory_max_efficiency_factor
+    industrial_capacity_factory = ger_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = ger_economy_dm_industrial_capacity_dockyard
+	production_factory_efficiency_gain_factor = ger_economy_dm_production_factory_efficiency_gain_factor
+	min_export = ger_economy_dm_min_export
+	line_change_production_efficiency_factor = ger_economy_dm_line_change_production_efficiency_factor
+	local_building_slots_factor = ger_economy_dm_local_building_slots_factor
+	fuel_gain_factor_from_states = ger_economy_dm_fuel_gain_factor_from_states
+	
+	conversion_cost_civ_to_mil_factor = ger_economy_dm_conversion_cost_civ_to_mil_factor
+	production_speed_industrial_complex_factor = ger_economy_dm_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = ger_economy_dm_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = ger_economy_dm_production_speed_dockyard_factor
+	local_resources_factor = ger_economy_dm_local_resources_factor
+	consumer_goods_expected_value = ger_economy_dm_consumer_goods_expected_value
+}
+
+ger_wehrmacht_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_GER_army
+	
+	### АРМИЯ ###
+	army_org_factor = ger_wehrmacht_dm_army_org_factor
+	planning_speed = ger_wehrmacht_dm_planning_speed
+	army_speed_factor = ger_wehrmacht_dm_army_speed_factor
+	acclimatization_hot_climate_gain_factor = ger_wehrmacht_dm_acclimatization_hot_climate_gain_factor
+	heat_attrition_factor = ger_wehrmacht_dm_heat_attrition_factor
+	army_morale_factor = ger_wehrmacht_dm_army_morale_factor
+	dig_in_speed_factor = ger_wehrmacht_dm_dig_in_speed_factor
+	### ВВС ###
+	air_attack_factor = ger_wehrmacht_dm_air_attack_factor
+	air_defence_factor = ger_wehrmacht_dm_air_defence_factor
+	ground_attack_factor = ger_wehrmacht_dm_ground_attack_factor
+	air_cas_present_factor = ger_wehrmacht_dm_air_cas_present_factor
+	air_cas_efficiency = ger_wehrmacht_dm_air_cas_efficiency
+	### ФЛОТ ###
+	navy_submarine_attack_factor = ger_wehrmacht_dm_navy_submarine_attack_factor
+	navy_submarine_defence_factor = ger_wehrmacht_dm_navy_submarine_defence_factor
+	navy_capital_ship_attack_factor = ger_wehrmacht_dm_navy_capital_ship_attack_factor
+	navy_max_range_factor = ger_wehrmacht_dm_navy_max_range_factor
+}
+
 ger_walled_city = {
 	enable = { always = yes }
 

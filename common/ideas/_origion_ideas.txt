@@ -515,8 +515,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = -0.10
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
 			}
 		}
 				
@@ -560,6 +560,60 @@ ideas = {
 			}
 			modifier = {
 				army_speed_factor = 0.075
+			}
+		}
+		
+		GER_citadel = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+			modifier = {
+				army_speed_factor = 0.075
+			}
+		}
+		
+		GER_sonnenblume = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			modifier = {
+				convoy_retreat_speed = 0.5
+				dig_in_speed_factor = 0.5
+				supply_factor = 0.15
+				planning_speed = 0.5
+			}
+		}
+		
+		GER_Die_wacht_am_rhein = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.20
+			}
+			modifier = {
+			    army_attack_factor = 0.1
 			}
 		}
 
@@ -643,23 +697,26 @@ ideas = {
 		
 		Axis_trade = {
 			allowed = {
-			always = no
+				always = no
 			}
-			allowed_civil_war = {	
-			}
+			
 			removal_cost = -1
 			picture = gre_schachtplan
+			
 			modifier = {
-			fascism_drift = 0.01
+				fascism_drift = 0.1
 			}
+			
 			targeted_modifier = {
 				tag = GER
 				trade_cost_for_target_factor = -0.4
 			}
+			
             targeted_modifier = {
 				tag = HUN
                 trade_cost_for_target_factor = -0.4
 			}
+			
             targeted_modifier = {
 				tag = ROM
                 trade_cost_for_target_factor = -0.4
