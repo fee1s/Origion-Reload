@@ -353,7 +353,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_establish_the_reichswerke
-		cost = 5
+		cost = 10
 		available = {
 			has_completed_focus = GER_fate_of_czechoslovakia
 		}
@@ -760,7 +760,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_we_need_speer
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -862,7 +862,7 @@ focus_tree = {
 		relative_position_id = GER_we_need_speer
 		x = 2
 		y = 1
-		cost = 5
+		cost = 10
 		available = {
 		}
 		completion_reward = {
@@ -1307,13 +1307,10 @@ focus_tree = {
 				technology = antitank4
 				technology = antitank5
 			}
-			mio:GER_rheinmetall_organization = {
-				add_mio_size = 2
-			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			mio:GER_daimler_benz_organization = {
+			mio:GER_rheinmetall_organization = {
 				add_mio_size = 2
 			}
 		}
@@ -1418,7 +1415,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
 		
 		completion_reward = {			
-			air_experience = 200
+			air_experience = 100
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			42 = {
 				add_building_construction = {
 					type = air_base
@@ -1460,7 +1460,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			air_experience = 50
+			air_experience = 25
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -1497,7 +1497,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			air_experience = 50
+			air_experience = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_dive_bombers_tt
 			hidden_effect = { 
@@ -1541,7 +1541,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			air_experience = 100
+			air_experience = 75
 		}
 	}
 
@@ -1774,13 +1774,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			navy_experience = 200
-			add_doctrine_cost_reduction = {
-				name = GER_plan_z
-				cost_reduction = 0.5
-				uses = 4
-				category = naval_doctrine
-			}
+			navy_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GER_modify_arm_modifier_tt
+			add_to_variable = { 
+			    navy_capital_ship_attack_factor = 0.025
+				tooltip = navy_capital_ship_attack_factor_tt
+			}	
 		}
 	}
 
@@ -1801,7 +1801,7 @@ focus_tree = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
-						building = arms_factory
+						building = dockyard
 						size > 0
 						include_locked = yes
 					}
@@ -1809,7 +1809,7 @@ focus_tree = {
 				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = arms_factory
+					type = dockyard
 					level = 2
 					instant_build = yes
 				}
@@ -1825,116 +1825,41 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expand_kriegsmarinewerft
-		cost = 5
-		available = {
-		}
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			set_technology = { basic_heavy_armor_scheme = 1 }
-			#Equipment Variant
-				create_equipment_variant = {
-					name = "Kaiushnik Class"
-					type = ship_hull_heavy_2
-					parent_version = 0
-					name_group = ROM_CV_HISTORICAL
-					modules = {
-						fixed_ship_battery_slot = ship_heavy_battery_2
-						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = heavy_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_2
-						fixed_ship_armor_slot = ship_armor_bc_2
-						front_1_custom_slot = ship_heavy_battery_2
-						mid_1_custom_slot = ship_heavy_battery_2
-						mid_2_custom_slot = ship_heavy_battery_2
-						rear_1_custom_slot = ship_heavy_battery_2
-					}
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_heavy_2
-						creator = "GER"
-						version_name = "Kaiushnik Class"
-					}
-					name = "Larisa"
-					requested_factories = 1
-					progress = 0.80
-					amount = 1
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_heavy_2
-						creator = "GER"
-						version_name = "Kaiushnik Class"
-					}
-					name = "Molod dolbaeb"
-					requested_factories = 1
-					progress = 0.80
-					amount = 1
-				}
-			else = {
-				add_equipment_production = {
-					equipment = {
-						type = battleship_2
-						creator = "GER"
-						version_name = "Kaiushnik Class"
-					}
-					requested_factories = 1
-					progress = 0.80
-					amount = 1
-				}
-				add_equipment_production = {
-					equipment = {
-						type = battleship_2
-						creator = "GER"
-						version_name = "Kaiushnik Class"
-					}
-					requested_factories = 1
-					progress = 0.80
-					amount = 1
-				}
+			custom_effect_tooltip = GER_modify_arm_modifier_tt
+			add_to_variable = { 
+			    ger_wehrmacht_dm_navy_max_range_factor = 0.1
+				tooltip = navy_capital_ship_attack_factor_tt
 			}
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = { set_technology = { improved_ship_hull_heavy = 1 } }
+			
+			create_equipment_variant = {
+				name = "Bismarck Class"
+				type = ship_hull_heavy_3
+				name_group = GER_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_secondaries_slot = dp_ship_secondaries_3
+					fixed_ship_armor_slot = ship_armor_bc_4
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_heavy_battery_3
+					mid_2_custom_slot = ship_heavy_battery_3
+					mid_3_custom_slot = dp_ship_secondaries_3 
+					rear_1_custom_slot = ship_airplane_launcher_3
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = GER_plan_z_dockyards
-			}
-			add_tech_bonus = {
-				name = bc_bonus
-				bonus = 1
-				uses = 1
-				category = bc_tech
-			}
-			add_tech_bonus = {
-				name = bb_bonus
-				bonus = 1
-				uses = 1
-				category = bb_tech
-				category = shbb_tech
-			}
-			add_tech_bonus = {
-				name = cv_bonus
-				bonus = 1
-				uses = 1
-				category = cv_tech
-			}
+			}			
 		}
 	}
 	
@@ -1949,7 +1874,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_strengthen_the_kriegsmarine
 
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -1992,6 +1917,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
+			navy_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_modify_arm_modifier_tt
 			add_to_variable = { 
 			    ger_wehrmacht_dm_navy_submarine_attack_factor = 0.025
@@ -2013,10 +1940,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = GER_modular_construction
-			set_technology = {
-			    improved_ship_hull_submarine = 1
-				basic_submarine_snorkel = 1
-			}
 		}
 	}
 	
@@ -2028,7 +1951,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_u_boat_efforts
-		cost = 5
+		cost = 10
 
 		search_filters = {}
 
@@ -2650,11 +2573,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_operation_Double_Head
+		id = GER_operation_citadel
 		icon = GFX_focus_GER_end_european_communism
 		prerequisite = {focus = GER_ussr_war_goal}
-		bypass = {
-		}
 		x = 1
 		y = 1
 		relative_position_id = GER_ussr_war_goal
@@ -2663,11 +2584,11 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			unlock_decision_tooltip = Ger_fall_doppelkopf
+			unlock_decision_tooltip = GER_unternehmen_citadel
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			custom_effect_tooltip = decision_unlock_doppelkopf
+			custom_effect_tooltip = decision_unlock_doppelkopf # не доппелькопф, это цитадель xD
 		}
 	}
 	
@@ -3742,7 +3663,7 @@ focus_tree = {
 		}
 		
 		relative_position_id = GER_BUL_Chromik
-		cost = 5
+		cost = 10
 
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
