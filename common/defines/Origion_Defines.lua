@@ -20,6 +20,8 @@ NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.07; -- Урон по пр
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спецуры
 
+NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.02 -- Скорость мобилизации
+
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0; -- Модификатор треньки (меньше - меньше опыта)
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 -- Бафф треньки (По умолчанию - 0.0015)
 

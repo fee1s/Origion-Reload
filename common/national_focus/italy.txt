@@ -738,12 +738,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_strengthen_northern_industry
 		cost = 10
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_new_industrialization_program_factories_required_tt
-				NOT = { num_of_controlled_factories < ITA_new_industrialization_program_factories_required }
-			}
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 

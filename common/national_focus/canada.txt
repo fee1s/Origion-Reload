@@ -2793,16 +2793,7 @@
 		ai_will_do = {
 			factor = 25
 		}
-
-		available = {
-			num_of_factories > 50
-			is_subject = no
-		}
 		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -3353,13 +3344,6 @@
 
 		ai_will_do = {
 			factor = 75
-		}
-
-		available = {
-			controls_state = 470
-			controls_state = 471
-			controls_state = 472
-			controls_state = 683
 		}
 		
 		bypass = {
