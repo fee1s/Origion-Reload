@@ -991,9 +991,6 @@ SOV_propaganda_campaigns = {
 			SOV_propaganda_poster_slot_available = yes
 
 			has_war = yes
-			any_unit_leader = {
-				is_assigned = yes
-			}
 		}
 
 		visible = {
@@ -1017,45 +1014,6 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_new_propaganda_campaign = 13 }
 			SOV_pick_propaganda_campaign_slot_effect = yes
 			SOV_achievement_propaganda_counter_effect = yes
-
-			custom_effect_tooltip = SOV_propaganda_heroes_forward_tt
-
-			set_temp_variable = { temp_targets_index = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { temp_targets_index = 5 compare = less_than }
-				}
-				if = {
-					limit = {
-						any_unit_leader = {
-							is_assigned = yes
-							NOT = { has_trait = trait_SOV_determined }
-						}
-					}
-					random_unit_leader = {
-						limit = {
-							is_assigned = yes
-							NOT = { has_trait = trait_SOV_determined }
-						}
-						add_timed_unit_leader_trait = {
-							trait = trait_SOV_determined
-							days = @DAYS_DETERMINED #Does not seem to support vars
-						}
-					}
-				}
-				else = {
-					random_unit_leader = {
-						limit = {
-							NOT = { has_trait = trait_SOV_determined }
-						}
-						add_timed_unit_leader_trait = {
-							trait = trait_SOV_determined
-							days = @DAYS_DETERMINED #Does not seem to support vars
-						}
-					}
-				}
-				add_to_temp_variable = { temp_targets_index = 1 }
-			}
 		}
 
 		remove_effect = {
