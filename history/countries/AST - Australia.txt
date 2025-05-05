@@ -182,6 +182,210 @@ if = {
 	}
 }
 
+1941.1.1.14 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	set_convoys = 1000
+	
+	set_oob = "AST_1941"
+
+	#adding ministers
+	add_ideas = {
+		social_programs_idea
+		AST_citizen_military_forces_2
+		AST_naval_auxiliary_patrol
+
+		#laws
+		war_economy
+		limited_conscription
+	} 
+	remove_ideas = {
+	    AST_great_depression_1
+	}
+	
+	start_focus = AST_preparing_for_the_isolation
+	
+	unlock_national_focus = AST_support_the_policy_of_appeasement
+	unlock_national_focus = AST_standard_gauge_railway
+	unlock_national_focus = AST_western_australian_government_railways
+	unlock_national_focus = AST_south_australian_housing_trust
+	unlock_national_focus = AST_department_of_supply_and_development
+	unlock_national_focus = AST_expand_lithgow_small_arms_factory
+	unlock_national_focus = AST_allied_works_council
+	unlock_national_focus = AST_Papya_cicvilian_expand
+	unlock_national_focus = AST_australian_arms_production ###
+	unlock_national_focus = AST_means_of_war
+	unlock_national_focus = NZL_national_roads_board
+	unlock_national_focus = NZL_wairarapa_sheep_farms
+	unlock_national_focus = NZL_bureau_of_industry
+	unlock_national_focus = NZL_industrial_conscription
+	unlock_national_focus = NZL_think_big
+	unlock_national_focus = NZL_national_defense_institute
+	unlock_national_focus = NZL_new_zealand_steel
+	unlock_national_focus = NZL_taranaki_oil
+	unlock_national_focus = AST_establish_advisory_war_council
+	unlock_national_focus = AST_national_security_act
+	unlock_national_focus = AST_volunteer_defence_corps
+	unlock_national_focus = AST_swpa_protector
+	unlock_national_focus = AST_defending_the_papua
+	unlock_national_focus = AST_citizen_military_forces
+	unlock_national_focus = AST_rats_of_tobruk
+	unlock_national_focus = AST_lose_in_africa
+	unlock_national_focus = AST_lose_in_africa
+	unlock_national_focus = AST_army_inventions_directorate
+	unlock_national_focus = AST_invest_in_victory
+	unlock_national_focus = AST_squash_the_squanderbugs
+	unlock_national_focus = AST_rationing_and_recycling
+	unlock_national_focus = AST_fight_work_or_perish
+	unlock_national_focus = AST_dominion_australia
+	unlock_national_focus = AST_strengthen_ties_with_uk
+	unlock_national_focus = AST_adopt_westminster
+	unlock_national_focus = AST_social_programs
+	unlock_national_focus = AST_additional_militia_training
+	unlock_national_focus = AST_royal_australian_artillery
+	unlock_national_focus = AST_promote_reservists
+	unlock_national_focus = AST_airborne_defence
+	unlock_national_focus = AST_daimler_dingo
+	unlock_national_focus = AST_hmas_assault
+	unlock_national_focus = AST_australian_army_catering_corps
+	unlock_national_focus = AST_fund_owen_gun_research
+	unlock_national_focus = AST_sentinel_tank_project
+	unlock_national_focus = AST_introduce_unconventional_warfare
+	unlock_national_focus = AST_expand_the_raaf
+	unlock_national_focus = AST_expand_northern_presence
+	unlock_national_focus = AST_cac_woomera
+	unlock_national_focus = AST_volunteer_air_observers_corps
+	unlock_national_focus = AST_death_from_down_under
+	unlock_national_focus = AST_cockatoo_island_shipyards
+	unlock_national_focus = AST_kangaroo_point_shipyards
+	unlock_national_focus = NZL_expand_devonport_naval_base
+	unlock_national_focus = AST_fly_the_jolly_roger
+	unlock_national_focus = AST_pacific_area_navy
+	unlock_national_focus = AST_naval_auxiliary_patrol
+	set_technology = {
+
+		#PLACEHOLDERS for vehicles
+		
+	
+		#doctrines
+		#air
+		force_rotation = 1
+		formation_flying = 1
+		low_echelon_support = 1
+		dispersed_fighting = 1
+
+		grand_battle_plan = 1
+		prepared_defense = 1
+		grand_assault = 1
+		carrier_primacy = 1
+		carrier_task_forces = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		concentrated_industry4 = 1
+	}
+	522 = {
+	    #add_extra_state_shared_building_slots = 
+		add_building_construction = {
+    	    type = industrial_complex
+    	    level = 15
+    	    instant_build = yes
+	    }
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 2
+    	    instant_build = yes
+	    }
+		add_resource = {
+			type = steel
+			amount = 12
+		}
+	}
+	871 = {
+		add_building_construction = {
+    	    type = industrial_complex
+    	    level = 11
+    	    instant_build = yes
+	    }
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 3
+    	    instant_build = yes
+	    }
+	}
+	523 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+    	    type = industrial_complex
+    	    level = 2
+    	    instant_build = yes
+	    }
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 2
+    	    instant_build = yes
+	    }
+	}
+	979 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 2
+    	    instant_build = yes
+	    }
+	}
+	737 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 2
+    	    instant_build = yes
+	    }
+	}
+	284 = {
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 2
+    	    instant_build = yes
+	    }
+		add_resource = {
+			type = steel
+			amount = 18
+		}
+		add_resource = {
+			type = oil
+			amount = 18
+		}
+	}
+	723 = {
+		add_building_construction = {
+    	    type = infrastructure
+    	    level = 2
+    	    instant_build = yes
+	    }
+	}
+}
+
 add_equipment_to_stockpile = {
     type = infantry_equipment_1
 	amount = 2535

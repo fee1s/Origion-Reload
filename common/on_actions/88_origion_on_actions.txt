@@ -711,6 +711,19 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+			    limit = {
+				    has_global_flag = ONLY_ASIA_FLAG
+				}
+				every_country = {
+				    limit = {
+					    exists = yes
+					}
+					army_experience = 1500
+					navy_experience = 1500
+					air_experience = 1500
+				}
+			}
 		}
 	}
 }
