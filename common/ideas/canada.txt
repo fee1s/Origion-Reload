@@ -14,7 +14,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = chi_war_of_resistance
 			
 			modifier = {
 				defensive_war_stability_factor = 0.25
@@ -34,11 +34,14 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = man_five_year_plan_tank
 			
 			modifier = {
-			    army_attack_factor = 0.05
-				army_defence_factor = 0.05
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		
@@ -54,13 +57,13 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = FIN_german_threat
 
-			targeted_modifier = {
-                tag = GER
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
 		}
 		
 		CAN_asia = {
@@ -77,11 +80,11 @@ ideas = {
 
 			picture = idea_chi_army_corruption3
 
-			targeted_modifier = {
-                tag = JAP
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
+			equipment_bonus = {
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
 		}
 		
 		CAN_max = {
@@ -96,7 +99,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = FIN_finnish_federation_of_trade_unions_heavy
 
 			modifier = {
                 production_factory_efficiency_gain_factor = 0.05
@@ -116,7 +119,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_goods_red_bonus
+			picture = FIN_finnish_federation_of_trade_unions_light
 
 			modifier = {
 				consumer_goods_factor = -0.10
@@ -135,7 +138,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_goods_red_bonus
+			picture = FIN_finnish_federation_of_trade_unions
 
 			modifier = {
 				industrial_capacity_factory = 0.075
