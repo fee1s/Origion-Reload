@@ -854,7 +854,7 @@ characters={
 		}
 	}
 	
-	FRA_francois_darlan={
+	FRA_francois_darlan={ # не удалять, добавлено для тестов
 		name=FRA_francois_darlan
 		portraits={
 			army={
@@ -863,6 +863,94 @@ characters={
 			}
 		}
 
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+		
+		advisor={
+			slot = navy_chief
+			idea_token = francois_darlan
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost =  100
+		}
+	}
+	
+	FRA_jeanmarie_charles_abrial={
+		name=FRA_jeanmarie_charles_abrial
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanmarie_charles_abrial
+				small=GFX_portrait_FRA_jeanmarie_charles_abrial_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = jeanmarie_charles_abrial
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+		}
+	}
+	
+	FRA_jeanpierre_esteva={
+		name=FRA_jeanpierre_esteva
+		portraits={
+			army={
+				large=GFX_portrait_FRA_jeanpierre_esteva
+				small=GFX_portrait_FRA_jeanpierre_esteva_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = jeanpierre_esteva
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+			cost =  100
+		}
+	}
+	
+	FRA_rene_emile_godfroy={
+		name=FRA_rene_emile_godfroy
+		portraits={
+			army={
+				large=GFX_portrait_FRA_rene_emile_godfroy
+				small=GFX_portrait_FRA_rene_emile_godfroy_small
+			}
+			army={
+				small="GFX_idea_rene_emile_godfroy"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = rene_emile_godfroy
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+		}
+		
 		navy_leader={
 			traits={ blockade_runner superior_tactician air_controller ironside }
 			skill=6

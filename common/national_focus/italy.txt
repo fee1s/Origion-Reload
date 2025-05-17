@@ -388,9 +388,7 @@ focus_tree = {
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
 		
-		available = { has_idea = triumph_egypt_idea }
-		
-		bypass = { axis_lost_africa_trigger = yes }
+		bypass = { NOT = { controls_state = 447 controls_state = 907 } }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -478,9 +476,7 @@ focus_tree = {
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
 		
-		available = { has_idea = triumph_egypt_idea }
-		
-		bypass = { axis_lost_africa_trigger = yes }
+		bypass = { NOT = { controls_state = 291 controls_state = 676 } }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 

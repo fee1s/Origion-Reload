@@ -19,11 +19,13 @@ ideas = {
 			modifier = {
 				defensive_war_stability_factor = 0.25
 				amphibious_invasion_defence = 0.15
+
             }
 		}
-		
-		CAN_facel = {
 
+		CAN_check_war_second = {
+			name = CAN_check_war
+			
 			allowed = {
 				always = no
 			}
@@ -34,14 +36,114 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = man_five_year_plan_tank
+			picture = chi_war_of_resistance
 			
 			modifier = {
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-				consumer_goods_factor = -0.10
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
+            }
+		}
+
+		CAN_check_war_third_left = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.10
+            }
+		}
+		
+		CAN_check_war_third_right = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+            }
+		}
+		
+		CAN_check_war_third_left_with_right = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+            }
+		}
+		
+		CAN_check_war_end = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
 			}
 		}
 		

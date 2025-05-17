@@ -391,7 +391,7 @@ if = {
 		mtg_transport = 1
 		coastal_defense_ships = 1
 		improved_airplane_launcher = 1
-		
+		improved_ship_torpedo_launcher = 1
 		early_ship_hull_carrier = 1
 		basic_ship_hull_carrier = 1
 	}
@@ -891,9 +891,9 @@ if = {
 				fixed_ship_armor_slot = ship_armor_cruiser_3
 				fixed_ship_secondaries_slot = dp_ship_secondaries_2
 				front_1_custom_slot = ship_light_medium_battery_2
-				mid_1_custom_slot = ship_light_medium_battery_2
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_torpedo_2
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_airplane_launcher_2
 			}
 		}
 	# Battleships #
@@ -909,28 +909,11 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bb_2
+			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_heavy_battery_2
 			mid_2_custom_slot = ship_heavy_battery_2
 			rear_1_custom_slot = ship_airplane_launcher_2
-		}
-	}
-	
-	create_equipment_variant = {
-		name = "Origion Italy Carrier"
-		type = ship_hull_carrier_1
-		name_group = ITA_CV_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_deck_slot_1 = ship_deck_space
-			fixed_ship_deck_slot_2 = ship_deck_space
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = carrier_ship_engine_2
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			front_1_custom_slot = ship_deck_space
-			mid_1_custom_slot = ship_deck_space
 		}
 	}
 }

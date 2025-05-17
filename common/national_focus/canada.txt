@@ -2933,7 +2933,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_max
+			swap_ideas = {
+				remove_idea = CAN_check_war
+				add_idea = CAN_check_war_second
+			}
 		}
 	}
 	
@@ -2972,10 +2975,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 6
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = CAN_national_housing_act_IC
@@ -3015,14 +3018,14 @@
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 10
+						size > 3
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 6
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = CAN_national_housing_act_IC
@@ -3058,14 +3061,21 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_tallon
+			if = { limit = { has_idea = CAN_check_war_second }
+				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_left }
+			}
+			
+			if = { limit = { has_idea = CAN_check_war_third_right }
+				swap_ideas = { remove_idea = CAN_check_war_third_right add_idea = CAN_check_war_third_left_with_right }
+			}
 		}
 	}
 	
 	focus = {
 		id = CAN_output
 		icon = GFX_focus_NORDIC_com_materiel
-		prerequisite = { focus = CAN_mils focus = CAN_proizvodstvo }
+		prerequisite = { focus = CAN_mils }
+		prerequisite = { focus = CAN_proizvodstvo }
 		x = 3
 		y = 8
 		relative_position_id = CAN_commit_to_the_war
@@ -3089,7 +3099,13 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_output
+			if = { limit = { has_idea = CAN_check_war_second }
+				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_right }
+			}
+			
+			if = { limit = { has_idea = CAN_check_war_third_left }
+				swap_ideas = { remove_idea = CAN_check_war_third_left add_idea = CAN_check_war_third_left_with_right }
+			}
 		}
 	}
 	
@@ -3123,11 +3139,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		swap_ideas = {
-			remove_idea = CAN_output
-			remove_idea = CAN_tallon
-			remove_idea = CAN_max
-			add_idea = CAN_facel
+			swap_ideas = {
+				remove_idea = CAN_check_war_third_left_with_right
+				add_idea = CAN_check_war_end
 			}
 		}
 	}

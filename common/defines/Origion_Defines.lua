@@ -68,7 +68,7 @@ NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.45 -- Умеменьшить размен�
 NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.35 -- Умеменьшить размены в воздухе
 
 NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 1.45 -- портстрайк бафф
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.95 -- бафф морбобров по дамагу по организации
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.75 -- бафф морбобров по дамагу по организации
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.45 -- бафф морбобров по дамагу
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 1.2 -- множитель получаемого опыта авиации (всего)

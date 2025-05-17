@@ -257,7 +257,8 @@ technologies = {
 			max_organisation = 5
 		}
 		
-		navy_capital_ship_defence_factor = 0.02
+		navy_capital_ship_defence_factor = 0.05
+		
 		
 		########
 
@@ -307,7 +308,8 @@ technologies = {
 		carrier = {
 			max_organisation = 10
 		}
-		sortie_efficiency = 0.1
+		navy_anti_air_attack_factor = 0.05
+		
 		########
 
 		path = {
@@ -1389,9 +1391,9 @@ technologies = {
 		#same as floating_airfield
 		# EFFECT #############
 		carrier = {
-			max_organisation = 1
+			max_organisation = 5
 		}
-		sortie_efficiency = 0.1
+		navy_anti_air_attack_factor = 0.05
 		########
 		
 		xp_research_type = navy
@@ -1435,9 +1437,6 @@ technologies = {
 		# EFFECT #############
 		carrier = {
 			max_organisation = 5
-		}
-		modifier = {
-			naval_strike_targetting_factor = 0.1
 		}
 		########
 		
@@ -1898,8 +1897,6 @@ technologies = {
 		carrier = {
 			max_organisation = 5		
 		}
-		carrier_capacity_penalty_reduction = -0.1
-		sortie_efficiency = 0.1
 
 		modifier = {
 			naval_strike_targetting_factor = 0.1
@@ -1975,7 +1972,7 @@ technologies = {
 		#same as floating_fortress
 		# EFFECT #############
 		light_cruiser = {
-			max_organisation = 5
+			max_organisation = 10
 		}
 		########
 
@@ -2039,12 +2036,8 @@ technologies = {
 		carrier = {
 			max_organisation = 5
 		}
-		light_cruiser = {
-			max_organisation = 5
-		}
 
 		sortie_efficiency = 0.1
-		navy_carrier_air_agility_factor = 0.10
 
 		###########
 		

@@ -131,7 +131,7 @@ ideas = {
 			}
 		}
 		
-		uk_noasia_fleet_idea = {
+		uk_noasia_fleet_idea = { # перенес в нац. дух ноу-азии
 			picture = AUS_naval_efficiency_idea
 			
 			allowed = { always = no }
@@ -492,6 +492,71 @@ ideas = {
 			modifier = {
 				conscription = 0.125
 				surrender_limit = 1
+			}
+		}
+		
+		eng_no_asia_navy = {	
+			name = eng_no_asia
+			
+			allowed = {
+				always = no
+			}
+			picture = ARG_british_influences
+	
+			removal_cost = -1
+			modifier = {
+				conscription = 0.125
+				surrender_limit = 1
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		
+		eng_no_asia_tanks = {	
+			name = eng_no_asia
+			
+			allowed = {
+				always = no
+			}
+			picture = ARG_british_influences
+	
+			removal_cost = -1
+			modifier = {
+				conscription = 0.125
+				surrender_limit = 1
+				industrial_capacity_dockyard = 0.15
+			}
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}				
+			}
+		}
+		
+		eng_no_asia_tanks_but_not_navy = {	
+			name = eng_no_asia
+			
+			allowed = {
+				always = no
+			}
+			picture = ARG_british_influences
+	
+			removal_cost = -1
+			modifier = {
+				conscription = 0.125
+				surrender_limit = 1
+			}
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}				
 			}
 		}
 	

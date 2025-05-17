@@ -472,6 +472,15 @@ country_event = {
 				transfer_state = 665
 				transfer_state = 735
 			}
+			
+			if = { limit = { JAP = { exists = no } }
+				COL = {
+					transfer_state = 286
+					transfer_state = 741
+					transfer_state = 670
+					transfer_state = 671
+				}
+			}
 		}
 		VIC = {
 			every_unit_leader = {
