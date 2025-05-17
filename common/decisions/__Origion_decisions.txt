@@ -378,7 +378,7 @@ ORG_allies_lend_lease_to_sov = {
 		
 		visible = { NOT = { has_country_flag = open_fighter_ll_category_flag } }
 		
-		
+		available = { hidden_trigger = { SOV = { has_war = yes } } }
 		
 		complete_effect = { set_country_flag = open_fighter_ll_category_flag }
 	}
