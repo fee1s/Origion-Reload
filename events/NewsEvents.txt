@@ -4482,7 +4482,6 @@ news_event = {
 			set_global_flag = MR_pact_broken_event_flag
 			SOV = { 
 				remove_opinion_modifier = { target = GER modifier = MR_pact }
-				remove_ideas = SOV_molotov_ribbentrop_pact
 			}
 			GER = { remove_opinion_modifier = { target = SOV modifier = MR_pact } }
 			every_other_country = {
@@ -4563,7 +4562,6 @@ news_event = {
 			set_global_flag = MR_pact_broken_event_flag
 			SOV = { 
 				remove_opinion_modifier = { target = GER modifier = MR_pact }
-				remove_ideas = SOV_molotov_ribbentrop_pact
 			}
 			GER = { remove_opinion_modifier = { target = SOV modifier = MR_pact } }
 			every_other_country = {
