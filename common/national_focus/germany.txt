@@ -2228,12 +2228,13 @@ focus_tree = {
 
 		prerequisite = { focus = GER_fate_of_czechoslovakia }
 		prerequisite = { focus = GER_reassert_eastern_claims }
+		
+		available = { has_completed_focus = GER_soviet_treaty }
+		
 		x = 1
 		y = 1
 		relative_position_id = GER_fate_of_czechoslovakia
-		cost = 5
-
-		continue_if_invalid = yes
+		cost = 4
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
 	
@@ -2985,8 +2986,7 @@ focus_tree = {
 			GER = {
 			    every_state = { 
 				    limit = { 
-					    OR = { 
-							state = 806 
+					    OR = {  
 							state = 19 
 							state = 23 
 							state = 30 

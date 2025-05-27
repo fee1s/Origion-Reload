@@ -2080,6 +2080,12 @@ focus_tree = {
 					instant_build = yes
 				}
 				
+				add_building_construction = {
+					type = radar_station
+					level = 6
+					instant_build = yes
+				}
+				
 				if = {
 					limit = {
 						ROOT = { controls_province = 4135 }
@@ -2113,6 +2119,44 @@ focus_tree = {
 					add_building_construction = {
 						type = coastal_bunker
 						level = 3
+						province = 13228
+						instant_build = yes
+					}
+				}
+				
+				if = {
+					limit = {
+						ROOT = { controls_province = 4135 }
+						any_province_building_level = {
+							province = {
+								id = 4135
+							}
+							building = bunker
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4135
+						instant_build = yes
+					}
+				}
+				
+				if = {
+					limit = {
+						ROOT = { controls_province = 13228 }
+						any_province_building_level = {
+							province = {
+								id = 13228
+							}
+							building = bunker
+							level < 1
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
 						province = 13228
 						instant_build = yes
 					}

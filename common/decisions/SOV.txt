@@ -238,17 +238,7 @@ SOV_propaganda_campaigns = {
 		available = {
 			SOV_propaganda_poster_slot_available = yes
 
-			has_war = yes
-			surrender_progress < 0.01
-			any_enemy_country = {
-				is_major = yes
-				ROOT = {
-					any_controlled_state = {
-						is_core_of = PREV.PREV
-					}
-				}
-			}
-			SOV_propaganda_victory_at_hand_available = yes
+			GER = { surrender_progress > 0.25 }
 		}
 
 		visible = {

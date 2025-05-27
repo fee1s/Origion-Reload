@@ -2724,8 +2724,13 @@ news_event = {
 	
 	trigger = {
 		118 = { 
-		    controller = {
-			    ORIGION_is_in_faction_with_axis = yes
+			OR = {
+				is_fully_controlled_by = GER
+				is_fully_controlled_by = ITA
+				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROM
+				is_fully_controlled_by = BUL
+				is_fully_controlled_by = JAP
 			}
 		}
 		NOT = { has_global_flag = fall_of_gibraltar_ger }
