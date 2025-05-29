@@ -1796,6 +1796,35 @@ technologies = {
 			tank_half_track_suspension
 		}
 		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { mechanised_infantry = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { mechanised_infantry = 1 }
+				    }
+				}
+			}
+		}
+		
 		motorized = {
 			hardness = 1.0
 		}
@@ -1891,6 +1920,35 @@ technologies = {
 				factor = 2
 			}
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_mechanized_infantry = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_mechanized_infantry = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	amphibious_mechanized_infantry_2 = {
@@ -1915,6 +1973,35 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
+		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_mechanized_infantry_2 = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_mechanized_infantry_2 = 1 }
+				    }
+				}
+			}
 		}
 	}
 	
@@ -1946,6 +2033,35 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { mechanised_infantry2 = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { mechanised_infantry2 = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	mechanised_infantry3 = {
@@ -1975,6 +2091,35 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { mechanised_infantry3 = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { mechanised_infantry3 = 1 }
+				    }
+				}
+			}
 		}
 	}
 	

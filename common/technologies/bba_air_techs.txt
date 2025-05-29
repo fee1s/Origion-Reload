@@ -75,6 +75,34 @@ technologies = {
 			light_fighter
 			light_air
 		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_small_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_small_airframe = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	advanced_small_airframe = {
@@ -101,6 +129,34 @@ technologies = {
 			light_fighter
 			light_air
 		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_small_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_small_airframe = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	modern_small_airframe = {
@@ -123,6 +179,34 @@ technologies = {
 			light_fighter
 			light_air
 			jet_technology
+		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { modern_small_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { modern_small_airframe = 1 }
+				    }
+				}
+			}
 		}
 	}
 	
@@ -175,6 +259,34 @@ technologies = {
 			medium_air
 			tactical_bomber
 		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { basic_medium_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { basic_medium_airframe = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	improved_medium_airframe = {
@@ -225,6 +337,34 @@ technologies = {
 			medium_air
 			tactical_bomber
 		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_medium_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_medium_airframe = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	modern_medium_airframe = {
@@ -246,6 +386,34 @@ technologies = {
 			medium_air
 			tactical_bomber
 			jet_technology
+		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { modern_medium_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { modern_medium_airframe = 1 }
+				    }
+				}
+			}
 		}
 	}
 
@@ -296,6 +464,34 @@ technologies = {
 		categories = {
 			heavy_air
 		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { basic_large_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { basic_large_airframe = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	improved_large_airframe = {
@@ -319,6 +515,34 @@ technologies = {
 		}
 		categories = {
 			heavy_air
+		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { basic_large_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { basic_large_airframe = 1 }
+				    }
+				}
+			}
 		}
 	}
 	
@@ -344,6 +568,34 @@ technologies = {
 		categories = {
 			heavy_air
 		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_large_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_large_airframe = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	modern_large_airframe = {
@@ -364,6 +616,34 @@ technologies = {
 		categories = {
 			heavy_air
 			jet_technology
+		}
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { modern_large_airframe = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { modern_large_airframe = 1 }
+				    }
+				}
+			}
 		}
 	}
 

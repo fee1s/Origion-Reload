@@ -321,6 +321,32 @@ technologies = {
 				}
 				ITA_add_improved_light_tank_templates = yes
 			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_light_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_light_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		categories = {
@@ -393,6 +419,35 @@ technologies = {
 			tp_tech
 			mio_cat_tech_light_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_tank_chassis = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	amphibious_drive = { #SchwimmPanzer II
@@ -455,6 +510,35 @@ technologies = {
 			tp_tech
 			mio_cat_tech_light_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_drive = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_drive = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	advanced_light_tank_chassis = { #Leopard
@@ -503,6 +587,35 @@ technologies = {
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_light_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_light_tank_chassis = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	basic_medium_tank_chassis = { #Panzer III
@@ -542,6 +655,32 @@ technologies = {
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { basic_medium_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { basic_medium_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		path = {
@@ -650,6 +789,32 @@ technologies = {
 				}
 				ITA_add_improved_medium_tank_templates = yes
 			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_medium_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_medium_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -737,6 +902,32 @@ technologies = {
 				}
 				ITA_add_advanced_medium_tank_templates = yes
 			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_medium_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_medium_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -814,6 +1005,35 @@ technologies = {
 			mio_cat_tech_all_armor_and_modules
 			cat_medium_armor
 			mio_cat_tech_medium_armor_and_modules
+		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { main_battle_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { main_battle_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 	}
 
@@ -948,6 +1168,32 @@ technologies = {
 				}
 				ITA_add_improved_heavy_tank_templates = yes
 			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_heavy_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_heavy_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1015,6 +1261,32 @@ technologies = {
 					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
 				}
 				ITA_add_advanced_heavy_tank_templates = yes
+			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_heavy_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_heavy_tank_chassis = 1 }
+				    }
+				}
 			}
 		}
 
@@ -1091,6 +1363,32 @@ technologies = {
 						has_completed_focus = ITA_a_time_for_war
 					}
 					ITA_add_hand_of_god_sh_tank_template_and_production = yes
+				}
+			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { super_heavy_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { super_heavy_tank_chassis = 1 }
+				    }
 				}
 			}
 		}
