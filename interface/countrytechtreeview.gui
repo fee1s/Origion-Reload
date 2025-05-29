@@ -258,6 +258,29 @@ guiTypes = {
 				hide = yes
 				alwaystransparent = yes
 			}
+			
+			containerWindowType = {
+				name = "tiled_research_bg"
+				position = { x=450 y=560 }
+				size = { width = 960 height = 260 }
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_research_bg"
+				}
+				instantTextBoxType = {
+					name = "tech_tooltip_box"
+					position = { x = 25 y = 170 }
+					font = "hoi_36header"
+					borderSize = { x = 0 y = 0}
+					text = "tech_tooltip"
+					maxWidth = 300
+					maxHeight = 32
+					format = center
+					Orientation = "UPPER_LEFT"
+			    }
+			}
 
 			gridboxtype = {
 				name = "night_vision_tree"
@@ -1121,6 +1144,29 @@ guiTypes = {
 					text = "ARMOUR_TITLE_AMPH"
 					maxWidth = 200
 					maxHeight = 62
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+			}
+			
+			containerWindowType = {`
+				name = "tiled_research_bg"
+				position = { x = 200 y = 34 }
+				size = { width = 350 height = 98 }
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_research_bg"
+				}
+				instantTextBoxType = {
+					name = "tech_tooltip_box"
+					position = { x = 25 y = 10 }
+					font = "hoi_36header"
+					borderSize = { x = 0 y = 0}
+					text = "tech_tooltip_armor"
+					maxWidth = 300
+					maxHeight = 78
 					format = center
 					Orientation = "UPPER_LEFT"
 				}
@@ -2626,6 +2672,29 @@ guiTypes = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_2b_border"
 			}
+			
+			containerWindowType = {
+				name = "tiled_research_bg"
+				position = { x = 380 y = 0 }
+				size = { width = 350 height = 124 }
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_research_bg"
+				}
+				instantTextBoxType = {
+					name = "tech_tooltip_box"
+					position = { x = 25 y = 10 }
+					font = "hoi_36header"
+					borderSize = { x = 0 y = 0}
+					text = "tech_tooltip_air"
+					maxWidth = 300
+					maxHeight = 104
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+			}
 
 			containerWindowType = {
 				name = "techtree_stripes"
@@ -2842,7 +2911,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "airtech_subtitle_airframe"
-				position = { x = 410 y = 110 }
+				position = { x = 410 y = 125 }
 				textureFile = ""
 				font = "hoi_33"
 				borderSize = {x = 0 y = 4}
