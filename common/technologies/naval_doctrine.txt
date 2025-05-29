@@ -22,7 +22,44 @@ technologies = {
 		#####
 
 
-		xor = { trade_interdiction base_strike } 
+		xor = { trade_interdiction base_strike }
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {trade_interdiction=0}
+				set_technology = {base_strike=0}
+				
+				
+				set_technology = {convoy_interdiction_ti=0}
+				set_technology = {unrestricted_submarine_warfare=0}
+				set_technology = {wolfpacks=0}
+				set_technology = {advanced_submarine_warfare=0}
+				set_technology = {raider_patrols=0}
+				set_technology = {capital_ship_raiders=0}
+				set_technology = {battlefleet_concentration_ti=0}
+				set_technology = {floating_fortress_ti=0}
+				set_technology = {floating_airfield_ti=0}
+				set_technology = {carrier_operations=0}
+				set_technology = {convoy_sailing_ti=0}
+				set_technology = {subsidiary_carrier_role_ti=0}
+				set_technology = {naval_air_operations=0}
+				
+				set_technology = {carrier_primacy=0}
+				set_technology = {carrier_task_forces=0}
+				set_technology = {floating_airfield_bs=0}
+				set_technology = {massed_strikes=0}
+				set_technology = {floating_fortress_bs=0}
+				set_technology = {carrier_battlegroups=0}
+				set_technology = {submarine_operations_bs=0}
+				set_technology = {undersea_blockade_bs=0}
+				set_technology = {convoy_interdiction_bs=0}
+				set_technology = {submarine_offensive_bs=0}
+				set_technology = {convoy_escorts_bs=0}
+				set_technology = {escort_patrols=0}
+				set_technology = {convoy_sailing_bs=0}
+				set_technology = {integrated_convoy_defence_bs=0}
+			}
+		}
 		
 		path = {
 			leads_to_tech = battlefleet_concentration 
@@ -878,7 +915,45 @@ technologies = {
 		
 
 
-		xor = { fleet_in_being base_strike } 
+		xor = { fleet_in_being base_strike }
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {fleet_in_being=0}
+				set_technology = {base_strike=0}
+				
+				set_technology = {submarine_offensive=0}
+				set_technology = {convoy_interdiction=0}
+				set_technology = {undersea_blockade=0}
+				set_technology = {submarine_operations=0}
+				set_technology = {integrated_convoy_defence=0}
+				set_technology = {escort_carriers=0}
+				set_technology = {convoy_escorts=0}
+				set_technology = {convoy_sailing=0}
+				set_technology = {grand_battlefleet=0}
+				set_technology = {floating_airfield=0}
+				set_technology = {floating_fortress=0}
+				set_technology = {hunter_killer_groups=0}
+				set_technology = {hunter_killer_groups=0}
+				set_technology = {subsidiary_carrier_role=0}
+				set_technology = {battlefleet_concentration=0}
+				
+				set_technology = {carrier_primacy=0}
+				set_technology = {carrier_task_forces=0}
+				set_technology = {floating_airfield_bs=0}
+				set_technology = {massed_strikes=0}
+				set_technology = {floating_fortress_bs=0}
+				set_technology = {carrier_battlegroups=0}
+				set_technology = {submarine_operations_bs=0}
+				set_technology = {undersea_blockade_bs=0}
+				set_technology = {convoy_interdiction_bs=0}
+				set_technology = {submarine_offensive_bs=0}
+				set_technology = {convoy_escorts_bs=0}
+				set_technology = {escort_patrols=0}
+				set_technology = {convoy_sailing_bs=0}
+				set_technology = {integrated_convoy_defence_bs=0}
+			}
+		}
 		
 		path = {
 			leads_to_tech = convoy_interdiction_ti 
@@ -1625,6 +1700,46 @@ technologies = {
 		
 		xor = { fleet_in_being trade_interdiction } 
 		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {fleet_in_being=0}
+				set_technology = {trade_interdiction=0}
+				
+				
+				set_technology = {trade_interdiction=0}
+				set_technology = {submarine_offensive=0}
+				set_technology = {convoy_interdiction=0}
+				set_technology = {undersea_blockade=0}
+				set_technology = {submarine_operations=0}
+				set_technology = {integrated_convoy_defence=0}
+				set_technology = {escort_carriers=0}
+				set_technology = {convoy_escorts=0}
+				set_technology = {convoy_sailing=0}
+				set_technology = {grand_battlefleet=0}
+				set_technology = {floating_airfield=0}
+				set_technology = {floating_fortress=0}
+				set_technology = {hunter_killer_groups=0}
+				set_technology = {hunter_killer_groups=0}
+				set_technology = {subsidiary_carrier_role=0}
+				set_technology = {battlefleet_concentration=0}
+				
+				set_technology = {submarine_offensive=0}
+				set_technology = {convoy_interdiction=0}
+				set_technology = {undersea_blockade=0}
+				set_technology = {submarine_operations=0}
+				set_technology = {integrated_convoy_defence=0}
+				set_technology = {escort_carriers=0}
+				set_technology = {convoy_escorts=0}
+				set_technology = {convoy_sailing=0}
+				set_technology = {grand_battlefleet=0}
+				set_technology = {floating_airfield=0}
+				set_technology = {floating_fortress=0}
+				set_technology = {hunter_killer_groups=0}
+				set_technology = {hunter_killer_groups=0}
+				set_technology = {subsidiary_carrier_role=0}
+				set_technology = {battlefleet_concentration=0}
+			}
+		}
 		path = {
 			leads_to_tech = carrier_primacy 
 			research_cost_coeff = 1

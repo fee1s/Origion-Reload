@@ -327,3 +327,63 @@ asian_war_simulation = {
 	JAP = { exists = no }
 	date < 1942.9.1
 }
+fix_traits = { #hi sartiros
+	OR = {
+		AND = {
+			has_trait = infantry_expert
+			has_trait = ambusher
+		}
+		AND = {
+			has_trait = panzer_expert
+			has_trait = combined_arms_expert
+		}
+		AND = {
+			has_trait = panzer_expert
+			has_trait = cavalry_expert
+		}
+		AND = {
+			has_trait = cavalry_expert
+			has_trait = combined_arms_expert
+		}
+		AND = {
+			has_trait = scavenger
+			has_trait = fortress_buster
+		}
+		AND = {
+			has_trait = offensive_doctrine
+			has_trait = defensive_doctrine
+		}
+		AND = {
+			has_trait = unyielding_defender
+			has_trait = aggressive_assaulter
+		}
+		AND = {
+			has_trait = fast_planner
+			has_trait = thorough_planner
+		}
+		AND = {
+			has_trait = silent_hunter
+			has_trait = lancer
+		}
+		AND = {
+			has_trait = lone_wolf
+			has_trait = concealment_expert
+		}
+		AND = {
+			has_trait = fighter_director
+			has_trait = dive_bomber
+		}
+		AND = {
+			has_trait = fighter_director
+			has_trait = torpedo_bomber
+		}
+		AND = {
+			has_trait = torpedo_bomber
+			has_trait = dive_bomber
+		}
+		AND = {
+			has_trait = crisis_magician
+			has_trait = marksman
+		}
+	}
+}

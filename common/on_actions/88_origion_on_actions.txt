@@ -733,4 +733,17 @@ on_actions = {
 			}
 		}
 	}
+	on_monthly = {
+		effect = {   
+			every_unit_leader = {
+				if = {
+					limit = {
+						fix_traits = yes
+					}
+					retire = yes					
+				}
+				
+			}
+		}
+	}
 }
