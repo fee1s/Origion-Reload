@@ -528,7 +528,7 @@ adjacency_rule =
 		trade = yes
 	}
 	
-	required_provinces = { 1644 1283 }
+	required_provinces = { 1644 1283 1310 4648 10338 }
 	
 	icon = 5563
 }
@@ -565,10 +565,234 @@ adjacency_rule =
 		trade = yes
 	}
 	
-	required_provinces = { 1329 10251 }
+	required_provinces = { 1329 10251 12237 7365 1301 }
 	
 	icon = 1329
 }
+adjacency_rule =
+{
+	name = "RABAUL"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7251 4421 10166 10184 10206 1286 7412 }
+	
+	icon = 7251
+}
+adjacency_rule =
+{
+	name = "GUADALKANAL"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1042 1085 1269 1358 1370 4226 4252 4292 4378 7437 10234 10291 10319 12265  }
+	
+	icon = 1269
+}
+adjacency_rule =
+{
+	name = "NEWCALEDONIA"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1237 1263 4231 4247 4268 7264 10160 12120 12132 7390 }
+	
+	icon = 5609
+}
+adjacency_rule =
+{
+	name = "NEWZEALAND"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1814 12632 4804 7826 4819 }
+	
+	icon = 1814
+}
+adjacency_rule =
+{
+	name = "TASMANIA"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7798 7811 1759 10637 10665 5181 12645}
+	
+	icon = 5240
+}
+
+adjacency_rule =
+{
+	name = "LEEWIN"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7453 1652 8228 8243 }
+	
+	icon = 7453
+}
+
 #Gibraltar Strait
 adjacency_rule =
 {
