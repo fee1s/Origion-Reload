@@ -740,7 +740,110 @@ on_actions = {
 					limit = {
 						fix_traits = yes
 					}
-					retire = yes					
+					if = {
+						limit = {
+							has_trait = ambusher
+						}
+						remove_trait = {
+							trait = ambusher
+						}
+					}
+					if = {
+						limit = {
+							has_trait = combined_arms_expert
+						}
+						remove_trait = {
+							trait = combined_arms_expert
+						}
+					}
+					if = {
+						limit = {
+							has_trait = cavalry_expert
+						}
+						remove_trait = {
+							trait = cavalry_expert
+						}
+					}
+					if = {
+						limit = {
+							has_trait = scavenger
+						}
+						remove_trait = {
+							trait = scavenger
+						}
+					}
+					if = {
+						limit = {
+							has_trait = defensive_doctrine
+						}
+					remove_trait = {
+						trait = defensive_doctrine
+						}
+					}
+					if = {
+						limit = {
+							has_trait = unyielding_defender
+						}
+					remove_trait = {
+						trait = unyielding_defender
+						}
+					}
+					if = {
+						limit = {
+							has_trait = lancer
+						}
+						remove_trait = {
+							trait = lancer
+						}
+					}
+					if = {
+						limit = {
+						has_trait = fast_planner
+						}
+						remove_trait = {
+							trait = fast_planner
+						}
+					}
+					if = {
+						limit = {
+							has_trait = lone_wolf
+						}
+						remove_trait = {
+							trait = lone_wolf
+						}
+					}	
+					if = {
+						limit = {
+							has_trait = fighter_director
+						}
+						remove_trait = {
+							trait = fighter_director
+						}
+					}
+					if = {
+						limit = {
+							has_trait = dive_bomber
+						}
+						remove_trait = {
+							trait = dive_bomber
+						}
+					}
+					if = {
+						limit = {
+							has_trait = cavalry_expert
+						}
+						remove_trait = {
+							trait = cavalry_expert
+						}
+					}
+					if = {
+						limit = {
+							has_trait = marksman
+						}
+						remove_trait = {
+							trait = marksman
+						}
+					}					
 				}
 				
 			}
