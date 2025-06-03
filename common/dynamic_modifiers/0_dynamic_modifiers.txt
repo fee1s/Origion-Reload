@@ -1334,3 +1334,21 @@ massive_flooding = {
 	disable_strategic_redeployment = 1
 	army_speed_factor = -0.65
 }
+
+fra_dirigisme_dm = {
+	enable = { always = yes }
+	
+	icon = GFX_idea_GER_wirtschaftswunder
+	
+	industrial_capacity_factory = fra_dirigisme_industrial_capacity_factory
+	industrial_capacity_dockyard = fra_dirigisme_industrial_capacity_dockyard
+	production_speed_arms_factory_factor = fra_dirigisme_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = fra_dirigisme_production_speed_dockyard_factor
+	production_factory_efficiency_gain_factor = fra_dirigisme_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = fra_dirigisme_production_factory_max_efficiency_factor
+	consumer_goods_factor = fra_dirigisme_consumer_goods_factor
+	local_resources_factor = fra_dirigisme_local_resources_factor
+	conscription = fra_dirigisme_conscription
+	training_time_army_factor = fra_dirigisme_training_time_army_factor
+}
+

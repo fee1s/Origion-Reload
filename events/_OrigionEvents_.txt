@@ -232,6 +232,8 @@ news_event = { # вступление италии в войну против с
 			}
 		}
 		
+		if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } }
+		
 		sound_effect = psi_ita_join_war
 	}
 	
@@ -901,4 +903,37 @@ news_event = { # Операция "Стража на Рейне"
 	option = {
 		name = origion.27.a
 	}
+}
+
+news_event = { # удалялка складов франции, прокает перед непосредственно капитуляцией (компьен)
+	id = origion.28
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	   FRA = {	set_equipment_fraction = 0.0 }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # скрытый ивент вспомогательный по поводу капитуляции франции
+	id = origion.29
+	hidden = yes
+	major = yes
+	fire_only_once = no
+	
+	trigger = { FRA = { surrender_progress > 0.33 } NOT = { has_global_flag = second_compiegne_signed } }
+	
+	immediate = {
+	    set_global_flag = second_compiegne_signed
+		
+		FRA = { country_event = { id = origion.28 days = 4 } }
+		FRA = { country_event = { id = origion.28 days = 5 } }
+		FRA = { country_event = { id = origion.28 days = 6 } }
+		
+		country_event = { id = news.34 days = 7 }
+	}
+	
+	mean_time_to_happen = { days = 1 }
 }

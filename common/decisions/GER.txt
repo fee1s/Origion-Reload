@@ -366,15 +366,16 @@ GER_operations = {
 	GER_ROT = {
 		icon = GFX_GER_so_decision
 		available = {
-			date > 1940.1.1
-			date < 1940.3.1
-		    has_war = yes
+			date > 1939.12.1
+			hidden_trigger = { VIC = { exists = no } }
 		}
 		fire_only_once = yes
 		complete_effect = {
-			add_timed_idea = {
-				idea = GER_fall_rot_idea
-				days = 90
+			FRA = {
+				add_timed_idea = {
+					idea = fra_collapse_on_the_seine
+					days = 90
+				}
 			}
 		}
 	}

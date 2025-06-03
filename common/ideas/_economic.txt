@@ -823,23 +823,19 @@ ideas = {
 		FRA_closed_eco = {
 			picture = SOV_third_five_year_plan_civilian
 			available = {
-				if = {
-					limit = {
-						original_tag = FRA
-					}
-				}
+				always = no
 			}
 			visible = {
-				original_tag = FRA
+				always = no
 			}
 			cost = 150
 			removal_cost = -1
 			modifier = {
 				min_export = 0.0
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-				production_speed_buildings_factor = 0.10
-				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 20.0
 			}

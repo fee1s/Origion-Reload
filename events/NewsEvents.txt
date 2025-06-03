@@ -1199,7 +1199,7 @@ news_event = {
 	}
 }
 
-# Second Compiegne Armistice
+# Компьен, заканчивает Французскую кампанию 
 news_event = {
 	id = news.34
 	title = news.34.t
@@ -1209,6 +1209,323 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		hidden_effect = {
+			sound_effect = psi_de_gaulle
+			
+			every_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = no_fra_mainland_buildings }
+				}
+				remove_dynamic_modifier = { modifier = no_fra_mainland_buildings }
+			}
+			
+			29 = { remove_province_modifier = { province = { id = 575 } static_modifiers = { battle_of_dunkirk } } }
+			
+			VIC = {
+				set_country_flag = vichy_france
+				every_unit_leader = {
+					limit = {
+						has_id = 101 #de Gaulle
+					}
+					set_nationality = FRA
+				}
+				every_army_leader = {
+					set_nationality = FRA
+				}
+				every_state = { # Французская Северная африка
+					limit = {
+						is_controlled_by = FRA
+						is_owned_by = FRA
+						OR = {
+							state = 459
+							state = 460
+							state = 461
+							state = 462
+							state = 513
+							state = 991
+							state = 783
+						}
+					}
+					VIC = { transfer_state = PREV }
+				}
+				every_state = {
+					limit = { # Метрополия
+						OR = {
+							state = 735
+							state = 21
+							state = 851
+							state = 32
+							state = 20
+							state = 26
+							state = 22
+							state = 31
+							state = 25
+							state = 33
+							state = 1
+						}
+					}
+					add_core_of = PREV
+					VIC = { transfer_state = PREV }
+				}
+				
+				every_state = {
+					limit = { # Для Германии
+						OR = {
+							state = 17
+							state = 28
+							state = 18
+							state = 27
+							state = 24
+							state = 16
+							state = 785
+							state = 29
+							state = 15
+							state = 30
+							state = 14
+							state = 23
+							state = 19
+						}
+					}
+					GER = { transfer_state = PREV }
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_syria } }
+					every_state = { # Сирия
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 554
+								state = 553
+								state = 680
+								state = 677
+								state = 799
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_madagascar } }
+					every_state = { # Мадагаскар
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 543
+								state = 708
+								state = 706
+								state = 713
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_overseas_territories } }
+					every_state = { # Заморские
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 310
+								state = 694
+								state = 641
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_west_africa } }
+					every_state = { # Запданая
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 557
+								state = 272
+								state = 701
+								state = 296
+								state = 899
+								state = 780
+								state = 700
+								state = 298
+								state = 779
+								state = 778
+								state = 898
+								state = 781
+								state = 556
+								state = 776
+								state = 777
+								state = 274
+								state = 558
+								state = 902
+								state = 901
+								state = 900										
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_central_africa } }
+					every_state = { # Центальная
+						limit = {
+							OR = {
+								state = 774
+								state = 660
+								state = 773
+								state = 297
+								state = 539
+								state = 772
+								state = 718
+								state = 538
+								state = 295
+								state = 796
+								state = 888
+								state = 890
+								state = 768
+								state = 769
+								state = 889
+								state = 558
+								state = 902
+								state = 901
+								state = 900		
+								state = 268									
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+
+				set_cosmetic_tag = FRA_VICHY # хз
+			
+			}
+			
+			ITA = {
+				transfer_state = 1
+				transfer_state = 177
+				transfer_state = 458
+				transfer_state = 665
+				transfer_state = 735
+			}
+				
+			if = { limit = { JAP = { exists = no } }
+				COL = {
+					transfer_state = 286
+					transfer_state = 741
+					transfer_state = 670
+					transfer_state = 671
+				}
+			}
+			
+			if = { limit = { JAP = { exists = yes NOT = { has_completed_focus = JAP_strike_south_doctrine } } }
+				VIC = {
+					transfer_state = 286
+					transfer_state = 741
+					transfer_state = 670
+					transfer_state = 671
+				}
+			}
+			
+			FRA = { 
+				set_equipment_fraction = 0.0
+				
+				save_global_event_target_as = free_france
+				load_focus_tree = free_french_focus
+				set_cosmetic_tag = FRA_FREE 
+				
+				transfer_state = 994
+				add_state_core = 994
+				set_capital = { state = 994 }
+				
+				country_event = { id = france.20 days = 3 }
+			}
+			
+			GER = {
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 28500 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 450 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 60 producer = FRA }
+				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1200 producer = FRA }
+				add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1400 producer = FRA }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 600 producer = FRA }				
+				add_equipment_to_stockpile = { type = train_equipment_1 amount = 40 producer = FRA }
+				add_equipment_to_stockpile = { type = convoy amount = 100 producer = FRA }
+				
+				create_equipment_variant = {
+					name = "AMX 40 Trophy" 	
+					type = medium_tank_chassis_2
+					modules = {
+						main_armament_slot = tank_medium_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = easy_maintenance
+						special_type_slot_4 = tank_radio_2
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 12
+						tank_nsb_armor_upgrade = 14
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}	
+				
+				create_equipment_variant = {
+					name = "Somua SAu 40 Trophy" 	
+					type = medium_tank_destroyer_chassis_2
+					modules = {
+						main_armament_slot = tank_heavy_cannon_2
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = easy_maintenance
+						special_type_slot_4 = squeezebore_adaptor
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 7
+						tank_nsb_armor_upgrade = 0
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}
+				
+				create_equipment_variant = {
+					name = "Renault R35 Trophy" 	
+					type = light_tank_chassis_2
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_light_three_man_tank_turret
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = extra_ammo_storage
+						special_type_slot_4 = extra_ammo_storage
+						suspension_type_slot = tank_wheeled_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 11
+						tank_nsb_armor_upgrade = 14
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}
+				
+				add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40 Trophy" amount = 800 producer = FRA } 
+				add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40 Trophy" amount = 2200 producer = FRA } 				
+				add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35 Trophy" amount = 140 producer = FRA }
+			}
+		}
+	}
 	
 	option = {
 		name = news.34.a

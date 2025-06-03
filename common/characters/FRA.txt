@@ -112,14 +112,31 @@ characters={
 				small=GFX_portrait_FRA_alphonse_juin_small
 			}
 		}
+		
 		corps_commander={
-			traits={ career_officer trait_cautious armor_officer }
-			skill=4
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
 			attack_skill=3
-			defense_skill=2
+			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
-			legacy_id=0
+			legacy_id=9
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = alphonse_juin
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -139,17 +156,10 @@ characters={
 			allowed = {
 				original_tag = FRA
 			}
-			available = {
-				OR = {
-					has_completed_focus = FRA_aggressive_focus
-					has_completed_focus = FRA_appeal_to_the_french_nation
-				}
-			}
-			cost = 100.000
+			cost = 50
 			traits = {
 				army_chief_offensive_2
 			}
-			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -182,27 +192,23 @@ characters={
 			allowed = {
 				original_tag = FRA
 			}
-			available = {
-				has_completed_focus = FRA_defensive_focus
-			}
-			cost = 100.000
+			cost = 50
 			traits = {
 				army_chief_defensive_2
 			}
-			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
 		}
 		
-		field_marshal={
-			traits={ old_guard inflexible_strategist career_officer defensive_doctrine }
-			skill=3
+		corps_commander={
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
 			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}
 
@@ -215,16 +221,6 @@ characters={
 			army={
 				large=GFX_portrait_FRA_alphonse_georges
 			}
-		}
-		
-		field_marshal={
-			traits={ old_guard trait_cautious defensive_doctrine }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -265,12 +261,6 @@ characters={
 			allowed = {
 				original_tag = FRA
 			}
-			available = {
-				OR = {
-					has_completed_focus = FRA_battle_of_maneuver
-					has_completed_focus = FRA_appeal_to_the_french_nation
-				}
-			}
 			
 			traits = {
 				blitzkrieg_theorist
@@ -306,21 +296,6 @@ characters={
 			}
 			army={
 				large=GFX_portrait_FRA_philippe_leclerc
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = philippe_leclerc
-			ledger = army
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				army_commando_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 		
@@ -672,21 +647,6 @@ characters={
 				small="GFX_idea_jean_francois_jannekeyn"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = jean_francois_jannekeyn
-			ledger = air
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				air_tactical_bombing_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 	
 	FRA_alfred_heurtaux={
@@ -871,6 +831,7 @@ characters={
 			maneuvering_skill=4
 			coordination_skill=4
 			legacy_id=0
+			visible = { has_completed_focus = FRA_call_of_the_admiral_corps }
 		}
 		
 		advisor={
@@ -959,6 +920,7 @@ characters={
 			maneuvering_skill=4
 			coordination_skill=4
 			legacy_id=0
+			visible = { has_completed_focus = FRA_call_of_the_admiral_corps }
 		}
 	}
 }
