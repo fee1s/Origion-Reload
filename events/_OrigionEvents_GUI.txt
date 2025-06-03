@@ -1986,6 +1986,15 @@ country_event = { # Africa Gui
 						ORIGION_is_in_faction_with_allies = yes
 		                controls_iraq = yes
 			        }
+					OR = {
+					    VIC = {
+						    controls_syria = yes
+						}
+						any_country = {
+						    ORIGION_is_in_faction_with_allies = yes
+		                    controls_syria = yes
+			            }
+					}
 					NOT = { has_global_flag = iraq_controlled_ALLY }
 				}
 				if = {
@@ -2000,9 +2009,18 @@ country_event = { # Africa Gui
 			if = {
 			    limit = { 
 				    any_country = {
-					   ORIGION_is_in_faction_with_axis = yes
+					    ORIGION_is_in_faction_with_axis = yes
 		                controls_iraq = yes
 			        }
+					OR = {
+					    VIC = {
+						    controls_syria = yes
+						}
+						any_country = {
+						    ORIGION_is_in_faction_with_axis = yes
+		                    controls_syria = yes
+			            }
+					}
 					NOT = { has_global_flag = iraq_controlled_AXIS }
 				}
 				if = {
