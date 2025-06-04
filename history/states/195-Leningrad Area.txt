@@ -4,6 +4,7 @@ state={
 	name="STATE_195"
 	resources={
 		steel=48
+		aluminium=12
 	}
 	history={
 		owner = SOV
@@ -29,19 +30,20 @@ state={
 			dockyard = 4
 			air_base = 10
 			3151 = {
-				bunker = 5
-			}
-			3151 = {
 				naval_base = 10
 			}
+			
+			13437 = {
+				naval_base = 3
+			}
+			
+			13438 = {
+				naval_base = 5
+			}
+			
 			13439 = {
-				bunker = 5
+				naval_base = 5
 			}
-			149 = {
-				bunker = 2
-				naval_base = 1
-			}
-
 		}
 		add_core_of = SOV
 		1936.1.1.14 = {
@@ -51,7 +53,7 @@ state={
 	}
 
 	provinces={
-		79 149 3151 6174 11068 13437 13438 13439 
+		79 149 3151 6174 11068 13437 13438 13439 11080 9097
 	}
 	manpower=3750158
 	buildings_max_level_factor=1.000

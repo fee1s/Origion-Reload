@@ -92,6 +92,9 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 	improved_airplane_launcher = 1
+	improved_ship_torpedo_launcher = 1
+	marines = 1
+	synth_oil_experiments = 1
 }
 
 if = {
@@ -169,14 +172,19 @@ if = {
 
 set_variable = { var = eng_gateway_to_europe_influence value = 0 }
 
+set_variable = { var = fighters_sent value = 0 }
+
+set_variable = { var = lend_lease_side_progress value = 0 }
+
 add_ideas = {
 	stiff_upper_lip
 	ENG_the_war_to_end_all_wars
 	ENG_george_vi
+	usa_rubber_reserve_company_idea_first
 }
 	
 
-set_convoys = 1000
+set_convoys = 1250
 
 # DIPLOMACY
 if = {
@@ -221,9 +229,8 @@ if = {
 
 
 1936.1.1.13 = {	    
-set_research_slots = 5
-add_ideas = NO_asia_eng
-		}
+	add_ideas = eng_no_asia
+}
 
 
 1939.1.1 = {
@@ -724,9 +731,9 @@ if = {
 				fixed_ship_armor_slot = ship_armor_cruiser_3
 				fixed_ship_secondaries_slot = dp_ship_secondaries_2
 				front_1_custom_slot = ship_light_medium_battery_2
-				mid_1_custom_slot = ship_light_medium_battery_2
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_torpedo_2
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_airplane_launcher_2
 			}
 		}
 	# Battleships #
@@ -738,32 +745,15 @@ if = {
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bb_2
+			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_heavy_battery_2
 			mid_2_custom_slot = ship_heavy_battery_2
 			rear_1_custom_slot = ship_airplane_launcher_2
-		}
-	}
-	
-	create_equipment_variant = {
-		name = "Origion United Kingdom Carrier"
-		type = ship_hull_carrier_1
-		name_group = ENG_CV_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_deck_slot_1 = ship_deck_space
-			fixed_ship_deck_slot_2 = ship_deck_space
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = carrier_ship_engine_2
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			front_1_custom_slot = ship_deck_space
-			mid_1_custom_slot = ship_deck_space
 		}
 	}
 }
@@ -773,16 +763,15 @@ if = {
 		}
 		create_equipment_variant = {
 			name = "Bristol Blenheim Origion" 
-			type = medium_plane_airframe_1
+			type = medium_plane_airframe_0
 			modules = {
 				fixed_main_weapon_slot = medium_bomb_bay
-				fixed_auxiliary_weapon_slot_1 = bomb_locks
-				fixed_auxiliary_weapon_slot_2 = small_bomb_bay
-				fixed_auxiliary_weapon_slot_3 = empty
-				engine_type_slot = engine_2_2x
-				special_type_slot_1 = empty
-				special_type_slot_2 = empty
-				special_type_slot_3 = empty
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+				fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+				engine_type_slot = engine_2_3x
+				special_type_slot_1 = fuel_tanks_medium
+				special_type_slot_2 = fuel_tanks_medium
+				special_type_slot_3 = fuel_tanks_medium
 				special_type_slot_4 = empty
 			}
 			icon = "GFX_ENG_heavy_fighter1_medium"
@@ -1219,7 +1208,7 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-    type = medium_plane_airframe_1
+    type = medium_plane_airframe_0
 	amount = 570
 	variant_name = "Bristol Blenheim Origion"
 }

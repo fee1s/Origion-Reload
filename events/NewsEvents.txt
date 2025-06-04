@@ -1199,7 +1199,7 @@ news_event = {
 	}
 }
 
-# Second Compiegne Armistice
+# Компьен, заканчивает Французскую кампанию 
 news_event = {
 	id = news.34
 	title = news.34.t
@@ -1209,6 +1209,323 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	immediate = {
+		hidden_effect = {
+			sound_effect = psi_de_gaulle
+			
+			every_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = no_fra_mainland_buildings }
+				}
+				remove_dynamic_modifier = { modifier = no_fra_mainland_buildings }
+			}
+			
+			29 = { remove_province_modifier = { province = { id = 575 } static_modifiers = { battle_of_dunkirk } } }
+			
+			VIC = {
+				set_country_flag = vichy_france
+				every_unit_leader = {
+					limit = {
+						has_id = 101 #de Gaulle
+					}
+					set_nationality = FRA
+				}
+				every_army_leader = {
+					set_nationality = FRA
+				}
+				every_state = { # Французская Северная африка
+					limit = {
+						is_controlled_by = FRA
+						is_owned_by = FRA
+						OR = {
+							state = 459
+							state = 460
+							state = 461
+							state = 462
+							state = 513
+							state = 991
+							state = 783
+						}
+					}
+					VIC = { transfer_state = PREV }
+				}
+				every_state = {
+					limit = { # Метрополия
+						OR = {
+							state = 735
+							state = 21
+							state = 851
+							state = 32
+							state = 20
+							state = 26
+							state = 22
+							state = 31
+							state = 25
+							state = 33
+							state = 1
+						}
+					}
+					add_core_of = PREV
+					VIC = { transfer_state = PREV }
+				}
+				
+				every_state = {
+					limit = { # Для Германии
+						OR = {
+							state = 17
+							state = 28
+							state = 18
+							state = 27
+							state = 24
+							state = 16
+							state = 785
+							state = 29
+							state = 15
+							state = 30
+							state = 14
+							state = 23
+							state = 19
+						}
+					}
+					GER = { transfer_state = PREV }
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_syria } }
+					every_state = { # Сирия
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 554
+								state = 553
+								state = 680
+								state = 677
+								state = 799
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_madagascar } }
+					every_state = { # Мадагаскар
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 543
+								state = 708
+								state = 706
+								state = 713
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_overseas_territories } }
+					every_state = { # Заморские
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 310
+								state = 694
+								state = 641
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_west_africa } }
+					every_state = { # Запданая
+						limit = {
+							is_controlled_by = FRA
+							is_owned_by = FRA
+							OR = {
+								state = 557
+								state = 272
+								state = 701
+								state = 296
+								state = 899
+								state = 780
+								state = 700
+								state = 298
+								state = 779
+								state = 778
+								state = 898
+								state = 781
+								state = 556
+								state = 776
+								state = 777
+								state = 274
+								state = 558
+								state = 902
+								state = 901
+								state = 900										
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+				
+				if = { limit = { NOT = { has_global_flag = subjugate_central_africa } }
+					every_state = { # Центальная
+						limit = {
+							OR = {
+								state = 774
+								state = 660
+								state = 773
+								state = 297
+								state = 539
+								state = 772
+								state = 718
+								state = 538
+								state = 295
+								state = 796
+								state = 888
+								state = 890
+								state = 768
+								state = 769
+								state = 889
+								state = 558
+								state = 902
+								state = 901
+								state = 900		
+								state = 268									
+							}
+						}
+						VIC = { transfer_state = PREV }
+					}
+				}
+
+				set_cosmetic_tag = FRA_VICHY # хз
+			
+			}
+			
+			ITA = {
+				transfer_state = 1
+				transfer_state = 177
+				transfer_state = 458
+				transfer_state = 665
+				transfer_state = 735
+			}
+				
+			if = { limit = { JAP = { exists = no } }
+				COL = {
+					transfer_state = 286
+					transfer_state = 741
+					transfer_state = 670
+					transfer_state = 671
+				}
+			}
+			
+			if = { limit = { JAP = { exists = yes NOT = { has_completed_focus = JAP_strike_south_doctrine } } }
+				VIC = {
+					transfer_state = 286
+					transfer_state = 741
+					transfer_state = 670
+					transfer_state = 671
+				}
+			}
+			
+			FRA = { 
+				set_equipment_fraction = 0.0
+				
+				save_global_event_target_as = free_france
+				load_focus_tree = free_french_focus
+				set_cosmetic_tag = FRA_FREE 
+				
+				transfer_state = 994
+				add_state_core = 994
+				set_capital = { state = 994 }
+				
+				country_event = { id = france.20 days = 3 }
+			}
+			
+			GER = {
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 28500 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 450 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 60 producer = FRA }
+				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1200 producer = FRA }
+				add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1400 producer = FRA }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 600 producer = FRA }				
+				add_equipment_to_stockpile = { type = train_equipment_1 amount = 40 producer = FRA }
+				add_equipment_to_stockpile = { type = convoy amount = 100 producer = FRA }
+				
+				create_equipment_variant = {
+					name = "AMX 40 Trophy" 	
+					type = medium_tank_chassis_2
+					modules = {
+						main_armament_slot = tank_medium_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = easy_maintenance
+						special_type_slot_4 = tank_radio_2
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 12
+						tank_nsb_armor_upgrade = 14
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}	
+				
+				create_equipment_variant = {
+					name = "Somua SAu 40 Trophy" 	
+					type = medium_tank_destroyer_chassis_2
+					modules = {
+						main_armament_slot = tank_heavy_cannon_2
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = easy_maintenance
+						special_type_slot_4 = squeezebore_adaptor
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 7
+						tank_nsb_armor_upgrade = 0
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}
+				
+				create_equipment_variant = {
+					name = "Renault R35 Trophy" 	
+					type = light_tank_chassis_2
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_light_three_man_tank_turret
+						special_type_slot_1 = tank_radio_2
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = extra_ammo_storage
+						special_type_slot_4 = extra_ammo_storage
+						suspension_type_slot = tank_wheeled_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 11
+						tank_nsb_armor_upgrade = 14
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}
+				
+				add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40 Trophy" amount = 800 producer = FRA } 
+				add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40 Trophy" amount = 2200 producer = FRA } 				
+				add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35 Trophy" amount = 140 producer = FRA }
+			}
+		}
+	}
 	
 	option = {
 		name = news.34.a
@@ -1498,182 +1815,6 @@ news_event = {
 	}
 }
 
-# Hindenburg Disaster
-news_event = {
-	id = news.42
-	title = news.42.t
-	desc = news.42.d
-	picture = GFX_news_event_025
-	
-	major = yes
-	
-	is_triggered_only = yes
-
-	immediate = {
-		set_global_flag = hindenburg_destroyed
-	}
-	
-	option = {
-		name = news.42.a
-	}
-}
-
-# Hindenburg Disaster Averted
-news_event = {
-	id = news.43
-	title = news.43.t
-	desc = news.43.d
-	picture = GFX_news_event_hindenburg_intact
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		set_global_flag = hindenburg_survives
-	}
-	
-	option = {
-		name = news.43.a
-	}
-}
-
-# Flight of Rudolf Hess
-news_event = {
-	id = news.44
-	title = news.44.t
-	desc = news.44.d
-	picture = GFX_news_event_029
-	
-	major = yes
-	
-	is_triggered_only = yes
-
-	show_major = {
-		NOT = { tag = GER }
-	}
-	
-	option = {
-		name = news.44.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.44.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.44.c
-		trigger = { TAG = ENG }
-	}
-}
-
-# Rudolf Hess Killed
-news_event = {
-	id = news.45
-	title = news.45.t
-	desc = news.45.d
-	picture = GFX_news_event_029
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	show_major = {
-		NOT = { tag = GER }
-	}	
-	
-	option = {
-		name = news.45.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.45.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.45.c
-		trigger = { TAG = ENG }
-	}
-}
-
-# Flight of Rudolf Hess (Hindenburg)
-news_event = {
-	id = news.46
-	title = news.44.t
-	desc = news.46.d
-	picture = GFX_news_event_026
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	show_major = {
-		NOT = { tag = GER }
-	}
-
-	option = {
-		name = news.38.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.44.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.44.c
-		trigger = { TAG = ENG }
-	}
-}
-
-# Rudolf Hess Killed (Hindenburg)
-news_event = {
-	id = news.47
-	title = news.45.t
-	desc = news.47.d
-	picture = GFX_news_event_026
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	show_major = {
-		NOT = { tag = GER }
-	}
-
-	option = {
-		name = news.38.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.47.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.47.c
-		trigger = { TAG = ENG }
-	}
-}
-
 # Amelia Earhart Disappears
 news_event = {
 	id = news.48
@@ -1707,206 +1848,6 @@ news_event = {
 	
 	option = {
 		name = news.49.a
-	}
-}
-
-# Hindenburg Trigger (HIDDEN)
-news_event = {
-	id = news.51
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.5.5
-		date < 1939.5.5
-		country_exists = USA
-		country_exists = GER
-		USA = { has_war = no }
-		GER = { has_war = no }
-		GER = { has_civil_war = no }
-		NOT = { has_global_flag = hindenburg_destroyed }
-		NOT = { has_global_flag = hindenburg_event_in_progress }
-	}
-
-	mean_time_to_happen = {
-		days = 240
-	}
-	
-	immediate = {
-		random_list = {
-			70 = {
-				modifier = {
-					factor = 0
-					has_global_flag = GER_air_safety_regulations_flag
-				}
-				USA = { news_event = { id = news.42 } }
-			}
-			30 = { USA = { news_event = { id = news.43 } } }
-		}
-	}
-	
-	option = {
-		name = news.51.a
-	}
-}
-
-# Rudolf Hess Trigger (HIDDEN)
-news_event = {
-	id = news.52
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		country_exists = ENG
-		country_exists = GER
-		country_exists = SOV
-		GER = { 
-			has_war_with = ENG 
-			NOT = { has_war_with = SOV }
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = GER_adolf_hitler }
-		}
-		has_global_flag = fall_of_france
-		NOT = { has_global_flag = hindenburg_survives }
-		ENG = { # No Sea Lion
-			controls_state = 127
-			controls_state = 123
-			controls_state = 126
-			controls_state = 338
-			controls_state = 125
-			controls_state = 129
-			controls_state = 128
-			controls_state = 122
-			controls_state = 132
-			controls_state = 130
-			controls_state = 131
-			controls_state = 121
-			controls_state = 133
-			controls_state = 136
-			controls_state = 120
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	immediate = {
-		random_list = {
-			50 = { 
-				ENG = { news_event = { id = news.44 } }
-				GER = { country_event = { id = germany.107 } }
-			}
-			50 = { 
-				ENG = { news_event = { id = news.45 } } 
-				GER = { country_event = { id = germany.108 } }
-			}
-		}
-	}
-	
-	option = {
-		name = news.52.a
-	}
-}
-
-# Rudolf Hess Hindenburg Trigger (HIDDEN)
-news_event = {
-	id = news.53
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		country_exists = ENG
-		country_exists = GER
-		country_exists = SOV
-		GER = { 
-			has_war_with = ENG 
-			NOT = { has_war_with = SOV }
-			has_government = fascism
-		}
-		has_global_flag = fall_of_france
-		has_global_flag = hindenburg_survives
-		ENG = { # No Sea Lion
-			controls_state = 127
-			controls_state = 123
-			controls_state = 126
-			controls_state = 338
-			controls_state = 125
-			controls_state = 129
-			controls_state = 128
-			controls_state = 122
-			controls_state = 132
-			controls_state = 130
-			controls_state = 131
-			controls_state = 121
-			controls_state = 133
-			controls_state = 136
-			controls_state = 120
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	immediate = {
-		random_list = {
-
-			#Flight in Hinden
-			15 = { 
-				ENG = { news_event = { id = news.46 } } 
-				GER = { country_event = { id = germany.109 } }
-			}
-			15 = { 
-				ENG = { news_event = { id = news.47 } } 
-				GER = { country_event = { id = germany.110 } }
-			}
-
-			#Ordinary flight
-			35 = { 
-				ENG = { news_event = { id = news.44 } }
-				GER = { country_event = { id = germany.107 } }
-			}
-			35 = { 
-				ENG = { news_event = { id = news.45 } } 
-				GER = { country_event = { id = germany.108 } }
-			}
-
-		}
-	}
-	
-	option = {
-		name = news.53.a
-	}
-}
-
-# Amelia Earhart Trigger (HIDDEN)
-news_event = {
-	id = news.54
-	hidden = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.7.1
-		NOT = { has_global_flag = earhart_disappeared}
-		country_exists = USA
-		USA = { has_war = no }
-		NOT = { has_country_flag = amelia_active_ace }
-	}
-	
-	immediate = {
-		random_list = {
-			50 = { ENG = { news_event = { id = news.48 } } }
-			50 = { ENG = { news_event = { id = news.49 } } }
-		}
-	}
-	
-	option = {
-		name = news.54.a
 	}
 }
 
@@ -2382,16 +2323,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		date > 1936.8.15
-		NOT = { has_global_flag = olympics_1936 }
-		NOT = { has_global_flag = civil_war_olympics }
-		country_exists = GER
-		country_exists = USA
-		GER = { has_war = no }
-		GER = { has_civil_war = no }
-		FRA = { has_war = no }
-		ENG = { has_war = no }
-		USA = { has_war = no }
+		always = no
 	}
 	
 	mean_time_to_happen = {
@@ -2629,10 +2561,7 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		10 = { is_controlled_by = GER }
-		10 = { is_owned_by = POL }
-		GER = { has_war_with = POL }
-		NOT = { has_global_flag = fall_of_warsaw_ger }
+		always = no
 	}
 	
 	immediate = {
@@ -3101,7 +3030,7 @@ news_event = {
 	}
 }
 
-# The Fall of Gibraltar (Germany)
+# The Fall of Gibraltar (Для всех, ориджен)
 news_event = {
 	id = news.112
 	title = news.112.t
@@ -3111,14 +3040,39 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		118 = { is_controlled_by = GER }
-		118 = { is_owned_by = ENG }
-		GER = { has_war_with = ENG }
+		118 = { 
+			OR = {
+				is_fully_controlled_by = GER
+				is_fully_controlled_by = ITA
+				is_fully_controlled_by = HUN
+				is_fully_controlled_by = ROM
+				is_fully_controlled_by = BUL
+				is_fully_controlled_by = JAP
+			}
+		}
 		NOT = { has_global_flag = fall_of_gibraltar_ger }
 	}
 	
 	immediate = {
 		set_global_flag = fall_of_gibraltar_ger
+		every_state = {
+			limit = {
+				is_core_of = ENG
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = GER }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = JAP }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ITA }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = HUN }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ROM }
+				has_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = BUL }
+			}
+			
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = GER }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = JAP }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ITA }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = HUN }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = ROM }
+			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_dm scope = BUL }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -4292,7 +4246,6 @@ news_event = {
 	is_triggered_only = yes
 	trigger = {
 		NOT = { has_global_flag = liberation_of_warsaw }
-		has_global_flag = fall_of_warsaw_ger
 	}
 	
 	immediate = {
@@ -4851,7 +4804,6 @@ news_event = {
 			set_global_flag = MR_pact_broken_event_flag
 			SOV = { 
 				remove_opinion_modifier = { target = GER modifier = MR_pact }
-				remove_ideas = SOV_molotov_ribbentrop_pact
 			}
 			GER = { remove_opinion_modifier = { target = SOV modifier = MR_pact } }
 			every_other_country = {
@@ -4932,7 +4884,6 @@ news_event = {
 			set_global_flag = MR_pact_broken_event_flag
 			SOV = { 
 				remove_opinion_modifier = { target = GER modifier = MR_pact }
-				remove_ideas = SOV_molotov_ribbentrop_pact
 			}
 			GER = { remove_opinion_modifier = { target = SOV modifier = MR_pact } }
 			every_other_country = {

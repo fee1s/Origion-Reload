@@ -10,6 +10,20 @@ ideas = {
                 production_factory_start_efficiency_factor = 0.5
 			}
 		}
+		
+	    fra_start_efficiency = {	
+			name = start_efficiency
+			allowed = {
+				always = no
+			}
+			picture = chi_hyper_inflation5
+			removal_cost = -1
+			modifier = {
+                production_factory_efficiency_gain_factor = 3
+				mobilization_speed = 2.0
+				training_time_army_factor = -0.5
+			}
+		}
  
 		doka_abuzer = {
 			picture = generic_army_problems 
@@ -131,6 +145,18 @@ ideas = {
 			}
 		}
 		
+		uk_noasia_fleet_idea = { # перенес в нац. дух ноу-азии
+			picture = AUS_naval_efficiency_idea
+			
+			allowed = { always = no }
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		
 		usa_rubber_reserve_company_idea_first = {
 			allowed = { always = no }
 			removal_cost = -1
@@ -160,7 +186,7 @@ ideas = {
 			picture = hol_caved_to_the_british
 			
 			modifier = {
-				consumer_goods_expected_value = -0.02
+				consumer_goods_expected_value = -0.025
 			    industrial_capacity_factory = 0.075
 				industrial_capacity_dockyard = 0.075
 			    production_factory_efficiency_gain_factor = 0.05
@@ -176,9 +202,9 @@ ideas = {
 			
 			modifier = {
 				naval_detection = 0.1
-				air_home_defence_factor = 0.1
-				air_night_penalty = -0.08
-				production_factory_max_efficiency_factor = 0.04
+				air_home_defence_factor = 0.05
+				air_night_penalty = -0.1
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		
@@ -191,8 +217,19 @@ ideas = {
 			modifier = {
 				weekly_convoys_war_support = 0.02
 				defensive_war_stability_factor = 0.1
-				production_speed_arms_factory_factor = 0.075
-				convoy_escort_efficiency = 0.12
+				production_speed_arms_factory_factor = 0.15
+				convoy_escort_efficiency = 0.15
+			}
+		}
+		
+		uk_tizards_mission = {
+			allowed = { always = no }
+			removal_cost = -1
+			
+			picture = AFG_democratic_graduates
+			
+			modifier = {
+				research_speed_factor = 0.08
 			}
 		}
 		
@@ -215,6 +252,22 @@ ideas = {
 				supply_consumption_factor = -0.15
 				supply_factor = 0.1
 				air_mission_efficiency = 0.1
+			}
+		}
+		
+		ita_operation_aida = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = generic_naval_invade_britain
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				supply_consumption_factor = -0.075
+				org_loss_when_moving = -0.075
 			}
 		}
 		
@@ -291,11 +344,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				# consumer_goods_factor = -0.10
 				production_factory_max_efficiency_factor = 0.10
 			    industrial_capacity_factory = 0.12
 				industrial_capacity_dockyard = 0.12
-			    # production_speed_buildings_factor = 0.10
 			    production_factory_efficiency_gain_factor = 0.1
 				fuel_gain_factor = 0.25
 				max_fuel_factor = 0.1
@@ -312,7 +363,7 @@ ideas = {
 			removal_cost = -1
 			picture = SOV_the_road_of_life
 			modifier = {
-				acclimatization_cold_climate_gain_factor = -3
+				acclimatization_cold_climate_gain_factor = -0.75
 			}
 		}
 		
@@ -335,6 +386,21 @@ ideas = {
 			}
 		}
 		
+		fra_collapse_on_the_seine = {
+			picture = SWE_neither_death_nor_dishonor
+			
+			allowed = {
+			    always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = -0.75
+				army_speed_factor = -0.75
+			}
+		}
+		
 		FRA_inflexible_production = { 
 			allowed = { original_tag = FRA always = no }
 			
@@ -343,11 +409,46 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = { 
-				production_speed_fuel_silo_factor = -1.5
 				production_speed_naval_base_factor = -1.5
 				conversion_cost_civ_to_mil_factor = 5
 				production_speed_naval_base_factor = -1.5
-				lend_lease_tension = 1
+				lend_lease_tension = 2.5
+			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				cv_small_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				small_plane_cas_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				cv_small_plane_cas_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				small_plane_naval_bomber_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				medium_plane_scout_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					build_cost_ic = 5 instant = yes
+				}
 			}
 		}
 		
@@ -408,43 +509,98 @@ ideas = {
 				consumer_goods_expected_value = -0.03
 			}
 		}
-			
-		NO_asia_eng = {	
+		
+		eng_no_asia = {	
 			allowed = {
 				always = no
 			}
-			picture = jap_intervene_in_china
-			allowed_civil_war = {
-				
-			}		
+			picture = ARG_british_influences
+	
 			removal_cost = -1
 			modifier = {
-				global_building_slots_factor = 0.40
-				conscription = 0.03
-				special_forces_cap = 0.10
+				conscription = 0.125
 				surrender_limit = 1
 			}
 		}
-	
-		NO_asia_dominion = {	
+		
+		eng_no_asia_navy = {	
+			name = eng_no_asia
+			
 			allowed = {
 				always = no
 			}
-			picture = jap_intervene_in_china
-
-			allowed_civil_war = {
-			}		
+			picture = ARG_british_influences
+	
 			removal_cost = -1
 			modifier = {
-				industrial_capacity_factory = 0.08
-				production_speed_buildings_factor = 0.15
-				global_building_slots_factor = 0.25
-				conscription = 0.05
-				special_forces_cap = 0.10
-				production_factory_max_efficiency_factor = 0.05
+				conscription = 0.125
+				surrender_limit = 1
+				industrial_capacity_dockyard = 0.15
 			}
 		}
-				
+		
+		eng_no_asia_tanks = {	
+			name = eng_no_asia
+			
+			allowed = {
+				always = no
+			}
+			picture = ARG_british_influences
+	
+			removal_cost = -1
+			modifier = {
+				conscription = 0.125
+				surrender_limit = 1
+				industrial_capacity_dockyard = 0.15
+			}
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}				
+			}
+		}
+		
+		eng_no_asia_tanks_but_not_navy = {	
+			name = eng_no_asia
+			
+			allowed = {
+				always = no
+			}
+			picture = ARG_british_influences
+	
+			removal_cost = -1
+			modifier = {
+				conscription = 0.125
+				surrender_limit = 1
+			}
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}				
+			}
+		}
+	
+		minor_no_asia = {	
+			allowed = {
+				always = no
+			}
+			picture = ARG_british_influences
+			
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+				global_building_slots_factor = 0.25
+			}
+		}
+		
 		Steiner_counterattack = {
 		    picture = SWE_neither_death_nor_dishonor
 			allowed = {
@@ -452,8 +608,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = -0.10
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
 			}
 		}
 				
@@ -488,7 +644,24 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+			modifier = {
+				army_speed_factor = 0.075
+			}
+		}
+		
+		GER_citadel = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
 			}
 			removal_cost = -1
 			picture = generic_acquire_tanks
@@ -498,7 +671,42 @@ ideas = {
 				defense_bonus_against = 0.10
 			}
 			modifier = {
-				army_speed_factor = 0.05
+				army_speed_factor = 0.075
+			}
+		}
+		
+		GER_sonnenblume = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			modifier = {
+				convoy_retreat_speed = 0.5
+				dig_in_speed_factor = 0.5
+				supply_factor = 0.15
+				planning_speed = 0.5
+			}
+		}
+		
+		GER_Die_wacht_am_rhein = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.20
+			}
+			modifier = {
+			    army_attack_factor = 0.1
 			}
 		}
 
@@ -582,23 +790,26 @@ ideas = {
 		
 		Axis_trade = {
 			allowed = {
-			always = no
+				always = no
 			}
-			allowed_civil_war = {	
-			}
+			
 			removal_cost = -1
 			picture = gre_schachtplan
+			
 			modifier = {
-			fascism_drift = 0.01
+				fascism_drift = 0.1
 			}
+			
 			targeted_modifier = {
 				tag = GER
 				trade_cost_for_target_factor = -0.4
 			}
+			
             targeted_modifier = {
 				tag = HUN
                 trade_cost_for_target_factor = -0.4
 			}
+			
             targeted_modifier = {
 				tag = ROM
                 trade_cost_for_target_factor = -0.4
@@ -715,6 +926,27 @@ ideas = {
 				political_power_gain = -10
 				command_power_gain = -10
                 research_speed_factor = -1000
+			}
+		}
+		
+		fra_field_modifications = {
+			picture = SWE_hodgepodge_of_equipment
+			removal_cost = -1
+			allowed = { always = no }
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					reliability = -0.25
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+				}
+				anti_air_equipment = {
+					build_cost_ic = -0.05
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.05
+				}
 			}
 		}
 		
@@ -932,9 +1164,24 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-			    consumer_goods_expected_value = -0.025
-				local_resources_factor = 0.075
-				army_core_defence_factor = 0.05
+			    consumer_goods_expected_value = -0.01
+				local_resources_factor = 0.1
+			}
+		}
+
+		ITA_defence_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = ITA_shadow_of_mussolini
+
+		modifier = {
+				conscription = 0.03
+				army_core_attack_factor = 0.075
+				mobilization_speed = 0.25
+				training_time_army_factor = -0.2
 			}
 		}
 		
@@ -947,23 +1194,16 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-			    stability_weekly = -0.003
-				war_support_weekly = -0.003
-			    consumer_goods_expected_value = -0.035
-				local_resources_factor = 0.1
+				stability_factor = -0.15
+			    consumer_goods_expected_value = -0.02
+				local_resources_factor = 0.2
 				army_core_defence_factor = 0.1
-				supply_factor = 0.1
-				industrial_capacity_factory = 0.075
 			}
 		}
 		
 		AST_counter_raiding_idea = {
 			allowed = {
 				always = no
-			}
-			
-			cancel = {
-			    NOT = { has_idea = AST_ringed_with_menace_idea }
 			}
 			
 			removal_cost = -1
@@ -995,6 +1235,34 @@ ideas = {
 				supply_consumption_factor = -0.15
 				supply_factor = 0.1
 			}
+		}
+
+		ITA_new_industrialization_program_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = ARG_public_works_investment
+
+		modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		ITA_use_prom_idea = {
+			allowed = {
+				always = no
+			} 
+
+			removal_cost = -1
+			picture = ARG_rapid_militarization
+
+			modifier = {
+				local_resources_factor = 0.125
+			}
+
 		}
 	}
 }

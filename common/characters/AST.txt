@@ -135,51 +135,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ commando infantry_leader Trickster jungle_rat ranger }
+			traits={ commando career_officer infantry_officer infantry_leader Trickster  }
 			skill=6
 			attack_skill=3
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
-			legacy_id=-1
-		}
-	}
-
-	AST_harold_farncomb={
-		name=AST_harold_farncomb
-		portraits={
-			army={
-				large="GFX_AST_harold_farncomb"
-				small=GFX_portrait_AST_harold_farncomb_small
-			}
-		}
-		navy_leader = {
-			traits = { navy_career_officer seawolf }
-			skill = 6
-			attack_skill = 5
-			defense_skill = 3
-			maneuvering_skill = 3
-			coordination_skill = 5
-			legacy_id = -1
-		}
-	}
-
-	AST_victor_crutchley={
-		name=AST_victor_crutchley
-		portraits={
-			army={
-				large="GFX_AST_victor_crutchley"
-				small=GFX_portrait_AST_victor_crutchley_small
-			}
-		}
-		navy_leader={
-			traits={ bold }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=-1
+			legacy_id=16
 		}
 	}
 
@@ -309,56 +271,6 @@ characters={
 			}
 		}
 	}
-
-
-	### NAVY CHIEFS ###
-
-	AST_ragnar_colvin={
-		name=AST_ragnar_colvin
-		portraits={
-			army={
-				small="GFX_idea_AST_ragnar_colvin" #small="GFX_idea_generic_navy_europe_2"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = AST_ragnar_colvin
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	AST_jack_crace={
-		name=AST_jack_crace
-		portraits={
-			army={
-				small="GFX_idea_AST_jack_crace" #small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = AST_jack_crace
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				navy_chief_commerce_raiding_3
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
 
 	### AIR CHIEFS ###
 
@@ -516,24 +428,134 @@ characters={
 		}		
 	}
 
+	### ADNIRALS ###
 
-	### POLITICAL ADVISORS ###
-
-	AST_alexander_hore_ruthven={
-		name=AST_alexander_hore_ruthven
+	AST_harold_farncomb={
+		name=AST_harold_farncomb
 		portraits={
 			army={
-				small="GFX_idea_AST_alexander_hore_ruthven" #small="GFX_idea_generic_political_advisor_europe_1"
+				large="GFX_AST_harold_farncomb"
+				small=GFX_portrait_AST_harold_farncomb_small
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = AST_alexander_hore_ruthven
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = arold_farncomb
+			ledger = navy
 			allowed = {
 				original_tag = AST
 			}
 			traits = {
-				quartermaster_general 
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	AST_ragnar_colvin={
+		name=AST_ragnar_colvin
+		portraits={
+			army={
+				small="GFX_idea_AST_ragnar_colvin" #small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ragnar_colvin
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost = 100
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	AST_victor_crutchley={
+		name=AST_victor_crutchley
+		portraits={
+			army={
+				large="GFX_AST_victor_crutchley"
+				small=GFX_portrait_AST_victor_crutchley_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = victor_crutchley
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	### POLITICAL ADVISORS ###
+
+	AST_arthur_calwell={
+		name=AST_arthur_calwell
+		portraits={
+			army={
+				small="GFX_idea_AST_arthur_calwell" #small="GFX_idea_generic_democratic_reformer_western_european_2d"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_arthur_calwell
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}		
+	}
+
+	AST_jack_beasley={
+		name=AST_jack_beasley
+		portraits={
+			army={
+				small="GFX_idea_AST_jack_beasley" #small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_jack_beasley
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				war_industrialist 
 			}
 		}		
 	}
@@ -551,65 +573,67 @@ characters={
 			allowed = {
 				original_tag = AST
 			}
-			cost = 100.000
 			traits = {
 				silent_workhorse 
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_support_the_policy_of_appeasement 
-				}
 			}
 		}		
 	}
 
-	AST_jack_beasley={
-		name=AST_jack_beasley
+	AST_robert_g_menzies={
+		name=AST_robert_g_menzies
 		portraits={
 			army={
-				small="GFX_idea_AST_jack_beasley" #small="GFX_idea_generic_political_advisor_europe_3"
+				small="GFX_idea_AST_robert_g_menzies" #small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = AST_jack_beasley
+			idea_token = AST_robert_g_menzies
 			allowed = {
 				original_tag = AST
-				has_dlc = "Together for Victory"
 			}
 			traits = {
-				war_industrialist 
+				popular_figurehead 
 			}
 		}		
 	}
-	
-	AST_arthur_calwell={
-		name=AST_arthur_calwell
+
+	AST_alexander_hore_ruthven={
+		name=AST_alexander_hore_ruthven
 		portraits={
 			army={
-				small="GFX_idea_AST_arthur_calwell" #small="GFX_idea_generic_democratic_reformer_western_european_2d"
+				small="GFX_idea_AST_alexander_hore_ruthven" #small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = AST_arthur_calwell
+			idea_token = AST_alexander_hore_ruthven
 			allowed = {
 				original_tag = AST
 			}
 			traits = {
-				captain_of_industry 
-			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
+				technocrat 
 			}
 		}		
 	}
+
+	AST_ben_chifley={
+		name=AST_ben_chifley
+		portraits={
+			army={
+				small="GFX_idea_AST_ben_chifley" #small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_ben_chifley
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				financial_expert 
+			}
+		}		
+	}
+
 }

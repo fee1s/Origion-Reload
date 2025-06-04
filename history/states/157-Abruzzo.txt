@@ -13,7 +13,7 @@ state = {
 		}
 		buildings = {
 			infrastructure = 3 #was: 6
-			industrial_complex = 1
+			industrial_complex = 3
 			925 = {
 				naval_base = 4
 			}
@@ -25,6 +25,9 @@ state = {
 		1936.1.1.14 = {
 			owner = COL
 			add_core_of = COL
+		}
+		add_dynamic_modifier = { 
+			modifier = inappropriate_invasion_zone 
 		}
 	}
 

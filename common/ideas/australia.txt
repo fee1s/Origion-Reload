@@ -168,7 +168,7 @@ ideas = {
 			picture = generic_manpower_bonus
 
 			modifier = {
-				conscription_factor = 0.1
+				conscription_factor = 0.15
 			}
 		}
 
@@ -187,8 +187,7 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 
 			modifier = {
-				production_speed_coastal_bunker_factor = 0.5
-				army_core_defence_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.25
 				experience_gain_navy = 0.10
 			}
 		}
@@ -253,6 +252,32 @@ ideas = {
 			modifier = {
 				conscription = 0.025
 				mobilization_speed = 0.5
+			}
+		}
+		
+		AST_citizen_military_forces_2 = {
+		
+		    name = AST_citizen_military_forces
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			rule = {
+				can_send_volunteers = yes
+			}
+
+			modifier = {
+				conscription = 0.05
+				mobilization_speed = 0.75
 			}
 		}
 

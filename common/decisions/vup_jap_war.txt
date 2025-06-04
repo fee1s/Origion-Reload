@@ -2,30 +2,87 @@ JAP_operation = {
 	
 	JAP_strike_on_the_southern_resource_area_decision = {
 		icon = GFX_decision_eng_puppet_usa
-		priority = 104
+		priority = 105
 		available = {
 			has_completed_focus = JAP_strike_on_the_southern_resource_area
-			date > 1941.5.1
+			date > 1941.4.1
 		}
-		activation = {
-		}
+		
 		fire_only_once = yes
-		is_good = yes
+		days_remove = 30
+		
+		modifier = {
+		    army_speed_factor = 1
+			dig_in_speed_factor = 1
+			naval_invasion_prep_speed = 1
+			supply_factor = 0.5
+		}
 		
 		complete_effect = {
-			declare_war_on = {
-				target = USA
-				type = annex_everything
-			}
-			activate_mission = JAP_stagnation_economic_0
-			add_timed_idea = { idea = JAP_surprise_attack days = 90 }
-			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
-			
 			hidden_effect = {
-				sound_effect = psi_usa_war
-				USA_join_to_war = yes # скриптед_эффект, юса вступает в алайсы, призывает всех в войну и вступает в европейскую войну
+				USA = {
+		    	    add_dynamic_modifier = { 
+					    modifier = pacific_warfare_dm 
+					}
+					set_variable = { USA.pacific_dm_local_resources_factor = 0 }
+					set_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = 0 }
+				}
+				
+				JAP = {
+				    set_country_flag = asia_map_open_flag
+		    		add_dynamic_modifier = { modifier = pacific_warfare_dm }
+					
+					set_variable = { USA_side_progress = 50 }
+		    		set_variable = { JAP_side_progress = 50 }
+					
+					set_variable = { ALLY_pacific_controlled_regions = 11 }
+			        set_variable = { JAP_pacific_controlled_regions = 11 }
+				}
+				
+				### СОЮЗНИКИ ###
+				set_global_flag = birma_conquered_ALLY
+				set_global_flag = raj_conquered_ALLY
+				set_global_flag = papua_conquered_ALLY
+				set_global_flag = australia_conquered_ALLY
+				set_global_flag = newzeland_conquered_ALLY
+				set_global_flag = phi_conquered_ALLY
+				set_global_flag = hawai_conquered_ALLY
+				set_global_flag = malaya_conquered_ALLY
+				set_global_flag = solomon_conquered_ALLY
+				set_global_flag = sumatra_conquered_ALLY
+				set_global_flag = jawa_conquered_ALLY
+				
+				### ЯПОНИЯ ###
+				set_global_flag = taiwan_conquered_JAP
+				set_global_flag = okinawa_conquered_JAP
+				set_global_flag = iwojima_conquered_JAP
+				set_global_flag = indochina_conquered_JAP
+				set_global_flag = caroline_conquered_JAP
+				set_global_flag = mariana_conquered_JAP
+				set_global_flag = marshall_conquered_JAP
+				set_global_flag = palau_conquered_JAP
+				set_global_flag = markus_conquered_JAP
+			}
+			every_country = {
+			    limit = {
+				    ORIGION_is_in_faction_with_allies = yes
+				}
+				set_variable = { USA_side_progress = 50 }
+		    	set_variable = { JAP_side_progress = 50 }
+				set_variable = { ALLY_pacific_controlled_regions = 11 }
+			    set_variable = { JAP_pacific_controlled_regions = 11 }
+		    	country_event = { 
+		    	    id = origion.17
+		    	}
+			}
+		}
+		remove_effect = {
+		    news_event = { 
+		        id = origion.15
+			}
+			hidden_effect = {
 				ENG = { transfer_state = 334 transfer_state = 986 }
-				AST = { transfer_state = 669 }
+				AST = { transfer_state = 669 transfer_state = 987 }
 				USA = { annex_country = { target = INS } }
 			}
 		}
@@ -644,287 +701,132 @@ JAP_operation = {
 
 JAP_economic_stagnation = {
 	JAP_stagnation_economic_0_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
-		days_mission_timeout = 45
-		is_good = no
+		days_mission_timeout = 90
+		is_good = yes
 		fire_only_once = yes
 		activation = {
-			has_war = yes
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 336
-				state = 640
-				state = 288
-				state = 334
-				state = 333
-				state = 672
-				state = 335
-				#state = 623
-				#state = 327
-				#state = 624
-				#state = 626
-				#state = 628
-				#state = 627
-			} 
+			date > 1941.5.1
 		}
 		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
-		}
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
 		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_1_des
-			add_ideas = JAP_stagnation_economic_0
-		}
-	}
-	JAP_stagnation_economic_1_des = {
-		icon = GFX_decision_revolt
-		days_mission_timeout = 45
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 336
-				state = 640
-				state = 288
-				state = 334
-				state = 333
-				state = 672
-				state = 335
-				#state = 623
-				#state = 327
-				#state = 624
-				#state = 626
-				#state = 628
-				#state = 627
-			} 
-		}
-		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
-		}
-		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_2_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_0
-				add_idea = JAP_stagnation_economic_1
+			custom_effect_tooltip = JAP_stagnation_start_tt
+			hidden_effect = {
+			    add_dynamic_modifier = {
+			    	modifier = JAP_stagnation_dm
+			    }
+			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.025 }
+		        set_variable = { JAP_stagnation_industrial_capacity_factory = -0.1 }
+		        set_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.1 }
+			}
+			activate_mission = JAP_stagnation_economic_mission_des
+			set_country_flag = {
+				flag = JAP_stagnation_step
+				value = 1
 			}
 		}
 	}
-	JAP_stagnation_economic_2_des = {
+	JAP_stagnation_economic_mission_des = {
+		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
-		days_mission_timeout = 45
+		days_mission_timeout = 90
 		is_good = no
-		fire_only_once = yes
+		fire_only_once = no
 		activation = {
 			always = no
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 336
-				state = 640
-				state = 288
-				state = 334
-				state = 333
-				state = 672
-				state = 335
-				#state = 623
-				#state = 327
-				#state = 624
-				#state = 626
-				#state = 628
-				#state = 627
-			} 
-		}
 		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
-		}
-		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_3_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_1
-				add_idea = JAP_stagnation_economic_2
-			}
-		}	
-	}
-	JAP_stagnation_economic_3_des = {
-		icon = GFX_decision_revolt
-		days_mission_timeout = 45
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 336
-				state = 640
-				state = 288
-				state = 334
-				state = 333
-				state = 672
-				state = 335
-				#state = 623
-				#state = 327
-				#state = 624
-				#state = 626
-				#state = 628
-				#state = 627
-			} 
-		}
-		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
-		}
-		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_4_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_2
-				add_idea = JAP_stagnation_economic_3
+			OR = {
+				has_full_control_of_state = 439	
+				has_full_control_of_state = 674
 			}
 		}
-	}
-	JAP_stagnation_economic_4_des = {
-		icon = GFX_decision_revolt
-		days_mission_timeout = 45
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 336
-				state = 640
-				state = 288
-				state = 334
-				state = 333
-				state = 672
-				state = 335
-				#state = 623
-				#state = 327
-				#state = 624
-				#state = 626
-				#state = 628
-				#state = 627
-			} 
-		}
-		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
-		}
 		timeout_effect = {
-			activate_mission = JAP_stagnation_economic_5_des
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_3
-				add_idea = JAP_stagnation_economic_4
+			custom_effect_tooltip = JAP_stagnation_effect_tt
+			JAP_stagnation_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = {
+						    flag = JAP_stagnation_step
+						    value = 7
+				    	}
+					}
+				}
+			    activate_mission = JAP_stagnation_economic_mission_des
+				modify_country_flag = {
+					flag = JAP_stagnation_step
+					value = 1
+				}
 			}
 		}
-	}
-	JAP_stagnation_economic_5_des = {
-		icon = GFX_decision_revolt
-		days_mission_timeout = 45
-		is_good = no
-		fire_only_once = yes
-		activation = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 336
-				state = 640
-				state = 288
-				state = 334
-				state = 333
-				state = 672
-				state = 335
-				#state = 623
-				#state = 327
-				#state = 624
-				#state = 626
-				#state = 628
-				#state = 627
-			} 
-		}
-		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
-		}
-		timeout_effect = {
-			swap_ideas = {
-				remove_idea = JAP_stagnation_economic_4
-				add_idea = JAP_stagnation_economic_5
+		complete_effect = {
+			remove_dynamic_modifier = {
+				modifier = JAP_stagnation_dm
 			}
 		}
 	}
 }
+JAP_annex = {
+	JAP_CHI_attack1 = {
+		icon = GFX_decision_generic_operation
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		activation = {
+			has_completed_focus = JAP_intervene_in_china
+		}
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			JAP = {
+				transfer_state = 608
+				transfer_state = 614
+				transfer_state = 597
+				transfer_state = 743
+				transfer_state = 598
+				transfer_state = 613			
+				transfer_state = 606
+			}
+			
+			hidden_effect = {
+				army_experience = 150
+				air_experience = 100
+			}
+		}
+	}
+	JAP_CHI_attack2 = {
+		icon = GFX_decision_generic_operation
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		activation = {
+			has_completed_focus = JAP_intervene_in_china
+		}
+		fire_only_once = yes
+		days_mission_timeout = 180
+		timeout_effect = {
+			annex_country = { target = CHI }
+			add_named_threat = {
+				threat = 30
+			}
+			
+			hidden_effect = {
+				army_experience = 150
+				air_experience = 100
+			}
+		}
+	}
+}
+

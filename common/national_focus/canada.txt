@@ -958,7 +958,7 @@
 
 		available = {
 			GER = {
-				has_completed_focus = GER_rhineland
+				has_completed_focus = GER_remilitarize_the_rhineland
 			}
 		}
 		
@@ -2793,16 +2793,7 @@
 		ai_will_do = {
 			factor = 25
 		}
-
-		available = {
-			num_of_factories > 50
-			is_subject = no
-		}
 		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2860,7 +2851,7 @@
 		y = 6
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -2892,7 +2883,7 @@
 		y = 6
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -2923,7 +2914,7 @@
 		y = 7
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -2942,7 +2933,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_max
+			swap_ideas = {
+				remove_idea = CAN_check_war
+				add_idea = CAN_check_war_second
+			}
 		}
 	}
 	
@@ -2954,7 +2948,7 @@
 		y = 7
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -2981,10 +2975,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 6
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = CAN_national_housing_act_IC
@@ -3001,7 +2995,7 @@
 		y = 7
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -3024,14 +3018,14 @@
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 10
+						size > 3
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 6
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = CAN_national_housing_act_IC
@@ -3048,7 +3042,7 @@
 		y = 8
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -3067,19 +3061,26 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_tallon
+			if = { limit = { has_idea = CAN_check_war_second }
+				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_left }
+			}
+			
+			if = { limit = { has_idea = CAN_check_war_third_right }
+				swap_ideas = { remove_idea = CAN_check_war_third_right add_idea = CAN_check_war_third_left_with_right }
+			}
 		}
 	}
 	
 	focus = {
 		id = CAN_output
 		icon = GFX_focus_NORDIC_com_materiel
-		prerequisite = { focus = CAN_mils focus = CAN_proizvodstvo }
+		prerequisite = { focus = CAN_mils }
+		prerequisite = { focus = CAN_proizvodstvo }
 		x = 3
 		y = 8
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -3098,7 +3099,13 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_output
+			if = { limit = { has_idea = CAN_check_war_second }
+				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_right }
+			}
+			
+			if = { limit = { has_idea = CAN_check_war_third_left }
+				swap_ideas = { remove_idea = CAN_check_war_third_left add_idea = CAN_check_war_third_left_with_right }
+			}
 		}
 	}
 	
@@ -3112,7 +3119,7 @@
 		y = 9
 		relative_position_id = CAN_commit_to_the_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -3132,7 +3139,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_facel
+			swap_ideas = {
+				remove_idea = CAN_check_war_third_left_with_right
+				add_idea = CAN_check_war_end
+			}
 		}
 	}
 
@@ -3354,13 +3364,6 @@
 		ai_will_do = {
 			factor = 75
 		}
-
-		available = {
-			controls_state = 470
-			controls_state = 471
-			controls_state = 472
-			controls_state = 683
-		}
 		
 		bypass = {
 
@@ -3468,8 +3471,6 @@
 				name = CAN_long_branch_arsenal
 				bonus = 1.0
 				uses = 1
-				technology = antitank3
-				technology = antitank4
 				technology = antitank5
 			}
 		}
@@ -3508,8 +3509,6 @@
 				bonus = 1.0
 				uses = 1
 				technology = antitank3
-				technology = antitank4
-				technology = antitank5
 			}
 		}
 	}
@@ -3584,16 +3583,14 @@
 				name = CAN_the_walkie_talkie
 				bonus = 1.0
 				uses = 1
-				category = electronics
+				technology = centimetric_radar
 			}
+			
 			add_tech_bonus = {
 				name = CAN_the_walkie_talkie
 				bonus = 1.0
 				uses = 1
-				technology = tech_signal_company
-				technology = tech_signal_company2
-				technology = tech_signal_company3
-				technology = tech_signal_company4
+				technology = tech_flamethrower_brigade3
 			}
 		}
 	}
@@ -3630,9 +3627,7 @@
 				name = CAN_royal_regiment_of_canadian_artillery
 				bonus = 1.0
 				uses = 1
-				technology = antitank3
 				technology = antitank4
-				technology = antitank5
 			}
 		}
 	}
@@ -3667,21 +3662,10 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_a_motorized_army
-				bonus = 1.0
-				uses = 1
-				category = motorized_equipment
-				technology = tech_field_hospital
-				technology = tech_field_hospital2
+			    bonus = 1
+			    uses = 2
 				technology = tech_field_hospital3
-				technology = tech_field_hospital4
-				technology = tech_logistics_company
-				technology = tech_logistics_company2
 				technology = tech_logistics_company3
-				technology = tech_logistics_company4
-				technology = tech_signal_company
-				technology = tech_signal_company2
-				technology = tech_signal_company3
-				technology = tech_signal_company4
 			}
 		}
 	}
@@ -3715,13 +3699,7 @@
 
 		completion_reward = {
 			add_potential_special_forces_tree = yes
-			army_experience = 30
-			add_doctrine_cost_reduction = {
-				name = CAN_red_deer_training_camp
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 100
 		}
 	}
 
@@ -3797,7 +3775,8 @@
 				category = marine_tech
 				category = para_tech
 			}
-		CAN_charles_foulkes = {
+			
+			CAN_charles_foulkes = {
 				add_trait = { trait = naval_invader }
 				}
 			}
@@ -3870,10 +3849,17 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_the_valentine_tank
-				ahead_reduction = 2
 				bonus = 1.0
 				uses = 1
-				category = armor
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = CAN_the_valentine_tank
+				bonus = 1.0
+				uses = 1
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}

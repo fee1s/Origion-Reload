@@ -14,13 +14,6 @@ ideas = {
 				always = yes
 			}
 					
-			research_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				armor = -0.15
-				infantry_weapons = -0.15
-				artillery = -0.15
-				air_equipment = -0.15
-				naval_equipment = -0.15
-			}
 		}
 
 		ITA_hidden_arty_production_ns = { #Hidden idea to apply arty production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
@@ -137,137 +130,7 @@ ideas = {
 			}
 		}
 
-		ITA_hidden_standardization_ns = { #Hidden idea to apply arty production bonuses. Communicated in ITA_regia_aeronautica_dynamic_modifier (used as NS)
- 			name = ITA_standardization #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				cv_small_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				cv_small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				medium_plane_scout_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-			}
-		}
-
-		ITA_hidden_specialization_ns = { #Hidden idea to apply arty production bonuses. Communicated in ITA_regia_aeronautica_dynamic_modifier (used as NS)
- 			name = ITA_specialization #Just in case it shows up anywhere
-			removal_cost = -1
-
-			picture = GFX_idea_ITA_regia_aeronautica_3 #Icon needs to match the one in ITA_regia_aeronautica_dynamic_modifier modifiers (NS icon shows up in tech tab)
-				
-			allowed = {
-				original_tag = ITA
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-					
-			equipment_bonus = { # WARNING!! Any changes here need to be applied in the Dynamic Modifier custom tooltip. Thanks for your attention.
-				small_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				cv_small_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				cv_small_plane_cas_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_fighter_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				medium_plane_scout_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-				transport_plane_equipment = {
-					instant = yes
-					build_cost_ic = 0.05
-				}
-			}
-		}
+		
 
 		ITA_hidden_light_cruisers_production_ns = { #Hidden idea to apply light cruisers production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
  			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
@@ -980,8 +843,7 @@ ideas = {
 			}
 					
 			modifier = {
-				consumer_goods_factor = -0.15
-				political_power_factor = -0.15
+				consumer_goods_expected_value = -0.02
 				out_of_supply_factor = -0.1
 			}
 		}
@@ -1000,8 +862,7 @@ ideas = {
 			}
 					
 			modifier = {
-				consumer_goods_factor = -0.05
-				political_power_factor = 0.1
+			global_building_slots_factor = 0.15
 			}
 		}
 
@@ -1019,11 +880,8 @@ ideas = {
 			}
 					
 			modifier = {
-				monthly_population = 0.3
-				political_power_factor = 0.15
-				drift_defence_factor = 0.15
-				democratic_acceptance = -50
-				communism_acceptance = -50
+				monthly_population = 0.25
+				conscription_factor = 0.1
 			}
 		}
 
@@ -1048,11 +906,7 @@ ideas = {
 			}
 					
 			modifier = {
-				custom_modifier_tooltip = ITA_camicie_nere_mp_tt
-				resistance_garrison_penetration_chance = -0.1
-				resistance_damage_to_garrison = -0.1
 				conscription_factor = 0.15
-				fascism_drift = 0.02
 			}
 		}
 
@@ -1082,7 +936,6 @@ ideas = {
 				resistance_garrison_penetration_chance = -0.1
 				resistance_damage_to_garrison = -0.1
 				conscription_factor = 0.15
-				fascism_drift = 0.02
 				modifier_army_sub_unit_militia_max_org_factor = 0.05
 			}
 		}
@@ -1110,12 +963,8 @@ ideas = {
 					
 			modifier = {
 				custom_modifier_tooltip = ITA_camicie_nere_mp_tt
-				resistance_garrison_penetration_chance = -0.1
-				resistance_damage_to_garrison = -0.1
-				conscription_factor = 0.15
-				fascism_drift = 0.02
-				modifier_army_sub_unit_militia_max_org_factor = 0.05
-				non_core_manpower = 0.1
+				conscription_factor = 0.20
+				non_core_manpower = 0.15
 			}
 		}
 
@@ -3789,64 +3638,12 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
-
-		ITA_ferrovie_dello_stato_italiane = {
-
-			picture = ITA_ferrovie_dello_stato_italiane
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			available = {
-				has_completed_focus = ITA_railway_innovations
-			}
-			
-			cost = 75
-
-			research_bonus = {
-				train_tech = 0.15
-			}
-			
-			traits = { railway_company }
-		}
-
-		ITA_agip = {
-
-			picture = ITA_agip
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			research_bonus = {
-				synth_resources = 0.1
-				industry = 0.05
-			}
-			
-			traits = { refinery_concern }
-		}		
-	
+	industrial_concern = {	
 		danieli = { #NORTH
 			
 			allowed = {
 				original_tag = ITA
 			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				controls_state = 160 #VENETO
-				ITA_is_northern_designer = yes
-			}
 			
 			research_bonus = {
 				industry = 0.15
@@ -3855,259 +3652,19 @@ ideas = {
 			traits = { industrial_concern }
 		}
 
-		ITA_danieli_improved = { #NORTH
-			name = danieli
-
-			picture = danieli
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
-			}
-
-			available = {
-				controls_state = 160 #VENETO
-				ITA_is_northern_designer_improved = yes
-			}
-			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-
-			modifier ={
-				industrial_capacity_factory = 0.03
-				industrial_capacity_dockyard = 0.03
-			}
-		}
 
 		ITA_terni_industria_ed_elettricita = { #SOUTH
-
 			picture = ITA_terni_industria_ed_elettricita
 			
 			allowed = {
 				original_tag = ITA
 			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_modernize_the_mezzogiorno
-					}
-				}
-			}
-
-			available = {
-				controls_state = 162 #TUSCANY (actually Terni)
-				ITA_is_southern_designer = yes
-			}
 			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		ITA_terni_industria_ed_elettricita_improved = { #SOUTH
-			name = ITA_terni_industria_ed_elettricita
-
-			picture = ITA_terni_industria_ed_elettricita
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_modernize_the_mezzogiorno
-			}
-
-			available = {
-				controls_state = 162 #TUSCANY (actually Terni)
-				ITA_is_southern_designer_improved = yes
-			}
-			
-			research_bonus = {
-				industry = 0.2
-				electronics = 0.1
-			}
-			
-			traits = { industrial_concern }
-		}
-
-		ITA_italcementi = { #NORTH
-
-			picture = ITA_italcementi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				controls_state = 158 #PIEDMONT
-				ITA_is_northern_designer = yes
-			}
-
-			traits = { construction_company }
-		}
-
-		ITA_italcementi_improved = { #NORTH
-			name = ITA_italcementi
-
-			picture = ITA_italcementi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
-			}
-
-			available = {
-				controls_state = 158 #PIEDMONT
-				ITA_is_northern_designer_improved = yes
-			}
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_buildings_factor = 0.05
-			}
-		}
-
-		ITA_astaldi = { #SOUTH
-
-			picture = ITA_astaldi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_modernize_the_mezzogiorno
-					}
-				}
-			}
-
-			available = {
-				controls_state = 2 #LATIUM
-				ITA_is_southern_designer = yes
-			}
-
-			traits = { construction_company }
-		}
-
-		ITA_astaldi_improved = { #SOUTH
-			name = ITA_astaldi
-
-			picture = ITA_astaldi
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_modernize_the_mezzogiorno
-			}
-
-			available = {
-				controls_state = 2 #LATIUM
-				ITA_is_southern_designer_improved = yes
-			}
-
-			traits = { construction_company }
-
-			research_bonus = {
-				electronics = 0.1
-			}
-
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-				production_speed_rail_way_factor = 0.1
-				production_speed_dockyard_factor = 0.1
-			}
-		}
-
-		ITA_ducati_energia = { #NORTH
-
-			picture = ITA_ducati_energia
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				NOT = {
-					AND = {
-						has_completed_focus = ITA_new_industrialization_program
-						has_completed_focus = ITA_strengthen_northern_industry
-					}
-				}
-			}
-
-			available = {
-				controls_state = 161 #EMILIA ROMAGNA
-				ITA_is_northern_designer = yes
-			}
-
 			research_bonus = {
 				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
-		}
-
-		ITA_ducati_energia_improved = { #NORTH
-			name = ITA_ducati_energia
-
-			picture = ITA_ducati_energia
-			
-			allowed = {
-				original_tag = ITA
-			}
-
-			visible = {
-				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
-			}
-
-			available = {
-				controls_state = 161 #EMILIA ROMAGNA
-				ITA_is_northern_designer_improved = yes
-			}
-
-			research_bonus = {
-				electronics = 0.2
-			}
-			
-			traits = { electronics_concern }
-
-			modifier = {
-				recon_factor = 0.05
-				coordination_bonus = 0.1
-			}
 		}
 	}
 }

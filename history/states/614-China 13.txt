@@ -2,7 +2,7 @@
 state={
 	id=614
 	name="STATE_614" # Hebei
-	manpower = 18434900
+	manpower = 28434900
 	
 	state_category = large_town
 
@@ -11,7 +11,9 @@ state={
 		add_core_of = CHI
 		add_core_of = CHI
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
 		}
 
 		1938.10.25 = {
@@ -28,7 +30,7 @@ state={
 	}
 
 	provinces={
-		1169 1188 4032 4058 4093 4190 4208 7000 7092 7109 10003 10022 10053 10119 11944 11980 11996 12062 
+		10003 10022 10119 11944 11980 11996 7092 1169 4032 7109 7000 4208 10053 4093 12062 4058 1188 4190
 	}
 
 	local_supplies=0.0 

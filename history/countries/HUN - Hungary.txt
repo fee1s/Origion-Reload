@@ -5,17 +5,18 @@ if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "HUN_1936_air_bba"
 		set_technology = {
-			iw_small_airframe = 1
-			engines_1 = 1
-			early_bombs = 1
-		}
-	else = {
-		set_air_oob = "HUN_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			CAS1 = 1
-		}
-	}
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	early_bombs = 1
+	aircraft_construction = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
+	air_torpedoe_1 = 1
+}
 }
 
 if = {
@@ -34,7 +35,7 @@ set_war_support = 0.6
 
 add_timed_idea = {
     idea = winter_debuff
-	days = 2434
+	days = 2251
 }
 
 set_technology = {
@@ -48,7 +49,6 @@ set_technology = {
 	motorised_infantry = 1
 	fuel_silos = 1
 	basic_train = 1
-	basic_light_tank = 1
 }
 
 if = {
@@ -281,6 +281,7 @@ set_popularities = {
 }
 
 #Start Horty as neutral if DOD
+recruit_character = HUN_hermann_goring
 recruit_character = HUN_miklos_horthy
 recruit_character = HUN_matyas_rakosi
 recruit_character = HUN_arpad_szakasits
@@ -313,6 +314,7 @@ recruit_character = HUN_gusztav_gratz
 recruit_character = HUN_gyula_gombos_de_jakfa
 recruit_character = HUN_otto_von_habsburg
 recruit_character = HUN_franz_friedrich
+recruit_character = HUN_ferenc_szalasi
 
 
 1939.1.1 = {

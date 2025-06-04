@@ -63,7 +63,7 @@ equipments = {
 				allowed_module_categories = { ship_secondaries ship_dp_secondaries}
 			}
 			fixed_ship_armor_slot = {
-				required = no
+				required = yes
 				allowed_module_categories = { ship_carrier_armor }	
 			}
 			front_1_custom_slot = {
@@ -101,6 +101,7 @@ equipments = {
 			fixed_ship_engine_slot = carrier_ship_engine_1
 			fixed_ship_secondaries_slot = empty
 			front_1_custom_slot = empty
+			fixed_ship_armor_slot = ship_armor_carrier_deck
 		}
 
 		lg_armor_piercing = 0
@@ -135,8 +136,7 @@ equipments = {
 
 		build_cost_ic = 2094
 		resources = {
-			steel = 3
-			chromium = 1
+			steel = 2
 		}
 
 		manpower = 4500
@@ -215,7 +215,7 @@ equipments = {
 
 		build_cost_ic = 2600
 		resources = {
-			steel = 4
+			steel = 2
 			chromium = 1
 		}
 		manpower = 5000
@@ -282,8 +282,8 @@ equipments = {
 
 		build_cost_ic = 3250
 		resources = {
-			steel = 4
-			chromium = 2
+			steel = 3
+			chromium = 1
 		}
 		manpower = 5500
 	}
@@ -328,8 +328,7 @@ equipments = {
 
 		build_cost_ic = 2700
 		resources = {
-			steel = 4
-			chromium = 1
+			steel = 1
 		}
 		manpower = 5000
 	}
@@ -370,7 +369,7 @@ equipments = {
 		naval_speed = 22.5
 		build_cost_ic = 2700
 		resources = {
-			steel = 3
+			steel = 1
 		}
 		manpower = 1000
 	}

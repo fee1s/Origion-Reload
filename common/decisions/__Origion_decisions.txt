@@ -21,6 +21,52 @@ Epsilon_decions = { # Общие решения
 		}
 	}
 	
+	SOV_meta_deployment = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			tag = SOV
+		}
+
+		fire_only_once = yes
+		
+		available = {
+			has_completed_focus = SOV_secret_protocol_of_the_MR_pact
+			has_manpower > 649999
+		}
+
+		complete_effect = {
+			SOV = {
+				add_manpower = -650000
+				load_oob = "SOV_deployment"
+				set_country_flag = SOV_used_meta_deployment
+			}
+		}
+	}
+	
+	SOV_reserve_deployment = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			tag = SOV
+		}
+		
+		visible = { has_country_flag = SOV_used_meta_deployment }
+
+		fire_only_once = yes
+		
+		available = {
+			has_manpower > 99999
+		}
+
+		complete_effect = {
+			SOV = {
+				add_manpower = -100000
+				load_oob = "SOV_reserve"
+			}
+		}
+	}
+	
 	CHI_attache = {
 		icon = generic_army_support
 		
@@ -77,28 +123,6 @@ Epsilon_decions = { # Общие решения
 			}
 		}
 	}
-	SOV_Sacred_War = {
-        icon = generic_army_support
-        available = {
-			tag = SOV
-            has_war = yes
-            date > 1941.5.1
-        }
-        visible = {
-            SOV = { is_ai = yes }
-			original_tag = SOV
-        }
-        fire_only_once = yes
-        days_remove = -1
-        cost = 0
-        ai_will_do = {
-            factor = 10
-        }
-        complete_effect = {
-			add_ideas = tot_economic_mobilisation
-            add_ideas = Sacred_War
-        }
-    }
 }
 Origion_fast_templates = { # Рещения на шаблоны
 	
@@ -168,15 +192,17 @@ Origion_fast_templates = { # Рещения на шаблоны
 			name = "Танк 45W"
 				regiments = {
 					medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_tank_destroyer_brigade = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
-					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_tank_destroyer_brigade = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
-					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_tank_destroyer_brigade = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
-					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_tank_destroyer_brigade = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
-					medium_tank_destroyer_brigade = { x = 0 y = 4 }  medium_sp_anti_air_brigade = { x = 1 y = 4 }																				  mechanized = { x = 3 y = 4 }																									
+					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+					medium_tank_destroyer_brigade = { x = 0 y = 4 }  medium_sp_anti_air_brigade = { x = 1 y = 4 }													 mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
 				}			
 				support = {
 					engineer = { x = 0 y = 0 }
 					light_tank_recon = { x = 0 y = 1 }		
-					medium_flame_tank = { x = 0 y = 2 }
+					flamethrower_brigade = { x = 0 y = 2 }
+					field_hospital = { x = 0 y = 3 }
+					logistics_company = { x = 0 y = 4 }
 				}
 			}				
 		}
@@ -222,27 +248,52 @@ Origion_fast_templates = { # Рещения на шаблоны
 		available = { 
 			has_tech = improved_small_airframe
 			has_tech = aa_hmg
-			has_tech = range_improvements
-			has_tech = survivability_studies
 			has_tech = engines_3
 		}
 		complete_effect = {
 			fighter_1940 = yes
 		}
 	}
+	
+	Fast_fighter_1941_template = {
+		icon = GFX_decision_SWE_set_air_budget
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		available = { 
+			has_tech = improved_small_airframe
+			has_tech = aa_cannon_1
+			has_tech = engines_3
+		}
+		complete_effect = {
+			fighter_1941 = yes
+		}
+	}
 
-	Fast_cas_template = {
+	Fast_cas_template_1940 = {
 		icon = GFX_decision_generic_merge_plant_aircraft		
 		fire_only_once = no
 		visible = {	has_country_flag = templates_decisions_allowed_flag }
-			available = { 
+		available = { 
 			has_tech = improved_small_airframe
-			has_tech = engines_3
-			has_tech = range_improvements
 			has_tech = heavy_bombs
+			has_tech = engines_3
 		}
 		complete_effect = {
 			Cas_1940 = yes
+		}
+	}
+	
+	Fast_cas_template_1941 = {
+		icon = GFX_decision_generic_merge_plant_aircraft		
+		fire_only_once = no
+		visible = {	has_country_flag = templates_decisions_allowed_flag }
+		available = { 
+			has_tech = improved_small_airframe
+			has_tech = tank_buster_1
+			has_tech = engines_3
+		}
+		complete_effect = {
+			Cas_1941 = yes
 		}
 	}
 }
@@ -315,6 +366,762 @@ origion_rerol_dec_cat = { # Рещения на рерол
 					}
 					change_tag_from = ROOT			
 				}
+			}
+		}
+	}
+}
+ORG_allies_lend_lease_to_sov = {
+	open_fighter_ll_category = {
+		icon = GFX_decision_generic_merge_plant_aircraft
+		
+		priority = 21
+		
+		visible = { NOT = { has_country_flag = open_fighter_ll_category_flag } }
+		
+		available = { hidden_trigger = { SOV = { has_war = yes } } }
+		
+		complete_effect = { set_country_flag = open_fighter_ll_category_flag }
+	}
+	
+	close_fighter_ll_category = {
+		icon = GFX_decision_generic_merge_plant_aircraft
+		
+		priority = 20
+		
+		visible = { has_country_flag = open_fighter_ll_category_flag } 
+		
+		complete_effect = { clr_country_flag = open_fighter_ll_category_flag }
+	}
+	
+	fighter_ll_to_sov_small = {
+		icon = GFX_decision_generic_air
+		available = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 239 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 349 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 469 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 589 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 739 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 849 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 969 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 1089 } 
+			}
+			
+			check_variable = { ENG.lend_lease_side_progress < 81 }
+		}
+		visible = { NOT = { has_country_flag = fighter_ll_to_sov_small_enabled } has_country_flag = open_fighter_ll_category_flag }
+		fire_only_once = no
+		priority = 19
+		complete_effect = {
+			set_country_flag = fighter_ll_to_sov_small_enabled
+			activate_mission = fighter_ll_to_sov_small_first
+			
+			add_to_variable = { var = ENG.lend_lease_side_progress value = 20 }
+		}
+	}
+	stop_fighter_ll_to_sov_small = {
+		icon = GFX_decision_generic_air
+		visible = { has_country_flag = fighter_ll_to_sov_small_enabled has_country_flag = open_fighter_ll_category_flag } 
+		fire_only_once = no
+		priority = 18
+		complete_effect = {
+			clr_country_flag = fighter_ll_to_sov_small_enabled
+			
+			add_to_variable = { var = ENG.lend_lease_side_progress value = -20 }
+		}
+	}
+	fighter_ll_to_sov_small_first = { 
+		icon = GFX_decision_generic_air
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_fighter_ll_category_flag }
+		available = { NOT = { has_country_flag = fighter_ll_to_sov_small_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 17
+		timeout_effect = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 239 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 240 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 240 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 349 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 350 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 350 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 469 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 470 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 470 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 589 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 590 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 739 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 240 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 240 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 849 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 350 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 350 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 969 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 470 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 470 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1089 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_second add_to_variable = { var = ENG.fighters_sent value = 590 } }
+			}
+		}
+	}
+	fighter_ll_to_sov_small_second = { 
+		icon = GFX_decision_generic_air
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_fighter_ll_category_flag }
+		available = { NOT = { has_country_flag = fighter_ll_to_sov_small_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 16
+		timeout_effect = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 239 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 240 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 240 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 349 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 350 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 350 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 469 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 470 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 470 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 589 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 590 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 739 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 240 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 240 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 849 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 350 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 350 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 969 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 470 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 470 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1089 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_small_first add_to_variable = { var = ENG.fighters_sent value = 590 } }
+			}
+		}
+	}
+	
+	
+
+
+	fighter_ll_to_sov_medium = {
+		icon = GFX_decision_generic_air
+		available = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 709 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 1059 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 1399 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 1769 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 1209 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 1559 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 1899 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 2269 } 
+			}
+			
+			check_variable = { ENG.lend_lease_side_progress < 41 }
+		}
+
+		visible = { NOT = { has_country_flag = fighter_ll_to_sov_medium_enabled } has_country_flag = open_fighter_ll_category_flag }
+		fire_only_once = no
+		priority = 15
+		complete_effect = {
+			set_country_flag = fighter_ll_to_sov_medium_enabled
+			activate_mission = fighter_ll_to_sov_medium_first
+			
+			add_to_variable = { var = ENG.lend_lease_side_progress value = 60 }
+		}
+	}
+	stop_fighter_ll_to_sov_medium = {
+		icon = GFX_decision_generic_air
+		visible = { has_country_flag = fighter_ll_to_sov_medium_enabled has_country_flag = open_fighter_ll_category_flag } 
+		fire_only_once = no
+		priority = 14
+		complete_effect = {
+			clr_country_flag = fighter_ll_to_sov_medium_enabled
+			
+			add_to_variable = { var = ENG.lend_lease_side_progress value = -60 }
+		}
+	}
+	fighter_ll_to_sov_medium_first = { 
+		icon = GFX_decision_generic_air
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_fighter_ll_category_flag }
+		available = { NOT = { has_country_flag = fighter_ll_to_sov_medium_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 13
+		timeout_effect = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 709 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 710 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 710 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1059 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1060 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 1060 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1399 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1400 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 1400 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1769 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 1209 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 710 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 710 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1559 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1060 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 1060 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1899 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1400 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 1400 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 2269 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_second add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+		}
+	}
+	fighter_ll_to_sov_medium_second = { 
+		icon = GFX_decision_generic_air
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_fighter_ll_category_flag }
+		available = { NOT = { has_country_flag = fighter_ll_to_sov_medium_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 12
+		timeout_effect = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 709 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 710 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 710 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1059 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1060 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 1060 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1399 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1400 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 1400 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1769 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 1209 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 710 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 710 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1559 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1060 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 1060 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1899 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1400 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 1400 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 2269 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_medium_first add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+		}
+	}
+
+
+
+	fighter_ll_to_sov_large = {
+		icon = GFX_decision_generic_air
+		available = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 1179 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 1769 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 2359 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = no }
+			
+				has_equipment = { small_plane_airframe > 2999 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 1679 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 2269 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 2859 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes }
+			
+				has_equipment = { small_plane_airframe > 3499 } 
+			}
+			
+			check_variable = { ENG.lend_lease_side_progress < 1 }
+		}
+
+		visible = { NOT = { has_country_flag = fighter_ll_to_sov_large_enabled } has_country_flag = open_fighter_ll_category_flag }
+		fire_only_once = no
+		priority = 11
+		complete_effect = {
+			set_country_flag = fighter_ll_to_sov_large_enabled
+			activate_mission = fighter_ll_to_sov_large_first
+			
+			add_to_variable = { var = ENG.lend_lease_side_progress value = 100 }
+		}
+	}
+	stop_fighter_ll_to_sov_large = {
+		icon = GFX_decision_generic_air
+		visible = { has_country_flag = fighter_ll_to_sov_large_enabled has_country_flag = open_fighter_ll_category_flag } 
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			clr_country_flag = fighter_ll_to_sov_large_enabled
+			
+			add_to_variable = { var = ENG.lend_lease_side_progress value = -100 }
+		}
+	}
+	fighter_ll_to_sov_large_first = { 
+		icon = GFX_decision_generic_air
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_fighter_ll_category_flag }
+		available = { NOT = { has_country_flag = fighter_ll_to_sov_large_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 9
+		timeout_effect = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 1179 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1769 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 2359 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 2360 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 2360 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 2999 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 3000 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 3000 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 1679 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 2269 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 2859 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 2360 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 2360 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 3499 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 3000 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 3000 } }
+			}
+		}
+	}
+	fighter_ll_to_sov_large_second = { 
+		icon = GFX_decision_generic_air
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_fighter_ll_category_flag }
+		available = { NOT = { has_country_flag = fighter_ll_to_sov_large_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 8
+		timeout_effect = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 1179 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1769 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 2359 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 2360 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 2360 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 2999 } asian_war_simulation = no }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 3000 target = SOV }
+				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 3000 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 1679 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 2269 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 1770 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1770 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 2859 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 2360 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 2360 } }
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 3499 } asian_war_simulation = yes }
+			
+				send_equipment = { equipment = small_plane_airframe amount = 3000 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 500 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 3000 } }
+			}
+		}
+	}
+}
+ORG_africa_dec_cat = {
+	USA_operation_torch = { # ОПЕРАЦИЯ ФАКЕЛ
+		available = { has_completed_focus = USA_oper_torch }
+		icon = GFX_decision_eng_puppet_usa
+		
+		visible = {
+			original_tag = USA
+		}
+		
+		complete_effect = {
+			USA = {
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+			}
+			
+			ITA = {
+				transfer_state = 460 
+				transfer_state = 513
+				transfer_state = 459
+				transfer_state = 991
+			}
+			
+			hidden_effect = { 
+				GER = { annex_country = { target = VIC transfer_troops = no } }
+				
+				every_country = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+				    add_to_variable = { ALLY_africa_controlled_regions = 1 }
+				    add_to_variable = { AXIS_africa_controlled_regions = 2 }
+				}
+				
+				news_event = { id = origion.22 days = 2 }
+				set_global_flag = operation_torch_flag
+			}
+		}
+	}
+	ENG_operation_torch = { # Torch No Asia 
+		available = { date > 1941.5.1 }
+		icon = GFX_decision_eng_puppet_usa
+		
+		visible = { 
+		    USA = { exists = no } 
+			original_tag = ENG
+		}
+		fire_only_once = yes
+		
+		complete_effect = {
+			ENG = {
+				transfer_state = 461
+				transfer_state = 462
+				transfer_state = 783
+			}
+			
+			ITA = {
+				transfer_state = 460 
+				transfer_state = 513
+				transfer_state = 459
+				transfer_state = 991
+			}
+			
+			hidden_effect = { 
+				GER = { annex_country = { target = VIC transfer_troops = no } }
+				
+				news_event = { id = origion.22 days = 2 }
+				set_global_flag = operation_torch_flag
+				
+				every_country = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+				    add_to_variable = { ALLY_africa_controlled_regions = 1 }
+				    add_to_variable = { AXIS_africa_controlled_regions = 2 }
+				}
+			}
+		}
+	}
+    ENG_operation_crusader = {
+		icon = GFX_decision_eng_puppet_usa
+		available = {
+			has_completed_focus = uk_operation_crusader
+			date > 1942.1.1
+		}
+		visible = {
+			original_tag = ENG
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_timed_idea = { idea = uk_operation_crusader days = 60 }
+			
+			hidden_effect = { 
+				CAN = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				AST = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				RAJ = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				SAF = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				FRA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+			}		
+		}
+	}
+	
+	ENG_operation_countenance = {
+		icon = GFX_decision_eng_puppet_usa
+		available = {
+			has_completed_focus = uk_operation_countenance
+		}
+		visible = {
+			original_tag = ENG
+		}
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = uk_operation_countenance_tt
+			
+			hidden_effect = {
+				SOV = {
+					transfer_state = 419
+					transfer_state = 420
+					transfer_state = 266
+					transfer_state = 418
+					transfer_state = 416
+				}
+				
+				ENG = { annex_country = { target = PER } }	
+				news_event = { id = origion.12 days = 3 }
 			}
 		}
 	}

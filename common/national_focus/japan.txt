@@ -38,7 +38,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.15
 		}
 	}
 
@@ -88,9 +88,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		add_ideas = JAP_occupation
-	        add_stability = 0.05
-			set_rule = { can_create_factions = yes }
+			add_collaboration = {
+	            target = RAJ
+	            value = 0.5
+            }
+			add_collaboration = {
+	            target = AST
+	            value = 0.5
+            }
 		}
 	}
 
@@ -396,32 +401,22 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
-		id = JAP_exploit_the_southern_resource_area
-		icon = GFX_goal_generic_construction2
+		id = JAP_defend_supply
+		icon = GFX_focus_GER_kriegslokomotive
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = 1
 		y = 1
 		relative_position_id = JAP_strike_on_the_southern_resource_area
 		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
 		available = {
-			has_full_control_of_state = 336
-			has_full_control_of_state = 640
-			has_full_control_of_state = 288
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-			has_full_control_of_state = 335
-			#has_full_control_of_state = 623
-			#has_full_control_of_state = 327
-			#has_full_control_of_state = 624
-			#has_full_control_of_state = 626
-			#has_full_control_of_state = 628
-			#has_full_control_of_state = 627
+			custom_trigger_tooltip = {
+			    tooltip = JAP_exploit_the_southern_resource_area_trigger_tt
+				check_variable = {
+					JAP_pacific_controlled_regions > 15
+				}
+			}
 		}
 		bypass = {
 		}
@@ -430,7 +425,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = JAP_exploit_the_southern_resource_area_tt
+			add_ideas = JAP_tokyo_express
 		}
 	}
 
@@ -845,20 +840,12 @@ focus_tree = {
 		relative_position_id = JAP_strike_on_the_southern_resource_area
 		cost = 5
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = no
-			}
-			modifier = {
-				factor = 10
-				surrender_progress > 0.9
-			}
+			factor = 5
 		}
 		available = {
 			OR = {
-				NOT = {has_full_control_of_state = 526}
-				NOT = {has_full_control_of_state = 524}
+				NOT = { has_full_control_of_state = 526 }
+				NOT = { has_full_control_of_state = 524 }
 			}
 		}
 		bypass = {
@@ -867,7 +854,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		custom_effect_tooltip = JAP_national_defence_state_tt
+			add_ideas = national_security_mobilisation
+			
 			hidden_effect = {
 				528 = {
 					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
@@ -903,7 +891,6 @@ focus_tree = {
 					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
 				}
 			}
-		add_ideas = national_security_mobilisation
 		}
 	}
 
@@ -955,8 +942,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
+			custom_effect_tooltip = JAP_secure_china_eco_tt
 			custom_effect_tooltip = JAP_secure_china_tt
-			add_ideas = { TNP }
+			add_to_variable = { JAP_consumer_goods_expected_value = -0.05}
 			hidden_effect = {
 				608 = { add_extra_state_shared_building_slots = 6 }
 				613 = { add_extra_state_shared_building_slots = 6 }
@@ -1578,7 +1566,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = JAP_army_expansion_law
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -1891,27 +1879,17 @@ focus_tree = {
 				has_completed_focus = JAP_purge_the_kodoha_faction
 			}
 		}
-		available = {
-		}
-		bypass = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+
 		search_filters = { FOCUS_FILTER_RESEARCH }
+		
 		completion_reward = {
 			air_experience = 300
 			add_tech_bonus = {
 				name = JAP_fighter_modernization
 				bonus = 1.0
-				uses = 1
-				category = light_fighter		
-			}
-			add_tech_bonus = {
-				name = JAP_fighter_modernization
-				bonus = 1.0
-				uses = 1
-				category = cat_heavy_fighter	
+				uses = 2
+				technology = improved_small_airframe
+				technology = improved_medium_airframe
 			}
 		}
 	}
@@ -2343,17 +2321,14 @@ focus_tree = {
 		}
 		available = {
 			has_tech = improved_fire_control_system
-			has_tech = improved_dp_light_battery
 			has_tech = centimetric_radar
-			date > 1940.1.1
 		}
-		bypass = {
-		}
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_timed_idea = { idea = JAP_first_air_fleet days = 900 }
+			add_ideas = JAP_first_air_fleet
 			custom_effect_tooltip = JAP_first_air_fleet_tt
 				hidden_effect = {
 					set_technology = { improved_ship_hull_carrier = 1 }
@@ -2377,6 +2352,7 @@ focus_tree = {
 						mid_2_custom_slot = ship_deck_space
 					}
 				}
+				
 			#Line Production
 			add_equipment_production = {
 				equipment = {
@@ -2494,26 +2470,16 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = JAP_supremacy_of_the_battlefleet
-		cost = 5\
-		
-		available = {
-			date > 1940.1.1
-		}
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
 			has_tech = improved_fire_control_system
-			has_tech = improved_dp_light_battery
 			has_tech = centimetric_radar
 		}
-		bypass = {
-			AND = {
-				has_tech = heavy_battleship
-				has_tech = heavy_battleship2
-			}
-		}
+		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2557,17 +2523,17 @@ focus_tree = {
 						fixed_ship_battery_slot = ship_super_heavy_battery_1
 						fixed_ship_anti_air_slot = ship_anti_air_2
 						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-						fixed_ship_radar_slot = ship_radar_2
+						fixed_ship_radar_slot = ship_radar_3
 						fixed_ship_engine_slot = heavy_ship_engine_3
 						fixed_ship_secondaries_slot = dp_ship_secondaries_3
 						fixed_ship_armor_slot = ship_armor_shbb
 						front_1_custom_slot = ship_super_heavy_battery_1
 						front_2_custom_slot = ship_super_heavy_battery_1
-						mid_1_custom_slot = ship_anti_air_2
+						mid_1_custom_slot = dp_ship_secondaries_3
 						mid_2_custom_slot = dp_ship_secondaries_3
 						mid_3_custom_slot = dp_ship_secondaries_3
-						rear_1_custom_slot = ship_airplane_launcher_2
-						rear_2_custom_slot = ship_airplane_launcher_2
+						rear_1_custom_slot = dp_ship_secondaries_3
+						rear_2_custom_slot = ship_airplane_launcher_3
 					}
 				}
 				custom_effect_tooltip = JAP_yamato_tt
@@ -2606,7 +2572,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2625,14 +2591,6 @@ focus_tree = {
 				bonus = 3.0
 				uses = 1
 				category = cl_tech	
-				category = ca_tech	
-			}
-			add_tech_bonus = {
-				name = JAP_cruiser_modernization
-				bonus = 2.0
-				uses = 1
-				technology = advanced_medium_battery
-				technology = basic_dp_medium_battery
 			}
 		}
 	}
@@ -2667,12 +2625,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = JAP_long_lance_torpedoes
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 2
-		}
-		available = {
-			date > 1940.1.1
 		}
 		bypass = {
 		}

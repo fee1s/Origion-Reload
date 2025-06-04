@@ -55,9 +55,7 @@ weather_sandstorm = { # on Region
 }
 
 weather_arctic_water = { # on Region
-	naval_attrition = 0.1
 	naval_retreat_speed = -0.05
-	navy_casualty_on_sink = 0.2
 	positioning = -0.2
 }
 
@@ -585,4 +583,11 @@ NORDIC_allow_more_planes = {
 FIN_organized_support_for_finland = {
 	send_volunteer_size = 3
 	air_volunteer_cap = 1
+}
+
+battle_of_dunkirk = { # on Province
+	army_attack_factor = -0.75
+	dig_in_speed_factor = 0.5
+	max_dig_in_factor = 0.25
+	no_supply_grace = 720
 }

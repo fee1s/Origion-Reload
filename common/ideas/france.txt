@@ -1123,9 +1123,10 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			modifier = {
-				conscription = -0.003
-				war_support_factor = -0.05
-				land_doctrine_cost_factor = 1
+				army_org_factor = -0.25
+				army_morale_factor = -0.5
+				planning_speed = -0.5
+				max_planning = 0.15
 			}
 		}
 
@@ -1142,12 +1143,53 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_disjointed_gov
+			picture = prc_low_popular_support3
 			
 			modifier = {
 				political_power_cost = 0.8
 				stability_factor = -0.10
-				surrender_limit = -0.5
+			}
+		}
+		
+		FRA_disjointed_government_2 = {
+			name = FRA_disjointed_government
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				political_power_cost = 0.5
+				stability_factor = -0.10
+			}
+		}
+		
+		FRA_disjointed_government_3 = {	
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = SPR_the_popular_front
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				mobilization_laws_cost_factor = -0.5
 			}
 		}
 

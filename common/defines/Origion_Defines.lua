@@ -9,15 +9,18 @@ NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before 
 --Army
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
+
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
-NDefines.NMilitary.BASE_NIGHT_ATTACK_PENALTY = -0.25
+NDefines.NMilitary.TRAINING_ATTRITION = 0.00
 
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999;
 
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.05; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки)
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.07; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки)
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спецуры
+
+NDefines.NCountry.BASE_MOBILIZATION_SPEED = 0.02 -- Скорость мобилизации
 
 NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 0; -- Модификатор треньки (меньше - меньше опыта)
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0 -- Бафф треньки (По умолчанию - 0.0015)
@@ -43,15 +46,15 @@ NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая ре�
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.125 -- Скорость пересечения маленькой реки
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.2 -- Скорость пересечения большой реки
 
-NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 100 -- Пополнение снаряги в дивках, объем пополнения
+NDefines.NCountry.EQUIPMENT_UPGRADE_CHUNK_MAX_SIZE = 1000 -- Пополнение снаряги в дивках, объем пополнения
 
 NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.5
 NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.25 -- Дебафф от красного воздуха (уменьшено)
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.125 -- Дебафф на скорость от красного воздуха (уменьшено)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.2 -- Дебафф от красного воздуха (уменьшено)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.075 -- Дебафф на скорость от красного воздуха (уменьшено)
 
-NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 10 -- Шанс нанести урон укреплению
+NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 15 -- Шанс нанести урон укреплению
 
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель скорости дивизий, ванила это 0.05
 
@@ -65,7 +68,7 @@ NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.45 -- Умеменьшить размен�
 NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.35 -- Умеменьшить размены в воздухе
 
 NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 1.45 -- портстрайк бафф
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.95 -- бафф морбобров по дамагу по организации
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.75 -- бафф морбобров по дамагу по организации
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.45 -- бафф морбобров по дамагу
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 1.2 -- множитель получаемого опыта авиации (всего)
@@ -79,7 +82,7 @@ NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на 
 
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5 -- Кол-во касов от ШФ
 
-NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.035 -- шанс попадания зсу-атаки по касам
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.0 -- шанс попадания зсу-атаки по касам
 
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Моментальная развертка авиа-крыльев
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 5.0 -- Скорость перелета авиа-крыльев между филдами (увеличено, ванила - 0.02)
@@ -179,12 +182,16 @@ NDefines.NNavy.AGGRESSION_TORPEDO_EFFICIENCY_ON_LIGHT_SHIPS = 0.01 -- приор
 NDefines.NNavy.GUN_HIT_PROFILES = { 95.0, 210.0, 110.0 } -- 1 харднесс, 2- торпеды 3-лайт атака, чем больше значение, тем дольше бой и меньше попаданий
 
 NDefines.NNavy.BASE_POSITIONING = 1.0 -- максимальное размещение
+
 NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR = 0.01 -- увеличивает обнаружение между 2 флотами, сторона с большим обнаружением получает бонус
 NDefines.NNavy.MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION = 0.0 -- уменьшает бонус от обнаружения
 
-NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.90 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
-NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 1.00 -- максимальный штраф от размещения
-NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.05 -- штраф, за более большое авиа соединение
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.9 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
+
+NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.90 -- максимальный штраф от размещения
+NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0 -- штраф, за более большое авиа соединение
+
+NDefines.NNavy.MIN_SHIPS_FOR_HIGHER_SHIP_RATIO_PENALTY = 0 -- чутка странный дефайн, может отрегулировать от какого кол-во кораблей начинает работать штраф за бОльшее соединение, именно для стороны со штрафом
 
 NDefines.NNavy.BASE_CARRIER_SORTIE_EFFICIENCY = 0.2
 NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс штраф за большее количество самолетов у противника на авиках
@@ -192,9 +199,11 @@ NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0.3 -- макс ш
 NDefines.NNavy.POSITIONING_PENALTY_FOR_SHIPS_JOINED_COMBAT_AFTER_IT_STARTS = 0.01 -- каждый корабль в бою который получает штраф к размещению
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- максимальный штраф за новые суда
 NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS = 0.3 -- накопленный штраф за новые суда который будет уменьшаться
-NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.95 -- штраф нанесения урона при плохом размещении
+
+NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.9 -- штраф нанесения урона при плохом размещении
 NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.5 -- понижение щитка при понижении размещения
 NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.35 -- дебафф на пво флота от размещения
+
 NDefines.NNavy.SUBMARINE_REVEAL_ON_MINIMUM_POSITIONING = 2.0 -- размещение лодок
 
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0

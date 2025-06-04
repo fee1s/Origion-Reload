@@ -19,7 +19,6 @@ state={
 		owner = GRE
 		buildings = {
 			infrastructure = 2
-			arms_factory = 1
 			11965 = {
 				naval_base = 1
 
@@ -34,6 +33,34 @@ state={
 		1936.1.1.14 = {
 			owner = COL
 			add_core_of = COL
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = ENG
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = USA
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = CAN
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = RAJ
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = SAF
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = AST
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = FRA
 		}
 	}
 

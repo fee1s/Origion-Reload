@@ -50,6 +50,34 @@ state = {
 			owner = COL
 			add_core_of = COL
 		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = ENG
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = USA
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = CAN
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = RAJ
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = SAF
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = AST
+		}
+		add_dynamic_modifier = { 
+			modifier = sea_invasion_prohibited_dm 
+			scope = FRA
+		}
 	}
 
 	provinces = {
@@ -57,6 +85,6 @@ state = {
 	}
 	manpower = 493867
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = large_city
 	local_supplies = 5.000
 }

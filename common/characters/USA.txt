@@ -217,12 +217,12 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ trait_reckless infantry_officer }
-			skill=4
-			attack_skill=5
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
+			traits={ career_officer infantry_officer infantry_leader Trickster  }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
 			legacy_id=0
 		}
 	}
@@ -629,290 +629,12 @@ characters={
 		}
 	}
 
-	USA_ernest_king={
-		name=USA_ernest_king
-		portraits={
-			navy={
-				small="GFX_idea_ernest_king"
-			}
-			army={
-				large=GFX_portrait_USA_ernest_king
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = ernest_king
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ navy_career_officer aviation_enthusiast caustic_personality blockade_runner superior_tactician }
-			skill=5
-			attack_skill=8
-			defense_skill=6
-			maneuvering_skill=4
-			coordination_skill=6
-			legacy_id=0
-		}
-	}
-
-	USA_chester_w_nimitz={
-		name=USA_chester_w_nimitz
-		portraits={
-			army={
-				large=GFX_portrait_USA_chester_w_nimitz
-			}
-			army={
-				small="GFX_idea_chester_nimitz"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = chester_nimitz
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ gentlemanly naval_lineage superior_tactician spotter blue_water_expert }
-			skill=5
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=5
-			coordination_skill=5
-			legacy_id=0
-		}
-	}
-
-	USA_william_halsey_jr={
-		name=USA_william_halsey_jr
-		portraits={
-			navy={
-				large=GFX_portrait_USA_william_halsey_jr
-				small=GFX_portrait_USA_william_halsey_jr_small
-			}
-			army={
-				large=GFX_portrait_USA_william_halsey_jr
-				small=GFX_portrait_USA_william_halsey_jr_small
-			}
-		}
-		navy_leader={
-			traits={ bold aviation_enthusiast superior_tactician spotter }
-			skill=4
-			attack_skill=5
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=0
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = william_halsey
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				navy_chief_naval_aviation_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	USA_frank_jack_fletcher={
-		name=USA_frank_jack_fletcher
-		portraits={
-			navy={
-				small="GFX_idea_frank_jack_fletcher"
-			}
-			army={
-				large=GFX_portrait_USA_frank_jack_fletcher
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = frank_jack_fletcher
-			ledger = air
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				navy_carrier_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
-		navy_leader={
-			traits={ gunnery_expert superior_tactician spotter }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
-
-	USA_raymond_a_spruance={
-		name=USA_raymond_a_spruance
-		portraits={
-			army={
-				large=GFX_portrait_USA_raymond_a_spruance
-				small=GFX_portrait_USA_raymond_a_spruance_small
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = raymond_spruance
-			ledger = navy
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				navy_capital_ship_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly navy_career_officer superior_tactician }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
-
-	USA_harold_rainsford_stark={
-		name=USA_harold_rainsford_stark
-		portraits={
-			army={
-				large=GFX_portrait_USA_harold_rainsford_stark
-				small=GFX_portrait_USA_harold_rainsford_stark_small
-			}
-		}
-		navy_leader={
-			traits={ cuts_corners blockade_runner spotter }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=2
-			legacy_id=0
-		}
-	}
-
-	USA_arleigh_burke={
-		name=USA_arleigh_burke
-		portraits={
-			army={
-				large=GFX_portrait_USA_arleigh_burke
-				small=GFX_portrait_USA_arleigh_burke_small
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy bold fleet_protector superior_tactician }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=4
-			legacy_id=0
-		}
-	}
-
-	USA_charles_m_cooke_jr={
-		name=USA_charles_m_cooke_jr
-		portraits={
-			army={
-				large=GFX_portrait_USA_charles_m_cooke_jr
-				small=GFX_portrait_USA_charles_m_cooke_jr_small
-			}
-		}
-		navy_leader={
-			traits={ navy_career_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=2
-			coordination_skill=3
-			legacy_id=0
-		}
-	}
-
 
 	### THEORISTS ###
 
 	# Patton up there
 
 	# Bradley up there
-
-	
-	USA_dewitt_clinton_ramsey={
-		name=USA_dewitt_clinton_ramsey
-		portraits={
-			army={
-				small="GFX_idea_dewitt_clinton_ramsey"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = dewitt_clinton_ramsey
-			ledger = navy
-			allowed = {
-				original_tag = USA
-			}
-			traits = { naval_theorist }
-		}
-	}
-
-	USA_marc_mitscher={
-		name=USA_marc_mitscher
-		portraits={
-			army={
-				small="GFX_idea_marc_mitscher"
-			}
-		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = marc_mitscher
-			ledger = navy
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				naval_aviation_pioneer
-			}
-		}
-	}
 
 	USA_curtis_lemay={
 		name=USA_curtis_lemay
@@ -1194,7 +916,93 @@ characters={
 			}
 		}
 	}
+
+	### NAVY CHIEFS ###
+
+	USA_william_halsey_jr={
+		name=USA_william_halsey_jr
+		portraits={
+			army={
+				small=GFX_portrait_USA_william_halsey_jr_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = william_halsey
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	USA_charles_m_cooke_jr={
+		name=USA_charles_m_cooke_jr
+		portraits={
+			army={
+				small=GFX_portrait_USA_charles_m_cooke_jr_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = charles_m_cooke
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+	}
+
+	USA_harold_rainsford_stark={
+		name=USA_harold_rainsford_stark
+		portraits={
+			army={
+				small=GFX_portrait_USA_harold_rainsford_stark_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = harold_rainsford_stark
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+		}
+	}
 	
+	USA_arleigh_burke={
+		name=USA_arleigh_burke
+		portraits={
+			army={
+				large=GFX_portrait_USA_arleigh_burke
+				small=GFX_portrait_USA_arleigh_burke_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = arleigh_burke
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+		}
+	}
+
 	USA_thomas_kinkaid={
 		name=USA_thomas_kinkaid
 		portraits={
@@ -1205,24 +1013,163 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = thomas_kinkaid
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				navy_carrier_2
+			}
+			cost = 100
+		}
+	}
+
+	### ADNIRALS ###
+
+	USA_chester_w_nimitz={
+		name=USA_chester_w_nimitz
+		portraits={
+			army={
+				large=GFX_portrait_USA_chester_w_nimitz
+			}
+			army={
+				small="GFX_idea_chester_nimitz"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = chester_nimitz
 			ledger = navy
 			allowed = {
 				original_tag = USA
 			}
 			traits = {
-				navy_screen_2
+				naval_aviation_pioneer
 			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
+			cost = 150
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside blue_water_expert }
+			skill=8
+			attack_skill=8
+			defense_skill=6
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=0
+		}
+	}
+
+	USA_ernest_king={
+		name=USA_ernest_king
+		portraits={
+			navy={
+				small="GFX_idea_ernest_king"
+			}
+			army={
+				large=GFX_portrait_USA_ernest_king
+			}
+		}
+
+		advisor={
+			slot = high_command
+			idea_token = rnest_king
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+			cost =  100
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician air_controller ironside blue_water_expert }
+			skill=8
+			attack_skill=8
+			defense_skill=6
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=0
+		}
+	}
+
+	USA_frank_jack_fletcher={
+		name=USA_frank_jack_fletcher
+		portraits={
+			navy={
+				small="GFX_idea_frank_jack_fletcher"
+			}
+			army={
+				large=GFX_portrait_USA_frank_jack_fletcher
+			}
+		}
+		navy_leader={
+			traits={ fleet_protector superior_tactician }
+			skill=4
+			attack_skill=4
+			defense_skill=6
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=0
+		}
+	}
+
+	USA_raymond_a_spruance={
+		name=USA_raymond_a_spruance
+		portraits={
+			army={
+				large=GFX_portrait_USA_raymond_a_spruance
+				small=GFX_portrait_USA_raymond_a_spruance_small
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner seawolf }
+			skill=4
+			attack_skill=6
+			defense_skill=4
+			maneuvering_skill=6
+			coordination_skill=6
+			legacy_id=0
+		}
+	}
+
+	### POLITICAL ADVISORS ###
+
+	USA_cordell_hull={	
+		name=USA_cordell_hull
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_6"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_cordell_hull
+			allowed  = {
+				original_tag = USA
+			}
+			traits  = {
+				captain_of_industry
 			}
 		}
 	}
 
-
-	### POLITICAL ADVISORS ###
-		
-	#Earl Bowder up ther
+	USA_henry_stimson={
+		name=USA_henry_stimson
+		portraits={
+			army={
+				small=GFX_portrait_USA_henry_stimson_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_henry_stimson
+			allowed  = {
+				original_tag = USA
+			}
+			traits  = {
+				war_industrialist 
+			}
+		}
+	}
 
 	USA_robert_taft={
 		name=USA_robert_taft
@@ -1242,75 +1189,6 @@ characters={
 			}
 		}
 	}
-	
-	USA_victor_perlo={
-		name=USA_victor_perlo
-		portraits={
-			army={
-				small=GFX_portrait_USA_victor_perlo_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = victor_perlo
-			allowed  = {
-				original_tag  = USA
-			}
-			available  = {
-				has_completed_focus = USA_militarized_WPA
-			}
-			visible  = {
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				economist 
-			}
-			cost  = 0.000
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
-	}
-
-	USA_henry_morgenthau={
-		name=USA_henry_morgenthau
-		portraits={
-			army={
-				small=GFX_portrait_USA_henry_morgenthau_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = USA_henry_morgenthau
-			allowed  = {
-				original_tag  = USA
-			}
-			traits  = {
-				financial_expert 
-			}
-		}
-	}
-
-	USA_henry_stimson={
-		name=USA_henry_stimson
-		portraits={
-			army={
-				small=GFX_portrait_USA_henry_stimson_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = USA_henry_stimson
-			allowed  = {
-				original_tag  = USA
-			}
-			traits  = {
-				war_industrialist 
-			}
-		}
-	}
 
 	USA_donald_nelson={
 		name=USA_donald_nelson
@@ -1326,7 +1204,89 @@ characters={
 				original_tag  = USA
 			}
 			traits  = {
-				armaments_organizer 
+				popular_figurehead 
+			}
+		}
+	}
+
+	USA_harry_white={
+		name=USA_harry_white
+		portraits={
+			army={
+				small="GFX_idea_USA_harry_white"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = harry_white
+			allowed  = {
+				original_tag  = USA
+			}
+			traits  = {
+				technocrat
+			}
+		}
+	}
+
+	USA_henry_morgenthau={
+		name=USA_henry_morgenthau
+		portraits={
+			army={
+				small=GFX_portrait_USA_henry_morgenthau_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_henry_morgenthau
+			allowed  = {
+				original_tag = USA
+			}
+			traits  = {
+				financial_expert 
+			}
+		}
+	}
+	
+	USA_victor_perlo={
+		name=USA_victor_perlo
+		portraits={
+			army={
+				small=GFX_portrait_USA_victor_perlo_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = victor_perlo
+			allowed  = {
+				original_tag  = USA
+			}
+			available = {
+				has_war_with = JAP
+			}
+			traits  = {
+				economist 
+			}
+		}
+	}
+
+	USA_joseph_patterson={
+		name=USA_joseph_patterson
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = USA_joseph_patterson
+			allowed  = {
+				original_tag = USA
+			}
+			available = {
+				date > 1944.6.1
+			}
+			traits  = {
+				american_caesar
 			}
 		}
 	}

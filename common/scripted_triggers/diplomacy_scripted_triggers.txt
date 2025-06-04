@@ -1,115 +1,132 @@
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
 
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
-	if = {
+	if = { # Япония не дает ленд-лиз никому
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = FREE
+			OR = {
+			    ORIGION_is_in_faction_with_axis = yes
+				ORIGION_is_in_faction_with_allies = yes
+				original_tag = SOV
 			}
-		}
-		always = yes
+			
+            FROM = { original_tag = JAP }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Совок не дает ленд-лиз никому
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = LIMITED
+			OR = {
+			    ORIGION_is_in_faction_with_axis = yes
+				ORIGION_is_in_faction_with_allies = yes
 			}
-		}
-		always = yes #handled by game logic, see above
+			
+            FROM = { original_tag = SOV }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Ленд-лиз только внутри Алайсев
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = SAME_IDEOLOGY
+			OR = {
+				ORIGION_is_in_faction_with_axis = yes
+				original_tag = SOV
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_LEND_LEASE_SAME_IDEOLOGY_TT
-			has_government = FROM
-		}
+			
+            FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Ленд-лиз только внутри Оси
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = SAME_FACTION
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				original_tag = JAP
+				original_tag = SOV
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_LEND_LEASE_SAME_FACTION_TT
-			is_in_faction_with = FROM
-		}
+			
+            FROM = { ORIGION_is_in_faction_with_axis = yes }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Неигровые нации
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = BLOCKED
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				ORIGION_is_in_faction_with_axis = yes
+				original_tag = SOV
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_LEND_LEASE_BLOCKED_TT
-			always = no
-		}
+			
+            FROM = { ORIGION_not_playable_country = yes }
+        }
+		always = no
 	}
 }
+
 DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
-	if = {
+	if = { # Япония не дает ленд-лиз никому
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = FREE
+			OR = {
+			    ORIGION_is_in_faction_with_axis = yes
+				ORIGION_is_in_faction_with_allies = yes
+				original_tag = SOV
 			}
-		}
-		always = yes
+			
+            FROM = { original_tag = JAP }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Совок не дает ленд-лиз никому
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = LIMITED
+			OR = {
+			    ORIGION_is_in_faction_with_axis = yes
+				ORIGION_is_in_faction_with_allies = yes
 			}
-		}
-		always = yes #handled by game logic, see above
+			
+            FROM = { original_tag = SOV }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Ленд-лиз только внутри Алайсев
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = SAME_IDEOLOGY
+			OR = {
+				ORIGION_is_in_faction_with_axis = yes
+				original_tag = SOV
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_LEND_LEASE_SAME_IDEOLOGY_TT
-			has_government = FROM
-		}
+			
+            FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Ленд-лиз только внутри Оси
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = SAME_FACTION
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				original_tag = JAP
+				original_tag = SOV
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_LEND_LEASE_SAME_FACTION_TT
-			is_in_faction_with = FROM
-		}
+			
+            FROM = { ORIGION_is_in_faction_with_axis = yes }
+        }
+		always = no
 	}
-	if = {
+	
+	if = { # Неигровые нации
 		limit = {
-			has_game_rule = {
-				rule = allow_lend_lease
-				option = BLOCKED
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				ORIGION_is_in_faction_with_axis = yes
+				original_tag = SOV
 			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_ALLOW_LEND_LEASE_BLOCKED_TT
-			always = no
-		}
+			
+            FROM = { ORIGION_not_playable_country = yes }
+        }
+		always = no
 	}
 }
 
@@ -178,6 +195,10 @@ DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = {
 	}
 }
 
+DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
+	always = no 
+}
+
 DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
 	always = no
 }
@@ -186,39 +207,6 @@ DIPLOMACY_BOOST_PARTY_POPULARITY_ENABLE_TRIGGER = {
 	always = no
 }
 DIPLOMACY_STAGE_COUP_ENABLE_TRIGGER = {
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_coups
-				option = FREE
-			}
-		}
-		always = yes
-	}
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_coups
-				option = AI_ONLY
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_COUP_AI_ONLY_TT
-			FROM = { is_ai = yes }
-		}
-	}
-	if = {
-		limit = {
-			has_game_rule = {
-				rule = allow_coups
-				option = BLOCKED
-			}
-		}
-		custom_trigger_tooltip = {
-			tooltip = RULE_COUP_BLOCKED_TT
-			always = no
-		}
-	}
 }
 
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {

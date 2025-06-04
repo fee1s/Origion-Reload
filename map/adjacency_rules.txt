@@ -139,6 +139,660 @@ adjacency_rule =
 	offset = { 1 0 -6 }
 }
 
+#Strait of Sicily
+adjacency_rule =
+{
+	name = "SICILIAN_NARROWS"
+
+	contested =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	enemy =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	is_disabled = {
+		AND = {
+			ORIGION_is_in_faction_with_allies = yes
+			446 = { is_controlled_by = ITA }
+			458 = { is_controlled_by = ITA }
+		}
+		tooltip = SICILIAN_NARROWS_tt
+	}
+	
+	required_provinces = { 11969 9994 7059 10074 }
+	
+	icon = 11969	
+	offset = { 25.0 0.0 10.0 }
+}
+
+#Strait of Messina
+adjacency_rule =
+{
+	name = "MESSINA_NARROWS"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 4159 9990 }
+	
+	icon = 4159	
+	offset = { 6.0 -2.0 2.0 }
+}
+
+adjacency_rule =
+{
+	name = "CHINA_TAIWAN"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 12068 1091 11959 7214 7071 11986 7027 4196 }
+	
+	icon = 5322
+}
+
+adjacency_rule =
+{
+	name = "TAIWAN_OKINAWA"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 11914 13501 }
+	
+	icon = 2829
+	offset = { -5 0 10 }
+}
+
+adjacency_rule =
+{
+	name = "OKINAWA_JAPAN"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7115 4102 }
+	
+	icon = 8318
+}
+
+adjacency_rule =
+{
+	name = "INNER_JAPAN_1"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 10092 7046 }
+	
+	icon = 7046
+}
+
+adjacency_rule =
+{
+	name = "INNER_JAPAN_2"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 9859 3962 }
+	
+	icon = 3962
+}
+
+adjacency_rule =
+{
+	name = "INNER_JAPAN_3"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 13037 1515 1399 }
+	
+	icon = 1515
+}
+
+adjacency_rule =
+{
+	name = "INNER_JAPAN_4"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1025 4056 10011 }
+	
+	icon = 10011
+}
+adjacency_rule =
+{
+	name = "AST_1"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1644 1283 1310 4648 10338 }
+	
+	icon = 5563
+}
+adjacency_rule =
+{
+	name = "AST_2"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1329 10251 12237 7365 1301 }
+	
+	icon = 1329
+}
+adjacency_rule =
+{
+	name = "RABAUL"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7251 4421 10166 10184 10206 1286 7412 }
+	
+	icon = 7251
+}
+adjacency_rule =
+{
+	name = "GUADALKANAL"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1042 1085 1269 1358 1370 4226 4252 4292 4378 7437 10234 10291 10319 12265  }
+	
+	icon = 1269
+}
+adjacency_rule =
+{
+	name = "NEWCALEDONIA"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1237 1263 4231 4247 4268 7264 10160 12120 12132 7390 }
+	
+	icon = 5609
+}
+adjacency_rule =
+{
+	name = "NEWZEALAND"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1814 12632 4804 7826 4819 }
+	
+	icon = 1814
+}
+adjacency_rule =
+{
+	name = "TASMANIA"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7798 7811 1759 10637 10665 5181 12645}
+	
+	icon = 5240
+}
+
+adjacency_rule =
+{
+	name = "LEEWIN"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 7453 1652 8228 8243 }
+	
+	icon = 7453
+}
+
 #Gibraltar Strait
 adjacency_rule =
 {

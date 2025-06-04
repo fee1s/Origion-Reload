@@ -25,7 +25,7 @@ set_country_flag = { flag = ITA_missiolinis_system_active_flag }
 
 add_timed_idea = {
     idea = winter_debuff
-	days = 2434
+	days = 2251
 }
 
 set_rule = {
@@ -37,6 +37,7 @@ add_ideas = {
 	free_trade
 	limited_conscription
 	partial_economic_mobilisation
+	# ITA_fighter_idea
 }
 
 if = {
@@ -46,16 +47,15 @@ if = {
 
 	create_equipment_variant = {
 		name = "Origion Italy Medium"
-		type = medium_plane_airframe_1
+		type = medium_plane_airframe_0
 		modules = {
-			fixed_main_weapon_slot = light_mg_2x
+			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
 			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = flying_boat_medium
-			special_type_slot_2 = empty
-			special_type_slot_3 = empty
+			engine_type_slot = engine_2_3x
+			special_type_slot_1 = fuel_tanks_medium
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = fuel_tanks_medium
 			special_type_slot_4 = empty
 		}
 	}
@@ -194,7 +194,7 @@ set_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0 }
 set_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0 }
 
 add_dynamic_modifier = { modifier = ITA_military_industry_dynamic_modifier }
-add_ideas = ITA_hidden_research_penalties_ns #TODO_Manu: Hidden NS to apply research penalties as part of the Military Industry Dynamic Modifier. Delete when code support is in
+
 
 
 #REGIO ESERCITO
@@ -239,12 +239,12 @@ set_variable = { ITA_re_supply_consumption_factor = 0 }
 set_variable = { ITA_re_acclimatization_hot_climate_gain_factor = 0 }
 set_variable = { ITA_re_heat_attrition_factor = 0 }
 
-add_dynamic_modifier = { modifier = ITA_regio_esercito_dynamic_modifier }
+add_dynamic_modifier = { modifier = ITA_regio_esercito_dynamic_modifier } 
 
 
 #REGIA AERONAUTICA
 set_variable = { ITA_ra_air_ace_generation_chance_factor = 0.1 }
-set_variable = { ITA_ra_formation_flying_bonus_in_combat = 0.05 }
+set_variable = { ITA_ra_air_superiority_bonus_in_combat = 0.05 }
 set_variable = { ITA_ra_air_doctrine_cost_factor = 0.1 }
 set_variable = { ITA_ra_air_nav_efficiency = -0.1 }
 set_variable = { ITA_ra_air_night_penalty = 0.15 }
@@ -256,10 +256,13 @@ set_variable = { ITA_ra_air_mission_xp_gain_factor = 0 }
 set_variable = { ITA_ra_strategic_bomb_visibility = 0 }
 set_variable = { ITA_ra_air_strategic_bomber_bombing_factor = 0 }
 set_variable = { ITA_ra_air_range_factor = 0 }
-set_variable = { ITA_ra_formation_flying_efficiency = 0 }
+set_variable = { ITA_ra_air_superiority_efficiency = 0 }
 set_variable = { ITA_ra_air_intercept_efficiency = 0 }
+set_variable = { ITA_ra_sp_air_intercontinental_bomber_speed_factor = 0 }
+set_variable = { ITA_ra_sp_air_mothership_aircraft_speed_factor = 0 }
 
 add_dynamic_modifier = { modifier = ITA_regia_aeronautica_dynamic_modifier }
+
 
 
 #REGIA MARINA
@@ -388,7 +391,7 @@ if = {
 		mtg_transport = 1
 		coastal_defense_ships = 1
 		improved_airplane_launcher = 1
-		
+		improved_ship_torpedo_launcher = 1
 		early_ship_hull_carrier = 1
 		basic_ship_hull_carrier = 1
 	}
@@ -399,26 +402,18 @@ if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "ITA_1936_air_bba"
 		set_technology = {
-			aa_lmg = 1
-			early_bombs = 1
-			aircraft_construction = 1
-			engines_1 = 1
-			engines_2 = 1
-			iw_small_airframe = 1
-			iw_medium_airframe = 1
-			basic_small_airframe = 1
-			basic_medium_airframe = 1
-			air_torpedoe_1 = 1
-		}
-	else = {
-		set_air_oob = "ITA_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			early_bomber = 1
-			naval_bomber1 = 1
-			CAS1 = 1
-		}
-	}
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	early_bombs = 1
+	aircraft_construction = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
+	air_torpedoe_1 = 1
+}
 }
 
 # DIPLOMACY / WAR 36
@@ -858,17 +853,17 @@ add_equipment_to_stockpile = {
 
 add_equipment_to_stockpile = {
 	type = support_equipment_1
-	amount = 624
+	amount = 1041
 }
 
 add_equipment_to_stockpile = {
     type = infantry_equipment_1
-	amount = 21628
+	amount = 45758
 }
 
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 87
+	amount = 105
 }
 
 if = {
@@ -888,9 +883,9 @@ if = {
 				fixed_ship_armor_slot = ship_armor_cruiser_3
 				fixed_ship_secondaries_slot = dp_ship_secondaries_2
 				front_1_custom_slot = ship_light_medium_battery_2
-				mid_1_custom_slot = ship_light_medium_battery_2
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_torpedo_2
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_airplane_launcher_2
 			}
 		}
 	# Battleships #
@@ -906,28 +901,11 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bb_2
+			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_heavy_battery_2
 			mid_2_custom_slot = ship_heavy_battery_2
 			rear_1_custom_slot = ship_airplane_launcher_2
-		}
-	}
-	
-	create_equipment_variant = {
-		name = "Origion Italy Carrier"
-		type = ship_hull_carrier_1
-		name_group = ITA_CV_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_deck_slot_1 = ship_deck_space
-			fixed_ship_deck_slot_2 = ship_deck_space
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = carrier_ship_engine_2
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			front_1_custom_slot = ship_deck_space
-			mid_1_custom_slot = ship_deck_space
 		}
 	}
 }
@@ -1089,7 +1067,7 @@ if = {
 }
 
 add_equipment_to_stockpile = {
-    type = medium_plane_airframe_1
+    type = medium_plane_airframe_0
 	amount = 560
 	variant_name = "Origion Italy Medium"
 }

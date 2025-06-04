@@ -15,29 +15,18 @@ if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "USA_1936_air_bba"
 		set_technology = {
-			iw_small_airframe = 1
-			basic_small_airframe = 1
-			iw_medium_airframe = 1
-			basic_medium_airframe = 1
-			engines_1 = 1
-			engines_2 = 1
-			aa_lmg = 1
-			early_bombs = 1
-			aircraft_construction = 1
-			air_torpedoe_1 = 1
-		}
-	else = {
-		set_air_oob = "USA_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			cv_early_fighter = 1
-			cv_naval_bomber1 = 1
-			cv_CAS1 = 1
-			naval_bomber1 = 1
-			CAS1 = 1
-			early_bomber = 1
-		}
-	}
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	early_bombs = 1
+	aircraft_construction = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
+	air_torpedoe_1 = 1
+}
 }
 
 set_research_slots = 4
@@ -94,7 +83,6 @@ if = {
 		gwtank_chassis = 1
 		basic_light_tank_chassis = 1
 	}
-	add_ideas = bureau_of_ordnance_spirit
 }
 
 if = {
@@ -138,6 +126,7 @@ if = {
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
 		improved_airplane_launcher = 1
+		improved_ship_torpedo_launcher = 1
 		basic_dp_light_battery = 1
 		basic_ship_hull_heavy = 1
 	}
@@ -372,6 +361,9 @@ recruit_character = USA_robert_taft
 recruit_character = USA_donald_nelson
 recruit_character = USA_henry_stimson
 recruit_character = USA_victor_perlo
+recruit_character = USA_cordell_hull
+recruit_character = USA_harry_white
+recruit_character = USA_joseph_patterson
 
 # NYSE
 
@@ -492,17 +484,16 @@ if = {
 		has_dlc = "By Blood Alone"
 	}
 	create_equipment_variant = {
-		name = "B-18 Origion" #
-		type = medium_plane_airframe_1
+		name = "B-18 Origion" 
+		type = medium_plane_airframe_0
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			fixed_auxiliary_weapon_slot_2 = small_bomb_bay
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = empty
-			special_type_slot_2 = empty
-			special_type_slot_3 = empty
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+			engine_type_slot = engine_2_3x
+			special_type_slot_1 = fuel_tanks_medium
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = fuel_tanks_medium
 			special_type_slot_4 = empty
 		}
 		icon = "GFX_USA_early_bomber_medium"
@@ -566,9 +557,9 @@ if = {
 				fixed_ship_armor_slot = ship_armor_cruiser_3
 				fixed_ship_secondaries_slot = dp_ship_secondaries_2
 				front_1_custom_slot = ship_light_medium_battery_2
-				mid_1_custom_slot = ship_light_medium_battery_2
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_torpedo_2
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_airplane_launcher_2
 			}
 		}
 	# Battleships #
@@ -584,7 +575,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bb_2
+			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_heavy_battery_2
 			mid_2_custom_slot = ship_heavy_battery_2
@@ -870,7 +861,7 @@ add_equipment_to_stockpile = {
 #}
 
 add_equipment_to_stockpile = {
-    type = medium_plane_airframe_1
+    type = medium_plane_airframe_0
 	amount = 481
 	variant_name = "B-18 Origion"
 }

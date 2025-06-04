@@ -64,13 +64,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ commando infantry_officer infantry_leader Trickster naval_invader urban_assault_specialist ranger }
+			traits={ commando career_officer infantry_officer infantry_leader Trickster  }
 			skill=6
 			attack_skill=3
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
-			legacy_id=-1
+			legacy_id=16
 		}
 	}
 
@@ -83,13 +83,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ commando infantry_officer infantry_leader Trickster naval_invader desert_fox urban_assault_specialist }
+			traits={ commando career_officer infantry_officer infantry_leader Trickster  }
 			skill=6
 			attack_skill=3
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
-			legacy_id=-1
+			legacy_id=17
 		}
 	}
 
@@ -102,32 +102,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ commando infantry_officer infantry_leader Trickster naval_invader jungle_rat trait_mountaineer }
+			traits={ commando career_officer infantry_officer infantry_leader Trickster  }
 			skill=6
 			attack_skill=3
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
-			legacy_id=-1
-		}
-	}
-
-	RAJ_herbert_fitzherbert={
-		name=RAJ_herbert_fitzherbert
-		portraits={
-			army={
-				large="GFX_RAJ_herbert_fitzherbert"
-				small=GFX_portrait_RAJ_herbert_fitzherbert_small
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=2
-			legacy_id=-1
+			legacy_id=18
 		}
 	}
 
@@ -227,28 +208,6 @@ characters={
 			
 			traits = {
 				air_warfare_theorist
-			}
-		}
-	}
-
-	RAJ_bahadur_jayla_of_khoch_bahur={
-		name=RAJ_bahadur_jayla_of_khoch_bahur
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_arab_1"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = RAJ_bahadur_jayla_of_khoch_bahur
-			ledger = navy
-			allowed = {
-				original_tag = RAJ
-			}
-			
-			traits = {
-				naval_theorist
 			}
 		}
 	}
@@ -399,102 +358,6 @@ characters={
 		}
 	}
 
-
-	### NAVY CHIEFS ###
-
-	RAJ_louis_mountbatten={
-		name=RAJ_louis_mountbatten
-		portraits={
-			army={
-				small="GFX_idea_RAJ_louis_mountbatten" #small="GFX_idea_generic_navy_europe_2"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_louis_mountbatten
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	RAJ_william_e_parry={
-		name=RAJ_william_e_parry
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_william_e_parry
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_commerce_raiding_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	RAJ_bhaskar_soman={
-		name=RAJ_bhaskar_soman
-		portraits={
-			army={
-				small="GFX_idea_RAJ_bhaskar_soman" #small="GFX_idea_generic_navy_arab_3"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_bhaskar_soman
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_decisive_battle_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-
-	RAJ_ram_dass_katari={
-		name=RAJ_ram_dass_katari
-		portraits={
-			army={
-				small="GFX_idea_RAJ_ram_dass_katari" #small="GFX_idea_generic_navy_arab_2"
-			}
-		}
-		advisor={
-			slot = navy_chief
-			idea_token = RAJ_ram_dass_katari
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				navy_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-	}
-	
-
 	### AIR CHIEFS ###
 
 	RAJ_bruce_w_mcpherson={
@@ -617,30 +480,6 @@ characters={
 		}
 	}
 
-	RAJ_aspy_merwan_engineer={
-		name=RAJ_aspy_merwan_engineer
-		portraits={
-			army={
-				small="GFX_idea_RAJ_aspy_merwan_engineer" #small="GFX_idea_generic_air_arab_2"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = RAJ_aspy_merwan_engineer
-			ledger = navy
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				air_naval_strike_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
 	RAJ_mehar_singh={
 		name=RAJ_mehar_singh
 		portraits={
@@ -665,109 +504,98 @@ characters={
 		}
 	}
 
-	RAJ_w_h_gould_bradford={
-		name=RAJ_w_h_gould_bradford
+	### ADNIRALS ###
+
+	RAJ_herbert_fitzherbert={
+		name=RAJ_herbert_fitzherbert
+		portraits={
+			army={
+				large="GFX_RAJ_herbert_fitzherbert"
+				small=GFX_portrait_RAJ_herbert_fitzherbert_small
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = erbert_fitzherbert
+			ledger = navy
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				naval_aviation_pioneer
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician ironside }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
+
+	RAJ_william_e_parry={
+		name=RAJ_william_e_parry
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = RAJ_w_h_gould_bradford
-			ledger = navy
+			slot = navy_chief
+			idea_token = william_e_parry
 			allowed = {
 				original_tag = RAJ
 			}
 			traits = {
-				navy_anti_submarine_2
+				navy_chief_decisive_battle_1
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
+		}
+		navy_leader = {
+			traits={ blockade_runner seawolf }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
 	}
 
+	RAJ_louis_mountbatten={
+		name=RAJ_louis_mountbatten
+		portraits={
+			army={
+				small="GFX_idea_RAJ_louis_mountbatten" #small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = louis_mountbatten
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				navy_chief_commerce_raiding_1
+			}
+			cost = 100
+		}
+		navy_leader = {
+			traits={ fleet_protector superior_tactician }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=0
+		}
+	}
 
 	### POLITICAL ADVISORS ###
-
-	RAJ_bhimrao_ramji_ambedkar={
-		name=RAJ_bhimrao_ramji_ambedkar
-		portraits={
-			army={
-				smalL="GFX_idea_RAJ_bhimrao_ramji_ambedkar" #small="GFX_idea_generic_political_advisor_india_1"
-			}
-		}		
-	}
-
-	RAJ_karam_singh_mann={
-		name=RAJ_karam_singh_mann
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_india_2"
-			}
-		}
-	}
-
-	RAJ_subhas_chanda_bose={
-		name=RAJ_subhas_chanda_bose
-		portraits={
-			army={
-				small="GFX_idea_RAJ_subhas_chanda_bose" #small="GFX_idea_generic_political_advisor_india_1"
-			}
-			civilian ={
-				large = "GFX_RAJ_subhas_chandra_bose" #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism)
-			}
-		}		
-	}
-	
-	RAJ_john_edward_golightly={
-		name=RAJ_john_edward_golightly
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_5"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_john_edward_golightly
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				silent_workhorse 
-			}
-		}
-	}
-	
-	RAJ_chakravarti_rajagopalachari={
-		name=RAJ_chakravarti_rajagopalachari
-		portraits={
-			army={
-				small="GFX_idea_RAJ_chakravarti_rajagopalachari" #small="GFX_idea_generic_political_advisor_arab_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_chakravarti_rajagopalachari
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				popular_figurehead 
-			}
-		}
-	}
-
-	RAJ_mahatma_mohandas_gandhi={
-		name=RAJ_mahatma_mohandas_gandhi
-		portraits={
-			army={
-				small="GFX_idea_RAJ_mahatma_mohandas_gandhi" #small="GFX_idea_generic_political_advisor_arab_3"
-			}
-		}		
-	}
 
 	RAJ_john_mathai={
 		name=RAJ_john_mathai
@@ -788,15 +616,82 @@ characters={
 		}
 	}
 
-	RAJ_sir_mohammed_iqbal={
-		name=RAJ_sir_mohammed_iqbal
+	RAJ_bhimrao_ramji_ambedkar={
+		name=RAJ_bhimrao_ramji_ambedkar
 		portraits={
 			army={
-				small="GFX_idea_RAJ_sir_mohammed_iqbal" #small="GFX_idea_generic_political_advisor_arab_3"
+				smalL="GFX_idea_RAJ_bhimrao_ramji_ambedkar" #small="GFX_idea_generic_political_advisor_india_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_bhimrao_ramji_ambedkar
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				war_industrialist 
+			}
+		}	
+	}
+
+	RAJ_john_edward_golightly={
+		name=RAJ_john_edward_golightly
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_john_edward_golightly
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				silent_workhorse 
 			}
 		}
 	}
-	
+
+	RAJ_chakravarti_rajagopalachari={
+		name=RAJ_chakravarti_rajagopalachari
+		portraits={
+			army={
+				small="GFX_idea_RAJ_chakravarti_rajagopalachari" #small="GFX_idea_generic_political_advisor_arab_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_chakravarti_rajagopalachari
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				popular_figurehead 
+			}
+		}
+	}
+
+	RAJ_karam_singh_mann={
+		name=RAJ_karam_singh_mann
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_india_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_karam_singh_mann
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				technocrat 
+			}
+		}
+	}
+
 	RAJ_agha_khan_iii={
 		name=RAJ_agha_khan_iii
 		portraits={
@@ -811,10 +706,8 @@ characters={
 				original_tag = RAJ
 			}
 			traits = {
-				ideological_crusader 
+				financial_expert 
 			}
 		}
 	}
-	
-	#Illusive Gentleman auto-generated
 }

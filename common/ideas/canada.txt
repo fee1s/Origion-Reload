@@ -14,16 +14,18 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = chi_war_of_resistance
 			
 			modifier = {
 				defensive_war_stability_factor = 0.25
 				amphibious_invasion_defence = 0.15
+
             }
 		}
-		
-		CAN_facel = {
 
+		CAN_check_war_second = {
+			name = CAN_check_war
+			
 			allowed = {
 				always = no
 			}
@@ -34,38 +36,115 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+            }
+		}
 
-			targeted_modifier = {
-                tag = GER
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
+		CAN_check_war_third_left = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.10
             }
-			targeted_modifier = {
-                tag = ITA
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
+		}
+		
+		CAN_check_war_third_right = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
             }
-			targeted_modifier = {
-                tag = ROM
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
+		}
+		
+		CAN_check_war_third_left_with_right = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
             }
-			targeted_modifier = {
-                tag = BUL
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
-			targeted_modifier = {
-                tag = HUN
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
-			targeted_modifier = {
-                tag = JAP
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
+		}
+		
+		CAN_check_war_end = {
+			name = CAN_check_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_war_of_resistance
+			
+			modifier = {
+				defensive_war_stability_factor = 0.25
+				amphibious_invasion_defence = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
+			}
 		}
 		
 		CAN_euro = {
@@ -80,13 +159,13 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = FIN_german_threat
 
-			targeted_modifier = {
-                tag = GER
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
 		}
 		
 		CAN_asia = {
@@ -103,11 +182,11 @@ ideas = {
 
 			picture = idea_chi_army_corruption3
 
-			targeted_modifier = {
-                tag = JAP
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
+			equipment_bonus = {
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
 		}
 		
 		CAN_max = {
@@ -122,7 +201,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_army_corruption3
+			picture = FIN_finnish_federation_of_trade_unions_heavy
 
 			modifier = {
                 production_factory_efficiency_gain_factor = 0.05
@@ -142,7 +221,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_goods_red_bonus
+			picture = FIN_finnish_federation_of_trade_unions_light
 
 			modifier = {
 				consumer_goods_factor = -0.10
@@ -161,7 +240,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_goods_red_bonus
+			picture = FIN_finnish_federation_of_trade_unions
 
 			modifier = {
 				industrial_capacity_factory = 0.075

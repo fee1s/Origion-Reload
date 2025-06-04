@@ -37,11 +37,6 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0.25		
-				is_government_in_exile = yes 
-				original_tag = ETH 
-			}
 		}
 		
 		supports_ai_strategy = ai_focus_defense
@@ -65,11 +60,6 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0.25		
-				is_government_in_exile = yes  
-				original_tag = ETH
-			}
 		}
 		
 		supports_ai_strategy = ai_focus_defense
@@ -78,35 +68,7 @@ continuous_focus_palette = {
 		
 		available_if_capitulated = yes
 	}
-
-	focus = {
-		id = continuous_suppression
-		
-		icon = GFX_goal_continuous_suppression
-		
-		available = {
-		}
-		
-		modifier = {
-			resistance_target = -0.05
-		}
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				
-				num_occupied_states < 1
-			}
-		}
-		
-		supports_ai_strategy = ai_focus_military_advancements
-		
-		daily_cost = 1
-		
-		available_if_capitulated = yes
-	}
-
+	
 	focus = {
 		id = continuous_repair
 		
@@ -121,11 +83,6 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				
-				has_damaged_buildings = no
-			}
 		}
 		
 		supports_ai_strategy = ai_focus_military_advancements
@@ -181,21 +138,20 @@ continuous_focus_palette = {
 	}
 	
 	focus = {
-		id = continuous_boost_freedom
+		id = continuous_ideological_campaign_fascism
 		
-		icon = GFX_goal_continuous_boost_freedom
+		icon = GFX_goal_continuous_def_against_influence
 		
 		available = {
-			hidden_trigger = { has_dlc = "Together for Victory" }
-			is_subject = yes			
+			has_government = fascism
 		}
 		
 		modifier = {
-			autonomy_gain = 0.5
+			fascism_drift = 0.05
 		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 		
 		supports_ai_strategy = ai_focus_military_advancements
@@ -204,27 +160,130 @@ continuous_focus_palette = {
 		
 		available_if_capitulated = yes
 	}
-
+	
 	focus = {
-		id = continuous_restrict_freedom
+		id = continuous_ideological_campaign_democracy
 		
-		icon = GFX_goal_continuous_restrict_freedom
+		icon = GFX_goal_continuous_def_against_influence
 		
 		available = {
-			hidden_trigger = { has_dlc = "Together for Victory" }
+			has_government = democratic
 		}
-
-		enable = {
-			num_subjects > 0
-		}
-
+		
 		modifier = {
-			custom_modifier_tooltip = subject_autonomy_mod_tt
-			hidden_modifier = { subjects_autonomy_gain = -0.5 }
+			democratic_drift = 0.05
 		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = continuous_ideological_campaign_communism
+		
+		icon = GFX_goal_continuous_def_against_influence
+		
+		available = {
+			has_government = communism
+		}
+		
+		modifier = {
+			communism_drift = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = continuous_ideological_campaign_neutrality
+		
+		icon = GFX_goal_continuous_def_against_influence
+		
+		available = {
+			has_government = neutrality
+		}
+		
+		modifier = {
+			neutrality_drift = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = continuous_steady_course
+		
+		icon = GFX_goal_continuous_increase_nu
+		
+		modifier = {
+			stability_weekly = 0.001
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = continuous_peoples_militia
+		
+		icon = GFX_focus_ETH_continuous_strengthen_the_black_lions
+		
+		modifier = {
+			weekly_manpower = 2500
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		supports_ai_strategy = ai_focus_military_advancements
+		
+		daily_cost = 1
+		
+		available_if_capitulated = yes
+	}
+	
+	focus = {
+		id = continuous_mobilization_reform
+		
+		icon = GFX_goal_continuous_suppression
+		
+		modifier = {
+			mobilization_speed = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 1
 		}
 		
 		supports_ai_strategy = ai_focus_military_advancements

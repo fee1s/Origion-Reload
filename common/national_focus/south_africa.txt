@@ -76,10 +76,7 @@
 		}
 
 		available = {
-			OR = {
-				threat > 0.2
-				NOT = { has_government = democratic }
-			}
+			date > 1937.8.1
 		}
 		
 		bypass = {
@@ -298,17 +295,6 @@
 		ai_will_do = {
 			factor = -1
 		}
-
-		available = {
-			OR = {
-				is_subject_of = ENG
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-			ENG = { has_war = no }
-		}
 		
 		bypass = {
 
@@ -411,20 +397,17 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SAF_joint_air_training_scheme
+			set_technology = {
+			    dive_bombing = 1
+				battlefield_support = 1
+                low_echelon_support = 1
+				cas_veteran_initiative = 1
+			}
 		}
 	}
 
@@ -2494,37 +2477,8 @@
 		available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_RESEARCH }
 
-		completion_reward = {
-			create_corps_commander = { 
-					name = "Mister Snikers"
-					gfx = GFX_Portrait_Africa_Generic_land_2
-					
-					traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
-					skill = 6
-					attack_skill = 5
-					defense_skill = 4
-					planning_skill = 4
-					logistics_skill = 4
-				}
-				create_corps_commander = { 
-					name = "Mister Mars"
-					gfx = GFX_Portrait_Africa_Generic_land_2
-					
-					traits = { career_officer infantry_officer infantry_leader Trickster}
-					skill = 6
-					attack_skill = 2
-					defense_skill = 4
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				
-			army_experience = 200
-			add_doctrine_cost_reduction = {
-				name = SAF_special_service_battalion
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
-			}
+		completion_reward = {	
+			army_experience = 350
 		}
 	}
 
@@ -2559,8 +2513,10 @@
 			add_tech_bonus = {
 				name = SAF_improve_the_three_oh_three
 				bonus = 1.0
-				uses = 1
+				uses = 3
 				technology = improved_infantry_weapons
+				technology = improved_infantry_weapons_2
+				technology = advanced_infantry_weapons
 			}
 		}
 	}
@@ -2579,14 +2535,6 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2595,13 +2543,11 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SAF_q_services_corps
-				bonus = 1.0
-				uses = 2
-				technology = motorised_infantry
-				technology = tech_logistics_company
-				technology = tech_logistics_company2
+			    bonus = 1
+			    uses = 3
+				technology = tech_flamethrower_brigade3
+				technology = tech_field_hospital3
 				technology = tech_logistics_company3
-				technology = tech_logistics_company4
 			}
 		}
 	}
@@ -2620,26 +2566,17 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = SAF__south_african_military_college
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
-				category = land_doctrine
+				technology = antitank3
 			}
 		}
 	}
@@ -2652,18 +2589,10 @@
 		y = 3
 		relative_position_id = SAF_special_service_battalion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2689,7 +2618,7 @@
 		y = 3
 		relative_position_id = SAF_special_service_battalion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2711,9 +2640,9 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SAF_sa_engineer_corps
-				bonus = 1.0
-				uses = 1
-				category = support_tech
+			    bonus = 1
+			    uses = 1
+				technology = tech_engineers3
 			}
 		}
 	}
@@ -2726,18 +2655,10 @@
 		y = 4
 		relative_position_id = SAF_special_service_battalion
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2750,7 +2671,6 @@
 				name = SAF_equipment_effort
 				bonus = 1.0
 				uses = 1
-				technology = advanced_infantry_weapons
 				technology = antitank5
 			}
 		}
@@ -2768,14 +2688,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2826,9 +2738,7 @@
 				name = SAF_south_african_special_forces
 				bonus = 1.0
 				uses = 1
-				category = para_tech
-				category = marine_tech
-				category = mountaineers_tech
+				technology = amphibious_drive
 			}
 		}
 	}
@@ -2865,7 +2775,15 @@
 				name = SAF_armor_effort
 				bonus = 1.0
 				uses = 1
-				category = armor
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = SAF_armor_effort
+				bonus = 1.0
+				uses = 1
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}

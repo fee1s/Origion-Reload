@@ -277,7 +277,7 @@ ideas = {
 			picture = generic_navy_bonus
 			
 			equipment_bonus = {
-				ship_hull_light = {
+				light_cruiser = {
 					build_cost_ic = -0.1 instant = yes
 				}
 				convoy = {
@@ -1725,8 +1725,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				experience_gain_destroyer_combat_factor = 0.1
-				experience_gain_destroyer_training_factor = 0.1
+				navy_submarine_detection_factor = 0.1
+				convoy_retreat_speed = 0.25
 			}
 		}
 

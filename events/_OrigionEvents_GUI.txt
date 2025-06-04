@@ -1,0 +1,2264 @@
+add_namespace = origion_hidden
+
+# Скрытый ивент, тригериться на захват региона
+
+country_event = { # Pacific Gui
+	id = origion_hidden.1
+	
+	hidden = yes
+	major = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+	    has_country_flag = pacific_war_started_dd_flag
+		OR = {
+		    any_country = {
+		        controls_birma = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = birma_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = birma_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_taiwan = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = taiwan_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = taiwan_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_papua = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = papua_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = papua_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_raj = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = raj_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = raj_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_australia = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = australia_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = australia_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_hawai = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = hawai_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = hawai_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_phi = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = phi_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = phi_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_okinawa = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = okinawa_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = okinawa_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_iwojima = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = iwojima_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = iwojima_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_malaya = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = malaya_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = malaya_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_indochina = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = indochina_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = indochina_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_solomon = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = solomon_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = solomon_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_sumatra = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = sumatra_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = sumatra_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_jawa = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = jawa_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = jawa_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_mariana = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = mariana_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = mariana_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_caroline = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = caroline_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = caroline_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_marshall = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = marshall_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = marshall_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_palau = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = palau_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = palau_conquered_JAP }
+					}
+				}
+			}
+			any_country = {
+			    controls_newzeland = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = newzeland_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = newzeland_conquered_JAP }
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    ### БИРМА ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_birma = yes
+			        }
+					NOT = { has_global_flag = birma_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = birma_conquered_JAP
+					}
+					clr_global_flag = birma_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = birma_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_birma = yes
+			        }
+					NOT = { has_global_flag = birma_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = birma_conquered_ALLY
+					}
+					clr_global_flag = birma_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = birma_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ТАЙВАНЬ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_taiwan = yes
+			        }
+					NOT = { has_global_flag = taiwan_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = taiwan_conquered_JAP
+					}
+					clr_global_flag = taiwan_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = taiwan_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_taiwan = yes
+			        }
+					NOT = { has_global_flag = taiwan_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = taiwan_conquered_ALLY
+					}
+					clr_global_flag = taiwan_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = taiwan_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ГВИНЕЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_papua = yes
+			        }
+					NOT = { has_global_flag = papua_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = papua_conquered_JAP
+					}
+					clr_global_flag = papua_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = papua_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_papua = yes
+			        }
+					NOT = { has_global_flag = papua_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = papua_conquered_ALLY
+					}
+					clr_global_flag = papua_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = papua_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ИНДИЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_raj = yes
+			        }
+					NOT = { has_global_flag = raj_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = raj_conquered_JAP
+					}
+					clr_global_flag = raj_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = raj_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_raj = yes
+			        }
+					NOT = { has_global_flag = raj_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = raj_conquered_ALLY
+					}
+					clr_global_flag = raj_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					} 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = raj_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### АВСТРАЛИЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_australia = yes
+			        }
+					NOT = { has_global_flag = australia_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = australia_conquered_JAP
+					}
+					clr_global_flag = australia_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = australia_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_australia = yes
+			        }
+					NOT = { has_global_flag = australia_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = australia_conquered_ALLY
+					}
+					clr_global_flag = australia_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = australia_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ГАВАЙИ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_hawai = yes
+			        }
+					NOT = { has_global_flag = hawai_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = hawai_conquered_JAP
+					}
+					clr_global_flag = hawai_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = hawai_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_hawai = yes
+			        }
+					NOT = { has_global_flag = hawai_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = hawai_conquered_ALLY
+					}
+					clr_global_flag = hawai_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = hawai_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ГАВАЙИ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_phi = yes
+			        }
+					NOT = { has_global_flag = phi_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = phi_conquered_JAP
+					}
+					clr_global_flag = phi_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = phi_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_phi = yes
+			        }
+					NOT = { has_global_flag = phi_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = phi_conquered_ALLY
+					}
+					clr_global_flag = phi_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = phi_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ОКИНАВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_okinawa = yes
+			        }
+					NOT = { has_global_flag = okinawa_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = okinawa_conquered_JAP
+					}
+					clr_global_flag = okinawa_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = okinawa_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_okinawa = yes
+			        }
+					NOT = { has_global_flag = okinawa_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = okinawa_conquered_ALLY
+					}
+					clr_global_flag = okinawa_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = okinawa_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ИВОДЗИМА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_iwojima = yes
+			        }
+					NOT = { has_global_flag = iwojima_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = iwojima_conquered_JAP
+					}
+					clr_global_flag = iwojima_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = iwojima_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_iwojima = yes
+			        }
+					NOT = { has_global_flag = iwojima_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = iwojima_conquered_ALLY
+					}
+					clr_global_flag = iwojima_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = iwojima_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАЛАЙА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_malaya = yes
+			        }
+					NOT = { has_global_flag = malaya_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = malaya_conquered_JAP
+					}
+					clr_global_flag = malaya_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = malaya_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_malaya = yes
+			        }
+					NOT = { has_global_flag = malaya_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = malaya_conquered_ALLY
+					}
+					clr_global_flag = malaya_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = malaya_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ИНДОКИТАЙ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_indochina = yes
+			        }
+					NOT = { has_global_flag = indochina_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = indochina_conquered_JAP
+					}
+					clr_global_flag = indochina_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = indochina_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_indochina = yes
+			        }
+					NOT = { has_global_flag = indochina_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = indochina_conquered_ALLY
+					}
+					clr_global_flag = indochina_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = indochina_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### СОЛОМОНОВЫ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_solomon = yes
+			        }
+					NOT = { has_global_flag = solomon_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = solomon_conquered_JAP
+					}
+					clr_global_flag = solomon_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = solomon_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_solomon = yes
+			        }
+					NOT = { has_global_flag = solomon_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = solomon_conquered_ALLY
+					}
+					clr_global_flag = solomon_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = solomon_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### СУМАТРА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_sumatra = yes
+			        }
+					NOT = { has_global_flag = sumatra_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sumatra_conquered_JAP
+					}
+					clr_global_flag = sumatra_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = sumatra_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_sumatra = yes
+			        }
+					NOT = { has_global_flag = sumatra_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sumatra_conquered_ALLY
+					}
+					clr_global_flag = sumatra_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = sumatra_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ЯВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_jawa = yes
+			        }
+					NOT = { has_global_flag = jawa_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = jawa_conquered_JAP
+					}
+					clr_global_flag = jawa_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = jawa_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_jawa = yes
+			        }
+					NOT = { has_global_flag = jawa_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = jawa_conquered_ALLY
+					}
+					clr_global_flag = jawa_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = jawa_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАРИАНСКИЕ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_mariana = yes
+			        }
+					NOT = { has_global_flag = mariana_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = mariana_conquered_JAP
+					}
+					clr_global_flag = mariana_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = mariana_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_mariana = yes
+			        }
+					NOT = { has_global_flag = mariana_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = mariana_conquered_ALLY
+					}
+					clr_global_flag = mariana_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = mariana_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### КАРОЛИНСКИЕ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_caroline = yes
+			        }
+					NOT = { has_global_flag = caroline_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = caroline_conquered_JAP
+					}
+					clr_global_flag = caroline_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = caroline_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_caroline = yes
+			        }
+					NOT = { has_global_flag = caroline_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = caroline_conquered_ALLY
+					}
+					clr_global_flag = caroline_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = caroline_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАРШАЛЛОВЫ ОСТРОВА ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_marshall = yes
+			        }
+					NOT = { has_global_flag = marshall_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = marshall_conquered_JAP
+					}
+					clr_global_flag = marshall_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = marshall_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_marshall = yes
+			        }
+					NOT = { has_global_flag = marshall_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = marshall_conquered_ALLY
+					}
+					clr_global_flag = marshall_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = marshall_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### ПАЛАУ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_palau = yes
+			        }
+					NOT = { has_global_flag = marshall_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = palau_conquered_JAP
+					}
+					clr_global_flag = palau_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = palau_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_palau = yes
+			        }
+					NOT = { has_global_flag = palau_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = palau_conquered_ALLY
+					}
+					clr_global_flag = palau_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = palau_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### НОВАЯ ЗЕЛАНДИЯ ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_newzeland = yes
+			        }
+					NOT = { has_global_flag = newzeland_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = newzeland_conquered_JAP
+					}
+					clr_global_flag = newzeland_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = newzeland_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_newzeland = yes
+			        }
+					NOT = { has_global_flag = newzeland_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = newzeland_conquered_ALLY
+					}
+					clr_global_flag = newzeland_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = newzeland_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+		}
+	}
+}
+
+country_event = { # Africa Gui
+	id = origion_hidden.2
+	
+	hidden = yes
+	major = yes
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+	    has_global_flag = africa_started
+		OR = {
+		    any_country = {
+		        controls_morocco = yes
+				has_global_flag = operation_torch_flag
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = morocco_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = morocco_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_algeria = yes
+				has_global_flag = operation_torch_flag
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = algeria_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = algeria_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_eastalgeria = yes
+				has_global_flag = operation_torch_flag
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = eastalgeria_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = eastalgeria_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_tunis = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = tunis_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = tunis_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_libya = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = libya_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = libya_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_eastlibya = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = eastlibya_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = eastlibya_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_kirenaika = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = kirenaika_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = kirenaika_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_matruh = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = matruh_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = matruh_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_cairo = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = cairo_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = cairo_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_nyle = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = nyle_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = nyle_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_upnyle = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = upnyle_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = upnyle_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_palestine = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = palestine_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = palestine_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_iraq = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = iraq_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = iraq_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_state = 118
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = gibraltar_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = gibraltar_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_state = 177
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = balearic_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = balearic_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_sardinia = yes
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = sardinia_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = sardinia_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_state = 115
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = sicily_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = sicily_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_state = 116
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = malta_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = malta_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_state = 182
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = crete_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = crete_controlled_AXIS }
+					}
+				}
+			}
+			any_country = {
+		        controls_state = 183
+		    	OR = {
+		    	    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = cyprus_controlled_ALLY }
+				    }
+					AND = {
+					    ORIGION_is_in_faction_with_axis = yes
+					    NOT = { has_global_flag = cyprus_controlled_AXIS }
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+	    hidden_effect = {
+		    ### МАРОККО ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_morocco = yes
+			        }
+					has_global_flag = operation_torch_flag
+					NOT = { has_global_flag = morocco_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = morocco_controlled_AXIS
+					}
+					clr_global_flag = morocco_controlled_AXIS
+				}
+				set_global_flag = morocco_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_morocco = yes
+			        }
+					has_global_flag = operation_torch_flag
+					NOT = { has_global_flag = morocco_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = morocco_controlled_ALLY
+					}
+					clr_global_flag = morocco_controlled_ALLY
+				}
+				set_global_flag = morocco_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### АЛЖИР ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_algeria = yes
+			        }
+					has_global_flag = operation_torch_flag
+					NOT = { has_global_flag = algeria_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = algeria_controlled_AXIS
+					}
+					clr_global_flag = algeria_controlled_AXIS
+				}
+				set_global_flag = algeria_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_algeria = yes
+			        }
+					has_global_flag = operation_torch_flag
+					NOT = { has_global_flag = algeria_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = algeria_controlled_ALLY
+					}
+					clr_global_flag = algeria_controlled_ALLY
+				}
+				set_global_flag = algeria_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ВОСТОЧНЫЙ АЛЖИР ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_eastalgeria = yes
+			        }
+					has_global_flag = operation_torch_flag
+					NOT = { has_global_flag = eastalgeria_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = eastalgeria_controlled_AXIS
+					}
+					clr_global_flag = eastalgeria_controlled_AXIS
+				}
+				set_global_flag = eastalgeria_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_eastalgeria = yes
+			        }
+					has_global_flag = operation_torch_flag
+					NOT = { has_global_flag = eastalgeria_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = eastalgeria_controlled_ALLY
+					}
+					clr_global_flag = eastalgeria_controlled_ALLY
+				}
+				set_global_flag = eastalgeria_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ТУНИС ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_tunis = yes
+			        }
+					NOT = { has_global_flag = tunis_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = tunis_controlled_AXIS
+					}
+					clr_global_flag = tunis_controlled_AXIS
+				}
+				set_global_flag = tunis_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    ORIGION_is_in_faction_with_axis = yes
+		                controls_tunis = yes
+			        }
+					NOT = { has_global_flag = tunis_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = tunis_controlled_ALLY
+					}
+					clr_global_flag = tunis_controlled_ALLY
+				}
+				set_global_flag = tunis_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ЛИВИЯ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_libya = yes
+			        }
+					NOT = { has_global_flag = libya_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = libya_controlled_AXIS
+					}
+					clr_global_flag = libya_controlled_AXIS
+				}
+				set_global_flag = libya_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_libya = yes
+			        }
+					NOT = { has_global_flag = libya_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = libya_controlled_ALLY
+					}
+					clr_global_flag = libya_controlled_ALLY
+				}
+				set_global_flag = libya_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ВОСТОЧНАЯ ЛИВИЯ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_eastlibya = yes
+			        }
+					NOT = { has_global_flag = eastlibya_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = eastlibya_controlled_AXIS
+					}
+					clr_global_flag = eastlibya_controlled_AXIS
+				}
+				set_global_flag = eastlibya_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_eastlibya = yes
+			        }
+					NOT = { has_global_flag = eastlibya_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = eastlibya_controlled_ALLY
+					}
+					clr_global_flag = eastlibya_controlled_ALLY
+				}
+				set_global_flag = eastlibya_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### КИРЕНАИКА ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_kirenaika = yes
+			        }
+					NOT = { has_global_flag = kirenaika_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = kirenaika_controlled_AXIS
+					}
+					clr_global_flag = kirenaika_controlled_AXIS
+				}
+				set_global_flag = kirenaika_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_kirenaika = yes
+			        }
+					NOT = { has_global_flag = kirenaika_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = kirenaika_controlled_ALLY
+					}
+					clr_global_flag = kirenaika_controlled_ALLY
+				}
+				set_global_flag = kirenaika_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### МАТРУХА ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_matruh = yes
+			        }
+					NOT = { has_global_flag = matruh_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = matruh_controlled_AXIS
+					}
+					clr_global_flag = matruh_controlled_AXIS
+				}
+				set_global_flag = matruh_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_matruh = yes
+			        }
+					NOT = { has_global_flag = matruh_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = matruh_controlled_ALLY
+					}
+					clr_global_flag = matruh_controlled_ALLY
+				}
+				set_global_flag = matruh_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### КАИР ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_cairo = yes
+			        }
+					NOT = { has_global_flag = cairo_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = cairo_controlled_AXIS
+					}
+					clr_global_flag = cairo_controlled_AXIS
+				}
+				set_global_flag = cairo_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_cairo = yes
+			        }
+					NOT = { has_global_flag = cairo_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = cairo_controlled_ALLY
+					}
+					clr_global_flag = cairo_controlled_ALLY
+				}
+				set_global_flag = cairo_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### НИЛ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_nyle = yes
+			        }
+					NOT = { has_global_flag = nyle_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = nyle_controlled_AXIS
+					}
+					clr_global_flag = nyle_controlled_AXIS
+				}
+				set_global_flag = nyle_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_nyle = yes
+			        }
+					NOT = { has_global_flag = nyle_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = nyle_controlled_ALLY
+					}
+					clr_global_flag = nyle_controlled_ALLY
+				}
+				set_global_flag = nyle_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ВЕРХНИЙ НИЛ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_upnyle = yes
+			        }
+					NOT = { has_global_flag = upnyle_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = upnyle_controlled_AXIS
+					}
+					clr_global_flag = upnyle_controlled_AXIS
+				}
+				set_global_flag = upnyle_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_upnyle = yes
+			        }
+					NOT = { has_global_flag = upnyle_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = upnyle_controlled_ALLY
+					}
+					clr_global_flag = upnyle_controlled_ALLY
+				}
+				set_global_flag = upnyle_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ПАЛЕСТИНА ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_palestine = yes
+			        }
+					NOT = { has_global_flag = palestine_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = palestine_controlled_AXIS
+					}
+					clr_global_flag = palestine_controlled_AXIS
+				}
+				set_global_flag = palestine_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_palestine = yes
+			        }
+					NOT = { has_global_flag = palestine_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = palestine_controlled_ALLY
+					}
+					clr_global_flag = palestine_controlled_ALLY
+				}
+				set_global_flag = palestine_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ИРАК ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_iraq = yes
+			        }
+					NOT = { has_global_flag = iraq_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = iraq_controlled_AXIS
+					}
+					clr_global_flag = iraq_controlled_AXIS
+				}
+				set_global_flag = iraq_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_iraq = yes
+			        }
+					NOT = { has_global_flag = iraq_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = iraq_controlled_ALLY
+					}
+					clr_global_flag = iraq_controlled_ALLY
+				}
+				set_global_flag = iraq_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### ГИБРАЛТАР ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_state = 118
+			        }
+					NOT = { has_global_flag = gibraltar_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = gibraltar_controlled_AXIS
+					}
+					clr_global_flag = gibraltar_controlled_AXIS
+				}
+				set_global_flag = gibraltar_controlled_ALLY
+				africa_dm_gibraltar_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		               controls_state = 118
+			        }
+					NOT = { has_global_flag = gibraltar_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = gibraltar_controlled_ALLY
+					}
+					clr_global_flag = gibraltar_controlled_ALLY
+				}
+				set_global_flag = gibraltar_controlled_AXIS
+				africa_dm_gibraltar_step_add_effect = yes
+			}
+			### БАЛЕАРЫ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_state = 177
+			        }
+					NOT = { has_global_flag = balearic_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = balearic_controlled_AXIS
+					}
+					clr_global_flag = balearic_controlled_AXIS
+				}
+				set_global_flag = balearic_controlled_ALLY
+				africa_dm_small_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		               controls_state = 177
+			        }
+					NOT = { has_global_flag = balearic_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = balearic_controlled_ALLY
+					}
+					clr_global_flag = balearic_controlled_ALLY
+				}
+				set_global_flag = balearic_controlled_AXIS
+				africa_dm_small_step_add_effect = yes
+			}
+			### САРДИНИЯ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_sardinia = yes
+			        }
+					NOT = { has_global_flag = sardinia_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sardinia_controlled_AXIS
+					}
+					clr_global_flag = sardinia_controlled_AXIS
+				}
+				set_global_flag = sardinia_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		                controls_sardinia = yes
+			        }
+					NOT = { has_global_flag = sardinia_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sardinia_controlled_ALLY
+					}
+					clr_global_flag = sardinia_controlled_ALLY
+				}
+				set_global_flag = sardinia_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### СИЦИЛИЯ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_state = 115
+			        }
+					NOT = { has_global_flag = sicily_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sicily_controlled_AXIS
+					}
+					clr_global_flag = sicily_controlled_AXIS
+				}
+				set_global_flag = sicily_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		               controls_state = 115
+			        }
+					NOT = { has_global_flag = sicily_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = sicily_controlled_ALLY
+					}
+					clr_global_flag = sicily_controlled_ALLY
+				}
+				set_global_flag = sicily_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### МАЛЬТА ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_state = 116
+			        }
+					NOT = { has_global_flag = malta_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = malta_controlled_AXIS
+					}
+					clr_global_flag = malta_controlled_AXIS
+				}
+				set_global_flag = malta_controlled_ALLY
+				africa_dm_small_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		               controls_state = 116
+			        }
+					NOT = { has_global_flag = malta_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = malta_controlled_ALLY
+					}
+					clr_global_flag = malta_controlled_ALLY
+				}
+				set_global_flag = malta_controlled_AXIS
+				africa_dm_small_step_add_effect = yes
+			}
+			### КРИТ ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_state = 182
+			        }
+					NOT = { has_global_flag = crete_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = crete_controlled_AXIS
+					}
+					clr_global_flag = crete_controlled_AXIS
+				}
+				set_global_flag = crete_controlled_ALLY
+				africa_dm_medium_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		               controls_state = 182
+			        }
+					NOT = { has_global_flag = crete_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = crete_controlled_ALLY
+					}
+					clr_global_flag = crete_controlled_ALLY
+				}
+				set_global_flag = crete_controlled_AXIS
+				africa_dm_medium_step_add_effect = yes
+			}
+			### КИПР ###
+	        if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_state = 183
+			        }
+					NOT = { has_global_flag = cyprus_controlled_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = cyprus_controlled_AXIS
+					}
+					clr_global_flag = cyprus_controlled_AXIS
+				}
+				set_global_flag = cyprus_controlled_ALLY
+				africa_dm_small_step_remove_effect = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					   ORIGION_is_in_faction_with_axis = yes
+		               controls_state = 183
+			        }
+					NOT = { has_global_flag = cyprus_controlled_AXIS }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = cyprus_controlled_ALLY
+					}
+					clr_global_flag = cyprus_controlled_ALLY
+				}
+				set_global_flag = cyprus_controlled_AXIS
+				africa_dm_small_step_add_effect = yes
+			}
+		}
+	}
+}

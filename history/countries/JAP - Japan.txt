@@ -14,10 +14,7 @@ add_ideas = {
 	JAP_militarism
 	JAP_close_economi
 	JAP_emperor_army
-	JAP_unified_fighter_development
 }
-
-add_offsite_building = { type = industrial_complex level = 18 }
 
 #JAP_emperor_army_dm
 set_variable = {JAP_army_acclimatization_cold_climate_gain_factor = -0.15}
@@ -45,11 +42,8 @@ set_variable = {JAP_production_speed_arms_factory_factor = 0.05}
 set_variable = {JAP_production_speed_industrial_complex_factor = 0.05}
 add_dynamic_modifier = { modifier = JAP_zaibatsu_dm }
 
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	add_ideas = {
-		JAP_interservice_rivalry_balanced		
-	}
+set_power_balance = {
+	id = JAP_power_balance
 }
 
 set_technology = {
@@ -147,28 +141,18 @@ if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "JAP_1936_air_bba"
 		set_technology = {
-			aa_lmg = 1
-			engines_1 = 1
-			engines_2 = 1
-			early_bombs = 1
-			aircraft_construction = 1
-			iw_small_airframe = 1
-			iw_medium_airframe = 1
-			basic_small_airframe = 1
-			air_torpedoe_1 = 1
-		}
-	else = {
-		set_air_oob = "JAP_1936_air_legacy"
-		set_technology = {
-			cv_early_fighter = 1
-			cv_CAS1 = 1
-			cv_naval_bomber1 = 1
-			early_fighter = 1
-			naval_bomber1 = 1
-			early_bomber = 1
-			CAS1 = 1
-		}
-	}
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	early_bombs = 1
+	aircraft_construction = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
+	air_torpedoe_1 = 1
+}
 }
 
 1939.1.1 = {
@@ -611,16 +595,14 @@ if = {
 		type = medium_plane_airframe_0
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = bomb_locks
-			fixed_auxiliary_weapon_slot_2 = small_bomb_bay
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = empty
-			special_type_slot_2 = empty
-			special_type_slot_3 = empty
+			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
+			engine_type_slot = engine_2_3x
+			special_type_slot_1 = fuel_tanks_medium
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = fuel_tanks_medium
 			special_type_slot_4 = empty
 		}
-		obsolete = yes
 	}
 }
 if = {
@@ -640,9 +622,9 @@ if = {
 				fixed_ship_armor_slot = ship_armor_cruiser_3
 				fixed_ship_secondaries_slot = dp_ship_secondaries_2
 				front_1_custom_slot = ship_light_medium_battery_2
-				mid_1_custom_slot = ship_light_medium_battery_2
-				mid_2_custom_slot = ship_light_medium_battery_2
-				rear_1_custom_slot = ship_light_medium_battery_2
+				mid_1_custom_slot = ship_torpedo_2
+				mid_2_custom_slot = ship_torpedo_2
+				rear_1_custom_slot = ship_airplane_launcher_2
 			}
 		}
 	# Battleships #
@@ -658,7 +640,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bb_2
+			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_heavy_battery_2
 			mid_1_custom_slot = ship_heavy_battery_2
 			mid_2_custom_slot = ship_heavy_battery_2

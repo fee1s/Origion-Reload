@@ -1,0 +1,111 @@
+scripted_gui = {
+    asia_map_open = {
+	    context_type = player_context
+		window_name = "asia_map_open_container"
+		visible = { has_country_flag = asia_map_open_flag }
+		effects = {
+			asia_map_open_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = asia_map_open } } }
+					ROOT = { set_country_flag = asia_map_open }
+				}
+				else = {
+					ROOT = { clr_country_flag = asia_map_open }
+				}
+				if = {
+					limit = { ROOT = { has_country_flag = africa_map_open } }
+					ROOT = { clr_country_flag = africa_map_open }
+				}
+			}
+		}
+		triggers = {
+			asia_map_open_click_enabled = {
+				always = yes
+			}
+		}
+	}
+	asia_map_ui = {
+		context_type = player_context
+		window_name = "asia_map_ui_window"
+		visible = {
+			ROOT = {
+				has_country_flag = asia_map_open
+			}
+		}
+		properties = {
+	        progress_bar_USA = {
+	    	    frame = USA_side_progress
+	    	}
+	    	progress_bar_JAP = {
+	    	    frame = JAP_side_progress
+	    	}
+			flag_USA = {
+	    	    image = "[?USA.GetFlag]"
+	    	}
+			flag_JAP = {
+	    	    image = "[?JAP.GetFlag]"
+	    	}
+			asia_map_birma = {
+			    image = [get_asia_map_birma_texture]
+			}
+			asia_map_taiwan = {
+			    image = [get_asia_map_taiwan_texture]
+			}
+			asia_map_raj = {
+			    image = [get_asia_map_raj_texture]
+			}
+			asia_map_papua = {
+			    image = [get_asia_map_papua_texture]
+			}
+			asia_map_australia = {
+			    image = [get_asia_map_australia_texture]
+			}
+			asia_map_phi = {
+			    image = [get_asia_map_phi_texture]
+			}
+			asia_map_hawai = {
+			    image = [get_asia_map_hawai_texture]
+			}
+			asia_map_okinawa = {
+			    image = [get_asia_map_okinawa_texture]
+			}
+			asia_map_iwojima = {
+			    image = [get_asia_map_iwojima_texture]
+			}
+			asia_map_malaya = {
+			    image = [get_asia_map_malaya_texture]
+			}
+			asia_map_indochina = {
+			    image = [get_asia_map_indochina_texture]
+			}
+			asia_map_solomon = {
+			    image = [get_asia_map_solomon_texture]
+			}
+			asia_map_newzeland = {
+			    image = [get_asia_map_newzeland_texture]
+			}
+			asia_map_caroline = {
+			    image = [get_asia_map_caroline_texture]
+			}
+			asia_map_mariana = {
+			    image = [get_asia_map_mariana_texture]
+			}
+			asia_map_marshall = {
+			    image = [get_asia_map_marshall_texture]
+			}
+			asia_map_palau = {
+			    image = [get_asia_map_palau_texture]
+			}
+			asia_map_sumatra = {
+			    image = [get_asia_map_sumatra_texture]
+			}
+			asia_map_jawa = {
+			    image = [get_asia_map_jawa_texture]
+			}
+			asia_map_markus = {
+			    image = [get_asia_map_markus_texture]
+			}
+	    }
+	}
+}
+

@@ -106,7 +106,7 @@ ideas = {
 			}
 			
 			modifier = {
-				improve_relations_maintain_cost_factor = -0.5
+				political_power_gain = 0.05
 			}
 		}
 
@@ -129,8 +129,8 @@ ideas = {
 			}
 			
 			modifier = {
-				join_faction_tension = -1.0
-				improve_relations_maintain_cost_factor = -0.5
+				stability_factor = 0.05
+				political_power_gain = 0.05
 			}
 		}
 
@@ -428,11 +428,9 @@ ideas = {
 
 			}
 			
-			modifier = {				
-				resistance_damage_to_garrison = -0.2 
-				foreign_subversive_activites = -0.2
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = 0.25
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
 			}
 		}
 
@@ -469,8 +467,8 @@ ideas = {
 
 			
 			modifier = {
-				guarantee_tension = -1.0
-				guarantee_cost = -0.5
+				stability_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
 			}
 		}
 
@@ -508,7 +506,6 @@ ideas = {
 			}
 			
 			modifier = {
-				communism_drift = 0.01
 				conscription = 0.01
 			}
 		}
@@ -602,7 +599,7 @@ ideas = {
 			}
 			
 			modifier = {
-				army_leader_cost_factor = -0.3
+				army_morale_factor = 0.1
 			}
 		}
 
@@ -621,22 +618,7 @@ ideas = {
 			picture = generic_air_bonus
 
 			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				cv_small_plane_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				small_plane_cas_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				cv_small_plane_cas_airframe = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
+				
 				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.1
 					instant = yes

@@ -14,14 +14,31 @@ ideas = {
 			picture = eng_preparing_the_second_front
 			
 			modifier = {
-				convoy_retreat_speed = 1
-				convoy_retreat_speed = 1
+				convoy_retreat_speed = 3
 				supply_factor = 0.30
-				army_attack_factor = 0.20
-				army_defence_factor = 0.20
+				army_attack_factor = 0.30
+				army_defence_factor = 0.30
 				air_attack_factor = 0.15
 				air_defence_factor = 0.15
 				air_mission_efficiency = 0.15
+			}
+		}
+		
+		JAP_tokyo_express = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				convoy_retreat_speed = 0.25
+				supply_factor = 0.1
 			}
 		}
 		
@@ -94,16 +111,6 @@ ideas = {
 				production_speed_supply_node_factor = 0.20
 			}
 		}
-	
-		CHI_war = {	
-			allowed = {
-			}
-			picture = jap_intervene_in_china
-			removal_cost = -1
-			modifier = {
-				consumer_goods_expected_value = 0.1
-			}
-		}
 		JAP_osaka_arsenal = {
 			removal_cost = -1
 			picture = MEX_callistas 
@@ -139,73 +146,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
-			}
-		}
-		JAP_stagnation_economic_0 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.05
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-			}
-		}
-		JAP_stagnation_economic_1 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.1
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-			}
-		}
-		JAP_stagnation_economic_2 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.2
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
-			}
-		}
-		JAP_stagnation_economic_3 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.3
-				industrial_capacity_factory = -0.3
-				industrial_capacity_dockyard = -0.3
-			}
-		}
-		JAP_stagnation_economic_4 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.4
-				industrial_capacity_factory = -0.4
-				industrial_capacity_dockyard = -0.4
-			}
-		}
-		JAP_stagnation_economic_5 = {
-			picture = ARG_political_corruption_modifier 
-			cancel = {
-				has_completed_focus = JAP_exploit_the_southern_resource_area
-			}
-			modifier = {
-				consumer_goods_expected_value = 0.5
-				industrial_capacity_factory = -0.5
-				dockyard_capacity_factory = -0.5
-				industrial_capacity_dockyard = -0.5
 			}
 		}
 	JAP_unified_fighter_development = {
@@ -252,7 +192,7 @@ ideas = {
 		removal_cost = -1
 		picture = generic_navy_carrier_bonus
 		modifier = {
-			sortie_efficiency = 0.1
+			sortie_efficiency = 0.2
 		}
 	}
 	the_long_lance = {

@@ -217,6 +217,8 @@ focus_tree = {
 			USA_great_depression_level_down = yes
 			custom_effect_tooltip = USA_nyse_global_building_slots_factor_tt
 			add_to_variable = { USA_nyse_global_building_slots_factor = 0.15 }
+			
+			hidden_effect = { add_ideas = export_focus }
 		}
 	}
 
@@ -1013,33 +1015,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
 		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = USA_detroit_arsenal_organization
-				mio:USA_detroit_arsenal_organization = {
-					add_mio_size = 5
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = detroit_arsenal
+			mio:USA_chrysler_organization = {
+				add_mio_size = 5
 			}
 		}
 	}
@@ -1110,31 +1093,52 @@ focus_tree = {
 		x = 4
 		y = 1
 		
+		allow_branch = {
+		    always = no
+		}
+		
 		prerequisite = { focus = USA_build_the_pentagon }
 		
 		relative_position_id = USA_build_the_pentagon
-		cost = 5
+		cost = 3
 		
 		available = {
-			OR = {
-				date > 1943.1.1
-				524 = { NOT = { is_controlled_by = JAP } }
-				526 = { NOT = { is_controlled_by = JAP } }
-				219 = { NOT = { is_controlled_by = SOV } }
-				217 = { NOT = { is_controlled_by = SOV } }
-				195 = { NOT = { is_controlled_by = SOV } }
-			}
+		    has_full_control_of_state = 524
+			has_full_control_of_state = 526
+			has_full_control_of_state = 645
 		}
 		
 		completion_reward = {	
-			#GER = { every_state = { limit = { OR = { state = 806 state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
-			#		remove_dynamic_modifier = { modifier = GER_atlantikwall_dynamic_modifier }
-			#	}
-			#}
-			
-			swap_ideas = {
-				add_idea = usa_europe_first
-				remove_idea = usa_asia_first
+			GER = { every_state = { limit = { OR = { state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = USA
+					}
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = ENG
+					}
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = FRA
+					}
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = CAN
+					}
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = AST
+					}
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = SAF
+					}
+					remove_dynamic_modifier = { 
+					    modifier = atlantikwall_dm 
+						scope = RAJ
+					}
+				}
 			}
 		}
 	}
@@ -1543,10 +1547,6 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 50
 			add_ideas = bureau_of_ships_focus
-			if = {
-				limit = { has_idea = bureau_of_ordnance_spirit }
-				remove_ideas = bureau_of_ordnance_spirit
-			}
 		}
 	}
 	
@@ -2118,7 +2118,7 @@ focus_tree = {
 					ENG = { exists = yes }
 				}
 				ENG = {
-					NOT = {has_full_control_of_state = 126}
+					NOT = { has_full_control_of_state = 126 }
 				}
 			}
 			else = {
@@ -2126,8 +2126,7 @@ focus_tree = {
 			}
 		}		
 		completion_reward = {
-		custom_effect_tooltip = USA_total_war_reward_tt
-		add_ideas = militarized_keinsianstvo_mobilisation
+			add_ideas = militarized_keinsianstvo_mobilisation
 		}
 	}
 	focus = {
@@ -2142,11 +2141,6 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = yes
-		available = {
-			ENG = {
-				NOT = {has_full_control_of_state = 126}
-			}
-		}
 		completion_reward = {
 			add_to_tech_sharing_group = commonwealth_research
 			custom_effect_tooltip = allies_total_war_reward_tt
@@ -2170,11 +2164,8 @@ focus_tree = {
 			        add_ideas = allies_total_war
 					add_ideas = tot_economic_mobilisation
 				}
+				
 				ENG = {
-			        add_ideas = allies_total_war
-					add_ideas = tot_economic_mobilisation
-			    }
-				NZL = {
 			        add_ideas = allies_total_war
 					add_ideas = tot_economic_mobilisation
 			    }
@@ -2193,11 +2184,6 @@ focus_tree = {
 			factor = 1
 		}
 		available_if_capitulated = yes
-		available = {
-			ENG = {
-				NOT = {has_full_control_of_state = 126}
-			}
-		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = GER_autarky

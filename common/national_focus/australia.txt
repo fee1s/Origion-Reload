@@ -446,15 +446,31 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			523 = {add_core_of = AST}
-			737 = {add_core_of = AST}
-			979 = {add_core_of = AST}
-			634 = {add_core_of = AST}
 			523 = {
-				
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = Infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			979 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = Infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			737 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = Infrastructure
 					level = 2
 					instant_build = yes
 				}
@@ -1050,6 +1066,11 @@
 		relative_position_id = AST_volunteer_defence_corps
 
 		cost = 5
+		
+		available = {
+		    date > 1940.9.1
+			has_completed_focus = AST_citizen_military_forces
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1058,12 +1079,16 @@
 
 		completion_reward = {
 			add_war_support = 0.1
+			swap_ideas = {
+			    remove_idea = AST_citizen_military_forces
+				add_idea = AST_citizen_military_forces_2
+			}
 		}
 	}
 	
 	focus = {
 		id = AST_defending_the_papua
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_focus_GER_sentinels_of_the_pacific
 		prerequisite = { focus = AST_swpa_protector }
 		x = 1
 		y = 1
@@ -1081,79 +1106,64 @@
 		search_filters = {  }
 
 		completion_reward = {
-			979 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
+		    custom_effect_tooltip = AST_defending_the_papua_tt
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    635 = { is_controlled_by_ROOT_or_ally = yes }
 					}
-					level = 2
-					instant_build = yes
+			        transfer_state = 635
 				}
-
-				#Extra fort on naval bases
-				add_building_construction = {
-					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
+				if = {
+				    limit = {
+					    636 = { is_controlled_by_ROOT_or_ally = yes }
 					}
-					level = 2
-					instant_build = yes
+			        transfer_state = 636
 				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
+				if = {
+				    limit = {
+					    669 = { is_controlled_by_ROOT_or_ally = yes }
 					}
-					level = 2
-					instant_build = yes
+			        transfer_state = 669
 				}
-			}
-			737 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
+				if = {
+				    limit = {
+					    734 = { is_controlled_by_ROOT_or_ally = yes }
 					}
-					level = 1
-					instant_build = yes
+			        transfer_state = 734
 				}
-			}
-			523 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
+				if = {
+				    limit = {
+					    738 = { is_controlled_by_ROOT_or_ally = yes }
 					}
-					level = 2
-					instant_build = yes
+			        transfer_state = 738
 				}
-
-				#Extra fort on naval bases
-				add_building_construction = {
-					type = bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
+				if = {
+				    limit = {
+					    987 = { is_controlled_by_ROOT_or_ally = yes }
 					}
-					level = 2
-					instant_build = yes
+			        transfer_state = 987
 				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = {
-						all_provinces = yes
-						limit_to_naval_base = yes
+				every_state = {
+				    limit = { 
+						OR = {
+						    state = 523
+							state = 634
+							state = 669
+							state = 737
+							state = 979
+						}
 					}
-					level = 2
-					instant_build = yes
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+					    }
+					}
 				}
-
 			}
 		}
 	}
@@ -1168,10 +1178,6 @@
 		relative_position_id = AST_swpa_protector
 
 		cost = 5
-		
-		available = {
-		    has_war_with = JAP
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1197,16 +1203,9 @@
 		y = 3
 		relative_position_id = AST_swpa_protector
 
-		cost = 3
-		
+		cost = 5
 		available = {
-			336 = { is_controlled_by = JAP }
-			640 = { is_controlled_by = JAP }
-			288 = { is_controlled_by = JAP }
-			333 = { is_controlled_by = JAP }
-			334 = { is_controlled_by = JAP }
-			672 = { is_controlled_by = JAP }
-			335 = { is_controlled_by = JAP }
+		    has_war_with = JAP
 		}
 
 		cancel_if_invalid = yes
@@ -1219,7 +1218,6 @@
 			    remove_idea = AST_preparing_for_the_isolation_idea
 				add_idea = AST_ringed_with_menace_idea
 			}
-			unlock_decision_tooltip = AST_remove_isolation_dec
 		}
 	}
 	
@@ -1421,7 +1419,7 @@
 		completion_reward = {
 			add_timed_idea = {
 			    idea = AST_lose_in_africa_idea
-				days = 365
+				days = 280
 			}
 		}
 	}
@@ -1503,9 +1501,10 @@
 				add_idea = rats_of_tobruk_2_idea
 			}
 			add_tech_bonus = {
-				bonus = 3.0
-				uses = 2
-				category = armor
+				bonus = 1.0
+				uses = 1
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -1942,11 +1941,12 @@
 			add_tech_bonus = {
 				name = motorized_bonus
 				bonus = 1.00
-				category = motorized_equipment
+				technology = mechanised_infantry
 			}
 			add_tech_bonus = {
-				bonus = 1.00
-				category = support_tech
+			    bonus = 1
+			    uses = 1
+				technology = tech_maintenance_company2
 			}
 		}
 	}
@@ -2042,9 +2042,10 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_fund_owen_gun_research
-				bonus = 1.0
-				uses = 1
+				bonus = 0.5
+				uses = 3
 				technology = improved_infantry_weapons
+				technology = improved_infantry_weapons_2
 				technology = advanced_infantry_weapons
 			}
 		}
@@ -2076,6 +2077,13 @@
 				uses = 2
 				technology = armor_tech_3
 				technology = engine_tech_3
+			}
+			add_tech_bonus = {
+			    name = AST_sentinel_tank_project
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
 			}
 		}
 	}
@@ -2706,7 +2714,7 @@
 		y = 1
 		relative_position_id = AST_cockatoo_island_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2756,7 +2764,7 @@
 		y = 1
 		relative_position_id = AST_pacific_area_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2802,7 +2810,7 @@
 		y = 1
 		relative_position_id = AST_pacific_area_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2862,7 +2870,7 @@
 			522 = {
 				add_resource = {
 					type = steel
-					amount = 6
+					amount = 12
 				}
 			}
 		}

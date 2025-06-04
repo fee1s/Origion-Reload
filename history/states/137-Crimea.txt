@@ -2,7 +2,12 @@
 state={
 	id=137
 	name="STATE_137"
-
+	
+	resources={
+		tungsten=10
+		aluminium=6
+	}
+	
 	history={
 		owner = SOV
 		victory_points = {
@@ -12,32 +17,31 @@ state={
 			9680 1 
 		}
 		victory_points = {
-			6704 1 
+			13440 1 
+		}
+		victory_points = {
+			13430 1 
+		}
+		victory_points = {
+			13535 3
+		}
+		victory_points = {
+			13536 1 
 		}
 		buildings = {
-			infrastructure = 3
-			dockyard = 1
-			air_base = 3
+			infrastructure = 4
+			air_base = 10
 			3686 = {
 				naval_base = 10
-				coastal_bunker = 3
-
 			}
 			9680 = {
-				naval_base = 1
-				coastal_bunker = 1
-
+				naval_base = 5
 			}
-
+			13536 = {
+				naval_base = 3
+			}
 		}
 		add_core_of = SOV
-		1939.1.1 = {
-			buildings = {
-				dockyard = 2
-
-			}
-
-		}
 		1936.1.1.14 = {
 			owner = COL
 			add_core_of = COL
@@ -46,7 +50,7 @@ state={
 	}
 
 	provinces={
-		705 3686 3722 6704 6724 9677 9680 9718 11649 13430 13440 
+		705 3686 3722 6704 6724 9677 9680 9718 11649 13430 13440 13536 13537 13535 13534
 	}
 	manpower=1061607
 	buildings_max_level_factor=1.000

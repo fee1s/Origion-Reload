@@ -8,7 +8,44 @@ technologies = {
 		xp_unlock_cost = 0
 		
 		xor = { superior_firepower trench_warfare mass_assault } 
+		on_research_complete = {
+			hidden_effect = { 
+				set_technology = {trench_warfare=0}
+				set_technology = {superior_firepower=0}
 
+				set_technology = {sup_delay=0}
+				set_technology = {mobile_defence=0}
+				set_technology = {intergrated_support=0}
+				set_technology = {regimental_combat_teams=0}
+				set_technology = {dispersed_support=0}
+				set_technology = {overwhelming_firepower=0}
+				set_technology = {sup_mechanized_offensive=0}
+				set_technology = {concentrated_fire_plans=0}
+				set_technology = {combined_arms=0}
+				set_technology = {tactical_control=0}
+				set_technology = {air_land_battle=0}
+				set_technology = {centralized_fire_control=0}
+				set_technology = {forward_observers=0}
+				set_technology = {advanced_firebases=0}
+				set_technology = {shock_and_awe=0}
+
+				set_technology = {grand_battle_plan=0}
+				set_technology = {prepared_defense=0}
+				set_technology = {grand_assault=0}
+				set_technology = {grand_mechanized_offensive=0}
+				set_technology = {assault_concentration=0}
+				set_technology = {branch_interoperation=0}
+				set_technology = {assault_breakthrough=0}
+				set_technology = {central_planning=0}
+				set_technology = {c3i_theory=0}
+				set_technology = {infantry_offensive=0}
+				set_technology = {armored_operations=0}
+				set_technology = {infiltration_assault=0}
+				set_technology = {night_assault_tactics=0}
+				set_technology = {attritional_containment=0}
+				set_technology = {infiltration_in_depth=0}
+			}
+		}
 		path = {
 			leads_to_tech = delay 
 			research_cost_coeff = 1
@@ -26,7 +63,7 @@ technologies = {
 			}
 		}
 		
-		planning_speed = 0.3
+		planning_speed = 0.25
 		army_speed_factor = 0.10
 		enable_tactic = tactic_unexpected_thrust
 		org_loss_when_moving = -0.1
@@ -172,6 +209,20 @@ technologies = {
 		xp_unlock_cost = 70
 		xor = {
 			armored_spearhead
+		}
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {schwerpunk=0}
+				set_technology = {blitzkrieg=0}
+				set_technology = {armored_spearhead=0}
+				set_technology = {kampfgruppe=0}
+				set_technology = {firebrigades=0}
+				set_technology = {backhand_blow=0}
+				set_technology = {modern_blitzkrieg=0}
+				set_technology = {volkssturm=0}
+				set_technology = {nd_conscription=0}
+				set_technology = {werwolf_guerillas=0}
+			}
 		}
 		mechanized = {
 			maximum_speed = 0.1
@@ -370,7 +421,20 @@ technologies = {
 		xor = {
 			mobile_infantry
 		}
-	
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {mobile_infantry=0}
+				set_technology = {mass_motorization=0}
+				set_technology = {mechanised_offensive=0}
+				set_technology = {kampfgruppe=0}
+				set_technology = {firebrigades=0}
+				set_technology = {backhand_blow=0}
+				set_technology = {modern_blitzkrieg=0}
+				set_technology = {volkssturm=0}
+				set_technology = {nd_conscription=0}
+				set_technology = {werwolf_guerillas=0}
+			}
+		}
 		path = {
 			leads_to_tech = schwerpunk 
 			research_cost_coeff = 1
@@ -542,9 +606,6 @@ technologies = {
 		amphibious_mechanized = {
 			max_organisation = 3
 		}
-		
-		# faster planning
-		planning_speed = 0.1
 		
 		enable_tactic = tactic_overwhelming_fire
 		
@@ -813,10 +874,11 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		conscription = 0.02
+		no_supply_grace = 72
 		infantry = {
-			combat_width = -0.3
-			defense = 0.1
+			urban = {
+				defense = 0.25
+			}
 		}
 		
 		path = {
@@ -905,6 +967,44 @@ technologies = {
 		
 		xor = { mobile_warfare trench_warfare mass_assault } 
 
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {trench_warfare=0}
+				set_technology = {mobile_warfare=0}
+				
+				set_technology = {delay=0}
+				set_technology = {armored_spearhead=0}
+				set_technology = {elastic_defence=0}
+				set_technology = {mobile_infantry=0}
+				set_technology = {mass_motorization=0}
+				set_technology = {mechanised_offensive=0}
+				set_technology = {schwerpunk=0}
+				set_technology = {blitzkrieg=0}
+				set_technology = {kampfgruppe=0}
+				set_technology = {firebrigades=0}
+				set_technology = {backhand_blow=0}
+				set_technology = {modern_blitzkrieg=0}
+				set_technology = {volkssturm=0}
+				set_technology = {nd_conscription=0}
+				set_technology = {werwolf_guerillas=0}
+
+				set_technology = {grand_battle_plan=0}
+				set_technology = {prepared_defense=0}
+				set_technology = {grand_assault=0}
+				set_technology = {grand_mechanized_offensive=0}
+				set_technology = {assault_concentration=0}
+				set_technology = {branch_interoperation=0}
+				set_technology = {assault_breakthrough=0}
+				set_technology = {central_planning=0}
+				set_technology = {c3i_theory=0}
+				set_technology = {infantry_offensive=0}
+				set_technology = {armored_operations=0}
+				set_technology = {infiltration_assault=0}
+				set_technology = {night_assault_tactics=0}
+				set_technology = {attritional_containment=0}
+				set_technology = {infiltration_in_depth=0}
+			}
+		}
 		path = {
 			leads_to_tech = sup_delay 
 			research_cost_coeff = 1
@@ -1051,7 +1151,21 @@ technologies = {
 		xor={
 			dispersed_support
 		}
-
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {dispersed_support=0}
+				set_technology = {overwhelming_firepower=0}
+				set_technology = {sup_mechanized_offensive=0}
+				set_technology = {concentrated_fire_plans=0}
+				set_technology = {combined_arms=0}
+				set_technology = {tactical_control=0}
+				set_technology = {air_land_battle=0}
+				set_technology = {centralized_fire_control=0}
+				set_technology = {forward_observers=0}
+				set_technology = {advanced_firebases=0}
+				set_technology = {shock_and_awe=0}
+			}
+		}
 	
 		category_support_battalions = {
 			max_organisation = 10
@@ -1160,6 +1274,21 @@ technologies = {
 			intergrated_support
 		}
 		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {intergrated_support=0}
+				set_technology = {regimental_combat_teams=0}
+				set_technology = {sup_mechanized_offensive=0}
+				set_technology = {concentrated_fire_plans=0}
+				set_technology = {combined_arms=0}
+				set_technology = {tactical_control=0}
+				set_technology = {air_land_battle=0}
+				set_technology = {centralized_fire_control=0}
+				set_technology = {forward_observers=0}
+				set_technology = {advanced_firebases=0}
+				set_technology = {shock_and_awe=0}
+			}
+		}
 		artillery = {
 			soft_attack = 0.20
 			max_organisation = 10
@@ -1323,7 +1452,14 @@ technologies = {
 		xor = {
 			centralized_fire_control
 		}
-
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {centralized_fire_control=0}
+				set_technology = {forward_observers=0}
+				set_technology = {advanced_firebases=0}
+				set_technology = {shock_and_awe=0}
+			}
+		}
 		category_army = {
 			hard_attack = 0.10
 			max_strength = -0.95
@@ -1544,6 +1680,15 @@ technologies = {
 			concentrated_fire_plans
 		}
 
+		on_research_complete = {
+			hidden_effect = {
+			set_technology = {concentrated_fire_plans=0}
+			set_technology = {combined_arms=0}
+			set_technology = {tactical_control=0}
+			set_technology = {air_land_battle=0}
+			}
+		}
+		
 		category_all_infantry = { 
 			soft_attack = 0.1
 		}
@@ -1659,10 +1804,6 @@ technologies = {
 			soft_attack = 0.1
 		}
 		
-		anti_tank = {
-			hard_attack = 1
-		}
-		
 		enable_tactic = tactic_tactical_withdrawal
 		
 		path = {
@@ -1768,7 +1909,44 @@ technologies = {
 		
 		xor = { mobile_warfare superior_firepower mass_assault } 
 		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {mobile_warfare=0}
+				set_technology = {superior_firepower=0}
 
+				set_technology = {delay=0}
+				set_technology = {armored_spearhead=0}
+				set_technology = {elastic_defence=0}
+				set_technology = {mobile_infantry=0}
+				set_technology = {mass_motorization=0}
+				set_technology = {mechanised_offensive=0}
+				set_technology = {schwerpunk=0}
+				set_technology = {blitzkrieg=0}
+				set_technology = {kampfgruppe=0}
+				set_technology = {firebrigades=0}
+				set_technology = {backhand_blow=0}
+				set_technology = {modern_blitzkrieg=0}
+				set_technology = {volkssturm=0}
+				set_technology = {nd_conscription=0}
+				set_technology = {werwolf_guerillas=0}
+
+				set_technology = {sup_delay=0}
+				set_technology = {mobile_defence=0}
+				set_technology = {intergrated_support=0}
+				set_technology = {regimental_combat_teams=0}
+				set_technology = {dispersed_support=0}
+				set_technology = {overwhelming_firepower=0}
+				set_technology = {sup_mechanized_offensive=0}
+				set_technology = {concentrated_fire_plans=0}
+				set_technology = {combined_arms=0}
+				set_technology = {tactical_control=0}
+				set_technology = {air_land_battle=0}
+				set_technology = {centralized_fire_control=0}
+				set_technology = {forward_observers=0}
+				set_technology = {advanced_firebases=0}
+				set_technology = {shock_and_awe=0}
+			}
+		}
 		max_dig_in = 5
 		dig_in_speed_factor = 0.25 
 		
@@ -1972,7 +2150,17 @@ technologies = {
 		xor = {
 			infantry_offensive
 		}
-	
+		
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {infantry_offensive=0}
+				set_technology = {armored_operations=0}
+				set_technology = {infiltration_assault=0}
+				set_technology = {night_assault_tactics=0}
+				set_technology = {attritional_containment=0}
+				set_technology = {infiltration_in_depth=0}
+			}
+		}
 		motorized = {
 			max_organisation = 3
 			max_strength = 0.25
@@ -2035,7 +2223,7 @@ technologies = {
 	assault_concentration = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		conscription = 0.03
+		conscription = 0.025
 		category_light_infantry = {
 			soft_attack = 0.05
 			default_morale = 0.1
@@ -2204,7 +2392,7 @@ technologies = {
 	central_planning = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		planning_speed = 0.2
+		planning_speed = 0.15
 		category_all_armor = {
 			default_morale = 0.1
 		}
@@ -2309,6 +2497,17 @@ technologies = {
 		conscription = 0.05
 		xor = {
 			grand_mechanized_offensive
+		}
+
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {grand_mechanized_offensive=0}
+				set_technology = {assault_concentration=0}
+				set_technology = {branch_interoperation=0}
+				set_technology = {assault_breakthrough=0}
+				set_technology = {central_planning=0}
+				set_technology = {c3i_theory=0}
+			}
 		}
 		attrition = -0.1
 		category_light_infantry = {
@@ -2777,8 +2976,8 @@ technologies = {
 		
 		supply_consumption_factor = -0.10
 		category_all_armor = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.025
+			hard_attack = 0.025
 		}
 
 		enable_tactic = tactic_tactical_withdrawal
@@ -2902,7 +3101,6 @@ technologies = {
 	operational_concentration = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		max_planning = 0.10
 		planning_speed = 0.15
 		category_all_armor = {
 			breakthrough = 0.1
@@ -2961,10 +3159,11 @@ technologies = {
 			soft_attack = 0.05
 			breakthrough = 0.1
 		}
-		category_all_armor = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
+		
+		#category_all_armor = {
+		#	soft_attack = 0.05
+		#	hard_attack = 0.05
+		#}
 		
 		allow = { has_completed_focus = SOV_lessons_of_war } 
 		
@@ -3037,7 +3236,7 @@ technologies = {
 			cat_mass_assault
 		}
 
-		allow = { date > 1942.9.1 }
+		allow = { date > 1942.10.1 }
 		
 		folder = {
 			name = land_doctrine_folder
@@ -3089,7 +3288,7 @@ technologies = {
 			maximum_speed = 0.1
 		}	
 		
-		allow = { date > 1942.12.1 }
+		allow = { date > 1943.2.1 }
 		
 		enable_tactic = tactic_backhand_blow
 		
@@ -3139,9 +3338,9 @@ technologies = {
 	continuous_offensive = {
 		xp_research_type = army
 		xp_unlock_cost = 70
-		org_loss_when_moving = -0.25
+		org_loss_when_moving = -0.15
 		category_all_armor = {
-			soft_attack = 0.10
+			soft_attack = 0.05
 			hard_attack = 0.05
 		}
 		
@@ -3283,10 +3482,6 @@ technologies = {
 			max_strength = 2
 		}
 		
-		anti_tank = {
-			hard_attack = 0.5
-		}
-		
 		land_reinforce_rate = 0.02		
 		
 		path = {
@@ -3328,7 +3523,7 @@ technologies = {
 		xp_unlock_cost = 70
 		category_all_infantry = {
 			max_organisation = 5
-			max_strength = 2.5
+			max_strength = 0.25
 		}
 		
 		category_all_armor = {
@@ -3376,8 +3571,7 @@ technologies = {
 		conscription = 0.02
 		category_light_infantry = {
 			defense = 0.1
-			soft_attack = 0.1
-			max_strength = 2.5
+			soft_attack = 0.05
 		}
 	
 		
@@ -3464,4 +3658,5 @@ technologies = {
 			always = no
 		}
 	}
+	
 }

@@ -504,39 +504,6 @@ guiTypes = {
 			fixedsize = yes
 			Orientation = "UPPER_RIGHT"
 			alwaystransparent = yes
-		}	
-		
-		containerWindowType = {
-			name = "nukes"
-			position = { x= 1330 y = 4}
-			clipping = no
-			size = { width=56 height=30 }
-			Orientation = UPPER_LEFT
-
-			background = {
-				name = "nukes_bg"
-				quadTextureSprite ="GFX_mini_tooltip"
-			}
-
-			iconType = {
-				name = "nuke_icon"
-				spriteType = "GFX_topbar_nuke"
-				position = { x= 7 y = 8 }
-				scale = 0.55
-				Orientation = "UPPER_LEFT"
-				alwaystransparent = yes
-			}
-
-			instantTextBoxType = {
-				name = "nukes_value"
-				position = { x= 26 y = 5 }
-				font = "hoi_18mbs"
-				format = left
-				maxWidth = 26
-				maxHeight = 24
-				fixedsize = yes
-				alwaystransparent = yes
-			}
 		}
 		
 		containerWindowType = {
@@ -763,6 +730,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				clicksound = click_close
 				oversound = ui_menu_over
+				hide = yes
 			}
 
 			iconType = {
@@ -806,7 +774,7 @@ guiTypes = {
 			# Here, several buttons are put in the container "after_intel_agency_button", to be easily moved if the player don't have the DLC requiered by "intel_agency_button".
 			containerWindowType = {
 				name = "after_intel_agency_button"
-				position = { x=56 y=0 }
+				position = { x=0 y=0 }
 				
 				buttonType = {
 					name = "technology_button"

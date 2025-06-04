@@ -1583,32 +1583,30 @@ war_measures = {
         }
 
         available = {
-			OR = {
-				has_idea = tot_economic_mobilisation
-				
-				hidden_trigger = {
-					OR = {
-						has_idea = national_security_mobilisation
-						has_idea = militarized_keinsianstvo_mobilisation
-						has_idea = totaler_krieg_economic_mobilisation
-						has_idea = italy_totalen_krieg_economic_mobilisation
-						has_idea = minors_totalen_krieg_economic_mobilisation
-					}
-				}
-			}
+			has_idea = tot_economic_mobilisation
         }
+		
         visible = {
             has_war = yes
         }
+		
         cost = 100
         days_remove = -1
+		
         remove_trigger = {
-            has_war = no
+			OR = {
+				has_war = no
+				has_idea = totaler_krieg_economic_mobilisation
+				has_idea = italy_totalen_krieg_economic_mobilisation
+				has_idea = minors_totalen_krieg_economic_mobilisation
+			}
         }
+		
         modifier = {
             conscription = 0.03
             stability_factor = -0.05
         }
+		
         ai_will_do = {
 			factor = 1
 
@@ -1617,15 +1615,7 @@ war_measures = {
 				has_manpower < 100000
 			}
 		}
-		complete_effect = {
-			if = {
-				limit = {
-					tag = CAN
-				}
-				country_event = { id = canada_vanilla.1 hours = 6 } # Ronnie the Bren Gun Girl
-			}
-        }
-   }
+	}	
 
     war_bonds = {
 
@@ -1637,42 +1627,21 @@ war_measures = {
 
         available = {
             has_war = yes
-            OR = {
-                AND = {
-                    has_government = democratic
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = communism
-                    has_war_support > 0.79
-                }
-                AND = {
-                    has_government = fascism
-                    OR = {
-                        has_war_support > 0.89
-                        surrender_progress > 0
-                    }
-                }
-                AND = {
-                    has_government = neutrality
-                    has_war_support > 0.84
-                    has_stability > 0.7
-                }
-            }
         }
+		
         visible = {
             has_war = yes
-            NOT = { tag = SPC }
         }
 
         fire_only_once = no
 
-		days_remove = 180
+		days_remove = -1
 
-		cost = GER_war_bonds_var?50
+		cost = 50
 
 		modifier = {
 			consumer_goods_factor = -0.20
+			political_power_gain = -0.15
 		}
 
 		ai_will_do = {
@@ -1686,62 +1655,6 @@ war_measures = {
 				factor = 0
 				original_tag = SOV
 				SOV_save_pp_for_manpower_trouble = yes
-			}
-		}
-
-		remove_effect = {
-
-		}
-
-		complete_effect = {
-			if = {
-				limit = {
-					check_variable = {
-						var = GER_war_bonds_var
-						value = 50
-						compare = less_than
-					}
-				}
-				set_variable = {
-					var = GER_war_bonds_var
-					value = 50
-				}
-			}
-			add_to_variable = {
-				var = GER_war_bonds_var
-				value = 25
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = GER_war_bonds_var
-						value = 100
-						compare = greater_than_or_equals
-					}
-					check_variable = {
-						var = GER_war_bonds_war_support_var
-						value = -0.025
-						compare = greater_than
-					}
-				}
-				set_variable = {
-					var = GER_war_bonds_war_support_var
-					value = -0.025
-				}
-			}
-			if = {
-				limit = {
-					check_variable = {
-						var = GER_war_bonds_war_support_var
-						value = -0.025
-						compare = less_than_or_equals
-					}
-				}
-				add_to_variable = {
-					var = GER_war_bonds_war_support_var
-					value = -0.025
-				}
-				add_war_support = GER_war_bonds_war_support_var
 			}
 		}
     }

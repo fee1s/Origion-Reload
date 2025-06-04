@@ -68,6 +68,18 @@ is_french_north_africa = {
 	}
 }
 
+is_southern_europe_shore = {
+	OR = {
+		state = 44
+		state = 805
+		state = 185
+		state = 47
+		state = 186
+	    state = 731
+		state = 184
+	}
+}
+
 is_australian_main_state = {
 	OR = {
 		state = 285
@@ -80,6 +92,23 @@ is_australian_main_state = {
 		state = 871
 		state = 872
 		state = 873
+	}
+}
+
+is_japan_main_state = {
+	OR = {
+		state = 528
+		state = 529
+		state = 530
+		state = 531
+		state = 535
+		state = 532
+		state = 534
+		state = 282
+		state = 533
+		state = 536
+		state = 555
+		state = 537
 	}
 }
 
@@ -162,12 +191,199 @@ is_controlled_by_allies = {
 	}
 }
 is_controlled_by_axis = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_axis_tt
+		OR = {
+			is_controlled_by = GER
+			is_controlled_by = ITA
+			is_controlled_by = HUN
+			is_controlled_by = ROM
+			is_controlled_by = BUL
+			is_controlled_by = JAP
+		}
+	}
+}
+
+maximum_lend_lease_is_fourty = {
 	OR = {
-		is_controlled_by = GER
-		is_controlled_by = ITA
-		is_controlled_by = HUN
-		is_controlled_by = ROM
-		is_controlled_by = BUL
-		is_controlled_by = JAP
+		NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+		NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+	}
+	GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+	OR = {
+		524 = { is_controlled_by_allies = no }
+		526 = { is_controlled_by_allies = no }
+	}
+}
+
+maximum_lend_lease_is_sixty = {
+	OR = {
+		AND = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			524 = { is_controlled_by_allies = yes }
+			526 = { is_controlled_by_allies = yes }
+		}	
+		
+		AND = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			OR = {
+				524 = { is_controlled_by_allies = no }
+				526 = { is_controlled_by_allies = no }
+			}
+		}
+	
+		AND = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			OR = {
+				524 = { is_controlled_by_allies = no }
+				526 = { is_controlled_by_allies = no }
+			}
+		}
+	}
+}
+
+maximum_lend_lease_is_eighty = {
+	OR = {
+		AND = {
+			OR = {
+				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
+				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
+			}
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			524 = { is_controlled_by_allies = yes }
+			526 = { is_controlled_by_allies = yes }
+		}
+		
+		AND = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { OR = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			524 = { is_controlled_by_allies = yes }
+			526 = { is_controlled_by_allies = yes }
+		}
+		
+		AND = {
+			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+			OR = {
+				524 = { is_controlled_by_allies = no }
+				526 = { is_controlled_by_allies = no }
+			}
+		}
+	}
+}
+
+maximum_lend_lease_is_hundred = {
+	AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+	GER = { NOT = { controls_state = 925 controls_state = 924 controls_state = 144 controls_state = 923 controls_state = 143 } }
+	524 = { is_controlled_by_allies = yes }
+	526 = { is_controlled_by_allies = yes }
+}
+
+off_сhannel_coastline = {
+	OR = { state = 129 state = 130 state = 131 state = 121 state = 136 state = 120 state = 133 state = 931 state = 132 state = 122 state = 119 state = 338 state = 932 }
+}
+
+norwegian_coastline = {
+	OR = { state = 110 state = 921 state = 922 state = 142 state = 920 state = 143 state = 923 state = 144 state = 924 state = 925 }
+}
+
+italian_coastline_above_naples = { 
+	OR = { state = 2 state = 157 state = 162 state = 161 state = 158 state = 160 state = 736 state = 852 state = 103 state = 163 state = 105 state = 934       state = 31 state = 22 state = 21 state = 851 state = 735 }
+}
+
+any_axis_capital_fallen_trigger = {
+	OR = {
+		2 = {
+			is_controlled_by_axis = no
+		}
+		43 = {
+			is_controlled_by_axis = no
+		}
+		46 = {
+			is_controlled_by_axis = no
+		}
+		48 = {
+			is_controlled_by_axis = no
+		}
+		AND = {
+		    NOT = { has_global_flag = NO_ASIA_FLAG }
+			282 = {
+		    	is_controlled_by_axis = no
+		    }
+		}
+	}
+}
+
+asian_war_simulation = {
+	JAP = { exists = no }
+	date < 1942.9.1
+}
+fix_traits = { #hi sartiros
+	OR = {
+		AND = {
+			has_trait = infantry_expert
+			has_trait = ambusher
+		}
+		AND = {
+			has_trait = panzer_expert
+			has_trait = combined_arms_expert
+		}
+		AND = {
+			has_trait = panzer_expert
+			has_trait = cavalry_expert
+		}
+		AND = {
+			has_trait = cavalry_expert
+			has_trait = combined_arms_expert
+		}
+		AND = {
+			has_trait = scavenger
+			has_trait = fortress_buster
+		}
+		AND = {
+			has_trait = offensive_doctrine
+			has_trait = defensive_doctrine
+		}
+		AND = {
+			has_trait = unyielding_defender
+			has_trait = aggressive_assaulter
+		}
+		AND = {
+			has_trait = fast_planner
+			has_trait = thorough_planner
+		}
+		AND = {
+			has_trait = silent_hunter
+			has_trait = lancer
+		}
+		AND = {
+			has_trait = lone_wolf
+			has_trait = concealment_expert
+		}
+		AND = {
+			has_trait = fighter_director
+			has_trait = dive_bomber
+		}
+		AND = {
+			has_trait = fighter_director
+			has_trait = torpedo_bomber
+		}
+		AND = {
+			has_trait = torpedo_bomber
+			has_trait = dive_bomber
+		}
+		AND = {
+			has_trait = crisis_magician
+			has_trait = marksman
+		}
 	}
 }

@@ -24,9 +24,7 @@ ideas = {
 
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.05
-				consumer_goods_factor = 0.10
-				production_speed_industrial_complex_factor = 0.05
+				production_factory_max_efficiency_factor = 0.15
 			}
 		}
 
@@ -76,6 +74,23 @@ ideas = {
 				political_power_factor = -0.15
 			}
 		}
+		
+		trotskyite_plot_fmp = {
+			name = trotskyite_plot
+
+			removal_cost = -1
+
+			picture = trotskyite_plot_purged_nsb_ccp_sov_compatibility
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}	
 
 		trotskyite_plot_purged = {
 			name = trotskyite_plot
@@ -107,11 +122,7 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.5
 				surrender_limit = 0.20
-			}
-			rule = {
-				can_create_factions = yes
 			}
 		}
 
@@ -1253,8 +1264,9 @@ ideas = {
 			}
 
 			modifier = {
-				operative_slot = 1
-				intelligence_agency_defense = 0.5
+				air_superiority_detect_factor = 0.1
+				recon_factor = 1
+				initiative_factor = 0.05
 			}
 		}
 
@@ -3199,13 +3211,9 @@ ideas = {
 			}
 
 			modifier = {
-				command_abilities_cost_factor = 0.1
 				land_doctrine_cost_factor = 0.2
 				naval_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
-
-				drift_defence_factor = 0.1
-				army_core_defence_factor = 0.03
 			}
 		}
 
@@ -3231,7 +3239,6 @@ ideas = {
 				air_doctrine_cost_factor = 0.2
 
 				drift_defence_factor = 0.1
-				army_core_defence_factor = 0.03
 				conscription = -0.03
 			}
 		}
@@ -3248,15 +3255,9 @@ ideas = {
 			}
 
 			modifier = {
-				command_abilities_cost_factor = 0.1
 				land_doctrine_cost_factor = 0.2
 				naval_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
-
-				drift_defence_factor = 0.15
-				army_core_defence_factor = 0.03
-				army_core_attack_factor = 0.03
-				max_command_power = 50
 
 				army_org_factor = 0.05
 				army_morale_factor = -0.1
@@ -3281,8 +3282,6 @@ ideas = {
 				air_doctrine_cost_factor = 0.2
 
 				drift_defence_factor = 0.15
-				army_core_defence_factor = 0.03
-				army_core_attack_factor = 0.03
 				max_command_power = 50
 
 				army_org_factor = 0.05
@@ -3302,13 +3301,9 @@ ideas = {
 			}
 
 			modifier = {
-				land_doctrine_cost_factor = 0.1
-				naval_doctrine_cost_factor = 0.1
-				air_doctrine_cost_factor = 0.1
-
-				drift_defence_factor = 0.1
-				army_core_defence_factor = 0.03
-				command_power_gain_mult = 0.1
+				land_doctrine_cost_factor = 0.2
+				naval_doctrine_cost_factor = 0.2
+				air_doctrine_cost_factor = 0.2
 
 				army_org_factor = -0.05
 				army_morale_factor = 0.1
@@ -3332,7 +3327,6 @@ ideas = {
 				air_doctrine_cost_factor = 0.1
 
 				drift_defence_factor = 0.1
-				army_core_defence_factor = 0.03
 				command_power_gain_mult = 0.1
 
 				army_org_factor = -0.05
@@ -3356,8 +3350,6 @@ ideas = {
 				air_doctrine_cost_factor = 0.2
 
 				drift_defence_factor = 0.15
-				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.05
 
 				army_org_factor = 0.05
 				army_morale_factor = 0.1
@@ -3685,37 +3677,37 @@ ideas = {
 			equipment_bonus = {
 				#AIRCRAFT
 				small_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				cv_small_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				small_plane_cas_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				cv_small_plane_cas_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				cv_small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				medium_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				medium_plane_scout_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				large_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 				large_plane_maritime_patrol_plane_airframe = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -9585,172 +9577,19 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-
-			visible = {
-				NOT = { has_completed_focus = SOV_national_specialists }
-			}
+			
+			available = { has_completed_focus = SOV_national_specialists }
 
 			research_bonus = {
-				industry = 0.1
+				industry = 0.15
 			}
 
 			traits = { industrial_concern }
 
 			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
+				consumer_goods_expected_value = -0.05
 			}
 		}
-
-		stalingrad_tractor_factory_improved = { #NSB
-			name = stalingrad_tractor_factory
-
-			picture = stalingrad_tractor_factory
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_completed_focus = SOV_national_specialists
-			}
-
-			research_bonus = {
-				industry = 0.2
-			}
-
-			traits = { industrial_concern }
-
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-
-
- #                                                                       ######
- #        ######  #    #  #  #    #   ####   #####     ##    #####       #     #   ####   #       #   #  #####  ######   ####   #    #  #    #  #   ####     ##    #
- #        #       ##   #  #  ##   #  #    #  #    #   #  #   #    #      #     #  #    #  #        # #     #    #       #    #  #    #  ##   #  #  #    #   #  #   #
- #        #####   # #  #  #  # #  #  #       #    #  #    #  #    #      ######   #    #  #         #      #    #####   #       ######  # #  #  #  #       #    #  #
- #        #       #  # #  #  #  # #  #  ###  #####   ######  #    #      #        #    #  #         #      #    #       #       #    #  #  # #  #  #       ######  #
- #        #       #   ##  #  #   ##  #    #  #   #   #    #  #    #      #        #    #  #         #      #    #       #    #  #    #  #   ##  #  #    #  #    #  #
- #######  ######  #    #  #  #    #   ####   #    #  #    #  #####       #         ####   ######    #      #    ######   ####   #    #  #    #  #   ####   #    #  ######
-
-
-		leningrad_polytechnical_institute = {
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				NOT = { has_completed_focus = SOV_national_specialists }
-			}
-
-			research_bonus = {
-				electronics = 0.1
-			}
-
-			traits = { electronics_concern }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
-			}
-		}
-
-		leningrad_polytechnical_institute_improved = {
-			name = leningrad_polytechnical_institute
-
-			picture = leningrad_polytechnical_institute
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_completed_focus = SOV_national_specialists
-			}
-
-			research_bonus = {
-				electronics = 0.2
-			}
-
-			traits = { electronics_concern }
-
-			modifier = {
-				supply_consumption_factor = -0.02
-			}
-		}
-
-
-  #####                                         ######
- #     #   ####   #    #  #  ######  #####      #     #    ##    #  #       #    #    ##    #   #   ####
- #        #    #  #    #  #  #         #        #     #   #  #   #  #       #    #   #  #    # #   #
-  #####   #    #  #    #  #  #####     #        ######   #    #  #  #       #    #  #    #    #     ####
-       #  #    #  #    #  #  #         #        #   #    ######  #  #       # ## #  ######    #         #
- #     #  #    #   #  #   #  #         #        #    #   #    #  #  #       ##  ##  #    #    #    #    #
-  #####    ####     ##    #  ######    #        #     #  #    #  #  ######  #    #  #    #    #     ####
-
-
-		SOV_soviet_railways = { #NSB
-
-			picture = SOV_soviet_railways
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				NOT = { has_completed_focus = SOV_national_specialists }
-			}
-
-			available = {
-				has_completed_focus = SOV_improve_railway_network
-			}
-
-			cost = 75
-
-			research_bonus = {
-				train_tech = 0.1
-			}
-
-			traits = { railway_company }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_industrial_concern_upgrade_tt
-			}
-		}
-
-		SOV_soviet_railways_improved = { #NSB
-			name = SOV_soviet_railways
-
-			picture = SOV_soviet_railways
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_completed_focus = SOV_national_specialists
-			}
-
-			available = {
-				has_completed_focus = SOV_improve_railway_network
-			}
-
-			cost = 75
-
-			research_bonus = {
-				train_tech = 0.2
-			}
-
-			traits = { railway_company }
-
-			modifier = {
-				mobilization_speed = 0.02
-			}
-		}
-
 
   #####
  #     #   ####    ####   #####   #####    ####   #   #  ######  #    #  #####   ####   #####  #####    ####   #   #
@@ -9773,500 +9612,14 @@ ideas = {
 				has_completed_focus = SOV_foreign_experts
 			}
 
-			visible = {
-				NOT = { has_country_flag = SOV_gosproyektstroy_level_2_flag }
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_2_usa = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 1 } #USA
-				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-			}
-		}
-
-		SOV_gosproyektstroy_3_usa_civ = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 1 } #USA
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
-			}
-
-			cost = 100
+			cost = 150
 
 			traits = { construction_company }
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-				consumer_goods_factor = -0.15
-			}
-		}
-
-		SOV_gosproyektstroy_3_usa_mil = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 1 } #USA
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.05
 			}
 		}
-
-		SOV_gosproyektstroy_3_usa_dock = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 1 } #USA
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
-				license_purchase_cost = -0.25
-				production_factory_max_efficiency_factor = 0.1
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_2_eng = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 2 } #ENG
-				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.1
-			}
-		}
-
-		SOV_gosproyektstroy_3_eng_civ = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 2 } #ENG
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.1
-				consumer_goods_factor = -0.15
-			}
-		}
-
-		SOV_gosproyektstroy_3_eng_mil = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 2 } #ENG
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.1
-				industrial_capacity_factory = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_3_eng_dock = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 2 } #ENG
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
-				license_purchase_cost = -0.25
-				line_change_production_efficiency_factor = 0.1
-				production_lack_of_resource_penalty_factor = -0.1
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_2_ger = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
-				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_3_ger_civ = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-				consumer_goods_factor = -0.15
-			}
-		}
-
-		SOV_gosproyektstroy_3_ger_mil = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_factory = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_3_ger_dock = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
-				license_purchase_cost = -0.25
-				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_2_jap = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_tag = SOV
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 4 } #JAP
-				NOT = { has_country_flag = SOV_gosproyektstroy_level_3_flag }
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-			}
-		}
-
-		SOV_gosproyektstroy_3_jap_civ = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 4 } #JAP
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 1 } #CIV
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-				consumer_goods_factor = -0.15
-			}
-		}
-
-		SOV_gosproyektstroy_3_jap_mil = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 4 } #JAP
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 2 } #MIL
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.05
-				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.05
-			}
-		}
-
-		SOV_gosproyektstroy_3_jap_dock = {
-
-			name = SOV_gosproyektstroy_1
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_TAG = SOV
-
-			}
-
-			visible = {
-				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 4 } #JAP
-				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
-			}
-
-			cost = 100
-
-			traits = { construction_company }
-
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.1
-				license_purchase_cost = -0.25
-				production_factory_start_efficiency_factor = 0.1
-				industrial_capacity_dockyard = 0.05
-			}
-		}
-
+	}
 }

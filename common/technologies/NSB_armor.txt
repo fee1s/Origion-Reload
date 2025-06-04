@@ -56,19 +56,12 @@ technologies = {
 			tank_heavy_two_man_tank_turret
 			tank_heavy_three_man_tank_turret
 			tank_heavy_fixed_superstructure_turret
-			tank_super_heavy_four_man_tank_turret
-			tank_super_heavy_three_man_tank_turret
 			tank_modern_tank_turret
 			sloped_armor
 			extra_ammo_storage
 			wet_ammo_storage
 			smoke_launchers
 			expanded_fuel_tank
-			tank_auto_cannon
-			tank_anti_air_cannon
-			tank_small_cannon
-			secondary_turret_small_cannon
-			tank_close_support_gun
 		}
 		enable_subunits = {
 			light_armor
@@ -253,11 +246,6 @@ technologies = {
 			light_tank_artillery_chassis_2
 			light_tank_aa_chassis_2
 		}
-		enable_equipment_modules = {
-			tank_auto_cannon_2
-			tank_anti_air_cannon_2
-			tank_small_cannon_2
-		}
 
 		path = {
 			leads_to_tech = advanced_light_tank_chassis
@@ -331,6 +319,32 @@ technologies = {
 				}
 				ITA_add_improved_light_tank_templates = yes
 			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_light_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_light_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		categories = {
@@ -403,6 +417,35 @@ technologies = {
 			tp_tech
 			mio_cat_tech_light_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_tank_chassis = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	amphibious_drive = { #SchwimmPanzer II
@@ -465,6 +508,35 @@ technologies = {
 			tp_tech
 			mio_cat_tech_light_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_drive = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_drive = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	advanced_light_tank_chassis = { #Leopard
@@ -475,11 +547,6 @@ technologies = {
 			light_tank_artillery_chassis_3
 			light_tank_aa_chassis_3
 		}
-		enable_equipment_modules = {
-			tank_anti_air_cannon_3
-			tank_small_cannon_3
-			tank_auto_cannon_3
-		}
 
 		research_cost = 2
 		start_year = 1941
@@ -487,10 +554,6 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = -1 y = 8 }
-		}
-
-		allow = {
-			date > 1940.01.01
 		}
 
 		ai_will_do = {
@@ -522,6 +585,35 @@ technologies = {
 			cat_light_armor
 			mio_cat_tech_light_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_light_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_light_tank_chassis = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	basic_medium_tank_chassis = { #Panzer III
@@ -532,11 +624,7 @@ technologies = {
 			medium_tank_artillery_chassis_1
 			medium_tank_aa_chassis_1
 		}
-		enable_equipment_modules = {
-			tank_high_velocity_cannon
-			tank_medium_howitzer
-			tank_medium_cannon
-		}
+
 		enable_subunits = {
 			medium_armor
 		}
@@ -565,6 +653,32 @@ technologies = {
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+			hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { basic_medium_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { basic_medium_tank_chassis = 1 }
+				    }
+				}
+			}
 		}
 
 		path = {
@@ -577,7 +691,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1937 }
+			position = { x = 2 y = @1936 }
 		}
 
 		ai_will_do = {
@@ -644,12 +758,7 @@ technologies = {
 			medium_tank_artillery_chassis_2
 			medium_tank_aa_chassis_2
 		}
-		enable_equipment_modules = {
-			tank_medium_cannon_2
-			tank_high_velocity_cannon_2
-			tank_medium_howitzer_2
-			tank_anti_air_cannon_2
-		}
+
 		path = {
 			leads_to_tech = advanced_medium_tank_chassis
 			research_cost_coeff = 1
@@ -659,12 +768,12 @@ technologies = {
 		start_year = 1940
 
 		allow = {
-			date > 1940.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1940 }
+			position = { x = 2 y = 6 }
 		}
 
 		on_research_complete = {
@@ -677,6 +786,32 @@ technologies = {
 					}
 				}
 				ITA_add_improved_medium_tank_templates = yes
+			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_medium_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_medium_tank_chassis = 1 }
+				    }
+				}
 			}
 		}
 
@@ -739,12 +874,7 @@ technologies = {
 			medium_tank_artillery_chassis_3
 			medium_tank_aa_chassis_3
 		}
-		enable_equipment_modules = {
-			tank_medium_cannon_3
-			tank_high_velocity_cannon_3
-			tank_heavy_howitzer
-			tank_anti_air_cannon_3
-		}
+
 		path = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
@@ -754,7 +884,7 @@ technologies = {
 		start_year = 1943
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		folder = {
@@ -769,6 +899,32 @@ technologies = {
 					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
 				}
 				ITA_add_advanced_medium_tank_templates = yes
+			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_medium_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_medium_tank_chassis = 1 }
+				    }
+				}
 			}
 		}
 
@@ -811,14 +967,11 @@ technologies = {
 			modern_armor
 		}
 
-		enable_equipment_modules = {
-			tank_super_heavy_cannon
-		}
 		research_cost = 2.5
 		start_year = 1945
 
 		allow = {
-			date > 1944.01.01
+			date > 1943.01.01
 		}
 
 		folder = {
@@ -851,6 +1004,35 @@ technologies = {
 			cat_medium_armor
 			mio_cat_tech_medium_armor_and_modules
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { main_battle_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { main_battle_tank_chassis = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 
@@ -862,11 +1044,7 @@ technologies = {
 			heavy_tank_artillery_chassis_1
 			heavy_tank_aa_chassis_1
 		}
-		enable_equipment_modules = {
-			tank_heavy_cannon
-			tank_medium_howitzer
-			tank_anti_air_cannon
-		}
+
 		enable_subunits = {
 			heavy_armor
 		}
@@ -954,18 +1132,9 @@ technologies = {
 			heavy_tank_artillery_chassis_2
 			heavy_tank_aa_chassis_2
 		}
-		enable_equipment_modules = {
-			tank_heavy_cannon_2
-			tank_anti_air_cannon_2
-			tank_medium_howitzer_2
-		}
-		path = {
-			leads_to_tech = advanced_heavy_tank_chassis
-			research_cost_coeff = 1
-		}
 
 		path = {
-			leads_to_tech = super_heavy_tank_chassis
+			leads_to_tech = advanced_heavy_tank_chassis
 			research_cost_coeff = 1
 		}
 
@@ -973,12 +1142,12 @@ technologies = {
 		start_year = 1940
 
 		allow = {
-			date > 1940.01.01
+			date > 1938.01.01
 		}
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 5 y = @1940 }
+			position = { x = 5 y = 6 }
 		}
 
 		on_research_complete = {
@@ -991,6 +1160,32 @@ technologies = {
 					}
 				}
 				ITA_add_improved_heavy_tank_templates = yes
+			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { improved_heavy_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { improved_heavy_tank_chassis = 1 }
+				    }
+				}
 			}
 		}
 
@@ -1034,11 +1229,7 @@ technologies = {
 			heavy_tank_artillery_chassis_3
 			heavy_tank_aa_chassis_3
 		}
-		enable_equipment_modules = {
-			tank_heavy_cannon_3
-			tank_heavy_howitzer
-			tank_anti_air_cannon_3
-		}
+
 		path = {
 			leads_to_tech = main_battle_tank_chassis
 			research_cost_coeff = 1
@@ -1048,7 +1239,7 @@ technologies = {
 		start_year = 1943
 
 		allow = {
-			date > 1942.01.01
+			date > 1941.01.01
 		}
 
 		folder = {
@@ -1063,6 +1254,32 @@ technologies = {
 					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
 				}
 				ITA_add_advanced_heavy_tank_templates = yes
+			}
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { advanced_heavy_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { advanced_heavy_tank_chassis = 1 }
+				    }
+				}
 			}
 		}
 
@@ -1561,4 +1778,5 @@ technologies = {
 			armor
 		}
 	}
+
 }

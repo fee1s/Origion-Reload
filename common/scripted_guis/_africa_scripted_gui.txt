@@ -1,0 +1,94 @@
+scripted_gui = {
+	africa_map_open = {
+	    context_type = player_context
+		window_name = "africa_map_open_container"
+		#visible = { has_country_flag = africa_map_open_flag }
+		visible = { always = yes }
+		effects = {
+			africa_map_open_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = africa_map_open } } }
+					ROOT = { set_country_flag = africa_map_open }
+				}
+				else = {
+					ROOT = { clr_country_flag = africa_map_open }
+				}
+				if = {
+					limit = { ROOT = { has_country_flag = asia_map_open } }
+					ROOT = { clr_country_flag = asia_map_open }
+				}
+			}
+		}
+		triggers = {
+			africa_map_open_click_enabled = {
+				always = yes
+			}
+		}
+	}
+	africa_map_ui = {
+		context_type = decision_category
+		window_name = "africa_map_ui_window"
+		properties = {
+			africa_map_morocco = {
+			    image = [get_africa_map_morocco_texture]
+			}
+			africa_map_algeria = {
+			    image = [get_africa_map_algeria_texture]
+			}
+			africa_map_eastalgeria = {
+			    image = [get_africa_map_eastalgeria_texture]
+			}
+			africa_map_tunis = {
+			    image = [get_africa_map_tunis_texture]
+			}
+			africa_map_libya = {
+			    image = [get_africa_map_libya_texture]
+			}
+			africa_map_eastlibya = {
+			    image = [get_africa_map_eastlibya_texture]
+			}
+			africa_map_kirenaika = {
+			    image = [get_africa_map_kirenaika_texture]
+			}
+			africa_map_matruh = {
+			    image = [get_africa_map_matruh_texture]
+			}
+			africa_map_cairo = {
+			    image = [get_africa_map_cairo_texture]
+			}
+			africa_map_nyle = {
+			    image = [get_africa_map_nyle_texture]
+			}
+			africa_map_upnyle = {
+			    image = [get_africa_map_upnyle_texture]
+			}
+			africa_map_palestine = {
+			    image = [get_africa_map_palestine_texture]
+			}
+			africa_map_iraq = {
+			    image = [get_africa_map_iraq_texture]
+			}
+			africa_map_gibraltar = {
+			    image = [get_africa_map_gibraltar_texture]
+			}
+			africa_map_balearic = {
+			    image = [get_africa_map_balearic_texture]
+			}
+			africa_map_sardinia = {
+			    image = [get_africa_map_sardinia_texture]
+			}
+			africa_map_sicily = {
+			    image = [get_africa_map_sicily_texture]
+			}
+			africa_map_malta = {
+			    image = [get_africa_map_malta_texture]
+			}
+			africa_map_crete = {
+			    image = [get_africa_map_crete_texture]
+			}
+			africa_map_cyprus = {
+			    image = [get_africa_map_cyprus_texture]
+			}
+		}
+	}
+}

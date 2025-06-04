@@ -18,11 +18,17 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_0
 		}
+
+		enable_equipment_modules = {
+			tank_heavy_machine_gun
+			secondary_turret_hmg
+			additional_machine_guns
+		}
 		
 		enable_subunits = {
 			infantry
 		}
-
+		
 		path = {
 			leads_to_tech = infantry_weapons1
 			research_cost_coeff = 1
@@ -628,12 +634,6 @@ technologies = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
-
-		marine_commando = {
-			max_organisation = 5
-			soft_attack = 0.05
-		}
-
 		enable_subunits = {
 			marine_commando
 		}
@@ -672,10 +672,6 @@ technologies = {
 	marines3 = {
 
 		marine = {
-			max_organisation = 5
-		}
-
-		marine_commando = {
 			max_organisation = 5
 		}
 
@@ -1254,11 +1250,6 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-
-		enable_equipment_modules = {
-			additional_machine_guns
-			secondary_turret_hmg
-		}	
 		
 		path = {
 			leads_to_tech = support_weapons2
@@ -1350,10 +1341,6 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
-
-		enable_equipment_modules = {
-			tank_heavy_machine_gun
-		}	
 		
 		path = {
 			leads_to_tech = support_weapons3
@@ -1742,63 +1729,6 @@ technologies = {
 			mot_rockets
 		}
 	}
-	
- 	SWE_lynx_armored_car = {
- 		allow = { always = no }
-		enable_equipments = {
-			#armored_car_at_equipment
-		}
-
-		research_cost = 1
-		start_year = 1942
-		sub_tech_index = 1
-		
-		categories = {
-			motorized_equipment
-			armor
-			cat_armored_cars
-		}
-
-		armored_car = {
-			max_organisation = 5
-			ap_attack = 0.1
-			hard_attack = 0.1
-			#hardness = 1
-			forest = {
-		    	attack = 0.2
-				movement = 0.55
-			}
-			desert = {
-		    	attack = -0.2
-				movement = -0.55
-			}
-
-			snow = {
-				attack = 0.2
-				movement = 0.35
-			}
-		}
-
-		armored_car_recon = {
-			max_organisation = 3
-			ap_attack = 0.1
-			hard_attack = 0.1
-			#hardness = 1
-			forest = {
-		    	attack = 0.05
-				movement = 0.1
-			}
-			desert = {
-		    	attack = -0.15
-				movement = -0.15
-			}
-
-			snow = {
-				attack = 0.2
-				movement = 0.25
-			}
-		}
-	}
 
 	mechanised_infantry = {
 
@@ -1808,6 +1738,51 @@ technologies = {
 
 		enable_equipment_modules = {
 			tank_half_track_suspension
+		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { mechanised_infantry = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { mechanised_infantry = 1 }
+				    }
+				}
+			}
+		}
+		
+		motorized = {
+			hardness = 1.0
+		}
+		mot_artillery_brigade = {
+			hardness = 1.0
+		}
+		mot_anti_tank_brigade = {
+			hardness = 1.0
+		}
+		mot_anti_air_brigade = {
+			hardness = 1.0
+		}
+		mot_rocket_artillery_brigade = {
+			hardness = 1.0
 		}
 
 		path = {
@@ -1889,6 +1864,35 @@ technologies = {
 				factor = 2
 			}
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_mechanized_infantry = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_mechanized_infantry = 1 }
+				    }
+				}
+			}
+		}
 	}
 
 	amphibious_mechanized_infantry_2 = {
@@ -1914,6 +1918,35 @@ technologies = {
 		ai_will_do = {
 			factor = 2
 		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { amphibious_mechanized_infantry_2 = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { amphibious_mechanized_infantry_2 = 1 }
+				    }
+				}
+			}
+		}
 	}
 	
 	mechanised_infantry2 = {
@@ -1929,7 +1962,7 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1942
-		allow = { date > 1941.1.1 }
+		allow = { date > 1940.1.1 }
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1942 }
@@ -1943,6 +1976,35 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { mechanised_infantry2 = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { mechanised_infantry2 = 1 }
+				    }
+				}
+			}
 		}
 	}
 	
@@ -1973,6 +2035,35 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+		
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { mechanised_infantry3 = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { mechanised_infantry3 = 1 }
+				    }
+				}
+			}
 		}
 	}
 	
@@ -2192,7 +2283,7 @@ technologies = {
 		}
 	}
 
-		armored_car1 = {
+	armored_car1 = {
 
 		enable_subunits = {
 			armored_car
@@ -2348,69 +2439,5 @@ technologies = {
 			}
 		}
 	}
-
-		special_project_specialization = { specialization_land }
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1942.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1943.1.1"
-			}
-
-			modifier = {
-				factor = 2
-				date > "1944.1.1"
-			}
-			modifier = {
-				is_major = no
-				factor = 0.5
-			}
-		}
-	}
-
-		armored_car = {
-			max_organisation = 5
-			ap_attack = 0.1
-			hard_attack = 0.1
-			#hardness = 1
-			forest = {
-		    	attack = 0.2
-				movement = 0.55
-			}
-			desert = {
-		    	attack = -0.2
-				movement = -0.55
-			}
-
-			snow = {
-				attack = 0.2
-				movement = 0.35
-			}
-		}
-
-		armored_car_recon = {
-			max_organisation = 3
-			ap_attack = 0.1
-			hard_attack = 0.1
-			#hardness = 1
-			forest = {
-		    	attack = 0.05
-				movement = 0.05
-			}
-			desert = {
-		    	attack = -0.15
-				movement = -0.15
-			}
-
-			snow = {
-				attack = 0.05
-				movement = 0.08
-			}
-		}
+	
+}
