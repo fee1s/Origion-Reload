@@ -923,7 +923,7 @@ news_event = { # скрытый ивент вспомогательный по �
 	major = yes
 	fire_only_once = no
 	
-	trigger = { FRA = { surrender_progress > 0.52 } NOT = { has_global_flag = second_compiegne_signed } } # лимит капитуляции был изменен с 0.33 до 0.52, т.к количество ВП вокруг Парижа изменилось
+	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
 	
 	immediate = {
 	    set_global_flag = second_compiegne_signed
