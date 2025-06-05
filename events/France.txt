@@ -321,7 +321,6 @@ country_event = {
 				}
 				set_capital = { state = 635 }
 			}
-			country_event = france.20
 		}
 		custom_effect_tooltip = establishing_vichy_tt
 
@@ -456,6 +455,8 @@ country_event = { # Ключевой ивент для Франции
 			add_timed_idea = { idea = fra_start_efficiency days = 70 }
 			add_ideas = FRA_closed_eco
 			
+			add_manpower = 838450
+			
 			remove_ideas = FRA_victors_of_wwi
 			remove_ideas = FRA_inflexible_production
 			
@@ -568,13 +569,7 @@ country_event = {
 	picture = GFX_report_event_worker_protests
 	
 	trigger = {
-		NOT = { has_government = communism }
-		NOT = { has_idea = FRA_matignon_agreements }
-		has_completed_focus = FRA_form_the_popular_front
-		NOT = { has_country_flag = FRA_popular_front_cooldown }
-		tag = FRA
-		date > 1936.4.1
-		date < 1938.1.1
+		always = no
 	}
 
 	fire_only_once = yes

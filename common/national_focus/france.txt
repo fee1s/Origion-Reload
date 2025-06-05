@@ -107,8 +107,9 @@
 			add_tech_bonus = {
 				name = FRA_contract_with_schneider
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				technology = antitank3
+				technology = antitank4
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -942,8 +943,27 @@
 						}
 						add_building_construction = {
 							type = bunker
-							level = 10
+							level = 5
 							province = 11506
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13544 }
+							any_province_building_level = {
+								province = {
+									id = 13544
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13544
 							instant_build = yes
 						}
 					}
@@ -982,6 +1002,44 @@
 							type = bunker
 							level = 5
 							province = 9523
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13545 }
+							any_province_building_level = {
+								province = {
+									id = 13545
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 13545
+							instant_build = yes
+						}
+					}
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13543 }
+							any_province_building_level = {
+								province = {
+									id = 13543
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 13543
 							instant_build = yes
 						}
 					}
