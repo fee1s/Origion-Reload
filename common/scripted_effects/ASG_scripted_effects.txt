@@ -1,0 +1,6219 @@
+ASG_graphs_replot = {
+	ASG_replot_military_graph = yes
+	ASG_replot_manpower_graph = yes
+	ASG_replot_casualties_graph = yes
+}
+ASG_stats_update = {
+	ASG_military_update_stats = yes
+	ASG_manpower_update_stats = yes
+	ASG_casualties_update_stats = yes
+}
+ASG_clear_every_graph = {
+	ASG_clear_military_graph = yes
+	ASG_clear_casualties_graph = yes
+	ASG_clear_manpower_graph = yes
+}
+ASG_military_update_stats = {
+	every_country = {
+		set_variable = {
+			ASG_military_score = THIS.num_of_military_factories
+		}
+		set_variable = {
+			ASG_military_score_modifier = modifier@industrial_capacity_factory
+		}
+		set_variable = {
+			ASG_military_score_max_modifier = modifier@production_factory_max_efficiency_factor
+		}
+		add_to_variable = {
+			ASG_military_score_max_modifier = 0.5
+		}
+		add_to_variable = {
+			ASG_military_score_modifier = 1
+		}
+		multiply_variable = {
+			ASG_military_score = ASG_military_score_modifier
+		}
+		multiply_variable = {
+			ASG_military_score = ASG_military_score_max_modifier
+		}
+		multiply_variable = {
+			ASG_military_score = 4.5
+		}
+		add_to_array = {
+			THIS.ASG_military_score_array = ASG_military_score
+		}
+	}
+}
+ASG_manpower_update_stats = {
+	every_country = {
+		IF = {
+			limit = {
+				has_army_manpower = {
+					size > 9750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 9000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 8000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 7000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 6000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 5000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 4000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 3000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 2000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1075000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1050000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1025000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1000000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 975000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 950000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 925000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 900000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 875000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 850000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 825000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 800000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 775000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 750000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 725000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 700000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 675000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 650000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 625000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 600000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 575000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 550000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 525000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 500000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 475000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 450000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 425000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 400000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 375000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 350000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 325000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 300000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 275000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 250000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 225000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 200000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 175000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 150000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 125000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 100000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 75000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 75
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 50000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 50
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 25000
+				}
+			}
+			set_variable = {
+				ASG_manpower_score = 25
+			}
+		}
+		else = {
+			set_variable = {
+				ASG_manpower_score = 0
+			}
+		}
+		add_to_array = {
+			THIS.ASG_manpower_score_array = ASG_manpower_score
+		}
+	}
+}
+ASG_casualties_update_stats = {
+	every_country = {
+		set_variable = {
+			ASG_casualties_score = THIS.casualties_k
+		}
+		add_to_array = {
+			THIS.ASG_casualties_score_array = ASG_casualties_score
+		}
+	}
+}
+ASG_clear_military_graph = {
+	meta_effect = {
+		text = {
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_green
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_blue
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_grey
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_red
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_red
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_blue
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_yellow
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_white
+		
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_green
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_blue
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_grey
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_red
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_red
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_blue
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_yellow
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_white
+		}
+		categorie = "military"
+	}
+}
+ASG_clear_manpower_graph = {
+	meta_effect = {
+		text = {
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_green
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_blue
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_grey
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_red
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_red
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_blue
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_yellow
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_white
+		
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_green
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_blue
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_grey
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_red
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_red
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_blue
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_yellow
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_white
+		}
+		categorie = "manpower"
+	}
+}
+ASG_clear_casualties_graph = {
+	meta_effect = {
+		text = {
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_green
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_blue
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_grey
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_red
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_red
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_blue
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_yellow
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_white
+		
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_green
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_blue
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_grey
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_red
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_red
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_blue
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_yellow
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_light_white
+		}
+		categorie = "casualties"
+	}
+}
+ASG_calculate_initial_graph_point_military = {
+	meta_effect = {
+		text = {
+			set_temp_variable = {
+				ASG_[categorie]_green_pixel_value = [tag1].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = [tag2].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = [tag3].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_red_pixel_value = [tag4].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = [tag5].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = [tag6].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = [tag7].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = [tag8].ASG_[categorie]_score_array^0
+			}
+
+			multiply_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+
+			divide_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+
+			add_to_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+
+			round_temp_variable = ASG_[categorie]_green_pixel_value
+			round_temp_variable = ASG_[categorie]_blue_pixel_value
+			round_temp_variable = ASG_[categorie]_grey_pixel_value
+			round_temp_variable = ASG_[categorie]_red_pixel_value
+			round_temp_variable = ASG_[categorie]_light_red_pixel_value
+			round_temp_variable = ASG_[categorie]_light_blue_pixel_value
+			round_temp_variable = ASG_[categorie]_light_yellow_pixel_value
+			round_temp_variable = ASG_[categorie]_light_white_pixel_value
+
+			clamp_variable = {
+				var = ASG_[categorie]_green_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_blue_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_grey_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_red_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_red_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_blue_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_yellow_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_white_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_green = ASG_[categorie]_green_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_blue = ASG_[categorie]_blue_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_grey = ASG_[categorie]_grey_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_red = ASG_[categorie]_red_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_red = ASG_[categorie]_light_red_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_blue = ASG_[categorie]_light_blue_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_yellow = ASG_[categorie]_light_yellow_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_white = ASG_[categorie]_light_white_pixel_value
+			}
+			# log = "ASG : INITIAL [categorie] GRAPH UPDATE : [GetDateText]"
+			# log = "ASG : END OF [categorie] GRAPH INITIAL UPDATE"
+		}
+		categorie = "military"
+		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
+		tag2 = "[?GLOBAL.ASG_blue_curve_tag.GetTag]"
+		tag3 = "[?GLOBAL.ASG_grey_curve_tag.GetTag]"
+		tag4 = "[?GLOBAL.ASG_red_curve_tag.GetTag]"
+		tag5 = "[?GLOBAL.ASG_light_red_curve_tag.GetTag]"
+		tag6 = "[?GLOBAL.ASG_light_blue_curve_tag.GetTag]"
+		tag7 = "[?GLOBAL.ASG_light_yellow_curve_tag.GetTag]"
+		tag8 = "[?GLOBAL.ASG_light_white_curve_tag.GetTag]"
+		# debug = yes
+	}
+}
+ASG_calculate_initial_graph_point_manpower = {
+	meta_effect = {
+		text = {
+			set_temp_variable = {
+				ASG_[categorie]_green_pixel_value = [tag1].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = [tag2].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = [tag3].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_red_pixel_value = [tag4].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = [tag5].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = [tag6].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = [tag7].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = [tag8].ASG_[categorie]_score_array^0
+			}
+
+			multiply_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+
+			divide_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+
+			add_to_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+
+			round_temp_variable = ASG_[categorie]_green_pixel_value
+			round_temp_variable = ASG_[categorie]_blue_pixel_value
+			round_temp_variable = ASG_[categorie]_grey_pixel_value
+			round_temp_variable = ASG_[categorie]_red_pixel_value
+			round_temp_variable = ASG_[categorie]_light_red_pixel_value
+			round_temp_variable = ASG_[categorie]_light_blue_pixel_value
+			round_temp_variable = ASG_[categorie]_light_yellow_pixel_value
+			round_temp_variable = ASG_[categorie]_light_white_pixel_value
+
+			clamp_variable = {
+				var = ASG_[categorie]_green_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_blue_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_grey_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_red_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_red_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_blue_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_yellow_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_white_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_green = ASG_[categorie]_green_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_blue = ASG_[categorie]_blue_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_grey = ASG_[categorie]_grey_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_red = ASG_[categorie]_red_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_red = ASG_[categorie]_light_red_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_blue = ASG_[categorie]_light_blue_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_yellow = ASG_[categorie]_light_yellow_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_white = ASG_[categorie]_light_white_pixel_value
+			}
+			# log = "ASG : INITIAL [categorie] GRAPH UPDATE : [GetDateText]"
+			# log = "ASG : END OF [categorie] GRAPH INITIAL UPDATE"
+		}
+		categorie = "manpower"
+		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
+		tag2 = "[?GLOBAL.ASG_blue_curve_tag.GetTag]"
+		tag3 = "[?GLOBAL.ASG_grey_curve_tag.GetTag]"
+		tag4 = "[?GLOBAL.ASG_red_curve_tag.GetTag]"
+		tag5 = "[?GLOBAL.ASG_light_red_curve_tag.GetTag]"
+		tag6 = "[?GLOBAL.ASG_light_blue_curve_tag.GetTag]"
+		tag7 = "[?GLOBAL.ASG_light_yellow_curve_tag.GetTag]"
+		tag8 = "[?GLOBAL.ASG_light_white_curve_tag.GetTag]"
+		# debug = yes
+	}
+}
+ASG_calculate_initial_graph_point_casualties = {
+	meta_effect = {
+		text = {
+			set_temp_variable = {
+				ASG_[categorie]_green_pixel_value = [tag1].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = [tag2].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = [tag3].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_red_pixel_value = [tag4].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = [tag5].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = [tag6].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = [tag7].ASG_[categorie]_score_array^0
+			}
+			set_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = [tag8].ASG_[categorie]_score_array^0
+			}
+
+			multiply_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+
+			divide_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+			divide_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
+
+			add_to_temp_variable = {
+				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_blue_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_grey_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_red_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_red_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_blue_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_yellow_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+			add_to_temp_variable = {
+				ASG_[categorie]_light_white_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
+
+			round_temp_variable = ASG_[categorie]_green_pixel_value
+			round_temp_variable = ASG_[categorie]_blue_pixel_value
+			round_temp_variable = ASG_[categorie]_grey_pixel_value
+			round_temp_variable = ASG_[categorie]_red_pixel_value
+			round_temp_variable = ASG_[categorie]_light_red_pixel_value
+			round_temp_variable = ASG_[categorie]_light_blue_pixel_value
+			round_temp_variable = ASG_[categorie]_light_yellow_pixel_value
+			round_temp_variable = ASG_[categorie]_light_white_pixel_value
+
+			clamp_variable = {
+				var = ASG_[categorie]_green_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_blue_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_grey_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_red_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_red_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_blue_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_yellow_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			clamp_variable = {
+				var = ASG_[categorie]_light_white_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
+			
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_green = ASG_[categorie]_green_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_blue = ASG_[categorie]_blue_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_grey = ASG_[categorie]_grey_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_red = ASG_[categorie]_red_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_red = ASG_[categorie]_light_red_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_blue = ASG_[categorie]_light_blue_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_yellow = ASG_[categorie]_light_yellow_pixel_value
+			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_light_white = ASG_[categorie]_light_white_pixel_value
+			}
+			# log = "ASG : INITIAL [categorie] GRAPH UPDATE : [GetDateText]"
+			# log = "ASG : END OF [categorie] GRAPH INITIAL UPDATE"
+		}
+		categorie = "casualties"
+		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
+		tag2 = "[?GLOBAL.ASG_blue_curve_tag.GetTag]"
+		tag3 = "[?GLOBAL.ASG_grey_curve_tag.GetTag]"
+		tag4 = "[?GLOBAL.ASG_red_curve_tag.GetTag]"
+		tag5 = "[?GLOBAL.ASG_light_red_curve_tag.GetTag]"
+		tag6 = "[?GLOBAL.ASG_light_blue_curve_tag.GetTag]"
+		tag7 = "[?GLOBAL.ASG_light_yellow_curve_tag.GetTag]"
+		tag8 = "[?GLOBAL.ASG_light_white_curve_tag.GetTag]"
+		# debug = yes
+	}
+}
+ASG_replot_military_graph = {
+	meta_effect = {
+		text = {
+			ASG_clear_[categorie]_graph = yes
+			ASG_calculate_initial_graph_point_[categorie] = yes
+			
+			for_each_loop = {
+				array = [tag1].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_green = GLOBAL.ASG_[categorie]_y_position_green
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_green = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_green = GLOBAL.ASG_[categorie]_last_y_position_green
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_green = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_green = [categorie]_offset_green
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_green = GLOBAL.ASG_[categorie]_y_position_green
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_green = GLOBAL.ASG_[categorie]_last_y_position_green
+					}
+					divide_temp_variable = {
+						[categorie]_diff_green = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_green = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_green = [categorie]_diff_green
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag2].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_blue = GLOBAL.ASG_[categorie]_y_position_blue
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_blue = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_blue = GLOBAL.ASG_[categorie]_last_y_position_blue
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_blue = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_blue = [categorie]_offset_blue
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_blue = GLOBAL.ASG_[categorie]_y_position_blue
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_blue = GLOBAL.ASG_[categorie]_last_y_position_blue
+					}
+					divide_temp_variable = {
+						[categorie]_diff_blue = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_blue = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_blue = [categorie]_diff_blue
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag3].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_grey = GLOBAL.ASG_[categorie]_y_position_grey
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_grey = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_grey = GLOBAL.ASG_[categorie]_last_y_position_grey
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_grey = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_grey = [categorie]_offset_grey
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_grey = GLOBAL.ASG_[categorie]_y_position_grey
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_grey = GLOBAL.ASG_[categorie]_last_y_position_grey
+					}
+					divide_temp_variable = {
+						[categorie]_diff_grey = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_grey = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_grey = [categorie]_diff_grey
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag4].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_red = GLOBAL.ASG_[categorie]_y_position_red
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_red = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_red = GLOBAL.ASG_[categorie]_last_y_position_red
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_red = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_red = [categorie]_offset_red
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_red = GLOBAL.ASG_[categorie]_y_position_red
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_red = GLOBAL.ASG_[categorie]_last_y_position_red
+					}
+					divide_temp_variable = {
+						[categorie]_diff_red = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_red = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_red = [categorie]_diff_red
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag5].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_red = GLOBAL.ASG_[categorie]_y_position_light_red
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_red = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_red = GLOBAL.ASG_[categorie]_last_y_position_light_red
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_red = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_red = [categorie]_offset_light_red
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_red = GLOBAL.ASG_[categorie]_y_position_light_red
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_red = GLOBAL.ASG_[categorie]_last_y_position_light_red
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_red = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_red = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_red = [categorie]_diff_light_red
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag6].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_blue = GLOBAL.ASG_[categorie]_y_position_light_blue
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_blue = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_blue = GLOBAL.ASG_[categorie]_last_y_position_light_blue
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_blue = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_blue = [categorie]_offset_light_blue
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_blue = GLOBAL.ASG_[categorie]_y_position_light_blue
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_blue = GLOBAL.ASG_[categorie]_last_y_position_light_blue
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_blue = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_blue = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_blue = [categorie]_diff_light_blue
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag7].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_yellow = GLOBAL.ASG_[categorie]_y_position_light_yellow
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_yellow = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_yellow = GLOBAL.ASG_[categorie]_last_y_position_light_yellow
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_yellow = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_yellow = [categorie]_offset_light_yellow
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_yellow = GLOBAL.ASG_[categorie]_y_position_light_yellow
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_yellow = GLOBAL.ASG_[categorie]_last_y_position_light_yellow
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_yellow = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_yellow = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_yellow = [categorie]_diff_light_yellow
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag8].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_white = GLOBAL.ASG_[categorie]_y_position_light_white
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_white = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_white = GLOBAL.ASG_[categorie]_last_y_position_light_white
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_white = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_white = [categorie]_offset_light_white
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_white = GLOBAL.ASG_[categorie]_y_position_light_white
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_white = GLOBAL.ASG_[categorie]_last_y_position_light_white
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_white = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_white = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_white = [categorie]_diff_light_white
+					}
+				}
+			}
+		}
+		categorie = "military"
+		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
+		tag2 = "[?GLOBAL.ASG_blue_curve_tag.GetTag]"
+		tag3 = "[?GLOBAL.ASG_grey_curve_tag.GetTag]"
+		tag4 = "[?GLOBAL.ASG_red_curve_tag.GetTag]"
+		tag5 = "[?GLOBAL.ASG_light_red_curve_tag.GetTag]"
+		tag6 = "[?GLOBAL.ASG_light_blue_curve_tag.GetTag]"
+		tag7 = "[?GLOBAL.ASG_light_yellow_curve_tag.GetTag]"
+		tag8 = "[?GLOBAL.ASG_light_white_curve_tag.GetTag]"
+		# debug = yes
+	}
+}
+ASG_replot_manpower_graph = {
+	meta_effect = {
+		text = {
+			ASG_clear_[categorie]_graph = yes
+			ASG_calculate_initial_graph_point_[categorie] = yes
+			
+			for_each_loop = {
+				array = [tag1].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_green = GLOBAL.ASG_[categorie]_y_position_green
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_green = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_green = GLOBAL.ASG_[categorie]_last_y_position_green
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_green = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_green = [categorie]_offset_green
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_green = GLOBAL.ASG_[categorie]_y_position_green
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_green = GLOBAL.ASG_[categorie]_last_y_position_green
+					}
+					divide_temp_variable = {
+						[categorie]_diff_green = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_green = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_green = [categorie]_diff_green
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag2].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_blue = GLOBAL.ASG_[categorie]_y_position_blue
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_blue = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_blue = GLOBAL.ASG_[categorie]_last_y_position_blue
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_blue = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_blue = [categorie]_offset_blue
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_blue = GLOBAL.ASG_[categorie]_y_position_blue
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_blue = GLOBAL.ASG_[categorie]_last_y_position_blue
+					}
+					divide_temp_variable = {
+						[categorie]_diff_blue = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_blue = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_blue = [categorie]_diff_blue
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag3].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_grey = GLOBAL.ASG_[categorie]_y_position_grey
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_grey = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_grey = GLOBAL.ASG_[categorie]_last_y_position_grey
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_grey = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_grey = [categorie]_offset_grey
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_grey = GLOBAL.ASG_[categorie]_y_position_grey
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_grey = GLOBAL.ASG_[categorie]_last_y_position_grey
+					}
+					divide_temp_variable = {
+						[categorie]_diff_grey = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_grey = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_grey = [categorie]_diff_grey
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag4].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_red = GLOBAL.ASG_[categorie]_y_position_red
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_red = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_red = GLOBAL.ASG_[categorie]_last_y_position_red
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_red = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_red = [categorie]_offset_red
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_red = GLOBAL.ASG_[categorie]_y_position_red
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_red = GLOBAL.ASG_[categorie]_last_y_position_red
+					}
+					divide_temp_variable = {
+						[categorie]_diff_red = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_red = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_red = [categorie]_diff_red
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag5].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_red = GLOBAL.ASG_[categorie]_y_position_light_red
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_red = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_red = GLOBAL.ASG_[categorie]_last_y_position_light_red
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_red = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_red = [categorie]_offset_light_red
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_red = GLOBAL.ASG_[categorie]_y_position_light_red
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_red = GLOBAL.ASG_[categorie]_last_y_position_light_red
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_red = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_red = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_red = [categorie]_diff_light_red
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag6].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_blue = GLOBAL.ASG_[categorie]_y_position_light_blue
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_blue = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_blue = GLOBAL.ASG_[categorie]_last_y_position_light_blue
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_blue = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_blue = [categorie]_offset_light_blue
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_blue = GLOBAL.ASG_[categorie]_y_position_light_blue
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_blue = GLOBAL.ASG_[categorie]_last_y_position_light_blue
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_blue = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_blue = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_blue = [categorie]_diff_light_blue
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag7].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_yellow = GLOBAL.ASG_[categorie]_y_position_light_yellow
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_yellow = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_yellow = GLOBAL.ASG_[categorie]_last_y_position_light_yellow
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_yellow = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_yellow = [categorie]_offset_light_yellow
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_yellow = GLOBAL.ASG_[categorie]_y_position_light_yellow
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_yellow = GLOBAL.ASG_[categorie]_last_y_position_light_yellow
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_yellow = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_yellow = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_yellow = [categorie]_diff_light_yellow
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag8].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_white = GLOBAL.ASG_[categorie]_y_position_light_white
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_white = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_white = GLOBAL.ASG_[categorie]_last_y_position_light_white
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_white = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_white = [categorie]_offset_light_white
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_white = GLOBAL.ASG_[categorie]_y_position_light_white
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_white = GLOBAL.ASG_[categorie]_last_y_position_light_white
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_white = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_white = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_white = [categorie]_diff_light_white
+					}
+				}
+			}
+		}
+		categorie = "manpower"
+		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
+		tag2 = "[?GLOBAL.ASG_blue_curve_tag.GetTag]"
+		tag3 = "[?GLOBAL.ASG_grey_curve_tag.GetTag]"
+		tag4 = "[?GLOBAL.ASG_red_curve_tag.GetTag]"
+		tag5 = "[?GLOBAL.ASG_light_red_curve_tag.GetTag]"
+		tag6 = "[?GLOBAL.ASG_light_blue_curve_tag.GetTag]"
+		tag7 = "[?GLOBAL.ASG_light_yellow_curve_tag.GetTag]"
+		tag8 = "[?GLOBAL.ASG_light_white_curve_tag.GetTag]"
+		# debug = yes
+	}
+}
+ASG_replot_casualties_graph = {
+	meta_effect = {
+		text = {
+			ASG_clear_[categorie]_graph = yes
+			ASG_calculate_initial_graph_point_[categorie] = yes
+			
+			for_each_loop = {
+				array = [tag1].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_green = GLOBAL.ASG_[categorie]_y_position_green
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_green = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_green = GLOBAL.ASG_[categorie]_last_y_position_green
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_green = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_green = [categorie]_offset_green
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_green = GLOBAL.ASG_[categorie]_y_position_green
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_green = GLOBAL.ASG_[categorie]_last_y_position_green
+					}
+					divide_temp_variable = {
+						[categorie]_diff_green = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_green = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_green = [categorie]_diff_green
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag2].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_blue = GLOBAL.ASG_[categorie]_y_position_blue
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_blue = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_blue = GLOBAL.ASG_[categorie]_last_y_position_blue
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_blue = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_blue = [categorie]_offset_blue
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_blue = GLOBAL.ASG_[categorie]_y_position_blue
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_blue = GLOBAL.ASG_[categorie]_last_y_position_blue
+					}
+					divide_temp_variable = {
+						[categorie]_diff_blue = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_blue = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_blue = [categorie]_diff_blue
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag3].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_grey = GLOBAL.ASG_[categorie]_y_position_grey
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_grey = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_grey = GLOBAL.ASG_[categorie]_last_y_position_grey
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_grey = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_grey = [categorie]_offset_grey
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_grey = GLOBAL.ASG_[categorie]_y_position_grey
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_grey = GLOBAL.ASG_[categorie]_last_y_position_grey
+					}
+					divide_temp_variable = {
+						[categorie]_diff_grey = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_grey = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_grey = [categorie]_diff_grey
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag4].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_red = GLOBAL.ASG_[categorie]_y_position_red
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_red = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_red = GLOBAL.ASG_[categorie]_last_y_position_red
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_red = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_red = [categorie]_offset_red
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_red = GLOBAL.ASG_[categorie]_y_position_red
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_red = GLOBAL.ASG_[categorie]_last_y_position_red
+					}
+					divide_temp_variable = {
+						[categorie]_diff_red = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_red = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_red = [categorie]_diff_red
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag5].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_red = GLOBAL.ASG_[categorie]_y_position_light_red
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_red = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_red = GLOBAL.ASG_[categorie]_last_y_position_light_red
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_red = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_red = [categorie]_offset_light_red
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_red = GLOBAL.ASG_[categorie]_y_position_light_red
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_red = GLOBAL.ASG_[categorie]_last_y_position_light_red
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_red = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_red = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_red = [categorie]_diff_light_red
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag6].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_blue = GLOBAL.ASG_[categorie]_y_position_light_blue
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_blue = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_blue = GLOBAL.ASG_[categorie]_last_y_position_light_blue
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_blue = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_blue = [categorie]_offset_light_blue
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_blue = GLOBAL.ASG_[categorie]_y_position_light_blue
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_blue = GLOBAL.ASG_[categorie]_last_y_position_light_blue
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_blue = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_blue = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_blue = [categorie]_diff_light_blue
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag7].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_yellow = GLOBAL.ASG_[categorie]_y_position_light_yellow
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_yellow = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_yellow = GLOBAL.ASG_[categorie]_last_y_position_light_yellow
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_yellow = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_yellow = [categorie]_offset_light_yellow
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_yellow = GLOBAL.ASG_[categorie]_y_position_light_yellow
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_yellow = GLOBAL.ASG_[categorie]_last_y_position_light_yellow
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_yellow = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_yellow = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_yellow = [categorie]_diff_light_yellow
+					}
+				}
+			}
+			for_each_loop = {
+				array = [tag8].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_light_white = GLOBAL.ASG_[categorie]_y_position_light_white
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_light_white = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_light_white = GLOBAL.ASG_[categorie]_last_y_position_light_white
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_light_white = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_light_white = [categorie]_offset_light_white
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_light_white = GLOBAL.ASG_[categorie]_y_position_light_white
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_light_white = GLOBAL.ASG_[categorie]_last_y_position_light_white
+					}
+					divide_temp_variable = {
+						[categorie]_diff_light_white = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_light_white = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_light_white = [categorie]_diff_light_white
+					}
+				}
+			}
+		}
+		categorie = "casualties"
+		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
+		tag2 = "[?GLOBAL.ASG_blue_curve_tag.GetTag]"
+		tag3 = "[?GLOBAL.ASG_grey_curve_tag.GetTag]"
+		tag4 = "[?GLOBAL.ASG_red_curve_tag.GetTag]"
+		tag5 = "[?GLOBAL.ASG_light_red_curve_tag.GetTag]"
+		tag6 = "[?GLOBAL.ASG_light_blue_curve_tag.GetTag]"
+		tag7 = "[?GLOBAL.ASG_light_yellow_curve_tag.GetTag]"
+		tag8 = "[?GLOBAL.ASG_light_white_curve_tag.GetTag]"
+		# debug = yes
+	}
+}
+
+test_pays = {
+	set_variable = {
+		GLOBAL.ASG_light_white_curve_tag = POL.id
+	}
+	ASG_graphs_replot = yes
+}
+
+test_pays2 = {
+	set_variable = {
+		GLOBAL.ASG_light_white_curve_tag = JAP.id
+	}
+	ASG_graphs_replot = yes
+}
+
+ASG_change_selected_channel_scope = {
+	if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 1
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_grey_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 5
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_green_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 2
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_blue_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 3
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_red_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 4
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_light_blue_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 6
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_light_red_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 7
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_light_white_curve_tag = THIS.id
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_selected_channel = 8
+			}
+		}
+		set_variable = {
+			GLOBAL.ASG_light_yellow_curve_tag = THIS.id
+		}
+	} else = {
+		log = "GLOBAL.ASG_selected_channel outside borders, please investigate."
+
+	}
+	ASG_graphs_replot = yes
+	set_variable = {
+		GLOBAL.ASG_selected_channel = 0
+	}
+}
+ASG_military_rescale_up = {
+	if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_military_rendering_scale_factor > 0.125
+			}
+		}
+		multiply_variable = {
+			GLOBAL.ASG_military_rendering_scale_factor = 0.5
+		}
+		ASG_replot_military_graph = yes
+	}
+}
+ASG_military_rescale_down = {
+	if = {
+		limit = {
+			check_variable = {
+				GLOBAL.ASG_military_rendering_scale_factor < 8
+			}
+		}
+		multiply_variable = {
+			GLOBAL.ASG_military_rendering_scale_factor = 2
+		}
+		ASG_replot_military_graph = yes
+	}
+}
