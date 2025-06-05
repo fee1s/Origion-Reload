@@ -194,22 +194,10 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	is_triggered_only = yes
-
-	immediate = {
-		set_global_flag = achievement_france_surrender
-	}
-	
+	is_triggered_only = yes	
 	
 	option = { # Become Free French
 		name = france.10.b
-		ai_chance = {
-			factor = 85
-		}
-		set_global_flag = fall_of_france
-		save_global_event_target_as = free_france
-		GER = { country_event = france.14 }
-		custom_effect_tooltip = france.10.b_tt
 	}
 	
 	
@@ -296,34 +284,8 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = { # Должно стоять тут, чтобы не вызывать ошибок
-	    hidden_effect = {
-	        VIC = { recruit_character = VIC_philippe_petain }
-		}
-	}
-	
-	
 	option = { # Agree - Fascism - LaR
 		name = france.14.a
-		FRA = { 
-			set_cosmetic_tag = FRA_FREE 
-			add_ideas = FRA_defeatism
-			load_focus_tree = free_french_focus
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							state = 16
-							state = 635
-						}
-					}
-					controls_state = 635
-				}
-				set_capital = { state = 635 }
-			}
-		}
-		custom_effect_tooltip = establishing_vichy_tt
-
 	}
 	
 }
