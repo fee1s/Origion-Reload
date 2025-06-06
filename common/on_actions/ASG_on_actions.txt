@@ -24,7 +24,25 @@ on_actions = {
 					GLOBAL.ASG_light_white_curve_tag = JAP.id
 				}
 				set_variable = {
-					GLOBAL.ASG_light_yellow_curve_tag = BUL.id
+					GLOBAL.ASG_light_yellow_curve_tag = ROM.id
+				}
+				set_variable = {
+					GLOBAL.ASG_bulgary_curve_tag = BUL.id
+				}
+				set_variable = {
+					GLOBAL.ASG_hungary_curve_tag = HUN.id
+				}
+				set_variable = {
+					GLOBAL.ASG_canada_curve_tag = CAN.id
+				}
+				set_variable = {
+					GLOBAL.ASG_australia_curve_tag = AST.id
+				}
+				set_variable = {
+					GLOBAL.ASG_saf_curve_tag = SAF.id
+				}
+				set_variable = {
+					GLOBAL.ASG_raj_curve_tag = RAJ.id
 				}
 				set_variable = {
 					GLOBAL.ASG_number_of_executed_ticks = 0
@@ -89,7 +107,6 @@ on_actions = {
 	}
 	on_monthly_GER = {
 		effect = {
-			# log = "Graph update THIS = [?THIS.GetName] ROOT = [?ROOT.GetName]"
 			ASG_graphs_replot = yes
 			ASG_stats_update = yes
 			add_to_variable = {

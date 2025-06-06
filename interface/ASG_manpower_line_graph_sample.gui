@@ -91,6 +91,60 @@ guiTypes = {
 			max_slots_horizontal = 400
 			add_horizontal = yes
 		}
+		
+		gridboxtype = {
+			name = "ASG_manpower_line_segments_Hungary"
+			position = { x = 132	 y = 380 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 5 height = 200 }
+			max_slots_horizontal = 400
+			add_horizontal = yes
+		}
+		
+		gridboxtype = {
+			name = "ASG_manpower_line_segments_Bulgary"
+			position = { x = 132	 y = 380 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 5 height = 200 }
+			max_slots_horizontal = 400
+			add_horizontal = yes
+		}
+		
+		gridboxtype = {
+			name = "ASG_manpower_line_segments_Australia"
+			position = { x = 132	 y = 380 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 5 height = 200 }
+			max_slots_horizontal = 400
+			add_horizontal = yes
+		}
+		
+		gridboxtype = {
+			name = "ASG_manpower_line_segments_Canada"
+			position = { x = 132	 y = 380 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 5 height = 200 }
+			max_slots_horizontal = 400
+			add_horizontal = yes
+		}
+		
+		gridboxtype = {
+			name = "ASG_manpower_line_segments_SAF"
+			position = { x = 132	 y = 380 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 5 height = 200 }
+			max_slots_horizontal = 400
+			add_horizontal = yes
+		}
+		
+		gridboxtype = {
+			name = "ASG_manpower_line_segments_RAJ"
+			position = { x = 132	 y = 380 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 5 height = 200 }
+			max_slots_horizontal = 400
+			add_horizontal = yes
+		}
 		# y-axis labels, very optional
 
 		instantTextboxType = {
@@ -168,134 +222,117 @@ guiTypes = {
 			spriteType = "GFX_subtract_one"
 			position = { x = 20 y = 300}
 		}
-
 		instantTextboxType = {
 			name = "Grey_legend"
-			position = { x = 200 y = 510}
+			position = { x = 0 y = 510}
 			font = "hoi_18mbs"
 			text = ASG_manpower_graph_legend_grey
-			maxWidth = 60
-			format = center
-		}
-		instantTextboxType = {
-			name = "Blue_legend"
-			position = { x = 280 y = 510}
-			font = "hoi_18mbs"
-			text = ASG_manpower_graph_legend_blue
-			maxWidth = 60
-			format = center
-		}
-		instantTextboxType = {
-			name = "Red_legend"
-			position = { x = 360 y = 510}
-			font = "hoi_18mbs"
-			text = ASG_manpower_graph_legend_red
-			maxWidth = 60
-			format = center
-		}
-		instantTextboxType = {
-			name = "Light_blue_legend"
-			position = { x = 440 y = 510}
-			font = "hoi_18mbs"
-			text = ASG_manpower_graph_legend_light_blue
-			maxWidth = 60
+			maxWidth = 55
 			format = center
 		}
 		instantTextboxType = {
 			name = "Green_legend"
-			position = { x = 520 y = 510}
+			position = { x = 60 y = 510}
 			font = "hoi_18mbs"
 			text = ASG_manpower_graph_legend_green
-			maxWidth = 60
+			maxWidth = 55
 			format = center
 		}
 		instantTextboxType = {
-			name = "Light_white_legend"
-			position = { x = 600 y = 510}
+			name = "Light_White_legend"
+			position = { x = 120 y = 510}
 			font = "hoi_18mbs"
 			text = ASG_manpower_graph_legend_light_white
+			maxWidth = 55
+			format = center
+		}
+		instantTextboxType = {
+			name = "Hungary_legend"
+			position = { x = 180 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_Hungary
 			maxWidth = 60
 			format = center
 		}
 		instantTextboxType = {
-			name = "Light_red_legend"
-			position = { x = 680 y = 510}
+			name = "Bulgary_legend"
+			position = { x = 240 y = 510}
 			font = "hoi_18mbs"
-			text = ASG_manpower_graph_legend_light_red
+			text = ASG_manpower_graph_legend_Bulgary
 			maxWidth = 60
 			format = center
 		}
 		instantTextboxType = {
 			name = "Light_yellow_legend"
-			position = { x = 760 y = 510}
+			position = { x = 300 y = 510}
 			font = "hoi_18mbs"
 			text = ASG_manpower_graph_legend_light_yellow
 			maxWidth = 60
 			format = center
 		}
-
-		ButtonType = {
-			name = "button_grey_update"
-			position = { x = 185 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "Blue_legend"
+			position = { x = 400 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_blue
+			maxWidth = 55
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_blue_update"
-			position = { x = 265 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "Light_red_legend"
+			position = { x = 460 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_light_red
+			maxWidth = 55
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_red_update"
-			position = { x = 345 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "Light_blue_legend"
+			position = { x = 520 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_light_blue
+			maxWidth = 55
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_light_blue_update"
-			position = { x = 425 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "Canada_legend"
+			position = { x = 580 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_Canada
+			maxWidth = 60
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_green_update"
-			position = { x = 505 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "Australia_legend"
+			position = { x = 640 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_Australia
+			maxWidth = 60
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_light_white_update"
-			position = { x = 585 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "SAF_legend"
+			position = { x = 700 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_SAF
+			maxWidth = 60
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_light_red_update"
-			position = { x = 665 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "RAJ_legend"
+			position = { x = 760 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_RAJ
+			maxWidth = 60
+			format = center
 		}
-
-		ButtonType = {
-			name = "button_light_yellow_update"
-			position = { x = 745 y = 510}
-			quadTextureSprite ="GFX_deploy_priority"
-			frame = 4
-			clicksound = click_default
+		instantTextboxType = {
+			name = "Red_legend"
+			position = { x = 860 y = 510}
+			font = "hoi_18mbs"
+			text = ASG_manpower_graph_legend_red
+			maxWidth = 55
+			format = center
 		}
 
 		instantTextboxType = {

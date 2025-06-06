@@ -103,6 +103,84 @@ defined_text = {
 }
 
 defined_text = {
+    name = GetHungaryManpowerScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Hungary_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Manpower_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetBulgaryManpowerScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Bulgary_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Manpower_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetCanadaManpowerScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Canada_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Manpower_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetAustraliaManpowerScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Australia_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Manpower_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetSAFManpowerScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_SAF_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Manpower_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetRAJManpowerScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_RAJ_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Manpower_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
     name = GetGreyMilitaryScore
 
     text = {
@@ -199,6 +277,84 @@ defined_text = {
     text = {
         trigger = { 
             var:global.ASG_light_white_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetHungaryMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Hungary_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetBulgaryMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Bulgary_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetCanadaMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Canada_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetAustraliaMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Australia_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetSAFMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_SAF_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetRAJMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_RAJ_curve_tag = { 
                 set_temp_variable = { score_var = ASG_military_score }
             }
         }
@@ -307,6 +463,84 @@ defined_text = {
             }
         }
         localization_key = "ASG_score_loc_1"
+    }
+}
+
+defined_text = {
+    name = GetHungaryCasualtiesScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Hungary_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Casualties_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetBulgaryCasualtiesScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Bulgary_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Casualties_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetCanadaCasualtiesScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Canada_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Casualties_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetAustraliaCasualtiesScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_Australia_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Casualties_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetSAFCasualtiesScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_SAF_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Casualties_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
+    name = GetRAJCasualtiesScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_RAJ_curve_tag = { 
+                set_temp_variable = { score_var = ASG_Casualties_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
     }
 }
 
