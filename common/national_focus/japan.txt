@@ -2057,12 +2057,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_strategic_bomber_effort
-				bonus = 3.0
-				uses = 2
-				category = cat_strategic_bomber	
-			}
+			set_technology = { improved_medium_airframe = 1 } 
 		}
 	}
 
@@ -2073,7 +2068,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = JAP_fighter_modernization
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
@@ -2086,7 +2081,12 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			remove_ideas = JAP_unified_fighter_development
+			mio:JAP_aichi_organization = {
+				add_mio_funds = 2000
+				}
+			mio:JAP_mitsubishi_organization = {
+				add_mio_funds = 2000
+			}
 		}
 	}
 
