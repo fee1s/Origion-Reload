@@ -3,11 +3,11 @@ scripted_gui = {
 		window_name = "ASG_casualties_line_graph_SAMPLE_gui"
 		context_type = player_context
 		visible = {
-			has_global_flag = open_casualties_line_graph_gui
+			has_country_flag = open_casualties_line_graph_gui
 		}
 		effects = {
 			close_button_click = {
-				clr_global_flag = open_casualties_line_graph_gui
+				clr_country_flag = open_casualties_line_graph_gui
 			}
 			substract_button_click = {
 				# Invoke scripted effect to add a random point to the line
@@ -18,158 +18,6 @@ scripted_gui = {
 				# Invoke scripted effect to add a random point to the line
 				# See scripted effect file
 				ASG_casualties_rescale_up = yes
-			}
-			button_grey_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 1
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_blue_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 2
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_red_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 3
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_light_blue_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 4
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_green_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 5
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_light_red_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 6
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_light_white_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 7
-					}
-					set_global_flag = ASG_open_selection
-				}
-			}
-			button_light_yellow_update_click = {
-				# Invoke scripted effect to add a random point to the line
-				# See scripted effect file
-				# set_variable = {
-				# 	GLOBAL.ASG_light_yellow_curve_tag = THIS.CONTROLLER
-				# }
-				# ASG_graphs_replot = yes
-				if = {
-					limit = {
-						has_global_flag = ASG_open_selection
-					}
-					clr_global_flag = ASG_open_selection
-				} else = {
-					set_variable = {
-						GLOBAL.ASG_selected_channel = 8
-					}
-					set_global_flag = ASG_open_selection
-				}
 			}
 		}
 		# Set up dynamic list to generate one line segment per point

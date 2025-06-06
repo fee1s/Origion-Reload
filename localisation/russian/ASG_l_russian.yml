@@ -4,6 +4,10 @@
   ASG_open_manpower_line_graph_gui:0 "Размер армий"
   ASG_open_casualties_line_graph_gui:0 "Колличество потерь"
   
+  TITLE_CASUALTIES:0 "Потери"
+  TITLE_MILITARY:0 "Военная производительность - IC в день с учётом макс.эффективности, объёма производства и заводов) по странам"
+  TITLE_MANPOWER:0 "Колличество развёрнутых людских ресурсов"
+  
   ASG_military_graph_legend_grey:0 "[?global.ASG_grey_curve_tag.GetFlag]§g [?global.ASG_grey_curve_tag.GetTag] §! §Y[THIS.GetGreyMilitaryScore]§!"
   ASG_military_graph_legend_red:0 "[?global.ASG_red_curve_tag.GetFlag]§R [?global.ASG_red_curve_tag.GetTag] §! §Y[THIS.GetRedMilitaryScore]§!"
   ASG_military_graph_legend_blue:0 "[?global.ASG_blue_curve_tag.GetFlag]§B [?global.ASG_blue_curve_tag.GetTag] §! §Y[THIS.GetBlueMilitaryScore]§!"
@@ -18,7 +22,6 @@
   ASG_military_graph_legend_Australia:0 "[?global.ASG_Australia_curve_tag.GetFlag]§Z [?global.ASG_Australia_curve_tag.GetTag] §! §Y[THIS.GetAustraliaMilitaryScore]§!"
   ASG_military_graph_legend_SAF:0 "[?global.ASG_SAF_curve_tag.GetFlag]§0 [?global.ASG_SAF_curve_tag.GetTag] §! §Y[THIS.GetSAFMilitaryScore]§!"
   ASG_military_graph_legend_RAJ:0 "[?global.ASG_RAJ_curve_tag.GetFlag]§R [?global.ASG_RAJ_curve_tag.GetTag] §! §Y[THIS.GetRAJMilitaryScore]§!"
-  
   ASG_manpower_graph_legend_grey:0 "[?global.ASG_grey_curve_tag.GetFlag]§g [?global.ASG_grey_curve_tag.GetTag] §! §Y[THIS.GetGreyManpowerScore]§!"
   ASG_manpower_graph_legend_red:0 "[?global.ASG_red_curve_tag.GetFlag]§R [?global.ASG_red_curve_tag.GetTag] §! §Y[THIS.GetRedManpowerScore]§!"
   ASG_manpower_graph_legend_blue:0 "[?global.ASG_blue_curve_tag.GetFlag]§B [?global.ASG_blue_curve_tag.GetTag] §! §Y[THIS.GetBlueManpowerScore]§!"
@@ -27,13 +30,12 @@
   ASG_manpower_graph_legend_light_red:0 "[?global.ASG_light_red_curve_tag.GetFlag]§O [?global.ASG_light_red_curve_tag.GetTag] §! §Y[THIS.GetLightRedManpowerScore]§!"
   ASG_manpower_graph_legend_green:0 "[?global.ASG_green_curve_tag.GetFlag]§G [?global.ASG_green_curve_tag.GetTag] §! §Y[THIS.GetGreenManpowerScore]§!"
   ASG_manpower_graph_legend_light_yellow:0 "[?global.ASG_light_yellow_curve_tag.GetFlag]§9 [?global.ASG_light_yellow_curve_tag.GetTag] §! §Y[THIS.GetLightYellowManpowerScore]§!"
-  ASG_manpower_graph_legend_Hungary:0 "[?global.ASG_Hungary_curve_tag.GetFlag]§A [?global.ASG_Hungary_curve_tag.GetTag] §! §Y[THIS.GetHungarymanpowerScore]§!"
+  ASG_manpower_graph_legend_Hungary:0 "[?global.ASG_Hungary_curve_tag.GetFlag]§9 [?global.ASG_Hungary_curve_tag.GetTag] §! §Y[THIS.GetLightYellowManpowerScore]§!"
   ASG_manpower_graph_legend_Bulgary:0 "[?global.ASG_Bulgary_curve_tag.GetFlag]§D [?global.ASG_Bulgary_curve_tag.GetTag] §! §Y[THIS.GetBulgarymanpowerScore]§!"
   ASG_manpower_graph_legend_Canada:0 "[?global.ASG_Canada_curve_tag.GetFlag]§E [?global.ASG_Canada_curve_tag.GetTag] §! §Y[THIS.GetCanadamanpowerScore]§!"
   ASG_manpower_graph_legend_Australia:0 "[?global.ASG_Australia_curve_tag.GetFlag]§Z [?global.ASG_Australia_curve_tag.GetTag] §! §Y[THIS.GetAustraliamanpowerScore]§!"
   ASG_manpower_graph_legend_SAF:0 "[?global.ASG_SAF_curve_tag.GetFlag]§0 [?global.ASG_SAF_curve_tag.GetTag] §! §Y[THIS.GetSAFmanpowerScore]§!"
   ASG_manpower_graph_legend_RAJ:0 "[?global.ASG_RAJ_curve_tag.GetFlag]§R [?global.ASG_RAJ_curve_tag.GetTag] §! §Y[THIS.GetRAJmanpowerScore]§!"
-  
   ASG_casualties_graph_legend_grey:0 "[?global.ASG_grey_curve_tag.GetFlag]§g [?global.ASG_grey_curve_tag.GetTag] §! §Y[THIS.GetGreyCasualtiesScore]§!"
   ASG_casualties_graph_legend_red:0 "[?global.ASG_red_curve_tag.GetFlag]§R [?global.ASG_red_curve_tag.GetTag] §! §Y[THIS.GetRedCasualtiesScore]§!"
   ASG_casualties_graph_legend_blue:0 "[?global.ASG_blue_curve_tag.GetFlag]§B [?global.ASG_blue_curve_tag.GetTag] §! §Y[THIS.GetBlueCasualtiesScore]§!"
@@ -52,4 +54,4 @@
   ASG_score_loc:0 "[?score_var]"
   ASG_score_loc_1:0 "[?score_var|1]"
   ASG_score_loc_2:0 "[?score_var|2]"
-  ASG_score_loc_million:0 "[?score_var] million"
+  ASG_score_loc_million:0 "[?score_var] млн."
