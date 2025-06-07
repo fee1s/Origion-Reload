@@ -38,6 +38,18 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 		always = no
 	}
 	
+	if = { # Франция не может посылать ленд-лиз до капитуляции
+		limit = {
+			AND = {
+				original_tag = FRA
+				FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
+			}
+			
+            FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
+	}
+	
 	if = { # Ленд-лиз только внутри Оси
 		limit = {
 			OR = {
@@ -96,6 +108,18 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 			OR = {
 				ORIGION_is_in_faction_with_axis = yes
 				original_tag = SOV
+			}
+			
+            FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
+	}
+	
+	if = { # Франция не может посылать ленд-лиз до капитуляции
+		limit = {
+			AND = {
+				original_tag = FRA
+				FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
 			}
 			
             FROM = { ORIGION_is_in_faction_with_allies = yes }
@@ -190,6 +214,34 @@ DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = {
 			}
 			
             FROM = { ORIGION_not_playable_country = yes }
+        }
+		always = no
+	}
+}
+
+DIPLOMACY_SEND_EXP_FORCE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			AND = {
+				original_tag = FRA
+				FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
+			}
+			
+			FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
+	}	
+}
+
+DIPLOMACY_RETURN_EXP_FORCE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			AND = {
+				original_tag = FRA
+				FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
+			}
+			
+            FROM = { ORIGION_is_in_faction_with_allies = yes }
         }
 		always = no
 	}

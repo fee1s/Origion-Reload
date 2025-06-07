@@ -217,7 +217,7 @@
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 400
+			army_experience = 250
 			hidden_effect = { navy_experience = 35 }
 		}
 	}	
@@ -247,10 +247,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_reform_the_labour_laws
-				uses = 3
+				uses = 1
 				bonus = 1
-				technology = concentrated_industry3
-				technology = concentrated_industry4
 				technology = concentrated_industry5
 			}
 		}
@@ -277,7 +275,7 @@
 		completion_reward = {
 			custom_effect_tooltip = FRA_modify_dirigisme_modifier_tt
 			add_to_variable = { 
-			    fra_dirigisme_production_speed_arms_factory_factor = 0.85
+			    fra_dirigisme_production_speed_arms_factory_factor = 0.75
 				tooltip = production_speed_arms_factory_factor_tt
 			}
 		}
@@ -831,10 +829,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = FRA_modify_dirigisme_modifier_tt
-			add_to_variable = { 
-			    fra_dirigisme_production_factory_max_efficiency_factor = 0.1
-				tooltip = production_factory_max_efficiency_factor_tt
-			}
+			# add_to_variable = { 
+			#     fra_dirigisme_production_factory_max_efficiency_factor = 0.1
+			# 	tooltip = production_factory_max_efficiency_factor_tt
+			# }	
 			add_to_variable = { 
 			    fra_dirigisme_production_factory_efficiency_gain_factor = 0.1
 				tooltip = production_factory_efficiency_gain_factor_tt
@@ -1059,7 +1057,7 @@
 		}
 		relative_position_id = FRA_defensive_strategems
 		
-		cost = 4
+		cost = 5
 		
 		ai_will_do = {
 			factor = 15
@@ -1087,7 +1085,7 @@
 		
 		relative_position_id = FRA_defensive_strategems
 		
-		cost = 4
+		cost = 5
 		
 		ai_will_do = {
 			factor = 14
@@ -1115,7 +1113,7 @@
 		
 		relative_position_id = FRA_defensive_strategems
 		
-		cost = 4
+		cost = 5
 		
 		ai_will_do = {
 			factor = 14
@@ -1143,7 +1141,7 @@
 		
 		relative_position_id = FRA_defensive_strategems
 		
-		cost = 4
+		cost = 5
 		
 		ai_will_do = {
 			factor = 14
@@ -1171,7 +1169,7 @@
 		
 		relative_position_id = FRA_defensive_strategems
 		
-		cost = 4
+		cost = 5
 		
 		ai_will_do = {
 			factor = 14

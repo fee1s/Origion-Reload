@@ -1455,14 +1455,14 @@ news_event = {
 			}
 			
 			GER = {
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 28500 producer = FRA }
-				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 450 producer = FRA }
-				add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 60 producer = FRA }
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 16500 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 550 producer = FRA }
+				add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 120 producer = FRA }
 				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1200 producer = FRA }
-				add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1400 producer = FRA }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 600 producer = FRA }				
-				add_equipment_to_stockpile = { type = train_equipment_1 amount = 40 producer = FRA }
-				add_equipment_to_stockpile = { type = convoy amount = 100 producer = FRA }
+				add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1200 producer = FRA }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 850 producer = FRA }				
+				add_equipment_to_stockpile = { type = train_equipment_1 amount = 60 producer = FRA }
+				add_equipment_to_stockpile = { type = convoy amount = 100 producer = FRA }	
 				
 				create_equipment_variant = {
 					name = "AMX 40 Trophy" 	
@@ -1507,6 +1507,27 @@ news_event = {
 				}
 				
 				create_equipment_variant = {
+					name = "Char 2C Trophy" 	
+					type = medium_tank_aa_chassis_2
+					modules = {
+						main_armament_slot = tank_anti_air_cannon
+						turret_type_slot = tank_light_one_man_tank_turret
+						special_type_slot_1 = extra_ammo_storage
+						special_type_slot_2 = extra_ammo_storage
+						special_type_slot_3 = extra_ammo_storage
+						special_type_slot_4 = easy_maintenance
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 6
+						tank_nsb_armor_upgrade = 0
+					}
+					design_team = mio:GER_daimler_benz_organization
+				}
+				
+				create_equipment_variant = {
 					name = "Renault R35 Trophy" 	
 					type = light_tank_chassis_2
 					modules = {
@@ -1526,10 +1547,11 @@ news_event = {
 					}
 					design_team = mio:GER_daimler_benz_organization
 				}
-				
-				add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40 Trophy" amount = 800 producer = FRA } 
-				add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40 Trophy" amount = 2200 producer = FRA } 				
-				add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35 Trophy" amount = 140 producer = FRA }
+			
+				add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40 Trophy" amount = 400 producer = GER } 
+				add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40 Trophy" amount = 800 producer = GER } 
+				add_equipment_to_stockpile = { type = medium_tank_aa_chassis_2 variant_name = "Char 2C Trophy" amount = 48 producer = GER } 				
+				add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35 Trophy" amount = 48 producer = GER }	
 			}
 		}
 	}

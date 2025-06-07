@@ -411,8 +411,8 @@ country_event = { # Ключевой ивент для Франции
 				promote_leader = yes				
 			}
 			
-			add_political_power = 150
-			add_war_support = 0.4
+			# add_political_power = 150 
+			# add_war_support = 0.4
 			
 			add_timed_idea = { idea = fra_start_efficiency days = 70 }
 			add_ideas = FRA_closed_eco
@@ -422,102 +422,17 @@ country_event = { # Ключевой ивент для Франции
 			remove_ideas = FRA_victors_of_wwi
 			remove_ideas = FRA_inflexible_production
 			
-			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 82500 producer = FRA }
-			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1600 producer = FRA }
-			add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 220 producer = FRA }
-			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 2400 producer = FRA }
-			add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 3700 producer = FRA }
-			add_equipment_to_stockpile = { type = support_equipment_1 amount = 3200 producer = FRA }				
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 60060 producer = FRA }
+			add_equipment_to_stockpile = { type = anti_air_equipment_1 amount = 1320 producer = FRA }
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 2200 producer = FRA }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 1980 producer = FRA }				
 			add_equipment_to_stockpile = { type = train_equipment_1 amount = 160 producer = FRA }
 			add_equipment_to_stockpile = { type = convoy amount = 750 producer = FRA }
 			
-			create_equipment_variant = {
-				name = "AMX 40" 	
-				type = medium_tank_chassis_2
-				modules = {
-					main_armament_slot = tank_medium_cannon
-					turret_type_slot = tank_medium_three_man_tank_turret
-					special_type_slot_1 = secondary_turret_small_cannon
-					special_type_slot_2 = secondary_turret_small_cannon
-					special_type_slot_3 = easy_maintenance
-					special_type_slot_4 = tank_radio_2
-					suspension_type_slot = tank_bogie_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_diesel_engine
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 12
-					tank_nsb_armor_upgrade = 14
-				}
-				design_team = mio:FRA_renault_organization
-			}	
-			
-			create_equipment_variant = {
-				name = "Somua SAu 40" 	
-				type = medium_tank_destroyer_chassis_2
-				modules = {
-					main_armament_slot = tank_heavy_cannon_2
-					turret_type_slot = tank_medium_fixed_superstructure_turret
-					special_type_slot_1 = secondary_turret_small_cannon
-					special_type_slot_2 = secondary_turret_small_cannon
-					special_type_slot_3 = easy_maintenance
-					special_type_slot_4 = squeezebore_adaptor
-					suspension_type_slot = tank_bogie_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_diesel_engine
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 7
-					tank_nsb_armor_upgrade = 0
-				}
-				design_team = mio:FRA_renault_organization
-			}
-			
-			create_equipment_variant = {
-				name = "Char 2C" 	
-				type = medium_tank_aa_chassis_2
-				modules = {
-					main_armament_slot = tank_anti_air_cannon
-					turret_type_slot = tank_light_one_man_tank_turret
-					special_type_slot_1 = extra_ammo_storage
-					special_type_slot_2 = extra_ammo_storage
-					special_type_slot_3 = extra_ammo_storage
-					special_type_slot_4 = easy_maintenance
-					suspension_type_slot = tank_bogie_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_diesel_engine
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 6
-					tank_nsb_armor_upgrade = 0
-				}
-				design_team = mio:FRA_renault_organization
-			}
-			
-			create_equipment_variant = {
-				name = "Renault R35" 	
-				type = light_tank_chassis_2
-				modules = {
-					main_armament_slot = tank_high_velocity_cannon
-					turret_type_slot = tank_light_three_man_tank_turret
-					special_type_slot_1 = tank_radio_2
-					special_type_slot_2 = secondary_turret_small_cannon
-					special_type_slot_3 = extra_ammo_storage
-					special_type_slot_4 = extra_ammo_storage
-					suspension_type_slot = tank_wheeled_suspension
-					armor_type_slot = tank_riveted_armor
-					engine_type_slot = tank_diesel_engine
-				}
-				upgrades = {
-					tank_nsb_engine_upgrade = 11
-					tank_nsb_armor_upgrade = 14
-				}
-				design_team = mio:FRA_renault_organization
-			}
-			add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40" amount = 1400 producer = FRA } 
-			add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40" amount = 4600 producer = FRA } 
-			add_equipment_to_stockpile = { type = medium_tank_aa_chassis_2 variant_name = "Char 2C" amount = 220 producer = FRA } 				
-			add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35" amount = 360 producer = FRA }	
+			# add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40" amount = 1400 producer = FRA } 
+			# add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40" amount = 4600 producer = FRA } 
+			# add_equipment_to_stockpile = { type = medium_tank_aa_chassis_2 variant_name = "Char 2C" amount = 220 producer = FRA } 				
+			# add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35" amount = 360 producer = FRA }	
 		}
 		name = france.20.a
 	}

@@ -93,6 +93,21 @@ characters={
 				small=GFX_portrait_FRA_jean_de_lattre_de_tassigny_small
 			}
 		}
+		advisor={	
+			slot = high_command
+			idea_token = jean_de_lattre_de_tassigny
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 		corps_commander={
 			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat brilliant_strategist }
 			skill=6
@@ -362,21 +377,6 @@ characters={
 			}
 			army={
 				large=GFX_portrait_FRA_charles_huntziger
-			}
-		}
-		advisor={	
-			slot = high_command
-			idea_token = charles_huntziger
-			ledger = army
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				army_logistics_1
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 		
