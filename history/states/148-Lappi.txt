@@ -7,8 +7,9 @@ state = {
 	state_category = rural
 	
 	resources={
-		steel=7 # was: 8
-		chromium=2 # was: 2
+		steel=6
+		chromium=6
+		oil = 10
 	}
 	history={
 		owner = FIN
@@ -30,7 +31,8 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
+			industrial_complex = 1
 		}
 		add_core_of = FIN
 		1936.1.1.14 = {

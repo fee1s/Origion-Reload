@@ -4,7 +4,11 @@ state = {
 
 	manpower = 529300
 	
-	state_category = town
+	state_category = city
+	
+	resources={
+		tungsten = 4
+	}
 	
 	history = {
 		owner = FIN
@@ -23,10 +27,9 @@ state = {
 		}
 		
 		buildings = {
-			infrastructure = 2 #TODO_Manu: Was 3
+			infrastructure = 3
 			arms_factory = 1
 			industrial_complex = 1
-			dockyard = 1
 			air_base = 2
 			
 			3083 = {

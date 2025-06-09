@@ -27,6 +27,26 @@ on_actions = {
 			}
 			if = { 
 				limit = {
+					is_core_of = FIN
+				} 
+				teleport_armies = {
+					limit = {
+						original_tag = SOV
+					}
+					to_state = 408 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 408
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { is_core_of = FIN }  transfer_state_to = FIN }  
+				}				
+			}
+			if = { 
+				limit = {
 					OR = {
 						norwegian_coastline = yes
 					}

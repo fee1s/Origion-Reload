@@ -214,7 +214,10 @@ news_event = { # вступление италии в войну против с
 		every_country = {
 		    limit = {
 		    	ORIGION_is_in_faction_with_axis = yes
-				NOT = { original_tag = JAP }
+				OR = {
+				    NOT = { original_tag = JAP }
+					NOT = { original_tag = FIN }
+				}
 		    }
 		    add_dynamic_modifier = {
 			    modifier = african_warfare_dm
