@@ -1,6 +1,19 @@
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
 
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
+	if = { # Финка не дает ленд-лиз никому
+		limit = {
+            FROM = { original_tag = FIN }
+        }
+		always = no
+	}
+	if = { # Финке не дают ленд-лиз 
+		limit = {
+			original_tag = FIN
+        }
+		always = no
+	}
+	
 	if = { # Япония не дает ленд-лиз никому
 		limit = {
 			OR = {

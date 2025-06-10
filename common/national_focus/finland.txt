@@ -116,6 +116,14 @@ focus_tree = {
 			    FIN_finnish_economy_political_power_gain = 0.1
 				tooltip = political_power_gain_tt
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
 		}
 	}
 	
@@ -169,6 +177,17 @@ focus_tree = {
 			add_political_power = 150
 			add_stability = 0.1
 			add_war_support = 0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+			    retire_character = FIN_pehr_evind_svinhufvud
+			}
+			promote_character = FIN_risto_ryti
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -301,7 +320,13 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 			    idea = FIN_operation_Silberfuchs_idea
-				days = 60
+				days = 90
+			}
+			hidden_effect = {
+			    declare_war_on = {
+                    target = SOV
+                    type = annex_everything
+                }
 			}
 		}
 	}
@@ -311,7 +336,7 @@ focus_tree = {
 		icon = GFX_goal_fortify_the_westwall
 		prerequisite = { focus = FIN_finnish_march_of_conquest }
 
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = FIN_finnish_march_of_conquest
 		cost = 10
@@ -348,7 +373,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_weapon_caches
 		prerequisite = { focus = FIN_finnish_march_of_conquest }
 
-		x = 2
+		x = -1
 		y = 1
 		relative_position_id = FIN_finnish_march_of_conquest
 		cost = 10
@@ -394,10 +419,10 @@ focus_tree = {
 	
 	focus = {
 		id = FIN_continue_offensive
-		icon = GFX_focus_FIN_motti_tactics
+		icon = GFX_focus_FIN_a_cry_for_help
 		prerequisite = { focus = FIN_finnish_march_of_conquest }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = FIN_finnish_march_of_conquest
 		
@@ -412,6 +437,40 @@ focus_tree = {
 			add_timed_idea = {
 			    idea = FIN_operation_hokki_idea
 				days = 60
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_join_the_axis
+		icon = GFX_focus_FIN_keepers_of_the_north
+		prerequisite = { focus = FIN_finnish_march_of_conquest }
+
+		x = 3
+		y = 1
+		relative_position_id = FIN_finnish_march_of_conquest
+		
+		available = {
+		    custom_trigger_tooltip = {
+			    tooltip = FIN_join_the_axis_tt
+			    any_state = {
+			        is_controlled_by = FIN
+			    	    NOT = { state = 148 }
+			    		NOT = { state = 722 }
+			        any_neighbor_state = {
+			            is_controlled_by = GER
+			        }
+			    }
+			}
+		}
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_join_the_axis_tt_tt
+			hidden_effect = {
+			    remove_ideas = FIN_axis_stuff_idea
 			}
 		}
 	}
@@ -486,15 +545,15 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { 
-			    FIN_finnish_army_conscription = 0.01
+			    FIN_finnish_army_conscription = 0.015
 				tooltip = conscription_tt
 			}
 			add_to_variable = { 
-			    FIN_finnish_army_army_core_attack_factor = 0.1
+			    FIN_finnish_army_army_core_attack_factor = 0.25
 				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = { 
-			    FIN_finnish_army_army_core_defence_factor = 0.1
+			    FIN_finnish_army_army_core_defence_factor = 0.25
 				tooltip = army_core_defence_factor_tt
 			}
 		}
@@ -801,10 +860,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_finnish_economy_tt
 			add_to_variable = { 
-			    FIN_finnish_economy_production_speed_arms_factory_factor = 0.1
-				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = { 
 			    FIN_finnish_economy_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
@@ -836,10 +891,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FIN_finnish_economy_tt
-			add_to_variable = { 
-			    FIN_finnish_economy_production_speed_arms_factory_factor = 0.1
-				tooltip = production_speed_arms_factory_factor_tt
-			}
 			add_to_variable = { 
 			    FIN_finnish_economy_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
@@ -877,10 +928,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_finnish_economy_tt
 			add_to_variable = { 
-			    FIN_finnish_economy_production_speed_arms_factory_factor = 0.1
-				tooltip = production_speed_arms_factory_factor_tt
-			}
-			add_to_variable = { 
 			    FIN_finnish_economy_industrial_capacity_factory = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
@@ -916,10 +963,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FIN_finnish_economy_tt
-			add_to_variable = { 
-			    FIN_finnish_economy_production_speed_arms_factory_factor = 0.1
-				tooltip = production_speed_arms_factory_factor_tt
-			}
 			add_to_variable = { 
 			    FIN_finnish_economy_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
@@ -962,7 +1005,7 @@ focus_tree = {
 		prerequisite = {
 		    focus = FIN_finnish_neutrality
 		}
-		cost = 7
+		cost = 5
 		available = {
 		}
 
@@ -977,7 +1020,7 @@ focus_tree = {
 	
 	focus = {
 		id = FIN_infantry_weapons
-		icon = GFX_focus_FIN_salvaged_and_retooled
+		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = FIN_suomen_maavoimat }
 
 		x = 2
@@ -1069,8 +1112,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 0.15 tooltip = acclimatization_cold_climate_gain_factor_tt }
-			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.15 tooltip = winter_attrition_factor_tt }
+			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 1.5 tooltip = acclimatization_cold_climate_gain_factor_tt }
+			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 tooltip = winter_attrition_factor_tt }
 			add_to_variable = { FIN_finnish_army_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
 		}
 	}
@@ -1092,15 +1135,15 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { 
-			    FIN_finnish_army_army_core_attack_factor = 0.1
+			    FIN_finnish_army_army_core_attack_factor = 0.25
 				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = { 
-			    FIN_finnish_army_army_core_defence_factor = 0.1
+			    FIN_finnish_army_army_core_defence_factor = 0.25
 				tooltip = army_core_defence_factor_tt
 			}
 			add_to_variable = { 
-			    FIN_finnish_army_max_dig_in_factor = 0.05
+			    FIN_finnish_army_max_dig_in_factor = 0.1
 				tooltip = max_dig_in_factor_tt
 			}
 		}
@@ -1126,6 +1169,14 @@ focus_tree = {
 				technology = antitank3
 				technology = antitank4
 				technology = antitank5
+			}
+			add_tech_bonus = {
+				name = FIN_national_firepower
+				bonus = 1.0
+				uses = 3
+				technology = artillery3
+				technology = artillery4
+				technology = artillery5
 			}
 		}
 	}
@@ -1174,7 +1225,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { 
-			    FIN_finnish_army_max_dig_in_factor = 0.1
+			    FIN_finnish_army_max_dig_in_factor = 0.15
 				tooltip = max_dig_in_factor_tt
 			}
 			add_to_variable = { 
@@ -1201,7 +1252,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { 
-			    FIN_finnish_army_cas_damage_reduction = 0.1
+			    FIN_finnish_army_cas_damage_reduction = 0.15
 				tooltip = cas_damage_reduction_tt
 			}
 			add_to_variable = { 

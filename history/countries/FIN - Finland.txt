@@ -2,20 +2,22 @@
 
 set_oob = "FIN_1936"
 
+add_ideas = FIN_axis_stuff_idea
 add_dynamic_modifier = {
     modifier = FIN_finnish_economy
 }
 set_variable = { FIN_finnish_economy_political_power_gain = -0.3 }
 set_variable = { FIN_finnish_economy_stability_factor = -0.2 } 
 set_variable = { FIN_finnish_economy_industrial_capacity_factory = -0.25 }
-set_variable = { FIN_finnish_economy_production_speed_arms_factory_factor = -0.4 }
 add_dynamic_modifier = {
     modifier = FIN_finnish_army
 }
-set_variable = { FIN_finnish_army_conscription = 0.01 }
-set_variable = { FIN_finnish_army_winter_attrition_factor = -0.05 }
-set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 0.05 }
-set_variable = { FIN_finnish_army_cas_damage_reduction = 0.1 }
+set_variable = { FIN_finnish_army_army_core_attack_factor = 0.25 }
+set_variable = { FIN_finnish_army_army_core_defence_factor = 0.25 }
+set_variable = { FIN_finnish_army_conscription = 0.015 }
+set_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 }
+set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 1.5 }
+set_variable = { FIN_finnish_army_cas_damage_reduction = 0.15 }
 
 ### VARS ###
 
@@ -45,6 +47,10 @@ set_party_name = {
 }
 
 ### ARMY LEADERS
+
+recruit_character = FIN_pehr_evind_svinhufvud
+recruit_character = FIN_risto_ryti
+
 recruit_character = FIN_carl_mannerheim
 recruit_character = FIN_ake_henrik_gartz
 recruit_character = FIN_antti_hackzell

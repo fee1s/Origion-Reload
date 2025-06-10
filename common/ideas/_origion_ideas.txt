@@ -1263,5 +1263,21 @@ ideas = {
 			}
 
 		}
+		
+		FIN_axis_stuff_idea = {
+			allowed = {
+				always = no
+			} 
+
+			removal_cost = -1
+			picture = SWE_the_gateway_to_peace
+
+			modifier = {
+				custom_modifier_tooltip = FIN_finnish_economy_tt_tt
+				hidden_modifier = {
+	                resource_trade_cost_bonus_per_factory = -8
+	            }
+			}
+		}
 	}
 }

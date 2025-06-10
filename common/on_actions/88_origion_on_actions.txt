@@ -178,19 +178,6 @@ on_actions = {
 	on_state_control_changed = {
 		effect = {
 			if = {
-			    limit = {
-				    FROM = {
-					    TAG = SOV
-					}
-					FROM.FROM = {
-					    state = 97
-					}
-				}
-				GER = {
-				    add_state_core = 97
-				}
-			}
-			if = {
 				limit = {
 					tag = "PHI"
 					FROM = {
@@ -475,6 +462,16 @@ on_actions = {
 					state = 485
 				}
 		    }
+			213 = {
+			    add_dynamic_modifier = {
+				    modifier = FIN_hell_weather
+				}
+			}
+			215 = {
+			    add_dynamic_modifier = {
+				    modifier = FIN_hell_weather
+				}
+			}
 	    }
 	}
 	on_weekly_USA = {
@@ -612,6 +609,41 @@ on_actions = {
 					}
 				}
 				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.9 }
+			}
+		}
+	}
+	on_weekly_FIN = {
+	    effect = {
+			if = {
+			    limit = {
+				    146 = {
+					    is_controlled_by_axis = yes
+					}
+					195 = {
+					    is_controlled_by_axis = yes
+					}
+					216 = {
+					    is_controlled_by_axis = yes
+					}
+				}
+				transfer_state = 213
+				transfer_state = 215
+			}
+			else = {
+			    SOV = {
+				    transfer_state = 213
+				    transfer_state = 215
+				}
+			}
+			every_country = {
+				delete_unit = {
+					state = 213
+					disband = yes
+				}
+				delete_unit = {
+					state = 215
+					disband = yes
+				}
 			}
 		}
 	}

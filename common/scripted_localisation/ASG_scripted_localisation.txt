@@ -363,6 +363,19 @@ defined_text = {
 }
 
 defined_text = {
+    name = GetFINMilitaryScore
+
+    text = {
+        trigger = { 
+            var:global.ASG_FIN_curve_tag = { 
+                set_temp_variable = { score_var = ASG_military_score }
+            }
+        }
+        localization_key = "ASG_score_loc_2"
+    }
+}
+
+defined_text = {
     name = GetGreyCasualtiesScore
 
     text = {

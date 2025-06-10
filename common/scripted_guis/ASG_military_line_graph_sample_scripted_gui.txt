@@ -102,6 +102,12 @@ scripted_gui = {
 				entry_container = ASG_military_line_graph_line_segment_RAJ
 				index = ASG_segment_idx
 			}
+			ASG_military_line_segments_FIN = {
+				array = GLOBAL.ASG_SAMPLE_military_graph_offsets_FIN
+				change_scope = no
+				entry_container = ASG_military_line_graph_line_segment_FIN
+				index = ASG_segment_idx
+			}
 		}
 		properties = {
 			segment_red = {
@@ -159,6 +165,10 @@ scripted_gui = {
 			segment_RAJ = {
 				y = GLOBAL.ASG_SAMPLE_military_graph_offsets_RAJ^ASG_segment_idx
 				frame = GLOBAL.ASG_military_graph_slopes_RAJ^ASG_segment_idx
+			}
+			segment_FIN = {
+				y = GLOBAL.ASG_SAMPLE_military_graph_offsets_FIN^ASG_segment_idx
+				frame = GLOBAL.ASG_military_graph_slopes_FIN^ASG_segment_idx
 			}
 		}
 		triggers = {

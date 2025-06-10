@@ -3983,6 +3983,7 @@ ASG_clear_military_graph = {
 			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_Australia
 			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_SAF
 			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_RAJ
+			clear_array = GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_FIN
 		
 			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_green
 			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_blue
@@ -3998,6 +3999,7 @@ ASG_clear_military_graph = {
 			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_Australia
 			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_SAF
 			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_RAJ
+			clear_array = GLOBAL.ASG_[categorie]_graph_slopes_FIN
 		}
 		categorie = "military"
 	}
@@ -4119,6 +4121,9 @@ ASG_calculate_initial_graph_point_military = {
 			set_temp_variable = {
 				ASG_[categorie]_RAJ_pixel_value = [tag14].ASG_[categorie]_score_array^0
 			}
+			set_temp_variable = {
+				ASG_[categorie]_FIN_pixel_value = [tag15].ASG_[categorie]_score_array^0
+			}
 
 			multiply_temp_variable = {
 				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
@@ -4161,6 +4166,9 @@ ASG_calculate_initial_graph_point_military = {
 			}
 			multiply_temp_variable = {
 				ASG_[categorie]_RAJ_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+			}
+			multiply_temp_variable = {
+				ASG_[categorie]_FIN_pixel_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
 			}
 
 			divide_temp_variable = {
@@ -4205,6 +4213,9 @@ ASG_calculate_initial_graph_point_military = {
 			divide_temp_variable = {
 				ASG_[categorie]_RAJ_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
 			}
+			divide_temp_variable = {
+				ASG_[categorie]_FIN_pixel_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+			}
 
 			add_to_temp_variable = {
 				ASG_[categorie]_green_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
@@ -4248,6 +4259,9 @@ ASG_calculate_initial_graph_point_military = {
 			add_to_temp_variable = {
 				ASG_[categorie]_RAJ_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
 			}
+			add_to_temp_variable = {
+				ASG_[categorie]_FIN_pixel_value = GLOBAL.ASG_graph_pixel_y_offset_value
+			}
 
 			round_temp_variable = ASG_[categorie]_green_pixel_value
 			round_temp_variable = ASG_[categorie]_blue_pixel_value
@@ -4263,6 +4277,7 @@ ASG_calculate_initial_graph_point_military = {
 			round_temp_variable = ASG_[categorie]_Australia_pixel_value
 			round_temp_variable = ASG_[categorie]_SAF_pixel_value
 			round_temp_variable = ASG_[categorie]_RAJ_pixel_value
+			round_temp_variable = ASG_[categorie]_FIN_pixel_value
 
 			clamp_variable = {
 				var = ASG_[categorie]_green_pixel_value
@@ -4334,6 +4349,11 @@ ASG_calculate_initial_graph_point_military = {
 				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
 				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
 			}
+			clamp_variable = {
+				var = ASG_[categorie]_FIN_pixel_value
+				min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+				max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+			}
 			
 			set_variable = {
 				GLOBAL.ASG_[categorie]_y_position_green = ASG_[categorie]_green_pixel_value
@@ -4377,6 +4397,9 @@ ASG_calculate_initial_graph_point_military = {
 			set_variable = {
 				GLOBAL.ASG_[categorie]_y_position_RAJ = ASG_[categorie]_RAJ_pixel_value
 			}
+			set_variable = {
+				GLOBAL.ASG_[categorie]_y_position_FIN = ASG_[categorie]_FIN_pixel_value
+			}
 		}
 		categorie = "military"
 		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
@@ -4393,6 +4416,7 @@ ASG_calculate_initial_graph_point_military = {
 		tag12 = "[?GLOBAL.ASG_Australia_curve_tag.GetTag]"
 		tag13 = "[?GLOBAL.ASG_SAF_curve_tag.GetTag]"
 		tag14 = "[?GLOBAL.ASG_RAJ_curve_tag.GetTag]"
+		tag15 = "[?GLOBAL.ASG_FIN_curve_tag.GetTag]"
 		# debug = yes
 	}
 }
@@ -5872,6 +5896,65 @@ ASG_replot_military_graph = {
 					}
 				}
 			}
+			for_each_loop = {
+				array = [tag15].ASG_[categorie]_score_array
+				if = {
+					limit = {
+						always = yes
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_last_y_position_FIN = GLOBAL.ASG_[categorie]_y_position_FIN
+					}
+					set_temp_variable = {
+						score_value = v
+					}
+					multiply_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_amount_to_pixel_scale_factor
+					}
+					divide_temp_variable = {
+						score_value = GLOBAL.ASG_[categorie]_rendering_scale_factor
+					}
+					add_to_temp_variable = {
+						score_value = GLOBAL.ASG_graph_pixel_y_offset_value
+					}
+					round_temp_variable = score_value
+					clamp_variable = {
+						var = score_value
+						min = GLOBAL.ASG_graph_pixel_y_minimum_value_corrected_by_offset
+						max = GLOBAL.ASG_graph_pixel_y_maximum_value_corrected_by_offset
+					}
+					set_variable = {
+						GLOBAL.ASG_[categorie]_y_position_FIN = score_value
+					}
+					# The y position offset is the inverse of the y position
+					set_temp_variable = {
+						[categorie]_offset_FIN = GLOBAL.ASG_[categorie]_last_y_position_FIN
+					}
+					multiply_temp_variable = {
+						[categorie]_offset_FIN = -1
+					}
+					add_to_array = {
+						GLOBAL.ASG_SAMPLE_[categorie]_graph_offsets_FIN = [categorie]_offset_FIN
+					}
+					# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+					# These last two changes are needed for the shader
+					set_temp_variable = {
+						[categorie]_diff_FIN = GLOBAL.ASG_[categorie]_y_position_FIN
+					}
+					subtract_from_temp_variable = {
+						[categorie]_diff_FIN = GLOBAL.ASG_[categorie]_last_y_position_FIN
+					}
+					divide_temp_variable = {
+						[categorie]_diff_FIN = 2
+					}
+					add_to_temp_variable = {
+						[categorie]_diff_FIN = 50
+					}
+					add_to_array = {
+						GLOBAL.ASG_[categorie]_graph_slopes_FIN = [categorie]_diff_FIN
+					}
+				}
+			}
 		}
 		categorie = "military"
 		tag1 = "[?GLOBAL.ASG_green_curve_tag.GetTag]"
@@ -5888,6 +5971,7 @@ ASG_replot_military_graph = {
 		tag12 = "[?GLOBAL.ASG_australia_curve_tag.GetTag]"
 		tag13 = "[?GLOBAL.ASG_SAF_curve_tag.GetTag]"
 		tag14 = "[?GLOBAL.ASG_RAJ_curve_tag.GetTag]"
+		tag15 = "[?GLOBAL.ASG_FIN_curve_tag.GetTag]"
 		# debug = yes
 	}
 }

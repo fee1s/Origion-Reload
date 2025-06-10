@@ -1365,8 +1365,6 @@ FIN_finnish_economy = {
 
 	icon = GFX_idea_FIN_the_workers_state
 	
-	custom_modifier_tooltip = FIN_finnish_economy_tt_tt
-	
 	political_power_gain = FIN_finnish_economy_political_power_gain
 	stability_factor = FIN_finnish_economy_stability_factor
 	
@@ -1380,9 +1378,6 @@ FIN_finnish_economy = {
 	production_speed_arms_factory_factor = FIN_finnish_economy_production_speed_arms_factory_factor
 	local_resources_factor = FIN_finnish_economy_local_resources_factor
 	consumer_goods_expected_value = FIN_finnish_economy_consumer_goods_expected_value
-	hidden_modifier = {
-	resource_trade_cost_bonus_per_factory = -8
-	}
 }
 
 FIN_finnish_army = {
@@ -1421,4 +1416,12 @@ FIN_finnish_army = {
 	initiative_factor = FIN_finnish_army_initiative_factor #0.02
 	modifier_army_sub_unit_long_range_patrol_support_attack_factor = FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_attack_factor
 	modifier_army_sub_unit_long_range_patrol_support_defence_factor = FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor
+}
+
+FIN_hell_weather = {
+	enable = { always = yes }
+
+	icon = GFX_MODIFIER_ATTRITION
+	
+	custom_modifier_tooltip = FIN_hell_weather_tt
 }
