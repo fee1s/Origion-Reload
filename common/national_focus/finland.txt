@@ -471,6 +471,7 @@ focus_tree = {
 			custom_effect_tooltip = FIN_join_the_axis_tt_tt
 			hidden_effect = {
 			    remove_ideas = FIN_axis_stuff_idea
+				GER = { add_to_faction = FIN }
 			}
 		}
 	}
@@ -1112,7 +1113,7 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 1.5 tooltip = acclimatization_cold_climate_gain_factor_tt }
+			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 50.0 tooltip = acclimatization_cold_climate_gain_factor_tt }
 			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 tooltip = winter_attrition_factor_tt }
 			add_to_variable = { FIN_finnish_army_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
 		}
@@ -1252,11 +1253,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { 
-			    FIN_finnish_army_cas_damage_reduction = 0.15
+			    FIN_finnish_army_cas_damage_reduction = 0.25
 				tooltip = cas_damage_reduction_tt
 			}
 			add_to_variable = { 
-			    FIN_finnish_army_land_reinforce_rate = 0.05
+			    FIN_finnish_army_land_reinforce_rate = 0.1
 				tooltip = land_reinforce_rate_tt
 			}		
 		}

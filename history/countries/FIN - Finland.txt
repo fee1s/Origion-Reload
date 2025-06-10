@@ -16,8 +16,8 @@ set_variable = { FIN_finnish_army_army_core_attack_factor = 0.25 }
 set_variable = { FIN_finnish_army_army_core_defence_factor = 0.25 }
 set_variable = { FIN_finnish_army_conscription = 0.015 }
 set_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 }
-set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 1.5 }
-set_variable = { FIN_finnish_army_cas_damage_reduction = 0.15 }
+set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 50.0 }
+set_variable = { FIN_finnish_army_cas_damage_reduction = 0.25 }
 
 ### VARS ###
 
@@ -62,6 +62,7 @@ recruit_character = FIN_vilho_helanen
 recruit_character = FIN_aimo_lahti
 recruit_character = FIN_aimo_cajander
 recruit_character = FIN_olavi_sarko
+recruit_character = FIN_akseli_anttila
 
 add_ideas = {
 	volunteer_only

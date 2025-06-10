@@ -198,7 +198,7 @@ characters = {
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader trait_engineer winter_specialist urban_assault_specialist organizer ranger brilliant_strategist Trickster }
+			traits={ panzer_leader trait_engineer winter_specialist urban_assault_specialist organizer ranger brilliant_strategist Trickster commando }
 			skill=6
 			attack_skill=5
 			defense_skill=5
@@ -337,6 +337,29 @@ characters = {
 			cost = 100
 			ai_will_do = {
 				base = 1.000
+			}
+		}
+	}
+	
+	FIN_akseli_anttila = {
+		name = FIN_akseli_anttila
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_akseli_anttila_small
+				large = GFX_portrait_FIN_akseli_anttila
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = FIN_akseli_anttila
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = {
+				military_theorist
 			}
 		}
 	}
