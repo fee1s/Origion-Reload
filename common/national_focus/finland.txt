@@ -214,24 +214,30 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 150
 			air_experience = 150
-			create_equipment_variant = {
-				name = "Ju 87" 
-				type = small_plane_cas_airframe_2
-				allow_without_tech = yes
-				modules = {
-					fixed_main_weapon_slot = tank_buster_1
-					fixed_auxiliary_weapon_slot_1 = tank_buster_1
-					fixed_auxiliary_weapon_slot_2 = tank_buster_1
-					engine_type_slot = engine_3_1x
-					special_type_slot_1 = armor_plate_small
-			        special_type_slot_2 = fuel_tanks_small		
-				}
-			}
-			add_equipment_to_stockpile = {
-				type = small_plane_cas_airframe_2
-				amount = 300
-				variant_name = "Ju 87"
-				producer = FIN
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FIN_cooperation_with_germany_tt
+			
+			hidden_effect = {
+			    add_equipment_to_stockpile = {
+			   	    type = small_plane_cas_airframe_2
+			   	    amount = 300
+			       	variant_name = "Ju 87"
+			  	    producer = FIN
+			    }
+				create_equipment_variant = {
+				    name = "Ju 87" 
+				    type = small_plane_cas_airframe_2
+				    allow_without_tech = yes
+				    modules = {
+				    	fixed_main_weapon_slot = tank_buster_1
+				    	fixed_auxiliary_weapon_slot_1 = tank_buster_1
+				    	fixed_auxiliary_weapon_slot_2 = tank_buster_1
+				    	engine_type_slot = engine_3_1x
+				    	special_type_slot_1 = armor_plate_small
+			            special_type_slot_2 = fuel_tanks_small		
+				    }
+			    }
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
