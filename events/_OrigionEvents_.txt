@@ -968,12 +968,22 @@ news_event = { # Московское перемирие
                 white_peace  = {
 				    tag = FIN
 				}
+				add_offsite_building = { type = arms_factory level = FIN.fin_civs_var }
+				add_offsite_building = { type = industrial_complex level = FIN.fin_mils_var }
             }
-            random_country = {
-			    limit = {
-			    	tag = GER
+			FIN = {
+			    leave_faction = yes
+			}
+			if = {
+                limit = {
+				    FIN = { is_ai = no }
+				}
+				random_country = {
+			        limit = {
+			        	tag = GER
+			        }
+			    	change_tag_from = FIN				
 			    }
-				change_tag_from = FIN				
 			}
             set_global_flag = FIN_outofwar_flag			
 		}

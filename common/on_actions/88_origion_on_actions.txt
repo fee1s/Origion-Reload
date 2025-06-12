@@ -472,6 +472,19 @@ on_actions = {
 				    modifier = FIN_hell_weather
 				}
 			}
+			if = {
+			    limit = {
+				    FIN = { is_ai = no }
+				}
+				219 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 	    }
 	}
 	on_weekly_USA = {
@@ -614,6 +627,12 @@ on_actions = {
 	}
 	on_weekly_FIN = {
 	    effect = {
+			set_variable = {
+			    fin_civs_var = THIS.num_of_civilian_factories
+			}
+			set_variable = {
+			    fin_mils_var = THIS.num_of_military_factories
+			}
 			if = {
 			    limit = {
 				    146 = {
