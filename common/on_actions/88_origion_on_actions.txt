@@ -627,12 +627,6 @@ on_actions = {
 	}
 	on_weekly_FIN = {
 	    effect = {
-			set_variable = {
-			    fin_civs_var = THIS.num_of_civilian_factories
-			}
-			set_variable = {
-			    fin_mils_var = THIS.num_of_military_factories
-			}
 			if = {
 			    limit = {
 				    146 = {
