@@ -56,6 +56,12 @@ focus_tree = {
 		relative_position_id = FIN_suomalainen_sosialismi
 		
 		cost = 10
+		
+		available = {
+		    hidden_trigger = {
+			    is_ai = no
+			}
+		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INDUSTRY }
 
