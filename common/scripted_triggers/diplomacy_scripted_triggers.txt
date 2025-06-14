@@ -1,6 +1,17 @@
-# This specifically overrides the rule check as to whether or not you can guarantee other ideologies
-
 DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
+	if = { # Финка не дает ленд-лиз никому
+		limit = {
+            FROM = { original_tag = FIN }
+        }
+		always = no
+	}
+	if = { # Финке не дают ленд-лиз 
+		limit = {
+			original_tag = FIN
+        }
+		always = no
+	}
+	
 	if = { # Япония не дает ленд-лиз никому
 		limit = {
 			OR = {
@@ -359,9 +370,27 @@ game_weight_can_add_communist = {
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	always = yes
+	if = {
+	    limit = {
+		    tag = FIN
+		}
+		custom_trigger_tooltip  = {
+		    tooltip = FIN_cannot_war_tt
+			always = no
+		}
+	}
 }
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
 	always = yes
+	if = {
+	    limit = {
+		    FROM = { tag = FIN }
+		}
+		custom_trigger_tooltip  = {
+		    tooltip = FIN_cannot_war_tt
+			always = no
+		}
+	}
 }
 DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 	always = yes

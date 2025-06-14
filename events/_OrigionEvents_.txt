@@ -214,7 +214,10 @@ news_event = { # вступление италии в войну против с
 		every_country = {
 		    limit = {
 		    	ORIGION_is_in_faction_with_axis = yes
-				NOT = { original_tag = JAP }
+				OR = {
+				    NOT = { original_tag = JAP }
+					NOT = { original_tag = FIN }
+				}
 		    }
 		    add_dynamic_modifier = {
 			    modifier = african_warfare_dm
@@ -937,4 +940,54 @@ news_event = { # скрытый ивент вспомогательный по �
 	}
 	
 	mean_time_to_happen = { days = 1 }
+}
+
+news_event = { # Московское перемирие
+	id = origion.30
+	title = origion.30.t
+	desc = origion.30.d
+	picture = GFX_news_event_helsinki
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	trigger = {
+	    SOV = {
+		    controls_state = 111
+			has_full_control_of_state = 146
+			has_full_control_of_state = 195
+			has_full_control_of_state = 216
+		}
+		NOT = { has_global_flag = FIN_outofwar_flag }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SOV = {
+                white_peace  = {
+				    tag = FIN
+				}
+            }
+			FIN = {
+			    leave_faction = yes
+			}
+			if = {
+                limit = {
+				    FIN = { is_ai = no }
+				}
+				random_country = {
+			        limit = {
+			        	tag = GER
+			        }
+			    	change_tag_from = FIN				
+			    }
+			}
+            set_global_flag = FIN_outofwar_flag			
+		}
+	}
+	
+	option = {
+		name = origion.30.a
+	}
 }

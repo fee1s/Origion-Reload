@@ -461,6 +461,16 @@ GER_operations = {
 					
 					add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
             	}
+				if = {
+				    limit = {
+					    FIN = {
+						    is_ai = no
+						}
+					}
+					FIN = {
+				    	complete_national_focus = FIN_finnish_march_of_conquest
+				    }
+				}
 				
 				if = {
 					limit = { USA = { exists = no } }

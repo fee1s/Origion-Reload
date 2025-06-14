@@ -1129,3 +1129,62 @@ ORG_africa_dec_cat = {
 		}
 	}
 }
+war_measures = {
+	FIN_stagnation_economic_0_des = {
+		name = FIN_stagnation_economic_0_name
+		icon = GFX_decision_revolt
+		days_mission_timeout = 30
+		is_good = yes
+		fire_only_once = yes
+		activation = {
+			SOV = { has_completed_focus = SOV_the_sacred_war }
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			FIN_stagnation_effect = yes
+			activate_mission = FIN_stagnation_economic_mission_des
+			set_country_flag = {
+				flag = FIN_stagnation_step
+				value = 1
+			}
+		}
+	}
+	FIN_stagnation_economic_mission_des = {
+		name = FIN_stagnation_economic_0_name
+		icon = GFX_decision_revolt
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+		}
+		timeout_effect = {
+			FIN_stagnation_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = {
+						    flag = FIN_stagnation_step
+						    value = 14
+				    	}
+					}
+				}
+			    activate_mission = FIN_stagnation_economic_mission_des
+				modify_country_flag = {
+					flag = FIN_stagnation_step
+					value = 1
+				}
+			}
+		}
+	}
+}

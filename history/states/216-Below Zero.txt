@@ -3,6 +3,12 @@ state={
 	name="STATE_216"
 	
 	state_category = wasteland
+	
+	resources = {
+		steel = 10
+		chromium = 10
+		aluminium = 12
+	}
 
 	history={
 		owner = SOV
@@ -11,7 +17,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
-			air_base = 3
+			air_base = 5
 
 		}
 		add_core_of = SOV
@@ -22,11 +28,10 @@ state={
 	}
 
 	provinces={
-		40 90 2356 2994 3084 6057 6070 6106 6172 9078 9118 11150 11153 11159 13194 13198 
+		40 90 2994 3084 6057 6070 6106 6172 9078 9118 11150 11153 11159 
 	}
 	manpower=229564
 	buildings_max_level_factor=1.000
 	
-	impassable = yes
 	local_supplies=0.0 
 }

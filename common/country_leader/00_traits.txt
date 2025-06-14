@@ -897,7 +897,7 @@ leader_traits = {
 	conservative_nationalist = { #Antonio de Oliveira Salazar - Vanilla
 		sprite = 13 #Needed since Iceland uses this traits in an advisor.
 		random = no
-		stability_factor = 0.1
+		neutrality_drift = 0.05
 		production_speed_infrastructure_factor = 0.2
 
 		ai_will_do = {
@@ -3700,9 +3700,7 @@ leader_traits = {
 	#SVINHUFVUD
 	member_of_the_suojeluskunta = {
 		random = no
-		max_surrender_limit_offset = 0.15
 		stability_factor = -0.05
-		drift_defence_factor = 0.15
 	}
 
 	member_of_the_suojeluskunta_improved = {
@@ -3748,8 +3746,7 @@ leader_traits = {
 	white_liberal_leader = {
 		random = no
 		political_power_factor = 0.05
-		production_factory_max_efficiency_factor = 0.05
-		neutrality_drift = 0.05
+		stability_factor = 0.1
 	}
 
 	white_liberal_leader_improved = {
@@ -3769,10 +3766,6 @@ leader_traits = {
 	#MANNERHEIM
 	sotamarsalkka = {
 		random = no
-		conscription = 0.01
-		war_support_factor = 0.05
-		stability_factor = -0.05
-		defensive_war_stability_factor = 0.1
 	}
 
 	sotamarsalkka_improved = {

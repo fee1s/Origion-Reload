@@ -1,0 +1,52 @@
+ideas = {
+	country = {
+	    FIN_operation_Silberfuchs_idea = { # Барба
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = FIN_opposition_to_winter_war
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
+			}
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+		FIN_operation_hokki_idea = { # Блау
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = FIN_opposition_to_winter_war
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.05
+			}
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+	}
+	industrial_concern = {
+		FIN_tampella = {
+
+			picture = GFX_idea_FIN_tampella
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			cost = 150
+
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+		}
+	}
+}

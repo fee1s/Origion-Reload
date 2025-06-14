@@ -1,4 +1,35 @@
 characters = {
+	FIN_pehr_evind_svinhufvud = {
+		name = FIN_pehr_evind_svinhufvud
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FIN_pehr_evind_svinhufvud
+			}
+		}
+		country_leader = {
+			ideology = moderatism #National Coalition Party
+			expire = "1965.1.1.1"
+			id = -1
+			traits = { conservative_nationalist }
+		}
+	}
+	
+	FIN_risto_ryti = {
+		name = FIN_risto_ryti
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FIN_risto_ryti
+				small = GFX_portrait_FIN_risto_ryti_small
+			}
+		}
+		country_leader = {
+			ideology = centrism #National Progressive Party
+			expire = "1965.1.1.1"
+			id = -1
+			traits = { white_liberal_leader }
+		}
+	}
+	
 	FIN_carl_mannerheim = {
 		name = FIN_carl_mannerheim
 		portraits = {
@@ -13,33 +44,338 @@ characters = {
 			id = -1
 			traits = { sotamarsalkka }
 		}
+		advisor={
+			slot = army_chief
+			idea_token = FIN_carl_mannerheim
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ panzer_leader war_hero trait_engineer winter_specialist urban_assault_specialist organizer ranger brilliant_strategist Trickster }
+			skill=6
+			attack_skill=5
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
 	}
-
-	FIN_esko_riekki = {
-		name = FIN_esko_riekki
+	
+	FIN_ake_henrik_gartz = {
+		name = FIN_ake_henrik_gartz
 		portraits = {
 			civilian = {
-				small = GFX_portrait_FIN_esko_riekki_small
+				small = GFX_portrait_FIN_ake_henrik_gartz_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #NO PARTY
+			idea_token = FIN_ake_henrik_gartz
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}
+	}
+	
+	FIN_antti_hackzell = {
+		name = FIN_antti_hackzell
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_antti_hackzell_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #NATIONAL COALITION
+			idea_token = FIN_antti_hackzell
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				silent_workhorse 
+			}
+		}
+	}
+	
+	FIN_rudolf_holsti = {
+		name = FIN_rudolf_holsti
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_rudolf_holsti_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #NATIONAL PROGRESS PARTY
+			idea_token = FIN_rudolf_holsti
+			allowed = {
+				original_tag = FIN
+			}
+			available = {
+				NOT = { has_government = communism }
+			}
+			traits = {
+				smooth_talking_charmer 
+			}
+		}
+	}
+	
+	FIN_paavo_susitaival = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = FIN_paavo_susitaival
+			portraits = {
+				army = {
+					large = GFX_portrait_FIN_paavo_susitaival
+					small = GFX_portrait_FIN_paavo_susitaival_small
+				}
+				civilian = {
+					small = GFX_portrait_FIN_paavo_susitaival_civilian_small
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = FIN_paavo_susitaival
+				allowed = {
+					original_tag = FIN
+				}
+				cost = 150
+				traits = {
+					war_industrialist 
+				}
+			}
+		}
+	}
+	
+	FIN_erik_heinrichs = {
+		name = FIN_erik_heinrichs
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_erik_heinrichs
+				small = GFX_portrait_FIN_erik_heinrichs_small
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader Trickster winter_specialist commando }
+			skill = 6
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 0
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = FIN_erik_heinrichs
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}		
+			traits = {
+				army_CombinedArms_2
+			}
+		}
+	}
+	
+	FIN_vilho_petter_nenonen = {
+		name = FIN_vilho_petter_nenonen
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_vilho_petter_nenonen
+				small = GFX_portrait_FIN_vilho_petter_nenonen_small
+			}
+		}
+		corps_commander={
+			traits={ panzer_leader trait_engineer winter_specialist urban_assault_specialist organizer ranger brilliant_strategist Trickster commando }
+			skill=6
+			attack_skill=5
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = FIN_vilho_petter_nenonen
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	
+	FIN_woldemar_hagglund = {
+		name = FIN_woldemar_hagglund
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_woldemar_hagglund
+				small = GFX_portrait_FIN_woldemar_hagglund_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_woldemar_hagglund
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_infantry_3
+			}
+			cost = 200
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader Trickster winter_specialist commando }
+			skill = 6
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 0
+		}
+	}
+	
+	FIN_vilho_helanen = {
+		name = FIN_vilho_helanen
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_vilho_helanen_small
 			}
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = FIN_esko_riekki
+			idea_token = FIN_vilho_helanen
 			allowed = {
 				original_tag = FIN
-				has_dlc = "La Resistance"
+				has_dlc = "Arms Against Tyranny"
 			}
-			available = {
-				always = no
-			}
-			visible = { always = no }
+			cost = 150
 			traits = {
-				head_of_intelligence #Watchdog of White Finland?
-			}
-			ai_will_do = {
-				base = 0
+				armaments_organizer 
 			}
 		}
 	}
-
+	
+	FIN_aimo_lahti = {
+		name = FIN_aimo_lahti
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_aimo_lahti_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #NO PARTY
+			idea_token = FIN_aimo_lahti
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				prince_of_terror
+			}
+		}
+	}
+	
+	
+	FIN_aimo_cajander = {
+		name = FIN_aimo_cajander
+		portraits = {
+			civilian = {
+				small = GFX_portrait_FIN_aimo_cajander_small
+			}
+		}
+		advisor = {
+			slot = political_advisor #NATIONAL PROGRESS PARTY
+			idea_token = FIN_aimo_cajander
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				smooth_talking_charmer 
+			}
+		}
+	}
+	
+	FIN_olavi_sarko = {
+		name = FIN_olavi_sarko
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_olavi_sarko_small
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FIN_olavi_sarko
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	
+	FIN_akseli_anttila = {
+		name = FIN_akseli_anttila
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_akseli_anttila_small
+				large = GFX_portrait_FIN_akseli_anttila
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FIN_akseli_anttila
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = FIN_akseli_anttila
+			ledger = army
+			allowed = {
+				original_tag = FIN
+			}
+			
+			traits = {
+				military_theorist
+			}
+		}
+	}
 }

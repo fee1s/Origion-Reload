@@ -27,6 +27,26 @@ on_actions = {
 			}
 			if = { 
 				limit = {
+					is_core_of = FIN
+				} 
+				teleport_armies = {
+					limit = {
+						original_tag = SOV
+					}
+					to_state = 408 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 408
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { is_core_of = FIN }  transfer_state_to = FIN }  
+				}				
+			}
+			if = { 
+				limit = {
 					OR = {
 						norwegian_coastline = yes
 					}
@@ -455,6 +475,29 @@ on_actions = {
 					state = 485
 				}
 		    }
+			213 = {
+			    add_dynamic_modifier = {
+				    modifier = FIN_hell_weather
+				}
+			}
+			215 = {
+			    add_dynamic_modifier = {
+				    modifier = FIN_hell_weather
+				}
+			}
+			if = {
+			    limit = {
+				    FIN = { is_ai = no }
+				}
+				219 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 	    }
 	}
 	on_weekly_USA = {
@@ -592,6 +635,41 @@ on_actions = {
 					}
 				}
 				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.9 }
+			}
+		}
+	}
+	on_weekly_FIN = {
+	    effect = {
+			if = {
+			    limit = {
+				    146 = {
+					    is_controlled_by_axis = yes
+					}
+					195 = {
+					    is_controlled_by_axis = yes
+					}
+					216 = {
+					    is_controlled_by_axis = yes
+					}
+				}
+				transfer_state = 213
+				transfer_state = 215
+			}
+			else = {
+			    SOV = {
+				    transfer_state = 213
+				    transfer_state = 215
+				}
+			}
+			every_country = {
+				delete_unit = {
+					state = 213
+					disband = yes
+				}
+				delete_unit = {
+					state = 215
+					disband = yes
+				}
 			}
 		}
 	}

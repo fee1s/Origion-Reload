@@ -1,3 +1,21 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWERS}
+### search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+### search_filters = {FOCUS_FILTER_INTERNATIONAL_TRADE}
+
 focus_tree = {
 	id = finnish_focus
 
@@ -13,9 +31,1241 @@ focus_tree = {
 	default = no
 
 	initial_show_position = {
-		x = 0
+		x = 23
 		y = 0
 	}
 
 	continuous_focus_position = { x = 45 y = 1500 }
+	
+##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##       
+##     ##  ##  ##    ##    ##    ##     ## ##     ##  ##  ##    ##   ## ##   ##       
+##     ##  ##  ##          ##    ##     ## ##     ##  ##  ##        ##   ##  ##       
+#########  ##   ######     ##    ##     ## ########   ##  ##       ##     ## ##       
+##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##       
+##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##       
+##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ######## 
+
+
+
+	focus = {
+		id = FIN_finnish_neutrality
+		icon = GFX_focus_FIN_finnish_neutrality
+
+		x = 11
+		y = 0
+		relative_position_id = FIN_suomalainen_sosialismi
+		
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = FIN_political_unity
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = FIN_finnish_neutrality }
+
+		x = -2
+		y = 1
+		relative_position_id = FIN_finnish_neutrality
+		cost = 10
+		available = {
+		    date > 1937.7.1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_political_power_gain = 0.1
+				tooltip = political_power_gain_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_align_the_agrarian_league
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = FIN_political_unity }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_political_unity
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_political_power_gain = 0.1
+				tooltip = political_power_gain_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_collaboration_with_the_left
+		icon = GFX_focus_ARG_establish_the_free_association
+		prerequisite = { focus = FIN_political_unity }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_political_unity
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_political_power_gain = 0.1
+				tooltip = political_power_gain_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_the_lone_wolf
+		icon = GFX_focus_FIN_the_lone_wolf
+		prerequisite = { focus = FIN_collaboration_with_the_left }
+		prerequisite = { focus = FIN_arm_the_lotta_svard }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_arm_the_lotta_svard
+		cost = 5
+		available = {
+			date > 1940.3.12
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			hidden_effect = {
+			    retire_character = FIN_pehr_evind_svinhufvud
+			}
+			promote_character = FIN_risto_ryti
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_production_speed_arms_factory_factor = 0.3
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_cooperation_with_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = FIN_the_lone_wolf }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_the_lone_wolf
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		completion_reward = {
+			army_experience = 150
+			air_experience = 150
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FIN_cooperation_with_germany_tt
+			
+			hidden_effect = {
+			    add_equipment_to_stockpile = {
+			   	    type = small_plane_cas_airframe_2
+			   	    amount = 300
+			       	variant_name = "Ju 87"
+			  	    producer = FIN
+			    }
+				create_equipment_variant = {
+				    name = "Ju 87" 
+				    type = small_plane_cas_airframe_2
+				    allow_without_tech = yes
+				    modules = {
+				    	fixed_main_weapon_slot = tank_buster_1
+				    	fixed_auxiliary_weapon_slot_1 = tank_buster_1
+				    	fixed_auxiliary_weapon_slot_2 = tank_buster_1
+				    	engine_type_slot = engine_3_1x
+				    	special_type_slot_1 = armor_plate_small
+			            special_type_slot_2 = fuel_tanks_small		
+				    }
+			    }
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				technology = advanced_medium_tank_chassis	
+				technology = advanced_heavy_tank_chassis					
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_wartsila_engine_production
+		icon = GFX_focus_FIN_wartsila_engine_production
+		prerequisite = { focus = FIN_cooperation_with_germany }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_cooperation_with_germany
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+
+		completion_reward = {
+			926 = { #TURKU (Pori)
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_german_military_advisors
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = FIN_cooperation_with_germany }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_cooperation_with_germany
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			926 = { #TURKU (Pori)
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_finnish_march_of_conquest
+		icon = GFX_focus_FIN_antagonize_the_soviets
+		prerequisite = { focus = FIN_wartsila_engine_production }
+		prerequisite = { focus = FIN_german_military_advisors }
+		
+		available = {
+		    custom_trigger_tooltip = FIN_finnish_march_of_conquest_tt
+			hidden_trigger = {
+			    always = no
+			}
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_wartsila_engine_production
+		cost = 0
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_timed_idea = {
+			    idea = FIN_operation_Silberfuchs_idea
+				days = 90
+			}
+			hidden_effect = {
+			    declare_war_on = {
+                    target = SOV
+                    type = annex_everything
+                }
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_VT_line
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = FIN_finnish_march_of_conquest }
+
+		x = -3
+		y = 1
+		relative_position_id = FIN_finnish_march_of_conquest
+		cost = 10
+		
+		available = {
+		    has_full_control_of_state = 146
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_VT_line_tt
+			hidden_effect = {
+			    146 = {
+				    set_building_level = {
+						type = bunker
+						level = 10
+						province = 9100
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 10
+						province = 9105
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_U_line
+		icon = GFX_focus_FIN_weapon_caches
+		prerequisite = { focus = FIN_finnish_march_of_conquest }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_finnish_march_of_conquest
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		
+		available = {
+		    has_full_control_of_state = 216
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_U_line_tt
+			hidden_effect = {
+			    216 = {
+				    set_building_level = {
+						type = bunker
+						level = 8
+						province = 11159
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 8
+						province = 90
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 8
+						province = 6172
+						instant_build = yes
+					}
+					set_building_level = {
+						type = bunker
+						level = 8
+						province = 11150
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_continue_offensive
+		icon = GFX_focus_FIN_a_cry_for_help
+		prerequisite = { focus = FIN_finnish_march_of_conquest }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_finnish_march_of_conquest
+		
+		available = {
+		    date > 1942.6.1
+		}
+		cost = 0
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_timed_idea = {
+			    idea = FIN_operation_hokki_idea
+				days = 60
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_join_the_axis
+		icon = GFX_focus_FIN_keepers_of_the_north
+		prerequisite = { focus = FIN_finnish_march_of_conquest }
+
+		x = 3
+		y = 1
+		relative_position_id = FIN_finnish_march_of_conquest
+		
+		available = {
+		    custom_trigger_tooltip = {
+			    tooltip = FIN_join_the_axis_tt
+			    any_state = {
+			        is_controlled_by = FIN
+			    	    NOT = { state = 148 }
+			    		NOT = { state = 722 }
+			        any_neighbor_state = {
+			            is_controlled_by = GER
+			        }
+			    }
+			}
+		}
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_join_the_axis_tt_tt
+			hidden_effect = {
+			    remove_ideas = FIN_axis_stuff_idea
+				GER = { add_to_faction = FIN }
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_national_unity
+		icon = GFX_focus_EST_national_pride_in_finland
+		prerequisite = { focus = FIN_finnish_neutrality }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_finnish_neutrality
+		cost = 10
+		available = {
+		    date > 1937.7.1
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = FIN_arm_the_lotta_svard
+		icon = GFX_focus_SWE_lottakoren
+		prerequisite = { focus = FIN_national_unity }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_national_unity
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = FIN_militarized_society
+		icon = GFX_focus_generic_limited_social_mobilization
+		prerequisite = { focus = FIN_national_unity }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_national_unity
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
+			add_to_variable = { 
+			    FIN_finnish_army_conscription = 0.015
+				tooltip = conscription_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_army_army_core_attack_factor = 0.25
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_army_army_core_defence_factor = 0.25
+				tooltip = army_core_defence_factor_tt
+			}
+		}
+	}
+
+
+
+
+#### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
+ ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
+ ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
+ ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##          ########  ########  ##     ## ## ## ## ##       ######### 
+ ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ## 
+ ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
+#### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+
+
+	focus = {
+		id = FIN_enhance_southern_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+
+		x = -7
+		y = 1
+		relative_position_id = FIN_finnish_neutrality
+
+
+		cost = 10
+		prerequisite = {
+		    focus = FIN_finnish_neutrality
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_core_state = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_industrial_development
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = FIN_enhance_southern_infrastructure }
+
+		x = -2
+		y = 1
+		relative_position_id = FIN_enhance_southern_infrastructure
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FIN_industrial_development
+				bonus = 1.5
+				uses = 2
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_janiskoski_power_plant
+		icon = GFX_focus_generic_energy
+		prerequisite = { focus = FIN_industrial_development }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_industrial_development
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			928 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_suomen_akatemia
+		icon = GFX_focus_research
+		prerequisite = { focus = FIN_janiskoski_power_plant }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_janiskoski_power_plant
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = FIN_expand_imatra_hydropower_plant
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = FIN_janiskoski_power_plant }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_janiskoski_power_plant
+		cost = 10
+		available = {
+			has_full_control_of_state = 928 #KYME
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			150 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_makola_mine
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = FIN_expand_imatra_hydropower_plant }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_expand_imatra_hydropower_plant
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			929 = { #OULU
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_power_from_the_dams
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = FIN_expand_imatra_hydropower_plant }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_expand_imatra_hydropower_plant
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			927 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_industrial_upgrade_in_harjavalta #Power plant and copper)
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = FIN_industrial_development }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_industrial_development
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			926 = { #TURKU
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_expand_mining_prospection
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = FIN_expand_imatra_hydropower_plant }
+		prerequisite = { focus = FIN_industrial_upgrade_in_harjavalta }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_industrial_upgrade_in_harjavalta
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			929 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+			926 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_tornio_steel_factory
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = FIN_expand_mining_prospection }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_expand_mining_prospection
+		cost = 10
+		available = {
+			has_full_control_of_state = 148 #LAPPI (Kemi)
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			148 = { #LAPPI (Kemi)
+				add_extra_state_shared_building_slots = 3
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = tungsten
+					amount = 6
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_outokumpu_for_defence_industry
+		icon = GFX_focus_GER_customs_union
+		prerequisite = { focus = FIN_enhance_southern_infrastructure }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_enhance_southern_infrastructure
+		cost = 5
+		available = {
+			date > 1939.9.1
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_economy_line_change_production_efficiency_factor = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = war_economy
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = FIN_increase_military_investment
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = FIN_outokumpu_for_defence_industry }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_outokumpu_for_defence_industry
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_economy_line_change_production_efficiency_factor = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			926 = { #TURKU (Pori)
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_expand_state_military_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = FIN_outokumpu_for_defence_industry }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_outokumpu_for_defence_industry
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_economy_line_change_production_efficiency_factor = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			926 = { #TURKU (Pori)
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_integrate_oy_tikkakoski
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = FIN_outokumpu_for_defence_industry }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_outokumpu_for_defence_industry
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_economy_line_change_production_efficiency_factor = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			926 = { #TURKU (Pori)
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+
+##     ## #### ##       #### ########    ###    ########  ##    ##    ########  ########     ###    ##    ##  ######  ##     ## 
+###   ###  ##  ##        ##     ##      ## ##   ##     ##  ##  ##     ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
+#### ####  ##  ##        ##     ##     ##   ##  ##     ##   ####      ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
+## ### ##  ##  ##        ##     ##    ##     ## ########     ##       ########  ########  ##     ## ## ## ## ##       ######### 
+##     ##  ##  ##        ##     ##    ######### ##   ##      ##       ##     ## ##   ##   ######### ##  #### ##       ##     ## 
+##     ##  ##  ##        ##     ##    ##     ## ##    ##     ##       ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
+##     ## #### ######## ####    ##    ##     ## ##     ##    ##       ########  ##     ## ##     ## ##    ##  ######  ##     ## 
+
+	
+	focus = {
+		id = FIN_suomen_maavoimat
+		icon = GFX_focus_FIN_suomen_maavoimat
+		x = 7
+		y = 1
+		relative_position_id = FIN_finnish_neutrality
+		prerequisite = {
+		    focus = FIN_finnish_neutrality
+		}
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			army_experience = 300
+			navy_experience = 50
+			air_experience = 100
+		}
+	}
+	
+	focus = {
+		id = FIN_infantry_weapons
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 3
+				technology = improved_infantry_weapons
+				technology = improved_infantry_weapons_2
+				technology = advanced_infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_national_armor_focus
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = FIN_infantry_weapons }
+		x = -1
+		y = 1
+		relative_position_id = FIN_infantry_weapons
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+		    add_tech_bonus = {
+				name = FIN_national_armor_focus
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_salvaged_and_retooled
+		icon = GFX_focus_FIN_salvaged_and_retooled
+		prerequisite = { focus = FIN_national_armor_focus }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_national_armor_focus
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			mio:FIN_valtion_panssaritehdas_organization = {
+				add_mio_size = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_winter_warfare
+		icon = GFX_focus_generic_winter_warfare
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = -2
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
+			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 50.0 tooltip = acclimatization_cold_climate_gain_factor_tt }
+			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 tooltip = winter_attrition_factor_tt }
+			add_to_variable = { FIN_finnish_army_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
+		}
+	}
+	
+	focus = {
+		id = FIN_motti_tactics
+		icon = GFX_focus_FIN_motti_tactics
+		prerequisite = { focus = FIN_suomen_maavoimat }
+
+		x = 0
+		y = 1
+		relative_position_id = FIN_suomen_maavoimat
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
+			add_to_variable = { 
+			    FIN_finnish_army_army_core_attack_factor = 0.25
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_army_army_core_defence_factor = 0.25
+				tooltip = army_core_defence_factor_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_army_max_dig_in_factor = 0.1
+				tooltip = max_dig_in_factor_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_national_firepower
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = FIN_infantry_weapons }
+
+		x = 0
+		y = 2
+		relative_position_id = FIN_infantry_weapons
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FIN_national_firepower
+				bonus = 1.0
+				uses = 3
+				technology = antitank3
+				technology = antitank4
+				technology = antitank5
+			}
+			add_tech_bonus = {
+				name = FIN_national_firepower
+				bonus = 1.0
+				uses = 3
+				technology = artillery3
+				technology = artillery4
+				technology = artillery5
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_utilize_the_sami
+		icon = GFX_focus_FIN_utilize_the_sami
+		prerequisite = { focus = FIN_winter_warfare }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_winter_warfare
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FIN_utilize_the_sami
+			    bonus = 1.0
+			    uses = 2
+				technology = tech_engineers3
+				technology = tech_military_police3
+				technology = tech_flamethrower_brigade3
+				technology = tech_field_hospital3
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_long_range_patrols
+		icon = GFX_focus_FIN_sissi
+		prerequisite = { focus = FIN_winter_warfare focus = FIN_motti_tactics }
+
+		x = 1
+		y = 1
+		relative_position_id = FIN_winter_warfare
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
+			add_to_variable = { 
+			    FIN_finnish_army_max_dig_in_factor = 0.15
+				tooltip = max_dig_in_factor_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_army_dig_in_speed_factor = 0.05
+				tooltip = dig_in_speed_factor_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_sissi
+		icon = GFX_focus_FIN_the_cold_front
+		prerequisite = { focus = FIN_long_range_patrols }
+		prerequisite = { focus = FIN_utilize_the_sami }
+		x = -1
+		y = 1
+		relative_position_id = FIN_long_range_patrols
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
+			add_to_variable = { 
+			    FIN_finnish_army_cas_damage_reduction = 0.25
+				tooltip = cas_damage_reduction_tt
+			}
+			add_to_variable = { 
+			    FIN_finnish_army_land_reinforce_rate = 0.1
+				tooltip = land_reinforce_rate_tt
+			}		
+		}
+	}
 }

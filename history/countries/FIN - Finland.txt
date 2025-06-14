@@ -2,6 +2,27 @@
 
 set_oob = "FIN_1936"
 
+set_rule = {
+    can_join_factions = no
+}
+
+add_ideas = FIN_axis_stuff_idea
+add_dynamic_modifier = {
+    modifier = FIN_finnish_economy
+}
+set_variable = { FIN_finnish_economy_political_power_gain = -0.3 }
+set_variable = { FIN_finnish_economy_stability_factor = -0.2 } 
+set_variable = { FIN_finnish_economy_industrial_capacity_factory = -0.25 }
+add_dynamic_modifier = {
+    modifier = FIN_finnish_army
+}
+set_variable = { FIN_finnish_army_army_core_attack_factor = 0.25 }
+set_variable = { FIN_finnish_army_army_core_defence_factor = 0.25 }
+set_variable = { FIN_finnish_army_conscription = 0.015 }
+set_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 }
+set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 50.0 }
+set_variable = { FIN_finnish_army_cas_damage_reduction = 0.25 }
+
 ### VARS ###
 
 if = {
@@ -14,7 +35,7 @@ if = {
 
 set_research_slots = 3
 
-add_ideas = { BAN_BAN }
+set_stability = 0.45
 
 ##################
 ### CHARACTERS ###
@@ -30,45 +51,58 @@ set_party_name = {
 }
 
 ### ARMY LEADERS
+
+recruit_character = FIN_pehr_evind_svinhufvud
+recruit_character = FIN_risto_ryti
+
 recruit_character = FIN_carl_mannerheim
-recruit_character = FIN_esko_riekki
+recruit_character = FIN_ake_henrik_gartz
+recruit_character = FIN_antti_hackzell
+recruit_character = FIN_paavo_susitaival
+recruit_character = FIN_erik_heinrichs
+recruit_character = FIN_vilho_petter_nenonen
+recruit_character = FIN_woldemar_hagglund
+recruit_character = FIN_vilho_helanen
+recruit_character = FIN_aimo_lahti
+recruit_character = FIN_aimo_cajander
+recruit_character = FIN_olavi_sarko
+recruit_character = FIN_akseli_anttila
 
 add_ideas = {
-	limited_conscription
+	volunteer_only
+	closed_economy
 }
 
 set_technology = {
+	mobile_warfare = 1
+    trade_interdiction = 1
+    formation_flying = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_trucks = 1
-	gw_artillery = 1			
-	interwar_antiair = 1
 	tech_support = 1		
-	tech_recon = 1
 	tech_engineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	fuel_silos = 1
 	basic_train = 1
-}
-if = {
-	limit = { NOT = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		early_heavy_cruiser = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		coastal_defense_ships = 1
-	}
+	tech_mountaineers = 1
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	gw_artillery = 1
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	early_bombs = 1
+	aircraft_construction = 1
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	iw_large_airframe = 1
+	basic_medium_airframe = 1
+	basic_small_airframe = 1
+	air_torpedoe_1 = 1
 }
 
-set_convoys = 5
+set_convoys = 500
 
 set_politics = {
 	ruling_party = neutrality
@@ -76,7 +110,13 @@ set_politics = {
 	election_frequency = 72
 	elections_allowed = no
 }
-set_popularities = {
-	neutrality = 100
+set_popularities = { #VANILLA
+	democratic = 10
+	fascism = 45
+	neutrality = 45
 }
 
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 200
+}
