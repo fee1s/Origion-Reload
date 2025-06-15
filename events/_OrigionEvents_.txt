@@ -948,30 +948,30 @@ news_event = { # Московское перемирие
 	desc = origion.30.d
 	picture = GFX_news_event_helsinki
 	
-	mean_time_to_happen = {
-		days = 2
-	}
+	major = yes
 	
 	trigger = {
-	    SOV = {
-		    controls_state = 111
-			has_full_control_of_state = 146
-			has_full_control_of_state = 195
-			has_full_control_of_state = 216
-		}
+		FIN = { surrender_progress > 0.58 }
 		NOT = { has_global_flag = FIN_outofwar_flag }
 	}
 	
 	immediate = {
-		hidden_effect = {
-			SOV = {
-                white_peace  = {
-				    tag = FIN
+		set_global_flag = FIN_outofwar_flag	
+		hidden_effect = {		
+			if = { limit = { FIN = { is_in_faction = yes } }
+				FIN = {
+					leave_faction = yes
 				}
-            }
-			FIN = {
-			    leave_faction = yes
 			}
+			
+			if = { limit = { FIN = { has_war_with = SOV } }
+				SOV = {
+					white_peace  = {
+						tag = FIN
+					}
+				}
+			}
+			
 			if = {
                 limit = {
 				    FIN = { is_ai = no }
@@ -982,12 +982,13 @@ news_event = { # Московское перемирие
 			        }
 			    	change_tag_from = FIN				
 			    }
-			}
-            set_global_flag = FIN_outofwar_flag			
+			}	
 		}
 	}
 	
 	option = {
 		name = origion.30.a
 	}
+	
+	mean_time_to_happen = { days = 3 }
 }
