@@ -498,6 +498,12 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+			    limit = {
+				    FIN = { is_ai = yes }
+				}
+				FIN = { add_ideas = BAN_BAN }
+			}
 	    }
 	}
 	on_weekly_USA = {
