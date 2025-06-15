@@ -225,12 +225,6 @@ focus_tree = {
 			custom_effect_tooltip = FIN_cooperation_with_germany_tt
 			
 			hidden_effect = {
-			    add_equipment_to_stockpile = {
-			   	    type = small_plane_cas_airframe_2
-			   	    amount = 300
-			       	variant_name = "Ju 87"
-			  	    producer = FIN
-			    }
 				create_equipment_variant = {
 				    name = "Ju 87" 
 				    type = small_plane_cas_airframe_2
@@ -243,6 +237,12 @@ focus_tree = {
 				    	special_type_slot_1 = armor_plate_small
 			            special_type_slot_2 = fuel_tanks_small		
 				    }
+			    }
+				add_equipment_to_stockpile = {
+			   	    type = small_plane_cas_airframe_2
+			   	    amount = 300
+			       	variant_name = "Ju 87"
+			  	    producer = FIN
 			    }
 			}
 			

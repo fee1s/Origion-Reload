@@ -214,10 +214,8 @@ news_event = { # вступление италии в войну против с
 		every_country = {
 		    limit = {
 		    	ORIGION_is_in_faction_with_axis = yes
-				OR = {
-				    NOT = { original_tag = JAP }
-					NOT = { original_tag = FIN }
-				}
+				NOT = { original_tag = JAP }
+				NOT = { original_tag = FIN }
 		    }
 		    add_dynamic_modifier = {
 			    modifier = african_warfare_dm
@@ -963,7 +961,6 @@ news_event = { # Московское перемирие
 					leave_faction = yes
 				}
 			}
-			
 			if = { limit = { FIN = { has_war_with = SOV } }
 				SOV = {
 					white_peace  = {
@@ -971,7 +968,6 @@ news_event = { # Московское перемирие
 					}
 				}
 			}
-			
 			if = {
                 limit = {
 				    FIN = { is_ai = no }
@@ -982,7 +978,8 @@ news_event = { # Московское перемирие
 			        }
 			    	change_tag_from = FIN				
 			    }
-			}	
+			}
+            FIN = { add_ideas = BAN_BAN }			
 		}
 	}
 	
