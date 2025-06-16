@@ -316,9 +316,11 @@ focus_tree = {
 		prerequisite = { focus = FIN_german_military_advisors }
 		
 		available = {
-		    custom_trigger_tooltip = FIN_finnish_march_of_conquest_tt
-			hidden_trigger = {
-			    always = no
+		    custom_trigger_tooltip = {
+			    tooltip = FIN_finnish_march_of_conquest_tt
+			    hidden_trigger = {
+			        always = no
+			    }
 			}
 		}
 
