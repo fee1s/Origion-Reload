@@ -485,6 +485,16 @@ on_actions = {
 				    modifier = FIN_hell_weather
 				}
 			}
+			722 = {
+			    add_dynamic_modifier = {
+				    modifier = FIN_hell_weather
+				}
+			}
+			147 = {
+			    add_dynamic_modifier = {
+				    modifier = FIN_hell_weather
+				}
+			}
 			if = {
 			    limit = {
 				    FIN = { is_ai = no }
@@ -658,22 +668,34 @@ on_actions = {
 					    is_controlled_by_axis = yes
 					}
 				}
+				transfer_state = 147
 				transfer_state = 213
 				transfer_state = 215
+				transfer_state = 722
 			}
 			else = {
 			    SOV = {
-				    transfer_state = 213
+				    transfer_state = 147
+					transfer_state = 213
 				    transfer_state = 215
+				    transfer_state = 722
 				}
 			}
 			every_country = {
+				delete_unit = {
+					state = 147
+					disband = yes
+				}
 				delete_unit = {
 					state = 213
 					disband = yes
 				}
 				delete_unit = {
 					state = 215
+					disband = yes
+				}
+				delete_unit = {
+					state = 722
 					disband = yes
 				}
 			}

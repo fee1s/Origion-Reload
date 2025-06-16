@@ -671,7 +671,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_janiskoski_power_plant
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
@@ -1059,37 +1059,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FIN_national_armor_focus
-		icon = GFX_focus_generic_tank_production
+		id = FIN_salvaged_and_retooled
+		icon = GFX_focus_FIN_salvaged_and_retooled
 		prerequisite = { focus = FIN_infantry_weapons }
 		x = -1
 		y = 1
 		relative_position_id = FIN_infantry_weapons
-		cost = 10
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
-
-		completion_reward = {
-		    add_tech_bonus = {
-				name = FIN_national_armor_focus
-				bonus = 1.0
-				uses = 1
-				technology = improved_medium_tank_chassis
-				technology = improved_heavy_tank_chassis
-			}
-		}
-	}
-	
-	focus = {
-		id = FIN_salvaged_and_retooled
-		icon = GFX_focus_FIN_salvaged_and_retooled
-		prerequisite = { focus = FIN_national_armor_focus }
-
-		x = -1
-		y = 1
-		relative_position_id = FIN_national_armor_focus
 		cost = 10
 		available = {
 		}
@@ -1107,6 +1082,37 @@ focus_tree = {
 			
 			mio:FIN_valtion_panssaritehdas_organization = {
 				add_mio_size = 3
+			}
+		}
+	}
+	
+	focus = {
+		id = FIN_national_armor_focus
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = FIN_salvaged_and_retooled }
+		x = -1
+		y = 1
+		relative_position_id = FIN_salvaged_and_retooled
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+		    add_tech_bonus = {
+				name = FIN_national_armor_focus
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = FIN_national_armor_focus
+				bonus = 1.0
+				uses = 2
+				technology = armor_tech_3
+				technology = engine_tech_3
 			}
 		}
 	}

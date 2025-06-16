@@ -1223,11 +1223,31 @@ news_event = {
 				remove_dynamic_modifier = { modifier = no_fra_mainland_buildings }
 			}
 			
-			every_state = {
-				limit = {
-					has_dynamic_modifier = { modifier = fra_maginot_line }
-				}
-				remove_dynamic_modifier = { modifier = fra_maginot_line }
+			28 = {
+				remove_dynamic_modifier = {
+			        modifier = fra_maginot_line
+			        scope = GER
+		        }
+				remove_dynamic_modifier = {
+			        modifier = fra_maginot_line
+			        scope = ITA
+		        }
+				remove_dynamic_modifier = {
+			        modifier = fra_maginot_line
+			        scope = HUN
+		        }
+				remove_dynamic_modifier = {
+			        modifier = fra_maginot_line
+			        scope = ROM
+		        }
+				remove_dynamic_modifier = {
+			        modifier = fra_maginot_line
+			        scope = BUL
+		        }
+				remove_dynamic_modifier = {
+			        modifier = fra_maginot_line
+			        scope = BUL
+		        }
 			}
 			
 			29 = { remove_province_modifier = { province = { id = 575 } static_modifiers = { battle_of_dunkirk } } }
