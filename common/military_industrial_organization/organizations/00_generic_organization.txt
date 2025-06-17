@@ -22,7 +22,8 @@ axis_tank_organization = {
 	
 	equipment_type = { armor }
 	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules mio_cat_tech_heavy_armor_and_modules }
-
+	limit_to_equipment_type = { armor } 
+	
 	tree_header_text = {
 		text = mio_header_tank_construction_medium
 		x = 3
@@ -39,7 +40,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_reliability
 
 		position = { x=1 y=0 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		
 		equipment_bonus = {
 			reliability = 0.05
@@ -53,7 +53,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
 		position = { x=2 y=0 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_simplified_suspension
 		
 		equipment_bonus = {
@@ -69,7 +68,6 @@ axis_tank_organization = {
 
 		
 		position = { x=0 y=2 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_simplified_suspension
 		
 		any_parent = { generic_mio_trait_simplified_suspension }
@@ -86,7 +84,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_breakthrough
 		
 		position = { x=0 y=2 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_crew_ergonomics
 		
 		any_parent = { generic_mio_trait_crew_ergonomics }
@@ -103,7 +100,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
 		
 		position = { x=1 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_simplified_suspension
 		
 		all_parents = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
@@ -120,7 +116,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_ap_attack
 
 		position = { x=0 y=2 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_standardized_components
 		
 		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_standardized_components generic_mio_trait_command_upgrades }
@@ -137,7 +132,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_hard_attack
 		
 		position = { x=-1 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_long_barreled_guns
 		
 		any_parent = { generic_mio_trait_long_barreled_guns }
@@ -156,7 +150,6 @@ axis_tank_organization = {
 		icon = GFX_generic_mio_trait_icon_soft_attack
 		
 		position = { x=1 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
 		relative_position_id = generic_mio_trait_long_barreled_guns
 		
 		any_parent = { generic_mio_trait_long_barreled_guns }
@@ -166,161 +159,6 @@ axis_tank_organization = {
 		equipment_bonus = {
 			soft_attack = 0.1
 			breakthrough = 0.05
-		}
-	}
-	
-	trait = {
-		token = generic_mio_trait_wide_tracks
-		name = generic_mio_trait_wide_tracks
-		icon = GFX_generic_mio_trait_icon_reliability
-
-		position = { x=5 y=0 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		
-		equipment_bonus = {
-			reliability = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_fire_extinguishers
-		name = generic_mio_trait_fire_extinguishers
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_quality
-
-		position = { x=0 y=4 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_wide_tracks
-
-		all_parents = { generic_mio_trait_wide_tracks }
-		
-		equipment_bonus = {
-			reliability = 0.05
-			breakthrough = 0.02
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_one_piece_hull_side_coverings
-		name = generic_mio_trait_one_piece_hull_side_coverings
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_technology
-
-		position = { x=2 y=0 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_wide_tracks
-		
-		production_bonus = {
-			production_efficiency_cap_factor = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_simplified_transmission_system
-		name = generic_mio_trait_simplified_transmission_system
-		icon = GFX_generic_mio_department_icon_tank_heavy_tank_line_efficiency
-
-		position = { x=1 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_wide_tracks
-		
-		available = { has_mio_size > 4 }
-
-		all_parents = { generic_mio_trait_wide_tracks generic_mio_trait_one_piece_hull_side_coverings }
-	
-		production_bonus = {
-			production_efficiency_gain_factor = 0.1
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_sloping_armor
-		name = generic_mio_trait_sloping_armor
-		icon = GFX_generic_mio_department_icon_tank_general_armor
-
-		position = { x=0 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
-
-		all_parents = { generic_mio_trait_one_piece_hull_side_coverings }
-		
-		equipment_bonus = {
-			armor_value = 0.05
-			breakthrough = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_improved_crew_ergonomics
-		name = generic_mio_trait_improved_crew_ergonomics
-		icon = GFX_generic_mio_trait_icon_breakthrough
-
-		position = { x=-1 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_sloping_armor
-
-		all_parents = { generic_mio_trait_sloping_armor }
-
-		mutually_exclusive = { generic_mio_trait_reinforced_construction }
-		
-		equipment_bonus = {
-			breakthrough = 0.05
-			reliability = 0.05
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_reinforced_construction
-		name = generic_mio_trait_reinforced_construction
-		icon = GFX_generic_mio_trait_icon_armor_value
-
-		position = { x=1 y=1 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_sloping_armor
-
-		all_parents = { generic_mio_trait_sloping_armor }
-
-		mutually_exclusive = { generic_mio_trait_improved_crew_ergonomics }
-		
-		equipment_bonus = {
-			hardness = 0.05
-			reliability = -0.1
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_high_explosive_shells
-		name = generic_mio_trait_high_explosive_shells
-		icon = GFX_generic_mio_department_icon_tank_general_weapons
-
-		position = { x=0 y=2 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_improved_crew_ergonomics
-
-		any_parent = { generic_mio_trait_reinforced_construction generic_mio_trait_improved_crew_ergonomics }
-
-		mutually_exclusive = { generic_mio_trait_apcr_hvap_shells }
-		
-		equipment_bonus = {
-			soft_attack = 0.05
-			breakthrough = 0.03
-		}
-	}
-
-	trait = {
-		token = generic_mio_trait_apcr_hvap_shells
-		name = generic_mio_trait_apcr_hvap_shells
-		icon = GFX_generic_mio_trait_icon_ap_attack
-
-		position = { x=2 y=2 }
-		limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
-		relative_position_id = generic_mio_trait_improved_crew_ergonomics
-
-		any_parent = { generic_mio_trait_reinforced_construction generic_mio_trait_improved_crew_ergonomics }
-
-		mutually_exclusive = { generic_mio_trait_high_explosive_shells }
-		
-		equipment_bonus = {
-			hardness = 0.03
-			hard_attack = 0.05
 		}
 	}
 }
