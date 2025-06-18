@@ -772,7 +772,29 @@ technologies = {
 		}
 			ai_will_do = { factor = -15 }
 	}
-
+	
+	bunker_limiter = {
+	
+		allow = {
+			always = no
+		}
+		
+		ai_will_do = { factor = -15 }
+		
+		research_cost = 0
+		start_year = 1936
+		
+		enable_building = {
+			building = bunker
+			level = 5
+		}
+		
+		enable_building = {
+			building = coastal_bunker
+			level = 5
+		}
+	}
+	
 	fuel_silos = {
 
 		enable_building = {

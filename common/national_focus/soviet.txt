@@ -4072,8 +4072,11 @@ focus_tree = {
 				transfer_state = 78
 				transfer_state = 80
 				
-				transfer_state = 146
-				transfer_state = 147
+				if = { limit = { FIN = { is_ai = no } } 
+					transfer_state = 146
+					transfer_state = 147
+					transfer_state = 722
+				}
 			
 				add_named_threat = { threat = 12 name = SOV_secret_protocol_of_the_MR_pact }
 				

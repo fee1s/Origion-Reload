@@ -659,27 +659,19 @@ on_actions = {
 			if = {
 			    limit = {
 				    146 = {
-					    is_controlled_by_axis = yes
+					    is_fully_controlled_by_axis = yes
 					}
 					195 = {
-					    is_controlled_by_axis = yes
+					    is_fully_controlled_by_axis = yes
 					}
 					216 = {
-					    is_controlled_by_axis = yes
+					    is_fully_controlled_by_axis = yes
 					}
 				}
 				transfer_state = 147
 				transfer_state = 213
 				transfer_state = 215
 				transfer_state = 722
-			}
-			else = {
-			    SOV = {
-				    transfer_state = 147
-					transfer_state = 213
-				    transfer_state = 215
-				    transfer_state = 722
-				}
 			}
 			every_country = {
 				delete_unit = {
