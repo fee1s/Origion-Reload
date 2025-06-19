@@ -22,7 +22,6 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			ship_anti_air_1
-			tank_small_cannon
 			secondary_turret_small_cannon
 		}
 
@@ -88,7 +87,6 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			tank_small_cannon_2
 			tank_close_support_gun
 			secondary_turret_close_support_gun
 		}
@@ -432,10 +430,6 @@ technologies = {
 #			rocket_artillery_brigade
 #		}
 
-		enable_equipment_modules = {
-			tank_rocket_launcher
-		}
-
 		path = {
 			leads_to_tech = rocket_artillery2
 			research_cost_coeff = 1
@@ -561,9 +555,6 @@ technologies = {
 		motorized_rocket_brigade = {
 			soft_attack = 0.3
 		}
-		enable_equipment_modules = {
-			tank_rocket_launcher_2
-		}
 		research_cost = 1
 
 		start_year = 1943
@@ -596,7 +587,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_anti_air_2
-			tank_auto_cannon
 			tank_anti_air_cannon
 			tank_heavy_cannon
 		}
@@ -721,7 +711,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_anti_air_3
-			tank_auto_cannon_2
 			tank_anti_air_cannon_2
 		}
 
@@ -1271,9 +1260,6 @@ technologies = {
 	}
 
 	antitank4 = {
-		enable_equipment_modules = {
-			tank_high_velocity_cannon_2
-		}
 		anti_tank = {
 			hard_attack = 0.1
 			ap_attack = 0.1
@@ -1368,7 +1354,6 @@ technologies = {
 			anti_tank_equipment_3
 		}
 		enable_equipment_modules = {
-			tank_high_velocity_cannon_3
 			tank_heavy_cannon_3
 			tank_medium_cannon_3
 			auto_loader
