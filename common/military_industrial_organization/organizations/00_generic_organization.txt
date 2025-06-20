@@ -861,7 +861,6 @@ soviet_tank_organization = {
 		all_parents = { generic_mio_trait_soviet_production }
 		production_bonus = {
 			production_cost_factor = -0.05
-			production_capacity_factor = 0.1
 			production_resource_need_factor = -0.05
 		}
 	}
@@ -879,9 +878,8 @@ soviet_tank_organization = {
 		
 		all_parents = { generic_mio_trait_soviet_production_2 }
 		production_bonus = {
-			production_cost_factor = -0.05
+			production_capacity_factor = 0.05
 			production_efficiency_cap_factor = 0.05
-			production_resource_need_factor = -0.05
 		}
 	}
 	

@@ -132,55 +132,6 @@ every_state = {
 #INDUSTRIALIZATION
 set_variable = { ITA_new_industrialization_program_factories_required = 100 }
 
-#VALLO ALPINO ORIENTALE
-set_variable = { ITA_vallo_alpino_days = 180 }
-set_variable = { ITA_vallo_alpino_cp_cost = 25 }
-set_variable = { ITA_vallo_alpino_pp_cost = 15 }
-set_variable = { ITA_vallo_alpino_cp_cost_negative = -25 }
-set_variable = { ITA_vallo_alpino_pp_cost_negative = -15 }
-
-#NAVAL COOPERATION PROGRAMS
-set_variable = { ITA_joint_maneuvers_with_country_days = 60 }
-
-#DIPLOMACY
-set_variable = { ITA_pressure_government_days = 30 }
-set_variable = { ITA_pressure_government_cd = 365 }
-set_variable = { ITA_pressure_country_government_cost = 50 }
-set_variable = { ITA_ideological_rallies_days = 90 }
-set_variable = { ITA_promote_ideology_rallies_cost = 50 }
-set_variable = { ITA_send_ultimatum_to_country_cost = 75 }
-set_variable = { ITA_ultimatum_days = 14 }
-
-
-# DYNAMIC MODIFIERS
-
-#PARTISAN STATE MODIFIERS FOR CW - Set up in LATIUM (Rome) state for easier access
-2 = {
-	set_variable = { ITA_fronte_militare_clandestino_required_garrison_factor = 0.15 } #Fronte Militare Clandestino focus
-	set_variable = { ITA_fronte_militare_clandestino_resistance_growth_on_our_occupied_states = 0.1 } #Fronte Militare Clandestino focus
-	set_variable = { ITA_fronte_militare_clandestino_resistance_damage_to_garrison_on_our_occupied_states = 0 } #Gappisti focus
-	set_variable = { ITA_fronte_militare_clandestino_resistance_target_on_our_occupied_states = 0 } #Gappisti focus
-	set_variable = { ITA_fronte_militare_clandestino_compliance_growth_on_our_occupied_states = 0 } #Partisan Republics focus
-}
-
-#RICOSTRUZIONE INDUSTRIALE
-set_variable = { ITA_iri_production_speed_industrial_complex_factor = 0.05 }
-set_variable = { ITA_iri_industrial_concern_cost_factor = -0.35 }
-set_variable = { ITA_iri_tank_manufacturer_cost_factor = -0.15 }
-set_variable = { ITA_iri_materiel_manufacturer_cost_factor = -0.15 }
-set_variable = { ITA_iri_aircraft_manufacturer_cost_factor = -0.15 }
-set_variable = { ITA_iri_naval_manufacturer_cost_factor = -0.15 }
-
-set_variable = { ITA_iri_production_speed_arms_factory_factor = 0 }
-set_variable = { ITA_iri_consumer_goods_factor = 0 }
-set_variable = { ITA_iri_local_resources_factor = 0 }
-set_variable = { ITA_iri_production_speed_infrastructure_factor = 0 }
-set_variable = { ITA_re_supply_node_range = 0 }
-set_variable = { ITA_iri_production_speed_dockyard_factor = 0 }
-
-add_dynamic_modifier = { modifier = ITA_ricostruzione_industriale_dynamic_modifier }
-
-
 #MILITARY INDUSTRY
 set_variable = { ITA_military_industry_dm_production_factory_start_efficiency_factor = -0.05 }
 set_variable = { ITA_military_industry_dm_factory_max_efficiency_factor = -0.1 }
@@ -194,8 +145,6 @@ set_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0 }
 set_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0 }
 
 add_dynamic_modifier = { modifier = ITA_military_industry_dynamic_modifier }
-
-
 
 #REGIO ESERCITO
 #set_variable = { ITA_re_army_experience_loss_factor = -0.1 }

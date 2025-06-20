@@ -49,13 +49,17 @@ ITA_military_industry_dynamic_modifier = { #NATIONAL SPIRIT
 	production_factory_max_efficiency_factor = ITA_military_industry_dm_factory_max_efficiency_factor # -0.1
 	production_factory_efficiency_gain_factor = ITA_military_industry_dm_production_factory_efficiency_gain_factor # -0.05
 	industrial_capacity_factory = ITA_military_industry_dm_industrial_capacity_factory #-0.1
-
-	# later stuff
+	industrial_capacity_dockyard = ITA_military_industry_dm_industrial_capacity_dockyard
 	line_change_production_efficiency_factor = ITA_military_industry_dm_line_change_production_efficiency_factor #0.1
-	production_lack_of_resource_penalty_factor = ITA_military_industry_dm_production_lack_of_resource_penalty_factor #0.1
-	equipment_upgrade_xp_cost = ITA_military_industry_dm_equipment_upgrade_xp_cost #-0.1
-	industrial_capacity_dockyard = ITA_military_industry_dm_industrial_capacity_dockyard #0.05
-	air_equipment_upgrade_xp_cost = ITA_military_industry_air_equipment_upgrade_xp_cost #-0.1/+0.1
+	
+	production_speed_industrial_complex_factor = ITA_military_industry_dm_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = ITA_military_industry_dm_production_speed_arms_factory_factor
+	industrial_concern_cost_factor = ITA_military_industry_dm_industrial_concern_cost_factor
+	consumer_goods_factor = ITA_military_industry_dm_consumer_goods_factor
+	local_resources_factor = ITA_military_industry_dm_local_resources_factor
+	consumer_goods_expected_value = ITA_military_industry_dm_consumer_goods_expected_value
+	conversion_cost_civ_to_mil_factor = ITA_military_industry_dm_conversion_cost_civ_to_mil_factor
+	global_building_slots_factor = ITA_military_industry_dm_global_building_slots_factor
 }
 
 
@@ -94,6 +98,7 @@ ITA_regio_esercito_dynamic_modifier = { #NATIONAL SPIRIT
 	modifier_army_sub_unit_militia_speed_factor = ITA_re_modifier_army_sub_unit_militia_speed_factor #0.05
 	special_forces_out_of_supply_factor = ITA_re_special_forces_out_of_supply_factor # 0.1
 	conscription_factor = ITA_re_conscription_factor #0.1
+	conscription = ITA_re_conscription
 	promote_cost_factor = ITA_re_promote_cost_factor #-0.2
 	command_power_gain_mult = ITA_re_command_power_gain_mult #0.15
 	non_core_manpower = ITA_re_non_core_manpower #0.15
@@ -106,6 +111,7 @@ ITA_regio_esercito_dynamic_modifier = { #NATIONAL SPIRIT
 	heat_attrition_factor = ITA_re_heat_attrition_factor #-0.1
 	modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor = ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor
 	modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor = ITA_re_modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor
+	cas_damage_reduction = ITA_re_modifier_cas_damage_reduction
 
 
 

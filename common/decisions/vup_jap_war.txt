@@ -703,7 +703,7 @@ JAP_economic_stagnation = {
 	JAP_stagnation_economic_0_des = {
 		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
-		days_mission_timeout = 90
+		days_mission_timeout = 30
 		is_good = yes
 		fire_only_once = yes
 		activation = {
@@ -721,7 +721,7 @@ JAP_economic_stagnation = {
 			    add_dynamic_modifier = {
 			    	modifier = JAP_stagnation_dm
 			    }
-			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.025 }
+			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.01 }
 		        set_variable = { JAP_stagnation_industrial_capacity_factory = -0.1 }
 		        set_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.1 }
 			}
@@ -735,14 +735,14 @@ JAP_economic_stagnation = {
 	JAP_stagnation_economic_mission_des = {
 		name = JAP_stagnation_economic_0_name
 		icon = GFX_decision_revolt
-		days_mission_timeout = 90
+		days_mission_timeout = 30
 		is_good = no
 		fire_only_once = no
 		activation = {
 			always = no
 		}
 		available = {
-			OR = {
+			AND = {
 				has_full_control_of_state = 439	
 				has_full_control_of_state = 674
 			}
@@ -755,7 +755,7 @@ JAP_economic_stagnation = {
 					NOT = {
 						has_country_flag = {
 						    flag = JAP_stagnation_step
-						    value = 7
+						    value = 23
 				    	}
 					}
 				}

@@ -534,18 +534,29 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_iri_production_speed_arms_factory_factor = 0.025 }
-			custom_effect_tooltip = ITA_steel_industry_in_terni_ricostruzione_industriale_tt
-			2 = {
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_production_speed_arms_factory_factor = 0.025
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ITA
+					is_core_of = ITA
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
-				}
-				add_resource = {
-					type = steel
-					amount = 12
 				}
 			}
 		}
@@ -566,8 +577,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_iri_production_speed_industrial_complex_factor = 0.05 }
-			custom_effect_tooltip = ITA_power_plants_in_terni_ricostruzione_industriale_tt
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_production_speed_industrial_complex_factor = 0.05
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			2 = {
 				add_extra_state_shared_building_slots = 2
@@ -603,11 +618,18 @@ focus_tree = {
 				uses = 2
 				category = synth_resources
 			}
-			2 = {
-				add_extra_state_shared_building_slots = 1
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ITA
+					is_core_of = ITA
+				}
+				random_select_amount = 2
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -661,13 +683,6 @@ focus_tree = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
-				}
-			}
-			
-			hidden_effect = {
-				add_timed_idea = {
-					idea = ITA_strengthened_heavy_industry
-					days = 365
 				}
 			}
 		}
@@ -738,7 +753,15 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_ideas = { ITA_new_industrialization_program_idea }
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_industrial_capacity_factory = 0.1
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+			    ITA_military_industry_dm_industrial_capacity_dockyard = 0.1
+				tooltip = industrial_capacity_dockyard_tt
+			}
 		}
 	}
 
@@ -814,8 +837,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_iri_consumer_goods_factor = -0.05 }
-			custom_effect_tooltip = ITA_investments_in_edison_ricostruzione_industriale_tt
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			159 = { #LOMBARDY (Milano)
 				add_extra_state_shared_building_slots = 3
@@ -1012,9 +1039,6 @@ focus_tree = {
 			add_to_variable = { ITA_military_industry_dm_line_change_production_efficiency_factor = 0.2 }
 			add_to_variable = { ITA_military_industry_dm_production_factory_start_efficiency_factor = -0.04 }
 			custom_effect_tooltip = ITA_increase_production_military_industry_tt
-
-			add_to_variable = { ITA_iri_consumer_goods_factor = 0.01 }
-			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_tt
 		}
 	}
 
@@ -1064,88 +1088,26 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 250
-
-			random_owned_controlled_state = {
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_owned_state = {
 				limit = {
-					is_core_of = ROOT
-					arms_factory > 0
+					is_fully_controlled_by = ITA
+					is_core_of = ITA
 					free_building_slots = {
 						building = arms_factory
 						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					arms_factory > 0
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-
-			#Fallback
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							arms_factory > 0
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_core_of = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_core_of = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}				
 			}
 		}
 	}
@@ -1167,18 +1129,9 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { ITA_re_army_army_org_factor = 0.05 }
 			add_to_variable = { ITA_re_army_morale_factor = 0.05 }
-			add_to_variable = { ITA_re_modifier_army_sub_unit_infantry_defence_factor = 0.05 }
 			custom_effect_tooltip = ITA_preserve_army_traditions_re_tt
 			
 			army_experience = 25
-
-
-			add_doctrine_cost_reduction = {
-				name = ITA_preserve_army_traditions
-				cost_reduction = 0.75
-				uses = 1
-				category = cat_grand_battle_plan
-			}
 		}
 	}
 
@@ -1239,7 +1192,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { ITA_re_army_core_defence_factor = 0.05 }
-			add_to_variable = { ITA_re_modifier_army_sub_unit_militia_max_org_factor = 0.05 }
+			add_to_variable = { ITA_re_modifier_cas_damage_reduction = 0.05 }
 			custom_effect_tooltip = ITA_moschettieri_del_duce_re_tt
 		}
 	}
@@ -1317,19 +1270,22 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_italian_tankettes_military_industry_tt
-			hidden_effect = {
-				add_ideas = ITA_hidden_tankettes_ns
-			}
-
-			hidden_effect = { army_experience = 150 }
-
+			army_experience = 75
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = ITA_italian_tankettes
-				bonus = 1
+				bonus = 1.0
 				uses = 1
 				technology = improved_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			mio:ITA_fiat_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
@@ -1349,18 +1305,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
-			add_to_variable = { ITA_re_special_forces_attack_factor = 0.03 }
-			add_to_variable = { ITA_re_special_forces_defence_factor = 0.03 }
-			custom_effect_tooltip = ITA_bersaglieri_re_tt
-
 			army_experience = 15
-
-			add_tech_bonus = {
-				name = ITA_bersaglieri
-				bonus = 0.75
-				uses = 2
-				category = cat_special_forces_generic
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { ITA_re_modifier_army_sub_unit_mountaineers_attack_factor = 0.025 }
+			add_to_variable = { ITA_re_modifier_army_sub_unit_mountaineers_defence_factor = 0.025 }
+			custom_effect_tooltip = ITA_bersaglieri_re_tt
 		}
 	}
 
@@ -1380,19 +1330,11 @@ focus_tree = {
 
 		completion_reward = {
 		    add_potential_special_forces_tree = yes
-			add_to_variable = { ITA_re_modifier_army_sub_unit_mountaineers_defence_factor = 0.03 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_to_variable = { ITA_re_modifier_army_sub_unit_mountaineers_defence_factor = 0.025 }
 			add_to_variable = { ITA_re_modifier_army_sub_unit_mountaineers_max_org_factor = 0.05 }
 			custom_effect_tooltip = ITA_divisioni_alpine_re_tt
-
-			army_experience = 15
-
-			add_tech_bonus = {
-				name = ITA_divisioni_alpine
-				bonus = 1.5
-				uses = 1
-				category = mountaineers_tech
-			}
-			
 		}
 	}
 
@@ -1410,34 +1352,23 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_self_propelled_guns_military_industry_tt
-			hidden_effect = {
-				add_ideas = ITA_hidden_spg_production_ns
-			}
-
+			army_experience = 25
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
-				name = ITA_increase_artillery_production
-				bonus = 1
-				uses = 2
+				name = ITA_self_propelled_guns
+				bonus = 1.0
+				uses = 3
 				technology = antitank4
-                technology = antitank5
+				technology = antitank4
+				technology = antitank5
 			}
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			mio:ITA_breda_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
@@ -1456,16 +1387,37 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { ITA_military_industry_dm_industrial_capacity_factory = 0.05 }
-			add_to_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0.05 }
-			custom_effect_tooltip = ITA_modernize_ansaldo_facilities_military_industry_tt
-
+			army_experience = 25
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = ITA_modernize_ansaldo_facilities
-				bonus = 1
+				bonus = 1.0
 				uses = 1
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ITA
+					is_core_of = ITA
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1485,27 +1437,18 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_ferrea_mole_ferreo_cuore_military_industry_tt
-			hidden_effect = {
-				add_ideas = ITA_hidden_ferrea_mole_ns
-			}
-			army_experience = 50
+			army_experience = 25
 			
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = ITA_ferrea_mole_ferreo_cuore
+			    bonus = 1
+			    uses = 1
+				technology = tech_engineers4
+				technology = tech_flamethrower_brigade4
+				technology = tech_logistics_company4
+				technology = tech_field_hospital4
 			}
 		}
 	}
@@ -2068,7 +2011,7 @@ focus_tree = {
 				name = ITA_milizia_marittima_di_artiglieria
 				bonus = 1.0
 				uses = 1
-				category = artillery
+				technology = antiair3
 			}
 		}
 	}
@@ -2265,43 +2208,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
-			2 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
+			every_owned_state = {
+				limit = {
+					is_fully_controlled_by = ITA
+					is_core_of = ITA
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			
-			162 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			158 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			117 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			160 = {
+				random_select_amount = 5
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -2388,7 +2305,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_ideas = { ITA_battaglia_del_grano }
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_consumer_goods_expected_value = -0.015
+				tooltip = consumer_goods_expected_tt
+			}
 		}
 	}
 
@@ -2406,7 +2327,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_ideas = { ITA_battaglia_per_la_terra }
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_global_building_slots_factor = 0.15
+				tooltip = global_building_slots_factor_tt
+			}
 		}
 	}
 
@@ -2424,7 +2349,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			add_ideas = { ITA_battaglia_per_la_nascite }
+			custom_effect_tooltip = ITA_modify_regio_esercito_modifier_tt
+			add_to_variable = { 
+			    ITA_re_conscription = 0.005
+				tooltip = conscription_tt
+			}
 		}
 	}
 
@@ -2474,12 +2403,16 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_la_battaglia_del_grano
 
-		cost = 5
+		cost = 10
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_ideas = ITA_camicie_nere
+			custom_effect_tooltip = ITA_modify_regio_esercito_modifier_tt
+			add_to_variable = { 
+			    ITA_re_conscription_factor = 0.15
+				tooltip = conscription_factor_tt
+			}
 		}
 	}
 	
@@ -3149,7 +3082,11 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_ideas = ITA_use_prom_idea
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_local_resources_factor = 0.1
+				tooltip = local_resources_factor_tt
+			}
 		}
 	}
 	
@@ -3168,11 +3105,16 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_to_variable = { ITA_iri_production_speed_arms_factory_factor = 0.075 }
-			add_to_variable = { ITA_iri_consumer_goods_factor = -0.1 }
-
-			custom_effect_tooltip = ITA_industriale_tt
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_production_speed_arms_factory_factor = 0.075
+				tooltip = production_speed_arms_factory_factor_tt
 			}
+			add_to_variable = { 
+			    ITA_military_industry_dm_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+		}
 	}
 
 	focus = {
@@ -3190,11 +3132,20 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_to_variable = { ITA_military_industry_dm_industrial_capacity_factory = 0.03 }
-			add_to_variable = { ITA_military_industry_dm_factory_max_efficiency_factor = 0.03 }
-			add_to_variable = { ITA_military_industry_dm_production_factory_efficiency_gain_factor = 0.05}
-			custom_effect_tooltip = ITA_increase_production_tt
+			custom_effect_tooltip = ITA_modify_military_industry_modifier_tt
+			add_to_variable = { 
+			    ITA_military_industry_dm_industrial_capacity_factory = 0.03
+				tooltip = industrial_capacity_factory_tt
 			}
+			add_to_variable = { 
+			    ITA_military_industry_dm_production_factory_max_efficiency_factor = 0.03
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    ITA_military_industry_dm_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+		}
 	}
 
 
