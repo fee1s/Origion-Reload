@@ -442,6 +442,9 @@ technologies = {
 			AND = {
 				has_tech = marines
 				can_unlock_new_special_forces_tree = yes
+				hidden_trigger = {
+				    NOT = { original_tag = FIN }
+				}
 			}
 		}
 		

@@ -1472,6 +1472,15 @@ technologies = {
 
 		transport_capacity = -0.33
 		naval_invasion_capacity = 10
+		
+		allow = {
+		    if = {
+			    limit = {
+				    original_tag = FIN
+				}
+				always = no
+			}
+		}
 
 		path = {
 			leads_to_tech = mtg_landing_craft
