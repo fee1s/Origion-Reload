@@ -1108,60 +1108,70 @@
 		completion_reward = {
 		    custom_effect_tooltip = AST_defending_the_papua_tt
 		    hidden_effect = {
-			    if = {
-				    limit = {
-					    635 = { is_controlled_by_ROOT_or_ally = yes }
-					}
-			        transfer_state = 635
-				}
-				if = {
-				    limit = {
-					    636 = { is_controlled_by_ROOT_or_ally = yes }
-					}
-			        transfer_state = 636
-				}
-				if = {
-				    limit = {
-					    669 = { is_controlled_by_ROOT_or_ally = yes }
-					}
-			        transfer_state = 669
-				}
-				if = {
-				    limit = {
-					    734 = { is_controlled_by_ROOT_or_ally = yes }
-					}
-			        transfer_state = 734
-				}
-				if = {
-				    limit = {
-					    738 = { is_controlled_by_ROOT_or_ally = yes }
-					}
-			        transfer_state = 738
-				}
-				if = {
-				    limit = {
-					    987 = { is_controlled_by_ROOT_or_ally = yes }
-					}
-			        transfer_state = 987
-				}
-				every_state = {
-				    limit = { 
-						OR = {
-						    state = 523
-							state = 634
-							state = 669
-							state = 737
-							state = 979
-						}
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
+			    285 = {
+				    set_building_level = {
+						type = bunker
+						level = 10
+						province = 7859
 						instant_build = yes
-						province = {
-							all_provinces = yes
-							limit_to_naval_base = yes
-					    }
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 12406
+						instant_build = yes
+					}
+				}
+				521 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 7564
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 10487
+						instant_build = yes
+					}
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 7566
+						instant_build = yes
+					}
+				}
+				517 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 7798
+						instant_build = yes
+					}
+				}
+				519 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 12910
+						instant_build = yes
+					}
+				}
+				522 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 1652
+						instant_build = yes
+					}
+				}
+				520 = {
+					set_building_level = {
+						type = coastal_bunker
+						level = 5
+						province = 7669
+						instant_build = yes
 					}
 				}
 			}
