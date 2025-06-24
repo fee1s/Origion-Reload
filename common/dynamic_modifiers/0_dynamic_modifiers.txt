@@ -1229,7 +1229,10 @@ sea_invasion_prohibited_dm = {
 	
     army_attack_factor = -3
 }
-
+no_airfield_dm = { # запрет на строительство филдов
+    icon = GFX_modifiers_demilitarize_zone
+    state_production_speed_air_base_factor = -3
+}
 inappropriate_invasion_zone = {
 	enable = { always = yes }
 	icon = GFX_modifiers_demilitarize_zone

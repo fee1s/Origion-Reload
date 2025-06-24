@@ -3442,11 +3442,9 @@ focus_tree = {
 				every_state = {
 				    limit = { 
 						OR = {
-						    state = 288
 							state = 430
 							state = 431
 							state = 432
-							state = 640
 						}
 					}
 					add_building_construction = {
@@ -3473,6 +3471,19 @@ focus_tree = {
 				    	instant_build = yes
 				    }
 				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 439
+							state = 435
+						}
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 5
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -3486,7 +3497,12 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			
+			285 = {
+			    is_controlled_by_ROOT_or_ally = yes
+			}
+			517 = {
+			    is_controlled_by_ROOT_or_ally = yes
+			}
 		}
 
 		ai_will_do = {
@@ -3496,35 +3512,20 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    custom_effect_tooltip = ENG_australia_focus_tt
-		    hidden_effect = {
-				every_state = {
-				    limit = { 
-						is_australian_main_state = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = {
-							all_provinces = yes
-							limit_to_naval_base = yes
-					    }
-					}
+		    285 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-			    285 = {
-				    add_building_construction = {
-					    type = air_base
-					    level = 10
-					    instant_build = yes
-				    }
-				}
-				517 = {
-				    add_building_construction = {
-					    type = air_base
-					    level = 10
-					    instant_build = yes
-				    }
+			}
+			517 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
