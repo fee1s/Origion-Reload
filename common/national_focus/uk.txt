@@ -3442,11 +3442,9 @@ focus_tree = {
 				every_state = {
 				    limit = { 
 						OR = {
-						    state = 288
 							state = 430
 							state = 431
 							state = 432
-							state = 640
 						}
 					}
 					add_building_construction = {
@@ -3472,6 +3470,19 @@ focus_tree = {
 				    	level = 10
 				    	instant_build = yes
 				    }
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 439
+							state = 435
+						}
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
 		}
