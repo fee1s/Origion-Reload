@@ -214,21 +214,7 @@ country_event = {
 	}
 
 	option = { 	
-		name = usa.6.a
-		ai_chance = {
-			factor = 75
-			modifier = {
-				OR = {
-					has_game_rule = {
-						rule = USA_ai_behavior
-						option = FASCIST
-					}
-					has_country_flag = USA_AI_RANDOM_FASCIST
-				}
-				has_dlc = "Man the Guns"
-				factor = 0
-			}
-		}		
+		name = usa.6.a	
 		add_ideas = new_deal
 		set_variable = { election_factor = random }
 		add_to_variable = { election_factor = -0.5 }
@@ -1206,10 +1192,6 @@ country_event = {
 					factor = 3
 				}
 				modifier = {
-					has_idea_with_trait = fascist_demagogue
-					factor = 2
-				}
-				modifier = {
 					has_idea_with_trait = communist_revolutionary
 					factor = 2
 				}
@@ -1230,10 +1212,6 @@ country_event = {
 				modifier = {
 					check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
 					factor = 3
-				}
-				modifier = {
-					has_idea_with_trait = fascist_demagogue
-					factor = 2
 				}
 				modifier = {
 					has_idea_with_trait = communist_revolutionary
@@ -1288,10 +1266,6 @@ country_event = {
 					factor = 0.5
 				}
 				modifier = {
-					has_idea_with_trait = fascist_demagogue
-					factor = 2
-				}
-				modifier = {
 					has_idea_with_trait = communist_revolutionary
 					factor = 2
 				} 
@@ -1324,10 +1298,6 @@ country_event = {
 				modifier = {
 					check_variable = { representatives_support < 100 }
 					factor = 0
-				}
-				modifier = {
-					has_idea_with_trait = fascist_demagogue
-					factor = 2
 				}
 				modifier = {
 					has_idea_with_trait = communist_revolutionary
@@ -1620,8 +1590,4 @@ country_event = {
 	}
 	
 	hidden = yes
-
-	immediate = {
-		play_arsenal_of_democracy_effect = yes
-	}
 }

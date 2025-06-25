@@ -120,28 +120,6 @@ characters = {
 				democratic_reformer 
 			}
 			visible = { always = no }
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 2.000
-					OR = {
-						BUL_is_democratic_socialist_ai = yes 
-						BUL_is_democratic_liberal_ai = yes 
-					}
-					NOT = {
-						has_government = democratic 
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						OR = {
-							BUL_is_democratic_socialist_ai = yes 
-							BUL_is_democratic_liberal_ai = yes 
-						}
-					}
-				}
-			}
 		}
 		name = BUL_stoycho_mushanov
 		portraits = {
@@ -468,6 +446,7 @@ characters = {
 	}
 
 	BUL_nikola_hadzipetkov = {
+		instance = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 			}
@@ -478,6 +457,7 @@ characters = {
 					large = "GFX_portrait_bul_nikola_hadzipetkov"
 				}
 			}
+		}
 	}
 
 	BUL_kiril_dimitrov_yanchulev = {
@@ -496,13 +476,6 @@ characters = {
 					army_chief_defensive_2
 				}
 				cost = 100
-				ai_will_do = {
-					factor = 1.000
-					modifier = {
-						factor = 0.100
-						BUL_save_money_for_decisions = yes
-					}
-				}
 			}
 			name = BUL_kiril_dimitrov_yanchulev
 			portraits = {
@@ -558,13 +531,6 @@ characters = {
 					army_chief_maneuver_2
 				}
 				cost = 100
-				ai_will_do = {
-					factor = 1.000
-					modifier = {
-						factor = 0.100
-						BUL_save_money_for_decisions = yes
-					}
-				}
 			}
 			name = BUL_vasil_boydev
 			portraits = {
@@ -630,13 +596,6 @@ characters = {
 					army_chief_offensive_2
 				}
 				cost = 100
-				ai_will_do = {
-					factor = 1.000
-					modifier = {
-						factor = 0.100
-						BUL_save_money_for_decisions = yes
-					}
-				}
 			}
 			name = BUL_kiril_stanchev
 			portraits = {
@@ -690,13 +649,6 @@ characters = {
 				air_chief_reform_1
 			}
 			cost =  50
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_dimitr_ayryanov
 		portraits = {
@@ -718,13 +670,6 @@ characters = {
 				air_chief_safety_2
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_gancho_manchev
 		portraits = {
@@ -747,13 +692,6 @@ characters = {
 				air_chief_ground_support_3
 			}
 			cost = 200
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_zachari_zachariev
 		portraits = {
@@ -780,13 +718,6 @@ characters = {
 				army_regrouping_2
 			}
 			cost = 50
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_ivan_sapundzhiev
 		portraits = {
@@ -809,13 +740,6 @@ characters = {
 				army_logistics_2
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_trifon_trifonov
 		portraits = {
@@ -847,13 +771,6 @@ characters = {
 				army_armored_2
 			}
 			cost = 50
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_stoyan_trendafilov
 		portraits = {
@@ -876,13 +793,6 @@ characters = {
 				army_infantry_2
 			}
 			cost = 100
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
 		}
 		name = BUL_vladimir_stoychev
 		portraits = {

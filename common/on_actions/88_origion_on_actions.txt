@@ -192,23 +192,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					tag = "PHI"
-					FROM = {
-						is_in_faction_with = JAP
-					}
-					FROM.FROM = {
-						is_core_of = "PHI"
-					}
-					"PHI" = {
-						has_capitulated = yes
-						is_in_faction_with = USA
-					}
-					NOT = { has_global_flag = i_have_returned_happened }
-				}
-				play_i_have_returned_effect = yes
-			}
-			if = {
-				limit = {
 					OR = {
 						TAG = ENG
 						TAG = USA

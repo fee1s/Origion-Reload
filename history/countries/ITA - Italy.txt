@@ -210,8 +210,6 @@ set_variable = { ITA_ra_air_intercept_efficiency = 0 }
 set_variable = { ITA_ra_sp_air_intercontinental_bomber_speed_factor = 0 }
 set_variable = { ITA_ra_sp_air_mothership_aircraft_speed_factor = 0 }
 
-add_dynamic_modifier = { modifier = ITA_regia_aeronautica_dynamic_modifier }
-
 
 
 #REGIA MARINA
@@ -238,8 +236,6 @@ set_variable = { ITA_rm_sub_retreat_speed = 0 }
 set_variable = { ITA_rm_decryption_factor = 0 }
 set_variable = { ITA_rm_navy_intel_factor = 0 }
 set_variable = { ITA_rm_naval_invasion_prep_speed = 0 }
-
-add_dynamic_modifier = { modifier = ITA_regia_marina_dynamic_modifier }
 
 
 #INTERNATIONAL AID (Commie)
@@ -511,7 +507,7 @@ if = {
 		force_rotation = 1
 		formation_flying = 1
 		low_echelon_support = 1
-		dispersed_fighting = 1
+		formation_flying = 1
 
 
 		#electronics

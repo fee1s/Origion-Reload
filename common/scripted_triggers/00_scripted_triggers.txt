@@ -269,106 +269,6 @@ ai_land_doctrine_tier_2_trigger = {
 	}
 }
 
-CHI_is_on_historical_plan_trigger = {
-	has_dlc = "Waking the Tiger"
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = CHI_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = CHI_AI_RANDOM_HISTORICAL
-		has_game_rule = {
-			rule = CHI_ai_behavior
-			option = HISTORICAL
-		}
-	}
-}
-SOV_is_on_historical_plan_trigger = {
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = SOV_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
-		has_game_rule = {
-			rule = SOV_ai_behavior
-			option = HISTORICAL
-		}
-	}
-}
-USA_is_on_historical_plan_trigger = {
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = USA_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = USA_AI_DEMOCRATIC_HISTORICAL
-		has_game_rule = {
-			rule = USA_ai_behavior
-			option = DEMOCRATIC_HISTORICAL
-		}
-	}
-}
-ROM_is_on_historical_plan_trigger = {
-	has_dlc = "Death or Dishonor"
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = ROM_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = ROM_AI_RANDOM_FASCIST_HISTORICAL
-		has_game_rule = {
-			rule = ROM_ai_behavior
-			option = FASCIST_HISTORICAL
-		}
-	}
-}
-HUN_is_on_historical_plan_trigger = {
-	has_dlc = "Death or Dishonor"
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = HUN_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = HUN_AI_RANDOM_FASCIST_HISTORICAL
-		has_game_rule = {
-			rule = HUN_ai_behavior
-			option = FASCIST_HISTORICAL
-		}
-	}
-}
-ENG_is_on_historical_plan_trigger = {
-	OR = {
-		AND = {
-			is_historical_focus_on = yes
-			has_game_rule = {
-				rule = ENG_ai_behavior
-				option = DEFAULT
-			}
-		}
-		has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
-		has_game_rule = {
-			rule = eng_ai_behavior
-			option = DEMOCRATIC_HISTORICAL
-		}
-	}
-}
-
 SOV_save_pp_for_manpower_trouble = {
 	has_manpower < 1000000
 	has_political_power < 200
@@ -1023,13 +923,6 @@ has_mtg = {
 	has_dlc = "Man the Guns"
 }
 
-has_hide_rule = {
-	has_game_rule = {
-		rule = obsolete_focus_branches_visibility
-		option = HIDE
-	}
-}
-
 
 ###########################################################################################
 ###########################################################################################
@@ -1054,52 +947,6 @@ has_aat = {
 is_aat_sweden = {
 		has_aat = yes
 		original_tag = SWE
-}
-
-is_trotsky_valid_for_mexico = {
-	OR = {
-		has_government = communism
-		has_government = neutrality
-	}
-	has_global_flag = flag_mexico_invited_trotsky_to_government
-	NOT = {
-		OR = {
-			has_global_flag = trotsky_not_welcome_in_mexico
-			has_global_flag = flag_trotsky_dead
-			has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				SOV_is_left_opposition = yes 
-				SOV_is_right_opposition = yes
-			}
-		}
-		SOV = { NOT = { has_idea = SOV_lev_trotsky } }
-		SOV = { NOT = { has_country_leader = { character = SOV_lev_trotsky } } }
-	}
-	if = {
-		limit = {
-			has_aat = yes 
-		}
-		has_global_flag = AAT_trotsky_in_mexico
-	}	
-}
-NOR_trotsky_not_in_sov = {
-	any_other_country = {
-		original_tag = SOV 
-		has_government = communism 
-		NOT = { has_completed_focus = SOV_the_left_opposition }
-	}
-}
-
-NOR_trotsky_not_in_mex = {
-	NOT = { 
-		has_global_flag = AAT_trotsky_in_mexico 
-		has_global_flag = flag_trotsky_dead
-		has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
-	} 
 }
 
 has_any_tank_tech = {
@@ -1286,9 +1133,7 @@ ai_has_completed_army_doctrine = {
 ai_has_completed_air_doctrine = {
 	is_ai = yes
 	OR = {
-		has_tech = offensive_formations
 		has_tech = mass_destruction
-		has_tech = forward_interception
 		has_tech = high_level_bombing
 	}
 }
@@ -1299,7 +1144,6 @@ ai_has_completed_naval_doctrine = {
 		has_tech = grand_battlefleet
 		has_tech = submarine_offensive
 		has_tech = floating_airfield
-		has_tech = combined_operations_raiding
 		has_tech = integrated_convoy_defence
 		has_tech = submarine_offensive_bs
 		has_tech = carrier_battlegroups

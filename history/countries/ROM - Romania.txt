@@ -28,8 +28,8 @@ if = {
 	aa_lmg = 1
 	engines_1 = 1
 	engines_2 = 1
-	early_bombs = 1
-	aircraft_construction = 1
+	
+	
 	iw_small_airframe = 1
 	iw_medium_airframe = 1
 	iw_large_airframe = 1
@@ -181,7 +181,7 @@ set_popularities = {
 }
 if = {
 	limit = { has_dlc = "Man the Guns" }
-	### Battleship Variants	
+	### battle_cruiser Variants	
 	create_equipment_variant = {
 		name = "Origion Romania Light Cruiser"
 		type = ship_hull_cruiser_2
@@ -201,9 +201,9 @@ if = {
 			rear_1_custom_slot = ship_airplane_launcher_2
 		}
 	}
-	# Battleships #
+	# battle_cruisers #
 	create_equipment_variant = {
-		name = "Origion Romania Battleship"
+		name = "Origion Romania battle_cruiser"
 		type = ship_hull_heavy_2
 		name_group = ROM_BB_HISTORICAL
 		parent_version = 0

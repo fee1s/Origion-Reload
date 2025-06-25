@@ -24,18 +24,25 @@ ideas = {
 				training_time_army_factor = -0.5
 			}
 		}
- 
-		doka_abuzer = {
-			picture = generic_army_problems 
+		
+		YUG_air_payment = {
+			
+			picture = generic_fighter_production_diverted
+
 			allowed = {
-	     	}
-	      	modifier = {
-				army_org_factor = -0.5
-				army_attack_factor = -0.5
-				army_defence_factor = -0.5
-				navy_visibility = 0.6
-				air_mission_efficiency = -0.8
-		    }
+				original_tag = YUG
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
 		}
 		
 		origion_defeatism = {
