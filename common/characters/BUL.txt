@@ -120,6 +120,28 @@ characters = {
 				democratic_reformer 
 			}
 			visible = { always = no }
+			ai_will_do = {
+				base = 1.000
+				modifier = {
+					factor = 2.000
+					OR = {
+						BUL_is_democratic_socialist_ai = yes 
+						BUL_is_democratic_liberal_ai = yes 
+					}
+					NOT = {
+						has_government = democratic 
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						OR = {
+							BUL_is_democratic_socialist_ai = yes 
+							BUL_is_democratic_liberal_ai = yes 
+						}
+					}
+				}
+			}
 		}
 		name = BUL_stoycho_mushanov
 		portraits = {
@@ -212,6 +234,26 @@ characters = {
 			logistics_skill=4
 			legacy_id=34
 		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = BUL_nikola_mihov
+			ledger = army
+			allowed = {
+				original_tag = BUL
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
+		}
 	}
 
 	BUL_georgi_popov = {
@@ -247,6 +289,45 @@ characters = {
 				legacy_id=34
 			}
 	}
+	
+	BUL_asen_nikolov = {
+		name = BUL_asen_nikolov
+		portraits = {
+			army = {
+				large = "GFX_portrait_bul_asen_nikolov"
+				small = GFX_portrait_BUL_asen_nikolov_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BUL_asen_nikolov
+			ledger = army
+			allowed = {
+				has_dlc = "Battle for the Bosporus"
+				original_tag = BUL
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
+		}
+	}
 
 	BUL_ivan_markov = {
 		name = BUL_ivan_markov
@@ -257,13 +338,32 @@ characters = {
 			}
 		}
 		corps_commander={
-			traits={ infantry_leader Trickster  }
+			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
 			attack_skill=3
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
-			legacy_id=1205
+			legacy_id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BUL_ivan_markov
+			ledger = army
+			allowed = {
+				original_tag = BUL
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
 		}
 	}
 
@@ -443,10 +543,27 @@ characters = {
 				large = "GFX_portrait_bul_konstantin_lukash"
 			}
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = BUL_konstantin_lukash
+			allowed = {
+				original_tag = BUL
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
+		}
 	}
 
 	BUL_nikola_hadzipetkov = {
-		instance = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 			}
@@ -457,7 +574,6 @@ characters = {
 					large = "GFX_portrait_bul_nikola_hadzipetkov"
 				}
 			}
-		}
 	}
 
 	BUL_kiril_dimitrov_yanchulev = {
@@ -476,6 +592,13 @@ characters = {
 					army_chief_defensive_2
 				}
 				cost = 100
+				ai_will_do = {
+					factor = 1.000
+					modifier = {
+						factor = 0.100
+						BUL_save_money_for_decisions = yes
+					}
+				}
 			}
 			name = BUL_kiril_dimitrov_yanchulev
 			portraits = {
@@ -516,119 +639,20 @@ characters = {
 	}
 
 	BUL_vasil_boydev = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			advisor = {
-				slot = army_chief
-				idea_token = BUL_vasil_boydev
-				allowed = {
-					has_dlc = "Battle for the Bosporus"
-					original_tag = BUL
-				}
-				traits = {
-					army_chief_maneuver_2
-				}
-				cost = 100
-			}
-			name = BUL_vasil_boydev
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_vasil_boydev"
-					large = "GFX_portrait_bul_vasil_boydev"
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			advisor = {
-				slot = air_chief
-				idea_token = BUL_vasil_boydev
-				allowed = {
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					original_tag = BUL
-				}
-				traits = {
-					air_chief_ground_support_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			name = BUL_vasil_boydev
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_air_europe_3"
-					large = GFX_portrait_BUL_vasil_boydev
-				}
-			}
-			corps_commander = {
-				traits = { armor_officer }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 3
-				legacy_id = -1
+		name = BUL_vasil_boydev
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_vasil_boydev"
+				large = "GFX_portrait_bul_vasil_boydev"
 			}
 		}
 	}
 
 	BUL_kiril_stanchev = {
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			advisor = {
-				slot = army_chief
-				idea_token = BUL_kiril_stanchev
-				allowed = {
-					has_dlc = "Battle for the Bosporus"
-					original_tag = BUL
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-			}
-			name = BUL_kiril_stanchev
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_kiril_stanchev"
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			advisor = {
-				cost = 100
-				slot = theorist
-				idea_token = BUL_kiril_stanchev
-				ledger = army
-				allowed = {
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					original_tag = BUL
-				}
-				
-				traits = {
-					military_theorist
-				}
-			}
-			name = BUL_kiril_stanchev
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_kiril_stanchev"
-				}
+		name = BUL_kiril_stanchev
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_kiril_stanchev"
 			}
 		}
 	}
@@ -649,6 +673,13 @@ characters = {
 				air_chief_reform_1
 			}
 			cost =  50
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
 		}
 		name = BUL_dimitr_ayryanov
 		portraits = {
@@ -670,6 +701,13 @@ characters = {
 				air_chief_safety_2
 			}
 			cost = 100
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
 		}
 		name = BUL_gancho_manchev
 		portraits = {
@@ -692,6 +730,13 @@ characters = {
 				air_chief_ground_support_3
 			}
 			cost = 200
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
 		}
 		name = BUL_zachari_zachariev
 		portraits = {
@@ -706,19 +751,6 @@ characters = {
 #############################
 
 	BUL_ivan_sapundzhiev = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_ivan_sapundzhiev
-			ledger = army
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			traits = {
-				army_regrouping_2
-			}
-			cost = 50
-		}
 		name = BUL_ivan_sapundzhiev
 		portraits = {
 			army = {
@@ -728,19 +760,6 @@ characters = {
 	}
 
 	BUL_trifon_trifonov = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_trifon_trifonov
-			ledger = army
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-		}
 		name = BUL_trifon_trifonov
 		portraits = {
 			army = {
@@ -759,19 +778,6 @@ characters = {
 	}
 
 	BUL_stoyan_trendafilov = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_stoyan_trendafilov
-			ledger = army
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			traits = {
-				army_armored_2
-			}
-			cost = 50
-		}
 		name = BUL_stoyan_trendafilov
 		portraits = {
 			army = {
@@ -781,19 +787,6 @@ characters = {
 	}
 
 	BUL_vladimir_stoychev = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_vladimir_stoychev
-			ledger = army
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-		}
 		name = BUL_vladimir_stoychev
 		portraits = {
 			army = {

@@ -72,6 +72,21 @@ characters={
 			logistics_skill=4
 			legacy_id=16
 		}
+		advisor={
+			slot = high_command
+			idea_token = RAJ_noel_beresfordpeirse
+			ledger = army
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	RAJ_frank_messervy={
@@ -90,6 +105,21 @@ characters={
 			planning_skill=4
 			logistics_skill=4
 			legacy_id=17
+		}
+		advisor={
+			slot = high_command
+			idea_token = RAJ_frank_messervy
+			ledger = army
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -110,6 +140,21 @@ characters={
 			logistics_skill=4
 			legacy_id=18
 		}
+		advisor={
+			slot = high_command
+			idea_token = RAJ_douglas_gracey
+			ledger = army
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}	
 	}
 
 	### Empty characters that can become unit leaders later ###
@@ -273,20 +318,6 @@ characters={
 				small="GFX_idea_RAJ_archibald_wavell" #small="GFX_idea_generic_army_europe_5"
 			}
 		}
-		advisor={
-			slot = army_chief
-			idea_token = RAJ_archibald_wavell
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				army_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	RAJ_reginald_savory={
@@ -294,20 +325,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = RAJ_reginald_savory
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				army_chief_drill_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -340,20 +357,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RAJ_kodandera_cariappa" #small="GFX_idea_generic_army_arab_3"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = RAJ_kodandera_cariappa
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				army_chief_morale_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -439,21 +442,6 @@ characters={
 				small="GFX_idea_RAJ_ram_singh_thakur" #small="GFX_idea_generic_army_arab_1"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = RAJ_ram_singh_thakur
-			ledger = army
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	RAJ_arjan_singh_vibhusan={
@@ -463,21 +451,6 @@ characters={
 				small="GFX_idea_generic_air_arab_3"
 			}
 		}
-		advisor={	
-			slot = high_command
-			idea_token = RAJ_arjan_singh_vibhusan
-			ledger = air
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				air_air_combat_training_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	RAJ_mehar_singh={
@@ -485,21 +458,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RAJ_mehar_singh" #small="GFX_idea_generic_air_arab_1"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = RAJ_mehar_singh
-			ledger = air
-			allowed = {
-				original_tag = RAJ
-			}
-			traits = {
-				air_close_air_support_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

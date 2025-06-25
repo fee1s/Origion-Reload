@@ -190,7 +190,7 @@ characters={
 			traits = {
 				army_armored_2
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -223,7 +223,7 @@ characters={
 			traits = {
 				army_CombinedArms_2
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -248,12 +248,28 @@ characters={
 			}
 		}
 		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
+		}
+		advisor={	
+			slot = high_command
+			idea_token = HUN_karoly_beregfy
+			ledger = army
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -266,13 +282,28 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
+		}
+		advisor={
+			slot = high_command
+			idea_token = HUN_lajos_veress
+			ledger = army
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -293,6 +324,22 @@ characters={
 			planning_skill=3
 			logistics_skill=4
 			legacy_id=34
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = HUN_ferenc_feketehalmyczeydner
+			ledger = army
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -495,21 +542,6 @@ characters={
 				small="GFX_idea_HUN_dezso_laszlo"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = HUN_dezso_laszlo
-			ledger = army
-			allowed = {
-				original_tag = HUN
-			}
-			traits = {
-				army_regrouping_2
-			}
-			cost = 50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	HUN_jeno_ratz={
@@ -526,21 +558,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_HUN_henrik_werth"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = HUN_henrik_werth
-			ledger = army
-			allowed = {
-				original_tag = HUN
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

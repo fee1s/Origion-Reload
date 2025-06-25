@@ -93,6 +93,20 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 		}
+		advisor={
+			slot = high_command
+			idea_token = ROM_petre_dumitrescu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 		
 	}
 
@@ -105,13 +119,27 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ panzer_leader war_hero trait_engineer Swamp_Fox urban_assault_specialist organizer Brilliant_Strategist}
+			traits={ panzer_leader war_hero trait_engineer urban_assault_specialist organizer ranger Trickster Brilliant_Strategist}
 			skill=6
 			attack_skill=4
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=4
-
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = ROM_ioan_mihail_racovita
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -188,13 +216,13 @@ characters={
 		}
 
 		corps_commander={
-			traits={ infantry_officer infantry_leader organizer trickster }
+			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=-1
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 		
 	}
@@ -312,12 +340,13 @@ characters={
 		}
 
 		corps_commander={
-			skill=3
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
 			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=-1
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}
 
@@ -350,21 +379,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ROM_paul_teodorescu"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = ROM_paul_teodorescu
-			ledger = air
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				air_strategic_bombing_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

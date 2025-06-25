@@ -819,20 +819,6 @@ characters={
 				small="GFX_idea_george_kenney"
 			}
 		}
-		advisor={
-			slot = air_chief
-			idea_token = george_kenney
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				air_chief_safety_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	### MILITARY HIGH COMMAND ###
@@ -850,21 +836,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_jimmy_doolittle"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = jimmy_doolittle
-			ledger = air
-			allowed = {
-				original_tag = USA
-			}
-			traits = {
-				air_strategic_bombing_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -956,7 +927,7 @@ characters={
 				original_tag = USA
 			}
 			traits = {
-				navy_chief_commerce_raiding_1
+				navy_chief_commerce_raiding_2
 			}
 			cost = 100
 		}

@@ -206,39 +206,6 @@ characters={
 				large=GFX_portrait_JAP_yasuji_okamura
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = yasuji_okamura
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 2.500
-				modifier = {
-					factor = 1.500
-					not = {
-						JAP = {
-							has_war_with = USA
-						}
-					}
-				}
-			}
-		}
-		
-		corps_commander={
-			traits={ trait_reckless }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	JAP_toshizo_nishio={
@@ -648,6 +615,22 @@ characters={
 			planning_skill=4
 			logistics_skill=4
 			legacy_id=0
+		}
+		
+		advisor={
+			slot = high_command
+			idea_token = JAP_hitoshi_imamura
+			ledger = army
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 5
+			}
 		}
 	}
 

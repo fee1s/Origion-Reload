@@ -86,6 +86,21 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 		}
+		advisor={
+			slot = high_command
+			idea_token = thomas_blamey
+			ledger = army
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	AST_henry_wynter={
@@ -104,6 +119,20 @@ characters={
 			planning_skill=3
 			logistics_skill=4
 			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = henry_wynter
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	
@@ -124,6 +153,20 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 		}
+		advisor={
+			slot = army_chief
+			idea_token = john_northcott
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	AST_horace_robertson={
@@ -143,6 +186,21 @@ characters={
 			logistics_skill=4
 			legacy_id=16
 		}
+		advisor={
+			slot = high_command
+			idea_token = horace_robertson
+			ledger = army
+			allowed = {
+				original_tag = AST
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 	
 	AST_iven_mackay={
@@ -161,6 +219,24 @@ characters={
 			planning_skill=4
 			logistics_skill=4
 			legacy_id=19
+		}
+		advisor={
+			slot = high_command
+			idea_token = iven_mackay
+			ledger = army
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_completed_focus = AST_australian_army_catering_corps
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -266,20 +342,6 @@ characters={
 				small="GFX_idea_AST_vernon_sturdee" #small="GFX_idea_generic_army_europe_5"
 			}
 		}
-		advisor={
-			slot = army_chief
-			idea_token = AST_vernon_sturdee
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				army_chief_offensive_2
-			}
-			cost =  50
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	### AIR CHIEFS ###
@@ -340,21 +402,6 @@ characters={
 				small="GFX_idea_AST_arthur_allen" #small="GFX_idea_generic_army_europe_2"
 			}
 		}
-		advisor={		
-			slot = high_command
-			idea_token = AST_arthur_allen
-			ledger = army
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				army_infantry_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 	
 	AST_clive_caldwell={
@@ -382,21 +429,6 @@ characters={
 			army={
 				small="GFX_idea_AST_edmund_herring" #small="GFX_idea_generic_army_europe_1"
 			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = AST_edmund_herring
-			ledger = army
-			allowed = {
-				original_tag = AST
-			}
-			traits = {
-				army_artillery_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
 		}		
 	}
 
@@ -414,26 +446,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_AST_cederic_hicks" #small="GFX_idea_generic_army_europe_4"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = AST_cederic_hicks
-			ledger = army
-			allowed = {
-				original_tag = AST
-				has_dlc = "Together for Victory"
-			}
-			cost = 150.000
-			available = {
-				has_completed_focus = AST_australian_army_catering_corps
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}		
 	}

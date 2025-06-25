@@ -45,9 +45,7 @@ focus_tree = {
 		relative_position_id = RAJ_lessons_of_the_great_war
 
 		available = {
-			JAP = {
-				has_completed_focus = JAP_intervene_in_china
-			}	
+			date > 1937.7.1
 		}
 
 		bypass = {
@@ -238,20 +236,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-			OR = {
-				is_subject_of = ENG
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -280,20 +264,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-			OR = {
-				is_subject_of = ENG
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -305,7 +275,8 @@ focus_tree = {
 				name = RAJ_british_army_support
 				bonus = 1.0
 				uses = 2
-				category = support_tech
+				technology = tech_military_police3
+				technology = tech_military_police4
 			}
 		}
 	}
@@ -394,21 +365,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			IF = {
-				limit = {
-					ETH = { has_character = RAJ_orde_wingate }
-				}
-				OR = {
-					ETH = { controls_state = 271 }
-					any_owned_state = {
-						NOT = { is_controlled_by = ROOT }
-					}
-					date > 1942.1.1
-				}			
-			}
-		}
-
 		bypass = {
 
 		}
@@ -419,36 +375,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-		custom_effect_tooltip = RAJ_orde_wingate_tt
-		hidden_effect = {
-			IF = {
-				limit = {
-					ETH = { has_character = RAJ_orde_wingate }
-				}
-				ETH = {
-					country_event = {
-						id = BBA_ethiopia_exile_events.05
-						hours = 1
-					}
-				}
-			}
-			ELSE = {
-				add_corps_commander_role = {
-					character = RAJ_orde_wingate
-					traits = { jungle_rat commando }
-					skill = 4
-					attack_skill = 3
-					defense_skill = 3
-					planning_skill = 2
-					logistics_skill = 5
-					}
-				}
-			}
 			add_tech_bonus = {
 				name = RAJ_chindits
-				bonus = 3.0
+				bonus = 1
 				uses = 2
-				category = para_tech
 				category = mountaineers_tech
 			}
 		}
@@ -662,17 +592,23 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = RAJ_indian_sandhurst_tt 
-			hidden_effect = {
-				add_field_marshal_role = {
-					character = RAJ_kodandera_madappa_cariappa
-					traits={ commando organizer infantry_leader Trickster naval_invader desert_fox urban_assault_specialist }
-			        skill=6
-			        attack_skill=3
-			        defense_skill=5
-			        planning_skill=4
-			        logistics_skill=4
-				}
+			army_experience = 50
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = RAJ_an_indian_sandhurst
+				bonus = 1.0
+				uses = 3
+				technology = antitank3
+				technology = antitank4
+				technology = antitank5
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			mio:RAJ_ordnance_factories_board_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
@@ -791,7 +727,7 @@ focus_tree = {
 				name = RAJ_royal_indian_artillery
 				bonus = 1.0
 				uses = 1
-                technology = antitank5
+                technology = artillery1
 			}
 		}
 	}
@@ -828,7 +764,7 @@ focus_tree = {
 				name = RAJ_army_motorization
 				bonus = 1.0
 				uses = 1
-				category = motorized_equipment
+				technology = mechanised_infantry			
 			}
 		}
 	}
@@ -897,11 +833,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
+			army_experience = 75
 		}
 	}
 
@@ -913,9 +845,6 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = RAJ_an_indian_sandhurst
-		available = {
-			date > 1942.1.1
-		}
 		completion_reward = {
 			add_potential_special_forces_tree = yes
 		}

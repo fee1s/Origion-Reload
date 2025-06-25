@@ -470,22 +470,6 @@ characters = {
 				large = GFX_portrait_ITA_vittorio_ambrosio
 			}
 		}
-
-		advisor = {
-			slot = high_command
-			idea_token = vittorio_ambrosio
-			ledger = army
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = {
-				army_cavalry_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 1.000
-			}
-		}
 		
 		corps_commander = {
 			traits = { cavalry_officer }
@@ -1133,25 +1117,6 @@ characters = {
 				small = GFX_idea_ettore_muti
 			}
 		}
-
-		advisor = {
-			slot = high_command
-			idea_token = ettore_muti
-			ledger = air
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = {
-				air_tactical_bombing_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 1.000
-			}
-		}
 	}
 
 	ITA_marziale_cerutti = {
@@ -1159,25 +1124,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_idea_marziale_cerutti
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = marziale_cerutti
-			ledger = air
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 1.000
 			}
 		}		
 	}

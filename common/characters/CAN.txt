@@ -59,6 +59,21 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 		}
+		advisor={
+			slot = high_command
+			idea_token = CAN_david_vivian_currie
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 		
 
@@ -85,12 +100,32 @@ characters={
 			}
 		}
 		corps_commander={
-			skill=4
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CAN_thomas_victor_anderson
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
 		}
 	}
 
@@ -111,6 +146,21 @@ characters={
 			logistics_skill=4
 			legacy_id=-1
 		}
+		advisor={
+			slot = high_command
+			idea_token = CAN_charles_foulkes
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	CAN_percival_john_montague={
@@ -122,12 +172,32 @@ characters={
 			}
 		}
 		corps_commander={
-			skill=3
-			attack_skill=1
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=-1
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
+		}
+		advisor = {
+			slot = high_command
+			idea_token = CAN_percival_john_montague
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+				modifier = {
+					factor = 0.100
+					BUL_save_money_for_decisions = yes
+				}
+			}
 		}
 	}
 
@@ -147,6 +217,20 @@ characters={
 			planning_skill=3
 			logistics_skill=4
 			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CAN_andrew_mcnaughton
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 
@@ -230,19 +314,6 @@ characters={
 				small="GFX_idea_CAN_harry_crerar" #small="GFX_idea_generic_army_europe_4"
 			}
 		}
-		advisor={	
-			slot = army_chief
-			idea_token = CAN_harry_crerar
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				army_chief_old_guard
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	CAN_andrew_mcnaughton={
@@ -250,20 +321,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CAN_andrew_mcnaughton" #small="GFX_idea_generic_army_europe_3"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = CAN_andrew_mcnaughton
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				army_chief_offensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}		
 	}
@@ -383,21 +440,6 @@ characters={
 				small="GFX_idea_CAN_guy_simonds" #small="GFX_idea_generic_army_europe_1"
 			}
 		}
-		advisor={	
-			slot = high_command
-			idea_token = CAN_guy_simonds
-			ledger = army
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				army_artillery_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	CAN_gino_verchiella={
@@ -414,21 +456,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CAN_john_murchie" #small="GFX_idea_generic_army_europe_2"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CAN_john_murchie
-			ledger = army
-			allowed = {
-				original_tag = CAN
-			}
-			traits = {
-				army_armored_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
