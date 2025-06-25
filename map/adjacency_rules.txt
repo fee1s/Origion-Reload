@@ -571,6 +571,43 @@ adjacency_rule =
 }
 adjacency_rule =
 {
+	name = "AST_3"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 1422 1410 12499 12457 1629 }
+	
+	icon = 1410
+}
+adjacency_rule =
+{
 	name = "RABAUL"
 	
 	contested =
