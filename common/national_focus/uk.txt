@@ -298,7 +298,7 @@ focus_tree = {
 	focus = {
 		id = royal_ordinance_focus
 		available = {
-			has_war = yes
+			date > 1939.9.1
 		}
 		#at war with major or ger in rhineland or high threat
 		prerequisite = {
@@ -3015,7 +3015,7 @@ focus_tree = {
 	focus = {
 		id = ENG_blood_toil_tears
 		available = {
-			has_war = yes
+			date > 1939.9.1
 		}
 		
 		icon = GFX_focus_eng_the_kings_party

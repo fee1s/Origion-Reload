@@ -1022,6 +1022,11 @@ equipments = {
 				}
 			}
 		}
+		
+		module_count_limit = {
+			module = self_sealing_fuel_tanks_medium
+			count < 2
+		}
 
 		module_count_limit = {
 			module = non_strategic_materials_medium
@@ -1108,7 +1113,7 @@ equipments = {
 		weight = 0
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 35
+		build_cost_ic = 45
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1191,7 +1196,7 @@ equipments = {
 		weight = 0
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 40
+		build_cost_ic = 50
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1292,7 +1297,7 @@ equipments = {
 		weight = 0
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 45
+		build_cost_ic = 55
 		resources = {
 			aluminium = 5
 			rubber = 1

@@ -1244,26 +1244,4 @@ characters={
 			}
 		}
 	}
-
-	JAP_hideki_tojo={
-		name=JAP_hideki_tojo
-		portraits={
-			army={
-				small="GFX_idea_hideki_tojo"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = hideki_tojo
-			allowed = {
-				original_tag = JAP
-			}
-			available = {
-				date > 1940.7.1
-			}
-			traits = {
-				JAP_tojo
-			}
-		}
-	}
 }

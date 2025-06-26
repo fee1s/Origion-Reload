@@ -1,29 +1,6 @@
 ideas = {
 	country = {
 	
-		JAP_surprise_attack = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = eng_preparing_the_second_front
-			
-			modifier = {
-				convoy_retreat_speed = 3
-				supply_factor = 0.30
-				army_attack_factor = 0.30
-				army_defence_factor = 0.30
-				air_attack_factor = 0.15
-				air_defence_factor = 0.15
-				air_mission_efficiency = 0.15
-			}
-		}
-		
 		JAP_tokyo_express = {
 			allowed = {
 				always = no
@@ -61,6 +38,10 @@ ideas = {
 				naval_strike_agility_factor = 0.25
 				naval_hit_chance = 0.2
 				navy_max_range_factor = 0.3
+				convoy_retreat_speed = 3
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				air_mission_efficiency = 0.15
 			}
 		}
 		

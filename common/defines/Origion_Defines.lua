@@ -5,6 +5,9 @@ NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 -- WAS 48 | drastically cuts down on s
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14 -- WAS 60 	| less messages lying around at the top of your screen
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before a mission is removed from the interface after having failed or completed
 
+NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
+NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
+NDefines.NCountry.CONVOY_LENDLEASE_RANGE_FACTOR = 0 --1
 
 --Army
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;

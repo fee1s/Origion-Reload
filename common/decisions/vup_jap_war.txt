@@ -80,6 +80,7 @@ JAP_operation = {
 		    news_event = { 
 		        id = origion.15
 			}
+			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
 			hidden_effect = {
 				ENG = { transfer_state = 334 transfer_state = 986 }
 				AST = { transfer_state = 669 transfer_state = 987 }
@@ -721,9 +722,10 @@ JAP_economic_stagnation = {
 			    add_dynamic_modifier = {
 			    	modifier = JAP_stagnation_dm
 			    }
-			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.01 }
-		        set_variable = { JAP_stagnation_industrial_capacity_factory = -0.1 }
-		        set_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.1 }
+			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.02 }
+		        set_variable = { JAP_stagnation_industrial_capacity_factory = -0.2 }
+		        set_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.2 }
+				set_variable = { JAP_stagnation_production_factory_max_efficiency_factor = -0.1 }
 			}
 			activate_mission = JAP_stagnation_economic_mission_des
 			set_country_flag = {

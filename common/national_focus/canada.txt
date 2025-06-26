@@ -957,9 +957,7 @@
 		}
 
 		available = {
-			GER = {
-				has_completed_focus = GER_remilitarize_the_rhineland
-			}
+			date > 1937.8.1
 		}
 		
 		bypass = {
@@ -1135,9 +1133,7 @@
 		}
 
 		available = {
-			GER = {
-				has_completed_focus = GER_anschluss
-			}
+			date > 1937.8.1
 		}
 		
 		bypass = {
@@ -2070,13 +2066,7 @@
 		}
 
 		available = {
-			if = {
-				limit = { GER = { exists = yes } }
-				
-				has_war = yes
-			}
-			
-			else = { date > 1939.9.1 }
+			date > 1939.9.1
 		}
 		
 		bypass = {

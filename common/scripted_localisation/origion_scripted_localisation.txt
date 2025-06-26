@@ -1365,3 +1365,19 @@ defined_text = {
 		localization_key = "GFX_map_gui_africa_cyprus_AXIS"
 	}
 }
+###
+defined_text = {
+	name = AST_economy_get_name_tt
+	text = {
+	    trigger = {
+		    NOT = { has_completed_focus = AST_invest_in_victory }
+		}
+		localization_key = "AST_economy_1_dm"
+	}
+	text = {
+	    trigger = {
+		    has_completed_focus = AST_invest_in_victory
+		}
+		localization_key = "AST_economy_2_dm"
+	}
+}

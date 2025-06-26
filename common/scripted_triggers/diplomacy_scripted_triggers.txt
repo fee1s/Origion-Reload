@@ -12,6 +12,17 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 		always = no
 	}
 	
+	if = { # Юса не дает ленд-лиз до войны
+		limit = {
+            tag = USA
+			date < 1941.5.1
+        }
+		custom_trigger_tooltip = {
+		    tooltip = USA_lend_lease_tt
+			always = no
+		}
+	}
+	
 	if = { # Япония не дает ленд-лиз никому
 		limit = {
 			OR = {
@@ -89,6 +100,17 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
+	if = { # Юса не дает ленд-лиз до войны
+		limit = {
+            FROM { tag = USA }
+			date < 1941.5.1
+        }
+		custom_trigger_tooltip = {
+		    tooltip = USA_lend_lease_tt
+			always = no
+		}
+	}
+	
 	if = { # Япония не дает ленд-лиз никому
 		limit = {
 			OR = {

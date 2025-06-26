@@ -1884,13 +1884,6 @@ focus_tree = {
 		
 		completion_reward = {
 			air_experience = 300
-			add_tech_bonus = {
-				name = JAP_fighter_modernization
-				bonus = 1.0
-				uses = 2
-				technology = improved_small_airframe
-				technology = improved_medium_airframe
-			}
 		}
 	}
 
@@ -2028,7 +2021,6 @@ focus_tree = {
 				set_technology = {improved_small_airframe = 1 } 
 				set_technology = {engines_3 = 1}
 				set_technology = {range_improvements = 1}
-				set_technology = {aa_cannon_1 = 1}		
 				set_technology = {survivability_studies = 1}
 				set_technology = {aa_hmg = 1}	
 			}
@@ -2057,7 +2049,12 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_technology = { improved_medium_airframe = 1 } 
+			add_tech_bonus = {
+				name = JAP_fighter_modernization
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_airframe
+			}
 		}
 	}
 
