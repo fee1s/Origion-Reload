@@ -498,14 +498,6 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = AST_modify_economy_dm_tt
-			add_to_variable = { 
-			    AST_economy_dm_consumer_goods_expected_value = -0.025
-				tooltip = consumer_goods_expected_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
 			random_owned_controlled_state = {
 				prioritize = { 284 723 }
 				limit = {				
@@ -1268,7 +1260,7 @@
 		completion_reward = {
 			custom_effect_tooltip = AST_swap_economy_dm_tt
 			add_to_variable = { 
-			    AST_economy_dm_consumer_goods_expected_value = -0.025
+			    AST_economy_dm_consumer_goods_expected_value = -0.05
 				tooltip = consumer_goods_expected_tt
 			}
 			add_to_variable = { 
@@ -1355,7 +1347,7 @@
 		completion_reward = {
 			custom_effect_tooltip = AST_modify_economy_dm_tt
 			add_to_variable = { 
-			    AST_economy_dm_consumer_goods_expected_value = -0.025
+			    AST_economy_dm_consumer_goods_expected_value = -0.05
 				tooltip = consumer_goods_expected_tt
 			}
 			add_to_variable = { 
