@@ -3068,7 +3068,7 @@ focus_tree = {
 	focus = {
 		id = ENG_we_shall_fight_on_the_beaches
 		available = {
-			16 = { NOT = { is_fully_controlled_by = FRA } }
+			date > 1939.12.1
 		}
 		
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
