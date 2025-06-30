@@ -124,11 +124,8 @@ set_popularities = {
 
 add_ideas = {
 	undisturbed_isolation
-	great_depression
 	disarmed_nation
 	free_trade
-	home_of_the_free
-	usa_rubber_reserve_company_idea_first
 }
 
 1939.1.1 = {
@@ -198,11 +195,14 @@ recruit_character = USA_cordell_hull
 recruit_character = USA_harry_white
 recruit_character = USA_joseph_patterson
 
-# NYSE
-
-set_variable = { USA_nyse_global_building_slots_factor = 0.15 } # стартовый бафф на количество слотов
-
-add_dynamic_modifier = { modifier = USA_nyse_dynamic_modifier }
+# ДМ юсы
+add_dynamic_modifier = { modifier = USA_economy_1 }
+add_dynamic_modifier = { modifier = USA_war_departament }
+set_variable = { USA_global_building_slots_factor = 0.15 } # стартовый бафф на количество слотов
+set_variable = { USA_production_speed_synthetic_refinery_factor = -0.5 }
+set_variable = { USA_political_power_cost = 1 }
+set_variable = { USA_consumer_goods_expected_value = 0.4 }
+set_variable = { USA_min_export = -1 }
 
 if = {
 	limit = {
@@ -306,7 +306,7 @@ add_equipment_to_stockpile = {
 
 add_equipment_to_stockpile = {
     type = medium_plane_airframe_0
-	amount = 481
+	amount = 480
 	variant_name = "B-18 Origion"
 }
 

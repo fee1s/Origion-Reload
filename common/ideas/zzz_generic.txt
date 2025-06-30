@@ -1,7 +1,167 @@
 ideas = {
 
 	hidden_ideas = {
+
+		###Мне похуй. Теперь здесь хайден айдеес юсы
+
+		USA_hidden_convoy_cost = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+		USA_hidden_bureau_cost = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+
+				ship_hull_heavy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_carrier = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				
+				ship_hull_submarine = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		USA_hidden_escort_cost = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				ship_hull_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}	
 		
+		USA_hidden_air_cost_1 = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		USA_hidden_air_cost_2 = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		USA_hidden_air_cost_2_1 = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				large_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		USA_hidden_air_optimization = {
+			name = USA_war_departament
+			removal_cost = -1
+
+			allowed = {
+				original_tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.05
+				}
+				armor = {
+				build_cost_ic = -0.05
+				}
+			}
+		}
 		league_of_nations_member_idea = { 
 			allowed = {
 				always = no
