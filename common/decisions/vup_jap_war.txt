@@ -725,7 +725,7 @@ JAP_economic_stagnation = {
 			    set_variable = { JAP_stagnation_consumer_goods_expected_value = 0.02 }
 		        set_variable = { JAP_stagnation_industrial_capacity_factory = -0.24 }
 		        set_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.24 }
-				set_variable = { JAP_stagnation_production_factory_max_efficiency_factor = -0.12 }
+				set_variable = { JAP_stagnation_production_factory_max_efficiency_factor = -0.14 }
 			}
 			activate_mission = JAP_stagnation_economic_mission_des
 			set_country_flag = {
@@ -757,7 +757,7 @@ JAP_economic_stagnation = {
 					NOT = {
 						has_country_flag = {
 						    flag = JAP_stagnation_step
-						    value = 23
+						    value = 24
 				    	}
 					}
 				}
