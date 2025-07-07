@@ -458,25 +458,124 @@ on_actions = {
 					state = 485
 				}
 		    }
-			213 = {
-			    add_dynamic_modifier = {
+			every_state = {
+			    limit = {
+					OR = {
+					    state = 147
+						state = 213
+						state = 215
+						state = 722
+					}
+				}
+				add_dynamic_modifier = {
 				    modifier = FIN_hell_weather
 				}
 			}
-			215 = {
-			    add_dynamic_modifier = {
-				    modifier = FIN_hell_weather
+			every_state = {
+			    limit = {
+					OR = {
+					    off_сhannel_coastline = yes
+					    italian_coastline_above_naples = yes
+					}
+				}
+				add_dynamic_modifier = {
+				    modifier = inappropriate_invasion_zone
 				}
 			}
-			722 = {
-			    add_dynamic_modifier = {
-				    modifier = FIN_hell_weather
+			every_state = {
+			    limit = {
+					is_core_of = ENG
+				}
+				add_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+					scope = GER
+				}
+				add_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+					scope = JAP
+				}
+				add_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+					scope = ITA
+				}
+				add_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+					scope = HUN
+				}
+				add_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+					scope = ROM
+				}
+				add_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+					scope = BUL
 				}
 			}
-			147 = {
-			    add_dynamic_modifier = {
-				    modifier = FIN_hell_weather
+			every_state = {
+			    limit = {
+					OR = {
+					    state = 44
+						state = 47
+						state = 115
+						state = 117
+						state = 156
+						state = 184
+						state = 185
+						state = 186
+						state = 731
+						state = 805
+						state = 849
+					}
 				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = ENG
+				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = USA
+				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = CAN
+				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = RAJ
+				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = SAF
+				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = AST
+				}
+				add_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ITA_dm 
+					scope = FRA
+				}
+			}
+			every_state = {
+			    limit = {
+					norwegian_coastline = yes
+				}
+				add_dynamic_modifier = {
+				    modifier = inappropriate_invasion_zone_NOR
+				}
+			}
+			if = {
+			    limit = {
+				    NOT = { has_global_flag = NO_ASIA_FLAG }
+				}
+				every_state = {
+			        limit = {
+			    		is_japan_main_state = yes
+			    	}
+			    	add_dynamic_modifier = {
+			    	    modifier = inappropriate_invasion_zone_JAP
+		    		}
+		    	}
 			}
 			if = {
 			    limit = {
@@ -490,11 +589,22 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-			}
-			if = {
-			    limit = {
-				    FIN = { is_ai = yes }
+				every_state = {
+			    	limit = {
+						AND = {
+						    is_core_of = FIN
+							NOT = {
+						        state = 722
+						    }
+						}
+						is_coastal = yes
+					}
+					add_dynamic_modifier = {
+					    modifier = inappropriate_invasion_zone
+					}
 				}
+			}
+			else = {
 				FIN = { add_ideas = BAN_BAN }
 			}
 			995 = {

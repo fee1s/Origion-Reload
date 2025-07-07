@@ -1224,11 +1224,21 @@ JAP_stagnation_dm = {
 	industrial_capacity_dockyard = JAP_stagnation_industrial_capacity_dockyard
 }
 
-sea_invasion_prohibited_dm = {
+sea_invasion_prohibited_ITA_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense
 	
     army_attack_factor = -3
+	
+	custom_modifier_tooltip = sea_invasion_prohibited_ITA_tt
+}
+sea_invasion_prohibited_ENG_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+	
+    army_attack_factor = -3
+	
+	custom_modifier_tooltip = sea_invasion_prohibited_ENG_tt
 }
 no_airfield_dm = { # запрет на строительство филдов
     icon = GFX_modifiers_demilitarize_zone
@@ -1237,6 +1247,17 @@ no_airfield_dm = { # запрет на строительство филдов
 inappropriate_invasion_zone = {
 	enable = { always = yes }
 	icon = GFX_modifiers_demilitarize_zone
+	custom_modifier_tooltip = inappropriate_invasion_zone_tt
+}
+inappropriate_invasion_zone_NOR = {
+	enable = { always = yes }
+	icon = GFX_modifiers_demilitarize_zone
+	custom_modifier_tooltip = inappropriate_invasion_zone_NOR_tt
+}
+inappropriate_invasion_zone_JAP = {
+	enable = { always = yes }
+	icon = GFX_modifiers_demilitarize_zone
+	custom_modifier_tooltip = inappropriate_invasion_zone_JAP_tt
 }
 
 atlantikwall_dm = {
@@ -1244,6 +1265,8 @@ atlantikwall_dm = {
 	icon = GFX_modifiers_generic_defense
 	
     army_attack_factor = GER.atlantikwall_dm_army_attack_factor
+	
+	custom_modifier_tooltip = atlantikwall_tt
 }
 
 pacific_warfare_dm = {
@@ -1512,4 +1535,6 @@ FIN_hell_weather = {
 	icon = GFX_modifiers_demilitarize_zone
 	
 	custom_modifier_tooltip = FIN_hell_weather_tt
+	
+	state_production_speed_air_base_factor = -3
 }

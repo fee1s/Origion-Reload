@@ -1381,3 +1381,18 @@ defined_text = {
 		localization_key = "AST_economy_2_dm"
 	}
 }
+defined_text = {
+	name = atlantikwall_get_name_tt
+	text = {
+	    trigger = {
+		    NOT = { has_global_flag = NO_ASIA_FLAG }
+		}
+		localization_key = "atlantikwall_asia_tt"
+	}
+	text = {
+	    trigger = {
+		    has_global_flag = NO_ASIA_FLAG
+		}
+		localization_key = "atlantikwall_noasia_tt"
+	}
+}

@@ -504,6 +504,16 @@ USA_congress = {
 		    custom_effect_tooltip = Pacific_operation_downfall_tt
 			set_global_flag = operation_downfall
 			news_event = { id = origion.16 }
+			hidden_effect = {
+			    every_state = {
+			        limit = {
+				    	is_japan_main_state = yes
+				    }
+				    remove_dynamic_modifier = {
+				        modifier = inappropriate_invasion_zone_JAP
+				    }
+			    }
+			}
 		}
 	}	
 }
