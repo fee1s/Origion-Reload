@@ -211,16 +211,21 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { original_tag = GER }
-					NOT = { has_government = fascism }
-					has_civil_war = no
-					NOT = {
-						AND = {
-							FROM = {
-								original_tag = SPR
-							}
-							original_tag = SPR
-						}
+					ORIGION_not_playable_country = yes
+					has_war_with = GER
+				}
+				ENG = {
+				    annex_country = {
+    			   	    target = ROOT
+    		            transfer_troops = no
+			       	}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+					    original_tag = POL
+						NOT = { ORIGION_not_playable_country = yes }
 					}
 				}
 				news_event = { id = country_capitulated.0 days = 0 }
@@ -229,27 +234,6 @@ on_actions = {
 				limit = { tag = FRA }
 				set_global_flag = FRA_already_surrendered
 				set_variable = { global.FRA_capitulation_days = global.num_days }
-			}
-			if = {
-				limit = {
-					original_tag = YUG
-				}
-				remove_ideas = YUG_idea_economic_aid
-			}
-			if = {
-				limit = {
-					NOT = { has_dlc = "Arms Against Tyranny"} # AAT uses separate system
-					original_tag = DEN
-					any_country = {
-						OR = {
-							tag = ROOT
-							is_in_faction_with = ROOT
-						}
-						100 = { is_controlled_by = PREV }
-					}
-
-				}
-				country_event = { id = wtt_denmark.1 days = 1 }
 			}
 			if = {
 				limit = {
@@ -282,19 +266,6 @@ on_actions = {
 					has_government = fascism
 				}
 				set_global_flag = germany_lost_the_war
-			}
-
-			if = {
-				limit= {
-					ROOT = {
-						original_tag = ENG
-					}
-					FROM = {
-						original_tag = ICE
-					}
-				}
-
-				set_global_flag = achivement_ice_capitulated_eng
 			}
 		}
 	}

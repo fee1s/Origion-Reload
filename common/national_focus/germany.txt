@@ -2325,11 +2325,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_molotov_ribbentrop_pact
-		cost = 1
-
-		available = {
-			date > 1939.8.24
-		}
+		cost = 2
 
 		ai_will_do = {
 			factor = 100
@@ -3727,20 +3723,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			SWE = {
-				country_event = { id = AAT_germany.1 hours = 5 random_hours = 5 }
+			give_resource_rights = {
+				receiver = GER 
+				state = 918 
 			}
-
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				give_resource_rights = {
-					receiver = GER 
-					state = 918 
-				}
-				give_resource_rights = {
-					receiver = GER 
-					state = 666 
-				}
+			give_resource_rights = {
+				receiver = GER 
+				state = 666 
 			}
 		}
 	}

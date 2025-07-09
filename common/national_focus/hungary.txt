@@ -406,10 +406,6 @@
 
 			add_ideas = HUN_old_hungary_reclaimed
 
-			hidden_effect = {
-				news_event = { id = news.299 }
-			}
-
 		}
 	}
 
@@ -984,46 +980,6 @@
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = HUN_reintegrate_the_railroads_Inf
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = HUN_reintegrate_the_railroads_Inf_2
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = HUN_reintegrate_the_railroads_Inf_3
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			if = {
-				limit = { country_exists = AUS }
-				reverse_add_opinion_modifier = { target = AUS modifier = HUN_reintegrate_the_railroads }
-			}
-			if = {
-				limit = { country_exists = CZE }
-				reverse_add_opinion_modifier = { target = CZE modifier = HUN_reintegrate_the_railroads }
-			}
-		}
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1039,7 +995,6 @@
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = HUN_reintegrate_the_railroads_Inf
 			}
 			random_owned_controlled_state = {
 				prioritize = { 43 }
@@ -1054,10 +1009,9 @@
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = HUN_reintegrate_the_railroads_Inf_2
 			}
 			random_owned_controlled_state = {
-				prioritize = { 664 }
+				prioritize = { 154 }
 				limit = {
 					free_building_slots = {
 						building = infrastructure
@@ -1069,7 +1023,6 @@
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = HUN_reintegrate_the_railroads_Inf_3
 			}
 		}
 	}

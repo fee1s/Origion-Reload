@@ -271,12 +271,17 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_danzig_or_war
+			date > 1939.9.1
 		}
 		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = {
 				ENG = { add_to_faction = POL }
-            	ENG = { add_to_faction = FRA }
+				set_autonomy = {
+					target = INS
+					autonomous_state = autonomy_free
+				}
+				ENG = { add_to_faction = INS }
 				GER = { add_to_faction = HUN }
             	GER = { add_to_faction = ROM }
             	GER = { add_to_faction = BUL }
@@ -367,7 +372,10 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		available = {
 			date > 1939.12.1
-			hidden_trigger = { VIC = { exists = no } }
+			hidden_trigger = { NOT = { has_global_flag = second_compiegne_signed } }
+		}
+		visible = {
+		    NOT = { has_global_flag = second_compiegne_signed }
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -385,6 +393,9 @@ GER_operations = {
 			has_completed_focus = GER_operation_sonnenblume
 			date > 1940.6.1
 			date < 1941.1.1
+		}
+		visible = {
+		    date < 1941.1.1
 		}
 		cost = 0
 		fire_only_once = yes

@@ -142,21 +142,15 @@ on_actions = {
 						}
 					}
 					NOT = { has_global_flag = d_day_happened }
-					VIC = { exists = yes }
+					date > 1940.6.1
 				}
 				set_global_flag = d_day_happened
 				sound_effect = psi_soldiers_sailors
 				
 				if = {
 					limit = {
-						ENG = {
-							NOT = {
-								has_completed_focus = uk_counter_offensive_cairo
-								has_completed_focus = uk_defeat_of_the_italian_corps
-							}
-						}
+						NOT = { has_global_flag = operation_torch_flag }
 					}
-					
 					33 = { transfer_state_to = GER }
 					25 = { transfer_state_to = GER }
 					31 = { transfer_state_to = GER }
@@ -167,10 +161,6 @@ on_actions = {
 					32 = { transfer_state_to = GER }
 					21 = { transfer_state_to = GER }
 					851 = { transfer_state_to = GER }
-				}
-				
-				else = {
-					GER = { annex_country = { target = VIC transfer_troops = no } }
 				}
 			}
 		}
