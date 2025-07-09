@@ -1,89 +1,6 @@
 ideas = {
 
 	country = {
-		great_depression = {
-			picture = usa_great_depression_3
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				political_power_cost = 1
-				consumer_goods_expected_value = 0.4
-				conscription_factor = -0.5
-				join_faction_tension = 0.20
-				min_export = -1
-			}
-		}
-		great_depression_2 = {
-			picture = usa_great_depression_2
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				political_power_cost = 0.6
-				consumer_goods_expected_value = 0.35
-				conscription_factor = -0.4
-				join_faction_tension = 0.20
-				min_export = -0.8
-			}
-		}
-		great_depression_3 = {
-			picture = usa_great_depression
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				political_power_cost = 0.4
-				consumer_goods_expected_value = 0.3
-				conscription_factor = -0.3
-				join_faction_tension = 0.20
-				min_export = -0.6
-			}
-		}
-		USA_neutrality_act = {
-			picture = HUN_treaty_of_triannon
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				join_faction_tension = 1
-				send_volunteers_tension = 1
-				embargo_threshold_factor = 1
-				lend_lease_tension = 1
-			}
-		}
 		USA_neutrality_act_aat = {
 			name = USA_neutrality_act
 			picture = generic_production_bonus
@@ -247,24 +164,6 @@ ideas = {
 				special_forces_cap = 0.05	
 			}
 		}
-		USA_womens_armed_service_integration_act = {
-			
-			picture = eng_imperial_conscription
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				conscription = 0.02	
-			}
-		}
 		USA_war_department = {	
 			picture = usa_war_department
 			allowed = {
@@ -279,23 +178,6 @@ ideas = {
 			
 			modifier = {
 				max_command_power = 20
-			}
-		}
-		USA_department_of_defense = {	
-			picture = usa_department_of_defense
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				max_command_power = 30	
-				command_power_gain_mult = 0.1
 			}
 		}
 		USA_state_funds_refused = {
@@ -398,25 +280,6 @@ ideas = {
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.1
 				spotting_chance = 0.02
-			}
-		}
-		USA_us_air_force = {
-			picture = usa_us_air_force
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				air_mission_efficiency = 0.05
-				air_doctrine_cost_factor = -0.10
-				air_weather_penalty = -0.1
-				air_ace_generation_chance_factor = 0.10
 			}
 		}
 
@@ -635,40 +498,6 @@ ideas = {
 				offensive_war_stability_factor = 0.2
 			}
 		}
-		USA_army_of_the_united_states = {
-			picture = HUN_secret_rearmament
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				training_time_factor = -0.3
-			}
-		}
-		new_deal = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				production_speed_infrastructure_factor = 0.2
-				stability_factor = 0.10
-			}
-		}
 
 		wilkies_new_deal = {
 			
@@ -708,71 +537,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 1
 			}
-		}
-		
-		bureau_of_ships_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_navy_bonus
-
-			modifier = {
-				naval_equipment_upgrade_xp_cost = -0.1
-			}
-			
-			equipment_bonus = {
-
-				ship_hull_heavy = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				ship_hull_carrier = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				
-				ship_hull_submarine = {
-					build_cost_ic = -0.05 instant = yes
-				}
-			}
-		}
-
-		USA_unrestricted_submarine_warfare = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_navy_bonus
-			
-			equipment_bonus = {
-
-				submarine = {
-					surface_detection = 0.1 instant = yes
-					sub_visibility = -0.1 instant = yes
-				}
-			}
-		}
+		}	
 			
 
 		
@@ -814,28 +579,6 @@ ideas = {
 			modifier = {
 				send_volunteers_tension = -0.20
 				send_volunteer_divisions_required = -0.25
-			}
-		}
-
-
-		combined_bomber_offensive = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_air_bonus
-			
-			equipment_bonus = {
-				large_plane_airframe = {
-					air_range = 0.1 instant = yes
-				}	
 			}
 		}
 
@@ -928,136 +671,6 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.10
-			}
-		}
-
-		liberty_ships_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				amphibious_invasion = 0.10
-			}
-			equipment_bonus = {
-				convoy = {
-					instant = yes
-					build_cost_ic = -0.25
-				}
-			}
-		}
-
-		air_war_plans_division_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-		
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
-		air_support_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			equipment_bonus = {
-				small_plane_cas_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
-		strategic_bombing_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			equipment_bonus = {
-				large_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
-		escort_effort_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		
-		home_of_the_free = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
-			
-			rule = {
-				can_join_opposite_factions = no
-				can_create_factions = yes
-			}
-			modifier = {
-				drift_defence_factor = 0.2
-				ai_badass_factor = 0.03 # cares for 3% of normal threat
-				ai_desired_divisions_factor = 0.5 
 			}
 		}
 

@@ -1396,3 +1396,112 @@ defined_text = {
 		localization_key = "atlantikwall_noasia_tt"
 	}
 }
+defined_text = {
+	name = USA_convoy_production_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_liberty_ships
+		}
+		localization_key = "USA_convoy_liberty_tt"
+	}
+
+}
+defined_text = {
+	name = USA_buro_cost_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_bureau_of_ships
+			NOT = { has_completed_focus = USA_escort_effort}
+		}
+		localization_key = "USA_bureau_cost_tt"
+
+	}
+
+}
+defined_text = {
+	name = USA_escort_effort_cost_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_escort_effort
+		}
+		localization_key = "USA_escort_effort_cost_tt"
+	}
+
+}
+defined_text = {
+	name = USA_air_war_cost_1_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_air_war_plans_division
+			NOT = { has_completed_focus = USA_optimization }
+		}
+		localization_key = "USA_air_cost_1_tt"
+	}
+}
+defined_text = {
+	name = USA_air_war_cost_2_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_air_support
+			NOT = { has_completed_focus = USA_optimization }
+		}
+		localization_key = "USA_air_cost_2_tt"
+	}
+}
+defined_text = {
+	name = USA_air_war_cost_2_1_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_strategic_bombing
+			NOT = { has_completed_focus = USA_optimization }
+		}
+		localization_key = "USA_hidden_air_cost_2_1_tt"
+	}
+}
+defined_text = {
+	name = USA_mihist_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_optimization
+			has_completed_focus = USA_air_war_plans_division
+			has_completed_focus = USA_air_support
+		}
+		localization_key = "USA_mihist_mp_tt"
+	}
+}
+defined_text = {
+	name = USA_mihist_2_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_optimization
+			has_completed_focus = USA_air_war_plans_division
+			has_completed_focus = USA_strategic_bombing
+		}
+		localization_key = "USA_mihist_mp_2_tt"
+	}
+}
+defined_text = {
+	name = USA_optimization_cost_loc_tt
+	text = {
+		trigger = {
+			has_completed_focus = USA_optimization
+			NOT = { has_completed_focus = USA_air_war_plans_division }
+			NOT = { has_completed_focus = USA_air_support }
+			NOT = { has_completed_focus = USA_strategic_bombing }
+
+		}
+		localization_key = "USA_optimization_cost_tt"
+	}
+}
+defined_text = {
+	name = USA_mihist_3_tt
+	text = {
+		trigger = {
+				has_completed_focus = USA_optimization
+				has_completed_focus = USA_air_war_plans_division
+				NOT = { has_completed_focus = USA_air_support }
+				NOT = { has_completed_focus = USA_strategic_bombing }
+		}
+		localization_key = "USA_mihist_mp_3_tt"
+	}
+}
