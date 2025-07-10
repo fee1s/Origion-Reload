@@ -967,10 +967,6 @@ adjacency_rule =
 adjacency_rule =
 {
 	name = "BOSPHORUS_STRAIT"
-
-	is_friend = {
-		original_tag = SOV
-	}
 	
 	contested =
 	{
@@ -1012,10 +1008,6 @@ adjacency_rule =
 {
 	name = "DARDANELLES_STRAIT"
 
-	is_friend = {
-		original_tag = SOV
-	}
-
 	contested =
 	{
 		army = no
@@ -1046,11 +1038,6 @@ adjacency_rule =
 	}
 	
 	required_provinces = { 849 6864 }
-
-	is_disabled = {
-		has_country_flag = DARDANELLES_STRAIT_BLOCKED_FOR_COUNTRY
-		tooltip = dardanelles_strait_blocked_tt
-	}
 	
 	icon = 849
 	offset = { 3 0 -5 } 
@@ -1142,16 +1129,16 @@ adjacency_rule =
 
 	contested =
 	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
+		army = no
+		navy = no
+		submarine = no
+		trade = no
 	}
 	enemy =
 	{
 		army = no
 		navy = no
-		submarine = yes
+		submarine = no
 		trade = no
 	}
 	friend =
@@ -1163,13 +1150,13 @@ adjacency_rule =
 	}
 	neutral =
 	{
-		army = yes
-		navy = yes
-		submarine = yes
+		army = no
+		navy = no
+		submarine = no
 		trade = yes
 	}
 	
-	required_provinces = { 6979 11767 }
+	required_provinces = { 6979 11767 11837 11998 }
 		
 	icon = 6979
 	offset = { 9 0 6 }
