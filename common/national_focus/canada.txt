@@ -3051,6 +3051,18 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			if = { 
+			    limit = { 
+				    OR = {
+					    NOT = { has_idea = CAN_check_war_second }
+						NOT = { has_idea = CAN_check_war_third_left }
+					}
+			    }
+				effect_tooltip = {
+				    swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_left }
+				}
+			}
+			
 			if = { limit = { has_idea = CAN_check_war_second }
 				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_left }
 			}
@@ -3089,6 +3101,18 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			if = { 
+			    limit = { 
+				    OR = {
+					    NOT = { has_idea = CAN_check_war_second }
+						NOT = { has_idea = CAN_check_war_third_left }
+					}
+			    }
+				effect_tooltip = {
+				    swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_right }
+				}
+			}
+			
 			if = { limit = { has_idea = CAN_check_war_second }
 				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_right }
 			}

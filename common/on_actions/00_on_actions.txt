@@ -214,11 +214,11 @@ on_actions = {
 					ORIGION_not_playable_country = yes
 					has_war_with = GER
 				}
-				ENG = {
-				    annex_country = {
-    			   	    target = ROOT
-    		            transfer_troops = no
-			       	}
+				ROOT = {
+					country_event = {
+					    id = origion.31
+						days = 3
+					}
 				}
 			}
 			if = {

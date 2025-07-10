@@ -130,35 +130,35 @@ ENG_house_of_commons = {
 		
 		fire_only_once = yes
 		complete_effect = {
-			GER = { every_state = { limit = { OR = { state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = USA
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = ENG
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = FRA
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = CAN
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = AST
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = SAF
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = RAJ
-					}
+			every_state = { 
+			    limit = { is_atlantik_shore = yes }
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = USA
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = ENG
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = FRA
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = CAN
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = AST
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = SAF
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_dm 
+					scope = RAJ
 				}
 			}
 		}

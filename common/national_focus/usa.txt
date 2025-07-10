@@ -1087,63 +1087,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_fall_of_the_western_wall
-		icon = GFX_focus_hol_prepare_the_inundation_lines
-		
-		x = 4
-		y = 1
-		
-		allow_branch = {
-		    always = no
-		}
-		
-		prerequisite = { focus = USA_build_the_pentagon }
-		
-		relative_position_id = USA_build_the_pentagon
-		cost = 3
-		
-		available = {
-		    has_full_control_of_state = 524
-			has_full_control_of_state = 526
-			has_full_control_of_state = 645
-		}
-		
-		completion_reward = {	
-			GER = { every_state = { limit = { OR = { state = 19 state = 23 state = 30 state = 14 state = 15 state = 785 state = 29 state = 6 state = 35 state = 7 state = 36 state = 56 state = 59 state = 58 state = 909 state = 912 state = 99 } }
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = USA
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = ENG
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = FRA
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = CAN
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = AST
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = SAF
-					}
-					remove_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
-						scope = RAJ
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
 		id = USA_oper_torch
 		icon = GFX_focus_ITA_depose_mussolini
 		

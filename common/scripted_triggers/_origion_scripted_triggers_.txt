@@ -54,7 +54,28 @@ ORIGION_not_playable_country = {
 		original_tag = COL
 	}
 }
-
+is_atlantik_shore = {
+	OR = {  
+    	state = 19 
+		state = 23 
+		state = 30 
+		state = 14 
+		state = 15 
+		state = 785 
+		state = 29 
+		state = 6 
+		state = 35 
+		state = 7 
+		state = 36 
+		state = 56 
+		state = 59 
+		state = 58 
+		state = 909 
+		state = 912 
+		state = 99 
+		state = 977 
+    } 
+}
 is_french_north_africa = {
 	OR = {
 		state = 458

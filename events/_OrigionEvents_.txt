@@ -989,3 +989,32 @@ news_event = { # Московское перемирие
 	
 	mean_time_to_happen = { days = 3 }
 }
+
+country_event = {
+	id = origion.31
+	
+	hidden = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+	    ROOT = {
+			transfer_units_fraction= {
+		        target = COL
+			    stockpile_ratio = 1.0
+			}
+			ENG = {
+		        annex_country = {
+    	       	    target = PREV
+                    transfer_troops = no
+	           	}
+		    }
+			every_state = {
+			    limit = {
+				    is_core_of = ROOT
+				}
+				remove_core_of = ROOT
+			}
+		}
+	}
+}
