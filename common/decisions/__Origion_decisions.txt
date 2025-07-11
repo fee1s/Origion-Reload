@@ -1017,7 +1017,15 @@ ORG_africa_dec_cat = {
 			}
 			
 			hidden_effect = { 
-				GER = { annex_country = { target = VIC transfer_troops = no } }
+				GER = { 
+				    annex_country = { target = VIC transfer_troops = no } 
+					every_state = {
+		    			limit = {
+						    is_core_of = VIC
+						}
+						remove_core_of = VIC
+					}
+				}
 				
 				every_country = {
 					limit = {
@@ -1061,7 +1069,15 @@ ORG_africa_dec_cat = {
 			}
 			
 			hidden_effect = { 
-				GER = { annex_country = { target = VIC transfer_troops = no } }
+				GER = { 
+				    annex_country = { target = VIC transfer_troops = no } 
+					every_state = {
+		    			limit = {
+						    is_core_of = VIC
+						}
+						remove_core_of = VIC
+					}
+				}
 				
 				news_event = { id = origion.22 days = 2 }
 				set_global_flag = operation_torch_flag

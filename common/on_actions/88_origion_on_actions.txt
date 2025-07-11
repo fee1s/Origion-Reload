@@ -123,26 +123,10 @@ on_actions = {
 						ORIGION_is_in_faction_with_allies = yes
 					}
 					THIS = {
-						OR = {
-							AND = {
-								is_core_of = FRA
-								NOT = {
-									state = 458
-									state = 665
-									state = 1
-									state = 460
-									state = 513
-									state = 459
-								}	
-							}
-							is_core_of = BEL
-							is_core_of = HOL
-							is_core_of = GER
-							is_core_of = DEN
-						}
+						is_atlantik_shore  = yes
 					}
 					NOT = { has_global_flag = d_day_happened }
-					date > 1940.6.1
+					has_global_flag = second_compiegne_signed
 				}
 				set_global_flag = d_day_happened
 				sound_effect = psi_soldiers_sailors
@@ -161,6 +145,12 @@ on_actions = {
 					32 = { transfer_state_to = GER }
 					21 = { transfer_state_to = GER }
 					851 = { transfer_state_to = GER }
+					every_state = {
+		    			limit = {
+						    is_core_of = VIC
+						}
+						remove_core_of = VIC
+					}
 				}
 			}
 		}
@@ -475,6 +465,7 @@ on_actions = {
 			every_state = {
 			    limit = {
 					is_core_of = ENG
+					is_in_home_area = yes
 				}
 				add_dynamic_modifier = {
 					modifier = sea_invasion_prohibited_ENG_dm

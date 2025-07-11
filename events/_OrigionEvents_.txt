@@ -998,23 +998,18 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-	    ROOT = {
-			transfer_units_fraction= {
-		        target = COL
-			    stockpile_ratio = 1.0
+		set_equipment_fraction = { 0.0 }
+		every_state = {
+		    limit = {
+			    is_core_of = ROOT
 			}
-			ENG = {
-		        annex_country = {
-    	       	    target = PREV
-                    transfer_troops = no
-	           	}
-		    }
-			every_state = {
-			    limit = {
-				    is_core_of = ROOT
-				}
-				remove_core_of = ROOT
-			}
+			remove_core_of = ROOT
+		}
+		ENG = {
+	        annex_country = {
+        	    target = ROOT
+                transfer_troops = no
+	       	}
 		}
 	}
 }

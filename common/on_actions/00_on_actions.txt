@@ -212,13 +212,10 @@ on_actions = {
 			if = {
 				limit = {
 					ORIGION_not_playable_country = yes
-					has_war_with = GER
 				}
-				ROOT = {
-					country_event = {
-					    id = origion.31
-						days = 3
-					}
+				country_event = {
+				    id = origion.31
+					days = 3
 				}
 			}
 			if = {

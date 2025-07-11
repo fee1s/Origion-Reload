@@ -364,10 +364,20 @@ characters = {
 				base = 1.000
 			}
 		}
+	}
+	
+	FIN_aarne_juutilainen = {
+		name = FIN_aarne_juutilainen
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_aarne_juutilainen
+				small = GFX_portrait_FIN_aarne_juutilainen_small
+			}
+		}
 		advisor = {
 			cost = 100
 			slot = theorist
-			idea_token = FIN_akseli_anttila
+			idea_token = FIN_aarne_juutilainen
 			ledger = army
 			allowed = {
 				original_tag = FIN
