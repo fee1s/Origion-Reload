@@ -3941,6 +3941,12 @@
 
 		completion_reward = {
 			air_experience = 500
+			add_doctrine_cost_reduction = {
+				name = CAN_rcaf_station_borden
+				cost_reduction = 1
+				uses = 1
+				category = air_doctrine
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {

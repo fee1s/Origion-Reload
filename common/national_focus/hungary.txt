@@ -771,12 +771,6 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			GER = { 
-				set_autonomy = {
-					target = HUN
-					autonomy_state = autonomy_satellite
-				}
-			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
