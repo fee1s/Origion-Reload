@@ -278,6 +278,8 @@ tactic_tactical_withdrawal = { #counters encirclement
 	
 	phase = tactical_withdrawal
 	
+	countered_by = tactic_breakthrough
+	
 	attacker_movement_speed = -0.25
 	attacker = -0.3
 	defender = 0.1
@@ -294,8 +296,7 @@ tactic_tw_attack = {
 	picture = tw_attack
 	display_phase = tactical_withdrawal
 	
-	attacker = -0.25
-	defender = -0.1
+	attacker = -0.1
 }
 tactic_tw_defend = { 
 	is_attacker = no
@@ -322,8 +323,7 @@ tactic_tw_chase = {
 	picture = tw_chase
 	display_phase = tactical_withdrawal
 		
-	attacker = -0.15
-	defender = -0.05
+	attacker = -0.05
 }
 tactic_tw_evade = { 
 	is_attacker = no
@@ -352,8 +352,7 @@ tactic_tw_intercept = {
 	
 	phase = no
 		
-	attacker = -0.05
-	defender = -0.1
+	defender = -0.05
 }
 
 
