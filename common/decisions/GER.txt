@@ -277,11 +277,6 @@ GER_operations = {
 		complete_effect = {
 			hidden_effect = {
 				ENG = { add_to_faction = POL }
-				set_autonomy = {
-					target = INS
-					autonomous_state = autonomy_free
-				}
-				ENG = { add_to_faction = INS }
 				GER = { add_to_faction = HUN }
             	GER = { add_to_faction = ROM }
             	GER = { add_to_faction = BUL }
@@ -356,6 +351,11 @@ GER_operations = {
 			
 			hidden_effect = {
 				ENG = { add_to_faction = HOL }
+				set_autonomy = {
+					target = INS
+					autonomous_state = autonomy_free
+				}
+				ENG = { add_to_faction = INS }
             	ENG = { add_to_faction = BEL }
             	ENG = { add_to_faction = LUX }
 			}
