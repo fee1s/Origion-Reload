@@ -1589,3 +1589,28 @@ USA_economy_2 = {
 	war_support_weekly = USA_war_support_weekly
 	research_speed_factor = USA_research_speed_factor
 }
+ROM_iron_guard_dm = {
+	enable = {always = yes}
+	icon = GFX_idea_ROM_iron_guard
+
+	conscription = ROM_conscription
+	army_morale_factor = ROM_army_morale_factor
+	conscription_factor = ROM_conscription_factor
+	mobilization_speed = ROM_mobilization_speed
+	weekly_manpower = ROM_weekly_manpower
+	army_core_attack_factor = ROM_army_core_attack_factor
+	army_core_defence_factor = ROM_army_core_defence_factor
+	modifier_army_sub_unit_mountaineers_defence_factor = ROM_modifier_army_sub_unit_mountaineers_defence_factor
+	modifier_army_sub_unit_mountaineers_attack_factor = ROM_modifier_army_sub_unit_mountaineers_attack_factor
+}
+
+ROM_great = {
+	enable = {always=yes}
+	icon = GFX_idea_ROM_preserve_greater_romania
+
+	stability_factor = ROM_stability_factor
+	political_power_gain = ROM_political_power_gain
+	consumer_goods_factor = ROM_consumer_goods_factor
+	production_speed_arms_factory_factor = ROM_production_speed_arms_factory_factor
+
+}

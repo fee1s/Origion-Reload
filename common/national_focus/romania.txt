@@ -53,7 +53,9 @@
 
 
 		completion_reward = {
-			add_ideas = ROM_preserve_greater_romania
+			custom_effect_tooltip = ROM_great_intro
+			add_to_variable = {ROM_stability_factor = 0.1 tooltip = stability_factor_tt}
+			add_to_variable = {ROM_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt}
 		}
 	}
 	
@@ -711,7 +713,8 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {			
 			add_country_leader_trait = camarilla_leader
-			add_ideas = ROM_the_sentinel_of_the_motherland
+			custom_effect_tooltip = ROM_iron_guard_intro
+			add_to_variable = {ROM_conscription = 0.01 tooltip = conscription_tt}
 		}
 	}
 	
@@ -764,7 +767,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = ROM_flexible_foreign_policy
+			custom_effect_tooltip = ROM_great_intro
+			add_to_variable = {ROM_political_power_gain = 0.05 tooltip = political_power_gain_tt}
 			add_stability = 0.05
 		}
 	}
@@ -788,10 +792,8 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ROM_flexible_foreign_policy
-				add_idea = ROM_flexible_foreign_policy_2
-			}
+			custom_effect_tooltip = ROM_great_intro
+			add_to_variable = {ROM_stability_factor = 0.05 tooltip = stability_factor_tt}
 			add_popularity = {
 				popularity = 0.1
 				ideology = fascism
@@ -871,7 +873,8 @@
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas = ROM_a_deal_with_the_devil_2
+			custom_effect_tooltip = ROM_iron_guard_intro
+			add_to_variable = {ROM_conscription = 0.01 tooltip = conscription_tt}
 		}
 	}
 
@@ -902,7 +905,9 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ROM_iron_guard
+			custom_effect_tooltip = ROM_iron_guard_intro
+			add_to_variable = {ROM_army_core_attack_factor = 0.15 tooltip = army_core_attack_factor_tt}
+			add_to_variable = {ROM_army_core_defence_factor = 0.15 tooltip = army_core_defence_factor_tt}
 		}
 	}
 	
@@ -933,7 +938,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ROM_national_christian_party_in_power
+			custom_effect_tooltip = ROM_great_intro
+			add_to_variable = {ROM_consumer_goods_factor = -0.15 tooltip = consumer_goods_factor_tt}
 		}
 	}
 	############################
@@ -999,7 +1005,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ROM_army_war_college
+			custom_effect_tooltip = ROM_iron_guard
+			add_to_variable = {ROM_army_morale_factor = 0.1 tooltip = army_morale_factor_tt}
 			random_owned_controlled_state = {
 				prioritize = { 46 }
 				limit = {
@@ -1143,7 +1150,10 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = ROM_mountainers_divisions
+			custom_effect_tooltip = ROM_iron_guard_intro
+
+			add_to_variable = {ROM_modifier_army_sub_unit_mountaineers_attack_factor = 0.1 tooltip = modifier_army_sub_unit_mountaineers_attack_factor_tt}
+			add_to_variable = {ROM_modifier_army_sub_unit_mountaineers_defence_factor = 0.1 tooltip = modifier_army_sub_unit_mountaineers_defence_factor_tt}
 		}
 	}
 
@@ -1230,7 +1240,10 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			add_ideas = ROM_reserve_divisions
+			custom_effect_tooltip = ROM_iron_guard_intro
+			add_to_variable = {ROM_weekly_manpower = 200 tooltip = weekly_manpower_tt}
+			add_to_variable = {ROM_mobilization_speed = 0.25 tooltip = mobilization_speed_tt}
+			add_to_variable = {ROM_conscription_factor = 0.15 tooltip = conscription_factor_tt}
 		}
 	}
 

@@ -326,23 +326,6 @@ ideas = {
 			}
 		}
 
-		ROM_the_sentinel_of_the_motherland = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}			
-
-			modifier = {
-				conscription = 0.01
-			}
-		}
-
 		ROM_the_sentinel_of_the_motherland_2 = {
 
 			removal_cost = -1
@@ -413,24 +396,6 @@ ideas = {
 			modifier = {				
 				resistance_damage_to_garrison = -0.1
 				foreign_subversive_activites = -0.4
-			}
-		}
-
-		ROM_iron_guard = {
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
 			}
 		}
 
@@ -692,27 +657,6 @@ ideas = {
 				armor = {
 				build_cost_ic = -0.05
 				}
-			}
-		}
-
-		ROM_reserve_divisions = {
-
-			picture = generic_reserve_divisions
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}
-			
-			modifier = {
-				conscription_factor = 0.15
-				mobilization_speed = 0.25
-				weekly_manpower = 200
 			}
 		}
 
