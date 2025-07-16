@@ -78,7 +78,9 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_ideas = new_deal
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_production_speed_infrastructure_factor = 0.2 tooltip = production_speed_infrastructure_factor_tt}
+			add_to_variable = { USA_stability_factor = 0.1 tooltip = stability_factor_tt} 
 		}
 	}
 
@@ -158,9 +160,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		
 		completion_reward = {
-			USA_great_depression_level_down = yes
-			custom_effect_tooltip = USA_nyse_global_building_slots_factor_tt
-			add_to_variable = { USA_nyse_global_building_slots_factor = 0.15 }
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
+			add_to_variable = { USA_political_power_cost = -0.4 tooltip = political_power_cost_tt }
+			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
+			add_to_variable = { USA_min_export = 0.2 tooltip = min_export_tt }
 			
 			add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
 		}
@@ -177,7 +181,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+		bypass = {
+			has_completed_focus = USA_total_war
+		}
 		available = { NOT = { has_idea = usa_new_law_is_in_development } }
 
 		cancel_if_invalid = no
@@ -186,9 +192,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		
 		completion_reward = {
-			USA_great_depression_level_down = yes
-			custom_effect_tooltip = USA_nyse_global_building_slots_factor_tt
-			add_to_variable = { USA_nyse_global_building_slots_factor = 0.15 }
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
+			add_to_variable = { USA_political_power_cost = -0.2 tooltip = political_power_cost_tt }
+			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
+			add_to_variable = { USA_min_export = 0.2 tooltip = min_export_tt }
 			
 			add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
 		}
@@ -205,7 +213,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+		bypass = {
+			has_completed_focus = USA_total_war
+		}
 		available = { NOT = { has_idea = usa_new_law_is_in_development } }
 
 		cancel_if_invalid = no
@@ -214,9 +224,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		
 		completion_reward = {
-			USA_great_depression_level_down = yes
-			custom_effect_tooltip = USA_nyse_global_building_slots_factor_tt
-			add_to_variable = { USA_nyse_global_building_slots_factor = 0.15 }
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
+			add_to_variable = { USA_political_power_cost = -0.4 tooltip = political_power_cost_tt }
+			add_to_variable = { USA_consumer_goods_expected_value = -0.3 tooltip = consumer_goods_expected_tt }
+			add_to_variable = { USA_min_export = 0.6 tooltip = min_export_tt }
 			
 			hidden_effect = { add_ideas = export_focus }
 		}
@@ -239,10 +251,8 @@ focus_tree = {
 		prerequisite = { focus = USA_wpa }
         search_filters = {FOCUS_FILTER_RESEARCH}
         completion_reward = {
-			swap_ideas = {
-				add_idea = usa_rubber_reserve_company_idea_second
-				remove_idea = usa_rubber_reserve_company_idea_first
-			}
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_production_speed_synthetic_refinery_factor = 0.75 tooltip = production_speed_synthetic_refinery_factor_tt}
 			
             add_tech_bonus = {
                 name = USA_rubber_reserve_company
@@ -356,8 +366,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_manhattan_project
 				bonus = 1.0
-				uses = 3
-				category = nuclear
+				uses = 1
+				technology = advanced_computing_machine
 			}
 		}
 	}
@@ -387,7 +397,6 @@ focus_tree = {
 			
 			hidden_effect = {
 				news_event = { id = mtg_news.3 days = 3 random_days = 5 }
-				add_ideas = USA_neutrality_act 
 			}
 		}
 	}
@@ -552,7 +561,16 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
+		bypass = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				ENG = {
+					NOT = { has_full_control_of_state = 126 }
+				}
+			}
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -592,13 +610,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				ENG = {
+					NOT = { has_full_control_of_state = 126 }
+				}
+			}		
+		}
 		available_if_capitulated = yes
 		available = {
 			date > 1939.9.1
 		}
 		completion_reward = {
-			add_ideas = wartime_industry_focus
-		
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.15 tooltip = production_factory_efficiency_gain_factor_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = USA_general_motors
 				random_owned_controlled_state = {
@@ -721,9 +750,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = USA_neutrality_act
 		cost = 5
-		ai_will_do = {
-		factor = 1
-		}
+		available = { date > 1941.3.1 }
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = victor_perlo
@@ -905,7 +932,8 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = USA_army_of_the_united_states
+			custom_effect_tooltip = USA_war_departament_intro
+			add_to_variable = { USA_training_time_factor = -0.3 tooltip = training_time_factor_tt}
 		}
 	}
 	focus = {
@@ -934,7 +962,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			add_ideas = USA_womens_armed_service_integration_act
+			custom_effect_tooltip = USA_war_departament_intro
+			add_to_variable = { USA_conscription = 0.02 tooltip = conscription_tt}
 		}
 	}
 	
@@ -955,8 +984,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = USA_support_rock_island
-				uses = 2
+				uses = 3
 				bonus = 1.0
+				technology = antitank3
 				technology = antitank4
 				technology = antitank5
 			}
@@ -1056,7 +1086,8 @@ focus_tree = {
 				name = USA_armored_infantry
 				uses = 2
 				bonus = 1.0
-				category = motorized_equipment
+				technology = amphibious_mechanized_infantry
+				technology = mechanised_infantry3
 			}
 		}
 	}
@@ -1082,7 +1113,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = USA_department_of_defense
+			custom_effect_tooltip = USA_war_departament_intro
+			add_to_variable = { USA_max_planning = 0.05 tooltip = max_planning_tt}
+			add_to_variable = { USA_planning_speed = 0.1 tooltip = planning_speed_tt}
 		}
 	}
 	
@@ -1139,13 +1172,9 @@ focus_tree = {
 		
 		completion_reward = {
 			air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = USA_air_war_plans_division
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			} # REVISIT May use modifier?
-			add_ideas = air_war_plans_division_focus
+			custom_effect_tooltip = USA_war_departament_intro
+			custom_effect_tooltip = USA_air_cost_1_tt
+			hidden_effect = {add_ideas = USA_hidden_air_cost_1}
 		}
 	}
 
@@ -1165,7 +1194,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			air_experience = 25
-			add_ideas = air_support_focus
+			custom_effect_tooltip = USA_war_departament_intro
+			custom_effect_tooltip = USA_air_cost_2_tt
+			hidden_effect = {add_ideas = USA_hidden_air_cost_2}
 		}
 	}
 
@@ -1186,7 +1217,9 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
-			add_ideas = strategic_bombing_focus
+			custom_effect_tooltip = USA_war_departament_intro
+			custom_effect_tooltip = USA_hidden_air_cost_2_1_tt
+			hidden_effect = {add_ideas = USA_hidden_air_cost_2_1}
 		}
 	}
 
@@ -1217,32 +1250,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USA_CAS
-		text = CAS_effort
-		icon = GFX_focus_generic_armored_air_support
-		prerequisite = { focus = USA_air_support }
-		x = -1
-		y = 1
-		relative_position_id = USA_air_support
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = CAS_effort
-				uses = 1
-				bonus = 1.0
-				category = cas_bomber
-			}
-		}
-	}
-
-	focus = {
 		id = USA_combined_bomber_offensive
 		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = USA_strategic_bombing }
@@ -1265,7 +1272,6 @@ focus_tree = {
 				uses = 1
 				category = heavy_air
 			}
-			add_ideas = combined_bomber_offensive
 		}
 	}
 	focus = {
@@ -1365,7 +1371,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_ideas = USA_us_air_force
+			custom_effect_tooltip = USA_war_departament_intro
+			add_to_variable = {USA_air_mission_efficiency = 0.05 tooltip = air_mission_efficiency_tt}
+			add_to_variable = {USA_air_weather_penalty = -0.1 tooltip = air_weather_penalty_tt}
+			add_to_variable = {USA_air_doctrine_cost_factor = -0.1 tooltip = air_doctrine_cost_factor_tt}
+			add_to_variable = {USA_air_ace_generation_chance_factor = 0.1 tooltip = air_ace_generation_chance_factor_tt}
 		}
 	}
 
@@ -1470,7 +1480,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = liberty_ships_focus
+		custom_effect_tooltip = USA_war_departament_intro
+		add_to_variable = { USA_amphibious_invasion = 0.1 tooltip = amphibious_invasion_tt}
+		custom_effect_tooltip = USA_convoy_liberty_tt
+		
+		hidden_effect = { add_ideas = USA_hidden_convoy_cost }
 		}
 	}
 
@@ -1488,8 +1502,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 50
-			add_ideas = bureau_of_ships_focus
+			navy_experience = 100
+			custom_effect_tooltip = USA_war_departament_intro
+			custom_effect_tooltip = USA_bureau_cost_tt
+			
+			
+			hidden_effect = {add_ideas = USA_hidden_bureau_cost}
 		}
 	}
 	
@@ -1514,7 +1532,8 @@ focus_tree = {
 				name = USA_battleship_primacy
 				bonus = 1.0
 				uses = 2
-				category = bb_tech
+				technology = improved_ship_hull_heavy
+				technology = advanced_ship_hull_heavy
 			}
 		}
 	}
@@ -1539,7 +1558,7 @@ focus_tree = {
 				name = USA_advanced_mahanian_doctrine
 				cost_reduction = 0.5
 				uses = 1
-				category = cat_base_strike
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1647,7 +1666,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = escort_effort_focus
+		custom_effect_tooltip = USA_war_departament_intro
+		custom_effect_tooltip = USA_escort_effort_cost
+		
+		
+		hidden_effect = {add_ideas = USA_hidden_escort_cost}
 			
 		}
 	}
@@ -1668,7 +1691,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_ideas =	USA_convoy_tactics
+			custom_effect_tooltip = USA_war_departament_intro
+			add_to_variable = {USA_convoy_escort_efficiency = 0.3 tooltip = convoy_escort_efficiency_tt}
+			add_to_variable = {USA_navy_submarine_detection_factor = 0.1 tooltip = navy_submarine_detection_factor_tt}
 			add_tech_bonus = {
 			name = USA_convoy_tactics
 			bonus = 3.0
@@ -1716,36 +1741,6 @@ focus_tree = {
 				}
 				set_technology = { cruiser_submarines = 1 }
 			}
-		}
-	}
-
-	focus = {
-		id = USA_unrestricted_submarine_warfare
-		icon = GFX_goal_generic_wolf_pack
-		x = 3
-		y = 2
-		prerequisite = { focus = USA_fleet_submarines }
-		relative_position_id = USA_bureau_of_ships
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_unrestricted_submarine_warfare
 		}
 	}
 
@@ -1815,10 +1810,9 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = wartime_industry_focus
-				add_idea = wartime_industry_focus2
-			}
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -1862,7 +1856,9 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			add_ideas = USA_dockyard
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1920,7 +1916,10 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_ideas = ENG_expand_the_repair_yards
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_refit_ic_cost = -0.1 tooltip = refit_ic_cost_tt}
+			add_to_variable = { USA_refit_speed = 0.1 tooltip = refit_speed_tt}
+			add_to_variable = { USA_repair_speed_factor = 0.1 tooltip = repair_speed_factor_tt}
 		}
 	}
 	focus = {
@@ -1977,10 +1976,8 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = home_of_the_free
-				add_idea = country_of_the_free
-			}
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_stability_factor = 0.2 tooltip = stability_factor_tt}
 			
 			set_war_support = 0.5
 		}
@@ -2000,7 +1997,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_ideas = USA_endless_war
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_stability_weekly = 0.003 tooltip = stability_weekly_tt}
+			add_to_variable = { USA_war_support_weekly = 0.003 tooltip = war_support_weekly_tt}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -2070,6 +2069,23 @@ focus_tree = {
 		}		
 		completion_reward = {
 			add_ideas = militarized_keinsianstvo_mobilisation
+			if = {
+				limit = {NOT = {has_completed_focus = USA_fair_labour_standards_act} }
+					custom_effect_tooltip = USA_economy_intro
+					add_to_variable = { USA_global_building_slots_factor = 0.3 tooltip = global_building_slots_factor_tt }
+					add_to_variable = { USA_political_power_cost = -0.6 tooltip = political_power_cost_tt }
+					add_to_variable = { USA_consumer_goods_expected_value = -0.35 tooltip = consumer_goods_expected_tt }
+					add_to_variable = { USA_min_export = 0.8 tooltip = min_export_tt }
+			}
+			else_if = {
+				limit = {NOT = {has_completed_focus = USA_federal_housing_act} }
+					custom_effect_tooltip = USA_economy_intro
+					add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
+					add_to_variable = { USA_political_power_cost = -0.4 tooltip = political_power_cost_tt }
+					add_to_variable = { USA_consumer_goods_expected_value = -0.3 tooltip = consumer_goods_expected_tt }
+					add_to_variable = { USA_min_export = 0.6 tooltip = min_export_tt }
+			}
+			
 		}
 	}
 	focus = {
@@ -2158,10 +2174,8 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = wartime_industry_focus3
-				add_idea = wartime_industry_focus4
-			}
+		custom_effect_tooltip = USA_economy_intro
+		add_to_variable = { USA_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt}
 		}
 	}
 	focus = {
@@ -2179,7 +2193,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_ideas = USA_rozy
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
+			add_to_variable = { USA_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
 		}
 	}
 	focus = {
@@ -2195,11 +2211,11 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		available = {
-		congress_medium_support_trigger = yes
 		}
 		completion_reward = {
 			USA_congress_small_opposition = yes
-			add_ideas = USA_strogost
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
 		}
 	}
 	focus = {
@@ -2245,10 +2261,10 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = wartime_industry_focus2
-				add_idea = wartime_industry_focus3
-			}
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_line_change_production_efficiency_factor = 0.15 tooltip = line_change_production_efficiency_factor_tt}
+			add_to_variable = { USA_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt}
+			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt}
 		}
 	}
 	focus = {
@@ -2266,7 +2282,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-		add_ideas = USA_optimization
+		custom_effect_tooltip = USA_war_departament_intro
+		custom_effect_tooltip = USA_optimization_cost_tt
+		hidden_effect = {add_ideas = USA_hidden_air_optimization}
 		}
 	}
 	focus = {
@@ -2281,12 +2299,13 @@ focus_tree = {
 		factor = 1
 		}
 		available_if_capitulated = yes
-		available = {
-		congress_medium_support_trigger = yes
-		}
+		available = {}
 		completion_reward = {
 		USA_congress_small_opposition = yes
-		add_ideas = USA_48hours
+		custom_effect_tooltip = USA_economy_intro
+		add_to_variable = { USA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
+		add_to_variable = { USA_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
+		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}
 		}
 	}
 	focus = {
@@ -2301,12 +2320,14 @@ focus_tree = {
 		factor = 1
 		}
 		available_if_capitulated = yes
-		available = {
-		congress_medium_support_trigger = yes
-		}
+		available = {}
 		completion_reward = {
 		USA_congress_small_opposition = yes
-		add_ideas = USA_rich_tax
+		custom_effect_tooltip = USA_economy_intro
+		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}
+		add_to_variable = { USA_consumer_goods_expected_value = -0.03 tooltip = consumer_goods_expected_tt}
+		add_to_variable = { USA_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt}
+		add_to_variable = { USA_production_speed_dockyard_factor = 0.1 tooltip = production_speed_dockyard_factor_tt}
 		}
 	}
 	focus = {
@@ -2323,11 +2344,12 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		available = {
-		congress_medium_support_trigger = yes
 		}
 		completion_reward = {
-		USA_congress_small_opposition = yes
-		add_ideas = USA_Rationing_idea
+		custom_effect_tooltip = USA_economy_intro
+		add_to_variable = { USA_production_factory_max_efficiency_factor = 0.03 tooltip = production_factory_max_efficiency_factor_tt}
+		add_to_variable = { USA_local_resources_factor = 0.1 tooltip = local_resources_factor_tt}
+		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}
 		}
 	}
 }

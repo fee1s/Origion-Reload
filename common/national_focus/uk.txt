@@ -156,7 +156,10 @@ focus_tree = {
 			add_ideas = uk_tizards_mission
 			
 			if = { limit = { USA = { exists = yes } }
-				USA = { add_ideas = uk_tizards_mission }
+				USA = { 
+					custom_effect_tooltip = USA_economy_intro
+					add_to_variable = {USA_research_speed_factor = 0.08 tooltip = research_speed_factor_tt}
+				}
 			}
 		}
 	}

@@ -1125,14 +1125,6 @@ State_pushing_2 = {
 	breakthrough_factor = 0.1
 }
 
-USA_nyse_dynamic_modifier = {
-    enable = { always = yes }
-	
-	icon = GFX_idea_generic_economic_increase
-	
-	global_building_slots_factor = USA_nyse_global_building_slots_factor
-}
-
 ENG_unpredictable_invasion = {
 	enable = { always = yes }
 	
@@ -1537,4 +1529,63 @@ FIN_hell_weather = {
 	custom_modifier_tooltip = FIN_hell_weather_tt
 	
 	state_production_speed_air_base_factor = -3
+}
+USA_war_departament = {
+	enable = {always=yes}
+	
+	icon = GFX_usa_war_departament
+	
+	training_time_factor = USA_training_time_factor
+	conscription = USA_conscription
+	amphibious_invasion = USA_amphibious_invasion
+	max_planning = USA_max_planning
+	planning_speed = USA_planning_speed
+	air_mission_efficiency = USA_air_mission_efficiency
+	air_doctrine_cost_factor = USA_air_doctrine_cost_factor
+	air_weather_penalty = USA_air_weather_penalty
+	air_ace_generation_chance_factor = USA_air_ace_generation_chance_factor
+	navy_submarine_detection_factor = USA_navy_submarine_detection_factor
+	convoy_escort_efficiency = USA_convoy_escort_efficiency
+	custom_modifier_tooltip = USA_war_departament_dynamic_modifaer_tt
+}
+USA_economy_1 = {
+	enable = {always = yes}
+	
+	icon = GFX_usa_peace_time
+	
+	production_speed_synthetic_refinery_factor = USA_production_speed_synthetic_refinery_factor
+	global_building_slots_factor = USA_global_building_slots_factor
+	political_power_cost = USA_political_power_cost
+	consumer_goods_expected_value = USA_consumer_goods_expected_value
+	min_export = USA_min_export
+	production_speed_infrastructure_factor = USA_production_speed_infrastructure_factor
+	stability_factor = USA_stability_factor
+	production_factory_efficiency_gain_factor = USA_production_factory_efficiency_gain_factor
+	research_speed_factor = USA_research_speed_factor
+}
+USA_economy_2 = {
+	enable = {always = yes}
+	icon = GFX_usa_war_time
+	
+	production_speed_synthetic_refinery_factor = USA_production_speed_synthetic_refinery_factor
+	global_building_slots_factor = USA_global_building_slots_factor
+	political_power_cost = USA_political_power_cost
+	consumer_goods_expected_value = USA_consumer_goods_expected_value
+	min_export = USA_min_export
+	production_speed_infrastructure_factor = USA_production_speed_infrastructure_factor
+	stability_factor = USA_stability_factor
+	production_factory_efficiency_gain_factor = USA_production_factory_efficiency_gain_factor
+	production_speed_dockyard_factor = USA_production_speed_dockyard_factor
+	production_speed_arms_factory_factor = USA_production_speed_arms_factory_factor
+	industrial_capacity_factory = USA_industrial_capacity_factory
+	production_factory_max_efficiency_factor = USA_production_factory_max_efficiency_factor
+	line_change_production_efficiency_factor = USA_line_change_production_efficiency_factor
+	industrial_capacity_dockyard = USA_industrial_capacity_dockyard
+	refit_ic_cost = USA_refit_ic_cost
+	refit_speed = USA_refit_speed
+	repair_speed_factor = USA_repair_speed_factor
+	local_resources_factor = USA_local_resources_factor
+	stability_weekly = USA_stability_weekly
+	war_support_weekly = USA_war_support_weekly
+	research_speed_factor = USA_research_speed_factor
 }
