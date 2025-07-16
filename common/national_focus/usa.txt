@@ -78,7 +78,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_1_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_production_speed_infrastructure_factor = 0.2 tooltip = production_speed_infrastructure_factor_tt}
 			add_to_variable = { USA_stability_factor = 0.1 tooltip = stability_factor_tt} 
 		}
@@ -160,7 +160,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_1_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
 			add_to_variable = { USA_political_power_cost = -0.4 tooltip = political_power_cost_tt }
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
@@ -192,7 +192,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_1_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
 			add_to_variable = { USA_political_power_cost = -0.2 tooltip = political_power_cost_tt }
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
@@ -224,7 +224,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_1_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
 			add_to_variable = { USA_political_power_cost = -0.4 tooltip = political_power_cost_tt }
 			add_to_variable = { USA_consumer_goods_expected_value = -0.3 tooltip = consumer_goods_expected_tt }
@@ -251,9 +251,9 @@ focus_tree = {
 		prerequisite = { focus = USA_wpa }
         search_filters = {FOCUS_FILTER_RESEARCH}
         completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_production_speed_synthetic_refinery_factor = 0.75 tooltip = production_speed_synthetic_refinery_factor_tt}
-			USA_war_economy_mobilization_dm_effect = yes
+			
             add_tech_bonus = {
                 name = USA_rubber_reserve_company
                 bonus = 1.0
@@ -366,8 +366,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_manhattan_project
 				bonus = 1.0
-				uses = 3
-				category = nuclear
+				uses = 1
+				technology = advanced_computing_machine
 			}
 		}
 	}
@@ -625,7 +625,7 @@ focus_tree = {
 			date > 1939.9.1
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_1_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.15 tooltip = production_factory_efficiency_gain_factor_tt}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
@@ -750,15 +750,10 @@ focus_tree = {
 		y = 3
 		relative_position_id = USA_neutrality_act
 		cost = 5
-		available = { date > 1941.1.1 }
+		available = { date > 1941.3.1 }
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = victor_perlo
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = USA_economy_2_intro
-			add_to_variable = { USA_production_speed_dockyard_factor = 0.08 tooltip = production_speed_dockyard_factor_tt}
-			add_to_variable = { USA_production_speed_arms_factory_factor = 0.08 tooltip = production_speed_arms_factory_factor_tt}
-			USA_war_economy_mobilization_dm_effect = yes
 		}
 	}
 
@@ -1091,7 +1086,8 @@ focus_tree = {
 				name = USA_armored_infantry
 				uses = 2
 				bonus = 1.0
-				category = motorized_equipment
+				technology = amphibious_mechanized_infantry
+				technology = mechanised_infantry3
 			}
 		}
 	}
@@ -1592,8 +1588,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_battleship_primacy
 				bonus = 1.0
-				uses = 3
-				category = bb_tech
+				uses = 2
+				technology = improved_ship_hull_heavy
+				technology = advanced_ship_hull_heavy
 			}
 		}
 	}
@@ -1618,7 +1615,7 @@ focus_tree = {
 				name = USA_advanced_mahanian_doctrine
 				cost_reduction = 0.5
 				uses = 1
-				category = cat_base_strike
+				category = naval_doctrine
 			}
 		}
 	}
@@ -1870,10 +1867,10 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			USA_war_economy_mobilization_dm_effect = yes
+			
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1916,7 +1913,7 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
@@ -1976,7 +1973,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_refit_ic_cost = -0.1 tooltip = refit_ic_cost_tt}
 			add_to_variable = { USA_refit_speed = 0.1 tooltip = refit_speed_tt}
 			add_to_variable = { USA_repair_speed_factor = 0.1 tooltip = repair_speed_factor_tt}
@@ -2036,9 +2033,9 @@ focus_tree = {
 			has_war = yes
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_stability_factor = 0.2 tooltip = stability_factor_tt}
-			USA_war_economy_mobilization_dm_effect = yes
+			
 			set_war_support = 0.5
 		}
 	}	
@@ -2057,7 +2054,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_stability_weekly = 0.003 tooltip = stability_weekly_tt}
 			add_to_variable = { USA_war_support_weekly = 0.003 tooltip = war_support_weekly_tt}
 			random_owned_controlled_state = {
@@ -2131,7 +2128,7 @@ focus_tree = {
 			add_ideas = militarized_keinsianstvo_mobilisation
 			if = {
 				limit = {NOT = {has_completed_focus = USA_fair_labour_standards_act} }
-					custom_effect_tooltip = USA_economy_2_intro
+					custom_effect_tooltip = USA_economy_intro
 					add_to_variable = { USA_global_building_slots_factor = 0.3 tooltip = global_building_slots_factor_tt }
 					add_to_variable = { USA_political_power_cost = -0.6 tooltip = political_power_cost_tt }
 					add_to_variable = { USA_consumer_goods_expected_value = -0.35 tooltip = consumer_goods_expected_tt }
@@ -2139,13 +2136,13 @@ focus_tree = {
 			}
 			else_if = {
 				limit = {NOT = {has_completed_focus = USA_federal_housing_act} }
-					custom_effect_tooltip = USA_economy_2_intro
+					custom_effect_tooltip = USA_economy_intro
 					add_to_variable = { USA_global_building_slots_factor = 0.15 tooltip = global_building_slots_factor_tt }
 					add_to_variable = { USA_political_power_cost = -0.4 tooltip = political_power_cost_tt }
 					add_to_variable = { USA_consumer_goods_expected_value = -0.3 tooltip = consumer_goods_expected_tt }
 					add_to_variable = { USA_min_export = 0.6 tooltip = min_export_tt }
 			}
-			USA_war_economy_mobilization_dm_effect = yes
+			
 		}
 	}
 	focus = {
@@ -2234,7 +2231,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-		custom_effect_tooltip = USA_economy_2_intro
+		custom_effect_tooltip = USA_economy_intro
 		add_to_variable = { USA_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt}
 		}
 	}
@@ -2253,7 +2250,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
 			add_to_variable = { USA_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
 		}
@@ -2274,7 +2271,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			USA_congress_small_opposition = yes
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
 		}
 	}
@@ -2321,7 +2318,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = USA_economy_2_intro
+			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_line_change_production_efficiency_factor = 0.15 tooltip = line_change_production_efficiency_factor_tt}
 			add_to_variable = { USA_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt}
 			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt}
@@ -2362,7 +2359,7 @@ focus_tree = {
 		available = {}
 		completion_reward = {
 		USA_congress_small_opposition = yes
-		custom_effect_tooltip = USA_economy_2_intro
+		custom_effect_tooltip = USA_economy_intro
 		add_to_variable = { USA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
 		add_to_variable = { USA_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
 		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}
@@ -2383,7 +2380,7 @@ focus_tree = {
 		available = {}
 		completion_reward = {
 		USA_congress_small_opposition = yes
-		custom_effect_tooltip = USA_economy_2_intro
+		custom_effect_tooltip = USA_economy_intro
 		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}
 		add_to_variable = { USA_consumer_goods_expected_value = -0.03 tooltip = consumer_goods_expected_tt}
 		add_to_variable = { USA_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt}
@@ -2406,7 +2403,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-		custom_effect_tooltip = USA_economy_2_intro
+		custom_effect_tooltip = USA_economy_intro
 		add_to_variable = { USA_production_factory_max_efficiency_factor = 0.03 tooltip = production_factory_max_efficiency_factor_tt}
 		add_to_variable = { USA_local_resources_factor = 0.1 tooltip = local_resources_factor_tt}
 		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}

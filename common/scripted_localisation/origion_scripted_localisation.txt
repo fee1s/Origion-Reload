@@ -1505,3 +1505,23 @@ defined_text = {
 		localization_key = "USA_mihist_mp_3_tt"
 	}
 }
+defined_text = {
+	name = USA_peaciful_ec_tt
+	text = {
+		trigger = {
+			USA = { has_war = no}
+		}
+		localization_key = USA_economy_1_intro
+	}
+
+}
+defined_text = {
+	name = USA_war_ec_tt
+	text = {
+		trigger = {
+			USA = { has_war = yes}
+		}
+		localization_key = USA_economy_2_intro
+	}
+
+}
