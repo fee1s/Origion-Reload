@@ -112,6 +112,17 @@ USA_join_to_war = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = USA_economy_1
+			}
+		}
+		hidden_effect = {
+			remove_dynamic_modifier = { modifier = USA_economy_1 }
+			add_dynamic_modifier = { modifier = USA_economy_2 }
+		}
+	}
 }
 
 ITA_join_to_war = {	
@@ -482,20 +493,4 @@ soviet_starts_evacuation = {
 	activate_mission = SOV_leningrad_ir
 	activate_mission = SOV_karelia_ir
 }
-
-USA_war_economy_mobilization_dm_effect = {
-	if = {
-		limit = {
-			has_dynamic_modifier = {
-				modifier = USA_economy_1
-			}
-		}
-		hidden_effect = {
-			remove_dynamic_modifier = { modifier = USA_economy_1 }
-			add_dynamic_modifier = { modifier = USA_economy_2 }
-		}
-	}
-
-}
-	
 	
