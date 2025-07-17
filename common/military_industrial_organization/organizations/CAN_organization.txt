@@ -68,6 +68,16 @@ CAN_halifax_shipyard_organization = {
 
 ###################################
 
+CAN_inglis_company_organization = {
+	name = CAN_inglis_company_organization
+	include = generic_support_equipment_organization
+	icon = GFX_idea_inglis_company
+	allowed = {
+		original_TAG = CAN
+		has_dlc = "Together for Victory"
+	}
+}
+
 CAN_small_arms_limited_organization = {
 	name = CAN_small_arms_limited_organization
 	include = generic_infantry_equipment_organization

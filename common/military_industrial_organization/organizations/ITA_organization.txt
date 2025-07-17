@@ -127,6 +127,32 @@ ITA_cantiere_navale_di_ancona_organization = {
 
 ###########################
 
+ITA_macchi_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_macchi
+
+	allowed = {	 
+		tag = ITA 
+	}
+	
+	available = {
+		date > 1941.01.01
+	}
+}
+
+ITA_caproni_organization = {
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_caproni
+	
+	allowed = {	 
+		tag = ITA 
+	}
+
+	available = {
+		date > 1941.01.01
+	}
+}
+
 ITA_savoia_marchetti_organization = {
 	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_savoia_marchetti
