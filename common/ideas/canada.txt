@@ -1,27 +1,6 @@
 ideas = {
 
 	country = {
-	
-		CAN_check_war = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = chi_war_of_resistance
-			
-			modifier = {
-				defensive_war_stability_factor = 0.25
-				amphibious_invasion_defence = 0.15
-
-            }
-		}
 
 		CAN_check_war_second = {
 			name = CAN_check_war
@@ -146,48 +125,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.125
 			}
 		}
-		
-		CAN_euro = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = FIN_german_threat
-
-			equipment_bonus = {
-				mechanized = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		
-		CAN_asia = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = idea_chi_army_corruption3
-
-			equipment_bonus = {
-				amphibious_mechanized_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
+	
 		
 		CAN_max = {
 
@@ -245,28 +183,6 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.075
 				industrial_capacity_dockyard = 0.075
-			}
-		}
-
-		
-		CAN_great_depression_1 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = great_depression
-
-			modifier = {
-				consumer_goods_factor = 0.50
-				industrial_capacity_factory = -0.20
-				industrial_capacity_dockyard = -0.20
 			}
 		}
 
@@ -350,69 +266,6 @@ ideas = {
 			}
 		}
 
-		CAN_defence_of_canada_regulations_democratic = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				 has_government = democratic
-			}
-
-			removal_cost = -1
-
-			picture = can_defence_of_canada_regulations_democratic
-
-			modifier = {
-				communism_drift = -0.01
-				fascism_drift = -0.01
-				foreign_subversive_activites = -0.50
-			}
-		}
-
-		CAN_defence_of_canada_regulations_fascism = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-
-			picture = can_defence_of_canada_regulations_fascism
-
-			modifier = {
-				democratic_drift = -0.01
-				communism_drift = -0.01
-				foreign_subversive_activites = -0.50
-			}
-		}
-
-		CAN_defence_of_canada_regulations_communism = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			removal_cost = -1
-
-			picture = can_defence_of_canada_regulations_communism
-
-			modifier = {
-				democratic_drift = -0.01
-				fascism_drift = -0.01
-				foreign_subversive_activites = -0.50
-			}
-		}
-
 		CAN_war_bonds_1 = {
 
 			allowed = {
@@ -470,26 +323,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.02
 				conscription_factor = 0.05
 				stability_factor = -0.05
-			}
-		}
-
-		CAN_wartime_prices_and_trade_board = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = can_wartime_prices_and_trade_board
-
-			modifier = {
-				min_export = -0.1
-				global_building_slots_factor = 0.10
 			}
 		}
 
@@ -681,24 +514,6 @@ ideas = {
 			}
 		}
 		
-		CAN_dollar_a_year_men = {
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_political_support
-			
-			modifier = {
-				political_advisor_cost_factor = -0.33
-			}
-		}
-		
 		CAN_unified_communist_party = {
 			allowed = {
 				always = no
@@ -824,33 +639,6 @@ ideas = {
 			}
 		}
 
-		CAN_dominion_rifle_association_idea = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = ast_volunteer_defence_corps
-
-			modifier = {
-				
-				training_time_factor = -0.15
-				experience_gain_army_factor = 0.05
-				
-			}
-
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
 		
 	}
 

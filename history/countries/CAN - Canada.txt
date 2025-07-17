@@ -1,9 +1,14 @@
 ﻿capital = 276
 
-add_dynamic_modifier = { modifier = CAN_army }
+add_dynamic_modifier = {modifier = CAN_army}
+add_dynamic_modifier = {modifier = CAN_economy}
 set_variable = { CAN_army_army_org_factor = -0.30 }
 set_variable = { CAN_army_army_morale_factor = -0.30 }
+set_variable = {CAN_conscription_factor = -0.3}
 
+set_variable = {CAN_consumer_goods_expected_value = 0.25}
+set_variable = {CAN_industrial_capacity_factory = -0.2}
+set_variable = {CAN_industrial_capacity_dockyard = -0.2}
 if = {
 	limit = {
 		NOT = {
@@ -174,8 +179,6 @@ if = {
 }
 if = {
 	limit = { has_dlc = "Together for Victory" }
-	add_ideas = CAN_great_depression_1
-	add_ideas = CAN_conscription_crisis
 	set_cosmetic_tag = CAN_UK
 
 	add_to_tech_sharing_group = commonwealth_research

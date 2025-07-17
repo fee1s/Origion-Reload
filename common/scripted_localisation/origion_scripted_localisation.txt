@@ -1525,3 +1525,59 @@ defined_text = {
 	}
 
 }
+defined_text = {
+	name = CAN_ec_1
+	text = {
+		trigger = {
+			NOT = {has_completed_focus = CAN_national_resources_mobilization_act}
+		}
+		localization_key = CAN_depres_ec
+	}
+}
+
+defined_text = {
+	name = CAN_ec_2
+	text = {
+		trigger = {
+			has_completed_focus = CAN_national_resources_mobilization_act
+			NOT = {has_completed_focus = CAN_war_fueled_economy }
+		}
+	localization_key = CAN_mobil_ec
+	}
+}
+defined_text = {
+	name = CAN_ec_3
+	text = {
+		trigger = {
+			has_completed_focus = CAN_war_fueled_economy
+		}
+	localization_key = CAN_obl_ec
+	}
+}
+defined_text = {
+	name = CAN_assult_rifle
+	text = {
+		trigger = {
+			has_completed_focus = CAN_dominion_rifle_association
+		}
+		localization_key = CAN_rifle_tt
+	}
+}
+defined_text = {
+	name = CAN_asia_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = CAN_war_asia
+		}
+		localization_key = CAN_asia_tt
+	}
+}
+defined_text = {
+	name = CAN_euro_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = CAN_war_euro
+		}
+		localization_key = CAN_euro_tt
+	}
+}

@@ -20,7 +20,6 @@
 	default = no
 
 
-
 #	focus = {
 #		id = CAN_
 #		icon = GFX_
@@ -198,7 +197,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_ideas = CAN_dollar_a_year_men
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_political_advisor_cost_factor = -0.33 tooltip = political_advisor_cost_factor_tt}
 			add_tech_bonus = {
 				name = CAN_dollar_a_year_men
 				bonus = 1.0
@@ -1110,7 +1110,12 @@
 				set_state_flag = CAN_shadow_factories_AF1
 			}
 			
-			add_ideas = CAN_dominion_rifle_association_idea
+			custom_effect_tooltip = CAN_army_tt
+			custom_effect_tooltip = CAN_rifle_tt
+			add_to_variable = {CAN_training_time_factor = -0.15 tooltip = training_time_factor_tt}
+			add_to_variable = {CAN_experience_gain_army_factor = 0.05 tooltip = experience_gain_army_factor_tt}
+
+			hidden_effect = {add_ideas = CAN_dominion_rifle_association_idea}
 
 		}
 	}
@@ -1145,18 +1150,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = { has_government = democratic }
-				add_ideas = CAN_defence_of_canada_regulations_democratic
-			}
-			if = {
-				limit = { has_government = communism }
-				add_ideas = CAN_defence_of_canada_regulations_communism
-			}
-			if = {
-				limit = { has_government = fascism }
-				add_ideas = CAN_defence_of_canada_regulations_fascism
-			}
+			custom_effect_tooltip = CAN_army_tt
+			add_to_variable = {CAN_amphibious_invasion_defence = 0.15 tooltip = amphibious_invasion_defence_tt}
 		}
 	}
 
@@ -1188,7 +1183,13 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_ideas = CAN_national_resources_mobilization_act
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_stability_factor = -0.05 tooltip = stability_factor_tt}
+			add_to_variable = {CAN_industrial_capacity_factory = 0.02 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {CAN_industrial_capacity_dockyard = 0.02 tooltip = industrial_capacity_dockyard_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CAN_army_tt
+			add_to_variable = {CAN_conscription_factor = 0.05 tooltip = conscription_factor_tt}
 		}
 	}
 
@@ -1252,7 +1253,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CAN_wartime_prices_and_trade_board
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_min_export = -0.1 tooltip = min_export_tt}
+			add_to_variable = {CAN_global_building_slots_factor = 0.1 tooltip = global_building_slots_factor_tt}
 		}
 	}
 
@@ -1319,14 +1322,6 @@
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_completed_focus = CAN_mine_the_shield
-			}
-		}
-
 		available = {
 
 		}
@@ -1341,17 +1336,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = { has_idea = CAN_great_depression_1 }
-				swap_ideas = {
-					remove_idea = CAN_great_depression_1
-					add_idea = CAN_great_depression_2		
-				}
-			}
-			else_if = {
-				limit = { has_idea = CAN_great_depression_2 }
-				remove_ideas = CAN_great_depression_2
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = { CAN_consumer_goods_expected_value = -0.125 tooltip = consumer_goods_expected_tt}
+			add_to_variable = {CAN_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {CAN_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
 		}
 	}
 	focus = {
@@ -1795,51 +1783,6 @@
 			}
 		}
 	}
-	
-		focus = {
-		id = CAN_camp_x
-		icon = GFX_goal_generic_intelligence_exchange 
-		prerequisite = { focus = CAN_montreal_laboratory_collaboration }
-		x = 1
-		y = 2
-		relative_position_id = CAN_rowell_sirois_commission
-
-		cost = 5
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				add_tech_bonus = {
-					name = CAN_camp_x
-					bonus = 1.0
-					uses = 1
-					category = encryption_tech
-					category = decryption_tech
-				}
-			}
-			else = {
-				hidden_effect = {
-					set_technology = { lar_decryption_bonus_tech = 1 }
-				}
-				custom_effect_tooltip = lar_decryption_bonus_tt
-			}
-		}
-	}
 
 	focus = {
 		id = CAN_supply_the_empire
@@ -1912,8 +1855,13 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
-			add_ideas = CAN_canadian_citizenship
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_surrender_limit = 0.15 tooltip = surrender_limit_tt}
+			add_to_variable = {CAN_autonomy_gain = 0.1 tooltip = autonomy_gain_tt}
+			add_to_variable = {CAN_research_speed_factor = 0.05 tooltip = research_speed_factor_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CAN_army_tt
+			add_to_variable = {CAN_conscription_factor = 0.1 tooltip = conscription_factor_tt}
 
 		}
 	}
@@ -2079,7 +2027,8 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_ideas = CAN_commit_to_the_war
+			custom_effect_tooltip = CAN_army_tt
+			add_to_variable = {CAN_conscription_factor = 0.1 tooltip = conscription_factor_tt}
 		}
 	}
 	
@@ -2110,7 +2059,9 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_ideas = CAN_send_in_the_zombies
+			custom_effect_tooltip = CAN_army_tt
+			add_to_variable = {CAN_conscription = 0.01 tooltip = conscription_tt}
+			add_to_variable = {CAN_conscription_factor = 0.15 tooltip = conscription_factor_tt}
 		}
 	}
 	
@@ -2142,9 +2093,8 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			remove_ideas = CAN_conscription_crisis
-			
-			# Opens up the MTTH events tfv_canada.50 - tfv_canada.53
+			custom_effect_tooltip = CAN_army_tt
+			add_to_variable = {CAN_conscription_factor = 0.3 tooltip = conscription_factor_tt}
 		}
 	}
 
@@ -2240,7 +2190,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CAN_war_bonds_1
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_consumer_goods_expected_value = -0.025 tooltip = consumer_goods_expected_tt}
 		}
 	}
 
@@ -2369,7 +2320,11 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CAN_bits_and_pieces_program
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_tt}
+			add_to_variable = {CAN_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt}
+			add_to_variable = {CAN_industrial_capacity_factory = 0.04 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {CAN_industrial_capacity_dockyard = 0.04 tooltip = industrial_capacity_dockyard_tt}
 		}
 	}
 
@@ -2763,10 +2718,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = CAN_war_bonds_1
-				add_idea = CAN_war_bonds_2
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_consumer_goods_expected_value = -0.015 tooltip = consumer_goods_expected_tt}
 		}
 	}
 
@@ -2826,9 +2779,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_ideas = {
-				CAN_check_war
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_defensive_war_stability_factor = 0.25 tooltip = defensive_war_stability_factor_tt}
 		}
 	}
 	
@@ -2860,7 +2812,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_euro
+			custom_effect_tooltip = CAN_army_tt
+			custom_effect_tooltip = CAN_euro_tt
+			hidden_effect = {add_ideas = CAN_euro}
 		}
 	}
 
@@ -2892,7 +2846,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-		add_ideas = CAN_asia
+			custom_effect_tooltip = CAN_army_tt
+			custom_effect_tooltip = CAN_asia_tt
+			hidden_effect = {add_ideas = CAN_asia}
 		}
 	}
 	
@@ -2923,10 +2879,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = CAN_check_war
-				add_idea = CAN_check_war_second
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
+			add_to_variable = {CAN_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt}
 		}
 	}
 	
@@ -3051,25 +3006,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			if = { 
-			    limit = { 
-				    OR = {
-					    NOT = { has_idea = CAN_check_war_second }
-						NOT = { has_idea = CAN_check_war_third_left }
-					}
-			    }
-				effect_tooltip = {
-				    swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_left }
-				}
-			}
-			
-			if = { limit = { has_idea = CAN_check_war_second }
-				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_left }
-			}
-			
-			if = { limit = { has_idea = CAN_check_war_third_right }
-				swap_ideas = { remove_idea = CAN_check_war_third_right add_idea = CAN_check_war_third_left_with_right }
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_consumer_goods_expected_value = -0.005 tooltip = consumer_goods_expected_tt}
 		}
 	}
 	
@@ -3101,25 +3039,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			if = { 
-			    limit = { 
-				    OR = {
-					    NOT = { has_idea = CAN_check_war_second }
-						NOT = { has_idea = CAN_check_war_third_left }
-					}
-			    }
-				effect_tooltip = {
-				    swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_right }
-				}
-			}
-			
-			if = { limit = { has_idea = CAN_check_war_second }
-				swap_ideas = { remove_idea = CAN_check_war_second add_idea = CAN_check_war_third_right }
-			}
-			
-			if = { limit = { has_idea = CAN_check_war_third_left }
-				swap_ideas = { remove_idea = CAN_check_war_third_left add_idea = CAN_check_war_third_left_with_right }
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {CAN_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt}
 		}
 	}
 	
@@ -3153,10 +3075,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = CAN_check_war_third_left_with_right
-				add_idea = CAN_check_war_end
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = {CAN_consumer_goods_expected_value = -0.005 tooltip = consumer_goods_expected_tt}
+			add_to_variable = {CAN_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {CAN_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt}
 		}
 	}
 
@@ -3224,22 +3146,11 @@
 		}
 
 		completion_reward = {
-			if = {
-				limit = { 
-					OR = {
-						has_idea = CAN_great_depression_1
-						has_idea = CAN_great_depression_2
-					}
-				}
-				remove_ideas = CAN_great_depression_2
-				custom_effect_tooltip = if_no_depression_get_stuff_TT
-			}
-			else = {
-				add_timed_idea = {
-					idea = CAN_booming_economy
-					days = 1095
-				}
-			}
+			custom_effect_tooltip = CAN_economy_intro
+			add_to_variable = { CAN_consumer_goods_expected_value = -0.125 tooltip = consumer_goods_expected_tt}
+			add_to_variable = {CAN_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {CAN_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
+
 			random_owned_controlled_state = {
 				limit = {
 					is_in_home_area = yes
@@ -4185,8 +4096,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = CAN_fairchild_aircraft_ltd
 			464 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {

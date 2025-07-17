@@ -1147,6 +1147,33 @@ CAN_army = { #NATIONAL SPIRIT
 	icon = GFX_idea_chi_army_corruption3
 	army_org_factor = CAN_army_army_org_factor
 	army_morale_factor = CAN_army_army_morale_factor
+	conscription_factor = CAN_conscription_factor
+	training_time_factor = CAN_training_time_factor
+	experience_gain_army_factor = CAN_experience_gain_army_factor
+	conscription = CAN_conscription
+	amphibious_invasion_defence = CAN_amphibious_invasion_defence
+	custom_modifier_tooltip = CAN_army_dm_tt
+}
+
+CAN_economy = {
+	enable = {always = yes}
+	icon = GFX_idea_can_defence_of_canada_regulations_democratic
+
+	consumer_goods_expected_value = CAN_consumer_goods_expected_value
+	industrial_capacity_factory = CAN_industrial_capacity_factory
+	industrial_capacity_dockyard = CAN_industrial_capacity_dockyard
+	political_advisor_cost_factor = CAN_political_advisor_cost_factor
+	stability_factor = CAN_stability_factor
+	min_export = CAN_min_export
+	global_building_slots_factor = CAN_global_building_slots_factor
+	production_factory_start_efficiency_factor = CAN_production_factory_start_efficiency_factor
+	production_factory_efficiency_gain_factor = CAN_production_factory_efficiency_gain_factor
+	defensive_war_stability_factor = CAN_defensive_war_stability_factor
+	production_factory_max_efficiency_factor = CAN_production_factory_max_efficiency_factor
+	surrender_limit = CAN_surrender_limit
+	autonomy_gain = CAN_autonomy_gain
+	research_speed_factor = CAN_research_speed_factor
+
 }
 
 GER_atlantikwall_dynamic_modifier = {

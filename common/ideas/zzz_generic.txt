@@ -19,7 +19,7 @@ ideas = {
 			equipment_bonus = {
 				convoy = {
 					instant = yes
-					build_cost_ic = -0.25
+					build_cost_ic = -0.25 instant = yes
 				}
 			}
 		}
@@ -71,7 +71,7 @@ ideas = {
 			equipment_bonus = {
 				ship_hull_light = {
 					instant = yes
-					build_cost_ic = -0.1
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}	
@@ -152,13 +152,83 @@ ideas = {
 
 			equipment_bonus = {
 				small_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.05 instant = yes
 				}
 				medium_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.05 instant = yes
 				}
 				armor = {
-				build_cost_ic = -0.05
+				build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		
+		CAN_dominion_rifle_association_idea = {
+			name = CAN_army
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		CAN_euro = {
+			name = CAN_army
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FIN_german_threat
+
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized_equipment_1 = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized_equipment_2 = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized_equipment_3 = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		CAN_asia = {
+			name = CAN_army
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_chi_army_corruption3
+
+			equipment_bonus = {
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
