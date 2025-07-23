@@ -6325,7 +6325,6 @@ generic_multi_role_aircraft_organization = {
 	}
 
 	equipment_type = {
-		mio_cat_eq_all_small_plane
 		mio_cat_eq_all_medium_plane
 		transport_plane_equipment
 	}
@@ -6345,7 +6344,7 @@ generic_multi_role_aircraft_organization = {
 	initial_trait = {
 		name = generic_mio_initial_trait_multi_role_aircraft_designer
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_ground_attack = 0.02
@@ -6362,7 +6361,7 @@ generic_multi_role_aircraft_organization = {
 
 		position = { x=3 y=0 }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_defence = 0.05
@@ -6378,7 +6377,7 @@ generic_multi_role_aircraft_organization = {
 		position = { x=3 y=0 }
 		relative_position_id = generic_mio_trait_armored_cockpit
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_range = 0.05
@@ -6397,7 +6396,7 @@ generic_multi_role_aircraft_organization = {
 
 		mutually_exclusive = { generic_mio_trait_medium_airframe }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		limit_to_equipment_type = {  }
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
@@ -6441,7 +6440,7 @@ generic_multi_role_aircraft_organization = {
 
 		all_parents = { generic_mio_trait_light_airframe }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		limit_to_equipment_type = {  }
 
 		equipment_bonus = {
 			air_defence = 0.05
@@ -6458,7 +6457,7 @@ generic_multi_role_aircraft_organization = {
 
 		all_parents = { generic_mio_trait_light_airframe }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		limit_to_equipment_type = {  }
 
 		equipment_bonus = {
 			air_ground_attack = 0.05
@@ -6476,7 +6475,7 @@ generic_multi_role_aircraft_organization = {
 
 		all_parents = { generic_mio_trait_light_airframe }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		limit_to_equipment_type = {  }
 
 		equipment_bonus = {
 			maximum_speed = 0.05
@@ -6564,7 +6563,7 @@ generic_multi_role_aircraft_organization = {
 
 		any_parent = { generic_mio_trait_light_airframe generic_mio_trait_medium_airframe }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			maximum_speed = 0.05
@@ -6582,7 +6581,7 @@ generic_multi_role_aircraft_organization = {
 
 		any_parent = { generic_mio_trait_light_airframe generic_mio_trait_medium_airframe }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_attack = 0.05
@@ -6600,7 +6599,7 @@ generic_multi_role_aircraft_organization = {
 
 		all_parents = { generic_mio_trait_upgraded_engines }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_range = 0.05
@@ -6618,7 +6617,7 @@ generic_multi_role_aircraft_organization = {
 
 		all_parents = { generic_mio_trait_not_enough_guns_never_enough_guns }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_defence = 0.05
@@ -6637,7 +6636,7 @@ generic_multi_role_aircraft_organization = {
 
 		mutually_exclusive = { generic_mio_trait_bomber_specialization }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_attack = 0.05
@@ -6657,7 +6656,7 @@ generic_multi_role_aircraft_organization = {
 
 		mutually_exclusive = { generic_mio_trait_fighter_specialization }
 
-		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+		limit_to_equipment_type = {  mio_cat_eq_all_medium_plane }
 
 		equipment_bonus = {
 			air_ground_attack = 0.03
