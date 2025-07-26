@@ -1641,3 +1641,46 @@ ROM_great = {
 	production_speed_arms_factory_factor = ROM_production_speed_arms_factory_factor
 
 }
+
+ENG_stoyak = {
+	enable = {always=yes}
+	icon = GFX_idea_stiff_upper_lip
+
+	global_building_slots_factor = ENG_global_building_slots_factor
+	production_speed_synthetic_refinery_factor = ENG_production_speed_synthetic_refinery_factor
+	research_speed_factor = ENG_research_speed_factor
+	production_speed_arms_factory_factor = ENG_production_speed_arms_factory_factor
+	industrial_capacity_factory = ENG_industrial_capacity_factory
+	consumer_goods_expected_value = ENG_consumer_goods_expected_value
+	industrial_capacity_dockyard = ENG_industrial_capacity_dockyard
+	production_factory_efficiency_gain_factor = ENG_production_factory_efficiency_gain_factor
+	weekly_bombing_war_support = ENG_weekly_bombing_war_support
+	weekly_convoys_war_support = ENG_weekly_convoys_war_support
+	defensive_war_stability_factor = ENG_defensive_war_stability_factor
+	production_factory_max_efficiency_factor = ENG_production_factory_max_efficiency_factor
+}
+
+ENG_chiefs_of_staff = {
+	enable = {always=yes}
+	icon = GFX_idea_eng_chiefs_of_staff_committee
+
+	conscription_factor = ENG_conscription_factor
+	conscription = ENG_conscription
+	surrender_limit = ENG_surrender_limit
+	acclimatization_hot_climate_gain_factor = ENG_acclimatization_hot_climate_gain_factor
+	convoy_escort_efficiency = ENG_convoy_escort_efficiency
+	air_home_defence_factor = ENG_air_home_defence_factor
+	naval_detection = ENG_naval_detection
+	air_night_penalty = ENG_air_night_penalty
+	production_speed_bunker_factor = ENG_production_speed_bunker_factor
+	production_speed_coastal_bunker_factor = ENG_production_speed_coastal_bunker_factor
+	refit_ic_cost = ENG_refit_ic_cost
+	refit_speed = ENG_refit_speed
+	repair_speed_factor = ENG_repair_speed_factor
+	navy_submarine_detection_factor = ENG_navy_submarine_detection_factor
+	convoy_retreat_speed = ENG_convoy_retreat_speed
+	max_command_power = ENG_max_command_power
+	command_power_gain_mult = ENG_command_power_gain_mult
+	planning_speed = ENG_planning_speed
+	custom_modifier_tooltip = ENG_chiefs_of_staff_dm_tt
+}

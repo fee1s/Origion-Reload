@@ -1581,3 +1581,30 @@ defined_text = {
 		localization_key = CAN_euro_tt
 	}
 }
+defined_text = {
+	name = british_arms_discount_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = uk_small_arms_focus
+		}
+		localization_key = british_arms_discount_tt
+	}
+}
+defined_text = {
+	name = british_convoy_discount_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = uk_convoy_focus
+		}
+		localization_key = british_convoy_discount_tt
+	}
+}
+defined_text = {
+	name = british_tanks_discount_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = uk_noasia_tank_focus
+		}
+		localization_key = british_tank_discount_tt
+	}
+}

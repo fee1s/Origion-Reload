@@ -183,6 +183,73 @@ ideas = {
 				}
 			}
 		}
+
+		british_arms_discount = {
+			name = ENG_chiefs_of_staff
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		british_convoy_discount = {
+			name = ENG_chiefs_of_staff
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			equipment_bonus = {
+				light_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				convoy = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		british_tank_discount = {
+			name = ENG_chiefs_of_staff
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.1 instant = yes
+				}				
+			}
+		}
 		CAN_euro = {
 			name = CAN_army
 			allowed = {

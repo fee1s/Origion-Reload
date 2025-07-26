@@ -153,7 +153,8 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_ideas = uk_tizards_mission
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_research_speed_factor = 0.08 tooltip = research_speed_factor_tt}
 			
 			if = { limit = { USA = { exists = yes } }
 				USA = { 
@@ -407,7 +408,9 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			add_ideas = british_arms_discount
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			custom_effect_tooltip = british_arms_discount_tt
+			hidden_effect = {add_ideas = british_arms_discount}
 		}
 	}
 	focus = {
@@ -431,10 +434,8 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = usa_rubber_reserve_company_idea_first
-				add_idea = usa_rubber_reserve_company_idea_second
-			}
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_production_speed_synthetic_refinery_factor = 0.75 tooltip = production_speed_synthetic_refinery_factor_tt}
 			
 			if = { limit = { USA = { exists = no } }
 				modify_building_resources = {
@@ -647,7 +648,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_ideas = british_austerity_idea
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_consumer_goods_expected_value = -0.035 tooltip = consumer_goods_expected_tt}
 		}
 	}
 
@@ -821,8 +823,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
-			add_ideas = ENG_chiefs_of_staff_committee_idea
+		completion_reward = { 
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_max_command_power = 20 tooltip = max_command_power_tt}
+			add_to_variable = {ENG_command_power_gain_mult = 0.1 tooltip = command_power_gain_mult_tt}
+			add_to_variable = {ENG_planning_speed = 0.1 tooltip = planning_speed_tt}
 			add_potential_special_forces_tree = yes
 		}
 	}
@@ -941,7 +946,9 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = british_convoy_discount
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			custom_effect_tooltip = british_convoy_discount_tt
+			hidden_effect = {add_ideas = british_convoy_discount}
 		}
 	}
 
@@ -1021,7 +1028,10 @@ focus_tree = {
 				}
 				set_state_flag = ENG_expand_the_repair_yards_2dockyard
 			}
-			add_ideas = ENG_expand_the_repair_yards
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_refit_ic_cost = -0.1 tooltip = refit_ic_cost_tt}
+			add_to_variable = {ENG_refit_speed = 0.1 tooltip = refit_speed_tt}
+			add_to_variable = {ENG_repair_speed_factor = 0.1 tooltip = repair_speed_factor_tt}
 		}
 	}
 
@@ -1132,7 +1142,9 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_ideas = ENG_anti_submarine_training_school
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_convoy_retreat_speed = 0.25 tooltip = convoy_retreat_speed_tt}
+			add_to_variable = {ENG_navy_submarine_detection_factor = 0.1 tooltip = navy_submarine_detection_factor_tt}
 		}
 	}
 
@@ -1151,9 +1163,8 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_ideas = {
-				ENG_colonial_elite
-			}
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_research_speed_factor = 0.07 tooltip = research_speed_factor_tt}
 		}
 	}
 
@@ -1955,7 +1966,8 @@ focus_tree = {
 			army_experience = 300
 			navy_experience = 50
 			air_experience = 50
-			add_ideas = ENG_service_overseas_idea
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_acclimatization_hot_climate_gain_factor = 0.1 tooltip = acclimatization_hot_climate_gain_factor_tt}
 		}
 	}
 	focus = {
@@ -1979,26 +1991,9 @@ focus_tree = {
 		relative_position_id = uk_colonial_focus
 		cost = 2
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = ENG_fortify_the_empire_1
-				}
-				swap_ideas = {
-					remove_idea = ENG_fortify_the_empire_1
-					add_idea = ENG_fortify_the_empire_2
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea = ENG_fortify_the_empire_1
-					}
-					NOT = {
-						has_idea = ENG_fortify_the_empire_2
-					}
-				}
-				add_ideas = ENG_fortify_the_empire_1
-			}
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_production_speed_coastal_bunker_factor = 0.05 tooltip = production_speed_coastal_bunker_factor_tt}
+			add_to_variable = {ENG_production_speed_bunker_factor = 0.05 tooltip = production_speed_bunker_factor_tt}
 			447 = {
 				add_building_construction = {
 					type = radar_station
@@ -3032,7 +3027,12 @@ focus_tree = {
 		prerequisite = { focus = ENG_issue_gasmasks }
 		
 		completion_reward = {
-			add_ideas = uk_blood_toil_tears
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_consumer_goods_expected_value = -0.025 tooltip = consumer_goods_expected_tt}
+			add_to_variable = {ENG_industrial_capacity_dockyard = 0.075 tooltip = industrial_capacity_dockyard_tt}
+			add_to_variable = {ENG_industrial_capacity_factory = 0.075 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {ENG_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt}
+			add_to_variable = {ENG_weekly_bombing_war_support = 0.005 tooltip = weekly_bombing_war_support_tt}
 		}
 	}
 	focus = {
@@ -3083,7 +3083,16 @@ focus_tree = {
 		
 		prerequisite = { focus = ENG_blood_toil_tears }
 		
-		completion_reward = { add_ideas = uk_we_shall_fight_on_the_beaches }
+		completion_reward = {
+			 custom_effect_tooltip = ENG_stoyak_intro
+			 add_to_variable = {ENG_production_speed_arms_factory_factor = 0.15 tooltip = production_speed_arms_factory_factor_tt}
+			 add_to_variable = {ENG_defensive_war_stability_factor = 0.1 tooltip = defensive_war_stability_factor_tt}
+			 add_to_variable = {ENG_weekly_convoys_war_support = 0.02 tooltip = weekly_convoys_war_support_tt}
+			 custom_effect_tooltip = generic_skip_one_line_tt
+			 custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			 add_to_variable = {ENG_convoy_escort_efficiency = 0.15 tooltip = convoy_escort_efficiency_tt}
+			
+			}
 	}
 	
 	focus = {
@@ -3102,7 +3111,15 @@ focus_tree = {
 		
 		prerequisite = { focus = ENG_blood_toil_tears }
 		
-		completion_reward = { add_ideas = uk_their_finest_hour }
+		completion_reward = { 
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_naval_detection = 0.1 tooltip = naval_detection_tt}
+			add_to_variable = {ENG_air_night_penalty = -0.1 tooltip = air_night_penalty_tt}
+			add_to_variable = {ENG_air_home_defence_factor = 0.05 tooltip = air_home_defence_factor_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
+		 }
 	}
 	
 	focus = {
@@ -3135,15 +3152,6 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		x = -1
 		y = 1
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				NOT = {
-					has_dlc = "Man the Guns"
-				}
-			}
-		}
 		relative_position_id = ENG_home_defence
 		cost = 10
 		ai_will_do = {
@@ -3153,7 +3161,9 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			add_ideas = ENG_prepare_for_the_inevitable_idea
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {ENG_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt}
 		}
 	}
 	focus = {
@@ -3202,10 +3212,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			swap_ideas = {
-				remove_idea = eng_no_asia
-				add_idea = eng_no_asia_navy
-			}
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt}
 			
 			random_owned_controlled_state = {
 				limit = {
@@ -3312,20 +3320,10 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			if = { limit = { has_idea = eng_no_asia_navy }
-				swap_ideas = {
-					remove_idea = eng_no_asia_navy
-					add_idea = eng_no_asia_tanks
-				}
-			}
-			
-			if = { limit = { has_idea = eng_no_asia }
-				swap_ideas = {
-					remove_idea = eng_no_asia
-					add_idea = eng_no_asia_tanks_but_not_navy
-				}
-			}
-			
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			custom_effect_tooltip = british_tank_discount_tt
+			hidden_effect = {add_ideas = british_tank_discount}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			set_technology = {
 			    amphibious_drive = 1
 				mtg_landing_craft = 1
