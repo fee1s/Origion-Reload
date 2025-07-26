@@ -300,7 +300,7 @@ focus_tree = {
 			custom_effect_tooltip = ITA_evacuation_oil_libya_tt
 			
 			hidden_effect = {
-				if = { limit = { controls_state = 662 } 
+				if = { limit = { 662 = { is_controlled_by_axis = yes } } 
 					662 = {
 						add_resource = {
 							type = oil
@@ -324,7 +324,7 @@ focus_tree = {
 					}
 				}
 				
-				if = { limit = { controls_state = 984 }
+				if = { limit = { 984 = { is_controlled_by_axis = yes } }
 					984 = {
 						add_resource = {
 							type = oil
@@ -348,7 +348,7 @@ focus_tree = {
 					}
 				}
 				
-				if = { limit = { controls_state = 983 }				
+				if = { limit = { 983 = { is_controlled_by_axis = yes } }				
 					983 = {
 						add_resource = {
 							type = oil
@@ -388,7 +388,10 @@ focus_tree = {
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
 		
-		bypass = { NOT = { controls_state = 447 controls_state = 907 } }
+		bypass = { 
+			447 = { is_controlled_by_axis = no }
+			907 = { is_controlled_by_axis = no }
+		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -396,7 +399,7 @@ focus_tree = {
 			custom_effect_tooltip = ITA_trophies_north_african_company_tt
 			
 			hidden_effect = {
-				if = { limit = { controls_state = 447 } 
+				if = { limit = { 447 = { is_controlled_by_axis = yes } } 
 					447 = {
 						add_resource = {
 							type = oil
@@ -428,7 +431,7 @@ focus_tree = {
 					}
 				}
 				
-				if = { limit = { controls_state = 907 } 
+				if = { limit = { 907 = { is_controlled_by_axis = yes } } 
 					907 = {
 						add_resource = {
 							type = oil
@@ -476,7 +479,10 @@ focus_tree = {
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
 		
-		bypass = { NOT = { controls_state = 291 controls_state = 676 } }
+		bypass = { 
+			291 = { is_controlled_by_axis = no }
+			676 = { is_controlled_by_axis = no }
+		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -484,7 +490,7 @@ focus_tree = {
 			custom_effect_tooltip = ITA_baghdad_gold_tt
 			
 			hidden_effect = {
-				if = { limit = { controls_state = 291 } 
+				if = { limit = { 291 = { is_controlled_by_axis = yes } } 
 					291 = {
 						add_resource = {
 							type = oil
@@ -500,7 +506,7 @@ focus_tree = {
 					}
 				}
 				
-				if = { limit = { controls_state = 676 } 
+				if = { limit = { 675 = { is_controlled_by_axis = yes } } 
 					676 = {
 						add_resource = {
 							type = oil

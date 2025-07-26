@@ -100,6 +100,18 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
+	if = { # Финка не дает ленд-лиз
+		limit = {
+            FROM { original_tag = FIN }
+        }
+		always = no
+	}
+	if = { # Финка не дает ленд-лиз
+		limit = {
+            original_tag = FIN
+        }
+		always = no
+	}
 	if = { # Юса не дает ленд-лиз до войны
 		limit = {
             FROM { tag = USA }
@@ -263,6 +275,15 @@ DIPLOMACY_SEND_EXP_FORCE_ENABLE_TRIGGER = {
 			FROM = { ORIGION_is_in_faction_with_allies = yes }
         }
 		always = no
+	}
+    if = {
+		limit = {
+			OR = {
+			    original_tag = FIN
+				FROM = { original_tag = FIN }
+			}
+        }
+		always = no
 	}	
 }
 
@@ -275,6 +296,30 @@ DIPLOMACY_RETURN_EXP_FORCE_ENABLE_TRIGGER = {
 			}
 			
             FROM = { ORIGION_is_in_faction_with_allies = yes }
+        }
+		always = no
+	}
+}
+
+DIPLOMACY_ASKSTATECONTROL_ENABLE_TRIGGER = {
+     if = {
+		limit = {
+			OR = {
+			    original_tag = FIN
+				FROM = { original_tag = FIN }
+			}
+        }
+		always = no
+	}
+}
+
+DIPLOMACY_REQUESTSTATECONTROL_ENABLE_TRIGGER = {
+     if = {
+		limit = {
+			OR = {
+			    original_tag = FIN
+				FROM = { original_tag = FIN }
+			}
         }
 		always = no
 	}
