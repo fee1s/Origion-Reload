@@ -291,8 +291,6 @@ focus_tree = {
 		cost = 10
 		
 		available = { date > 1941.12.1 }
-		
-		bypass = { axis_lost_africa_trigger = yes }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -387,11 +385,6 @@ focus_tree = {
 		
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
-		
-		bypass = { 
-			447 = { is_controlled_by_axis = no }
-			907 = { is_controlled_by_axis = no }
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -478,11 +471,6 @@ focus_tree = {
 		
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
-		
-		bypass = { 
-			291 = { is_controlled_by_axis = no }
-			676 = { is_controlled_by_axis = no }
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
