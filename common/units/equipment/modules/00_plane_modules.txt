@@ -526,6 +526,9 @@ equipment_modules = {
 		category = tac_weapon
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { cas tactical_bomber }
+		forbid_equipment_type_exact_match_for_category = {
+			fighter_weapon = tactical_bomber
+		}
 
 		add_stats = {
 			weight = 10

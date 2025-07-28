@@ -297,18 +297,27 @@ characters={
 			}
 		}
 		advisor={
-			slot = air_chief
+			slot = high_command
 			idea_token = ROM_gheorghe_jienescu
 			allowed = {
 				original_tag = ROM
 			}
 			traits = {
-				air_chief_reform_2
+				army_regrouping_2
 			}
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}
 
@@ -371,6 +380,15 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}	
 	
