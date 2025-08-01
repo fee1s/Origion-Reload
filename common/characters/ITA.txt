@@ -335,13 +335,32 @@ characters = {
 			}
 		}
 		
+		advisor = {
+			slot = high_command
+			idea_token = ugo_cavallero
+			ledger = army
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 2.000
+			}
+		}	
+		
 		corps_commander = {
-			traits = { old_guard career_officer trait_cautious organisational_leader }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 3
+			traits = { career_officer trikster infantry_officer infantry_leader organizer trickster commando }
+			skill = 6
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id = 0
 		}
 	}
@@ -359,9 +378,9 @@ characters = {
 			traits = { career_officer trikster infantry_officer infantry_leader organizer trickster commando }
 			skill = 6
 			attack_skill = 3
-			defense_skill = 4
+			defense_skill = 5
 			planning_skill = 4
-			logistics_skill = 3
+			logistics_skill = 4
 			legacy_id = 0
 		}
 		
@@ -492,25 +511,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_alfredo_guzzoni_small
 				large = GFX_portrait_ITA_alfredo_guzzoni
-			}
-		}
-
-		advisor = {
-			slot = high_command
-			idea_token = alfredo_guzzoni
-			ledger = army
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 2.000
 			}
 		}
 		
@@ -992,24 +992,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_portrait_ITA_alberto_pariani_small
-			}
-		}
-
-		advisor = {
-			slot = army_chief
-			idea_token = ITA_alberto_pariani
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_completed_focus = ITA_a_bandits_war
-			}
-			traits = {
-				army_chief_maneuver_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 1.000
 			}
 		}
 	}

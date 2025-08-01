@@ -291,6 +291,8 @@ focus_tree = {
 		cost = 10
 		
 		available = { date > 1941.12.1 }
+		
+		bypass = { axis_lost_africa_trigger = yes }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -379,6 +381,8 @@ focus_tree = {
 		icon = GFX_focus_generic_the_suez
 		
 		prerequisite = { focus = ITA_evacuation_oil_libya }
+		
+		bypass = { NOT = { controls_state = 447 controls_state = 907 } }
 
 		x = -1
 		y = 1
@@ -471,6 +475,8 @@ focus_tree = {
 		
 		relative_position_id = ITA_evacuation_oil_libya
 		cost = 5
+		
+		bypass = { NOT = { controls_state = 291 controls_state = 676 } }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -2910,11 +2916,12 @@ focus_tree = {
 		available = {
 			date > 1941.6.1
 			NOT = { controls_state = 907 } 
+			NOT = { axis_lost_africa_trigger = yes }
 		}
 		
 		relative_position_id = ITA_pact_of_steel
 		icon = GFX_focus_ITA_italian_hegemony
-		cost = 5
+		cost = 2
 		
 		x = -1
 		y = 2
