@@ -9,6 +9,8 @@ NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
 NDefines.NCountry.CONVOY_LENDLEASE_RANGE_FACTOR = 0 --1
 
+NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100 --200
+
 NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 30
 
 --Army
@@ -69,23 +71,23 @@ NDefines.NMilitary.ACCLIMATIZATION_LOSS_SPEED_FACTOR = 4.0 -- Скорость �
 
 -- Воздух
 
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.45 -- Умеменьшить размены в воздухе
-NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 1.35 -- Умеменьшить размены в воздухе
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.225 -- Умеменьшить размены в воздухе
+NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 0.675 -- Умеменьшить размены в воздухе
 
-NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 1.45 -- портстрайк бафф
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.75 -- бафф морбобров по дамагу по организации
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.45 -- бафф морбобров по дамагу
+NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 2.9 -- портстрайк бафф
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 3.5 -- бафф морбобров по дамагу по организации
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.9 -- бафф морбобров по дамагу
 
-NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 1.2 -- множитель получаемого опыта авиации (всего)
+NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 2.4 -- множитель получаемого опыта авиации (всего)
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самолетики не могут получить ранение на тренировке
 
-NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.055 -- бафф касых по дамагу
-NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.045 -- бафф касых по дамагу по организации
+NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.11 -- бафф касых по дамагу
+NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.09 -- бафф касых по дамагу по организации
 
 NDefines.NAir.AIR_WING_MAX_STATS_ATTACK = 9999 -- ванильный лок на максимальное кол-во статов в бою
 NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на максимальное кол-во статов в бою
 
-NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 1.5 -- Кол-во касов от ШФ
+NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.75 -- Кол-во касов от ШФ
 
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.0 -- шанс попадания зсу-атаки по касам
 
