@@ -78,7 +78,9 @@ NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 2.9 -- портстрайк бафф
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 3.5 -- бафф морбобров по дамагу по организации
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.9 -- бафф морбобров по дамагу
 
-NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 2.4 -- множитель получаемого опыта авиации (всего)
+NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 2.4 -- множитель получаемого опыта авиации (всего) by feels: работает по выеб*нному, судя по всему, скейлит опыт именно авиакрыльев
+
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 14.0 -- множитель получаемого опыта от тренировки, увеличено в два раза в связи с увеличением стоимости авиации, 06.08.25
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самолетики не могут получить ранение на тренировке
 
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.11 -- бафф касых по дамагу
