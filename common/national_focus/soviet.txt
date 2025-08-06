@@ -70,34 +70,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_improve_railway_network
-
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = -2
-		y = 1
-		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			build_railway = {
-				level = 3 
-				path = { 6380 13421 6414 6348 3263 382 246 6365 11284 6252 3335 3306 3225 9566 6508 11489 6458 11557 13426 525 }
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_third_five_year_plan
 
 		icon = GFX_focus_generic_industry_2
@@ -140,7 +112,6 @@ focus_tree = {
 		relative_position_id = SOV_third_five_year_plan
 		cost = 10
 
-		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -186,7 +157,7 @@ focus_tree = {
 		icon = GFX_goal_reichsautobahn
 		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
 		cost = 10
 		
@@ -227,73 +198,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_shift_to_armaments_production
-
-		icon = GFX_focus_generic_combined_arms
-		prerequisite = { focus = SOV_third_five_year_plan }
-		x = 2
-		y = 2
-		relative_position_id = SOV_third_five_year_plan
-		cost = 10
-
-		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SOV_fyp_production_speed_arms_factory_factor = 0.05 }
-			}
-			custom_effect_tooltip = SOV_shift_to_armaments_production_ns_tt
-
-				add_tech_bonus = {
-					name = SOV_shift_to_armaments_production
-					bonus = 1.0
-					uses = 1
-					technology = concentrated_industry5
-				}
-				add_tech_bonus = {
-					name = SOV_shift_to_armaments_production
-					bonus = 1.0
-					uses = 1
-					technology = assembly_line_production
-				}
-		}
-	}
-
-	focus = {
-		id = SOV_optimize_production_lines
-
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = SOV_shift_to_armaments_production }
-		x = 0
-		y = 3
-		relative_position_id = SOV_shift_to_armaments_production
-		cost = 10
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.1 } #Add efficiency start
-			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.05 } #Add small output bonus
-			custom_effect_tooltip = SOV_optimize_production_lines_ns_tt
-
-			add_tech_bonus = {
-				name = SOV_optimize_production_lines
-				ahead_reduction = 2
-				bonus = 1
-				uses = 1
-				technology = flexible_line
-				technology = streamlined_line
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_steel_casting_industry
 
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry focus = SOV_shift_to_armaments_production }
+		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry focus = SOV_synthetic_rubber }
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
@@ -379,12 +287,12 @@ focus_tree = {
 		id = SOV_synthetic_rubber
 
 		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = SOV_steel_casting_industry }
-		x = -1
-		y = 1
-		relative_position_id = SOV_steel_casting_industry
+		prerequisite = { focus = SOV_third_five_year_plan }
+		relative_position_id = SOV_third_five_year_plan
+		x = 2
+		y = 2
 		cost = 5
-		
+		available = { has_completed_focus = SOV_desperate_measures }
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {	
@@ -411,11 +319,11 @@ focus_tree = {
 		id = SOV_oil_production
 
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = SOV_steel_casting_industry }
-		x = 1
-		y = 1
-		relative_position_id = SOV_steel_casting_industry
+		prerequisite = { focus = SOV_synthetic_rubber }
+		x = 0
+		y = 2
 		cost = 5
+		relative_position_id = SOV_synthetic_rubber
 
 		available = {
 		}
@@ -443,12 +351,10 @@ focus_tree = {
 
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
 		cost = 10
-
-		mutually_exclusive = { focus = SOV_foreign_experts }
 
 		available = {
 
@@ -463,35 +369,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_foreign_experts
-
-		icon = GFX_focus_spa_the_spanish_miracle
-		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = 2
-		y = 0
-		relative_position_id = SOV_national_specialists
-		cost = 10
-
-		mutually_exclusive = { focus = SOV_national_specialists }
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = SOV_gosproyektstroy_1
-		}
-	}
-
-	focus = {
 		id = SOV_eastern_development
 
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = SOV_national_specialists focus = SOV_foreign_experts }
-		x = 0
+		prerequisite = { focus = SOV_national_specialists }
+		x = -1
 		y = 1
 		relative_position_id = SOV_national_specialists
 		cost = 5
@@ -524,7 +406,7 @@ focus_tree = {
 		id = SOV_develop_the_urals
 
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = SOV_national_specialists focus = SOV_foreign_experts }
+		prerequisite = { focus = SOV_national_specialists }
 		x = 2
 		y = 0
 		relative_position_id = SOV_eastern_development
