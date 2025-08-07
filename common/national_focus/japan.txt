@@ -394,10 +394,11 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = {
-				name = JAP_armored_divisions
+				name = JAP_sov_non_aggresive_pact
 				bonus = 1.0
 				uses = 1
-				category = armor	
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -473,39 +474,27 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			custom_effect_tooltip = JAP_guide_the_zaibatsus_tt
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_to_variable = {JAP_capacity_factory = 0.05}
 			add_to_variable = {JAP_production_speed_industrial_complex_factor = 0.05}
 			add_to_variable = {JAP_production_speed_arms_factory_factor = 0.05}
+			
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -537,55 +526,23 @@ focus_tree = {
 				technology = concentrated_industry3
 				technology = concentrated_industry4
 			}
-			random_owned_controlled_state = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					not = {
-						OR = {
-							state = 646
-							state = 645
-							state = 555
-						}
-					}
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-				set_state_flag = JAP_nationalize_war_industry_AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					not = {
-						OR = {
-							state = 646
-							state = 645
-							state = 555
-						}
-					}					
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = JAP_nationalize_war_industry_IC
 			}
 		}
 	}
@@ -596,15 +553,11 @@ focus_tree = {
 		prerequisite = { focus = JAP_national_research_policy }
 		x = 14
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}
 		available = {
-			any_controlled_state = {
-				is_core_of = ROOT
-				synthetic_refinery < 3
-			}
 		}
 		bypass = {
 		}
@@ -618,22 +571,24 @@ focus_tree = {
         	   resource = rubber
         	   amount = 2
         	}
-			717 = {
-				add_extra_state_shared_building_slots = 2
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = synthetic_refinery
+						size > 2
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
-			761 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 2
-					instant_build = yes
-				}
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = JAP_coal_liquification
 				bonus = 1.0
@@ -664,36 +619,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_ideas = war_economy
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 	}
 
@@ -718,33 +643,21 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
-			random_owned_controlled_state = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -773,36 +686,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_ideas = tot_economic_mobilisation
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 	}
 
@@ -1146,22 +1029,24 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = JAP_tokyo_weapon_investion_tt
 			add_to_variable = {line_change_production_efficiency_factor = 0.1}
-			716 = {
-				add_extra_state_shared_building_slots = 1
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
-			328 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			mio:JAP_nissan_organization = {
 					add_mio_funds = 3000
 			}
@@ -1234,6 +1119,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = JAP_osaka_arsenal 
+			custom_effect_tooltip = generic_skip_one_line_tt
 			531 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1242,8 +1128,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			mio:JAP_osaka_army_arsenal_organization = {
-					add_mio_funds = 3000
+				add_mio_funds = 3000
 			}
 		}
 	}
@@ -1585,6 +1474,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			army_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
 				bonus = 1.0
@@ -1621,29 +1511,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_ideas = JAP_supremacy_of_technology
-			random_owned_controlled_state = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1675,6 +1553,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			army_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt 
 			add_tech_bonus = {
 				name = JAP_modern_artillery
 				bonus = 1.0
@@ -1706,17 +1585,21 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			army_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 1.0
+				uses = 1
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = JAP_armored_divisions
 				bonus = 1.0
 				uses = 2
-				category = armor	
-			}
-			add_tech_bonus = {
-				name = mech_army_bonus
-				bonus = 1.0
-				uses = 2
-				category = motorized_equipment
+				technology = mechanised_infantry
+				technology = amphibious_mechanized_infantry
 			}
 		}
 	}
@@ -2136,74 +2019,16 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			random_owned_controlled_state = {
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = dockyard
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
+				random_select_amount = 5
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -2276,19 +2101,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_potential_special_forces_tree = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
-				name = tp_bonus
+				name = JAP_expand_the_snlf
 				bonus = 2
 				uses = 1
-				category = tp_tech
-			}
-			else = {
-				add_tech_bonus = {
-					name = JAP_expand_the_snlf
-					bonus = 1.0
-					uses = 1
-					category = marine_tech	
-				}
+				technology = amphibious_drive
 			}
 			add_tech_bonus = {
 				name = special_bonus
@@ -2706,33 +2524,21 @@ focus_tree = {
 				uses = 1
 				technology = concentrated_industry5
 			}
-			random_owned_controlled_state = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2758,44 +2564,17 @@ focus_tree = {
 		completion_reward = {	
 			custom_effect_tooltip = JAP_centralized_economic_tt
 			add_to_variable = {JAP_capacity_factory = 0.10}
-			random_owned_controlled_state = {
+			
+			every_core_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -2840,29 +2619,16 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = JAP_war_economic_tt
 			add_to_variable = {JAP_consumer_goods_expected_value = -0.03}
-			random_owned_controlled_state = {
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory

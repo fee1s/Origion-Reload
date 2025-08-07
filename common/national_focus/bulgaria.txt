@@ -344,15 +344,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			army_experience = 50
+			army_experience = 200
 			navy_experience = 50
 			air_experience = 50
-			add_doctrine_cost_reduction = {
-				name = BUL_vasil_levsky_national_military_university
-			    cost_reduction = 0.5
-			    uses = 4
-				category = land_doctrine
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_research_slot = 1
 		}
 	}

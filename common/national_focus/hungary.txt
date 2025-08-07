@@ -1433,16 +1433,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			army_experience = 100
-
-			add_doctrine_cost_reduction = {
-				name = HUN_army_maneuvers
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-
+			army_experience = 150
 		}
 	}
 
@@ -1615,12 +1606,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = wuw_HUN_doctrinal_studies
-				cost_reduction = 0.5
-				uses = 3
-				category = land_doctrine
-			}
+			army_experience = 100
 		}
 	}
 
