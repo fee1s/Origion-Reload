@@ -52,34 +52,6 @@ HUN_mw_aircraft_organization = {
 	}
 }
 
-HUN_cas_organization = {
-	include = generic_cas_aircraft_organization
-	icon = GFX_idea_mw_aircraft
-	
-	allowed = {	
-		tag = HUN 
-	}
-}
-
-HUN_heavy_air_organization = {
-	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_mw_aircraft
-	
-	allowed = {	
-		tag = HUN 
-	}
-	
-	override_trait = {
-		token = generic_mio_trait_flying_fortress
-		position = { x=-1 y=1 }
-	}
-	
-	override_trait = {
-		token = generic_mio_trait_advanced_instruments
-		position = { x=1 y=1 }
-	}
-}
-
 
 
 ################################### 

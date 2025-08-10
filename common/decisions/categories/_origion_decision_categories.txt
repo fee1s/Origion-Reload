@@ -21,6 +21,22 @@ Epsilon_decions = {
 		
 	}
 }
+axis_dec_cat = {
+    icon = GFX_decision_category_usa_intervention_mandate
+	
+	allowed = {
+		OR = {
+		    original_tag = HUN
+			original_tag = BUL
+			original_tag = ROM
+			original_tag = ITA
+		}
+	}
+	
+	priority = 100
+	
+	visible = { always = yes }
+}
 USA_kambeck = {
 	
 	icon = military_operation

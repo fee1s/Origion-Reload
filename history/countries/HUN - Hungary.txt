@@ -87,12 +87,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "WM-16"
-		type = small_plane_cas_airframe_0
+		type = small_plane_airframe_1
 		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small
 		}
+		design_team = mio:HUN_mw_aircraft_organization
 	}
 }
 

@@ -1210,3 +1210,521 @@ FIN_jatkosota = {
 		}
 	}
 }
+axis_dec_cat = {
+	aviation_ll_to_germany = {
+		icon = GFX_GER_so_decision
+		visible = { NOT = { has_country_flag = aviation_ll_to_germany_enabled } }
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			set_country_flag = aviation_ll_to_germany_enabled
+			custom_effect_tooltip = aviation_ll_to_germany_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			activate_mission = aviation_ll
+		}
+	}
+	aviation_ll_stop_to_germany = {
+		icon = GFX_GER_so_decision
+		visible = { has_country_flag = aviation_ll_to_germany_enabled } 
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			clr_country_flag = aviation_ll_to_germany_enabled
+		}
+	}
+	aviation_ll = {
+		icon = GFX_GER_so_decision
+		fire_only_once = no
+		activation = { always = no }
+		allowed = { always = no }
+		available = { NOT = { has_country_flag = aviation_ll_to_germany_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		priority = 10
+		timeout_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 399 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 400 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 400 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 349 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 350 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 350 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 299 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 300 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 300 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 249 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 250 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 250 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 199 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 200 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 200 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 149 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 150 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 150 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 99 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 100 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 100 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 49 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 50 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 50 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { small_plane_airframe > 24 } 
+					}
+				}
+				send_equipment = { equipment = small_plane_airframe amount = 25 target = GER }
+				hidden_effect = { activate_mission = aviation_ll }
+				add_to_variable = { aviation_ll_var = 25 }
+			}
+			hidden_effect = { activate_mission = aviation_ll }
+		}
+	}
+	tank_ll_to_germany = {
+		icon = GFX_GER_so_decision
+		visible = { NOT = { has_country_flag = tank_ll_to_germany_enabled } }
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			set_country_flag = tank_ll_to_germany_enabled
+			custom_effect_tooltip = tank_ll_to_germany_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			activate_mission = tank_ll
+		}
+	}
+	tank_ll_stop_to_germany = {
+		icon = GFX_GER_so_decision
+		visible = { has_country_flag = tank_ll_to_germany_enabled } 
+		fire_only_once = no
+		priority = 10
+		complete_effect = {
+			clr_country_flag = tank_ll_to_germany_enabled
+		}
+	}
+	tank_ll = {
+		icon = GFX_GER_so_decision
+		fire_only_once = no
+		activation = { always = no }
+		allowed = { always = no }
+		available = { NOT = { has_country_flag = tank_ll_to_germany_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		priority = 10
+		timeout_effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 2000 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 2000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 2000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 1800 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 1800 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 1800 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 1600 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 1600 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 1600 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 1400 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 1400 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 1400 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 1200 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 1200 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 1200 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 1000 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 1000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 1000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 800 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 800 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 800 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 600 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 600 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 600 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 400 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 400 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 400 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_chassis > 200 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_chassis amount = 200 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { tank_ll_var = 200 }
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 2000 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 2000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 2000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 1800 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 1800 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 1800 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 1600 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 1600 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 1600 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 1400 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 1400 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 1400 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 1200 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 1200 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 1200 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 1000 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 1000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 1000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 800 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 800 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 800 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 600 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 600 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 600 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 400 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 400 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 400 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { medium_tank_destroyer_chassis > 200 } 
+					}
+				}
+				send_equipment = { equipment = medium_tank_destroyer_chassis amount = 200 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { antitank_ll_var = 200 }
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 7500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 7500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 7500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 7000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 7000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 7000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 6500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 6500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 6500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 6000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 6000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 6000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 5500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 5500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 5500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 5000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 5000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 5000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 4500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 4500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 4500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 4000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 4000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 4000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 3500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 3500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 3500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 3000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 3000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 3000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 2500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 2500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 2500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 2000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 2000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 2000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 1500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 1500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 1500 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 1000 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 1000 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 1000 }
+			}
+			else_if = {
+				limit = {
+					ROOT = { 
+						has_equipment = { mechanized_equipment > 500 } 
+					}
+				}
+				send_equipment = { equipment = mechanized_equipment amount = 500 target = GER }
+				hidden_effect = { activate_mission = tank_ll }
+				add_to_variable = { mech_ll_var = 500 }
+			}
+			hidden_effect = { activate_mission = tank_ll }
+		}
+	}
+}
