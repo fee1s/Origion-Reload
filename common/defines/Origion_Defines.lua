@@ -91,7 +91,8 @@ NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на 
 
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.75 -- Кол-во касов от ШФ
 
-NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.0 -- шанс попадания зсу-атаки по касам
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.01 -- шанс попадания зсу-атаки по касам
+NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.0001 -- шанс попадания зсу-атаки по касам
 
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0 -- Моментальная развертка авиа-крыльев
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 5.0 -- Скорость перелета авиа-крыльев между филдами (увеличено, ванила - 0.02)
@@ -107,6 +108,7 @@ NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_MAX_DISRUPTION_DAMAGE_TO_CONSIDER = 0
 
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_DIRECT_DISRUPTION_DAMAGE_FACTOR	 =  0
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_MAX_FACTOR = 0 
+
 NDefines.NAir.DISRUPTION_FACTOR = 6  -- (4 -> 7) with decent radar coverage equal amounts of fighters vs naval bombers will disrupt almost all naval bombers if not escorted, with low detection very few bombers are intercepted still
 NDefines.NAir.ESCORT_FACTOR = 3 -- (2 -> 3) to make sure that escorted planes are still capable of bombing, with equal escorts/interceptors most of bombers get through Keep in mind that these values will also affect how cas/tac/strat bombers work, they make escorting planes much more important (which imo is 100% fine)
 

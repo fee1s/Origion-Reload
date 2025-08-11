@@ -88,21 +88,6 @@ characters={
 				small="GFX_idea_gerd_von_rundstedt"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = gerd_von_rundstedt
-			ledger = army
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				army_regrouping_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.500
-			}
-		}
 		
 		field_marshal={
 			traits={ old_guard urban_assault_specialist defensive_doctrine }
@@ -335,14 +320,29 @@ characters={
 				small=GFX_portrait_GER_walter_model_small
 			}
 		}
-		field_marshal={
-			traits={ brilliant_strategist trait_cautious politically_connected defensive_doctrine }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=10
+		advisor={
+			slot = high_command
+			idea_token = walter_model
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.500
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}
 

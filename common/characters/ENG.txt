@@ -277,14 +277,29 @@ characters={
 				small=GFX_portrait_ENG_william_slim_small
 			}
 		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = william_slim
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				military_theorist
+			}
+			ai_will_do = {
+				factor = 2.000
+			}
+		}
 		corps_commander={
-			traits={ war_hero trickster }
-			skill=5
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
 			attack_skill=3
-			defense_skill=3
-			planning_skill=5
-			logistics_skill=5
-			legacy_id=0
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}
 
@@ -351,31 +366,6 @@ characters={
 			}
 			army={
 				large=GFX_portrait_ENG_harold_alexander
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = harold_alexander
-			ledger = army
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
-			traits = {
-				military_theorist
-			}
-			ai_will_do = {
-				factor = 2.000
-				modifier = {
-					has_idea_with_trait = industrial_concern
-					has_idea_with_trait = silent_workhorse
-					factor = 10.000
-				}
 			}
 		}
 		

@@ -124,7 +124,7 @@ Epsilon_decions = { # Общие решения
 		}
 	}
 }
-Origion_fast_templates = { # Рещения на шаблоны
+Origion_fast_templates = { # Решения на авто-шаблоны
 	
 	decision_allow_templates = {
 
@@ -178,7 +178,7 @@ Origion_fast_templates = { # Рещения на шаблоны
 					infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 }  						 
 					infantry = { x = 0 y = 2 } 	infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } 
 				}
-				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } }
+				support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } military_police = { x = 0 y = 2 } }
 			}				
 		}
 	}
@@ -189,13 +189,13 @@ Origion_fast_templates = { # Рещения на шаблоны
 		complete_effect = {
 			set_temp_variable = { target_country = THIS }
 			division_template = {
-			name = "Танк 45W"
+				name = "Танк 45W Стандарт"
 				regiments = {
 					medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_tank_destroyer_brigade = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
 					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
 					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
-					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_tank_destroyer_brigade = { x = 1 y = 3 } medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
-					medium_tank_destroyer_brigade = { x = 0 y = 4 }  medium_sp_anti_air_brigade = { x = 1 y = 4 }													 mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
+					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 }    medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+					medium_tank_destroyer_brigade = { x = 0 y = 4 }													 								mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
 				}			
 				support = {
 					engineer = { x = 0 y = 0 }
@@ -204,9 +204,28 @@ Origion_fast_templates = { # Рещения на шаблоны
 					field_hospital = { x = 0 y = 3 }
 					logistics_company = { x = 0 y = 4 }
 				}
-			}				
+			}
+			
+			division_template = {
+				name = "Танк 45W Барбаросса"
+				regiments = {
+					medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
+					medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+					medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+					medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 }    medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+					medium_tank_destroyer_brigade = { x = 0 y = 4 }													 								mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
+				}			
+				support = {
+					engineer = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1 }		
+					flamethrower_brigade = { x = 0 y = 2 }
+					field_hospital = { x = 0 y = 3 }
+					anti_tank = { x = 0 y = 4 }
+				}
+			}
 		}
 	}
+	
 	decision_46w_template = {
 		icon = GFX_decision_generic_protection
 		fire_only_once = no

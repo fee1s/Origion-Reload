@@ -310,18 +310,6 @@ characters = {
 				large = GFX_portrait_SOV_boris_shaposhnikov
 			}
 		}
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = boris_shaposhnikov
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				military_theorist
-			}
-		}
 
 		corps_commander = {
 			traits = { career_officer trait_cautious }
@@ -363,16 +351,28 @@ characters = {
 				large = "GFX_portrait_SOV_ivan_konev"
 			}
 		}
-
-		corps_commander = {
-			traits = { harsh_leader armor_officer politically_connected }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 5
-			planning_skill = 2
-			logistics_skill = 5
-			legacy_id = 408
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = ivan_konev
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		
+		corps_commander={
+			traits={ career_officer infantry_officer infantry_leader Trickster }
+			skill=6
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9
 		}
 	}
 
