@@ -918,6 +918,16 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+			    limit = {
+				    has_global_flag = ONLY_ASIA_FLAG
+				}
+				USA = {
+				    add_from_faction = AST
+	                add_from_faction = CAN
+	                add_from_faction = RAJ
+				}
+			}
 		}
 	}
 	on_monthly = {

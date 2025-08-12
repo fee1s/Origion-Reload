@@ -1,0 +1,63 @@
+﻿division_template = {
+	name = "Пехота"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = { 
+		engineer = { x = 0 y = 0 } 
+		anti_air = { x = 0 y = 1 } 
+		military_police = { x = 0 y = 2 } 
+	}
+}
+division_template = {
+	name = "Танк 45W"
+	regiments = {
+		medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
+		medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+		medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+		medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 }    medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+		medium_tank_destroyer_brigade = { x = 0 y = 4 }													 								mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
+	}			
+	support = {
+		engineer = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }		
+		flamethrower_brigade = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		anti_tank = { x = 0 y = 4 }
+	}
+}
+
+units = {
+}
+
+
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CAN"
+		}
+		requested_factories = 1
+		progress = 0.73
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "CAN"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 100
+	}
+}
