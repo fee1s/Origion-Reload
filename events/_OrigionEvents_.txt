@@ -922,7 +922,7 @@ news_event = { # скрытый ивент вспомогательный по �
 	major = yes
 	fire_only_once = no
 	
-	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
+	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = ONLY_ASIA_FLAG } NOT = { has_global_flag = second_compiegne_signed } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
 	
 	immediate = {
 	    set_global_flag = second_compiegne_signed
@@ -949,6 +949,7 @@ news_event = { # Московское перемирие
 	trigger = {
 		FIN = { surrender_progress > 0.58 }
 		NOT = { has_global_flag = FIN_outofwar_flag }
+		NOT = { has_global_flag = ONLY_ASIA_FLAG }
 	}
 	
 	immediate = {

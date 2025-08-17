@@ -463,10 +463,7 @@ ideas = {
 			}
 			
 			cancel = {
-				OR = {
-					has_war_with = ENG
-					has_war_with = GER
-				}
+				has_war = yes
 			}
 			
 			removal_cost = -1
@@ -512,6 +509,20 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				consumer_goods_expected_value = -0.03
+			}
+		}
+		
+		only_asia_idea = {
+			allowed = {
+				always = no
+			}
+			picture = GER_proud_eagle_that_ate_the_sun
+	
+			removal_cost = -1
+			modifier = {
+				navy_max_range_factor = -0.5
+				production_cost_air_base_factor = 5
+				naval_invasion_capacity = -125
 			}
 		}
 		

@@ -15,6 +15,35 @@
 		engineer = { x = 0 y = 0 } 
 		anti_air = { x = 0 y = 1 } 
 		military_police = { x = 0 y = 2 } 
+		rangers_support = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Морская Пехота"
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 0 y = 4 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+		marine = { x = 1 y = 4 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+		artillery_brigade = { x = 2 y = 4 }
+	}
+	support = { 
+		pioneer_support = { x = 0 y = 0 } 
+		anti_air = { x = 0 y = 1 } 
+		rangers_support = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		artillery = { x = 0 y = 4 }
 	}
 }
 division_template = {
@@ -24,7 +53,7 @@ division_template = {
 		medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
 		medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
 		medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 }    medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
-		medium_tank_destroyer_brigade = { x = 0 y = 4 }													 								mechanized = { x = 3 y = 4 } mechanized = { x = 4 y = 4 }																									
+		medium_tank_destroyer_brigade = { x = 0 y = 4 }													 								mechanized = { x = 3 y = 4 }																									
 	}			
 	support = {
 		engineer = { x = 0 y = 0 }
@@ -38,19 +67,476 @@ division_template = {
 
 
 units = {
-
+    division= {
+		name = "1-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "2-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "3-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "4-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "5-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "6-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "7-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "8-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "9-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "10-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "11-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "12-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "13-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "14-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "15-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "16-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "17-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "18-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "19-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "20-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "21-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "22-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "23-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "24-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "25-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "26-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "27-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "28-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "29-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "30-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "31-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "32-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "33-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "34-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "35-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "36-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "37-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "38-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "39-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "40-я Пехотная Дивизия"
+		location = 7859
+		division_template = "Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	###
+	division= {
+		name = "1-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "2-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "3-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "4-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "5-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "6-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "7-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "8-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "9-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "10-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "11-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "12-я Морская Пехотная Дивизия"
+		location = 12406
+		division_template = "Морская Пехота"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	###
+	division= {
+		name = "1-я Танковая Дивизия"
+		location = 7859
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "2-я Танковая Дивизия"
+		location = 7859
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
 }
-
-
-
 
 ##### Starting Production #####
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_1
+			type = infantry_equipment_2
 			creator = "AST"
 		}
+		industrial_manufacturer  = mio:AST_lithgow_saf_organization
+		requested_factories = 15
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:AST_lithgow_saf_organization
+		requested_factories = 2
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_2
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:generic_artillery_organization
+		requested_factories = 4
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_2
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:generic_artillery_organization
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_3
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:generic_artillery_organization
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_2
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:AST_new_south_wales_rc_organization
+		requested_factories = 4
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_destroyer_chassis_2
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:AST_new_south_wales_rc_organization
+		requested_factories = 4
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = mechanized_equipment_1
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:generic_motorized_mechanized_organization
+		requested_factories = 3
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "AST"
+		}
+		industrial_manufacturer  = mio:generic_motorized_mechanized_organization
 		requested_factories = 1
 		progress = 0.75
 		efficiency = 100

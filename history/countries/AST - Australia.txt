@@ -187,4 +187,301 @@ add_equipment_to_stockpile = {
 
 1941.1.1.14 = {
     set_oob = "AST_1941"
+	set_research_slots = 4
+	set_convoys = 800
+	add_ideas = {
+	    war_economy
+		free_trade
+		limited_conscription
+		
+		john_northcott
+		horace_robertson
+		thomas_blamey
+		henry_wynter
+		
+		AST_jack_beasley
+		AST_ben_chifley
+	}
+	remove_dynamic_modifier = {
+		modifier = AST_economy_1_dm
+	}
+	add_dynamic_modifier = {
+		modifier = AST_economy_2_dm
+	}
+	set_variable = { AST_economy_dm_stability_factor = 0.2 }
+	set_variable = { AST_economy_dm_consumer_goods_expected_value = 0.00 }
+	set_variable = { AST_economy_dm_industrial_capacity_factory = 0.1 }
+	set_variable = { AST_economy_dm_production_factory_max_efficiency_factor = 0.1 }
+	add_dynamic_modifier = { modifier = AST_army_dm }
+	set_variable = { AST_army_dm_conscription_factor = 0.3 }
+	set_variable = { AST_army_dm_conscription = 0.075 }
+	set_variable = { AST_army_dm_army_morale_factor = 0.1 }
+	set_variable = { AST_army_dm_mobilization_speed = 0.5 }
+	mio:AST_new_south_wales_rc_organization = {
+		complete_mio_trait = generic_mio_trait_simplified_suspension
+		complete_mio_trait = generic_mio_trait_crew_ergonomics
+		complete_mio_trait = generic_mio_trait_improved_tracks
+		complete_mio_trait = generic_mio_trait_command_upgrades
+		complete_mio_trait = generic_mio_trait_standardized_components
+		complete_mio_trait = generic_mio_trait_long_barreled_guns
+		complete_mio_trait = generic_mio_trait_infantry_support_tanks
+		complete_mio_trait = generic_mio_trait_allied_production
+		complete_mio_trait = generic_mio_trait_allied_production_2
+	}
+	mio:AST_lithgow_saf_organization = {
+		complete_mio_trait = generic_mio_trait_drum_pattern_sights
+		complete_mio_trait = generic_mio_trait_quality_materials
+		complete_mio_trait = generic_mio_trait_improved_small_arms_bullet_design
+		complete_mio_trait = generic_mio_trait_armor_piercing_rounds
+		complete_mio_trait = generic_mio_trait_medium_machineguns
+		complete_mio_trait = generic_mio_trait_anti_vechicle_land_mines
+	}
+	set_technology = {
+	    infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		improved_infantry_weapons_2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		mechanised_infantry = 1
+		paratroopers = 1
+		marines = 1
+		marines2 = 1
+		tech_mountaineers = 1
+		
+		mtg_landing_craft = 1
+		mtg_tank_landing_craft = 1
+		
+		tech_engineers2 = 1
+		tech_recon2 = 1
+		tech_military_police = 1
+		tech_military_police2 = 1
+		tech_maintenance_company = 1
+		tech_maintenance_company2 = 1
+		tech_flamethrower_brigade = 1
+		tech_flamethrower_brigade2 = 1
+		tech_field_hospital = 1
+		tech_field_hospital2 = 1
+		tech_logistics_company = 1
+		tech_logistics_company2 = 1
+		tech_signal_company = 1
+		tech_signal_company2 = 1
+		
+		improved_light_tank_chassis = 1
+		amphibious_tank_chassis = 1
+		amphibious_drive = 1
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+		
+		interwar_antiair = 1
+		antiair1 = 1
+		antiair2 = 1
+		antiair3 = 1
+		interwar_artillery = 1
+		artillery1 = 1
+		artillery2 = 1
+		artillery3 = 1
+		interwar_antitank = 1
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+		antitank4 = 1
+		antitank5 = 1
+		
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+		improved_equipment_conversion = 1
+		advanced_equipment_conversion = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		concentrated_industry4 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		
+		electronic_mechanical_engineering = 1
+		mechanical_computing = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		improved_decimetric_radar = 1
+		centimetric_radar = 1
+		improved_centimetric_radar = 1
+		advanced_centimetric_radar = 1
+		
+		trench_warfare = 1
+		grand_battle_plan = 1
+		prepared_defense = 1
+		grand_assault = 1
+		grand_mechanized_offensive = 1
+		assault_concentration = 1
+		branch_interoperation = 1
+		assault_breakthrough = 1
+		central_planning = 1
+		c3i_theory = 1
+		
+		special_forces_mountaineers = 1
+		ski_troops = 1
+		rangers = 1
+		special_forces_recon = 1
+		mountaineers_combat_1 = 1
+		mountaineers_combat_2 = 1
+		mountaineers_combat_3 = 1
+		mountaineers_keystone_1 = 1
+		mountaineers_keystone_2 = 1
+		
+		special_forces_marines = 1
+		marines_jungle_troops = 1
+		marines_shore_parties = 1
+		marines_recon = 1
+		marines_expeditionary = 1
+		marines_expeditionary_blowtorch = 1
+		marines_expeditionary_support = 1
+	}
+	create_equipment_variant = {
+		name = "Средний Танк"
+		type = medium_tank_chassis_2
+		design_team = mio:AST_new_south_wales_rc_organization
+		upgrades  = {
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 14
+		}
+		modules = {
+			turret_type_slot = tank_medium_three_man_tank_turret
+			main_armament_slot = tank_medium_cannon_3
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = tank_radio_3
+			special_type_slot_4 = easy_maintenance
+		}
+	}
+	create_equipment_variant = {
+		name = "Средняя ПТ-Установка"
+		type = medium_tank_destroyer_chassis_2
+		design_team = mio:AST_new_south_wales_rc_organization
+		upgrades  = {
+			tank_nsb_engine_upgrade = 2
+		}
+		modules = {
+			turret_type_slot = tank_medium_fixed_superstructure_turret
+			main_armament_slot = tank_high_velocity_cannon_3
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = squeezebore_adaptor
+			special_type_slot_4 = easy_maintenance
+		}
+	}
+	285 = {
+	    add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 10
+			instant_build = yes
+		}
+	}
+	517 = {
+	    add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 12
+			instant_build = yes
+		}
+	}
+	518 = {
+		add_resource = {
+			type = oil
+			amount = 8
+		}
+	}
+	520 = {
+	    add_building_construction = {
+			type = infrastructure
+			level = 3
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+	}
+	521 = {
+	    add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 13
+			instant_build = yes
+		}
+	}
+	522 = {
+	    add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_resource = {
+			type = steel
+			amount = 10
+		}
+	}
+	523 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
+	}
+	737 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+	723 = {
+	    add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+	}
 }

@@ -28,6 +28,10 @@
 			factor = 5
 		}
 		
+		allow_branch = {
+		    NOT = { has_global_flag = ONLY_ASIA_flag }
+		}
+		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
@@ -980,6 +984,18 @@
 		cost = 5
 		available = {
 		    date > 1941.5.1
+		}
+		
+		allow_branch = {
+		    always = yes
+		}
+		
+		offset = {
+			x = -8
+			y = -6
+			trigger = {
+				has_global_flag = ONLY_ASIA_FLAG
+			}
 		}
 
 		cancel_if_invalid = yes

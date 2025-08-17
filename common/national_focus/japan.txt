@@ -24,6 +24,9 @@ focus_tree = {
 				NOT = { has_dlc = "Waking the Tiger" }
 			}
 		}
+		allow_branch = {
+		    NOT = { has_global_flag = ONLY_ASIA_flag }
+		}
 		cost = 10
 		ai_will_do = {
 			factor = 4
@@ -187,6 +190,17 @@ focus_tree = {
 			modifier = {
 				has_war_with = SOV
 				factor = 0
+			}
+		}
+		allow_branch = {
+		    always = yes
+		}
+		
+		offset = {
+			x = 0
+			y = -6
+			trigger = {
+				has_global_flag = ONLY_ASIA_FLAG
 			}
 		}
 		available = {

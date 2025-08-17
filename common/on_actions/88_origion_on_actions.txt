@@ -923,9 +923,17 @@ on_actions = {
 				    has_global_flag = ONLY_ASIA_FLAG
 				}
 				USA = {
-				    add_from_faction = AST
-	                add_from_faction = CAN
-	                add_from_faction = RAJ
+				    add_to_faction = AST
+	                add_to_faction = CAN
+	                add_to_faction = RAJ
+				}
+				every_country = {
+				    limit = {
+				        exists = yes
+					    NOT = { tag = COL }
+				    }
+				   add_ideas = only_asia_idea
+				   add_war_support = 0.25
 				}
 			}
 		}

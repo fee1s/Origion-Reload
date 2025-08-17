@@ -435,6 +435,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
+		
+		allow_branch = {
+		    NOT = { has_global_flag = ONLY_ASIA_flag }
+		}
 
 		available = {
 
