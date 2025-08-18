@@ -247,10 +247,21 @@ add_equipment_to_stockpile = {
 
 1941.1.1.14 = {
     set_oob = "RAJ_1941"
+	set_stability = 0.7
+	set_war_support = 0.5
+	set_popularities = {
+		democratic = 0
+		fascism = 0
+		communism = 0
+		neutrality = 100
+	}
 	add_ideas = {
 	    war_economy
 		free_trade
 		limited_conscription
+	}
+	remove_ideas = {
+		RAJ_princely_states
 	}
 	mio:RAJ_ishapore_rifle_factory_organization = {
 		complete_mio_trait = generic_mio_trait_drum_pattern_sights
@@ -359,6 +370,13 @@ add_equipment_to_stockpile = {
 		add_building_construction = {
 			type = arms_factory
 			level = 7
+			instant_build = yes
+		}
+	}
+	439 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
 			instant_build = yes
 		}
 	}

@@ -319,6 +319,29 @@ add_equipment_to_stockpile = {
 	set_faction_leader = yes
 	remove_from_faction = ENG
     set_oob = "USA_1941"
+	set_stability = 1
+	set_war_spport = 0.5
+	add_ideas = {
+		the_giant_wakes_dockyard
+		
+		USA_general_motors
+		
+		USA_henry_stimson
+		USA_henry_morgenthau
+		USA_victor_perlo
+		
+		USA_dwight_d_eisenhower
+		USA_harold_rainsford_stark
+		USA_carl_spaatz
+		USA_mark_clark
+		USA_george_s_patton
+		USA_douglas_macarthur
+	}
+	remove_ideas = {
+		usa_peacetime_shipbuilding
+	}
+	remove_dynamic_modifier = { modifier = USA_economy_1 }
+	remove_dynamic_modifier = { modifier = USA_war_departament }
 	set_technology = {
 	    infantry_weapons2 = 1
 		improved_infantry_weapons = 1
@@ -406,5 +429,117 @@ add_equipment_to_stockpile = {
 		marines_expeditionary = 1
 		marines_expeditionary_blowtorch = 1
 		marines_expeditionary_support = 1
+	}
+	261 = {
+		remove_building = {
+			type = industrial_complex
+			level = 7
+		}
+	}
+	357 = {
+		remove_building = {
+			type = industrial_complex
+			level = 5
+		}
+	}
+	358 = {
+		remove_building = {
+			type = industrial_complex
+			level = 7
+		}
+	}
+	359 = {
+		remove_building = {
+			type = industrial_complex
+			level = 7
+		}
+	}
+	360 = {
+		remove_building = {
+			type = industrial_complex
+			level = 6
+		}
+	}
+	373 = {
+		remove_building = {
+			type = industrial_complex
+			level = 5
+		}
+	}
+	378 = {
+		remove_building = {
+			type = industrial_complex
+			level = 5
+		}
+	}
+	391 = {
+		remove_building = {
+			type = industrial_complex
+			level = 5
+		}
+	}
+	396 = {
+		remove_building = {
+			type = industrial_complex
+			level = 5
+		}
+	}
+	
+	378 = {
+		add_building_construction = {
+			type = dockyard
+			level = 14
+			instant_build = yes
+		}
+	}
+	385 = {
+		add_building_construction = {
+			type = dockyard
+			level = 16
+			instant_build = yes
+		}
+	}
+	375 = {
+		add_building_construction = {
+			type = dockyard
+			level = 4
+			instant_build = yes
+		}
+	}
+	
+	379 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 17
+			instant_build = yes
+		}
+	}
+	384 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 10
+			instant_build = yes
+		}
+	}
+	388 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 17
+			instant_build = yes
+		}
+	}
+	393 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 15
+			instant_build = yes
+		}
+	}
+	395 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 9
+			instant_build = yes
+		}
 	}
 }

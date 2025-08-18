@@ -535,6 +535,12 @@ add_equipment_to_stockpile = {
 
 1941.1.1.14 = {
     set_oob = "JAP_1941"
+	set_stability = 0.6
+	add_ideas = {
+		tot_economic_mobilisation
+	}
+	remove_dynamic_modifier = { modifier = JAP_emperor_army_dm }
+	remove_dynamic_modifier = { modifier = JAP_zaibatsu_dm }
 	set_technology = {
 	    infantry_weapons2 = 1
 		improved_infantry_weapons = 1
@@ -622,5 +628,112 @@ add_equipment_to_stockpile = {
 		marines_expeditionary = 1
 		marines_expeditionary_blowtorch = 1
 		marines_expeditionary_support = 1
+	}
+	528 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 9
+			instant_build = yes
+		}
+	}
+	
+	375 = {
+		add_building_construction = {
+			type = dockyard
+			level = 11
+			instant_build = yes
+		}
+	}
+	527 = {
+		add_building_construction = {
+			type = dockyard
+			level = 11
+			instant_build = yes
+		}
+	}
+	536 = {
+		add_building_construction = {
+			type = dockyard
+			level = 14
+			instant_build = yes
+		}
+	}
+	537 = {
+		add_building_construction = {
+			type = dockyard
+			level = 4
+			instant_build = yes
+		}
+	}
+	608 = {
+		add_building_construction = {
+			type = dockyard
+			level = 9
+			instant_build = yes
+		}
+	}
+	609 = {
+		add_building_construction = {
+			type = dockyard
+			level = 9
+			instant_build = yes
+		}
+	}
+	716 = {
+		add_building_construction = {
+			type = dockyard
+			level = 6
+			instant_build = yes
+		}
+	}
+	
+	597 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 20
+			instant_build = yes
+		}
+	}
+	598 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 20
+			instant_build = yes
+		}
+	}
+	600 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
+	}
+	613 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 4
+			instant_build = yes
+		}
+	}
+	743 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	608 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 10
+			instant_build = yes
+		}
+	}
+	614 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 10
+			instant_build = yes
+		}
 	}
 }

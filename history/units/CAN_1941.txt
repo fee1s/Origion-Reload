@@ -36,6 +36,48 @@ division_template = {
 }
 
 units = {
+	division= {
+		name = "1-я Танковая Дивизия"
+		location = 11929
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "2-я Танковая Дивизия"
+		location = 11929
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "3-я Танковая Дивизия"
+		location = 11929
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "4-я Танковая Дивизия"
+		location = 11929
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "5-я Танковая Дивизия"
+		location = 11929
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "6-я Танковая Дивизия"
+		location = 11929
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
 }
 
 
@@ -44,20 +86,62 @@ units = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_1
+			type = infantry_equipment_2
 			creator = "CAN"
 		}
+		industrial_manufacturer  = mio:AST_lithgow_saf_organization
 		requested_factories = 1
-		progress = 0.73
+		progress = 0.75
 		efficiency = 100
 	}
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_equipment_1
+			type = support_equipment_1
 			creator = "CAN"
 		}
+		industrial_manufacturer  = mio:AST_lithgow_saf_organization
 		requested_factories = 1
-		progress = 0.85
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_3
+			creator = "CAN"
+		}
+		industrial_manufacturer  = mio:generic_artillery_organization
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_2
+			creator = "CAN"
+		}
+		industrial_manufacturer  = mio:CAN_vickers_armstrong_can_organization
+		requested_factories = 8
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_destroyer_chassis_2
+			creator = "CAN"
+		}
+		industrial_manufacturer  = mio:CAN_vickers_armstrong_can_organization
+		requested_factories = 15
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = mechanized_equipment_1
+			creator = "CAN"
+		}
+		industrial_manufacturer  = mio:generic_motorized_mechanized_organization
+		requested_factories = 4
+		progress = 0.75
 		efficiency = 100
 	}
 }

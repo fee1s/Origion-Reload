@@ -411,27 +411,6 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
-	division= {
-		name = "10-я Морская Пехотная Дивизия"
-		location = 12406
-		division_template = "Морская Пехота"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1.0
-	}
-	division= {
-		name = "11-я Морская Пехотная Дивизия"
-		location = 12406
-		division_template = "Морская Пехота"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1.0
-	}
-	division= {
-		name = "12-я Морская Пехотная Дивизия"
-		location = 12406
-		division_template = "Морская Пехота"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1.0
-	}
 	###
 	division= {
 		name = "1-я Танковая Дивизия"
@@ -447,6 +426,20 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
+	division= {
+		name = "3-я Танковая Дивизия"
+		location = 7859
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {
+		name = "4-я Танковая Дивизия"
+		location = 7859
+		division_template = "Танк 45W"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
 }
 
 ##### Starting Production #####
@@ -457,7 +450,7 @@ instant_effect = {
 			creator = "AST"
 		}
 		industrial_manufacturer  = mio:AST_lithgow_saf_organization
-		requested_factories = 15
+		requested_factories = 10
 		progress = 0.75
 		efficiency = 100
 	}
@@ -477,7 +470,7 @@ instant_effect = {
 			creator = "AST"
 		}
 		industrial_manufacturer  = mio:generic_artillery_organization
-		requested_factories = 4
+		requested_factories = 3
 		progress = 0.75
 		efficiency = 100
 	}
@@ -507,7 +500,7 @@ instant_effect = {
 			creator = "AST"
 		}
 		industrial_manufacturer  = mio:AST_new_south_wales_rc_organization
-		requested_factories = 4
+		requested_factories = 3
 		progress = 0.75
 		efficiency = 100
 	}
@@ -517,7 +510,7 @@ instant_effect = {
 			creator = "AST"
 		}
 		industrial_manufacturer  = mio:AST_new_south_wales_rc_organization
-		requested_factories = 4
+		requested_factories = 3
 		progress = 0.75
 		efficiency = 100
 	}
@@ -527,17 +520,7 @@ instant_effect = {
 			creator = "AST"
 		}
 		industrial_manufacturer  = mio:generic_motorized_mechanized_organization
-		requested_factories = 3
-		progress = 0.75
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = motorized_equipment_1
-			creator = "AST"
-		}
-		industrial_manufacturer  = mio:generic_motorized_mechanized_organization
-		requested_factories = 1
+		requested_factories = 2
 		progress = 0.75
 		efficiency = 100
 	}
