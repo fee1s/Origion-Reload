@@ -1247,17 +1247,33 @@ sea_invasion_prohibited_ITA_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense
 	
-    army_attack_factor = -3
-	
 	custom_modifier_tooltip = sea_invasion_prohibited_ITA_tt
+}
+sea_invasion_prohibited_ITA_hidden_dm = {
+	enable = { always = yes }
+	
+    army_attack_factor = 3
+}
+sea_invasion_prohibited_ITA_hidden_2_dm = {
+	enable = { always = yes }
+	
+    army_attack_factor = -3
 }
 sea_invasion_prohibited_ENG_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense
 	
-    army_attack_factor = -3
-	
 	custom_modifier_tooltip = sea_invasion_prohibited_ENG_tt
+}
+sea_invasion_prohibited_ENG_hidden_dm = {
+	enable = { always = yes }
+	
+    army_attack_factor = -3
+}
+sea_invasion_prohibited_ENG_hidden_2_dm = {
+	enable = { always = yes }
+	
+    army_attack_factor = 3
 }
 no_airfield_dm = { # запрет на строительство филдов
     icon = GFX_modifiers_demilitarize_zone
@@ -1283,9 +1299,19 @@ atlantikwall_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense
 	
-    army_attack_factor = GER.atlantikwall_dm_army_attack_factor
-	
 	custom_modifier_tooltip = atlantikwall_tt
+}
+
+atlantikwall_hidden_dm = {
+	enable = { always = yes }
+	
+    army_attack_factor = GER.atlantikwall_dm_army_attack_factor
+}
+
+atlantikwall_hidden_2_dm = {
+	enable = { always = yes }
+	
+    army_attack_factor = GER.atlantikwall_2_dm_army_attack_factor
 }
 
 pacific_warfare_dm = {

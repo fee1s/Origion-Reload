@@ -3104,23 +3104,68 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_gibraltar_ger
-		every_state = {
-			limit = {
-				is_core_of = ENG
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = GER }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = JAP }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = ITA }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = HUN }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = ROM }
-				has_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = BUL }
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ENG
+					is_in_home_area = yes
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_dm
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_hidden_dm
+					scope = GER
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_hidden_dm
+					scope = JAP
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_hidden_dm
+					scope = ITA
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_hidden_dm
+					scope = HUN
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_hidden_dm
+					scope = ROM
+				}
+				remove_dynamic_modifier = {
+					modifier = sea_invasion_prohibited_ENG_hidden_dm
+					scope = BUL
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = ENG
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = USA
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = CAN
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = RAJ
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = SAF
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = AST
+				}
+				remove_dynamic_modifier = { 
+					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+					scope = FRA
+				}
 			}
-			
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = GER }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = JAP }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = ITA }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = HUN }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = ROM }
-			remove_dynamic_modifier = { modifier = sea_invasion_prohibited_ENG_dm scope = BUL }
 		}
 	}
 	

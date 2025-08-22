@@ -134,31 +134,62 @@ ENG_house_of_commons = {
 			    limit = { is_atlantik_shore = yes }
 				remove_dynamic_modifier = { 
 				    modifier = atlantikwall_dm 
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_hidden_dm 
 					scope = USA
 				}
 				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_dm 
+				    modifier = atlantikwall_hidden_dm 
 					scope = ENG
 				}
 				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_dm 
+				    modifier = atlantikwall_hidden_dm 
 					scope = FRA
 				}
 				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_dm 
+				    modifier = atlantikwall_hidden_dm 
 					scope = CAN
 				}
 				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_dm 
+				    modifier = atlantikwall_hidden_dm 
 					scope = AST
 				}
 				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_dm 
+				    modifier = atlantikwall_hidden_dm 
 					scope = SAF
 				}
 				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_dm 
+				    modifier = atlantikwall_hidden_dm 
 					scope = RAJ
+				}
+				remove_dynamic_modifier = { 
+				    modifier = atlantikwall_hidden_dm 
+					scope = SOV
+				}
+				remove_dynamic_modifier = {
+					modifier = atlantikwall_hidden_2_dm
+					scope = GER
+				}
+				remove_dynamic_modifier = {
+					modifier = atlantikwall_hidden_2_dm
+					scope = JAP
+				}
+				remove_dynamic_modifier = {
+					modifier = atlantikwall_hidden_2_dm
+					scope = ITA
+				}
+				remove_dynamic_modifier = {
+					modifier = atlantikwall_hidden_2_dm
+					scope = HUN
+				}
+				remove_dynamic_modifier = {
+					modifier = atlantikwall_hidden_2_dm
+					scope = ROM
+				}
+				remove_dynamic_modifier = {
+					modifier = atlantikwall_hidden_2_dm
+					scope = BUL
 				}
 			}
 		}

@@ -259,6 +259,19 @@ country_event = { # Pacific Gui
 					}
 				}
 			}
+			any_country = {
+			    controls_markus = yes
+				OR = {
+				    AND = {
+			    	    ORIGION_is_in_faction_with_allies = yes
+					    NOT = { has_global_flag = markus_conquered_ALLY }
+				    }
+					AND = {
+					    original_tag = JAP
+					    NOT = { has_global_flag = markus_conquered_JAP }
+					}
+				}
+			}
 		}
 	}
 	
@@ -1172,7 +1185,7 @@ country_event = { # Pacific Gui
 						ORIGION_is_in_faction_with_allies = yes
 		                controls_palau = yes
 			        }
-					NOT = { has_global_flag = marshall_conquered_ALLY }
+					NOT = { has_global_flag = palau_conquered_ALLY }
 				}
 				if = {
 				    limit = {
@@ -1269,6 +1282,59 @@ country_event = { # Pacific Gui
 				    pacific_war_JAP_side_bar = yes 
 				}
 				set_global_flag = newzeland_conquered_JAP
+				pacific_war_JAP_side = yes
+			}
+			### МАРКУС ###
+			if = {
+			    limit = { 
+				    any_country = {
+						ORIGION_is_in_faction_with_allies = yes
+		                controls_markus = yes
+			        }
+					NOT = { has_global_flag = markus_conquered_ALLY }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = markus_conquered_JAP
+					}
+					clr_global_flag = markus_conquered_JAP
+				}
+				JAP = { 
+				    pacific_war_USA_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_USA_side_bar = yes 
+				}
+				set_global_flag = markus_conquered_ALLY
+				pacific_war_USA_side = yes
+			}
+			if = {
+			    limit = { 
+				    any_country = {
+					    original_tag = JAP
+		                controls_markus = yes
+			        }
+					NOT = { has_global_flag = markus_conquered_JAP }
+				}
+				if = {
+				    limit = {
+					    has_global_flag = markus_conquered_ALLY
+					}
+					clr_global_flag = markus_conquered_ALLY
+				}
+				JAP = { 
+				    pacific_war_JAP_side_bar = yes 
+				}
+				every_country = { 
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+				    pacific_war_JAP_side_bar = yes 
+				}
+				set_global_flag = markus_conquered_JAP
 				pacific_war_JAP_side = yes
 			}
 		}

@@ -2982,42 +2982,70 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = atlantikwall_tt_tt
 			hidden_effect = {
-			GER = {
 			    every_state = { 
 				    limit = { 
 					    is_atlantik_shore = yes
 					}
-					
 					add_dynamic_modifier = { 
 					    modifier = atlantikwall_dm 
+					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_hidden_dm 
 						scope = USA
 					}
 					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
+					    modifier = atlantikwall_hidden_dm 
 						scope = ENG
 					}
 					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
+					    modifier = atlantikwall_hidden_dm 
 						scope = FRA
 					}
 					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
+					    modifier = atlantikwall_hidden_dm 
 						scope = CAN
 					}
 					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
+					    modifier = atlantikwall_hidden_dm 
 						scope = AST
 					}
 					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
+					    modifier = atlantikwall_hidden_dm 
 						scope = SAF
 					}
 					add_dynamic_modifier = { 
-					    modifier = atlantikwall_dm 
+					    modifier = atlantikwall_hidden_dm 
 						scope = RAJ
 					}
+					add_dynamic_modifier = { 
+					    modifier = atlantikwall_hidden_dm 
+						scope = SOV
+					}
+					add_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = GER
+					}
+					add_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = JAP
+					}
+					add_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = ITA
+					}
+					add_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = HUN
+					}
+					add_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = ROM
+					}
+					add_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = BUL
+					}
 				}
-			}
 			}
 		}
 	}
