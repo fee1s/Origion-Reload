@@ -160,9 +160,9 @@ ENG_operation_downfall:0 "Операция §Y«Даунфол»§!"
 ENG_altantikwall_fall_no_asia:0 "Операция §Y«Оверлорд»§!"
 
 sea_invasion_prohibited_ITA_dm:0 "§tНебезопасное вторжение§!"
-sea_invasion_prohibited_ITA_tt:0 "\nВысадка в этот регион возможна только после капитуляции §YСеверной Африки§!"
+sea_invasion_prohibited_ITA_tt:0 "Высадка в этот регион возможна только после капитуляции §YСеверной Африки§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CСоюзники§!) = §R-300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RОсь§!) = §G+300%§!"
 sea_invasion_prohibited_ENG_dm:0 "§tНебезопасное вторжение§!"
-sea_invasion_prohibited_ENG_tt:0 "\nВысадка в этот регион возможна только после капитуляции §YГибралтара§!"
+sea_invasion_prohibited_ENG_tt:0 "\nВысадка в этот регион возможна только после капитуляции §YГибралтара§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CСоюзники§!) = §G+300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RОсь§!) = §R-300%§!"
 inappropriate_invasion_zone:0 "§RНеподходящая зона высадки§!"
 inappropriate_invasion_zone_tt:0 "Все дивизии, высаживающиеся в этот регион §Rбудут безвозвратно потеряны§!"
 inappropriate_invasion_zone_NOR:0 "§RНеподходящая зона высадки§!"
@@ -173,8 +173,8 @@ atlantikwall_dm:0 "§tСтроительство Атлантического в
 atlantikwall_tt:0 "$atlantikwall_get_name$\n\n"
 atlantikwall_get_name:0 "[atlantikwall_get_name_tt]"
 atlantikwall_tt_tt:0 "По всему побережью §YАтлантики§! будет получен §Yмодификатор§!, усложняющий высадку в §Yконтинентальную Европу§!"
-atlantikwall_asia_tt:0 "Высадка усложняется с захватом Азии §YЯпонией§! \n\nКаждый захваченный §YЯпонией§! стратегический регион увеличивает штраф на §R5%§!. Текущий штраф к высадке: [?GER.atlantikwall_dm_army_attack_factor|%=Y0+]"
-atlantikwall_noasia_tt:0 "Высадка в этот регион возможна только после капитуляции §YСицилии§!"
+atlantikwall_asia_tt:0 "Высадка усложняется с захватом Азии §YЯпонией§! \n\nКаждый захваченный §YЯпонией§! стратегический регион увеличивает штраф на §R5%§!. \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CСоюзники§!) = [?GER.atlantikwall_dm_army_attack_factor|%=+] \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RОсь§!) = [?GER.atlantikwall_2_dm_army_attack_factor|%=+]"
+atlantikwall_noasia_tt:0 "Высадка в этот регион возможна только после капитуляции §YСицилии§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CСоюзники§!) = §R-100%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RОсь§!) = §G+100%§!"
 
 ger_walled_city:0 "§RГород-крепость§!"
 
