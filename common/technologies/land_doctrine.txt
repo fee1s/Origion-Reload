@@ -2981,7 +2981,7 @@ technologies = {
 			hard_attack = 0.025
 		}
 
-		enable_tactic = tactic_relentless_assault
+		enable_tactic = tactic_tactical_withdrawal
 		
 		path = {
 			leads_to_tech = deep_operations
@@ -3053,7 +3053,7 @@ technologies = {
 		
 		xp_research_type = army
 		xp_unlock_cost = 70
-		enable_tactic = tactic_tactical_withdrawal
+		enable_tactic = tactic_relentless_assault
 		
 		
 		path = {
@@ -3112,7 +3112,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		allow = { date > 1942.3.1 }
+		allow = { date > 1942.2.1 }
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -3289,7 +3289,7 @@ technologies = {
 			maximum_speed = 0.1
 		}	
 		
-		allow = { date > 1943.3.1 }
+		allow = { date > 1943.2.1 }
 		
 		enable_tactic = tactic_backhand_blow
 		
