@@ -135,7 +135,7 @@ NDefines.NAir.ACE_EARN_CHANCE_PLANES_MULT = 0
 
 -- База
 
-NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 1 -- Fix xp cost
+NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0 -- Fix xp cost
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5 -- Fix brigade
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.01 -- Fix civil factory
 

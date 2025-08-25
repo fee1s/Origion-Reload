@@ -332,7 +332,7 @@ on_actions = {
 				   value = -2000
 				}
 			}
-			every_country={ # выдает идеи на треньку мирного времени, стартовую эффективность и опыт для кбшек
+			every_country={ # выдает идеи на треньку мирного времени, стартовую эффективность
 				limit={
 					is_ai = no
 				}
@@ -343,10 +343,6 @@ on_actions = {
 					idea = start_efficiency
 					days = 10
 				}
-				
-				army_experience = 10
-				navy_experience = 10
-				air_experience = 10
 			}
 			RAJ = {
 				if = {
