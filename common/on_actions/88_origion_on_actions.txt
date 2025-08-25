@@ -3,9 +3,7 @@ on_actions = {
 		effect ={ 
 			if = { 
 				limit = {
-					OR = {
-						off_сhannel_coastline = yes
-					}
+					off_сhannel_coastline = yes
 				} 
 				teleport_armies = {
 					limit = {
@@ -47,9 +45,7 @@ on_actions = {
 			}
 			if = { 
 				limit = {
-					OR = {
-						norwegian_coastline = yes
-					}
+					norwegian_coastline = yes
 					SOV = { has_war = no }
 				} 
 				teleport_armies = {
@@ -95,9 +91,7 @@ on_actions = {
 			}
 			if = { 
 				limit = {
-					OR = {
-						italian_coastline_above_naples = yes
-					}
+					italian_coastline_above_naples = yes
 				} 
 				teleport_armies = {
 					limit = {
@@ -614,6 +608,66 @@ on_actions = {
 			    	add_dynamic_modifier = {
 			    	    modifier = inappropriate_invasion_zone_JAP
 		    		}
+		    	}
+				every_state = {
+			        limit = {
+			    		american_pacific_shore = yes
+			    	}
+			    	add_dynamic_modifier = {
+			    	    modifier = sea_invasion_prohibited_USA_dm
+		    		}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_USA_hidden_dm
+						scope = GER
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_USA_hidden_dm
+						scope = JAP
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_USA_hidden_dm
+						scope = ITA
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_USA_hidden_dm
+						scope = HUN
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_USA_hidden_dm
+						scope = ROM
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_USA_hidden_dm
+						scope = BUL
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = ENG
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = USA
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = CAN
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = RAJ
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = SAF
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = AST
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_USA_hidden_2_dm 
+						scope = FRA
+					}
 		    	}
 			}
 			if = {

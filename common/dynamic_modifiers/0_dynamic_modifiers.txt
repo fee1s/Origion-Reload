@@ -1275,6 +1275,43 @@ sea_invasion_prohibited_ENG_hidden_2_dm = {
 	
     army_attack_factor = 3
 }
+sea_invasion_prohibited_USA_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_defense
+	remove_trigger = {
+		JAP = {
+			controls_malaya = yes
+			controls_phi = yes
+			controls_hawai = yes
+		}
+	}
+	
+	custom_modifier_tooltip = sea_invasion_prohibited_USA_tt
+}
+sea_invasion_prohibited_USA_hidden_dm = {
+	enable = { always = yes }
+	remove_trigger = {
+		JAP = {
+			controls_malaya = yes
+			controls_phi = yes
+			controls_hawai = yes
+		}
+	}
+	
+    army_attack_factor = -3
+}
+sea_invasion_prohibited_USA_hidden_2_dm = {
+	enable = { always = yes }
+	remove_trigger = {
+		JAP = {
+			controls_malaya = yes
+			controls_phi = yes
+			controls_hawai = yes
+		}
+	}
+	
+    army_attack_factor = 3
+}
 no_airfield_dm = { # запрет на строительство филдов
     icon = GFX_modifiers_demilitarize_zone
     state_production_speed_air_base_factor = -3
