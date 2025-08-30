@@ -1236,6 +1236,7 @@ axis_dec_cat = {
 		visible = { NOT = { has_country_flag = aviation_ll_to_germany_enabled } }
 		fire_only_once = no
 		priority = 10
+		available = { has_war = yes } 
 		complete_effect = {
 			set_country_flag = aviation_ll_to_germany_enabled
 			custom_effect_tooltip = aviation_ll_to_germany_tt
@@ -1281,6 +1282,7 @@ axis_dec_cat = {
 		visible = { NOT = { has_country_flag = tank_ll_to_germany_enabled } }
 		fire_only_once = no
 		priority = 10
+		available = { has_war = yes } 
 		complete_effect = {
 			set_country_flag = tank_ll_to_germany_enabled
 			custom_effect_tooltip = tank_ll_to_germany_tt

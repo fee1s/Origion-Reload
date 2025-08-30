@@ -167,6 +167,9 @@ focus_tree = {
 			add_to_variable = { USA_min_export = 0.2 tooltip = min_export_tt }
 			
 			add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
+			hidden_effect = {
+				activate_mission = USA_law_timeout
+			}
 		}
 	}
 	focus = {
@@ -199,6 +202,9 @@ focus_tree = {
 			add_to_variable = { USA_min_export = 0.2 tooltip = min_export_tt }
 			
 			add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
+			hidden_effect = {
+				activate_mission = USA_law_timeout
+			}
 		}
 	}
 	focus = {

@@ -611,7 +611,15 @@ on_actions = {
 		    	}
 				every_state = {
 			        limit = {
-			    		american_pacific_shore = yes
+			    		OR = {
+							is_core_of = CAN
+							is_core_of = USA
+							state = 463
+							state = 331
+							state = 332
+							state = 685
+							state = 730
+						}
 			    	}
 			    	add_dynamic_modifier = {
 			    	    modifier = sea_invasion_prohibited_USA_dm

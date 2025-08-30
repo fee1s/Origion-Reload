@@ -515,5 +515,34 @@ USA_congress = {
 			    }
 			}
 		}
+	}
+	USA_enter_war_dec = {
+		icon = GFX_decision_eng_puppet_usa
+		fire_only_once = yes
+		available = {
+		    date > 1941.6.1
+		}
+		visible = {
+			NOT = { has_war = yes }
+		}
+		complete_effect = {
+		    USA_join_to_war = yes
+		}
+	}
+	USA_law_timeout = {
+		name = usa_new_law_is_in_development
+		icon = generic_political_discourse
+		
+		priority = 100
+
+		activation = {
+			always = no
+		}
+		available = {
+		    hidden_trigger = {
+		        always = no
+			}
+		}
+		days_mission_timeout = 665
 	}	
 }

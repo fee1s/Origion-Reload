@@ -1053,7 +1053,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		set_equipment_fraction = { 0.0 }
+		set_equipment_fraction = 0.0
 		every_state = {
 		    limit = {
 			    is_core_of = ROOT
