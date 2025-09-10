@@ -469,10 +469,17 @@ focus_tree = {
 			    tooltip = FIN_join_the_axis_tt
 			    any_state = {
 			        is_controlled_by = FIN
-			    	    NOT = { state = 148 }
-			    		NOT = { state = 722 }
+			    	NOT = { state = 148 }
+			    	NOT = { state = 722 }
 			        any_neighbor_state = {
-			            is_controlled_by = GER
+			            OR = {
+							is_controlled_by = GER
+							is_controlled_by = ITA
+							is_controlled_by = HUN
+							is_controlled_by = ROM
+							is_controlled_by = BUL
+						}
+						NOT = { is_core_of = FIN }
 			        }
 			    }
 			}

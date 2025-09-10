@@ -26,6 +26,7 @@ on_actions = {
 			if = { 
 				limit = {
 					is_core_of = FIN
+					ROOT = { original_tag = SOV }
 				} 
 				teleport_armies = {
 					limit = {
@@ -723,6 +724,7 @@ on_actions = {
 					has_country_flag = asia_map_open_flag
 				}
 				set_variable = { atlantikwall_dm_score = JAP_pacific_controlled_regions }
+				subtract_from_variable = { atlantikwall_dm_score = 3 }
 				multiply_variable = { atlantikwall_dm_score = -0.05 }
 				set_variable = { GER.atlantikwall_dm_army_attack_factor = atlantikwall_dm_score }
 				set_variable = { GER.atlantikwall_2_dm_army_attack_factor = atlantikwall_dm_score }
