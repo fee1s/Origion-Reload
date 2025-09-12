@@ -588,19 +588,30 @@ news_event = { # Downfall
 	picture = GFX_news_event_downfall
 	
 	major = yes
-	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = operation_downfall }
+		524 = { is_fully_controlled_by_allies = yes }
+		526 = { is_fully_controlled_by_allies = yes }
+		645 = { is_fully_controlled_by_allies = yes }
+	}
+	
+	immediate = { 
+		hidden_effect = { 
+			set_global_flag = operation_downfall 
+			every_state = {
+			    limit = {
+					is_japan_main_state = yes
+				}
+				remove_dynamic_modifier = {
+				    modifier = inappropriate_invasion_zone_JAP
+				}
+			}
+		}
+	}
 	
 	option = {
 		name = origion.16.a
-		trigger = {
-		    NOT = { tag = JAP }
-		}
-	}
-	option = {
-		name = origion.16.b
-		trigger = {
-		    tag = JAP
-		}
 	}
 }
 
@@ -694,27 +705,11 @@ news_event = { # Падение Окинавы
 	immediate = {
 	    hidden_effect = {
 		    set_global_flag = fall_of_okinawa
-		    JAP = { add_stability = -0.1 }
 		}
 	}
 	
 	option = {
 		name = origion.20.a
-		trigger = {
-		    NOT = { tag = JAP }
-		}
-		effect_tooltip = {
-		    JAP = { add_stability = -0.1 }
-		}
-	}
-	option = {
-		name = origion.20.b
-		trigger = {
-		    tag = JAP
-		}
-		effect_tooltip = {
-		    JAP = { add_stability = -0.1 }
-		}
 	}
 }
 
@@ -741,27 +736,11 @@ news_event = { # Падение Иводзимы
 	immediate = {
 	    hidden_effect = {
 		    set_global_flag = fall_of_iwojima
-		    JAP = { add_stability = -0.1 }
 		}
 	}
 	
 	option = {
 		name = origion.21.a
-		trigger = {
-		    NOT = { tag = JAP }
-		}
-		effect_tooltip = {
-		    JAP = { add_stability = -0.1 }
-		}
-	}
-	option = {
-		name = origion.21.b
-		trigger = {
-		    tag = JAP
-		}
-		effect_tooltip = {
-		    JAP = { add_stability = -0.1 }
-		}
 	}
 }
 

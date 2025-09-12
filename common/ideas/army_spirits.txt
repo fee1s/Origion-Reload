@@ -123,7 +123,7 @@ ideas = {
 			ledger = army
 			available = { has_military_academy = yes }
 			modifier = {
-				terrain_penalty_reduction = 0.1
+				recon_factor = 2
 			}
 			ai_will_do = {
 				factor = 1
@@ -245,7 +245,7 @@ ideas = {
 			ledger = army
 			modifier = {
 				dig_in_speed_factor = 0.1
-				railway_gun_bombardment_factor = 0.4
+				# railway_gun_bombardment_factor = 0.4
 			}
 			ai_will_do = {
 				factor = 1

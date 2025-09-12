@@ -722,58 +722,24 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_strike_on_the_southern_resource_area
 		cost = 5
+		
 		ai_will_do = {
 			factor = 5
 		}
+		
 		available = {
 			OR = {
-				NOT = { has_full_control_of_state = 526 }
 				NOT = { has_full_control_of_state = 524 }
+				NOT = { has_full_control_of_state = 526 }
+				NOT = { has_full_control_of_state = 645 }
 			}
 		}
-		bypass = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		continue_if_invalid = yes
+		
+		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = national_security_mobilisation
-			
-			hidden_effect = {
-				528 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				530 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				529 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				531 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				532 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				535 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				282 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				534 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				533 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				536 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-				555 = {
-					add_dynamic_modifier = { modifier = operation_ketsugo_dm scope = JAP }
-				}
-			}
 		}
 	}
 

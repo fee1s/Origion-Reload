@@ -237,6 +237,21 @@ is_fully_controlled_by_axis = {
 	}
 }
 
+is_fully_controlled_by_allies = {
+	custom_trigger_tooltip = {
+		tooltip = is_fully_controlled_by_allies_tt
+		OR = {
+			is_fully_controlled_by = USA
+			is_fully_controlled_by = ENG
+			is_fully_controlled_by = CAN
+			is_fully_controlled_by = SAF
+			is_fully_controlled_by = RAJ
+			is_fully_controlled_by = AST
+			is_fully_controlled_by = FRA
+		}
+	}
+}
+
 maximum_lend_lease_is_fourty = {
 	OR = {
 		NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
