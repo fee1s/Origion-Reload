@@ -799,15 +799,27 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { old_guard trait_engineer fortress_buster trait_reckless } # Infantry
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { has_government = fascism }
+		corps_commander={
+			traits={ panzer_leader Brilliant_Strategist trait_engineer urban_assault_specialist organizer ranger Trickster}
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+		
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = ettore_baldassarre
+			ledger = air
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			traits = {
+				assault_avaition
+			}
 		}
 	}
 
@@ -917,19 +929,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_idea_amedeo_mecozzi
-			}
-		}
-
-		advisor = {
-			cost = 150
-			slot = theorist
-			idea_token = amedeo_mecozzi
-			ledger = air
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = {
-				assault_avaition
 			}
 		}
 	}
