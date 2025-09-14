@@ -7,6 +7,9 @@ JAP_operation = {
 			has_completed_focus = JAP_strike_on_the_southern_resource_area
 			date > 1941.4.1
 		}
+		visible = {
+			NOT = { has_global_flag = ONLY_ASIA_FLAG }
+		}
 		
 		fire_only_once = yes
 		days_remove = 30
@@ -86,6 +89,34 @@ JAP_operation = {
 				AST = { transfer_state = 669 transfer_state = 987 }
 				USA = { annex_country = { target = INS } }
 			}
+		}
+	}
+	
+	JAP_strike_on_the_southern_resource_area_decision_only_asia = {
+		icon = GFX_decision_eng_puppet_usa
+		priority = 105
+		name = JAP_strike_on_the_southern_resource_area_decision
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		visible = {
+			has_global_flag = ONLY_ASIA_FLAG
+		}
+		
+		days_mission_timeout = 120
+		is_good = yes
+		fire_only_once = yes
+		timeout_effect = {
+		    news_event = { 
+		        id = origion.15
+			}
+			add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+			add_dynamic_modifier = {
+			  	modifier = JAP_stagnation_dm
+			}
+			activate_mission = JAP_stagnation_economic_mission_only_asia_des
 		}
 	}
 	
@@ -685,6 +716,9 @@ JAP_operation = {
 			has_full_control_of_state = 285
 			has_full_control_of_state = 629
 		}
+		visible = {
+			NOT = { has_global_flag = ONLY_ASIA_FLAG }
+		}
 		
 		fire_only_once = yes
 		is_good = yes
@@ -773,6 +807,28 @@ JAP_economic_stagnation = {
 			remove_dynamic_modifier = {
 				modifier = JAP_stagnation_dm
 			}
+		}
+	}
+	JAP_stagnation_economic_mission_only_asia_des = {
+		name = JAP_stagnation_economic_0_name
+		icon = GFX_decision_revolt
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		timeout_effect = {
+			activate_mission = JAP_stagnation_economic_mission_only_asia_des
+			
+			add_to_variable = { JAP_stagnation_production_factory_max_efficiency_factor = -0.02 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { JAP_stagnation_industrial_capacity_factory = -0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { JAP_stagnation_industrial_capacity_dockyard = -0.05 tooltip = industrial_capacity_dockyard_tt }
 		}
 	}
 }

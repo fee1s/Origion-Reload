@@ -535,12 +535,60 @@ add_equipment_to_stockpile = {
 
 1941.1.1.14 = {
     set_oob = "JAP_1941"
-	set_stability = 0.6
+	set_naval_oob = "JAP_1941_naval"
+	set_stability = 1.0
+	set_war_support = 1.0
 	add_ideas = {
 		tot_economic_mobilisation
 	}
+	remove_ideas = {
+		state_shintoism
+		JAP_militarism
+	}
 	remove_dynamic_modifier = { modifier = JAP_emperor_army_dm }
 	remove_dynamic_modifier = { modifier = JAP_zaibatsu_dm }
+	remove_power_balance = {
+		id = JAP_power_balance
+	}
+	mio:JAP_osaka_army_arsenal_organization = {
+		complete_mio_trait = generic_mio_trait_simplified_suspension
+		complete_mio_trait = generic_mio_trait_crew_ergonomics
+		complete_mio_trait = generic_mio_trait_improved_tracks
+		complete_mio_trait = generic_mio_trait_command_upgrades
+		complete_mio_trait = generic_mio_trait_standardized_components
+		complete_mio_trait = generic_mio_trait_long_barreled_guns
+		complete_mio_trait = generic_mio_trait_infantry_support_tanks
+	}
+	mio:JAP_kure_naval_arsenal_organization = {
+		complete_mio_trait = generic_mio_trait_internal_armor_belt
+		complete_mio_trait = generic_mio_trait_external_armor_belt
+		complete_mio_trait = generic_mio_trait_hardened_critical_components
+		complete_mio_trait = generic_mio_trait_advanced_armor_design
+		complete_mio_trait = generic_mio_trait_advanced_hydrodynamic_design
+		complete_mio_trait = generic_mio_trait_combat_information_center
+		complete_mio_trait = generic_mio_trait_anti_air_layout
+		complete_mio_trait = generic_mio_trait_secondary_battery_layout
+		complete_mio_trait = generic_mio_trait_gyro_stabilized_mounts
+		complete_mio_trait = generic_mio_trait_production_capital_first
+		complete_mio_trait = generic_mio_trait_production_capital_second
+		complete_mio_trait = generic_mio_trait_production_capital_third
+		complete_mio_trait = generic_mio_trait_production_capital_fourth
+	}
+	mio:JAP_sasebo_naval_arsenal_organization = {
+		complete_mio_trait = generic_mio_trait_long_range_raiding
+		complete_mio_trait = generic_mio_trait_high_speed_raiding
+		complete_mio_trait = generic_mio_trait_diesel_powerplants
+		complete_mio_trait = generic_mio_trait_high_speed_operation_stores
+		complete_mio_trait = generic_mio_trait_raiding_capital_ships
+		complete_mio_trait = generic_mio_trait_long_range_engagement_ethos
+		complete_mio_trait = generic_mio_trait_high_quality_optics
+		complete_mio_trait = generic_mio_trait_raider_escort_requirements
+		complete_mio_trait = generic_mio_trait_unescorted_raider_requirements
+		complete_mio_trait = generic_mio_trait_production_capital_fiveth
+		complete_mio_trait = generic_mio_trait_production_capital_sixth
+		complete_mio_trait = generic_mio_trait_production_capital_seventh
+		complete_mio_trait = generic_mio_trait_production_capital_eighth
+	}
 	set_technology = {
 	    infantry_weapons2 = 1
 		improved_infantry_weapons = 1
@@ -548,6 +596,7 @@ add_equipment_to_stockpile = {
 		support_weapons = 1
 		support_weapons2 = 1
 		mechanised_infantry = 1
+		amphibious_mechanized_infantry = 1
 		paratroopers = 1
 		marines = 1
 		tech_mountaineers = 1
@@ -580,12 +629,14 @@ add_equipment_to_stockpile = {
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
 		assembly_line_production = 1
+		streamlined_line = 1
 		improved_equipment_conversion = 1
 		advanced_equipment_conversion = 1
 		concentrated_industry = 1
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
 		concentrated_industry4 = 1
+		concentrated_industry5 = 1
 		construction1 = 1
 		construction2 = 1
 		construction3 = 1
@@ -599,6 +650,17 @@ add_equipment_to_stockpile = {
 		centimetric_radar = 1
 		improved_centimetric_radar = 1
 		advanced_centimetric_radar = 1
+		
+		improved_ship_hull_cruiser = 1
+		modern_airplane_launcher = 1
+		improved_ship_hull_heavy = 1
+		basic_light_shell = 1
+		improved_light_battery = 1
+		basic_medium_shell = 1
+		improved_medium_battery = 1
+		basic_heavy_shell = 1
+		improved_heavy_battery = 1
+		advanced_ship_torpedo_launcher = 1
 		
 		trench_warfare = 1
 		grand_battle_plan = 1
@@ -629,10 +691,111 @@ add_equipment_to_stockpile = {
 		marines_expeditionary_blowtorch = 1
 		marines_expeditionary_support = 1
 	}
+	create_equipment_variant = {
+		name = "Средний Плавающий Танк"
+		type = medium_tank_amphibious_chassis_2
+		design_team = mio:JAP_osaka_army_arsenal_organization
+		upgrades  = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 14
+		}
+		modules = {
+			turret_type_slot = tank_medium_three_man_tank_turret
+			main_armament_slot = tank_medium_cannon_3
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = amphibious_drive
+			special_type_slot_4 = easy_maintenance
+		}
+	}
+	create_equipment_variant = {
+		name = "Средний Танк"
+		type = medium_tank_chassis_2
+		design_team = mio:JAP_osaka_army_arsenal_organization
+		upgrades  = {
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 14
+		}
+		modules = {
+			turret_type_slot = tank_medium_three_man_tank_turret
+			main_armament_slot = tank_medium_cannon_3
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = tank_radio_3
+			special_type_slot_4 = easy_maintenance
+		}
+	}
+	create_equipment_variant = {
+		name = "Средняя ПТ-Установка"
+		type = medium_tank_destroyer_chassis_2
+		design_team = mio:JAP_osaka_army_arsenal_organization
+		upgrades  = {
+			tank_nsb_engine_upgrade = 2
+		}
+		modules = {
+			turret_type_slot = tank_medium_fixed_superstructure_turret
+			main_armament_slot = tank_high_velocity_cannon_3
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_small_cannon
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = squeezebore_adaptor
+			special_type_slot_4 = easy_maintenance
+		}
+	}
+	create_equipment_variant = {
+		name = "Origion Japan Light Cruiser"
+		type = ship_hull_cruiser_3
+		design_team = mio:JAP_sasebo_naval_arsenal_organization
+		name_group = JAP_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_3
+			fixed_ship_anti_air_slot = ship_anti_air_3
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+			fixed_ship_radar_slot = ship_radar_4
+			fixed_ship_engine_slot = cruiser_ship_engine_3
+			fixed_ship_armor_slot = ship_armor_cruiser_4
+			fixed_ship_secondaries_slot = dp_ship_secondaries_3
+			front_1_custom_slot = ship_light_medium_battery_3
+			mid_1_custom_slot = ship_torpedo_3
+			mid_2_custom_slot = ship_torpedo_3
+			rear_1_custom_slot = ship_light_medium_battery_3
+			rear_2_custom_slot = ship_airplane_launcher_3
+		}
+	}
+	create_equipment_variant = {
+		name = "Origion Japan Battleship"
+		type = ship_hull_heavy_3
+		design_team = mio:JAP_kure_naval_arsenal_organization
+		name_group = JAP_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+			fixed_ship_anti_air_slot = ship_anti_air_3
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+			fixed_ship_radar_slot = ship_radar_4
+			fixed_ship_engine_slot = heavy_ship_engine_4
+			fixed_ship_secondaries_slot = dp_ship_secondaries_3
+			fixed_ship_armor_slot = ship_armor_bc_4
+			front_1_custom_slot = ship_heavy_battery_3
+			mid_1_custom_slot = ship_heavy_battery_3
+			mid_2_custom_slot = ship_heavy_battery_3
+			mid_3_custom_slot = dp_ship_secondaries_3
+			rear_1_custom_slot = ship_airplane_launcher_3
+		}
+	}
 	528 = {
 		add_building_construction = {
 			type = industrial_complex
-			level = 9
+			level = 4
 			instant_build = yes
 		}
 	}
@@ -719,20 +882,6 @@ add_equipment_to_stockpile = {
 		add_building_construction = {
 			type = arms_factory
 			level = 1
-			instant_build = yes
-		}
-	}
-	608 = {
-		add_building_construction = {
-			type = arms_factory
-			level = 10
-			instant_build = yes
-		}
-	}
-	614 = {
-		add_building_construction = {
-			type = arms_factory
-			level = 10
 			instant_build = yes
 		}
 	}
