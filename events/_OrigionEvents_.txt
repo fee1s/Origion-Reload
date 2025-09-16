@@ -838,7 +838,7 @@ news_event = { # Тотален
 	
 	trigger = {
 	    NOT = { has_global_flag = totalen_krieg_flag }
-		GER = { has_war_with = SOV }
+		has_global_flag = second_compiegne_signed
 		OR = {
 			date > 1943.2.17
 		    OR = {

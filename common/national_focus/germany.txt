@@ -2780,6 +2780,176 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = GER_eastern_wall
+		icon = GFX_focus_SWE_hedgehog_defense
+		prerequisite = {
+            focus = GER_totalen_krieg
+		}
+		
+		available = {
+			
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		x = 0
+		y = 2
+		relative_position_id = GER_totalen_krieg
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		    custom_effect_tooltip = GER_eastern_wall_tt
+			hidden_effect = {
+				813 = {
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 4640 } }
+						set_building_level = { type = bunker level = 8 province = 4640 instant_build = yes }
+					}
+				}
+				209 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 415 } }
+						set_building_level = { type = bunker level = 5 province = 415 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3310 } }
+						set_building_level = { type = bunker level = 5 province = 3310 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3333 } }
+						set_building_level = { type = bunker level = 5 province = 3333 instant_build = yes }
+					}
+				}
+				210 = {
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11259 } }
+						set_building_level = { type = bunker level = 5 province = 11259 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9386 } }
+						set_building_level = { type = bunker level = 5 province = 9386 instant_build = yes }
+					}
+				}
+				207 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 323 } }
+						set_building_level = { type = bunker level = 5 province = 323 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11241 } }
+						set_building_level = { type = bunker level = 8 province = 11241 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11220 } }
+						set_building_level = { type = bunker level = 5 province = 11220 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3331 } }
+						set_building_level = { type = bunker level = 5 province = 3331 instant_build = yes }
+					}
+				}
+				206 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3378 } }
+						set_building_level = { type = bunker level = 5 province = 3378 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9289 } }
+						set_building_level = { type = bunker level = 8 province = 9289 instant_build = yes }
+					}
+				}
+				204 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6373 } }
+						set_building_level = { type = bunker level = 5 province = 6373 instant_build = yes }
+					}
+				}
+				194 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6319 } }
+						set_building_level = { type = bunker level = 5 province = 6319 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9249 } }
+						set_building_level = { type = bunker level = 5 province = 9249 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3507 } }
+						set_building_level = { type = bunker level = 5 province = 3507 instant_build = yes }
+					}
+				}
+				202 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9568 } }
+						set_building_level = { type = bunker level = 5 province = 9568 instant_build = yes }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3543 } }
+						set_building_level = { type = bunker level = 5 province = 3543 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 525 } }
+						set_building_level = { type = bunker level = 8 province = 525 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 13425 } }
+						set_building_level = { type = bunker level = 8 province = 13425 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3494 } }
+						set_building_level = { type = bunker level = 5 province = 3494 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11454 } }
+						set_building_level = { type = bunker level = 5 province = 11454 instant_build = yes }
+					}
+				}
+				203 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 488 } }
+						set_building_level = { type = bunker level = 5 province = 488 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3468 } }
+						set_building_level = { type = bunker level = 5 province = 3468 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6478 } }
+						set_building_level = { type = bunker level = 5 province = 6478 instant_build = yes }
+					}
+				}
+				226 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9433 } }
+						set_building_level = { type = bunker level = 5 province = 9433 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11437 } }
+						set_building_level = { type = bunker level = 8 province = 11437 instant_build = yes }
+					}
+				}
+				200 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11405 } }
+						set_building_level = { type = bunker level = 8 province = 11405 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6596 } }
+						set_building_level = { type = bunker level = 5 province = 6596 instant_build = yes }
+					}
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11700 } }
+						set_building_level = { type = bunker level = 5 province = 11700 instant_build = yes }
+					}
+				}
+
+			}
+		}
+	}
+	
+	focus = {
 		id = GER_END
 		icon = GFX_focus_PER_communist_afghanistan_intervention
 		prerequisite = {
@@ -2819,69 +2989,114 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GER_walled_city_tt
 			
-			every_state = { limit = { OR = { state = 763 state = 64 } } add_dynamic_modifier = { modifier = ger_walled_city scope = GER } }
-			
 			hidden_effect = {
 				763 = {
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 6332
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6332 } }
+						set_building_level = { type = bunker level = 10 province = 6332 instant_build = yes }
+						add_province_modifier = { province = { id = 6332 } static_modifiers = { ger_walled_city } }
 					}
-					
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 13520
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 13520 } }
+						set_building_level = { type = bunker level = 10 province = 13520 instant_build = yes }
+						add_province_modifier = { province = { id = 13520 } static_modifiers = { ger_walled_city } }
 					}
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 13521
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 13521 } }
+						set_building_level = { type = bunker level = 10 province = 13521 instant_build = yes }
+						add_province_modifier = { province = { id = 13521 } static_modifiers = { ger_walled_city } }
 					}
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 13522
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 13522 } }
+						set_building_level = { type = bunker level = 10 province = 13522 instant_build = yes }
+						add_province_modifier = { province = { id = 13522 } static_modifiers = { ger_walled_city } }
 					}
 				}
-			
 				64 = {
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 11505
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6521 } }
+						set_building_level = { type = bunker level = 10 province = 6521 instant_build = yes }
+						add_province_modifier = { province = { id = 6521 } static_modifiers = { ger_walled_city } }
 					}
-					
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 11444
-						instant_build = yes
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11505 } }
+						set_building_level = { type = bunker level = 10 province = 11505 instant_build = yes }
+						add_province_modifier = { province = { id = 11505 } static_modifiers = { ger_walled_city } }
 					}
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 13509
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11444 } }
+						set_building_level = { type = bunker level = 10 province = 11444 instant_build = yes }
+						add_province_modifier = { province = { id = 11444 } static_modifiers = { ger_walled_city } }
 					}
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 13508
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 13509 } }
+						set_building_level = { type = bunker level = 10 province = 13509 instant_build = yes }
+						add_province_modifier = { province = { id = 13509 } static_modifiers = { ger_walled_city } }
 					}
-					
-					add_building_construction = {
-						type = bunker
-						level = 10
-						province = 6521
-						instant_build = yes
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 13508 } }
+						set_building_level = { type = bunker level = 10 province = 13508 instant_build = yes }
+						add_province_modifier = { province = { id = 13508 } static_modifiers = { ger_walled_city } }
+					}
+				}
+				206 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11370 } }
+						set_building_level = { type = bunker level = 10 province = 11370 instant_build = yes }
+						add_province_modifier = { province = { id = 11370 } static_modifiers = { ger_walled_city } }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 294 } }
+						set_building_level = { type = bunker level = 5 province = 294 instant_build = yes }
+						add_province_modifier = { province = { id = 294 } static_modifiers = { ger_walled_city } }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3267 } }
+						set_building_level = { type = bunker level = 5 province = 3267 instant_build = yes }
+						add_province_modifier = { province = { id = 3267 } static_modifiers = { ger_walled_city } }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11216 } }
+						set_building_level = { type = bunker level = 5 province = 11216 instant_build = yes }
+						add_province_modifier = { province = { id = 11216 } static_modifiers = { ger_walled_city } }
+					}
+				}
+				11 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 6296 } }
+						set_building_level = { type = bunker level = 10 province = 6296 instant_build = yes }
+						add_province_modifier = { province = { id = 6296 } static_modifiers = { ger_walled_city } }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9404 } }
+						set_building_level = { type = bunker level = 5 province = 9404 instant_build = yes }
+						add_province_modifier = { province = { id = 9404 } static_modifiers = { ger_walled_city } }
+					}
+					if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 327 } }
+						set_building_level = { type = bunker level = 5 province = 327 instant_build = yes }
+						add_province_modifier = { province = { id = 327 } static_modifiers = { ger_walled_city } }
+					}
+				}
+				10 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 3544 } }
+						set_building_level = { type = bunker level = 10 province = 3544 instant_build = yes }
+						add_province_modifier = { province = { id = 3544 } static_modifiers = { ger_walled_city } }
+					}
+				}
+				91 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 11479 } }
+						set_building_level = { type = bunker level = 10 province = 11479 instant_build = yes }
+						add_province_modifier = { province = { id = 11479 } static_modifiers = { ger_walled_city } }
+					}
+				}
+				66 = {
+				    if = {
+						limit = { any_country = { ORIGION_is_in_faction_with_axis = yes controls_province = 9570 } }
+						set_building_level = { type = bunker level = 10 province = 9570 instant_build = yes }
+						add_province_modifier = { province = { id = 9570 } static_modifiers = { ger_walled_city } }
 					}
 				}
 			}
@@ -3103,7 +3318,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_establish_the_afrikakorps
-		cost = 10
+		cost = 5
 		available = {
 			
 		}
@@ -3666,13 +3881,8 @@ focus_tree = {
 		x = 1
 		y = 1
 		
-		available = {
-			has_completed_focus = GER_fate_of_yugoslavia
-			has_completed_focus = GER_operation_marita_zov
-		}
-		
 		relative_position_id = GER_BUL_Chromik
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = GER_modify_eco_modifier_tt
