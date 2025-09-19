@@ -1038,4 +1038,14 @@ on_actions = {
 			}
 		}
 	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {ORIGION_not_playable_country = no}
+				ROOT = {
+					set_equipment_fraction = 0.0
+				}
+			}
+		}
+	}
 }
