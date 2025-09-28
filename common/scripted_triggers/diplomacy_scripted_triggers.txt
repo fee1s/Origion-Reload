@@ -463,6 +463,18 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 	always = yes
 }
 
+DIPLOMACY_SEND_EXP_FORCE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+            has_different_doctrine_trigger = yes
+        }
+		custom_trigger_tooltip  = {
+		    tooltip = has_different_doctrine_tt
+			always = no
+		}
+	}
+}
+
 DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = { always = no }
 
 DIPLOMACY_REQUEST_EQUIPMENT_PURCHASE_ENABLE_TRIGGER = { always = no } 

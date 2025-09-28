@@ -435,3 +435,55 @@ fix_traits = { #hi sartiros
 		}
 	}
 }
+has_different_doctrine_trigger = {
+	OR = {
+        AND = {
+            FROM = {
+                has_tech = mobile_warfare
+            }
+            ROOT = {
+                has_tech = superior_firepower
+            }
+        }
+        AND = {
+            FROM = {
+                has_tech = mobile_warfare
+            }
+            ROOT = {
+                has_tech = trench_warfare
+            }
+        }
+        AND = {
+            FROM = {
+                has_tech = superior_firepower
+            }
+            ROOT = {
+                has_tech = mobile_warfare
+            }
+        }
+        AND = {
+            FROM = {
+                has_tech = superior_firepower
+            }
+            ROOT = {
+                has_tech = trench_warfare
+            }
+        }
+        AND = {
+            FROM = {
+                has_tech = trench_warfare
+            }
+            ROOT = {
+                has_tech = mobile_warfare
+            }
+        }
+        AND = {
+            FROM = {
+                has_tech = trench_warfare
+            }
+            ROOT = {
+                has_tech = superior_firepower
+            }
+        }
+    }
+}
