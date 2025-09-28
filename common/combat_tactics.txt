@@ -281,7 +281,7 @@ tactic_tactical_withdrawal = { #counters encirclement
 	countered_by = tactic_breakthrough
 	
 	attacker_movement_speed = -0.25
-	attacker = -0.3
+	attacker = -0.25
 	defender = 0.1
 }
 ###tactical withdrawal tactics
@@ -296,7 +296,7 @@ tactic_tw_attack = {
 	picture = tw_attack
 	display_phase = tactical_withdrawal
 	
-	attacker = -0.1
+	attacker = -0.05
 }
 tactic_tw_defend = { 
 	is_attacker = no
@@ -309,7 +309,7 @@ tactic_tw_defend = {
 	picture = tw_defend
 	display_phase = tactical_withdrawal
 		
-	attacker = -0.3
+	attacker = -0.25
 	defender = -0.05
 }
 tactic_tw_chase = { 
@@ -336,7 +336,7 @@ tactic_tw_evade = {
 	picture = tw_evade
 	display_phase = tactical_withdrawal
 		
-	attacker = -0.4
+	attacker = -0.25
 	defender = -0.1
 }
 tactic_tw_intercept = { 
@@ -785,7 +785,7 @@ tactic_planned_attack = { #GBP -> Armor attacker tactic
 	}
 	picture = tactic_planned_attack
 	
-	countered_by = tactic_tactical_withdrawal
+	countered_by = tactic_delay
 	
 	attacker_movement_speed = 0.15
 	attacker = 0.15 

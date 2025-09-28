@@ -2097,6 +2097,8 @@ technologies = {
 			max_organisation = 3
 		}
 		
+		enable_tactic = tactic_elastic_defense
+		
 		
 		path = {
 			leads_to_tech = grand_mechanized_offensive 
@@ -2175,7 +2177,7 @@ technologies = {
 			max_strength = 0.25
 		}
 		
-		enable_tactic = tactic_elastic_defense
+		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
 			leads_to_tech = assault_concentration 
@@ -2232,8 +2234,6 @@ technologies = {
 		artillery = {
 			soft_attack = 0.1
 		}
-		
-		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
 			leads_to_tech = branch_interoperation 
