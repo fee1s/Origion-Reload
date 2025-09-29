@@ -280,7 +280,7 @@ GER_operations = {
 				GER = { add_to_faction = HUN }
             	GER = { add_to_faction = ROM }
             	GER = { add_to_faction = BUL }
-				ENG = { country_event = { id = britain.9 days = 1 } }
+				country_event = { id = origion.32 }
 				sound_effect = psi_ww2
 			}
 			GER = {
@@ -363,6 +363,8 @@ GER_operations = {
 				ENG = { add_to_faction = INS }
             	ENG = { add_to_faction = BEL }
             	ENG = { add_to_faction = LUX }
+				
+				ENG = { country_event = { id = britain.9 } }
 			}
 			
 			if = {
