@@ -2177,11 +2177,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
-		completion_reward = {
-			country_event = {
-				id = germany.55
-			}
-			
+		completion_reward = {		
 			hidden_effect = {
 				add_to_variable = {
 					var = GER_mefo_bill_counter
@@ -2241,22 +2237,10 @@ focus_tree = {
 	
 		completion_reward = {
 			hidden_effect = {
-				SOV = {
-					country_event = { id = germany.11 }
-				}
-				every_other_country = {
-					limit = {
-						NOT = { tag = GER }
-						has_government = fascism
-					}
-					add_opinion_modifier = { target = GER modifier = MR_pact_fascists }
-				}
-				diplomatic_relation = { country = SOV relation = non_aggression_pact }
-				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
 				USA = {
 					set_country_flag = { flag = USA_MR_window days = 60 value = 1 }
 				}
-				country_event = { id = news.32 }
+				country_event = { hours = 6 id = news.32 }
 			}
 			custom_effect_tooltip = GER_mol_rib_pact_tt
 		}

@@ -92,7 +92,7 @@ sub_units = {
 			category_line_artillery
 		}		
 		
-		combat_width = 1
+		combat_width = 3
 		transport = motorized_equipment
 
 		essential = {
@@ -112,39 +112,33 @@ sub_units = {
 		supply_consumption = 0.15
 
 		forest = {
-			attack = -0.2
-			movement = -0.5
+		    attack = -0.3
+			movement = -0.4
 		}
-
 		hills = {
-			movement = -0.05
+		    attack = -0.1
 		}
-
-		mountain = {
-			movement = -0.2
+		mountain = 	{
+		    attack = -0.2
 		}
-
 		jungle = {
-			attack = -0.25
-			movement = -0.5
+		    attack = -0.4
+			movement = -0.4
 		}
-
 		marsh = {
-			attack = -0.2
-			movement = -0.3
+		    attack = -0.1 
+			movement = -0.1
 		}
-
-		fort = {
-			attack = 0.1
+		urban = {
+			attack = -0.4
+			defence = -0.1
 		}
-
-		river = {
-			attack = -0.2
+		river = { 
+			attack = -0.2 
 			movement = -0.2
 		}
-
-		amphibious = {
-			attack = -0.4
+		amphibious = { 
+			attack = -0.7
 		}
 	}
 }

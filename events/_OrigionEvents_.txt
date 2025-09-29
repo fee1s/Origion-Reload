@@ -1050,3 +1050,20 @@ country_event = {
 		}
 	}
 }
+
+news_event = { # начало вмв
+	id = origion.32
+	title = origion.32.t
+	desc = origion.32.d
+	picture = GFX_news_event_weiss
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+ 
+	option = {
+		name = origion.32.a
+	}
+}

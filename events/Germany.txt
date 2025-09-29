@@ -215,18 +215,6 @@ country_event = {
 
 	option = {
 		name = germany.12.a	#neat
-		every_other_country = {
-			limit = {
-				NOT = { tag = GER }
-				has_government = fascism
-			}
-			add_opinion_modifier = { target = GER modifier = MR_pact_fascists }
-		}
-		diplomatic_relation = { country = SOV relation = non_aggression_pact }
-		add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
-		USA = {
-			set_country_flag = { flag = USA_MR_window days = 60 value = 1 }
-		}
 		hidden_effect = {
 			country_event = { hours = 6 id = news.32 }
 		}
@@ -243,7 +231,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		POL = { has_capitulated = yes }
+		10 = { is_controlled_by_axis = yes }
 	}
 
 	mean_time_to_happen = {

@@ -5,7 +5,6 @@
 ### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 ### search_filters = {FOCUS_FILTER_MANPOWER}
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
-### search_filters = {FOCUS_FILTER_USA_CONGRESS}
 
 focus_tree = {
 	id = usa_focus
@@ -122,8 +121,8 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
+		available = { 
+			has_completed_focus = USA_agricultural_adjustment_act 
 		}
 		
 		bypass = {
@@ -151,13 +150,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
-		available = { NOT = { has_idea = usa_new_law_is_in_development } }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_economy_intro
@@ -166,10 +163,10 @@ focus_tree = {
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
 			add_to_variable = { USA_min_export = 0.2 tooltip = min_export_tt }
 			
-			add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
-			hidden_effect = {
-				activate_mission = USA_law_timeout
-			}
+			#add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
+			#hidden_effect = {
+			#	activate_mission = USA_law_timeout
+			#}
 		}
 	}
 	focus = {
@@ -187,12 +184,12 @@ focus_tree = {
 		bypass = {
 			has_completed_focus = USA_total_war
 		}
-		available = { NOT = { has_idea = usa_new_law_is_in_development } }
+		available = { date > 1938.05.24 }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_economy_intro
@@ -201,10 +198,10 @@ focus_tree = {
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
 			add_to_variable = { USA_min_export = 0.2 tooltip = min_export_tt }
 			
-			add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
-			hidden_effect = {
-				activate_mission = USA_law_timeout
-			}
+			#add_timed_idea = { idea = usa_new_law_is_in_development days = 665 }
+			#hidden_effect = {
+			#	activate_mission = USA_law_timeout
+			#}
 		}
 	}
 	focus = {
@@ -222,12 +219,12 @@ focus_tree = {
 		bypass = {
 			has_completed_focus = USA_total_war
 		}
-		available = { NOT = { has_idea = usa_new_law_is_in_development } }
+		available = { date > 1940.05.28 }
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
 			custom_effect_tooltip = USA_economy_intro
@@ -325,7 +322,7 @@ focus_tree = {
 		bypass = {
 			
 		}
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {}
 		completion_reward = {
 			add_ideas = limited_intervention
 		}
@@ -394,7 +391,7 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = isolation
 			
@@ -787,7 +784,7 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			if = {
 				limit = {
@@ -1428,7 +1425,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		search_filters = {}
 		completion_reward = {
 			if = { 
 				limit = { 
@@ -2219,7 +2216,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			USA_congress_small_opposition = yes
+			
 			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
 		}
@@ -2307,7 +2304,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {}
 		completion_reward = {
-		USA_congress_small_opposition = yes
+		
 		custom_effect_tooltip = USA_economy_intro
 		add_to_variable = { USA_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt}
 		add_to_variable = { USA_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt}
@@ -2328,7 +2325,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {}
 		completion_reward = {
-		USA_congress_small_opposition = yes
+		
 		custom_effect_tooltip = USA_economy_intro
 		add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.05 tooltip = production_factory_efficiency_gain_factor_tt}
 		add_to_variable = { USA_consumer_goods_expected_value = -0.03 tooltip = consumer_goods_expected_tt}

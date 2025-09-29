@@ -91,6 +91,8 @@ NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на 
 
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.75 -- Кол-во касов от ШФ
 
+NDefines.NAir.AIR_MORE_GROUND_CREWS_COST = 500 -- Бесполезная кнопка, всех заебала
+
 NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.01 -- шанс попадания зсу-атаки по касам
 NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.0001 -- шанс попадания зсу-атаки по касам
 
