@@ -459,94 +459,39 @@ focus_tree = {
 				}			
 			}
 		}
-		complete_tooltip = {
-			navy_experience = 50
-			army_experience = 50
-			air_experience = 10
-			every_state = {
-				limit = { has_state_flag = USA_arsenal_of_democracy_3AF }
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
+		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			navy_experience = 50
 			army_experience = 50
 			air_experience = 10
-			random_owned_controlled_state = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
-					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 2
+						size > 0
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = dockyard
+						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = arms_factory
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
 			}
 		}
 	}
@@ -633,31 +578,17 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = USA_general_motors
-				random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
+				random_select_amount = 4
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -686,7 +617,16 @@ focus_tree = {
 		factor = 1
 		}
 		completion_reward = {
-			random_owned_controlled_state = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -694,22 +634,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 				387 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
@@ -1406,63 +1332,24 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
-
-		complete_tooltip = {
-			378 = { 
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
-			358 = { 
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
-		}
+		
 		search_filters = {}
 		completion_reward = {
-			if = { 
-				limit = { 
-					378 = {
-						free_building_slots = {
-							building = dockyard
-							size > 4
-							include_locked = yes
-						}
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
 					}
 				}
-				378 = { 
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = dockyard
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-			if = { 
-				limit = { 
-					358 = {
-						free_building_slots = {
-							building = dockyard
-							size > 4
-							include_locked = yes
-						}
-					}
-				}
-				358 = { 
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = dockyard
-						level = 5
-						instant_build = yes
-					}
+				random_select_amount = 5
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -1557,11 +1444,11 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = USA_advanced_mahanian_doctrine
-				cost_reduction = 0.5
+				bonus = 1.0
 				uses = 1
-				category = naval_doctrine
+				technology = advanced_heavy_battery
 			}
 		}
 	}
@@ -1587,7 +1474,8 @@ focus_tree = {
 				name = USA_carrier_primacy
 				bonus = 1.0
 				uses = 2
-				category = cv_tech
+				technology = improved_ship_hull_carrier
+				technology = advanced_ship_hull_carrier
 			}
 		}
 	}
@@ -1612,8 +1500,7 @@ focus_tree = {
 				name = USA_bureau_of_aeronautics
 				bonus = 1.0
 				uses = 1
-				category = naval_bomber
-				category = naval_air
+				technology = air_torpedoe_3
 			}
 		}
 	}
@@ -1648,7 +1535,8 @@ focus_tree = {
 				name = USA_naval_radar
 				uses = 2
 				bonus = 1.0
-				category = radar_tech
+				technology = improved_centimetric_radar
+				technology = advanced_centimetric_radar
 			}
 			
 		}
@@ -1817,23 +1705,16 @@ focus_tree = {
 			add_to_variable = { USA_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1862,39 +1743,16 @@ focus_tree = {
 			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
+				random_select_amount = 5
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -1929,11 +1787,6 @@ focus_tree = {
 		id = USA_crossing_the_atlantic
 		icon = GFX_focus_POL_develop_polish_shipbuilding
 		prerequisite = { focus = USA_modernization_dockyard}	
-		available = {
-			has_full_control_of_state = 524 
-			has_full_control_of_state = 526 
-			has_full_control_of_state = 645
-		}
 		cancel_if_invalid = yes
 		x = 1
 		y = 2
@@ -1952,9 +1805,9 @@ focus_tree = {
 					dockyard > 2
 				}
 				remove_building = {
-						type = dockyard
-						level = 2
-					}
+					type = dockyard
+					level = 2
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -2003,39 +1856,17 @@ focus_tree = {
 			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_stability_weekly = 0.003 tooltip = stability_weekly_tt}
 			add_to_variable = { USA_war_support_weekly = 0.003 tooltip = war_support_weekly_tt}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
+				random_select_amount = 5
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
