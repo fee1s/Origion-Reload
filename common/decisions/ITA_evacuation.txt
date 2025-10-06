@@ -1,0 +1,749 @@
+ITA_industry_relocation = {
+	ITA_sicily_ir = {
+		icon = generic_construction
+
+		allowed = {
+			always = no
+		}
+		
+		is_good = yes
+		
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				115 = {
+					is_controlled_by = ITA
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+						dockyard > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = africa_ended
+		}
+
+		days_mission_timeout = 14
+
+		timeout_effect = {
+			if = {
+				limit = {
+					115 = {
+						is_controlled_by = ITA
+						arms_factory > 0
+					}
+				}
+				115 = {
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								115 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								115 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								115 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_sicily_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					115 = {
+						is_controlled_by = ITA
+						industrial_complex > 0
+					}
+				}
+				115 = {
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								115 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								115 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								115 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_sicily_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					115 = {
+						is_controlled_by = ITA
+						dockyard > 0
+					}
+				}
+				115 = {
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								115 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								115 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								115 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_sicily_ir
+					}
+				}
+			}
+        }
+	}
+	
+	ITA_kalabriya_ir = {
+		icon = generic_construction
+
+		allowed = {
+			always = no
+		}
+		
+		is_good = yes
+		
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				156 = {
+					is_controlled_by = ITA
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+						dockyard > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = africa_ended
+		}
+
+		days_mission_timeout = 28
+
+		timeout_effect = {
+			if = {
+				limit = {
+					156 = {
+						is_controlled_by = ITA
+						arms_factory > 0
+					}
+				}
+				156 = {
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								156 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								156 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								156 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_kalabriya_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					156 = {
+						is_controlled_by = ITA
+						industrial_complex > 0
+					}
+				}
+				156 = {
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								156 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								156 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								156 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_kalabriya_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					156 = {
+						is_controlled_by = ITA
+						dockyard > 0
+					}
+				}
+				156 = {
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								156 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								156 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								156 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_kalabriya_ir
+					}
+				}
+			}
+        }
+	}
+	
+	ITA_kampanya_ir = {
+		icon = generic_construction
+
+		allowed = {
+			always = no
+		}
+		
+		is_good = yes
+		
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				117 = {
+					is_controlled_by = ITA
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+						dockyard > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = africa_ended
+		}
+
+		days_mission_timeout = 28
+
+		timeout_effect = {
+			if = {
+				limit = {
+					117 = {
+						is_controlled_by = ITA
+						arms_factory > 0
+					}
+				}
+				117 = {
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								117 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								117 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								117 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_kampanya_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					117 = {
+						is_controlled_by = ITA
+						industrial_complex > 0
+					}
+				}
+				117 = {
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								117 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								117 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								117 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_kampanya_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					117 = {
+						is_controlled_by = ITA
+						dockyard > 0
+					}
+				}
+				117 = {
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								117 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								117 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								117 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_kampanya_ir
+					}
+				}
+			}
+        }
+	}
+	
+	ITA_apulya_ir = {
+		icon = generic_construction
+
+		allowed = {
+			always = no
+		}
+		
+		is_good = yes
+		
+		fire_only_once = yes
+
+		available = {
+			NOT = {
+				849 = {
+					is_controlled_by = ITA
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+						dockyard > 0
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = africa_ended
+		}
+
+		days_mission_timeout = 28
+
+		timeout_effect = {
+			if = {
+				limit = {
+					849 = {
+						is_controlled_by = ITA
+						arms_factory > 0
+					}
+				}
+				849 = {
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								849 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								849 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								849 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_apulya_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					849 = {
+						is_controlled_by = ITA
+						industrial_complex > 0
+					}
+				}
+				849 = {
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								849 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								849 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								849 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_apulya_ir
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					849 = {
+						is_controlled_by = ITA
+						dockyard > 0
+					}
+				}
+				849 = {
+					remove_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						italian_safe_cores = yes
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							OR = {
+								849 = {
+									is_controlled_by = ITA
+									arms_factory > 0
+								}
+								849 = {
+									is_controlled_by = ITA
+									industrial_complex > 0
+								}
+								849 = {
+									is_controlled_by = ITA
+									dockyard > 0
+								}
+							}
+						}
+						activate_mission = ITA_apulya_ir
+					}
+				}
+			}
+        }
+	}
+}
