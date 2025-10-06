@@ -487,3 +487,13 @@ has_different_doctrine_trigger = {
         }
     }
 }
+
+all_europe_occupied_by_axis = {
+	has_global_flag = french_company_ended
+	HOL = { exists = no }
+	BEL = { exists = no }
+	LUX = { exists = no }
+	POL = { exists = no }
+	DEN = { exists = no }
+	NOR = { exists = no }
+}

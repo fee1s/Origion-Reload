@@ -48,23 +48,20 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = { 
-			240 = {
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 220
+						state = 240
+					}
+				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = SOV_finish_five_year_plan_2IC
-			}
-			220 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 		}
 	}
@@ -81,23 +78,25 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
-		completion_reward = {
-			hidden_effect = {
-				add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
-				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
+		completion_reward = {	
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
 			}
-			if = {
-				limit = {
-					has_government = communism
-				}
-				custom_effect_tooltip = SOV_third_five_year_plan_ns_tt
-
-				add_tech_bonus = {
-					name = SOV_third_five_year_plan_default
-					bonus = 0.75
-					uses = 2
-					category = construction_tech
-				}
+			add_to_variable = { 
+			    SOV_fyp_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SOV_third_five_year_plan_default
+				bonus = 0.75
+				uses = 2
+				technology = construction4
+				technology = excavation4
 			}
 		}
 	}
@@ -116,37 +115,26 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 }
-			custom_effect_tooltip = SOV_reorganize_the_pc_of_heavy_industry_ns_tt
-			
-			if = {
-				limit = {
-					has_government = communism
-				}
-
-				add_tech_bonus = {
-					name = SOV_reorganize_the_pc_of_heavy_industry_name_default
-					bonus = 1.0
-					uses = 1
-					technology = concentrated_industry4
-				}
-				add_tech_bonus = {
-					name = SOV_reorganize_the_pc_of_heavy_industry_name_default
-					bonus = 1.0
-					uses = 1
-					technology = flexible_line
-					technology = streamlined_line
-				}
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_consumer_goods_factor = 0.05
+				tooltip = consumer_goods_factor_tt
 			}
-			else = {
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-				add_tech_bonus = {
-					name = SOV_reorganize_the_pc_of_heavy_industry_name_default
-					bonus = 1.0
-					uses = 1
-					technology = flexible_line
-					technology = streamlined_line
-				}
+			add_tech_bonus = {
+				name = SOV_reorganize_the_pc_of_heavy_industry_name_default
+				bonus = 1.0
+				uses = 1
+				technology = concentrated_industry4
+			}
+			add_tech_bonus = {
+				name = SOV_reorganize_the_pc_of_heavy_industry_name_default
+				bonus = 1.0
+				uses = 1
+				technology = flexible_line
+				technology = streamlined_line
 			}
 		}
 	}
@@ -163,11 +151,19 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
-		completion_reward = {
-			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 }
-			add_to_variable = { SOV_fyp_line_change_production_efficiency_factor = 0.1 }
-			custom_effect_tooltip = SOV_industrial_modernization_ns_tt
-
+		completion_reward = {		
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			
+			add_to_variable = { 
+			    SOV_fyp_line_change_production_efficiency_factor = 0.1
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_industrial_modernization
 				ahead_reduction = 2
@@ -191,9 +187,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			#Modify Third Year Plan NS
-			set_variable = { SOV_fyp_local_resources_factor = 0.1 }
-			custom_effect_tooltip = SOV_increase_state_reserves_ns_tt
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_local_resources_factor = 0.1
+				tooltip = local_resources_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -210,23 +210,29 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_variable = { SOV_fyp_industrial_capacity_factory = 0.05 }
-			set_variable = { SOV_fyp_industrial_capacity_dockyard = 0.05 }
-
-			custom_effect_tooltip = SOV_steel_casting_industry_ns_tt
-
-			random_owned_controlled_state = {
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			
+			add_to_variable = { 
+			    SOV_fyp_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
 				limit = {
-					has_resources_amount = {
-						resource = steel
-						amount > 0
-					}
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -236,48 +242,6 @@ focus_tree = {
 				add_resource = {
 					type = steel
 					amount = 5
-				}
-				set_state_flag = SOV_steel_casting_industry_flag
-			}
-			if = {
-				limit = {
-					any_owned_state = {
-						has_resources_amount = {
-							resource = steel
-							amount > 0
-						}
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = {	has_state_flag = SOV_steel_casting_industry_flag }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						has_resources_amount = {
-							resource = steel
-							amount > 0
-						}
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-						NOT = {	has_state_flag = SOV_steel_casting_industry_flag }
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 5
-					}
-					set_state_flag = SOV_steel_casting_industry_flag
 				}
 			}
 		}
@@ -331,8 +295,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_variable = { SOV_fyp_fuel_gain_factor_from_states = 0.5 }
-			custom_effect_tooltip = SOV_oil_production_ns_tt
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_fuel_gain_factor_from_states = 0.5
+				tooltip = fuel_gain_factor_from_states_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_tech_bonus = {
 				name = SOV_oil_production
@@ -381,17 +350,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_temp_variable = { SOV_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
-			408 = { #VLADIVOSTOK
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 409
+						state = 408
+					}
 				}
-			}
-			
-			409 = { #KHABAROVSK
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
@@ -415,16 +381,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			572 = { #CHELYABISNK
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 572
+						state = 582
+					}
 				}
-			}
-			
-			582 = { #MAGNITOGORSK
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
@@ -486,7 +450,7 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 250	
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_transpolar_flights
 				bonus = 1.0
@@ -551,9 +515,15 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_range_factor = 0.05 }
-			add_to_variable = { SOV_soviet_airforce_air_agility_factor = 0.05 }
-			custom_effect_tooltip = SOV_modernize_aircraft_facilities_ns_tt
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_range_factor = 0.05
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_agility_factor = 0.05
+				tooltip = air_agility_factor_tt
+			}
 		}
 	}
 
@@ -663,10 +633,18 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_accidents_factor = -0.25 }
-			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.1 }
-			custom_effect_tooltip = SOV_foster_flying_clubs_ns_tt
-
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_accidents_factor = -0.25
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_weather_penalty = -0.1
+				tooltip = air_weather_penalty_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			air_experience = 100
 		}
 	}
@@ -684,8 +662,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.1 }
-			custom_effect_tooltip = SOV_women_in_aviation_ns_tt
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_weather_penalty = -0.1
+				tooltip = air_weather_penalty_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			air_experience = 25
 		}
@@ -704,8 +687,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.2 }
-			custom_effect_tooltip = SOV_raskovas_aviation_group_ns_tt
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_night_penalty = -0.2
+				tooltip = air_night_penalty_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -728,11 +716,21 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_accidents_factor = -0.25 }
-			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.1 }
-			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.1 }
-			custom_effect_tooltip = SOV_intensify_pilot_training_program_ns_tt
-
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_accidents_factor = -0.25
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_night_penalty = -0.1
+				tooltip = air_night_penalty_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_weather_penalty = -0.1
+				tooltip = air_weather_penalty_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			air_experience = 50
 		}
 	}
@@ -754,9 +752,15 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_accidents_factor = -0.25 }
-			add_to_variable = { SOV_soviet_airforce_air_weather_penalty = -0.1 }
-			custom_effect_tooltip = SOV_expand_aviation_institutes_ns_tt
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_accidents_factor = -0.25
+				tooltip = air_accidents_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_weather_penalty = -0.1
+				tooltip = air_weather_penalty_tt
+			}
 		}
 	}
 
@@ -778,10 +782,15 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
-		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_cas_present_factor = 0.1 }
-			custom_effect_tooltip = SOV_ground_support_ns_tt
-
+		completion_reward = {		
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_cas_present_factor = 0.1
+				tooltip = air_cas_present_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = SOV_ground_support
 				bonus = 1
@@ -810,9 +819,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_superiority_efficiency = 0.05 }
-			custom_effect_tooltip = SOV_long_range_aircraft_ns_tt
-
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_superiority_efficiency = 0.05
+				tooltip = air_superiority_efficiency_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = SOV_long_range_aircraft
 				bonus = 1
@@ -840,9 +854,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_soviet_airforce_air_night_penalty = -0.1 }
-			add_to_variable = { SOV_soviet_airforce_air_superiority_efficiency = 0.075 } 
-			custom_effect_tooltip = SOV_the_modern_war_in_the_skies_ns_tt
+		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_superiority_efficiency = 0.075
+				tooltip = air_superiority_efficiency_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_night_penalty = -0.1
+				tooltip = air_night_penalty_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -2935,10 +2957,18 @@ focus_tree = {
 		
 		search_filters = {}
 
-		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_training_time_factor = 0.1 }
-			custom_effect_tooltip = SOV_cohesion_first_ns_tt
+		completion_reward = {		
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_training_time_factor = 0.1
+				tooltip = training_time_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -2954,10 +2984,17 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_land_reinforce_rate = 0.02 }
-			add_to_variable = { SOV_the_red_army_army_morale_factor = 0.1 }
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_land_reinforce_rate = 0.02
+				tooltip = land_reinforce_rate_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
 			
-			custom_effect_tooltip = SOV_rehabilitated_military_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -2973,10 +3010,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_org_loss_at_low_org_factor = -0.15 }
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_org_loss_at_low_org_factor = -0.15
+				tooltip = org_loss_at_low_org_factor_orgn_tt
+			}
 			
-			custom_effect_tooltip = SOV_military_reorganization_ns_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
     
@@ -2989,17 +3033,30 @@ focus_tree = {
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 10
     
-	    completion_reward = {
-            add_to_variable = { SOV_the_red_army_army_attack_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_army_morale_factor = 0.1 }
-			add_to_variable = { SOV_the_red_army_conscription_factor = 0.15 }
+	    completion_reward = {		
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_attack_factor = 0.05
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_defence_factor = 0.05
+				tooltip = army_defence_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_conscription_factor = 0.15
+				tooltip = conscription_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 		    hidden_effect = {
 			    sound_effect = psi_the_sacred_war
 			}
-			
-			custom_effect_tooltip = SOV_the_sacred_war_ns_tt
 			
 			set_technology = { deep_operations = 1 }
 		} 
@@ -3054,10 +3111,17 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_winter_attrition_factor = -0.35 }
-			add_to_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.5 }
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_winter_attrition_factor = -0.35
+				tooltip = winter_attrition_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.5
+				tooltip = acclimatization_cold_climate_gain_factor_tt
+			}
 			
-			custom_effect_tooltip = SOV_an_adaptable_army_ns_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -3077,15 +3141,34 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
-		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_army_attack_factor = 0.075 }
-			add_to_variable = { SOV_the_red_army_army_defence_factor = 0.075 }
-			add_to_variable = { SOV_the_red_army_army_breakthrough_factor = 0.075 }
-			set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
-			set_variable = { SOV_the_red_army_experience_loss_factor = 0 }
-
-			custom_effect_tooltip = SOV_lessons_of_war_ns_tt
+		completion_reward = {	
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_attack_factor = 0.075
+				tooltip = army_attack_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_defence_factor = 0.075
+				tooltip = army_defence_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_experience_gain_army_factor = 0.1
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_experience_loss_factor = -0.25
+				tooltip = experience_loss_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_breakthrough_factor = 0.075
+				tooltip = breakthrough_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			set_technology = { vast_offensives = 1 }
 		}
@@ -3128,9 +3211,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_initiative_factor = 0.1 }
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_initiative_factor = 0.1
+				tooltip = initiative_factor_tt
+			}
 			
-			custom_effect_tooltip = SOV_smersh_tt_wtf
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -3150,8 +3237,13 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_morale_factor = 0.1 }
-			custom_effect_tooltip = SOV_barrier_troops_ns_tt
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -3171,10 +3263,21 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_cas_damage_reduction = 0.05 }
-			add_to_variable = { SOV_the_red_army_max_dig_in = 5 }
-			add_to_variable = { SOV_the_red_army_dig_in_speed_factor = 0.05 }
-			custom_effect_tooltip = SOV_experts_in_camouflage_ns_tt
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_dig_in_speed_factor = 0.05
+				tooltip = dig_in_speed_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_max_dig_in = 5
+				tooltip = max_dig_in_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_cas_damage_reduction = 0.05
+				tooltip = cas_damage_reduction_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -3197,10 +3300,17 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_army_morale_factor = -0.1 }
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = -0.1
+				tooltip = army_morale_factor_tt
+			}
 			
-			custom_effect_tooltip = SOV_keep_commissars_organization_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -3219,10 +3329,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = -0.05 }
-			add_to_variable = { SOV_the_red_army_army_morale_factor = 0.1 }
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_org_factor = -0.05
+				tooltip = army_org_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
 			
-			custom_effect_tooltip = SOV_swap_to_political_advisors_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -3882,9 +3999,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SOV_patriarch_sergy
 		}
 	}
 
