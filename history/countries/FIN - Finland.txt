@@ -21,7 +21,7 @@ set_variable = { FIN_finnish_army_army_core_defence_factor = 0.25 }
 set_variable = { FIN_finnish_army_conscription = 0.015 }
 set_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 }
 set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 50.0 }
-set_variable = { FIN_finnish_army_cas_damage_reduction = 0.25 }
+set_variable = { FIN_finnish_army_cas_damage_reduction = 0.15 }
 
 ### VARS ###
 
@@ -85,7 +85,9 @@ set_technology = {
 	tech_engineers = 1
 	tech_trucks = 1
 	motorised_infantry = 1
+	synth_oil_experiments = 1
 	fuel_silos = 1
+	fuel_refining = 1
 	basic_train = 1
 	tech_mountaineers = 1
 	gwtank_chassis = 1
@@ -120,5 +122,5 @@ set_popularities = { #VANILLA
 
 add_equipment_to_stockpile = {
 	type = train_equipment_1
-	amount = 200
+	amount = 70
 }

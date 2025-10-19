@@ -2,17 +2,14 @@ defined_text = { # Country
 	name = GetAlliesIran
 	text = {
 		trigger = {
-			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			iran_green_color_trigger = yes
 		}
 		localization_key = GFX_iran_green
 	}
 	
 	text = {
 		trigger = {
-			OR = {
-				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
-				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
-			}
+			iran_green_color_trigger = no
 		}
 		localization_key = GFX_iran_red
 	}
@@ -60,16 +57,13 @@ defined_text = { # Country
 	name = GetAlliesIranRouteColor
 	text = {
 		trigger = {
-			AND = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } }
+			iran_green_color_trigger = yes
 		}
 		localization_key = GetAlliesIranRouteYes
 	}
 	text = {
 		trigger = {	
-			OR = {
-				NOT = { SOV = { controls_state = 419 controls_state = 420 controls_state = 266 controls_state = 418 controls_state = 416 } }
-				NOT = { ENG = { controls_state = 421 controls_state = 417 controls_state = 413 controls_state = 411 controls_state = 412 controls_state = 414 controls_state = 410 } } 
-			}
+			iran_green_color_trigger = no
 		}
 		localization_key = GetAlliesIranRouteNo
 	}
