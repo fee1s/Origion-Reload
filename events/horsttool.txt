@@ -1,5 +1,5 @@
 add_namespace = horsttool
-add_namespace = news
+add_namespace = news 
 
 add_namespace = horsthelp
 country_event = {   
@@ -67,11 +67,43 @@ news_event = {
 		 }
 		
 	}
+	news_event = {
+	id = horsttool.18
+	title = "Хост в здании"
+	
+	desc = " [From.Getname] удалено один военный завод для [From.From.Owner.Getname]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Пох?"
+		 }
+		
+	}
 		news_event = {
 	id = horsttool.12
 	title = "Хост в здании"
 	
-	desc = " [From.Getname] выдана одна гражданская фабрика для [From.From.Owner.Getname]"
+	desc = " [From.Getname] удалена одна гражданская фабрика для [From.From.Owner.Getname]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Пох?"
+		 }
+		
+	}
+			news_event = {
+	id = horsttool.17
+	title = "Хост в здании"
+	
+	desc = " [From.Getname] удалена одна гражданская фабрика для [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
 	
 	major = yes
@@ -89,6 +121,22 @@ news_event = {
 	title = "Хост в здании"
 	
 	desc = " [From.Getname] выдана одна верфь для [From.From.Owner.Getname]"
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Пох?"
+		 }
+		
+	}
+		news_event = {
+	id = horsttool.16
+	title = "Хост в здании"
+	
+	desc = " [From.Getname] удалена одна верфь для [From.From.Owner.Getname]"
 	picture = GFX_news_event_001
 	
 	major = yes
@@ -228,6 +276,16 @@ news_event = {
 		is_triggered_only = yes
       option = { name = "Пох?"  }
    }
+   news_event = {	
+   id = news.4008
+   title = news.4008.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
    news_event = {		
    id = news.4113
    title = news.4113.t
@@ -306,6 +364,57 @@ news_event = {
    news_event = {		
    id = news.4120
    title = news.4120.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+
+    news_event = {		
+   id = news.4121
+   title = news.4121.t 
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+    news_event = {		
+   id = news.4122
+   title = news.4122.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+    news_event = {		
+   id = news.4123
+   title = news.4123.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+    news_event = {		
+   id = news.4124
+   title = news.4124.t
+   desc = ""
+   picture = GFX_news_event_italian_tank_desert
+
+		major =  yes
+		is_triggered_only = yes
+      option = { name = "Пох?"  }
+   }
+   news_event = {		
+   id = news.4125
+   title = news.4125.t
    desc = ""
    picture = GFX_news_event_italian_tank_desert
 
