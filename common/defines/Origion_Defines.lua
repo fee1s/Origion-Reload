@@ -23,6 +23,8 @@ NDefines.NMilitary.TRAINING_ATTRITION = 0.00
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999;
 
+NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 300 -- Невозможно повысить генерала, фельдмаршалы интегрированы со старта
+
 NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.075; -- Урон по прочности, 28.01 - x1.67 от ванилы, 02.01 - x1.17 от ванилы (уменьшено, т.к выпущен фикс доктрин без миллионной прочки), 20.06 - x1.25 от ванилы
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 100000; -- Нет лимита спецуры

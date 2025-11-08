@@ -208,13 +208,13 @@ characters = {
 	}
 
 
-##     ## ##    ## #### ########    ##       ########    ###    ########  ######## ########   ######  
-##     ## ###   ##  ##     ##       ##       ##         ## ##   ##     ## ##       ##     ## ##    ## 
-##     ## ####  ##  ##     ##       ##       ##        ##   ##  ##     ## ##       ##     ## ##       
-##     ## ## ## ##  ##     ##       ##       ######   ##     ## ##     ## ######   ########   ######  
-##     ## ##  ####  ##     ##       ##       ##       ######### ##     ## ##       ##   ##         ## 
-##     ## ##   ###  ##     ##       ##       ##       ##     ## ##     ## ##       ##    ##  ##    ## 
- #######  ##    ## ####    ##       ######## ######## ##     ## ########  ######## ##     ##  ######  
+##   ## ##  ## #### ########  ##    ########  ###  ######## ######## ########  ###### 
+##   ## ###  ## ##   ##    ##    ##     ## ##  ##   ## ##    ##   ## ##  ## 
+##   ## #### ## ##   ##    ##    ##    ##  ## ##   ## ##    ##   ## ##    
+##   ## ## ## ## ##   ##    ##    ######  ##   ## ##   ## ######  ########  ###### 
+##   ## ## #### ##   ##    ##    ##    ######### ##   ## ##    ##  ##     ## 
+##   ## ##  ### ##   ##    ##    ##    ##   ## ##   ## ##    ##  ## ##  ## 
+ ####### ##  ## ####  ##    ######## ######## ##   ## ######## ######## ##   ## ###### 
 
 	BUL_nikola_mihov = {
 		name = BUL_nikola_mihov
@@ -225,12 +225,12 @@ characters = {
 			}
 		}
 		
-		corps_commander={
-			traits={ panzer_leader war_hero trait_engineer urban_assault_specialist Trickster organizer ranger Brilliant_Strategist}
+		field_marshal={
+			traits={ panzer_leader trait_engineer urban_assault_specialist Trickster organizer ranger }
 			skill=6
-			attack_skill=4
+			attack_skill=5
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=34
 		}
@@ -280,11 +280,11 @@ characters = {
 				}
 			}
 			corps_commander={
-				traits={ panzer_leader war_hero trait_engineer urban_assault_specialist organizer ranger Trickster Brilliant_Strategist}
+				traits={ panzer_leader trait_engineer urban_assault_specialist organizer ranger Trickster }
 				skill=6
-				attack_skill=4
+				attack_skill=6
 				defense_skill=4
-				planning_skill=3
+				planning_skill=4
 				logistics_skill=4
 				legacy_id=34
 			}
@@ -298,7 +298,7 @@ characters = {
 				small = GFX_portrait_BUL_asen_nikolov_small
 			}
 		}
-		corps_commander={
+		field_marshal={
 			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
 			attack_skill=3
@@ -340,7 +340,7 @@ characters = {
 		corps_commander={
 			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -463,13 +463,13 @@ characters = {
 
 
 
-##     ## #### ##       #### ########    ###    ########  ##    ##       ###    ########  ##     ## ####  ######   #######  ########   ######  
-###   ###  ##  ##        ##     ##      ## ##   ##     ##  ##  ##       ## ##   ##     ## ##     ##  ##  ##    ## ##     ## ##     ## ##    ## 
-#### ####  ##  ##        ##     ##     ##   ##  ##     ##   ####       ##   ##  ##     ## ##     ##  ##  ##       ##     ## ##     ## ##       
-## ### ##  ##  ##        ##     ##    ##     ## ########     ##       ##     ## ##     ## ##     ##  ##   ######  ##     ## ########   ######  
-##     ##  ##  ##        ##     ##    ######### ##   ##      ##       ######### ##     ##  ##   ##   ##        ## ##     ## ##   ##         ## 
-##     ##  ##  ##        ##     ##    ##     ## ##    ##     ##       ##     ## ##     ##   ## ##    ##  ##    ## ##     ## ##    ##  ##    ## 
-##     ## #### ######## ####    ##    ##     ## ##     ##    ##       ##     ## ########     ###    ####  ######   #######  ##     ##  ######  
+##   ## #### ##    #### ########  ###  ######## ##  ##    ###  ######## ##   ## #### ######  ####### ########  ###### 
+###  ### ## ##    ##   ##   ## ##  ##   ## ## ##    ## ##  ##   ## ##   ## ## ##  ## ##   ## ##   ## ##  ## 
+#### #### ## ##    ##   ##   ##  ## ##   ##  ####    ##  ## ##   ## ##   ## ## ##    ##   ## ##   ## ##    
+## ### ## ## ##    ##   ##  ##   ## ########   ##    ##   ## ##   ## ##   ## ##  ###### ##   ## ########  ###### 
+##   ## ## ##    ##   ##  ######### ##  ##   ##    ######### ##   ## ##  ##  ##    ## ##   ## ##  ##     ## 
+##   ## ## ##    ##   ##  ##   ## ##  ##   ##    ##   ## ##   ##  ## ##  ## ##  ## ##   ## ##  ## ##  ## 
+##   ## #### ######## ####  ##  ##   ## ##   ##  ##    ##   ## ########   ###  #### ######  ####### ##   ## ###### 
 
 
 #################
@@ -529,11 +529,11 @@ characters = {
 	BUL_konstantin_lukash = {
 		name = BUL_konstantin_lukash
 		corps_commander={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -672,7 +672,7 @@ characters = {
 			traits = {
 				air_chief_reform_1
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 				modifier = {
@@ -796,13 +796,13 @@ characters = {
 	}
 
 
-########   #######  ##       #### ######## ####  ######     ###    ##             ###    ########  ##     ## ####  ######   #######  ########   ######  
-##     ## ##     ## ##        ##     ##     ##  ##    ##   ## ##   ##            ## ##   ##     ## ##     ##  ##  ##    ## ##     ## ##     ## ##    ## 
-##     ## ##     ## ##        ##     ##     ##  ##        ##   ##  ##           ##   ##  ##     ## ##     ##  ##  ##       ##     ## ##     ## ##       
-########  ##     ## ##        ##     ##     ##  ##       ##     ## ##          ##     ## ##     ## ##     ##  ##   ######  ##     ## ########   ######  
-##        ##     ## ##        ##     ##     ##  ##       ######### ##          ######### ##     ##  ##   ##   ##        ## ##     ## ##   ##         ## 
-##        ##     ## ##        ##     ##     ##  ##    ## ##     ## ##          ##     ## ##     ##   ## ##    ##  ##    ## ##     ## ##    ##  ##    ## 
-##         #######  ######## ####    ##    ####  ######  ##     ## ########    ##     ## ########     ###    ####  ######   #######  ##     ##  ######  
+########  ####### ##    #### ######## #### ######   ###  ##       ###  ######## ##   ## #### ######  ####### ########  ###### 
+##   ## ##   ## ##    ##   ##   ## ##  ##  ## ##  ##      ## ##  ##   ## ##   ## ## ##  ## ##   ## ##   ## ##  ## 
+##   ## ##   ## ##    ##   ##   ## ##    ##  ## ##      ##  ## ##   ## ##   ## ## ##    ##   ## ##   ## ##    
+######## ##   ## ##    ##   ##   ## ##    ##   ## ##     ##   ## ##   ## ##   ## ##  ###### ##   ## ########  ###### 
+##    ##   ## ##    ##   ##   ## ##    ######### ##     ######### ##   ## ##  ##  ##    ## ##   ## ##  ##     ## 
+##    ##   ## ##    ##   ##   ## ##  ## ##   ## ##     ##   ## ##   ##  ## ##  ## ##  ## ##   ## ##  ## ##  ## 
+##     ####### ######## ####  ##  #### ###### ##   ## ########  ##   ## ########   ###  #### ######  ####### ##   ## ###### 
 
 	BUL_dobri_bozhilov = {
 		name = BUL_dobri_bozhilov
@@ -913,7 +913,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-			    has_completed_focus = BUL_corporatism
+			  has_completed_focus = BUL_corporatism
 			}
 			traits = {
 				statism_adept

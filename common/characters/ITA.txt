@@ -1,12 +1,12 @@
 characters = {
 	
 
-  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
- #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
- #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
- #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
- #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
-  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
+ ####  ####  #  # #  # ##### #####  #  #   #    ######  ##  #####  ###### #####  #### 
+ #  # #  # #  # ##  #  #  #  #  # #    #    #    # #  #  # #    #  # #   
+ #    #  # #  # # # #  #  #  #  #    #    #####  #  # #  # #####  #  #  #### 
+ #    #  # #  # # # #  #  #####   #    #    #    ###### #  # #    #####    # 
+ #  # #  # #  # #  ##  #  #  #   #    #    #    #  # #  # #    #  #  #  # 
+ ####  ####  ####  #  #  #  #  #  #    ###### ###### #  # #####  ###### #  #  #### 
 
 
 	ITA_benito_mussolini = {
@@ -22,19 +22,6 @@ characters = {
 			traits = { il_duce }
 			expire = "1965.1.1.1"
 			id = -1
-		}
-
-		corps_commander = {
-			traits={}
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
-			visible = {
-				has_completed_focus = ITA_capo_supremo
-			}
 		}
 	}
 
@@ -141,13 +128,13 @@ characters = {
 
 
 
-   # #    #####   #    #  #   #      #        ######    ##    #####   ######  #####    ####  
-  #   #   #    #  ##  ##   # #       #        #        #  #   #    #  #       #    #  #      
- #     #  #    #  # ## #    #        #        #####   #    #  #    #  #####   #    #   ####  
- #######  #####   #    #    #        #        #       ######  #    #  #       #####        # 
- #     #  #   #   #    #    #        #        #       #    #  #    #  #       #   #   #    # 
- #     #  #    #  #    #    #        #######  ######  #    #  #####   ######  #    #   ####  
-                                                                                             
+  # #  #####  #  # #  #   #    ######  ##  #####  ###### #####  #### 
+ #  #  #  # ## ##  # #    #    #    # #  #  # #    #  # #   
+ #   # #  # # ## #  #    #    #####  #  # #  # #####  #  #  #### 
+ ####### #####  #  #  #    #    #    ###### #  # #    #####    # 
+ #   # #  #  #  #  #    #    #    #  # #  # #    #  #  #  # 
+ #   # #  # #  #  #    ####### ###### #  # #####  ###### #  #  #### 
+                                               
 
 	ITA_rodolfo_graziani = {
 		name = ITA_rodolfo_graziani
@@ -158,12 +145,12 @@ characters = {
 			}
 		}
 
-		field_marshal={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
+		corps_commander={
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -193,16 +180,6 @@ characters = {
 				large = GFX_portrait_ITA_pietro_badoglio
 			}
 		}
-
-		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected defensive_doctrine organizer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_emilio_de_bono = {
@@ -228,16 +205,6 @@ characters = {
 				base = 1.000
 			}
 		}
-		
-		field_marshal = {
-			traits = { old_guard trait_cautious politically_connected defensive_doctrine }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_italo_balbo = { #Can become Country Leader later
@@ -259,7 +226,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				if =  {
+				if = {
 					limit = { 
 						has_dlc = "By Blood Alone"
 					}
@@ -275,19 +242,6 @@ characters = {
 				base = 1.000
 			}
 		}
-		
-		field_marshal = {
-			traits = { career_officer politically_connected trait_reckless media_personality }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = {
-				ITA_is_advisor_available = yes
-			}
-		}
 	}
 
 	ITA_giovanni_messe = {
@@ -300,11 +254,11 @@ characters = {
 		}
 		
 		field_marshal={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=5
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -357,7 +311,7 @@ characters = {
 		corps_commander = {
 			traits = { career_officer trikster infantry_officer infantry_leader organizer trickster commando }
 			skill = 6
-			attack_skill = 3
+			attack_skill = 4
 			defense_skill = 5
 			planning_skill = 4
 			logistics_skill = 4
@@ -374,7 +328,7 @@ characters = {
 			}
 		}
 
-		corps_commander = {
+		field_marshal = {
 			traits = { career_officer trikster infantry_officer infantry_leader organizer trickster commando }
 			skill = 6
 			attack_skill = 3
@@ -408,17 +362,6 @@ characters = {
 				small = GFX_portrait_ITA_ubaldo_soddu_small
 			}
 		}
-
-		corps_commander = {
-			traits = { career_officer trait_cautious }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
-		}
 	}
 
 	ITA_ettore_bastico = {
@@ -433,7 +376,7 @@ characters = {
 		corps_commander = {
 			traits = { infantry_officer career_officer infantry_leader organizer trickster commando }
 			skill = 6
-			attack_skill = 3
+			attack_skill = 4
 			defense_skill = 5
 			planning_skill = 4
 			logistics_skill = 4
@@ -469,16 +412,6 @@ characters = {
 				large = GFX_portrait_ITA_italo_gariboldi
 			}
 		}
-		
-		corps_commander = {
-			traits = { old_guard career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_vittorio_ambrosio = {
@@ -488,16 +421,6 @@ characters = {
 				small = GFX_idea_vittorio_ambrosio
 				large = GFX_portrait_ITA_vittorio_ambrosio
 			}
-		}
-		
-		corps_commander = {
-			traits = { cavalry_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
 		}
 	}
 
@@ -513,17 +436,6 @@ characters = {
 				large = GFX_portrait_ITA_alfredo_guzzoni
 			}
 		}
-		
-		corps_commander = {
-			traits = { old_guard }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
-		}
 	}
 
 	ITA_pietro_pintor = {
@@ -533,17 +445,6 @@ characters = {
 				small = GFX_portrait_ITA_pietro_pintor_small
 				large = GFX_portrait_ITA_pietro_pintor
 			}
-		}
-		
-		corps_commander = {
-			traits = { old_guard inflexible_strategist }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -555,16 +456,6 @@ characters = {
 				large = GFX_portrait_ITA_mario_berti
 			}
 		}
-		
-		corps_commander = {
-			traits = { old_guard trait_reckless war_hero } #Always sick really need to do something about it
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_carlo_geloso = {
@@ -574,16 +465,6 @@ characters = {
 				small = GFX_portrait_ITA_carlo_geloso_small
 				large = GFX_portrait_ITA_carlo_geloso
 			}
-		}
-		
-		corps_commander = {
-			traits = { old_guard trait_engineer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
 		}
 	}
 
@@ -595,17 +476,6 @@ characters = {
 				large = GFX_portrait_ITA_giuseppe_tellera
 			}
 		}
-		
-		corps_commander = {
-			traits = { armor_officer } #Representing how he died
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
-		}
 	}
 
 	ITA_francesco_zingales = {
@@ -615,17 +485,6 @@ characters = {
 				small = GFX_portrait_ITA_francesco_zingales_small
 				large = GFX_portrait_ITA_francesco_zingales
 			}
-		}
-		
-		corps_commander = {
-			traits = { cavalry_leader combined_arms_expert } #Motorized
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -637,16 +496,6 @@ characters = {
 				large = GFX_portrait_ITA_ezio_rosi
 			}
 		}
-		
-		corps_commander = {
-			traits = { infantry_officer organizer } #Logistics and Infantry
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_mario_vercellino = {
@@ -656,16 +505,6 @@ characters = {
 				small = GFX_portrait_ITA_mario_vercellino_small
 				large = GFX_portrait_ITA_mario_vercellino
 			}
-		}
-		
-		corps_commander = {
-			traits = { infantry_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
 		}
 	}
 
@@ -677,16 +516,6 @@ characters = {
 				large = GFX_portrait_ITA_prince_filiberto
 			}
 		}
-		
-		corps_commander = {
-			traits = { career_officer infantry_officer militias_officer } # Infantry & Mountaineers (Used for Blackshirts since he also commanded them)
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 0
-		}
 	}
 
 	ITA_prince_adalberto = {
@@ -696,16 +525,6 @@ characters = {
 				small = GFX_portrait_ITA_prince_adalberto_small
 				large = GFX_portrait_ITA_prince_adalberto
 			}
-		}
-		
-		corps_commander = {
-			traits = { career_officer } # Infantry
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
 		}
 	}
 
@@ -717,16 +536,6 @@ characters = {
 				large = GFX_portrait_ITA_prince_umberto
 			}
 		}
-		
-		corps_commander = {
-			traits = { career_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_alessandro_pirzio_biroli = {
@@ -736,17 +545,6 @@ characters = {
 				small = GFX_portrait_ITA_alessandro_pirzio_biroli_small
 				large = GFX_portrait_ITA_alessandro_pirzio_biroli
 			}
-		}
-		
-		corps_commander = {
-			traits = { harsh_leader } #Resistance stuff if anything
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { has_government = fascism }
 		}
 	}
 
@@ -758,16 +556,6 @@ characters = {
 				large = GFX_portrait_ITA_carlo_vecchiarelli
 			}
 		}
-		
-		corps_commander = {
-			traits = { trait_mountaineer } # Infantry, Mountaneers, Armor
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-		}
 	}
 
 	ITA_mario_robotti = {
@@ -777,16 +565,6 @@ characters = {
 				small = GFX_portrait_ITA_mario_robotti_small
 				large = GFX_portrait_ITA_mario_robotti
 			}
-		}
-		
-		corps_commander = {
-			traits = { infantry_officer } # Infantry
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
 		}
 	}
 
@@ -800,11 +578,11 @@ characters = {
 		}
 		
 		corps_commander={
-			traits={ panzer_leader Brilliant_Strategist trait_engineer urban_assault_specialist organizer ranger Trickster}
+			traits={ panzer_leader trait_engineer urban_assault_specialist organizer ranger Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -831,17 +609,6 @@ characters = {
 				large = GFX_portrait_ITA_amedeo_guillet
 			}
 		}
-		
-		corps_commander = {
-			traits = { irregulars_officer desert_fox cavalry_leader skirmisher }  # Irregulars, Cavalry. Comandante Diavolo trait?
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 0
-			visible = { has_completed_focus = ITA_comandante_diavolo }
-		}
 	}
 
 	ITA_annibale_bergonzoli = {
@@ -850,20 +617,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_annibale_bergonzoli_small
 				large = GFX_portrait_ITA_annibale_bergonzoli
-			}
-		}
-		
-		corps_commander = {
-			traits = { old_guard infantry_officer commando }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 0
-			visible = {
-				has_completed_focus = ITA_army_leaders
-				NOT = { has_government = communism }
 			}
 		}
 	}
@@ -876,17 +629,6 @@ characters = {
 				large = GFX_portrait_ITA_hamid_idris_awate
 			}
 		}
-		
-		corps_commander = {
-			traits = { ascari_officer trickster guerilla_fighter reckless desert_fox } # Ascari
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 0
-			visible = { has_completed_focus = ITA_strengthen_ascari_corps }
-		}
 	}
 
 	ITA_ibrahim_farag_mohammed = {
@@ -895,20 +637,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_ibrahim_farag_mohammed_small
 				large = GFX_portrait_ITA_ibrahim_farag_mohammed
-			}
-		}
-		
-		corps_commander = {
-			traits = { ascari_officer naval_invader desert_fox } # Ascari, Nval Infantry
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 0
-			visible = {
-				has_completed_focus = ITA_strengthen_ascari_corps
-				has_completed_focus = ITA_forza_navale_especiale
 			}
 		}
 	}
@@ -1183,13 +911,13 @@ characters = {
 
 
 
-	##    ##  #######  ##    ##         ########    ###     ######   ######  ####  ######  ########    ########  ########  #######  ########  ##       ######## 
-	###   ## ##     ## ###   ##         ##         ## ##   ##    ## ##    ##  ##  ##    ##    ##       ##     ## ##       ##     ## ##     ## ##       ##       
-	####  ## ##     ## ####  ##         ##        ##   ##  ##       ##        ##  ##          ##       ##     ## ##       ##     ## ##     ## ##       ##       
-	## ## ## ##     ## ## ## ## ####### ######   ##     ##  ######  ##        ##   ######     ##       ########  ######   ##     ## ########  ##       ######   
-	##  #### ##     ## ##  ####         ##       #########       ## ##        ##        ##    ##       ##        ##       ##     ## ##        ##       ##       
-	##   ### ##     ## ##   ###         ##       ##     ## ##    ## ##    ##  ##  ##    ##    ##       ##        ##       ##     ## ##        ##       ##       
-	##    ##  #######  ##    ##         ##       ##     ##  ######   ######  ####  ######     ##       ##        ########  #######  ##        ######## ######## 
+	##  ## ####### ##  ##     ########  ###   ######  ###### #### ###### ########  ######## ######## ####### ######## ##    ######## 
+	###  ## ##   ## ###  ##     ##     ## ##  ##  ## ##  ## ## ##  ##  ##    ##   ## ##    ##   ## ##   ## ##    ##    
+	#### ## ##   ## #### ##     ##    ##  ## ##    ##    ## ##     ##    ##   ## ##    ##   ## ##   ## ##    ##    
+	## ## ## ##   ## ## ## ## ####### ######  ##   ## ###### ##    ##  ######   ##    ######## ######  ##   ## ######## ##    ######  
+	## #### ##   ## ## ####     ##    #########    ## ##    ##    ##  ##    ##    ##    ##   ## ##    ##    ##    
+	##  ### ##   ## ##  ###     ##    ##   ## ##  ## ##  ## ## ##  ##  ##    ##    ##    ##   ## ##    ##    ##    
+	##  ## ####### ##  ##     ##    ##   ## ######  ###### #### ######   ##    ##    ######## ####### ##    ######## ######## 
 
 
 	ITA_giuseppe_pieche = {
@@ -1235,16 +963,6 @@ characters = {
 				large = GFX_portrait_ITA_giuseppe_de_stefanis
 			}
 		}
-		
-		corps_commander = {
-			traits = { infantry_officer armor_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-		}
 	}
 
 	ITA_ugo_luca = {
@@ -1253,21 +971,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_ugo_luca_small
 				large = GFX_portrait_ITA_ugo_luca
-			}
-		}
-		
-		corps_commander = {
-			traits = { infantry_officer urban_assault_specialist }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = { 
-				OR = {
-					has_completed_focus = ITA_the_carabinieri
-				}
 			}
 		}
 	}
@@ -1392,13 +1095,13 @@ characters = {
 
 
 
- ######   #######  ##     ## ##     ## ##     ## ##    ## ####  ######  ######## 
-##    ## ##     ## ###   ### ###   ### ##     ## ###   ##  ##  ##    ##    ##    
-##       ##     ## #### #### #### #### ##     ## ####  ##  ##  ##          ##    
-##       ##     ## ## ### ## ## ### ## ##     ## ## ## ##  ##   ######     ##    
-##       ##     ## ##     ## ##     ## ##     ## ##  ####  ##        ##    ##    
-##    ## ##     ## ##     ## ##     ## ##     ## ##   ###  ##  ##    ##    ##    
- ######   #######  ##     ## ##     ##  #######  ##    ## ####  ######     ##    
+ ######  ####### ##   ## ##   ## ##   ## ##  ## #### ###### ######## 
+##  ## ##   ## ###  ### ###  ### ##   ## ###  ## ## ##  ##  ##  
+##    ##   ## #### #### #### #### ##   ## #### ## ## ##     ##  
+##    ##   ## ## ### ## ## ### ## ##   ## ## ## ## ##  ######   ##  
+##    ##   ## ##   ## ##   ## ##   ## ## #### ##    ##  ##  
+##  ## ##   ## ##   ## ##   ## ##   ## ##  ### ## ##  ##  ##  
+ ######  ####### ##   ## ##   ## ####### ##  ## #### ######   ##  
 
 
  	ITA_mario_ricci = {
@@ -1431,16 +1134,6 @@ characters = {
 				large = GFX_portrait_ITA_ada_gobetti
 			}
 		}
-		
-		corps_commander = {
-			traits = { militias_officer organizer trait_cautious } #Partisan
-			skill = 2
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-		}
 	}
 
 	ITA_pompeo_colajanni = {
@@ -1451,22 +1144,6 @@ characters = {
 				large = GFX_portrait_ITA_pompeo_colajanni
 			}
 		}
-		
-		corps_commander = {
-			traits = { trait_reckless cavalry_officer commando }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = {
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
-		}
 	}
 
 	ITA_randolfo_pacciardi = {
@@ -1475,22 +1152,6 @@ characters = {
 			army = {
 				small = GFX_portrait_ITA_randolfo_pacciardi_small
 				large = GFX_portrait_ITA_randolfo_pacciardi
-			}
-		}
-
-		corps_commander = {
-			traits = { politically_connected skilled_staffer infantry_officer } #SCW + Partisan Commander
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 0
-			visible = {
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
 			}
 		}
 	}
@@ -1597,18 +1258,6 @@ characters = {
 				large = GFX_portrait_ETH_haile_selassie_gugsa
 			}
 		}
-
-		corps_commander = {
-			traits = { }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				always = no #Used for unit_leader events
-			}
-		}
 	}
 
 	ITA_abba_jofir_doppleganger = {
@@ -1616,18 +1265,6 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_portrait_ETH_abba_jofir
-			}
-		}
-
-		corps_commander = {
-			traits = { desert_fox }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 2
-			visible = {
-				always = no #Used for unit_leader events
 			}
 		}
 	}
@@ -1639,18 +1276,6 @@ characters = {
 				large = GFX_portrait_ETH_hailu_tekle_haymanot
 			}
 		}
-
-		corps_commander = {
-			traits = { hill_fighter }
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			visible = {
-				always = no #Used for unit_leader events
-			}
-		}
 	}
 
 	ITA_seyoum_mengesha_doppleganger = {
@@ -1658,19 +1283,6 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_portrait_ETH_seyoum_mengesha
-			}
-		}
-		
-		corps_commander = {
-			traits = { old_guard }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				always = no #Used for unit_leader events
 			}
 		}
 	}
@@ -1830,7 +1442,7 @@ characters = {
 			traits = {
 				navy_capital_ship_2
 			}
-			cost =  100
+			cost = 100
 		}
 		navy_leader = {
 			traits={ blockade_runner superior_tactician air_controller ironside }
@@ -1873,7 +1485,7 @@ characters = {
 		navy_leader={
 			traits={ blockade_runner seawolf }
 			skill=4
-			attack_skill=4
+			attack_skill=6
 			defense_skill=2
 			maneuvering_skill=4
 			coordination_skill=4

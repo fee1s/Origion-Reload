@@ -63,7 +63,7 @@ characters={
 			}
 		}
 
-		corps_commander={
+		field_marshal={
 			traits={ commando infantry_officer infantry_leader Trickster naval_invader jungle_rat ranger }
 			skill=6
 			attack_skill=3
@@ -94,16 +94,6 @@ characters={
 				military_theorist
 			}
 		}
-		
-		field_marshal={
-			traits={ politically_connected JAP_samurai_lineage offensive_doctrine }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	JAP_shunroku_hata={
@@ -113,16 +103,6 @@ characters={
 				small="GFX_idea_shunroku_hata"
 				large=GFX_portrait_JAP_shunroku_hata
 			}
-		}
-		
-		field_marshal={
-			traits={ JAP_samurai_lineage offensive_doctrine }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=0
 		}
 	}
 
@@ -134,15 +114,6 @@ characters={
 				small=GFX_portrait_JAP_akira_muto_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	JAP_kanji_ishiwara={
@@ -152,15 +123,6 @@ characters={
 				large=GFX_portrait_JAP_kanji_ishiwara
 				small=GFX_portrait_JAP_kanji_ishiwara_small
 			}
-		}
-		corps_commander={
-			traits={ JAP_samurai_lineage }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -188,11 +150,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat brilliant_strategist naval_invader }
+			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat naval_invader }
 			skill=6
-			attack_skill=5
+			attack_skill=7
 			defense_skill=5
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=0
 		}
@@ -232,12 +194,12 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat Brilliant_Strategist naval_invader }
+		field_marshal={
+			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat naval_invader }
 			skill=6
-			attack_skill=5
+			attack_skill=6
 			defense_skill=5
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=0
 		}
@@ -250,15 +212,6 @@ characters={
 				large=GFX_portrait_JAP_rikichi_ando
 				small=GFX_portrait_JAP_rikichi_ando_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer }
-			skill=3
-			attack_skill=1
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -288,7 +241,7 @@ characters={
 		corps_commander={
 			traits={ commando infantry_officer infantry_leader Trickster naval_invader jungle_rat ranger }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -304,15 +257,6 @@ characters={
 				small=GFX_portrait_JAP_seishiro_itagaki_small
 			}
 		}
-		corps_commander={
-			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	JAP_takashi_sakai={
@@ -322,15 +266,6 @@ characters={
 				large=GFX_portrait_JAP_takashi_sakai
 				small=GFX_portrait_JAP_takashi_sakai_small
 			}
-		}
-		corps_commander={
-			traits={ trait_reckless infantry_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -351,20 +286,10 @@ characters={
 			traits = {
 				air_chief_all_weather_1
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
-		}
-		
-		corps_commander={
-			traits={ career_officer substance_abuser }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -376,15 +301,6 @@ characters={
 				small=GFX_portrait_JAP_kenkichi_ueda_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard trait_reckless cavalry_officer }
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=0
-		}
 	}
 
 	JAP_shigeru_honjo={
@@ -394,15 +310,6 @@ characters={
 				large=GFX_portrait_JAP_shigeru_honjo
 				small=GFX_portrait_JAP_shigeru_honjo_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard war_hero }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -414,15 +321,6 @@ characters={
 				small=GFX_portrait_JAP_yoshijiro_umezu_small
 			}
 		}
-		corps_commander={
-			traits={ trait_cautious politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	JAP_otozo_yamada={
@@ -432,15 +330,6 @@ characters={
 				large=GFX_portrait_JAP_otozo_yamada
 				small=GFX_portrait_JAP_otozo_yamada_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer cavalry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -452,15 +341,6 @@ characters={
 				small=GFX_portrait_JAP_hatazo_adachi_small
 			}
 		}
-		corps_commander={
-			traits={ trait_reckless infantry_officer JAP_samurai_lineage trickster }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	JAP_iwane_matsui={
@@ -470,15 +350,6 @@ characters={
 				large=GFX_portrait_JAP_iwane_matsui
 				small=GFX_portrait_JAP_iwane_matsui_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard trait_reckless }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -490,15 +361,6 @@ characters={
 				small=GFX_portrait_JAP_sadao_araki_small
 			}
 		}
-		corps_commander={
-			traits={ JAP_samurai_lineage }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	JAP_keisuke_fujie={
@@ -508,15 +370,6 @@ characters={
 				large=GFX_portrait_JAP_keisuke_fujie
 				small=GFX_portrait_JAP_keisuke_fujie_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer politically_connected fortress_buster }
-			skill=3
-			attack_skill=1
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -528,15 +381,6 @@ characters={
 				small=GFX_portrait_JAP_kiichiro_higuchi_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer trait_cautious }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	JAP_masaharu_homma={
@@ -546,15 +390,6 @@ characters={
 				large=GFX_portrait_JAP_masaharu_homma
 				small=GFX_portrait_JAP_masaharu_homma_small
 			}
-		}
-		corps_commander={
-			traits={ trait_cautious media_personality }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -566,15 +401,6 @@ characters={
 				small=GFX_portrait_JAP_harukichi_hyakutake_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	JAP_jo_iimura={
@@ -584,15 +410,6 @@ characters={
 				large=GFX_portrait_JAP_jo_iimura
 				small=GFX_portrait_JAP_jo_iimura_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -610,7 +427,7 @@ characters={
 		corps_commander={
 			traits={ commando infantry_officer infantry_leader Trickster naval_invader jungle_rat ranger }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -642,15 +459,6 @@ characters={
 				small=GFX_portrait_JAP_masatane_kanda_small
 			}
 		}
-		corps_commander={
-			traits={ trait_cautious }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	JAP_kuniaki_koiso={
@@ -660,15 +468,6 @@ characters={
 				large=GFX_portrait_JAP_kuniaki_koiso
 				small=GFX_portrait_JAP_kuniaki_koiso_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard politically_connected JAP_samurai_lineage }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -787,7 +586,7 @@ characters={
 			traits = {
 				army_chief_offensive_2
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -840,7 +639,7 @@ characters={
 			traits = {
 				air_chief_night_operations_2
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -1057,7 +856,7 @@ characters={
 			traits = {
 				navy_capital_ship_2
 			}
-			cost =  100
+			cost = 100
 		}
 		navy_leader={
 			traits={ blockade_runner superior_tactician air_controller ironside inshore_fighter }

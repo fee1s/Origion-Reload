@@ -132,7 +132,7 @@ characters={
 		corps_commander={
 			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -169,12 +169,12 @@ characters={
 			}
 		}
 		
-		field_marshal={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
+		corps_commander={
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -209,7 +209,7 @@ characters={
 		corps_commander={
 			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -224,15 +224,6 @@ characters={
 				large=GFX_portrait_ENG_neil_ritchie
 				small=GFX_portrait_ENG_neil_ritchie_small
 			}
-		}
-		corps_commander={
-			traits={ inflexible_strategist armor_officer politically_connected }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 		advisor={
 			slot = high_command
@@ -259,14 +250,6 @@ characters={
 				small=GFX_portrait_ENG_alan_cunningham_small
 			}
 		}
-		corps_commander={
-			skill=4
-			attack_skill=4
-			defense_skill=1
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=0
-		}
 	}
 
 	ENG_william_slim={
@@ -292,7 +275,7 @@ characters={
 				factor = 2.000
 			}
 		}
-		corps_commander={
+		field_marshal={
 			traits={ career_officer infantry_officer infantry_leader Trickster }
 			skill=6
 			attack_skill=3
@@ -311,14 +294,6 @@ characters={
 				small=GFX_portrait_ENG_richard_oconnor_small
 			}
 		}
-		corps_commander={
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=999
-		}
 	}
 
 	ENG_william_platt={
@@ -329,14 +304,6 @@ characters={
 				small=GFX_portrait_ENG_william_platt_small
 			}
 		}
-		corps_commander={
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	ENG_george_giffard={
@@ -346,15 +313,6 @@ characters={
 				large=GFX_portrait_ENG_george_giffard
 				small=GFX_portrait_ENG_george_giffard_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -368,16 +326,6 @@ characters={
 				large=GFX_portrait_ENG_harold_alexander
 			}
 		}
-		
-		corps_commander={
-			traits={ politically_connected }
-			skill=5
-			attack_skill=4
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=5
-			legacy_id=995
-		}
 	}
 
 	ENG_jackie_smyth={
@@ -387,15 +335,6 @@ characters={
 				large=GFX_portrait_ENG_jackie_smyth
 				small=GFX_portrait_ENG_jackie_smyth_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -407,15 +346,6 @@ characters={
 				small=GFX_portrait_ENG_thomas_jacomb_hutton_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	ENG_arthur_percival={
@@ -425,15 +355,6 @@ characters={
 				large=GFX_portrait_ENG_arthur_percival
 				small=GFX_portrait_ENG_arthur_percival_small
 			}
-		}
-		corps_commander={
-			traits={ trait_cautious }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -445,15 +366,6 @@ characters={
 				small=GFX_portrait_ENG_merton_beckwithsmith_small
 			}
 		}
-		corps_commander={
-			traits={ commando }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	ENG_henry_pownall={
@@ -463,15 +375,6 @@ characters={
 				large=GFX_portrait_ENG_henry_pownall
 				small=GFX_portrait_ENG_henry_pownall_small
 			}
-		}
-		corps_commander={
-			traits={ trickster }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -498,12 +401,12 @@ characters={
 			}
 		}
 
-		corps_commander={
-			traits={ panzer_leader Brilliant_Strategist trait_engineer urban_assault_specialist organizer ranger Trickster}
+		field_marshal={
+			traits={ panzer_leader trait_engineer urban_assault_specialist organizer ranger Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=5
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -517,15 +420,6 @@ characters={
 				small=GFX_portrait_ENG_henry_wilson_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard politically_connected }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	ENG_william_gott={
@@ -535,15 +429,6 @@ characters={
 				large=GFX_portrait_ENG_william_gott
 				small=GFX_portrait_ENG_william_gott_small
 			}
-		}
-		corps_commander={
-			traits={ inflexible_strategist armor_officer war_hero }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -555,15 +440,6 @@ characters={
 				small=GFX_portrait_ENG_jock_campbell_small
 			}
 		}
-		corps_commander={
-			traits={ armor_officer }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=0
-		}
 	}
 
 	ENG_oliver_leese={
@@ -573,15 +449,6 @@ characters={
 				large=GFX_portrait_ENG_oliver_leese
 				small=GFX_portrait_ENG_oliver_leese_small
 			}
-		}
-		corps_commander={
-			traits={ harsh_leader armor_officer politically_connected }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=993
 		}
 	}
 
@@ -593,15 +460,6 @@ characters={
 				small=GFX_portrait_ENG_miles_dempsey_small
 			}
 		}
-		corps_commander={
-			traits={ brilliant_strategist career_officer infantry_officer }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	ENG_brian_horrocks={
@@ -611,15 +469,6 @@ characters={
 				large=GFX_portrait_ENG_brian_horrocks
 				small=GFX_portrait_ENG_brian_horrocks_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer armor_officer war_hero }
-			skill=3
-			attack_skill=1
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -635,11 +484,11 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat brilliant_strategist }
+			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat }
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -652,14 +501,6 @@ characters={
 				large=GFX_portrait_ENG_thomas_moore
 				small=GFX_portrait_ENG_thomas_moore_small
 			}
-		}
-		corps_commander = {
-			traits = { jungle_rat }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
 		}
 	}
 
@@ -1107,7 +948,7 @@ characters={
 			traits = {
 				navy_chief_commerce_raiding_1
 			}
-			cost =  100
+			cost = 100
 		}
 	}
 
@@ -1127,7 +968,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost =  100
+			cost = 100
 		}
 	}
 
@@ -1226,7 +1067,7 @@ characters={
 			traits = {
 				navy_capital_ship_2
 			}
-			cost =  100
+			cost = 100
 		}
 
 		navy_leader={
@@ -1272,7 +1113,7 @@ characters={
 		navy_leader={
 			traits={ blockade_runner seawolf }
 			skill=4
-			attack_skill=4
+			attack_skill=6
 			defense_skill=2
 			maneuvering_skill=4
 			coordination_skill=4
@@ -1292,10 +1133,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_john_beckett
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				captain_of_industry 
 			}
 		}
@@ -1311,10 +1152,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_maxwell_aitken
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				war_industrialist 
 			}
 		}
@@ -1330,10 +1171,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_clement_attlee
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				silent_workhorse 
 			}
 		}
@@ -1349,10 +1190,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_philip_kerr
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				popular_figurehead 
 			}
 		}		
@@ -1368,10 +1209,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_nevile_henderson
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				technocrat 
 			}
 		}
@@ -1387,10 +1228,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_leslie_hore_belisha
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				financial_expert 
 			}
 		}
@@ -1406,10 +1247,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_david_lloyd_george
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
-			traits  = {
+			traits = {
 				colonial_lawyer 
 			}
 		}
@@ -1425,13 +1266,13 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_ernest_bevin
-			allowed  = {
-				original_tag  = ENG
+			allowed = {
+				original_tag = ENG
 			}
 			available = {
 				date > 1940.6.1
 			}
-			traits  = {
+			traits = {
 				rearmers 
 			}
 		}
