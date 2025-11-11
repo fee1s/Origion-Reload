@@ -120,6 +120,7 @@ guiTypes = {
 		#animation_type = decelerated
 		#animation_time = 1000
 		size = { width = 256 height = 768}
+		orientation = LOWER_LEFT
 		
 		iconType =
 		{
@@ -127,11 +128,9 @@ guiTypes = {
 			spriteType = "GFX_frontend_game_logo"
 			position = { x= 95 y = 7600 }
 		}
-		
-        ButtonType = {
-            name = "frontend_game_logo_button"
-            position = { x=0 y=-420 }
-			orientation = LOWER_LEFT
+		ButtonType = {
+         name = "frontend_game_logo_button"
+         position = { x=0 y=-748 }
             quadTextureSprite ="GFX_frontend_game_logo"
             clicksound = click_default
             pdx_tooltip = "ORIGION_MENU"
