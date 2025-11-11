@@ -71,11 +71,11 @@ characters={
 		}
 
 		corps_commander={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer ranger Brilliant_Strategist Trickster}
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer ranger Trickster}
 			skill=6
-			attack_skill=5
+			attack_skill=7
 			defense_skill=5
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -105,8 +105,8 @@ characters={
 			}
 		}
 
-		corps_commander={
-			traits={ infantry_officer infantry_leader career_officer Trickster}
+		field_marshal={
+			traits={ infantry_officer infantry_leader Trickster}
 			skill=5
 			attack_skill=3
 			defense_skill=5
@@ -141,12 +141,12 @@ characters={
 				}
 		}
 		
-		corps_commander={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer ranger Brilliant_Strategist Trickster}
+		field_marshal={
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer ranger Trickster}
 			skill=6
-			attack_skill=5
+			attack_skill=6
 			defense_skill=5
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -160,15 +160,6 @@ characters={
 				small=GFX_portrait_USA_geoffrey_keyes_small
 			}
 		}
-		corps_commander={
-			traits={ career_officer armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	USA_lucian_truscott={
@@ -178,15 +169,6 @@ characters={
 				large=GFX_portrait_USA_lucian_truscott
 				small=GFX_portrait_USA_lucian_truscott_small
 			}
-		}
-		corps_commander={
-			traits={ cavalry_officer trait_engineer commando }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -217,9 +199,9 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer infantry_officer infantry_leader Trickster  }
+			traits={ infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -253,11 +235,11 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat brilliant_strategist }
+			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat }
 			skill=6
-			attack_skill=5
+			attack_skill=7
 			defense_skill=5
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -290,16 +272,6 @@ characters={
 				factor = 1.000
 			}
 		}
-
-		corps_commander={
-			traits={ brilliant_strategist career_officer armor_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	USA_lloyd_fredendall={
@@ -309,15 +281,6 @@ characters={
 				large=GFX_portrait_USA_lloyd_fredendall
 				small=GFX_portrait_USA_lloyd_fredendall_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard inflexible_strategist infantry_officer }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -329,15 +292,6 @@ characters={
 				small=GFX_portrait_USA_leslie_mcnair_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard career_officer armor_officer }
-			skill=3
-			attack_skill=1
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	USA_jonathan_wainwright={
@@ -347,14 +301,6 @@ characters={
 				large=GFX_portrait_USA_jonathan_wainwright
 				small=GFX_portrait_USA_jonathan_wainwright_small
 			}
-		}
-		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
 		}
 	}
 
@@ -366,15 +312,6 @@ characters={
 				small=GFX_portrait_USA_russell_hartle_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=0
-		}
 	}
 
 	USA_leonard_gerow={
@@ -384,15 +321,6 @@ characters={
 				large=GFX_portrait_USA_leonard_gerow
 				small=GFX_portrait_USA_leonard_gerow_small
 			}
-		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -404,15 +332,6 @@ characters={
 				small=GFX_portrait_USA_edward_brooks_small
 			}
 		}
-		corps_commander={
-			traits={ trait_reckless armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	USA_clarence_huebner={
@@ -422,15 +341,6 @@ characters={
 				large=GFX_portrait_USA_clarence_huebner
 				small=GFX_portrait_USA_clarence_huebner_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard harsh_leader }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -442,15 +352,6 @@ characters={
 				small=GFX_portrait_USA_alexander_patch_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer commando }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	USA_william_simpson={
@@ -461,15 +362,6 @@ characters={
 				small=GFX_portrait_USA_william_simpson_small
 			}
 		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	USA_j_lawton_collins={
@@ -479,15 +371,6 @@ characters={
 				large=GFX_portrait_USA_j_lawton_collins
 				small=GFX_portrait_USA_j_lawton_collins_small
 			}
-		}
-		corps_commander={
-			traits={ career_officer trickster }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -518,9 +401,9 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer infantry_officer infantry_leader Trickster }
+			traits={ infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -558,16 +441,6 @@ characters={
 				factor = 1.000
 			}
 		}
-		
-		corps_commander={
-			traits={ career_officer harsh_leader infantry_officer politically_connected }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=601
-		}
 	}
 
 	USA_oscar_griswold={
@@ -577,15 +450,6 @@ characters={
 				large=GFX_portrait_USA_oscar_griswold
 				small=GFX_portrait_USA_oscar_griswold_small
 			}
-		}
-		corps_commander={
-			traits={ infantry_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -597,15 +461,6 @@ characters={
 				small=GFX_portrait_USA_maurice_rose_small
 			}
 		}
-		corps_commander={
-			traits={ brilliant_strategist trait_reckless armor_officer }
-			skill=3
-			attack_skill=4
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	USA_alexander_vandegrift={
@@ -614,17 +469,6 @@ characters={
 			army={
 				large="GFX_portrait_USA_alexander_vandegrift"
 				small="GFX_portrait_USA_alexander_vandegrift_small"
-			}
-		}
-		corps_commander = {
-			traits = { naval_invader }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 3
-			logistics_skill = 3
-			visible = { 
-				has_completed_focus = USA_intervention_in_asia 
 			}
 		}
 	}
@@ -1049,7 +893,7 @@ characters={
 			traits = {
 				navy_capital_ship_2
 			}
-			cost =  100
+			cost = 100
 		}
 		navy_leader={
 			traits={ blockade_runner superior_tactician air_controller ironside blue_water_expert }
@@ -1114,10 +958,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = USA_cordell_hull
-			allowed  = {
+			allowed = {
 				original_tag = USA
 			}
-			traits  = {
+			traits = {
 				captain_of_industry
 			}
 		}
@@ -1133,10 +977,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = USA_henry_stimson
-			allowed  = {
+			allowed = {
 				original_tag = USA
 			}
-			traits  = {
+			traits = {
 				war_industrialist 
 			}
 		}
@@ -1152,10 +996,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = USA_robert_taft
-			allowed  = {
-				original_tag  = USA
+			allowed = {
+				original_tag = USA
 			}
-			traits  = {
+			traits = {
 				silent_workhorse 
 			}
 		}
@@ -1171,10 +1015,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = USA_donald_nelson
-			allowed  = {
-				original_tag  = USA
+			allowed = {
+				original_tag = USA
 			}
-			traits  = {
+			traits = {
 				popular_figurehead 
 			}
 		}
@@ -1190,10 +1034,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = harry_white
-			allowed  = {
-				original_tag  = USA
+			allowed = {
+				original_tag = USA
 			}
-			traits  = {
+			traits = {
 				technocrat
 			}
 		}
@@ -1209,10 +1053,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = USA_henry_morgenthau
-			allowed  = {
+			allowed = {
 				original_tag = USA
 			}
-			traits  = {
+			traits = {
 				financial_expert 
 			}
 		}
@@ -1228,13 +1072,13 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = victor_perlo
-			allowed  = {
-				original_tag  = USA
+			allowed = {
+				original_tag = USA
 			}
 			available = {
 				has_completed_focus = USA_militarized_WPA
 			}
-			traits  = {
+			traits = {
 				economist 
 			}
 		}
@@ -1250,13 +1094,13 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = USA_joseph_patterson
-			allowed  = {
+			allowed = {
 				original_tag = USA
 			}
 			available = {
 				date > 1944.6.1
 			}
-			traits  = {
+			traits = {
 				american_caesar
 			}
 		}

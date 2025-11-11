@@ -115,19 +115,27 @@ guiTypes = {
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =-200 }
+		position = { x=0 y =0 }
 		show_position = { x=0 y =-1 }
-		animation_type = decelerated
-		animation_time = 1000
+		#animation_type = decelerated
+		#animation_time = 1000
 		size = { width = 256 height = 768}
 		
 		iconType =
 		{
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
-			position = { x= 95 y = 760 }
+			position = { x= 95 y = 7600 }
 		}
 		
+        ButtonType = {
+            name = "frontend_game_logo_button"
+            position = { x=95 y=760 }
+            quadTextureSprite ="GFX_frontend_game_logo"
+            clicksound = click_default
+            pdx_tooltip = "ORIGION_MENU"
+            web_link = "https://discord.gg/YxGQZhCHCs"
+        }
 	}
 
 	#containerWindowType = {
@@ -182,8 +190,8 @@ guiTypes = {
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=0 y =0}
-		size = { width = 320 height = 395}
+		position = { x=-1150 y =500}
+		size = { width = 320 height = 370}
 		Orientation = CENTER
 		Origo = center	
 				
@@ -262,6 +270,7 @@ guiTypes = {
 			buttonFont = "hoi_24header"
 			clicksound = click_default
 			oversound = ui_menu_over
+			hide = yes
 		}
 		
 		ButtonType = {

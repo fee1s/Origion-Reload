@@ -109,11 +109,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat brilliant_strategist }
+			traits={ organizer trickster panzer_leader trait_engineer hill_fighter ranger jungle_rat }
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -129,9 +129,9 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer infantry_officer infantry_leader Trickster }
+			traits={ infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -180,12 +180,12 @@ characters={
 			}
 		}
 
-		corps_commander={
-			traits={ panzer_leader Brilliant_Strategist trait_engineer urban_assault_specialist organizer ranger Trickster}
+		field_marshal={
+			traits={ panzer_leader trait_engineer urban_assault_specialist organizer ranger Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=5
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -216,8 +216,8 @@ characters={
 			}
 		}
 		
-		corps_commander={
-			traits={ career_officer infantry_officer infantry_leader Trickster }
+		field_marshal={
+			traits={ infantry_officer infantry_leader Trickster }
 			skill=6
 			attack_skill=3
 			defense_skill=5
@@ -246,15 +246,6 @@ characters={
 				large=GFX_portrait_FRA_antoinemariebenoit_besson
 				small=GFX_portrait_FRA_antoinemariebenoit_besson_small
 			}
-		}
-		field_marshal={
-			traits={ old_guard defensive_doctrine }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -293,11 +284,11 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Brilliant_Strategist Trickster}
+			traits={ panzer_leader trait_engineer desert_fox urban_assault_specialist organizer Trickster}
 			skill=6
-			attack_skill=4
+			attack_skill=6
 			defense_skill=4
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=-1
 		}
@@ -312,16 +303,6 @@ characters={
 			army={
 				large=GFX_portrait_FRA_philippe_leclerc
 			}
-		}
-		
-		corps_commander={
-			traits={ career_officer trait_reckless armor_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=0
 		}
 	}
 
@@ -359,9 +340,9 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer infantry_officer infantry_leader Trickster }
+			traits={ infantry_officer infantry_leader Trickster }
 			skill=6
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=4
 			logistics_skill=4
@@ -379,16 +360,6 @@ characters={
 				large=GFX_portrait_FRA_charles_huntziger
 			}
 		}
-		
-		corps_commander={
-			traits={ old_guard infantry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=0
-		}
 	}
 
 	FRA_gastonhenri_billotte={
@@ -398,15 +369,6 @@ characters={
 				large=GFX_portrait_FRA_gastonhenri_billotte
 				small=GFX_portrait_FRA_gastonhenri_billotte_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard trait_cautious infantry_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -418,15 +380,6 @@ characters={
 				small=GFX_portrait_FRA_henry_freydenberg_small
 			}
 		}
-		corps_commander={
-			traits={ old_guard infantry_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
-		}
 	}
 
 	FRA_rene_olry={
@@ -436,15 +389,6 @@ characters={
 				large=GFX_portrait_FRA_rene_olry
 				small=GFX_portrait_FRA_rene_olry_small
 			}
-		}
-		corps_commander={
-			traits={ old_guard infantry_officer trait_mountaineer }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=0
 		}
 	}
 
@@ -567,7 +511,7 @@ characters={
 			traits = {
 				air_chief_ground_support_1
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -590,7 +534,7 @@ characters={
 			traits = {
 				air_chief_all_weather_1
 			}
-			cost =  50
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -710,10 +654,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = FRA_felix_gouin
-			allowed  = {
-				original_tag  = FRA
+			allowed = {
+				original_tag = FRA
 			}
-			traits  = {
+			traits = {
 				captain_of_industry 
 			}
 		}
@@ -729,10 +673,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = FRA_zivony_peshkov
-			allowed  = {
-				original_tag  = FRA
+			allowed = {
+				original_tag = FRA
 			}
-			traits  = {
+			traits = {
 				war_industrialist 
 			}
 		}
@@ -748,10 +692,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = FRA_gaston_henry_haye
-			allowed  = {
-				original_tag  = FRA
+			allowed = {
+				original_tag = FRA
 			}
-			traits  = {
+			traits = {
 				silent_workhorse 
 			}
 		}
@@ -767,10 +711,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = leon_blum
-			allowed  = {
-				original_tag  = FRA
+			allowed = {
+				original_tag = FRA
 			}
-			traits  = {
+			traits = {
 				popular_figurehead 
 			}
 		}
@@ -786,10 +730,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = georges_bonnet
-			allowed  = {
-				original_tag  = FRA
+			allowed = {
+				original_tag = FRA
 			}
-			traits  = {
+			traits = {
 				technocrat 
 			}
 		}
@@ -805,10 +749,10 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = FRA_pierre_pucheu
-			allowed  = {
-				original_tag  = FRA
+			allowed = {
+				original_tag = FRA
 			}
-			traits  = {
+			traits = {
 				financial_expert 
 			}
 		}
@@ -843,7 +787,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost =  100
+			cost = 100
 		}
 	}
 	
@@ -885,7 +829,7 @@ characters={
 			traits = {
 				navy_capital_ship_2
 			}
-			cost =  100
+			cost = 100
 		}
 	}
 	
