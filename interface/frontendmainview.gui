@@ -130,7 +130,8 @@ guiTypes = {
 		
         ButtonType = {
             name = "frontend_game_logo_button"
-            position = { x=95 y=760 }
+            position = { x=0 y=-420 }
+			orientation = LOWER_LEFT
             quadTextureSprite ="GFX_frontend_game_logo"
             clicksound = click_default
             pdx_tooltip = "ORIGION_MENU"
@@ -190,9 +191,9 @@ guiTypes = {
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=-1150 y =500}
+		position = { x=160 y =-185}
 		size = { width = 320 height = 370}
-		Orientation = CENTER
+		Orientation = LOWER_LEFT
 		Origo = center	
 				
 		background = {
@@ -288,9 +289,9 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=-1150 y =500}
+		position = { x=180 y =-205}
 		size = { width = 320 height = 450 }
-		Orientation = CENTER
+		Orientation = LOWER_LEFT
 		Origo = center		
 
 		positionType = {
