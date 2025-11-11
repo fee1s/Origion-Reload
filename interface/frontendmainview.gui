@@ -114,21 +114,21 @@ guiTypes = {
 	
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
-		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =0 }
-		show_position = { x=0 y =-1 }
-		#animation_type = decelerated
-		#animation_time = 1000
-		size = { width = 256 height = 768}
-		orientation = LOWER_LEFT
-		
-		iconType =
-		{
-			name ="frontend_game_logo"
-			spriteType = "GFX_frontend_game_logo"
-			position = { x= 95 y = 7600 }
-		}
-		ButtonType = {
+        name  ="mainmenu_panel_upperleft"
+        position = { x=0 y =0 }
+        show_position = { x=0 y =-1 }
+        #animation_type = decelerated
+        #animation_time = 1000
+        size = { width = 256 height = 768}
+        orientation = LOWER_LEFT
+
+        iconType =
+        {
+            name ="frontend_game_logo"
+            spriteType = "GFX_frontend_game_logo"
+            position = { x= 95 y = 7600 }
+        }
+        ButtonType = {
          name = "frontend_game_logo_button"
          position = { x=0 y=-748 }
             quadTextureSprite ="GFX_frontend_game_logo"
@@ -136,7 +136,7 @@ guiTypes = {
             pdx_tooltip = "ORIGION_MENU"
             web_link = "https://discord.gg/YxGQZhCHCs"
         }
-	}
+    }
 
 	#containerWindowType = {
 	#	name  ="frontend_alpha_stamp"
@@ -190,7 +190,7 @@ guiTypes = {
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=160 y =-185}
+		position = { x=180 y =-205}
 		size = { width = 320 height = 370}
 		Orientation = LOWER_LEFT
 		Origo = center	
