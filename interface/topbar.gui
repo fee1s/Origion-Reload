@@ -360,7 +360,40 @@ guiTypes = {
 			maxHeight = 24
 			fixedsize = yes
 		}	
+		
+		iconType ={
+			name ="industrial_capacity_bg" 
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=418 y = 5 } 
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="industrial_capacity_icon"
+			spriteType = "GFX_industrial_capacity_icon"
+			position = { x= 414 y = 3 } 
+			Orientation = "UPPER_LEFT"
+		}
+        
+		instantTextBoxType = {
+			name ="industrial_capacity"
+			position = { x= 438 y = 4 } 
+			font = "hoi_18mbs"
+			text = "12/12/12"
+			format = center
+			maxWidth = 50
+			maxHeight = 24
+			fixedsize = yes
+		}	
 
+		iconType = {
+			name ="industrial_ratio_bar"
+			spriteType = "GFX_topbar_fuel_bar" 
+			position = { x= 438 y = 20 }
+			frame = 50
+			alwaystransparent = yes
+		}
+		
 		## convoy
 		
 		iconType ={
@@ -660,7 +693,41 @@ guiTypes = {
 			oversound = ui_menu_over
 			Orientation = "UPPER_RIGHT"
 		}
-		
+		containerWindowType= {
+			name="faction_button_container"
+			position = { x=-115 y=0 }
+			size = { width=30 height=30 }
+			
+			buttonType = {
+				name = "faction_button"
+				quadTextureSprite ="GFX_topbar_faction_empty"
+				position = { x= 0 y = -1}
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+				oversound = ui_menu_over
+				hide = yes
+			}
+	
+			instantTextBoxType = {
+				name ="initiative_text"
+				position = { x= -15 y = 8 }
+				font = "hoi_16mbs"
+				text = "999"
+				format = center
+				orientation = "CENTER"
+				maxWidth = 30
+				maxHeight = 24
+				fixedsize = yes
+			}
+	
+			iconType = {
+				name = "faction_icon"
+				spriteType = "GFX_faction_logo_generic_democratic_miniature"
+				position = { x = 4 y = 3 }
+				scale = 0.7
+				alwaystransparent = yes
+			}
+		}		
 		containerWindowType = {
 			name = "country_menu_window"
 			position = { x=217 y=36 }
@@ -682,7 +749,6 @@ guiTypes = {
 				oversound = ui_menu_over
 				shortcut = "shift+q"
 			}
-
 
 
 			iconType = {

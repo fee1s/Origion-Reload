@@ -1043,6 +1043,13 @@ guiTypes = {
 			position = { x=1 y=-30 }
 		}
 
+		buttonType = {
+			name = "frame_btn"
+			position = { x = 17 y = -9 }
+			centerposition = yes
+			spriteType = "GFX_naval_hq_combat_frame"
+		}
+
 		gridBoxType = {
 			name = "attacker_adds_grid"
 			position = { x=-35 y=-10 }
@@ -1255,21 +1262,6 @@ guiTypes = {
 			text = "555/555"
 		}
 	}
-	
-	#### STRATEGIC LOCATION MAP ICON
-	containerWindowType = {
-		name = "strategic_location_mapicon"
-		position = { x=0 y=0 }
-		size = { width=32 height=32 }
-		orientation = upper_left
-		
-		buttonType ={
-			name ="bg_btn"
-			spriteType = "GFX_NV_icon_pride" # Replaced from code
-			position = { x=0 y=0 }
-			scale = 0.55
-		}
-	}
 
 	containerWindowType = {
 		name = "naval_mission_mapicon_entry"
@@ -1323,7 +1315,22 @@ guiTypes = {
 			spriteType = "GFX_mapicon_unit_no_orders"
 		}
 	}
-
+	
+	#### STRATEGIC LOCATION MAP ICON
+	containerWindowType = {
+		name = "strategic_location_mapicon"
+		position = { x=0 y=0 }
+		size = { width=32 height=32 }
+		orientation = upper_left
+		
+		buttonType ={
+			name ="bg_btn"
+			spriteType = "GFX_NV_icon_pride" # Replaced from code
+			position = { x=0 y=0 }
+			scale = 0.55
+		}
+	}
+	
 	#### NAVAL MISSIONS MAP ICON
 	containerWindowType = {
 		name = "naval_mission_mapicon"
@@ -2706,7 +2713,6 @@ guiTypes = {
 			clipping = no
 
 			buttonType = {
-			    hide = yes
 			    name = "raid_map_icon_frame"
 			    position = { x = 16 y = 16 }
 			    centerposition = yes
@@ -2714,7 +2720,6 @@ guiTypes = {
 			}
 
 			buttonType = {
-			    hide = yes
 				name = "raid_map_icon_button"
 				position = { x = 16 y = 16 }
 				spriteType = "GFX_raid_target_icon_generic"
@@ -2731,7 +2736,7 @@ guiTypes = {
 			}
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "faction_ping_map_icon"
 		position = { x = 0 y = 0 }

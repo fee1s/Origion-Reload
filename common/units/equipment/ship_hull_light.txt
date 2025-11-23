@@ -11,6 +11,7 @@ equipments = {
 		interface_category = interface_category_screen_ships
 		alias = destroyer
 		priority = 2000
+		naval_dominance_factor = 100
 
 		upgrades = {
 			ship_torpedo_upgrade
@@ -119,6 +120,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 100
 		#alias = destroyer_1
 		
 		module_slots = inherit
@@ -130,6 +132,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 150
 		parent = ship_hull_light_1
 		#alias = destroyer_2
 		
@@ -178,6 +181,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 150
 		parent = ship_hull_light_2
 		#alias = destroyer_3
 
@@ -248,6 +252,7 @@ equipments = {
 		archetype = ship_hull_light
 		priority = 2000
 		parent = ship_hull_light_3
+		naval_dominance_factor = 150
 		#alias = destroyer_4
 		
 		module_slots = {
@@ -307,6 +312,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 100
 		module_slots = inherit
 		default_modules = {
 			fixed_ship_battery_slot = ship_depth_charge_1
@@ -356,6 +362,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 100
 		parent = destroyer_1
 		module_slots = inherit
 		default_modules = {
@@ -409,6 +416,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 100
 		parent = destroyer_2
 		module_slots = inherit
 		default_modules = {
@@ -461,6 +469,7 @@ equipments = {
 
 		archetype = ship_hull_light
 		priority = 2000
+		naval_dominance_factor = 100
 		parent = destroyer_3
 		module_slots = inherit
 		default_modules = {
