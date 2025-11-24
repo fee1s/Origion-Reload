@@ -1,0 +1,28 @@
+change_leader_rule_influence = 
+{
+	type = change_leader_rules
+	trigger = {
+		has_enough_influence_for_leadership = yes
+	}
+}
+
+change_leader_rule_never = {
+	type = change_leader_rules
+	trigger = {
+		always = no
+	}
+	available = {
+		always = no
+	}
+
+	can_remove = { 
+		always = no
+	}
+
+	modifier = {
+	
+	}
+	ai_will_do = {
+		base = 0
+	}
+}

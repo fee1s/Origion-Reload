@@ -1,0 +1,49 @@
+faction_goal_unlock_research = {
+	name = faction_goal_unlock_research_name
+	description = faction_goal_unlock_research_desc
+	category = short_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	available = {
+		always = no
+	}
+	visible = {
+		always = no
+	}
+	select_effect = {
+	
+	}
+	completed = {
+		always = no
+	}
+	complete_effect = {
+		set_faction_research_unlocked = yes
+	}
+	
+	ai_will_do = {
+		base = 1000 # They should always do this if they can
+	}
+}
+
+faction_goal_unlock_military = {
+	name = faction_goal_unlock_military_name
+	description = faction_goal_unlock_military_desc
+	category = short_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	available = {
+		always = no
+	}
+	visible = {
+		always = no
+	}
+	select_effect = {
+	}
+	completed = {
+		always = no
+	}
+	complete_effect = {
+		set_faction_military_unlocked = yes
+	}
+	ai_will_do = {
+		base = 1000 # They should always do this if they can
+	}
+}
