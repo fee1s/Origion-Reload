@@ -1,10 +1,12 @@
 # Greater East Asia Co-Prosperity Sphere
 faction_template_geacps_faction = {
 	name = JAP_greater_east_asian_co_prosperity_sphere
-	manifest = faction_manifest_strategic_resource_control
+	manifest = faction_manifest_origion_generic
 
 	goals = {
-
+		faction_goal_origion_short # добавлены пустые цели, чтобы не выскакивало уведомление
+		faction_goal_origion_medium
+		faction_goal_origion_long
 	}
 
 	default_rules = {
