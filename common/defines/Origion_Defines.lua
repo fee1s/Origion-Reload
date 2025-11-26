@@ -320,6 +320,9 @@ NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 
 NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.15; -- Множитель починки кораблей от морской базы, ванила - 0.05
 
+NDefines.NProduction.BASE_ENERGY_COST = 0.00001; -- Самый полезный ресурс в Оригионе
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.000001;
+
 -- Дипломатия
 
 NDefines.NDiplomacy.PEACE_SCORE_PER_PASS = 1.0

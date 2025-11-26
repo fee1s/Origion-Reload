@@ -1,0 +1,24 @@
+faction_goal_origion_long = {
+	name = faction_goal_origion_long_name
+	description = faction_goal_origion_long_desc
+	category = long_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	
+	visible = {
+		always = yes
+	}
+	
+	select_effect = {
+	}
+	
+	completed = {
+		
+	}
+	
+	complete_effect = {
+	}
+	
+	ai_will_do = {
+		base = 1 # They should always do this if they can
+	}
+}

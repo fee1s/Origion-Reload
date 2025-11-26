@@ -47,3 +47,28 @@ faction_goal_unlock_military = {
 		base = 1000 # They should always do this if they can
 	}
 }
+
+faction_goal_origion_short = {
+	name = faction_goal_origion_short_name
+	description = faction_goal_origion_short_desc
+	category = short_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	
+	visible = {
+		
+	}
+	
+	select_effect = {
+	}
+	
+	completed = {
+		
+	}
+	
+	complete_effect = {
+	}
+	
+	ai_will_do = {
+		base = 1 # They should always do this if they can
+	}
+}
