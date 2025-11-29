@@ -136,7 +136,7 @@ ideas = {
 		mobile_warfare_academy_spirit = {
 			ledger = army
 			available = { has_military_academy = yes }
-			visible = { has_tech = mobile_warfare }
+			visible = { has_doctrine = new_mobile_warfare }
 			equipment_bonus = {
 				armor = {
 					build_cost_ic = -0.025 instant = yes
@@ -152,14 +152,14 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = mobile_warfare
+					has_doctrine = new_mobile_warfare
 				}
 			}
 		}
 		superior_firepower_academy_spirit = {
 			ledger = army
 			available = { has_military_academy = yes }
-			visible = { has_tech = superior_firepower }
+			visible = { has_doctrine = superior_firepower }
 			modifier = {
 				initiative_factor = 0.075
 			}
@@ -173,14 +173,14 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = superior_firepower
+					has_doctrine = superior_firepower
 				}
 			}
 		}
 		theatre_training_spirit = {
 			ledger = army
 			available = { has_military_academy = yes }
-			visible = { has_tech = trench_warfare }
+			visible = { has_doctrine = grand_battleplan }
 			modifier = {
 				acclimatization_cold_climate_gain_factor = 0.1
 				acclimatization_hot_climate_gain_factor = 0.1
@@ -195,14 +195,14 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = trench_warfare
+					has_doctrine = grand_battleplan
 				}
 			}
 		}
 		mass_assault_academy_spirit = {
 			ledger = army
 			available = { has_military_academy = yes }
-			visible = { has_tech = mass_assault }
+			visible = { has_doctrine = mass_assault }
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.05 instant = yes
@@ -218,7 +218,7 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = mass_assault
+					has_doctrine = mass_assault
 				}
 			}
 		}		
@@ -359,7 +359,7 @@ ideas = {
 		}
 
 		mobile_warfare_army_spirit = {
-			visible = { has_tech = mobile_warfare }
+			visible = { has_doctrine = new_mobile_warfare }
 			ledger = army
 			modifier = {
 				supply_factor = 0.1
@@ -375,13 +375,13 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = mobile_warfare
+					has_doctrine = new_mobile_warfare
 				}
 			}
 		}
 
 		superior_firepower_army_spirit = {
-			visible = { has_tech = superior_firepower  }
+			visible = { has_doctrine = superior_firepower  }
 			ledger = army
 			modifier = {
 				army_attack_factor = 0.025
@@ -396,13 +396,13 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = superior_firepower
+					has_doctrine = superior_firepower
 				}
 			}
 		}
 
 		grand_battleplan_army_spirit = {
-			visible = { has_tech = trench_warfare }
+			visible = { has_doctrine = grand_battleplan }
 			ledger = army
 			modifier = {
 				attrition = -0.1
@@ -417,14 +417,14 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = trench_warfare
+					has_doctrine = grand_battleplan
 				}
 			}
 		}
 
 		mass_assault_army_spirit = {
 			ledger = army
-			visible = { has_tech = mass_assault }
+			visible = { has_doctrine = mass_assault }
 			modifier = {
 				army_morale_factor = 0.10
 			}
@@ -438,7 +438,7 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = mass_assault
+					has_doctrine = mass_assault
 				}
 			}
 		}
@@ -545,7 +545,7 @@ ideas = {
 		}
 
 		maneuver_warfare_spirit = {
-			visible = { has_tech = mobile_warfare }
+			visible = { has_doctrine = new_mobile_warfare }
 			modifier = {
 				army_armor_speed_factor = 0.10
 			}
@@ -559,7 +559,7 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = mobile_warfare
+					has_doctrine = new_mobile_warfare
 				}
 
 			}
@@ -567,7 +567,7 @@ ideas = {
 
 		smoke_and_fire_spirit = {
 			ledger = army
-			visible = { has_tech = superior_firepower }
+			visible = { has_doctrine = superior_firepower }
 			modifier = {
 				fortification_damage = 0.15
 			}
@@ -581,14 +581,14 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = superior_firepower
+					has_doctrine = superior_firepower
 				}
 			}
 		}
 
 		logistical_focus_spirit = {
 			ledger = army
-			visible = { has_tech = trench_warfare }
+			visible = { has_doctrine = grand_battleplan }
 			modifier = {
 				supply_consumption_factor = -0.1
 				supply_node_range = 0.1
@@ -603,14 +603,14 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = trench_warfare
+					has_doctrine = grand_battleplan
 				}
 			}
 		}
 
 		operational_reserve_spirit = {
 			ledger = army
-			visible = { has_tech = mass_assault }
+			visible = { has_doctrine = mass_assault }
 			modifier = {
 				army_strength_factor = 0.1
 			}
@@ -624,7 +624,7 @@ ideas = {
 
 				modifier = {
 					factor = 2
-					has_tech = mass_assault
+					has_doctrine = mass_assault
 				}
 			}
 		}

@@ -37,6 +37,10 @@ add_collaboration = {
 	value = 1
 }
 
+set_grand_doctrine = new_mobile_warfare
+set_sub_doctrine = commandos
+set_sub_doctrine = armored_spearhead
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "GER_1936_air_bba"
@@ -85,9 +89,9 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	basic_train = 1
-	mobile_warfare = 1
-	trade_interdiction = 1
-	formation_flying = 1
+	
+	
+	
 	synth_oil_experiments = 1
 	fuel_silos = 1
 	fuel_refining = 1

@@ -4,9 +4,13 @@ new_mobile_warfare = {
     name = GRAND_DOCTRINE_MOBILE_WARFARE
     description = GRAND_DOCTRINE_MOBILE_WARFARE_DESC
     icon = GFX_doctrine_mobile_warfare_medium
-    available = {
-        always = yes
-    }
+	available = { 
+		if = {
+			limit = { original_tag = SOV }
+				
+			NOT = { original_tag = SOV }
+		}
+	}
 
     xp_cost = 0
     xp_type = army
@@ -36,23 +40,10 @@ new_mobile_warfare = {
 
     milestones = {
         {
-            #Infantry
-	        org_loss_when_moving = -0.15
-            land_reinforce_rate = 0.02
-            enable_tactic = tactic_delay
-
         }
         {
-            #Armor
-	        additional_brigade_column_size = 1
-            enable_tactic = tactic_blitz
-
         }
         {
-            #Operations
-	        planning_speed = 0.2
-            enable_tactic = tactic_backhand_blow   
-
         }
     }
 }
@@ -62,9 +53,13 @@ superior_firepower = {
     name = GRAND_DOCTRINE_SUPERIOR_FIREPOWER
     description = GRAND_DOCTRINE_SUPERIOR_FIREPOWER_DESC
     icon = GFX_doctrine_superior_firepower_medium
-    available = {
-        always = yes
-    }
+	available = { 
+		if = {
+			limit = { original_tag = SOV }
+				
+			NOT = { original_tag = SOV }
+		}
+	}
 
     xp_cost = 0
     xp_type = army
@@ -86,7 +81,7 @@ superior_firepower = {
     }
 
     # EFFECTS
-    enable_tactic = tactic_overwhelming_fire
+    enable_tactic = tactic_barrage
     category_line_artillery = {
         soft_attack = 0.1
     }
@@ -97,29 +92,11 @@ superior_firepower = {
 
     milestones = {
         {
-            #Infantry
-            enable_tactic = tactic_elastic_defense
-            supply_consumption_factor = -0.1
-
         }
         {
-            #Armor
-            enable_tactic = tactic_delay
-            category_army = {
-                default_morale = 0.2
-            }
-
         }
         {
-            #Operations
-            enable_tactic = tactic_tactical_withdrawal
-            category_army = {
-                default_morale = 0.4
-            }
-            planning_decay_rate_factor = -0.1
-
         }
-
     }
 }
 
@@ -129,9 +106,13 @@ grand_battleplan = {
     name = GRAND_DOCTRINE_GRAND_BATTLEPLAN
     description = GRAND_DOCTRINE_GRAND_BATTLEPLAN_DESC
     icon = GFX_doctrine_grand_battleplan_medium
-    available = {
-        always = yes
-    }
+	available = { 
+		if = {
+			limit = { original_tag = SOV }
+				
+			NOT = { original_tag = SOV }
+		}
+	}
 
     xp_cost = 0
     xp_type = army
@@ -148,69 +129,18 @@ grand_battleplan = {
     }
 
     # EFFECTS
-    enable_tactic = tactic_planned_attack
-    
-    max_planning = 0.1
-    command_power_gain = 0.25
+	enable_tactic = tactic_elastic_defense
+	minimum_training_level = -0.1
+	weekly_casualties_war_support = 0.001
+	out_of_supply_factor = -0.10
+	no_supply_grace = 48
 
     milestones = {
         {
-            #Infantry 
-            additional_brigade_column_size = 1
-            enable_tactic = tactic_elastic_defense
-            max_dig_in_factor = 0.05
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = infantry_milestone_var
-                        }
-                    }
-                    set_variable = { infantry_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { infantry_milestone_var = 1 }
-                }
-            }
         }
         {
-            #Armor
-            land_reinforce_rate = 0.02
-            enable_tactic = tactic_breakthrough
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = armor_milestone_var
-                        }
-                    }
-                    set_variable = { armor_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { armor_milestone_var = 1 }
-                }
-            }
-            
         }
         {
-            #Operations
-            coordination_bonus = 0.1
-            max_command_power = 30
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = operations_milestone_var
-                        }
-                    }
-                    set_variable = { operations_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { operations_milestone_var = 1 }
-                }
-            }
         }
     }
 }
@@ -221,9 +151,14 @@ mass_assault = {
     name = GRAND_DOCTRINE_MASS_ASSAULT
     description = GRAND_DOCTRINE_MASS_ASSAULT_DESC
     icon = GFX_doctrine_mass_assault_medium
-    available = {
-        always = yes
-    }
+	
+	available = { 
+		if = {
+			limit = { NOT = { original_tag = SOV } }
+				
+			original_tag = SOV
+		}
+	}
 
     xp_cost = 0
     xp_type = army
@@ -240,70 +175,19 @@ mass_assault = {
     }
 
     # EFFECTS
-    no_supply_grace = 48
-    out_of_supply_factor = -0.10
-    enable_tactic = tactic_relentless_assault
+    conscription = 0.02
+    out_of_supply_factor = -0.15
+	minimum_training_level = -0.1
+	attrition = -0.1
+    enable_tactic = tactic_infantry_charge
     
 
     milestones = {
         {
-            #Infantry
-            enable_tactic = tactic_human_wave_tactics
-            additional_brigade_column_size = 1
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = infantry_milestone_var
-                        }
-                    }
-                    set_variable = { infantry_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { infantry_milestone_var = 1 }
-                }
-            }
         }
         {
-            #Armor
-            land_reinforce_rate = 0.02
-            enable_tactic = tactic_overwhelming_fire
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = armor_milestone_var
-                        }
-                    }
-                    set_variable = { armor_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { armor_milestone_var = 1 }
-                }
-            }
         }
         {
-            #Operations
-            enable_tactic = tactic_backhand_blow
-            weekly_casualties_war_support = 0.001
-            minimum_training_level = -0.05
-            dig_in_speed_factor = 0.05
-
-            effect = {
-                if = {
-                    limit = {
-                        NOT = {
-                            has_variable = operations_milestone_var
-                        }
-                    }
-                    set_variable = { operations_milestone_var = 1 }
-                }
-                else = {
-                    add_to_variable = { operations_milestone_var = 1 }
-                }
-            }
         }
     }
 }

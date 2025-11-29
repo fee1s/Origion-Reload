@@ -3,6 +3,10 @@
 set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
 
+set_grand_doctrine = new_mobile_warfare
+set_sub_doctrine = commandos
+set_sub_doctrine = armored_spearhead
+
 create_faction_from_template = faction_template_geacps_faction
 add_to_faction = JAP
 
@@ -61,8 +65,7 @@ set_technology = {
 	marines  = 1
 	gw_artillery = 1
 	basic_train = 1
-	trench_warfare = 1
-	base_strike = 1
+	
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
@@ -116,7 +119,7 @@ if = {
 		coastal_defense_ships = 1
 		basic_depth_charges = 1
 		basic_cruiser_armor_scheme = 1
-		basic_dp_light_battery = 1
+		
 		improved_airplane_launcher = 1
 	}
 	set_naval_oob = "JAP_1936_naval"
@@ -226,16 +229,14 @@ if = {
 	
 		#doctrines
 		#air
-		force_rotation = 1
-		formation_flying = 1
-		low_echelon_support = 1
-		formation_flying = 1
+		
+		
+		
+		
 
-		grand_battle_plan = 1
-		prepared_defense = 1
-		grand_assault = 1
-		carrier_primacy = 1
-		carrier_task_forces = 1
+		
+		
+		
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -304,7 +305,7 @@ if = {
 			set_air_oob = "JAP_1939_air_bba"
 			set_technology = {
 				basic_medium_airframe = 1
-				range_improvements = 1
+				
 			}
 		else = {
 			set_air_oob = "JAP_1939_air_legacy"
