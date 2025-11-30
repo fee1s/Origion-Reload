@@ -51,15 +51,24 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = tomoyuki_yamashita
 			ledger = army
 			allowed = {
 				original_tag = JAP
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				grand_battle_plan_expert
+				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 
@@ -80,18 +89,6 @@ characters={
 			army={
 				small="GFX_idea_hisaichi_terauchi"
 				large=GFX_portrait_JAP_hisaichi_terauchi
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = hisaichi_terauchi
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				military_theorist
 			}
 		}
 	}
@@ -284,7 +281,7 @@ characters={
 				original_tag = JAP
 			}
 			traits = {
-				air_chief_all_weather_1
+				air_chief_all_weather_2
 			}
 			cost = 50
 			ai_will_do = {
@@ -487,15 +484,24 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = yoshitoshi_tokugawa
 			ledger = air
 			allowed = {
 				original_tag = JAP
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				assault_avaition
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -507,16 +513,6 @@ characters={
 				small="GFX_idea_hino_kumazo"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = hino_kumazo
-			ledger = air
-			allowed = {
-				original_tag = JAP
-			}
-			traits = { air_warfare_theorist }
-		}
 	}
 
 	JAP_yoshio_nishina={
@@ -526,21 +522,6 @@ characters={
 				small="GFX_idea_yoshio_nishina"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = yoshio_nishina
-			ledger = army
-			allowed = {
-				original_tag = JAP
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}
 	}
 
 	JAP_hideo_itokawa={
@@ -548,21 +529,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_hideo_itokawa"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = hideo_itokawa
-			ledger = air
-			allowed = {
-				original_tag = JAP
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
 			}
 		}
 	}
@@ -822,10 +788,19 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				naval_aviation_pioneer
+				naval_theorist
 			}
-			cost = 150
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
+			cost = 100
 		}
 		navy_leader={
 			traits={ blockade_runner superior_tactician air_controller ironside inshore_fighter }

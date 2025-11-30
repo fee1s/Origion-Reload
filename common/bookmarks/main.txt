@@ -10,21 +10,6 @@ bookmarks = {
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { NOT = { has_dlc = "La Resistance" } }
-			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
-			}
-			focuses = {
-			    FRA_buy_time
-				FRA_devalue_the_franc
-				FRA_begin_rearmament
-			}
-		}
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
 			available = { has_dlc = "La Resistance" } 
 			ideas = {
 				FRA_victors_of_wwi
@@ -32,19 +17,23 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				
+				FRA_revive_the_national_bloc
+				FRA_the_end_of_appeasement
+				FRA_defensive_strategems
 			}
 		}
 		"USA"={
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				home_of_the_free
-				great_depression
+				
+				usa_peacetime_shipbuilding
 				undisturbed_isolation
 			}
 			focuses = {
-				
+				USA_continue_the_new_deal
+				USA_the_giant_wakes
+				USA_endless_war			
 			}
 		}
 		"ENG"={
@@ -57,20 +46,9 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				
-			}
-		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
-			ideology = democratic
-			available = { NOT = { has_dlc = "Man the Guns" } }
-			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
-			}
-			focuses = {
-				
+				uk_empire_focus
+				ENG_imperial_conference
+				ENG_blood_toil_tears			
 			}
 		}
 		"GER"={
@@ -83,22 +61,9 @@ bookmarks = {
 				GER_mefo_bills_1
 			}
 			focuses = {
-				GER_lider_faction
-				GER_four_year_plan
-				GER_army_innovation
-			}
-		}
-		"GER"={
-			history = "GER_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { NOT = { has_dlc = "Waking the Tiger" } }
-			ideas = {
-				sour_loser
-				general_staff
-				GER_mefo_bills_1
-			}
-			focuses = {
-			    
+				GER_remilitarize_the_rhineland
+				GER_danzig_or_war
+				GER_totalen_krieg
 			}
 		}
 		"ITA"={
@@ -107,24 +72,11 @@ bookmarks = {
 			available = { has_dlc = "By Blood Alone" }
 			ideas = {
 				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
 			}	
 			focuses = {
-				
-			}		
-		}
-		"ITA"={
-			history = "ITA_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { NOT = { has_dlc = "By Blood Alone" } }
-			ideas = {
-				vittorio_emanuele
-				ITA_iri_fake_ns
-				ITA_re_fake_ns
-			}	
-			focuses = {
-				
+				ITA_triumph_in_africa_bba
+				ITA_albanian_occupation
+				ITA_evacuation_oil_libya
 			}		
 		}
 		"JAP"={
@@ -132,11 +84,13 @@ bookmarks = {
 			ideology = fascism
 			ideas = {
 				state_shintoism
-				JAP_zaibatsus
+				
 				JAP_militarism
 			}	
 			focuses = {
-				
+				JAP_purge_the_kodoha_faction
+				JAP_intervene_in_china
+				JAP_strike_on_the_southern_resource_area
 			}			
 		}
 		"SOV"={
@@ -149,20 +103,9 @@ bookmarks = {
 				SOV_politicized_military
 			}
 			focuses = {
-				
-			}	
-		}
-		"SOV"={
-			history = "SOV_GATHERING_STORM_DESC"
-			ideology = communism
-			available = { NOT = { has_dlc = "No Step Back" } }
-			ideas = {
-				trotskyite_plot_nsb
-				SOV_second_five_year_plan_fake_1936_ns
-				SOV_politicized_military
-			}
-			focuses = {
-				
+				SOV_the_path_of_marxism_leninism
+				SOV_secret_protocol_of_the_MR_pact
+				SOV_the_sacred_war
 			}	
 		}
 
@@ -177,11 +120,12 @@ bookmarks = {
 			history = "CAN_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				CAN_great_depression_1
 				CAN_conscription_crisis
 			}
 			focuses = {
-				
+				CAN_strengthen_the_commonwealth_ties
+				CAN_defence_of_canada_regulations
+				CAN_facel_svobodi
 			}
 		}
 		"AST"={
@@ -192,7 +136,9 @@ bookmarks = {
 				AST_great_depression_1
 			}
 			focuses = {
-				
+				AST_support_the_policy_of_appeasement
+				AST_preparation_for_the_crusader
+				AST_hes_going_south				
 			}
 		}
 		"SAF"={
@@ -204,7 +150,9 @@ bookmarks = {
 				SAF_history_of_segregation
 			}
 			focuses = {
-				
+				SAF_support_the_policy_of_appeasement
+				SAF_voortrekker_monument
+				SAF_expand_the_cape_corps
 			}
 		}
 		"RAJ"={
@@ -216,7 +164,9 @@ bookmarks = {
 				RAJ_princely_states
 			}
 			focuses = {
-				
+				RAJ_lessons_of_the_great_war
+				RAJ_provincial_elections
+				RAJ_british_victory_investors
 			}
 		}
 		"HUN"={
@@ -227,7 +177,9 @@ bookmarks = {
 				HUN_treaty_of_triannon
 			}
 			focuses = {
-				
+				wuw_HUN_continue_the_regency
+				wuw_HUN_pass_statute_xix
+				wuw_HUN_join_the_axis		
 			}
 		}
 
@@ -240,7 +192,9 @@ bookmarks = {
 				neutrality_idea
 			}
 			focuses = {
-				
+				ROM_institute_royal_dictatorship
+				ROM_force_abdication
+				ROM_black_sea_dominance
 			}
 		}
 
@@ -254,7 +208,9 @@ bookmarks = {
 				BUL_imro_01
 			}
 			focuses = {
-				
+				BUL_power_to_the_tsar
+				BUL_bulgarian_administration_of_the_balkans
+				BUL_entering_totalen_krieg				
 			}
 		}
 		
@@ -263,10 +219,12 @@ bookmarks = {
 			history = "FIN_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				
+				FIN_axis_stuff_idea
 			}
 			focuses = {
-				
+				FIN_finnish_neutrality
+				FIN_the_lone_wolf
+				FIN_finnish_march_of_conquest
 			}
 		}
 

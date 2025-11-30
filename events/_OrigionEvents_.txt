@@ -775,7 +775,7 @@ news_event = { # заморозки на восточном фронте
 	major = yes
 	
 	trigger = {
-		date > 1941.12.1
+		date > 1941.12.01
 		NOT = { has_global_flag = freeze_on_eastern_front }
 	}
 	
@@ -840,7 +840,7 @@ news_event = { # Тотален
 	    NOT = { has_global_flag = totalen_krieg_flag }
 		all_europe_occupied_by_axis = yes
 		OR = {
-			date > 1943.2.17
+			date > 1943.02.17
 		    OR = {
 			    AND = {
 				    14 = {
@@ -899,7 +899,7 @@ news_event = { # Тотален
 				}
 			}
 			AND = {
-			    date > 1942.9.1
+			    date > 1942.09.01
 				count_triggers = {
 				    amount = 2
 					SOV = { controls_state = 812 }

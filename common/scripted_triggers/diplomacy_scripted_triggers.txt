@@ -102,7 +102,7 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 	if = { # Финка не дает ленд-лиз
 		limit = {
-            FROM { original_tag = FIN }
+            FROM = { original_tag = FIN }
         }
 		always = no
 	}
@@ -114,7 +114,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 	}
 	if = { # Юса не дает ленд-лиз до войны
 		limit = {
-            FROM { tag = USA }
+            FROM = { tag = USA }
 			date < 1941.5.1
         }
 		custom_trigger_tooltip = {
@@ -162,7 +162,7 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 	
 	if = { # Франция не может посылать ленд-лиз до капитуляции
 		limit = {
-            FROM { tag = FRA }
+            FROM = { tag = FRA }
 			FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
         }
 		always = no

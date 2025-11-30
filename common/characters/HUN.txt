@@ -362,8 +362,17 @@ characters={
 				original_tag = HUN
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens} }
 			traits = {
 				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -383,8 +392,17 @@ characters={
 			allowed = {
 				original_tag = HUN
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
 				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -524,6 +542,27 @@ characters={
 				small="GFX_idea_HUN_sandor_magyarossy"
 			}
 		}
+		advisor={
+			slot = theorist
+			idea_token = HUN_sandor_magyarossy
+			ledger = navy
+			allowed = {
+				original_tag = HUN
+			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
+			traits = {
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
+			cost = 100
+		}
 	}
 
 	HUN_gusztav_jany={
@@ -531,6 +570,20 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_HUN_gusztav_jany"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = HUN_gusztav_jany
+			allowed = {
+				original_tag = HUN
+			}
+			traits = {
+				air_chief_all_weather_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 	}

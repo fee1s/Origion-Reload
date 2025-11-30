@@ -259,8 +259,17 @@ characters={
 				original_tag = AST
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens} }
 			traits = {
 				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}		
 	}
@@ -281,8 +290,17 @@ characters={
 				original_tag = AST
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
 				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -360,9 +378,9 @@ characters={
 				original_tag = AST
 			}
 			traits = {
-				air_chief_safety_3
+				air_chief_night_operations_2
 			}
-			cost = 200
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -383,7 +401,7 @@ characters={
 				original_tag = AST
 			}
 			traits = {
-				air_chief_reform_2
+				air_chief_all_weather_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -461,15 +479,24 @@ characters={
 			}
 		}
 		advisor = {
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = arold_farncomb
 			ledger = navy
 			allowed = {
 				original_tag = AST
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				naval_aviation_pioneer
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 		navy_leader={

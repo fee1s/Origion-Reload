@@ -333,7 +333,7 @@ NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.15; -- Множитель почи
 NDefines.NProduction.BASE_ENERGY_COST = 0.00001; -- Самый полезный ресурс в Оригионе
 NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.000001;
 NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 1000;
-NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 0.0;
+NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 1.0;
 
 -- Дипломатия
 

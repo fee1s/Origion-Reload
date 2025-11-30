@@ -268,18 +268,20 @@ characters={
 				original_tag = FRA
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				blitzkrieg_theorist
+				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.000
-					GER = {
-						is_ai = yes
-					}
-					date < 1939.08.01
-				}
+				factor = 5.000
 			}
 		}
 		
@@ -314,28 +316,6 @@ characters={
 			}
 			army={
 				large=GFX_portrait_FRA_henri_giraud
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = henri_giraud
-			ledger = army
-			allowed = {
-				original_tag = FRA
-			}
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.000
-					GER = {
-						is_ai = yes
-					}
-					date < 1939.08.01
-				}
-			}
-			traits = {
-				military_theorist
 			}
 		}
 		
@@ -407,7 +387,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			
 			slot = theorist
 			idea_token = victor_denain
@@ -416,8 +396,17 @@ characters={
 				original_tag = FRA
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				assault_avaition
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -437,7 +426,18 @@ characters={
 			allowed = {
 				original_tag = FRA
 			}
-			traits = { air_warfare_theorist }
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
+			traits = {
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -446,21 +446,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_frederic_irene_joliot_curie"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = frederic_irene_joliot_curie
-			ledger = army
-			allowed = {
-				original_tag = FRA
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
 			}
 		}
 	}
@@ -509,9 +494,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				air_chief_ground_support_1
+				air_chief_night_operations_2
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -532,9 +517,9 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				air_chief_all_weather_1
+				air_chief_all_weather_2
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -546,20 +531,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_philippe_fequant"
-			}
-		}
-		advisor={
-			slot = air_chief
-			idea_token = philippe_fequant
-			allowed = {
-				original_tag = FRA
-			}
-			traits = {
-				air_chief_reform_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

@@ -361,37 +361,6 @@ characters = {
 				large = "GFX_portrait_SOV_semyon_timoshenko"
 			}
 		}
-		advisor = {
-			slot = army_chief
-			idea_token = semyon_timoshenko
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 404.000
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				army_chief_reform_2
-			}
-				cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	SOV_kliment_voroshilov = {
@@ -915,7 +884,7 @@ characters = {
 				original_tag = SOV
 			}
 			traits = {
-				air_chief_reform_2
+				air_chief_all_weather_2
 			}
 			cost = 100
 			ai_will_do = {

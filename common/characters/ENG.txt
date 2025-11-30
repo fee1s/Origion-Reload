@@ -151,21 +151,24 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = bernard_montgomery
 			ledger = army
 			allowed = {
 				original_tag = ENG
 			}
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
-			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				grand_battle_plan_expert
+				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 		
@@ -258,21 +261,6 @@ characters={
 			army={
 				large=GFX_portrait_ENG_william_slim
 				small=GFX_portrait_ENG_william_slim_small
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = william_slim
-			ledger = army
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				military_theorist
-			}
-			ai_will_do = {
-				factor = 2.000
 			}
 		}
 		field_marshal={
@@ -519,7 +507,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = james_somerville
 			ledger = navy
@@ -527,8 +515,17 @@ characters={
 				original_tag = ENG
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				grand_fleet_proponent
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -540,16 +537,6 @@ characters={
 				small="GFX_idea_tom_phillips"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = tom_phillips
-			ledger = navy
-			allowed = {
-				original_tag = ENG
-			}
-			traits = { naval_theorist }
-		}
 	}
 
 	ENG_hugh_dowding={
@@ -557,18 +544,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_hugh_dowding"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = hugh_dowding
-			ledger = air
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				air_warfare_theorist
 			}
 		}
 	}
@@ -581,7 +556,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = arthur_harris
 			ledger = air
@@ -589,8 +564,17 @@ characters={
 				original_tag = ENG
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				victory_through_airpower
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -602,21 +586,6 @@ characters={
 				small="GFX_idea_james_chadwick"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = james_chadwick
-			ledger = army
-			allowed = {
-				original_tag = ENG
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}
 	}
 
 	ENG_frank_whittle={
@@ -624,21 +593,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_frank_whittle"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = frank_whittle
-			ledger = air
-			allowed = {
-				original_tag = ENG
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
 			}
 		}		
 	}
@@ -650,26 +604,6 @@ characters={
 				small="GFX_idea_ENG_jfc_fuller"
 			}
 		}
-		advisor={
-			cost = 200
-			slot = theorist
-			idea_token = ENG_jfc_fuller
-			ledger = army
-			available = {
-				has_government = fascism
-			}
-			allowed = {
-				original_tag = ENG
-				has_dlc = "Man the Guns"
-			}
-			
-			traits = {
-				blitzkrieg_theorist
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 # Communist ministers, intentionally without loc so they are 'randomized'
@@ -679,48 +613,12 @@ characters={
 				small="GFX_idea_generic_army_europe_5"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = ENG_random_communist_minister_14
-			ledger = air
-			visible = {
-				has_country_flag = ENG_trade_unions_demand_minister_appointment_14
-			}
-			allowed = {
-				original_tag = ENG
-			}
-			research_bonus = {
-				rocketry = 0.050
-			}
-			traits = {
-				little_rocket_man
-			}
-		}
 	}
 
 	ENG_random_communist_minister_15={
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_6"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = ENG_random_communist_minister_15
-			ledger = army
-			visible = {
-				has_country_flag = ENG_trade_unions_demand_minister_appointment_15
-			}
-			allowed = {
-				original_tag = ENG
-			}
-			research_bonus = {
-				nuclear = 0.2
-			}
-			traits = {
-				nuclear_enthusiast
 			}
 		}
 	}
@@ -772,7 +670,7 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				air_chief_reform_2
+				air_chief_all_weather_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -811,20 +709,6 @@ characters={
 				small="GFX_idea_edward_ellington"
 			}
 		}
-		advisor={
-			slot = air_chief
-			idea_token = edward_ellington
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				air_chief_safety_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
 	}
 
 	### MILITARY HIGH COMMAND ###
@@ -1025,18 +909,6 @@ characters={
 			army={
 				large=GFX_portrait_ENG_andrew_cunningham
 			}
-		}
-		advisor={
-			slot = theorist
-			idea_token = andrew_cunningham
-			ledger = navy
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				naval_aviation_pioneer
-			}
-			cost = 150
 		}
 		
 		navy_leader={

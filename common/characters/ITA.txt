@@ -225,18 +225,11 @@ characters = {
 			allowed = {
 				ITA_is_italian_tag = yes
 			}
-			available = {
-				if = {
-					limit = { 
-						has_dlc = "By Blood Alone"
-					}
-					ITA_is_advisor_available = yes
-				}
-			}
 			
 			traits = {
 				air_chief_all_weather_2
 			}
+			
 			cost = 100
 			ai_will_do = {
 				base = 1.000
@@ -385,18 +378,24 @@ characters = {
 		}
 		
 		advisor = {
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = ettore_bastico
 			ledger = army
 			allowed = {
 				ITA_is_italian_tag = yes
 			}
-			available = {
-				has_government = fascism
-			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				grand_battle_plan_expert
+				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 			ai_will_do = {
 				base = 3.000
@@ -588,15 +587,24 @@ characters = {
 		}
 		
 		advisor = {
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = ettore_baldassarre
 			ledger = air
 			allowed = {
 				ITA_is_italian_tag = yes
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				assault_avaition
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -667,17 +675,6 @@ characters = {
 			army = {
 				small = GFX_idea_renato_sandalli
 			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = renato_sandalli
-			ledger = air
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = { air_warfare_theorist }
 		}		
 	}
 
@@ -686,22 +683,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_idea_gaetano_crocco
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = gaetano_crocco
-			ledger = air
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
 			}
 		}
 	}
@@ -735,21 +716,6 @@ characters = {
 				small = GFX_idea_rino_corso_fougier
 			}
 		}
-
-		advisor = {	
-			slot = air_chief
-			idea_token = rino_corso_fougier
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = {
-				air_chief_safety_1
-			}
-			cost = 50
-			ai_will_do = {
-				base = 1.000
-			}
-		}
 	}
 
 	ITA_francesco_pricolo = {
@@ -767,7 +733,7 @@ characters = {
 				ITA_is_italian_tag = yes
 			}
 			traits = {
-				air_chief_reform_2
+				air_chief_night_operations_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -781,21 +747,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_portrait_ITA_aldo_pellegrini_small
-			}
-		}
-
-		advisor = {
-			slot = air_chief
-			idea_token = ITA_aldo_pellegrini
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			traits = {
-				air_chief_ground_support_1
-			}
-			cost = 50
-			ai_will_do = {
-				base = 1.000
 			}
 		}
 	}
@@ -1409,10 +1360,19 @@ characters = {
 			allowed = {
 				original_tag = ITA
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				naval_aviation_pioneer
+				naval_theorist
 			}
-			cost = 150
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
+			cost = 100
 		}
 		navy_leader = {
 			traits={ blockade_runner superior_tactician air_controller ironside }

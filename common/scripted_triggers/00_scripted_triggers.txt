@@ -222,53 +222,6 @@ is_csa_state = {
 	}
 }
 
-has_naval_treaty_trigger = {
-	OR = {
-		has_idea = MTG_naval_treaty_adherent
-		has_idea = MTG_naval_treaty_cheating
-		has_idea = MTG_naval_treaty_adherent_reduced
-		has_idea = MTG_naval_treaty_cheating_reduced
-	}
-}
-
-ai_air_doctrine_tier_1_trigger = {
-	OR = {
-		has_tech = naval_strike_tactics
-		has_tech = low_echelon_support
-	}
-}
-
-ai_air_doctrine_tier_2_trigger = {
-	has_tech = multialtitude_flying
-}
-ai_air_doctrine_tier_3_trigger = {
-	OR = {
-		has_tech = flying_fortress
-		has_tech = naval_strike_torpedo_tactics
-		has_tech = infiltration_bombing
-	}
-}
-
-ai_land_doctrine_tier_1_trigger = {
-	OR = {
-		has_tech = elastic_defence
-		has_tech = mobile_defence
-		has_tech = grand_assault
-		has_tech = defence_in_depth
-	}
-}
-
-ai_land_doctrine_tier_2_trigger = {
-	OR = {
-		has_tech = kampfgruppe
-		has_tech = mechanised_offensive
-		has_tech = branch_interoperation
-		has_tech = infiltration_assault
-		has_tech = vast_offensives
-		has_tech = large_front_offensive
-	}
-}
-
 SOV_save_pp_for_manpower_trouble = {
 	has_manpower < 1000000
 	has_political_power < 200
@@ -353,84 +306,6 @@ should_USA_invade_europe_or_africa = {
 				is_in_array = { potential_and_current_enemies = SPR }
 			}
 		}
-	}
-}
-
-enemy_has_equal_or_better_radar_tech_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = enemy_has_equal_or_better_radar_tech_trigger_tt
-		if = {
-			limit = {
-				ROOT = {
-					has_tech = radio_detection
-					NOT = {
-						has_tech = decimetric_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = radio_detection
-					has_tech = decimetric_radar
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = decimetric_radar
-
-				}
-			}
-			FROM = {
-				has_tech = decimetric_radar
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					NOT = {
-						has_tech = centimetric_radar
-					}
-				}
-			}
-			FROM = {
-				has_tech = centimetric_radar
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = centimetric_radar
-					NOT = {
-						has_tech = phased_array
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = centimetric_radar
-					has_tech = phased_array
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ROOT = {
-					has_tech = phased_array
-					NOT = {
-						has_tech = monopulse_radar
-					}
-				}
-			}
-			FROM = {
-				OR = {
-					has_tech = phased_array
-					has_tech = monopulse_radar
-				}
-			}
-		}
-		#no more steps needed because end of research tree is reached
 	}
 }
 
@@ -1113,40 +988,6 @@ FROM_is_twice_as_weak = {
 	strength_ratio = {
 		tag = FROM 
 		ratio > 2
-	}
-}
-
-ai_has_completed_army_doctrine = {
-	is_ai = yes
-	OR = {
-		has_tech = werwolf_guerillas
-		has_tech = modern_blitzkrieg
-		has_tech = air_land_battle
-		has_tech = shock_and_awe
-		has_tech = c3i_theory
-		has_tech = infiltration_in_depth
-		has_tech = continuous_offensive
-		has_tech = guerilla_warfare
-	}
-}
-
-ai_has_completed_air_doctrine = {
-	is_ai = yes
-	OR = {
-		has_tech = mass_destruction
-		has_tech = high_level_bombing
-	}
-}
-
-ai_has_completed_naval_doctrine = {
-	is_ai = yes
-	OR = {
-		has_tech = grand_battlefleet
-		has_tech = submarine_offensive
-		has_tech = floating_airfield
-		has_tech = integrated_convoy_defence
-		has_tech = submarine_offensive_bs
-		has_tech = carrier_battlegroups
 	}
 }
 

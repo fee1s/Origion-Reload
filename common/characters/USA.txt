@@ -92,7 +92,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = omar_bradley
 			ledger = army
@@ -100,8 +100,17 @@ characters={
 				original_tag = USA
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				superior_firepower_expert
+				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 
@@ -488,15 +497,24 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = curtis_lemay
 			ledger = air
 			allowed = {
 				original_tag = USA
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				victory_through_airpower
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -508,16 +526,6 @@ characters={
 				small="GFX_idea_harold_mcclelland"
 			}
 		}
-		advisor={
-			cost = 100	
-			slot = theorist
-			idea_token = harold_mcclelland
-			ledger = air
-			allowed = {
-				original_tag = USA
-			}
-			traits = { air_warfare_theorist }
-		}
 	}
 
 	USA_robert_oppenheimer={
@@ -527,21 +535,6 @@ characters={
 				small="GFX_idea_robert_oppenheimer"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = robert_oppenheimer
-			ledger = army
-			allowed = {
-				original_tag = USA
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
-			}
-		}
 	}
 
 	USA_robert_goddard={
@@ -549,21 +542,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_robert_goddard"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = robert_goddard
-			ledger = air
-			allowed = {
-				original_tag = USA
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
 			}
 		}
 	}
@@ -624,9 +602,9 @@ characters={
 				original_tag = USA
 			}
 			traits = {
-				air_chief_reform_3
+				air_chief_all_weather_2
 			}
-			cost = 200
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -857,10 +835,19 @@ characters={
 			allowed = {
 				original_tag = USA
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				naval_aviation_pioneer
+				naval_theorist
 			}
-			cost = 150
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
+			cost = 100
 		}
 		navy_leader={
 			traits={ blockade_runner superior_tactician air_controller ironside blue_water_expert }

@@ -378,7 +378,6 @@ characters = {
 	}
 
 	BUL_asen_nikolov = {
-		instance = {
 			allowed = {
 				has_dlc = "Battle for the Bosporus"
 			}
@@ -389,35 +388,6 @@ characters = {
 					small = GFX_portrait_BUL_asen_nikolov_small
 				}
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			advisor = {
-				slot = air_chief
-				idea_token = BUL_asen_dobrev_nikolov
-				allowed = {
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-					original_tag = BUL
-				}
-				traits = {
-					air_chief_safety_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			name = BUL_asen_nikolov
-			portraits = {
-				army = {
-					small = "GFX_idea_generic_air_europe_2"
-				}
-			}
-		}
 	}
 
 	BUL_nikola_stoychev = {
@@ -487,8 +457,17 @@ characters = {
 				original_tag = BUL
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens} }
 			traits = {
 				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 		name = BUL_theodosi_daskalov
@@ -510,8 +489,17 @@ characters = {
 				original_tag = BUL
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
 				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 		name = BUL_georgi_drenikov
@@ -564,16 +552,34 @@ characters = {
 	}
 
 	BUL_nikola_hadzipetkov = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
+		name = BUL_nikola_hadzipetkov
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_nikola_hadzipetkov"
+				large = "GFX_portrait_bul_nikola_hadzipetkov"
 			}
-			name = BUL_nikola_hadzipetkov
-			portraits = {
-				army = {
-					small = "GFX_idea_bul_nikola_hadzipetkov"
-					large = "GFX_portrait_bul_nikola_hadzipetkov"
+		}
+		advisor={
+			slot = theorist
+			idea_token = BUL_nikola_hadzipetkov
+			ledger = navy
+			allowed = {
+				original_tag = BUL
+			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
+			traits = {
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
 				}
 			}
+			cost = 100
+		}
 	}
 
 	BUL_kiril_dimitrov_yanchulev = {
@@ -670,9 +676,9 @@ characters = {
 				original_tag = BUL
 			}
 			traits = {
-				air_chief_reform_1
+				air_chief_night_operations_2
 			}
-			cost = 50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 				modifier = {
@@ -698,7 +704,7 @@ characters = {
 				original_tag = BUL
 			}
 			traits = {
-				air_chief_safety_2
+				air_chief_all_weather_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -718,26 +724,6 @@ characters = {
 	}
 
 	BUL_zachari_zachariev = {
-		advisor = {
-			slot = air_chief
-			idea_token = BUL_zachari_zachariev
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			visible = { always = no }
-			traits = {
-				air_chief_ground_support_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.100
-					BUL_save_money_for_decisions = yes
-				}
-			}
-		}
 		name = BUL_zachari_zachariev
 		portraits = {
 			army = {

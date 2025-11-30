@@ -6,74 +6,84 @@ bookmarks = {
 		picture = "GFX_select_date_1939"
 		default_country = "GER"
 	
-		FRA = {
-			history = FRA_BLITZKRIEG_DESC
+		"FRA"={
+			history = "FRA_BLITZKRIEG_DESC"
 			ideology = democratic
-			ideas={
+			available = { has_dlc = "La Resistance" } 
+			ideas = {
 				FRA_victors_of_wwi
 				FRA_disjointed_government
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				
+				FRA_revive_the_national_bloc
+				FRA_the_end_of_appeasement
+				FRA_defensive_strategems
 			}
 		}
-		ENG = {
-			history = ENG_BLITZKRIEG_DESC
+		"ENG"={
+			history = "ENG_BLITZKRIEG_DESC"
 			ideology = democratic
+			available = { has_dlc = "Man the Guns" }
 			ideas = {
 				stiff_upper_lip
 				ENG_the_war_to_end_all_wars
-				ENG_george_vi
-				british_austerity_idea
-				ENG_colonial_elite
+				george_v
 			}
 			focuses = {
-				
+				uk_empire_focus
+				ENG_imperial_conference
+				ENG_blood_toil_tears			
 			}
-			
 		}
-		GER = {
-			history = GER_BLITZKRIEG_DESC
+		"GER"={
+			history = "GER_BLITZKRIEG_DESC"
 			ideology = fascism
+			available = { has_dlc = "Waking the Tiger" }
 			ideas = {
 				sour_loser
 				general_staff
-				GER_mefo_bills_15
-				GER_autarky_idea
+				GER_mefo_bills_1
 			}
 			focuses = {
-				
+				GER_remilitarize_the_rhineland
+				GER_danzig_or_war
+				GER_totalen_krieg
 			}
 		}
-		ITA = {
-			history = ITA_BLITZKRIEG_DESC
+		"ITA"={
+			history = "ITA_BLITZKRIEG_DESC"
 			ideology = fascism
-			ideas={
-				vittorio_emanuele_albania_ethiopia
-				ITA_camicie_nere
-				ITA_pact_of_steel
-			}
-			focuses = {
-				
-			}			
-		}
-		SOV = {
-			history = SOV_BLITZKRIEG_DESC
-			ideology = communism
+			available = { has_dlc = "By Blood Alone" }
 			ideas = {
-				SOV_anti_soviet_military_thinking_banned_navy
-				SOV_second_five_year_plan_fake_1939_ns
-				SOV_purged_junior_army_officers_2
+				vittorio_emanuele
+			}	
+			focuses = {
+				ITA_triumph_in_africa_bba
+				ITA_albanian_occupation
+				ITA_evacuation_oil_libya
+			}		
+		}
+		"SOV"={
+			history = "SOV_BLITZKRIEG_DESC"
+			ideology = communism
+			available = { has_dlc = "No Step Back" }
+			ideas = {
+				trotskyite_plot_nsb
+				SOV_second_five_year_plan_fake_1936_ns
+				SOV_politicized_military
 			}
 			focuses = {
-				
-			}
+				SOV_the_path_of_marxism_leninism
+				SOV_secret_protocol_of_the_MR_pact
+				SOV_the_sacred_war
+			}	
 		}
 
 		"---"={
 			history = "OTHER_BLITZKRIEG_DESC"
 		}
+
 
 		# minors from DLC ####
 		"CAN"={
@@ -81,14 +91,14 @@ bookmarks = {
 			history = "CAN_BLITZKRIEG_DESC"
 			ideology = democratic
 			ideas = {
-				CAN_great_depression_1
 				CAN_conscription_crisis
 			}
 			focuses = {
-				
+				CAN_strengthen_the_commonwealth_ties
+				CAN_defence_of_canada_regulations
+				CAN_facel_svobodi
 			}
 		}
-		
 		"SAF"={
 			minor = yes
 			history = "SAF_BLITZKRIEG_DESC"
@@ -98,21 +108,22 @@ bookmarks = {
 				SAF_history_of_segregation
 			}
 			focuses = {
-				
+				SAF_support_the_policy_of_appeasement
+				SAF_voortrekker_monument
+				SAF_expand_the_cape_corps
 			}
 		}
-
 		"HUN"={
 			minor = yes
 			history = "HUN_BLITZKRIEG_DESC"
 			ideology = neutrality
 			ideas = {
-				HUN_treaty_of_triannon_3
-				HUN_interventionism
-				HUN_strengthen_fascists
+				HUN_treaty_of_triannon
 			}
 			focuses = {
-				
+				wuw_HUN_continue_the_regency
+				wuw_HUN_pass_statute_xix
+				wuw_HUN_join_the_axis		
 			}
 		}
 
@@ -122,37 +133,42 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				ROM_king_carol_ii_hedonist
-				ROM_preserve_greater_romania
-				ROM_iron_guard
+				neutrality_idea
 			}
 			focuses = {
-				
+				ROM_institute_royal_dictatorship
+				ROM_force_abdication
+				ROM_black_sea_dominance
 			}
 		}
-		
+
 		"BUL"={
 			minor = yes
 			history = "BUL_BLITZKRIEG_DESC"
 			ideology = neutrality
 			ideas = {
-				BUL_bulgarian_irredentism
+				BUL_second_national_catastrophe
+				BUL_army_restrictions
 				BUL_imro_01
-				BUL_national_industry_01
 			}
 			focuses = {
-				
+				BUL_power_to_the_tsar
+				BUL_bulgarian_administration_of_the_balkans
+				BUL_entering_totalen_krieg				
 			}
 		}
 		
 		"FIN"={
 			minor = yes
-			history = "FIN_GATHERING_STORM_DESC"
+			history = "FIN_BLITZKRIEG_DESC"
 			ideology = neutrality
 			ideas = {
-				
+				FIN_axis_stuff_idea
 			}
 			focuses = {
-				
+				FIN_finnish_neutrality
+				FIN_the_lone_wolf
+				FIN_finnish_march_of_conquest
 			}
 		}
 

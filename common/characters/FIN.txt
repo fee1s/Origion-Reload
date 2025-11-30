@@ -332,7 +332,30 @@ characters = {
 				original_tag = FIN
 			}
 			traits = {
-				air_chief_ground_support_2
+				air_chief_night_operations_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	
+	FIN_jarl_lundqvist = {
+		name = FIN_jarl_lundqvist
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_jarl_lundqvist_small
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FIN_jarl_lundqvist
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				air_chief_all_weather_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -383,8 +406,77 @@ characters = {
 				original_tag = FIN
 			}
 			
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens} }
 			traits = {
 				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
+			}
+		}
+	}
+	
+	FIN_vaino_valve = {
+		name = FIN_vaino_valve
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_vaino_valve_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = FIN_vaino_valve
+			ledger = navy
+			allowed = {
+				original_tag = FIN
+			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
+			traits = {
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
+		}
+	}
+	
+	FIN_gustaf_magnusson = {
+		name = FIN_gustaf_magnusson
+		portraits = {
+			army = {
+				small = GFX_portrait_FIN_gustaf_magnusson_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = FIN_gustaf_magnusson
+			ledger = navy
+			allowed = {
+				original_tag = FIN
+			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
+			traits = {
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}

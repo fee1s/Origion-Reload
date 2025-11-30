@@ -252,8 +252,17 @@ characters={
 			allowed = {
 				original_tag = CAN
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens} }
 			traits = {
 				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -263,22 +272,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CAN_george_volkoff" #small="GFX_idea_generic_political_advisor_europe_2"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = CAN_george_volkoff
-			ledger = army
-			allowed = {
-				original_tag = CAN
-				has_dlc = "Together for Victory"
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
 			}
 		}
 	}
@@ -298,8 +291,17 @@ characters={
 			allowed = {
 				original_tag = CAN
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
 				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -373,7 +375,7 @@ characters={
 				original_tag = CAN
 			}
 			traits = {
-				air_chief_safety_2
+				air_chief_night_operations_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -397,7 +399,7 @@ characters={
 				has_dlc = "Together for Victory"
 			}
 			traits = {
-				air_chief_reform_2
+				air_chief_all_weather_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -411,21 +413,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CAN_raymond_collishaw" #small="GFX_idea_generic_air_europe_3"
-			}
-		}
-		advisor={
-			slot = air_chief
-			idea_token = CAN_raymond_collishaw
-			allowed = {
-				original_tag = CAN
-				has_dlc = "Together for Victory"
-			}
-			traits = {
-				air_chief_safety_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}
@@ -537,15 +524,24 @@ characters={
 			}
 		}
 		advisor = {
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = leonard_w_murray
 			ledger = navy
 			allowed = {
 				original_tag = CAN
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				naval_aviation_pioneer
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 		navy_leader={
