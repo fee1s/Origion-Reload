@@ -299,6 +299,21 @@ ideas = {
 				}
 			}
 		}
+		JAP_inv_cap = {
+			name = JAP_emperor_army_dm
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = idea_chi_army_corruption3
+
+			modifier = {
+				naval_invasion_division_cap = 800
+				naval_invasion_plan_cap = 99		
+			}
+		}
 		league_of_nations_member_idea = { 
 			allowed = {
 				always = no

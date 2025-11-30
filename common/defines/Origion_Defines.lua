@@ -192,9 +192,6 @@ NDefines.NNavy.SUPPLY_NEED_FACTOR = 1.0 -- Множитель потребнос
 
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0
 
-NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCORE = 210 -- Попадание Авиков по линейке (от 250)
-NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 40 -- Попадание Авиков по Авикам (от 250)
-
 NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 7.5 -- Криты
 
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.75 -- снижение урона пво от мор авиации
@@ -311,6 +308,43 @@ NDefines.NNavy.CONVOY_EFFICIENCY_REGAIN_BASE_SPEED = 0.05
 
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 1.5	-- Перемножает остальные статы на детект подлодок, скейлит детекд от кол-во самолетов в регионе. (ванила 1.0)
 
+
+-- дефайны на флот с длс
+
+NDefines.NNavy.NAVAL_BASE_DOMINANCE_FACTOR = 0.00 -- удалено превосходство за новые мор.базы
+NDefines.NNavy.NAVAL_HEADQUARTERS_FIRST_ADJACENT_FACTOR = 0.0
+NDefines.NNavy.NAVAL_HEADQUARTERS_SECOND_ADJACENT_FACTOR = 0.00
+
+NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT_MAX_RATIO = 1.0 --The ratio which gives the max possible gain of positioning bonus from dominance in region of combat (e.g. to get max bonus you need 'dominance threshold * 2.0' dominance in the region)
+NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT = 1.00 --Увеличение позиционирования при максимальном соотношении (полный контроль и доминирование >= ЭФФЕКТ ДОМИНИРОВАНИЯ НА ПОЗИЦИОНИРОВАНИЕ ДЛЯ МАКСИМАЛЬНОГО СООТНОШЕНИЯ СОПРОВОЖДЕНИЯ КОНВОЯ, умноженное на доминирование конкурентов)
+
+NDefines.NNavy.SUPPORT_SHIP_RECOVERY_BASE_STRENGTH_FACTOR = 0.00
+
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 7 --старое время дропа
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 0 --убраны лимиты на дропы
+NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 1 --стартовое количество доступных дропов
+NDefines.NNavy.NAVY_USE_HOME_BASE_FOR_RANGE = false
+
+
+NDefines.NCountry.surrender_limit_reduction_per_collaboration = 0.3
+NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0.0
+NDefines.NProduction.BASE_FACTORY_SPEED = 5
+NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.50
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 2.5
+NDefines.NProduction.POWERED_FACTORY_SPEED = 0
+NDefines.NProduction.POWERED_FACTORY_SPEED_MIL = 0
+NDefines.NProduction.POWERED_FACTORY_SPEED_NAV = 0
+
+NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_MULTIPLIER = 40.0,        -- Factor on shore bombardment damage purposes, for collateral damage.
+NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_CRIT_CHANCE_FACTOR = 0.0025,        -- Chance for crit (ie, high single building damage) to occur.
+
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0
+NDefines.NMilitary.STRATEGIC_SPEED_RAIL_BASE = 15.0
+
+
+NDefines.NAir.CARRIER_COMBAT_DAMAGE_STATS_MULTIPLIER = 0.0	--филс, разберись
+NDefines.NAir.CARRIER_PERCENTAGE_DEFEND = 0.0
+NDefines.NAir.SUBMARINE_CARRIER_SIZE_STAT_INCREMENT = 0
 -- Продакшен и постройки
 
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0            -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.

@@ -666,7 +666,9 @@ technologies = {
 			#marine_tech
 			cat_marines_doctrine
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = navy_infinite_tech
+		}
 		folder = {
 			name = special_forces_doctrine_folder
 			position = { x = -1 y = 6 }
@@ -679,7 +681,7 @@ technologies = {
 		ai_research_weights = {
 			#artillery = 4.0
 		}
-
+		
 		allow = { 
 			OR = { 
 				original_tag = USA
