@@ -5,9 +5,6 @@ infantry = {
     icon_frame = "GFX_doctrine_decor_land"
     mastery = {
         multiplier = 1.0
-        categories = {
-            category_all_infantry
-        }
     }
 }
 
@@ -17,15 +14,7 @@ armor = {
     icon = "GFX_doctrine_milestone_armored_land"
     icon_frame = "GFX_doctrine_decor_land"
     mastery = {
-        multiplier = 4.0
-        categories = {
-	        category_tanks
-	        category_all_armor
-            
-        }
-        sub_units = {
-            armored_car
-        }
+        multiplier = 1.0
     }
 }
 
@@ -35,13 +24,6 @@ operations = {
     icon = "GFX_doctrine_milestone_operations_land"
     icon_frame = "GFX_doctrine_decor_land"
     mastery = {
-        multiplier = 0.7
-        categories = {
-            category_all_infantry
-	        category_line_artillery
-	        category_artillery
-	        category_tanks
-	        category_all_armor
-        }
+        multiplier = 1.0
     }
 }
