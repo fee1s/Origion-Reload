@@ -487,4 +487,372 @@ soviet_starts_evacuation = {
 	activate_mission = SOV_leningrad_ir
 	activate_mission = SOV_karelia_ir
 }
+
+military_theorist_scripted_effect = {
+	# Наземная прокачка (разбито на саб_доки, т.к советская ветка не должна прокачиваться)
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = armored_spearhead
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = streamlined_deployment
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = mobile_defense
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = tank_destroyer_force
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = defensive_postures
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = grand_assault
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = assault_infantry
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = commandos
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = mobile_infantry
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = armored_infantry_support
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = mission_type_tactics
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = expeditionary_warfare
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = armored_cavalry
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = great_war_infantry
+		days = 1670
+	}
+	
+	# Авиационная прокачка
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = military_theorist
+		folder = air
+		days = 2500
+	}
+	
+	# Морская прокачка
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = military_theorist
+		folder = naval
+		days = 2500
+	}
+	
+	set_country_flag = theorist_picked_flag
+}
+
+air_warfare_theorist_scripted_effect = {
+	# Наземная прокачка (разбито на саб_доки, т.к советская ветка не должна прокачиваться)
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = armored_spearhead
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = streamlined_deployment
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = mobile_defense
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = tank_destroyer_force
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = defensive_postures
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = grand_assault
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = assault_infantry
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = commandos
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = mobile_infantry
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = armored_infantry_support
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = mission_type_tactics
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = expeditionary_warfare
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = armored_cavalry
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		sub_doctrine = great_war_infantry
+		days = 2500
+	}
+	
+	# Авиационная прокачка
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = air_warfare_theorist
+		folder = air
+		days = 1670
+	}
+	
+	# Морская прокачка
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = air_warfare_theorist
+		folder = naval
+		days = 2500
+	}
+	
+	set_country_flag = theorist_picked_flag
+}
+
+naval_theorist_scripted_effect = {
+	# Наземная прокачка (разбито на саб_доки, т.к советская ветка не должна прокачиваться)
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = armored_spearhead
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = streamlined_deployment
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = mobile_defense
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = tank_destroyer_force
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = defensive_postures
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = grand_assault
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = assault_infantry
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = commandos
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = mobile_infantry
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = armored_infantry_support
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = mission_type_tactics
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = expeditionary_warfare
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = armored_cavalry
+		days = 2500
+	}
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		sub_doctrine = great_war_infantry
+		days = 2500
+	}
+	
+	# Авиационная прокачка
+	
+	add_daily_mastery = {
+		amount = 0.2
+		name = naval_theorist
+		folder = air
+		days = 2500
+	}
+	
+	# Морская прокачка
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = naval_theorist
+		folder = naval
+		days = 1670
+	}
+	
+	set_country_flag = theorist_picked_flag
+}
+
+
 	

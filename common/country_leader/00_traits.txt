@@ -1207,7 +1207,7 @@ leader_traits = {
 	red_army_organizer = { # Trotsky's trait if invited to join the Mexican government. Combines effects of Genius Army Organizer and Communist Revolutionary
 		sprite = 12
 		army_org_factor = 0.12
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 		communism_drift = 0.1
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -3243,7 +3243,7 @@ leader_traits = {
 	SWI_commander_in_chief = { 
 		random = no
 		sprite = 5
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 		army_defence_factor = 0.15
 		command_power_gain = 0.07
 		command_cap_increase = @tier3_cp_cap_increase
@@ -8040,7 +8040,10 @@ leader_traits = {
 
 	military_theorist = {
 		sprite = 14
-		land_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.3
+		experience_gain_air = 0.2
+		experience_gain_navy = 0.2
+		custom_modifier_tooltip = military_theorist_tt
 
 		ai_will_do = {
 			factor = 1
@@ -8085,7 +8088,10 @@ leader_traits = {
 
 	air_warfare_theorist = {
 		sprite = 14
-		air_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.2
+		experience_gain_air = 0.3
+		experience_gain_navy = 0.2
+		custom_modifier_tooltip = air_theorist_tt
 
 		ai_will_do = {
 			factor = 1
@@ -8136,7 +8142,10 @@ leader_traits = {
 
 	naval_theorist = {
 		sprite = 14
-		naval_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.2
+		experience_gain_air = 0.2
+		experience_gain_navy = 0.3
+		custom_modifier_tooltip = navy_theorist_tt
 
 		ai_will_do = {
 			factor = 1
@@ -10427,7 +10436,7 @@ leader_traits = {
 		sprite = 2
 		#air_chief_ground_support_1
 		army_bonus_air_superiority_factor = 0.05
-		experience_gain_air = @chief_experience_gain_low
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -11175,7 +11184,7 @@ leader_traits = {
 	army_chief_defensive_2 = { # +10 Defensive efficiency
 		sprite = 9
 		army_defence_factor = 0.1
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11192,7 +11201,7 @@ leader_traits = {
 	army_chief_defensive_3 = { # +15 Defensive efficiency
 		sprite = 9
 		army_defence_factor = 0.15
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11227,7 +11236,7 @@ leader_traits = {
 	army_chief_offensive_2 = { # +10 Offensive efficiency
 		sprite = 7
 		army_attack_factor = 0.1
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11244,7 +11253,7 @@ leader_traits = {
 	army_chief_offensive_3 = { # +15 Offensive efficiency
 		sprite = 7
 		army_attack_factor = 0.15
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11260,7 +11269,7 @@ leader_traits = {
 
 	army_chief_old_guard = { # Rate at which field experience is gained decreases by 10%
 		sprite = 5 # Should not need sprite, should mostly be secondary
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 		max_command_power = 10
 
 		ai_will_do = {
@@ -11292,7 +11301,7 @@ leader_traits = {
 	army_chief_drill_2 = { # Decreases training time for ground units
 		sprite = 5
 		training_time_army_factor = -0.1
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11309,7 +11318,7 @@ leader_traits = {
 	army_chief_drill_3 = { # Decreases training time for ground units
 		sprite = 5
 		training_time_army_factor = -0.15
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11343,7 +11352,7 @@ leader_traits = {
 
 	army_chief_reform_2 = {
 		sprite = 5
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 		experience_gain_army_factor = 0.1
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -11360,7 +11369,7 @@ leader_traits = {
 
 	army_chief_reform_3 = {
 		sprite = 5
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 		experience_gain_army_factor = 0.15
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -11396,7 +11405,7 @@ leader_traits = {
 	army_chief_organizational_2 = { # Ground units get 8 more Organization
 		sprite = 5
 		army_org_factor = 0.08
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11413,7 +11422,7 @@ leader_traits = {
 	army_chief_organizational_3 = { # Ground units get 12 more Organization
 		sprite = 5
 		army_org_factor = 0.12
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11447,7 +11456,7 @@ leader_traits = {
 	army_chief_planning_2 = { #
 		sprite = 5
 		planning_speed = 0.10
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11464,7 +11473,7 @@ leader_traits = {
 	army_chief_planning_3 = { #
 		sprite = 5
 		planning_speed = 0.15
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11498,7 +11507,7 @@ leader_traits = {
 	army_chief_morale_2 = { # Ground units get 8 more Morale
 		sprite = 5
 		out_of_supply_factor = -0.06
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11515,7 +11524,7 @@ leader_traits = {
 	army_chief_morale_3 = { # Ground units get 12 more Morale
 		sprite = 5
 		out_of_supply_factor = -0.09
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11550,7 +11559,7 @@ leader_traits = {
 	army_chief_maneuver_2 = { # Ground units move 10% faster
 		sprite = 5
 		army_speed_factor = 0.1
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11567,7 +11576,7 @@ leader_traits = {
 	army_chief_maneuver_3 = { # Ground units move 15% faster
 		sprite = 5
 		army_speed_factor = 0.15
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -11603,7 +11612,7 @@ leader_traits = {
 		sprite = 5
 		max_dig_in = 5
 		mobilization_speed = -0.04
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -11621,7 +11630,7 @@ leader_traits = {
 		sprite = 5
 		max_dig_in = 7
 		mobilization_speed = -0.06
-		experience_gain_army = @chief_experience_gain_high
+		# experience_gain_army = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -12272,7 +12281,7 @@ leader_traits = {
 
 	air_chief_reform_1 = {  # Rate at which air experience is gained increases by 5%
 		sprite = 1
-		experience_gain_air = @chief_experience_gain_low
+		# experience_gain_air = @chief_experience_gain_high
 		experience_gain_air_factor = 0.05
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -12289,7 +12298,7 @@ leader_traits = {
 
 	air_chief_reform_2 = {  # Rate at which air experience is gained increases by 10%
 		sprite = 1
-		experience_gain_air = @chief_experience_gain_medium
+		# experience_gain_air = @chief_experience_gain_high
 		experience_gain_air_factor = 0.10
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -12306,7 +12315,7 @@ leader_traits = {
 
 	air_chief_reform_3 = {  # Rate at which air experience is gained increases by 15%
 		sprite = 1
-		experience_gain_air = @chief_experience_gain_high
+		# experience_gain_air = @chief_experience_gain_high
 		experience_gain_air_factor = 0.15
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -12325,7 +12334,7 @@ leader_traits = {
 	air_chief_safety_1 = {  # Rate of air accidents reduced by 5%
 		sprite = 1
 		air_accidents_factor = -0.05
-		experience_gain_air = @chief_experience_gain_low
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -12342,7 +12351,7 @@ leader_traits = {
 	air_chief_safety_2 = {  # Rate of air accidents reduced by 10%
 		sprite = 1
 		air_accidents_factor = -0.1
-		experience_gain_air = @chief_experience_gain_medium
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -12359,7 +12368,7 @@ leader_traits = {
 	air_chief_safety_3 = {  # Rate of air accidents reduced by 15%
 		sprite = 1
 		air_accidents_factor = -0.15
-		experience_gain_air = @chief_experience_gain_high
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -12375,7 +12384,7 @@ leader_traits = {
 
 	air_chief_old_guard = {
 		sprite = 1
-		experience_gain_air = @chief_experience_gain_medium
+		# experience_gain_air = @chief_experience_gain_high
 		max_command_power = 10
 
 		ai_will_do = {
@@ -12390,7 +12399,7 @@ leader_traits = {
 	air_chief_night_operations_1 = {
 		sprite = 1
 		air_night_penalty = -0.1
-		experience_gain_air = @chief_experience_gain_low
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -12407,7 +12416,7 @@ leader_traits = {
 	air_chief_night_operations_2 = {
 		sprite = 1
 		air_night_penalty = -0.2
-		experience_gain_air = @chief_experience_gain_medium
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -12424,7 +12433,7 @@ leader_traits = {
 	air_chief_night_operations_3 = {
 		sprite = 1
 		air_night_penalty = -0.3
-		experience_gain_air = @chief_experience_gain_high
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -12442,7 +12451,7 @@ leader_traits = {
 	air_chief_ground_support_1 = {  # Air superiority impact on land units improved by 5%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.05
-		experience_gain_air = @chief_experience_gain_low
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -12459,7 +12468,7 @@ leader_traits = {
 	air_chief_ground_support_2 = {  # Air superiority impact on land units improved by 10%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.1
-		experience_gain_air = @chief_experience_gain_medium
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -12476,7 +12485,7 @@ leader_traits = {
 	air_chief_ground_support_3 = {  # Air superiority impact on land units improved by 15%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.15
-		experience_gain_air = @chief_experience_gain_high
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -12495,7 +12504,7 @@ leader_traits = {
 	air_chief_all_weather_1 = {  # +5 bad weather air efficiency
 		sprite = 1
 		air_weather_penalty = -0.1
-		experience_gain_air = @chief_experience_gain_low
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -12512,7 +12521,7 @@ leader_traits = {
 	air_chief_all_weather_2 = {  # +10 bad weather air efficiency
 		sprite = 1
 		air_weather_penalty = -0.2
-		experience_gain_air = @chief_experience_gain_medium
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -12529,7 +12538,7 @@ leader_traits = {
 	air_chief_all_weather_3 = {  # +15 bad weather air efficiency
 		sprite = 1
 		air_weather_penalty = -0.3
-		experience_gain_air = @chief_experience_gain_high
+		# experience_gain_air = @chief_experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -13027,7 +13036,7 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.03
 		navy_carrier_air_targetting_factor = 0.03
 		navy_carrier_air_agility_factor = 0.04
-		experience_gain_navy = @chief_experience_gain_low
+		
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -13046,7 +13055,7 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.06
 		navy_carrier_air_targetting_factor = 0.07
 		navy_carrier_air_agility_factor = 0.08
-		experience_gain_navy = @chief_experience_gain_medium
+		
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -13065,7 +13074,7 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.1
 		navy_carrier_air_targetting_factor = 0.12
 		navy_carrier_air_agility_factor = 0.15
-		experience_gain_navy = @chief_experience_gain_high
+		
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -13086,7 +13095,7 @@ leader_traits = {
 		navy_capital_ship_defence_factor = 0.05
 		navy_screen_attack_factor = 0.05
 		navy_screen_defence_factor = 0.05
-		experience_gain_navy = @chief_experience_gain_low
+		
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -13106,7 +13115,7 @@ leader_traits = {
 		navy_capital_ship_defence_factor = 0.1
 		navy_screen_attack_factor = 0.1
 		navy_screen_defence_factor = 0.1
-		experience_gain_navy = @chief_experience_gain_medium
+		
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -13126,7 +13135,7 @@ leader_traits = {
 		navy_capital_ship_defence_factor = 0.15
 		navy_screen_attack_factor = 0.15
 		navy_screen_defence_factor = 0.15
-		experience_gain_navy = @chief_experience_gain_high
+		
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -13144,7 +13153,7 @@ leader_traits = {
 	navy_chief_commerce_raiding_1 = {
 		sprite = 3
 		convoy_raiding_efficiency_factor = 0.1
-		experience_gain_navy = @chief_experience_gain_low
+		
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -13161,7 +13170,7 @@ leader_traits = {
 	navy_chief_commerce_raiding_2 = {
 		sprite = 3
 		convoy_raiding_efficiency_factor = 0.15
-		experience_gain_navy = @chief_experience_gain_medium
+		
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -13178,7 +13187,7 @@ leader_traits = {
 	navy_chief_commerce_raiding_3 = {
 		sprite = 3
 		convoy_raiding_efficiency_factor = 0.2
-		experience_gain_navy = @chief_experience_gain_high
+		
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -13194,7 +13203,7 @@ leader_traits = {
 
 	navy_chief_old_guard = {
 		sprite = 3
-		experience_gain_navy = @chief_experience_gain_medium
+		
 
 		max_command_power = 10
 
@@ -13209,7 +13218,7 @@ leader_traits = {
 
 	navy_chief_reform_1 = {
 		sprite = 3
-		experience_gain_navy = @chief_experience_gain_low
+		
 		experience_gain_navy_factor = 0.05
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -13226,7 +13235,7 @@ leader_traits = {
 
 	navy_chief_reform_2 = {
 		sprite = 3
-		experience_gain_navy = @chief_experience_gain_medium
+		
 		experience_gain_navy_factor = 0.1
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -13243,7 +13252,7 @@ leader_traits = {
 
 	navy_chief_reform_3 = {
 		sprite = 3
-		experience_gain_navy = @chief_experience_gain_high
+		
 		experience_gain_navy_factor = 0.15
 
 		command_cap_increase = @tier3_cp_cap_increase
@@ -13261,7 +13270,7 @@ leader_traits = {
 	navy_chief_maneuver_1 = { # Naval units move 5% faster
 		sprite = 3
 		naval_speed_factor = 0.05
-		experience_gain_navy = @chief_experience_gain_low
+		
 
 		command_cap_increase = @tier1_cp_cap_increase
 		command_power = @tier1_cp_cost
@@ -13278,7 +13287,7 @@ leader_traits = {
 	navy_chief_maneuver_2 = { # Naval units move 10% faster
 		sprite = 3
 		naval_speed_factor = 0.1
-		experience_gain_navy = @chief_experience_gain_medium
+		
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
@@ -13295,7 +13304,7 @@ leader_traits = {
 	navy_chief_maneuver_3 = { # Naval units move 15% faster
 		sprite = 3
 		naval_speed_factor = 0.15
-		experience_gain_navy = @chief_experience_gain_high
+		
 
 		command_cap_increase = @tier3_cp_cap_increase
 		command_power = @tier3_cp_cost
@@ -13827,7 +13836,7 @@ leader_traits = {
 		army_artillery_attack_factor = 0.15
 		army_artillery_defence_factor = 0.1
 		max_planning_factor = 0.1
-		experience_gain_army = @chief_experience_gain_medium
+		# experience_gain_army = @chief_experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost

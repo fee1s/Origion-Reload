@@ -328,8 +328,17 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
 				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 		
@@ -807,7 +816,18 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
-			traits = { air_warfare_theorist }
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
+			traits = {
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
+			}
 		}		
 	}
 
@@ -823,15 +843,21 @@ characters = {
 			cost = 100
 			slot = theorist
 			idea_token = igor_kurchatov
-			ledger = army
+			ledger = navy
 			allowed = {
 				original_tag = SOV
 			}
-			research_bonus = {
-				nuclear = 0.150
-			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				nuclear_scientist
+				naval_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}		
 	}
@@ -841,22 +867,6 @@ characters = {
 		portraits = {
 			army = {
 				small = "GFX_idea_sergei_korolev"
-			}
-		}
-
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = sergei_korolev
-			ledger = air
-			allowed = {
-				original_tag = SOV
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
 			}
 		}		
 	}

@@ -10,6 +10,12 @@ new_mobile_warfare = {
 				
 			NOT = { original_tag = SOV }
 		}
+		
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
+
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
 	}
 
     xp_cost = 0
@@ -58,6 +64,11 @@ superior_firepower = {
 			limit = { original_tag = SOV }
 				
 			NOT = { original_tag = SOV }
+		}
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
+
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
 		}
 	}
 
@@ -111,6 +122,11 @@ grand_battleplan = {
 			limit = { original_tag = SOV }
 				
 			NOT = { original_tag = SOV }
+		}
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
+
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
 		}
 	}
 

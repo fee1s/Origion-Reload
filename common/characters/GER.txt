@@ -181,17 +181,27 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = manstein
 			ledger = army
 			allowed = {
 				original_tag = GER
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens} }
 			traits = {
-				mobile_warfare_expert
+				military_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						military_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
+
 		
 		field_marshal={
 			traits={ panzer_leader trait_engineer commando urban_assault_specialist organizer ranger Trickster }
@@ -210,18 +220,6 @@ characters={
 			army={
 				large=GFX_portrait_GER_heinz_guderian
 				small="GFX_idea_heinz_guderian"
-			}
-		}
-		advisor={
-			cost = 200
-			slot = theorist
-			idea_token = heinz_guderian
-			ledger = army
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				blitzkrieg_theorist
 			}
 		}
 	}
@@ -530,21 +528,6 @@ characters={
 				small="GFX_idea_von_braun"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = von_braun
-			ledger = air
-			allowed = {
-				original_tag = GER
-			}
-			research_bonus = {
-				rocketry = 0.150
-			}
-			traits = {
-				rocket_scientist
-			}
-		}
 	}
 
 	GER_heisenberg={
@@ -552,21 +535,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_heisenberg"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = heisenberg
-			ledger = army
-			allowed = {
-				original_tag = GER
-			}
-			research_bonus = {
-				nuclear = 0.150
-			}
-			traits = {
-				nuclear_scientist
 			}
 		}
 	}
@@ -578,18 +546,6 @@ characters={
 				small="GFX_idea_wolfram_von_richthofen"
 			}
 		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = wolfram_von_richthofen
-			ledger = air
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				close_air_support_proponent
-			}
-		}
 	}
 
 	GER_walther_wever={
@@ -598,16 +554,6 @@ characters={
 			army={
 				small="GFX_idea_walther_wever"
 			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = walther_wever
-			ledger = air
-			allowed = {
-				original_tag = GER
-			}
-			traits = { air_warfare_theorist }
 		}
 	}
 
@@ -626,8 +572,17 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				dive_bomber
+				air_warfare_theorist
+			}
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						air_warfare_theorist_scripted_effect = yes
+					}
+				}
 			}
 		}
 	}
@@ -924,10 +879,19 @@ characters={
 			allowed = {
 				original_tag = GER
 			}
+			available = { custom_trigger_tooltip = { tooltip = theorist_trigger_tt has_subdoctrine_in_track = infantry has_subdoctrine_in_track = armor has_subdoctrine_in_track = operations has_subdoctrine_in_track = capital_ships has_subdoctrine_in_track = screens } }
 			traits = {
-				naval_aviation_pioneer
+				naval_theorist
 			}
-			cost = 150
+			can_be_fired = no
+			on_add = {
+				owner = {
+					hidden_effect = {
+						naval_theorist_scripted_effect = yes
+					}
+				}
+			}
+			cost = 100
 		}
 	}
 

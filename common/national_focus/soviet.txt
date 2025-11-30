@@ -599,7 +599,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_intensify_pilot_training_program }
 
 		available = {
-			date > 1942.02.01
+			has_completed_focus = SOV_an_adaptable_army
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -710,7 +710,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_increase_aircraft_production }
 
 		available = {
-			date > 1942.02.01
+			has_completed_focus = SOV_an_adaptable_army
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -3058,7 +3058,7 @@ focus_tree = {
 			    sound_effect = psi_the_sacred_war
 			}
 			
-			set_technology = { deep_operations = 1 }
+			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 		} 
     }
 
@@ -3090,7 +3090,7 @@ focus_tree = {
 			custom_effect_tooltip = SOV_focus_complete_effect_tt
 			add_ideas = over_economic_mobilisation
 			
-			hidden_effect = { set_technology = { large_front_operations = 1 } set_capital = { state = 251 } }
+			hidden_effect = { set_sub_doctrine = peoples_war set_capital = { state = 251 } }
 		}
 	}
 
@@ -3105,7 +3105,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			date > 1941.11.1
+			date > 1942.1.1
 		}
 		
 		search_filters = {}
@@ -3122,6 +3122,8 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 		}
 	}
 
@@ -3170,7 +3172,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			set_technology = { vast_offensives = 1 }
+			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 		}
 	}
 
@@ -3294,7 +3296,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_swap_to_political_advisors }
 
 		available = {
-
+			date > 1942.11.1
 		}
 		
 		search_filters = {}
@@ -3311,6 +3313,8 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 		}
 	}
 
@@ -3326,6 +3330,10 @@ focus_tree = {
 
 		mutually_exclusive = { focus = SOV_keep_commissars_organization }
 		
+		available = {
+			date > 1942.11.1
+		}
+		
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
@@ -3340,6 +3348,8 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 		}
 	}
 
@@ -3359,7 +3369,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			set_technology = { continuous_offensive = 1 }
+			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 		}
 	}
 

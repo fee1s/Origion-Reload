@@ -162,12 +162,8 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 	
 	if = { # Франция не может посылать ленд-лиз до капитуляции
 		limit = {
-			AND = {
-				original_tag = FRA
-				FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
-			}
-			
-            FROM = { ORIGION_is_in_faction_with_allies = yes }
+            FROM { tag = FRA }
+			FRA = { NOT = { has_country_leader = { character = FRA_charles_de_gaulle ruling_only = yes } } }
         }
 		always = no
 	}
@@ -479,3 +475,8 @@ DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = { always = no }
 
 DIPLOMACY_REQUEST_EQUIPMENT_PURCHASE_ENABLE_TRIGGER = { always = no } 
 DIPLOMACY_REQUEST_INTERNATIONAL_MARKET_ACCESS_RIGHTS_ENABLE_TRIGGER = { always = no } 
+
+DIPLOMACY_NAVAL_BLOCKADE_ENABLE_TRIGGER = { always = no } 
+
+DIPLOMACY_AIR_BASE_ACCESS_ENABLE_TRIGGER = { always = no } 
+DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = { always = no } 

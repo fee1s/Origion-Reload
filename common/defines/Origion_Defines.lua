@@ -5,6 +5,8 @@ NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 -- WAS 48 | drastically cuts down on s
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14 -- WAS 60 	| less messages lying around at the top of your screen
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before a mission is removed from the interface after having failed or completed
 
+NDefines.NGame.ENERGY_RESOURCE = "oil"
+
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
 NDefines.NCountry.CONVOY_LENDLEASE_RANGE_FACTOR = 0 --1
@@ -70,6 +72,14 @@ NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель �
 NDefines.NMilitary.ACCLIMATIZATION_IN_COMBAT_SPEED_FACTOR = 1.5 -- Множитель получения акклиматизации от боев
 NDefines.NMilitary.ACCLIMATIZATION_SPEED_GAIN = 0.015 -- Общий множитель получения акклиматизации
 NDefines.NMilitary.ACCLIMATIZATION_LOSS_SPEED_FACTOR = 4.0 -- Скорость потери акклиматизации 
+
+NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0.0 -- Мастери с треньки, это не про Оригион
+NDefines.NDoctrines.MILITARY_ATTACHE_MASTERY_TRANSFER_FACTOR = 0.0 -- Мастери с атташе, это не про Оригион
+
+NDefines.NDoctrines.THEATER_COMMANDER_UNITS_MASTERY_GAIN_FACTOR_PER_SKILL = 0.0
+NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1
+
+NDefines.NDoctrines.NAVAL_MISSION_MASTERY_GAIN_FACTORS = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
 
 -- Воздух
 
@@ -322,6 +332,8 @@ NDefines.NBuildings.NAVALBASE_REPAIR_MULT = 0.15; -- Множитель почи
 
 NDefines.NProduction.BASE_ENERGY_COST = 0.00001; -- Самый полезный ресурс в Оригионе
 NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.000001;
+NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 1000;
+NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 0.0;
 
 -- Дипломатия
 
@@ -344,6 +356,9 @@ NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0
 NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0
 NDefines.NCountry.INDUSTRY_SCORE_MULTIPLIER = 0
 NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0
+
+NDefines.NFactions.FACTION_INITIATIVE_CHANGE_RULE_COST = 9999
+NDefines.NFactions.FACTION_DOCTRINE_SHARING_UNLOCK_COST = 9999
 
 -- иишник
 
