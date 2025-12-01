@@ -270,7 +270,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 30
+			army_experience = 10
 			add_tech_bonus = {
 				name = RAJ_british_army_support
 				bonus = 1.0
@@ -310,7 +310,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 		custom_effect_tooltip = RAJ_create_unit_red_eagles_tt
-		army_experience = 50
+		army_experience = 25
 			hidden_effect = {
 				division_template = {
 					name = "Red Eagles Division"
@@ -450,12 +450,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = RAJ_lessons_of_the_great_war
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
+			army_experience = 10
 		}
 	}
 
@@ -492,7 +487,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 100
-			army_experience = 200
+			army_experience = 150
 		}
 	}
 
@@ -561,7 +556,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			add_ideas = RAJ_lions_of_the_great_war
-			army_experience = 50
+			army_experience = 10
 		}
 	}
 
@@ -592,7 +587,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			army_experience = 50
+			army_experience = 15
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -833,7 +828,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 75
+			army_experience = 25
+			air_experience = 100
 		}
 	}
 
@@ -1211,7 +1207,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			navy_experience = 50
+			navy_experience = 150
 			random_owned_controlled_state = {
 				prioritize = { 429 }
 				limit = {

@@ -707,7 +707,7 @@
         search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			army_experience = 15
+			army_experience = 10
 			swap_ideas = {
 				remove_idea = SAF_ossewabrandwag
 				add_idea = SAF_ossewabrandwag_fascism
@@ -1754,18 +1754,6 @@
 
 		completion_reward = {
 			add_ideas = SAF_soviet_advisers
-			add_doctrine_cost_reduction = {
-				name = SAF_invite_soviet_advisers
-				cost_reduction = 0.25
-				uses = 2
-				category = cat_mass_assault
-			}
-			add_doctrine_cost_reduction = {
-				name = SAF_invite_soviet_advisers
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
 		}
 	}
 	focus = {
@@ -2434,7 +2422,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {	
-			army_experience = 350
+			army_experience = 150
 		}
 	}
 
@@ -2775,7 +2763,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		complete_tooltip = {
-			air_experience = 25
+			air_experience = 100
 			random_state = {				
 				limit = {
 					has_state_flag = SAF_commit_to_the_five_year_plan_AB
@@ -2786,16 +2774,10 @@
 					instant_build = yes
 				}
 			}
-			add_doctrine_cost_reduction = {
-				name = SAF_commit_to_the_five_year_plan
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
 		}
 
 		completion_reward = {
-			air_experience = 25
+			air_experience = 100
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -2809,12 +2791,6 @@
 					instant_build = yes
 				}
 				set_state_flag = SAF_commit_to_the_five_year_plan_AB
-			}
-			add_doctrine_cost_reduction = {
-				name = SAF_commit_to_the_five_year_plan
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
 			}
 			894 = {
 				add_extra_state_shared_building_slots = 1
@@ -2951,12 +2927,6 @@
 
 		completion_reward = {
 			air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = SAF_perfect_the_cab_rank_technique
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_battlefield_support
-			}
 			895 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -3087,12 +3057,6 @@
 
 		completion_reward = {
 			air_experience = 35
-			add_doctrine_cost_reduction = {
-				name = SAF_retain_experienced_pilots
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
 			895 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -3135,7 +3099,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		complete_tooltip = {
-			navy_experience = 25
+			navy_experience = 150
 			random_state = {
 				limit = {
 					has_state_flag = SAF_seaward_defence_force_DY
@@ -3150,7 +3114,7 @@
 		}
 
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 150
 			random_owned_controlled_state = {
 				prioritize = { 681 719 }
 				limit = {
@@ -3207,12 +3171,6 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = SAF_protect_the_trade
-				cost_reduction = 0.5
-				uses = 1
-				category = convoy_defense_tree
-			}
 			681 = {
 				add_resource = {
 					type = steel
@@ -3254,12 +3212,6 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = SAF_disrupt_the_trade
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_trade_interdiction
-			}
 			681 = {
 				add_resource = {
 					type = steel
@@ -3481,12 +3433,6 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = SAF_prepare_overseas_offensive
-				cost_reduction = 0.5
-				uses = 1
-				category = convoy_defense_tree
-			}
 			add_tech_bonus = {
 				name = SAF_prepare_overseas_offensive
 				bonus = 1.0

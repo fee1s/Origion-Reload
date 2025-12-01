@@ -5,7 +5,9 @@ NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 -- WAS 48 | drastically cuts down on s
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14 -- WAS 60 	| less messages lying around at the top of your screen
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before a mission is removed from the interface after having failed or completed
 
-NDefines.NGame.ENERGY_RESOURCE = "oil"
+NDefines.NGame.ENERGY_RESOURCE = "oil" -- Заменен уголь на нефть, чтобы не генерить +1 ошибку из-за удаления угля
+
+NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0.0 -- Шизо-дефайн, связанный с побережьем, см. ориг файлы Хойки
 
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
@@ -15,7 +17,8 @@ NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100 --200
 
 NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 30
 
---Army
+-- Армейские
+
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 
@@ -50,6 +53,11 @@ NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0 -- Cтоимость трейтов генералов
+
+NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_MULTIPLIER = 40.0 -- Флот ломает укрепления (ТЕСТОВЫЙ ДЕФАЙН 1.17!)
+NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_CRIT_CHANCE_FACTOR = 0.0025
+
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0 -- Возвращаем абузный стак плана, как и был на версии 1.16.10
 
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.175 -- Маленькая река
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая река
@@ -92,7 +100,7 @@ NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.9 -- бафф морбобров п
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 2.4 -- множитель получаемого опыта авиации (всего) by feels: работает по выеб*нному, судя по всему, скейлит опыт именно авиакрыльев
 
-NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 14.0 -- множитель получаемого опыта от тренировки, увеличено в два раза в связи с увеличением стоимости авиации, 06.08.25
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 0.0 -- множитель получаемого опыта от тренировки, увеличено в два раза в связи с увеличением стоимости авиации, 06.08.25 -> уменьшено до нуля при переходе на версию 1.17, 01.12.25
 NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самолетики не могут получить ранение на тренировке
 
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.11 -- бафф касых по дамагу
@@ -157,6 +165,9 @@ NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0;
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0;
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0;
 
+NDefines.NMilitary.LAND_EQUIPMENT_BASE_COST = 1;
+NDefines.NMilitary.LAND_EQUIPMENT_RAMP_COST = 0;
+
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999;
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999;
 NDefines.NMilitary.MAX_AIR_EXPERIENCE  = 9999;
@@ -175,6 +186,8 @@ NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 1;
 NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.65 -- 0.5
 NDefines.NAir.FUEL_COST_MULT = 0.175 -- 0.35
 NDefines.NNavy.FUEL_COST_MULT = 0.05 -- 0.1
+
+NDefines.NMilitary.FUEL_PENALTY_START_RATIO = 0 -- Избавляемся от безумного штрафа на армию
 
 -- Флотские дефайны
 
@@ -250,7 +263,7 @@ NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.5
 NDefines.NNavy.HEAVY_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.05 -- vanilla was 0.1 -- heavy gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 NDefines.NNavy.LIGHT_GUN_ATTACK_TO_SHORE_BOMBARDMENT = 0.025 -- vanilla was 0.05 -- light gun attack value is divided by this value * 100 and added to shore bombardment modifier 
 
---урон и криты от процента пробоя 
+-- Урон и криты от процента пробоя (глобал патч, 31.01.25)
 
 NDefines.NNavy.NAVY_PIERCING_THRESHOLDS = {
 	2.00,
@@ -308,43 +321,39 @@ NDefines.NNavy.CONVOY_EFFICIENCY_REGAIN_BASE_SPEED = 0.05
 
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 1.5	-- Перемножает остальные статы на детект подлодок, скейлит детекд от кол-во самолетов в регионе. (ванила 1.0)
 
+-- Новые дефайны флота после выхода 1.17 версии (в процессе баланса)
 
--- дефайны на флот с длс
-
-NDefines.NNavy.NAVAL_BASE_DOMINANCE_FACTOR = 0.00 -- удалено превосходство за новые мор.базы
+NDefines.NNavy.NAVAL_BASE_DOMINANCE_FACTOR = 0.00 -- Удалено превосходство за новые мор. базы (не используются)
 NDefines.NNavy.NAVAL_HEADQUARTERS_FIRST_ADJACENT_FACTOR = 0.0
 NDefines.NNavy.NAVAL_HEADQUARTERS_SECOND_ADJACENT_FACTOR = 0.00
 
-NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT_MAX_RATIO = 1.0 --The ratio which gives the max possible gain of positioning bonus from dominance in region of combat (e.g. to get max bonus you need 'dominance threshold * 2.0' dominance in the region)
-NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT = 1.00 --Увеличение позиционирования при максимальном соотношении (полный контроль и доминирование >= ЭФФЕКТ ДОМИНИРОВАНИЯ НА ПОЗИЦИОНИРОВАНИЕ ДЛЯ МАКСИМАЛЬНОГО СООТНОШЕНИЯ СОПРОВОЖДЕНИЯ КОНВОЯ, умноженное на доминирование конкурентов)
+NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_TARGET_SCALE = 10 -- Шансы попадания по разным линия и конкретным типам кораблей (новый дефайн 1.17)
+NDefines.NNavy.NAVAL_COMBAT_AIR_SCREEN_TARGET_SCALE = 20 
+NDefines.NNavy.NAVAL_COMBAT_AIR_CAPITAL_TARGET_SCALE = 200
+NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCALE = 40
 
-NDefines.NNavy.SUPPORT_SHIP_RECOVERY_BASE_STRENGTH_FACTOR = 0.00
+NDefines.NNavy.NAVAL_DOMINANCE_SPOTTING_BONUS = 0.0 -- Оригион воздержится от бонусов за доминацию в регионах :D
+NDefines.NNavy.NAVAL_DOMINANCE_ORG_RECOVERY = 0.0
+NDefines.NNavy.NAVAL_DOMINANCE_SHIP_RECOVERY_CHANCE = 0.0
+NDefines.NNavy.NAVAL_DOMINANCE_MINES_PLANTING_BONUS = 0.0
+NDefines.NNavy.NAVAL_DOMINANCE_MINES_SWEEPING_BONUS = 0.0
+NDefines.NNavy.NAVAL_DOMINANCE_CHANCE_OF_ACCIDENT_REDUCTION = 0.0
 
-NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 7 --старое время дропа
-NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 0 --убраны лимиты на дропы
-NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 1 --стартовое количество доступных дропов
-NDefines.NNavy.NAVY_USE_HOME_BASE_FOR_RANGE = false
+NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT_MAX_RATIO = 1.0 -- The ratio which gives the max possible gain of positioning bonus from dominance in region of combat (e.g. to get max bonus you need 'dominance threshold * 2.0' dominance in the region)
+NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT = 0.00001 -- Увеличение позиционирования при максимальном соотношении (полный контроль и доминирование >= ЭФФЕКТ ДОМИНИРОВАНИЯ НА ПОЗИЦИОНИРОВАНИЕ ДЛЯ МАКСИМАЛЬНОГО СООТНОШЕНИЯ СОПРОВОЖДЕНИЯ КОНВОЯ, умноженное на доминирование конкурентов)
 
+NDefines.NNavy.AIR_BASE_DOMINANCE_FACTOR = 0.0 -- Увеличение доминации за авиа-базы в регионе
+NDefines.NNavy.RADAR_DOMINANCE_FACTOR = 0.0 -- Увеличение доминации за радары в регионе
 
-NDefines.NCountry.surrender_limit_reduction_per_collaboration = 0.3
-NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0.0
-NDefines.NProduction.BASE_FACTORY_SPEED = 5
-NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.50
-NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 2.5
-NDefines.NProduction.POWERED_FACTORY_SPEED = 0
-NDefines.NProduction.POWERED_FACTORY_SPEED_MIL = 0
-NDefines.NProduction.POWERED_FACTORY_SPEED_NAV = 0
+NDefines.NNavy.TRAINING_DAILY_COUNTRY_EXP_FACTOR = 0 -- Морской опыт только от теоретика (ТЕСТОВЫЙ ДЕФАЙН 1.17)
+NDefines.NNavy.MISSION_DAILY_COUNTRY_EXP_FACTOR = 0 -- Морской опыт только от теоретика (ТЕСТОВЫЙ ДЕФАЙН 1.17)
 
-NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_MULTIPLIER = 40.0,        -- Factor on shore bombardment damage purposes, for collateral damage.
-NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_CRIT_CHANCE_FACTOR = 0.0025,        -- Chance for crit (ie, high single building damage) to occur.
+NDefines.NNavy.SUPPORT_SHIP_RECOVERY_BASE_STRENGTH_FACTOR = 0.00 -- Корабль поддержки, удалено
 
-NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0
-NDefines.NMilitary.STRATEGIC_SPEED_RAIL_BASE = 15.0
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 7 -- Возвращаемся к старому значению (1.17 -> 1.16.10)
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 0 -- Убраны лимиты на дропы (не совсем так, см. систему в игре)
+NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 1 -- Стартовое количество доступных дропов (кол-во дивок на один дроп, искл. Японский бафф из фокуса)
 
-
-NDefines.NAir.CARRIER_COMBAT_DAMAGE_STATS_MULTIPLIER = 0.0	--филс, разберись
-NDefines.NAir.CARRIER_PERCENTAGE_DEFEND = 0.0
-NDefines.NAir.SUBMARINE_CARRIER_SIZE_STAT_INCREMENT = 0
 -- Продакшен и постройки
 
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0.0            -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
@@ -368,6 +377,14 @@ NDefines.NProduction.BASE_ENERGY_COST = 0.00001; -- Самый полезный 
 NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.000001;
 NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 1000;
 NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 1.0;
+
+NDefines.NProduction.BASE_FACTORY_SPEED = 5 -- Добавлено в наши файлы, т.к Парадоксы любят менять выпуск молотков
+NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.50
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 2.5
+
+NDefines.NProduction.POWERED_FACTORY_SPEED = 5 -- Производительность военки / фабрики, будучи заправленной углем
+NDefines.NProduction.POWERED_FACTORY_SPEED_MIL = 4.5
+NDefines.NProduction.POWERED_FACTORY_SPEED_NAV = 2.5
 
 -- Дипломатия
 
@@ -457,7 +474,9 @@ NDefines_Graphics.NGraphics.ROOT_FRONT_OFFSET = 2
 
 NDefines.NOperatives.AGENCY_CREATION_DAYS = 30
 NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 30
-NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0
+NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 9999
+
+NDefines.NCountry.surrender_limit_reduction_per_collaboration = 0.3 -- Лимит капитуляции из-за коллабы (используется Гермой над Совком, т.к со старта вписана коллаба)
 
 NDefines.NIntel.ARMY_INTEL_COMBAT_BONUS_MAX_BONUS = 0.0
 NDefines.NIntel.NAVAL_SUPREMACY_INTEL_LOW = 0.0

@@ -449,7 +449,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
 		completion_reward = {
-			air_experience = 250	
+			air_experience = 100
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_transpolar_flights
@@ -642,10 +642,6 @@ focus_tree = {
 			    SOV_soviet_airforce_air_weather_penalty = -0.1
 				tooltip = air_weather_penalty_tt
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			air_experience = 100
 		}
 	}
 
@@ -667,10 +663,6 @@ focus_tree = {
 			    SOV_soviet_airforce_air_weather_penalty = -0.1
 				tooltip = air_weather_penalty_tt
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			air_experience = 25
 		}
 	}
 
@@ -729,9 +721,6 @@ focus_tree = {
 			    SOV_soviet_airforce_air_weather_penalty = -0.1
 				tooltip = air_weather_penalty_tt
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			air_experience = 50
 		}
 	}
 
@@ -1263,7 +1252,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
-            army_experience = 400
+            army_experience = 150
+			navy_experience = 150
 		}
 	}
 
@@ -3156,10 +3146,6 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_the_red_army_army_org_factor = 0.05
 				tooltip = army_org_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_experience_gain_army_factor = 0.1
-				tooltip = experience_gain_army_factor_tt
 			}
 			add_to_variable = { 
 			    SOV_the_red_army_experience_loss_factor = -0.25

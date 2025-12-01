@@ -151,7 +151,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			add_political_power = -75
-			navy_experience = 100
+			navy_experience = 25
 			JAP = {
 				transfer_state = 286
 				transfer_state = 741
@@ -1413,7 +1413,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			army_experience = 25
+			army_experience = 150
 			custom_effect_tooltip = JAP_army_expansion_law_tt
 			add_to_variable = {JAP_army_conscription_factor = 0.1}
 		}
@@ -1444,7 +1444,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 50
+			army_experience = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
@@ -1523,7 +1523,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 50
+			army_experience = 25
 			custom_effect_tooltip = generic_skip_one_line_tt 
 			add_tech_bonus = {
 				name = JAP_modern_artillery
@@ -1555,7 +1555,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			army_experience = 50
+			army_experience = 10
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = JAP_armored_divisions
@@ -1650,7 +1650,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			army_experience = 50
+			army_experience = 15
 			custom_effect_tooltip = JAP_disciplined_army_tt
 			add_to_variable = {JAP_army_org_factor = 0.15}
 			random_owned_controlled_state = {
@@ -1695,7 +1695,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			army_experience = 50
+			army_experience = 15
 			custom_effect_tooltip = JAP_fanatism_army_tt
 			add_to_variable = {JAP_army_attack_factor = 0.05}
 			add_to_variable = {JAP_army_defence_factor = 0.05}
@@ -1737,7 +1737,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		completion_reward = {
-			air_experience = 300
+			air_experience = 100
 		}
 	}
 
@@ -1990,6 +1990,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			navy_experience = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT

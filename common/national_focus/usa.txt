@@ -462,8 +462,8 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			navy_experience = 50
-			army_experience = 50
+			navy_experience = 10
+			army_experience = 10
 			air_experience = 10
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_core_state = {
@@ -712,24 +712,9 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						has_idea = disarmed_nation
-						has_idea = volunteer_only
-					}
-				}
-				add_ideas = limited_conscription
-			}
-			else = {
-				add_political_power = 150
-			}
-			if = {
-				limit = {
-					has_war_support < 0.1
-				}
-				set_war_support = 0.1
-			}
+			army_experience = 150
+			
+			hidden_effect = { add_ideas = { limited_conscription } }
 		}
 	}
 	focus = {
@@ -791,8 +776,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			army_experience = 300
-			air_experience = 50
+			army_experience = 25
 		}
 	}
 	focus = {
@@ -826,12 +810,6 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				add_potential_special_forces_tree = yes
-				add_doctrine_cost_reduction = {
-					name = USA_airborne_divisions
-					cost_reduction = 0.5
-					uses = 2
-					category = special_forces_doctrine
-				}
 			}
 		}
 	}
@@ -1100,7 +1078,7 @@ focus_tree = {
 		available = { has_completed_focus = USA_agricultural_adjustment_act }
 		
 		completion_reward = {
-			air_experience = 25
+			air_experience = 100
 			custom_effect_tooltip = USA_war_departament_intro
 			custom_effect_tooltip = USA_air_cost_1_tt
 			hidden_effect = {add_ideas = USA_hidden_air_cost_1}
@@ -1265,12 +1243,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = USA_us_army_airforce
-				uses = 2
-				cost_reduction = 0.5
-				category = air_doctrine
-			}
+			air_experience = 25
 		}
 	}
 	focus = {
@@ -1392,7 +1365,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 100
+			navy_experience = 150
 			custom_effect_tooltip = USA_war_departament_intro
 			custom_effect_tooltip = USA_bureau_cost_tt
 			

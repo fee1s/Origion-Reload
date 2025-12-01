@@ -1064,7 +1064,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			army_experience = 450
+			army_experience = 150
 		}
 	}
 	
@@ -1290,7 +1290,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			army_experience = 75
+			army_experience = 10
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -1462,7 +1462,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			air_experience = 25
+			air_experience = 10
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -1499,7 +1499,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			air_experience = 25
+			air_experience = 10
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_dive_bombers_tt
 			hidden_effect = { 
@@ -1543,7 +1543,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			air_experience = 75
+			air_experience = 25
 		}
 	}
 
@@ -2047,7 +2047,6 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.1
 			add_political_power = 75
-			army_experience = 10
 			add_named_threat = {
 				threat = 10
 				name = germany.4.t
