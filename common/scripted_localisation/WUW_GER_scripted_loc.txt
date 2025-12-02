@@ -1,53 +1,4 @@
 defined_text = {
-	name = GetCGLevelText
-	text = {
-		trigger = {
-			OR = {
-				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
-			}
-			check_variable = { var = GER_industrial_consumer_goods_factor value = 1 compare = greater_than_or_equals }
-		}
-		localization_key = GER_max_CG_tt
-	}
-	text = {
-		trigger = {
-			OR = {
-				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
-			}
-			check_variable = { GER_industrial_consumer_goods_factor < 1 }
-		}
-		localization_key = GER_increasing_cg_tt 
-	}
-}
-
-defined_text = {
-	name = GetCGPenaltiesText
-	text = {
-		trigger = {
-			OR = {
-				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
-			}
-			check_variable = { GER_industrial_consumer_goods_factor < 0.5 }
-		}
-		localization_key = GER_CG_penalties_may_apply
-	}
-	text = {
-		trigger = {
-			OR = {
-				has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
-			}
-			check_variable = { var = GER_industrial_consumer_goods_factor value = 0.49 compare = greater_than_or_equals }
-			NOT = { check_variable = { GER_industrial_consumer_goods_expected_value > 0.01 }}
-		}
-		localization_key = GER_CG_penalties_warning 
-	}
-}
-
-defined_text = {
 	name = GetSubmarineMaxSpeed
 	text = {
 		trigger = {
@@ -77,34 +28,6 @@ defined_text = {
 	}
 	text = {
 		localization_key = generic_null
-	}
-}
-
-defined_text = {
-	name = GetIndustrialModifier
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-		}
-		localization_key = GER_mefo_bills_modifier 
-	}
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
-		}
-		localization_key = GER_economy_of_conquest_modifier 
-	}
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = GER_recovering_economy_modifier }
-		}
-		localization_key = GER_recovering_economy_modifier 
-	}
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = GER_wirtschaftswunder_modifier }
-		}
-		localization_key = GER_wirtschaftswunder_modifier 
 	}
 }
 
@@ -465,23 +388,6 @@ defined_text = { #For Intrigue event amongst the Industrialists (Todt, Speer, GÃ
 		localization_key = GER_inner_circle_industrial_reichsleiter_all 
 	}
 }
-
-defined_text = {
-	name = GetMilitaryProductionModifierName
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-		}
-		localization_key = GER_mefo_bills
-	}
-	text = {
-		trigger = {
-			has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
-		}
-		localization_key = GER_economy_of_conquest_modifier 
-	}
-}
-
 
 ### INTEGRATE PUPPET ECONOMIES (Fascist)
 defined_text = {
