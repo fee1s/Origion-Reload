@@ -160,7 +160,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = SAF_guy_hallifax
+			idea_token = SAF_pierre_van_ryneveld
 			ledger = army
 			allowed = {
 				original_tag = SAF
@@ -175,12 +175,12 @@ characters={
 		}
 	}
 
-	SAF_guy_hallifax={
-		name=SAF_guy_hallifax
+	SAF_william_henry_everett={
+		name=SAF_william_henry_everett
 		portraits={
 			army={
-				large="GFX_SAF_guy_halifax"
-				small=GFX_portrait_SAF_guy_hallifax_small
+				large="GFX_portrait_AFG_mahmud_tarzi"
+				small=GFX_portrait_AFG_mahmud_tarzi_small
 			}
 		}
 		corps_commander={
@@ -194,7 +194,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = SAF_guy_hallifax
+			idea_token = SAF_william_henry_everett
 			ledger = army
 			allowed = {
 				original_tag = SAF
@@ -257,7 +257,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 100
+			cost = 150
 			slot = theorist
 			idea_token = SAF_j_f_van_rensburg
 			ledger = army
@@ -367,18 +367,6 @@ characters={
 				small=GFX_portrait_SAF_guy_hallifax_small
 			}
 		}
-		advisor = {
-			cost = 150
-			slot = theorist
-			idea_token = guy_hallifax
-			ledger = navy
-			allowed = {
-				original_tag = SAF
-			}
-			traits = {
-				naval_aviation_pioneer
-			}
-		}
 		navy_leader={
 			traits={ blockade_runner superior_tactician ironside }
 			skill=4
@@ -445,7 +433,7 @@ characters={
 					}
 				}
 			}
-			cost = 100
+			cost = 150
 		}
 		navy_leader = {
 			traits={ fleet_protector superior_tactician }
@@ -562,7 +550,7 @@ characters={
 					}
 				}
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}

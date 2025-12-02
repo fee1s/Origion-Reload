@@ -196,6 +196,13 @@ mass_assault = {
 	minimum_training_level = -0.1
 	attrition = -0.1
     enable_tactic = tactic_infantry_charge
+	military_police = {
+		battalion_mult = {
+			category = category_front_line
+			default_morale = 0.10
+			add = yes
+		}
+	}
     
 
     milestones = {

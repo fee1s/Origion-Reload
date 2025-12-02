@@ -421,14 +421,11 @@ news_event = { # напряга за конец аннекса китая в н�
 	mean_time_to_happen = { days = 1 }
 }
 
-news_event = { # авиационный опыт за Испанию
+news_event = { # авиационный опыт за Испанию (не используется)
 	id = origion.9
 	hidden = yes
-	major = yes
-	fire_only_once = yes
-	trigger = {
-		date > 1936.08.01
-	}
+	is_triggered_only = yes
+
 	immediate = {
 		GER = {
 			air_experience = 300

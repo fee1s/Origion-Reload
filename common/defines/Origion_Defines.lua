@@ -8,6 +8,7 @@ NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 3 -- Default days before 
 NDefines.NGame.ENERGY_RESOURCE = "oil" -- Заменен уголь на нефть, чтобы не генерить +1 ошибку из-за удаления угля
 
 NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0.0 -- Шизо-дефайн, связанный с побережьем, см. ориг файлы Хойки
+NDefines.NCountry.NAVY_USE_HOME_BASE_FOR_RANGE = false -- Флот 1.16.10
 
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
