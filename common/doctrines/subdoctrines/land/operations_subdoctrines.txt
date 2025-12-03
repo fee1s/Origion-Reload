@@ -3,7 +3,15 @@ mobile_infantry = {
     name = SUBDOCTRINE_MOBILE_INFANTRY
     description = SUBDOCTRINE_MOBILE_INFANTRY_DESC
     icon = GFX_doctrine_mobile_infantry_medium
+	
+	available = { 
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
 
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
+	}
+	
     xp_cost = 0
     xp_type = army
 	
@@ -126,7 +134,15 @@ armored_infantry_support = {
 
     xp_cost = 0
     xp_type = army
+	
+	available = { 
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
 
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
+	}
+	
 	visible = { has_doctrine = new_mobile_warfare }
 
     ai_will_do = {
@@ -202,7 +218,15 @@ mission_type_tactics = {
 
     xp_cost = 0
     xp_type = army
+	
+	available = { 
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
 
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
+	}
+	
     ai_will_do = {
 
         base = 1
@@ -300,7 +324,15 @@ expeditionary_warfare = {
     xp_type = army
 
 	visible = { has_doctrine = superior_firepower has_dlc = "No Compromise, No Surrender" }
+	
+	available = { 
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
 
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
+	}
+	
     ai_will_do = {
         base = 1
     }
@@ -416,7 +448,15 @@ armored_cavalry = {
     xp_type = army
 
 	visible = { has_doctrine = grand_battleplan }
+	
+	available = { 
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
 
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
+	}
+	
     ai_will_do = {
 
         base = 1
@@ -568,7 +608,15 @@ great_war_infantry = {
 
     xp_cost = 0
     xp_type = army
+	
+	available = { 
+		if = {
+			limit = { has_country_flag = theorist_picked_flag }
 
+			custom_trigger_tooltip = { tooltip = doctrine_theorist_trigger_tt always = no }
+		}
+	}
+	
 	visible = { has_doctrine = grand_battleplan }
 
     ai_will_do = {
