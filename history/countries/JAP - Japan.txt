@@ -27,10 +27,7 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-	JAP_zaibatsus
-	JAP_militarism
 	JAP_close_economi
-	JAP_emperor_army
 }
 
 #JAP_emperor_army_dm
@@ -58,6 +55,12 @@ set_variable = {JAP_capacity_factory = 0.05}
 set_variable = {JAP_production_speed_arms_factory_factor = 0.05}
 set_variable = {JAP_production_speed_industrial_complex_factor = 0.05}
 add_dynamic_modifier = { modifier = JAP_zaibatsu_dm }
+
+#JAP_militarism_dm (feels, 03.12.25)
+set_variable = {JAP_militarism_war_support_factor = 0.2}
+set_variable = {JAP_militarism_mobilization_laws_cost_factor = -0.25}
+set_variable = {JAP_militarism_surrender_limit = 0.1}
+add_dynamic_modifier = { modifier = JAP_militarism_dm }
 
 set_power_balance = {
 	id = JAP_power_balance

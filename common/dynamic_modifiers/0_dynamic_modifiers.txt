@@ -1228,6 +1228,27 @@ JAP_emperor_army_dm = {
 	conscription_factor = JAP_army_conscription_factor
 	army_attack_factor = JAP_army_attack_factor
 	army_defence_factor = JAP_army_defence_factor
+	sortie_efficiency = JAP_sortie_efficiency
+	naval_torpedo_screen_penetration_factor = JAP_naval_torpedo_screen_penetration_factor
+}
+
+JAP_militarism_dm = {
+	enable = { always = yes }
+	icon = GFX_idea_warrior_traditions_idea
+	
+	war_support_factor = JAP_militarism_war_support_factor
+	mobilization_laws_cost_factor = JAP_militarism_mobilization_laws_cost_factor
+	surrender_limit = JAP_militarism_surrender_limit
+	
+	research_speed_factor = JAP_militarism_research_speed_factor
+	
+	conscription = JAP_militarism_conscription
+	party_popularity_stability_factor = JAP_militarism_party_popularity_stability_factor
+	weekly_casualties_war_support = JAP_militarism_weekly_casualties_war_support
+	weekly_convoys_war_support = JAP_militarism_weekly_convoys_war_support
+	weekly_bombing_war_support = JAP_militarism_weekly_bombing_war_support
+	war_support_weekly = JAP_militarism_war_support_weekly
+	stability_weekly = JAP_militarism_stability_weekly
 }
 
 JAP_stagnation_dm = {
