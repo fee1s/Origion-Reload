@@ -43,19 +43,6 @@ ITA_fiat_organization = {
 	}
 	
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			FROM = {
-				controls_state = 158 #PIEMONT (Torino)
-			}
-			ITA_is_northern_designer = yes
-		}
 		IF = {
 			limit = { FROM = { original_tag = BUL } }
 			BUL = { has_completed_focus = BUL_contract_foreign_companies }
@@ -85,20 +72,6 @@ ITA_crda_organization = {
 	allowed = {	
 		tag = ITA 
 	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			FROM = { controls_state = 736 } #LITORALE (Trieste) 
-			ITA_is_northern_designer = yes
-		}
-	}
 }
 
 ITA_cantiere_navale_di_ancona_organization = {
@@ -107,13 +80,6 @@ ITA_cantiere_navale_di_ancona_organization = {
 	
 	allowed = {	
 		tag = ITA 
-	}
-	
-	available = {
-		FROM = {
-			controls_state = 157 # ABRUZZO (Ancona)		
-		}
-		ITA_is_southern_designer = yes
 	}
 }
 
@@ -209,22 +175,6 @@ ITA_beretta_organization = {
 			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
 		}
 	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			FROM = {
-				controls_state = 159 #LOMBARDIA	
-			}
-			ITA_is_northern_designer = yes
-		}
-	}
 }
 
 ITA_lancia_organization = {
@@ -242,18 +192,6 @@ ITA_lancia_organization = {
 	}
 	
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			FROM = { controls_state = 159 } #LOMBARDIA
-			ITA_is_northern_designer = yes
-		}
-		
 		IF = {
 			limit = { FROM = { original_tag = BUL } }
 			BUL = { has_completed_focus = BUL_contract_foreign_companies }
@@ -272,44 +210,5 @@ ITA_breda_organization = {
 				has_dlc = "By Blood Alone"
 			}
 		}
-	}
-
-	visible = {
-		IF = {
-			limit = { FROM = { original_tag = ETH } }
-			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
-		}
-	}
-	
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ITA } }
-			}
-			FROM = { NOT = { has_war_with = ITA } }
-		}
-		ELSE = { #original_tag = ITA
-			FROM = {
-				controls_state = 159 #LOMBARDIA
-			}
-			ITA_is_northern_designer = yes
-		}
-	}
-}
-
-ITA_brescia_arsenal_organization = {
-	include = generic_support_equipment_organization
-	icon = GFX_idea_ITA_brescia_arsenal
-	
-	allowed = {	 
-		tag = ITA
-	}
-	
-	available = {
-		FROM = {
-			controls_state = 159 #LOMBARDIA
-		}
-		ITA_is_northern_designer = yes
 	}
 }
