@@ -282,40 +282,6 @@ recruit_character = GER_alexander_von_falkenhausen #Not visible unless recalled 
 
 if = {
 	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Otto Skorzeny"
-		GFX = GFX_portrait_otto_skorenzy
-		traits = { operative_commando }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { GER }
-		gender = male
-	}
-
-	create_operative_leader = {
-		name = "Nikolaus Ritter"
-		GFX = GFX_portrait_nikolaus_ritter
-		traits = { operative_safe_cracker }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { GER }
-		gender = male
-	}
-	create_operative_leader = {
-		name = "Eleysa Bazna"
-		GFX = GFX_portrait_eleysa_bazna
-		traits = { operative_infiltrator }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { GER TUR }
-		gender = male
-	}
-}
-
-if = {
-	limit = {
 		not = { has_dlc = "Man the Guns" }
 	}
 	### Ship Variants ###

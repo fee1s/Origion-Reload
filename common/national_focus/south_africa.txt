@@ -675,27 +675,6 @@
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.65
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.65
-					}
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
 		
 		bypass = {
 
@@ -891,28 +870,6 @@
 				factor = 10 #nopenopnenope
 			}
 		}
-
-		available = {
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.75
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.75
-					}
-				}
-			}
-			NOT = { has_war_together_with = ENG }
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
-		}
 		
 		bypass = {
 
@@ -954,29 +911,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			fascism > 0.25
-			controls_state = 541
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.80
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.80
-					}
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
 		bypass = {
@@ -1270,38 +1204,6 @@
 
 		ai_will_do = {
 			factor = 30
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = scw_in_progress_tt
-				AND = {
-					has_global_flag = spanish_civil_war
-					NOT = { has_global_flag = scw_over }
-				}
-			}
-			OR = {
-				has_government = communism
-				communism > 0.1
-			}
-			OR = {
-				is_subject = no
-				if = {
-					limit = { NOT = { has_government = fascism } }
-					AND = {
-						has_autonomy_state = autonomy_dominion
-						compare_autonomy_progress_ratio > 0.65
-					}
-				}
-				if = {
-					limit = { has_government = fascism } 
-					AND = {
-						has_autonomy_state = autonomy_satellite
-						compare_autonomy_progress_ratio > 0.65
-					}
-				}
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
 		}
 		
 		bypass = {
