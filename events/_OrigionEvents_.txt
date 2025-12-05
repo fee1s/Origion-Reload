@@ -1064,3 +1064,32 @@ news_event = { # начало вмв
 		name = origion.32.a
 	}
 }
+
+news_event = { # Юбилей Красной армии (Красной Армии - слава)
+	id = origion.33
+	title = origion.33.t
+	desc = origion.33.d
+	picture = GFX_news_event_glory
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+	
+	immediate = { hidden_effect = { sound_effect = psi_glory } }
+	
+ 	option = {
+		name = origion.33.a
+		trigger = {
+			ORIGION_is_in_faction_with_axis = yes
+		}
+	}
+	
+	option = {
+		name = origion.33.b
+		trigger = {
+			ORIGION_is_in_faction_with_united_nations = yes
+		}
+	}
+}

@@ -3,7 +3,7 @@ on_actions = {
 		effect ={ 
 			if = { 
 				limit = {
-					off_сhannel_coastline = yes
+					off_channel_coastline = yes
 				} 
 				teleport_armies = {
 					limit = {
@@ -20,7 +20,7 @@ on_actions = {
 					} 
 				}
 				PREV = { 
-					if = { limit = { OR = { off_сhannel_coastline = yes } } transfer_state_to = ENG }  
+					if = { limit = { OR = { off_channel_coastline = yes } } transfer_state_to = ENG }  
 				}				
 			}
 			if = { 
@@ -449,7 +449,7 @@ on_actions = {
 			every_state = {
 			    limit = {
 					OR = {
-					    off_сhannel_coastline = yes
+					    off_channel_coastline = yes
 					    italian_coastline_above_naples = yes
 					}
 				}

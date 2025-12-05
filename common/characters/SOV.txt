@@ -1035,14 +1035,6 @@ characters = {
 				small = "GFX_idea_mikhail_kalinin"
 			}
 		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
-		}
 
 		advisor = {
 			slot = political_advisor
@@ -1076,14 +1068,6 @@ characters = {
 			army = {
 				small = "GFX_idea_nikita_khrushchev"
 			}
-		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
 		}
 
 		advisor = {
@@ -1414,18 +1398,6 @@ characters = {
 				small = "GFX_idea_SOV_lev_kamenev_imprisoned"
 			}
 		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
-			}
-		}
 	}
 
 	SOV_martemyan_ryutin = {
@@ -1546,46 +1518,6 @@ characters = {
 			army = {
 				small = "GFX_idea_SOV_grigory_semyonov"
 				large = "GFX_portrait_SOV_grigory_semyonov"
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_grigory_semyonov
-			allowed = {
-				OR = {
-					original_tag = SOV
-					original_tag = MAN # This is where he starts the game
-				}
-			}
-			available = {
-				if = { 
-					limit = { tag = MAN }
-					custom_trigger_tooltip = {
-					 	tooltip = SOV_grigory_semyonov_man_tt
-					 	SOV_soviet_civil_war_not_started = yes 
-					 	NOT = { SOV = { has_completed_focus = SOV_approach_semyonov } }
-					}
-				}
-				
-				if = {
-					limit = { tag = SOV }
-					has_completed_focus = SOV_approach_semyonov
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			traits = {
-				ataman_transbaikal_host
 			}
 		}		
 	}

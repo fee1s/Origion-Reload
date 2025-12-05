@@ -1701,17 +1701,6 @@ news_event = {
 	major = yes
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					tag = SOV
-				}
-				SOV_kill_trotsky_effect = yes
-			}
-		}
-	}
 	
 	option = {
 		name = news.37.a
@@ -2778,11 +2767,6 @@ news_event = {
 	title = news.105.t
 	desc = {
 		text = news.105.d
-		trigger = { NOT = { SOV_is_opposition = yes } }
-	}
-	desc = {
-		text = news.105.d_alt
-		trigger = { SOV_is_opposition = yes }
 	}
 
 	picture = GFX_news_event_soviet_soldiers_ruins
@@ -4385,7 +4369,6 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_berlin_sov
-		play_victory_parade_effect = yes
 	}
 	
 	mean_time_to_happen = {

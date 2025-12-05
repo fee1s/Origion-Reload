@@ -1135,33 +1135,6 @@ country_event = {
 	}
 }
 
-# comintern_influence removed due to war with common enemy
-country_event = {
-	id = soviet.100
-	title = soviet.100.t
-	desc = soviet.100.d
-	picture = GFX_report_event_soviet_soldiers_tank
-	
-	trigger = {
-		has_idea = comintern_influence
-		has_war = yes
-		SOV = { has_war = yes }
-		NOT = { has_war_with = SOV }
-		any_enemy_country = {
-			has_war_with = SOV
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	option = {
-		name = soviet.100.a
-		remove_ideas = comintern_influence
-	}
-}
-
 # Demand Bessarabia
 country_event = {
 	id = soviet.30

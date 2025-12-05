@@ -225,12 +225,7 @@ GER_CL_HISTORICAL = {
 	for_countries = { GER }
 
 	can_use = { 
-		NOT = {
-			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-			}
-		}
+		always = yes
 	}
 
 	type = ship
@@ -406,12 +401,7 @@ GER_CV_HISTORICAL = {
 	for_countries = { GER }
 
 	can_use = { 
-		NOT = {
-			OR = { 
-				has_completed_focus = GER_return_of_the_kaiser 
-				has_completed_focus = GER_the_monarchy_compromise
-			}
-		}
+		always = yes
 	}
 
 	type = ship
