@@ -373,11 +373,12 @@ focus_tree = {
 			}
 			set_technology = {mtg_landing_craft = 1}
             set_technology = {mtg_tank_landing_craft = 1}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = navy_infinite_tech
-			hidden_effect = {
-				add_ideas = JAP_inv_cap
-			}
+			
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = navy_infinite_tech
+			#hidden_effect = {
+			#	add_ideas = JAP_inv_cap
+			#}
 		}
 	}
 
@@ -1154,17 +1155,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				OR = {
-					has_completed_focus = JAP_support_the_kodoha_faction
-					has_completed_focus = JAP_purge_the_kodoha_faction
-				}
-			}
-			modifier = {
-				factor = 10
-				has_completed_focus = JAP_technological_exchange
-			}
 		}
 		available = {
 		}
@@ -1431,10 +1421,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
 		}
 		available = {
 		}
@@ -1460,10 +1446,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
 		}
 		available = {
 		}
@@ -1633,10 +1615,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
 		}
 		available = {
 		}
@@ -1662,10 +1640,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
 		}
 		available = {
 		}
@@ -1707,10 +1681,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-			}
 		}
 		available = {
 		}
@@ -1752,11 +1722,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_support_the_kodoha_faction
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1899,8 +1864,6 @@ focus_tree = {
 				}
 				set_technology = {improved_small_airframe = 1 } 
 				set_technology = {engines_3 = 1}
-				set_technology = {range_improvements = 1}
-				set_technology = {survivability_studies = 1}
 				set_technology = {aa_hmg = 1}	
 			}
 		}

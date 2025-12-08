@@ -340,8 +340,8 @@ NDefines.NNavy.NAVAL_DOMINANCE_MINES_PLANTING_BONUS = 0.0
 NDefines.NNavy.NAVAL_DOMINANCE_MINES_SWEEPING_BONUS = 0.0
 NDefines.NNavy.NAVAL_DOMINANCE_CHANCE_OF_ACCIDENT_REDUCTION = 0.0
 
-NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 9999 -- Моментальное увеличение доминации на море
-NDefines.NNavy.DOMINANCE_DAILY_LOSS_FACTOR = 9999 -- Моментальное уменьшение доминации на море
+NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 1 -- Моментальное увеличение доминации на море
+NDefines.NNavy.DOMINANCE_DAILY_LOSS_FACTOR = 1 -- Моментальное уменьшение доминации на море
 
 NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT_MAX_RATIO = 1.0 -- The ratio which gives the max possible gain of positioning bonus from dominance in region of combat (e.g. to get max bonus you need 'dominance threshold * 2.0' dominance in the region)
 NDefines.NNavy.DOMINANCE_EFFECT_ON_POSITIONING_FOR_CONVOY_ESCORT = 0.00001 -- Увеличение позиционирования при максимальном соотношении (полный контроль и доминирование >= ЭФФЕКТ ДОМИНИРОВАНИЯ НА ПОЗИЦИОНИРОВАНИЕ ДЛЯ МАКСИМАЛЬНОГО СООТНОШЕНИЯ СОПРОВОЖДЕНИЯ КОНВОЯ, умноженное на доминирование конкурентов)

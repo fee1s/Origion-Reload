@@ -95,28 +95,6 @@ characters = {
 			traits = {
 				defier_of_the_sun_god supreme_representative_of_god_on_earth
 			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_patriarch_meletius
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
-				}
-			}
-			available = {
-				has_completed_focus = SOV_the_hands_do
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
-				}
-			}
-			traits = {
-				the_masses_opium
-			}
 		}	
 	}
 
@@ -1446,23 +1424,6 @@ characters = {
 				has_government = fascism
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_metropolitan_nikolay
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-			}
-			available = {
-				has_completed_focus = SOV_the_declaration
-			}
-			traits = {
-				theocratic_diplomat
-			}
-		}
 	}
 
 	SOV_metropolitan_aleksy = {
@@ -1476,23 +1437,6 @@ characters = {
 			OR = {
 				has_government = neutrality 
 				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_metropolitan_aleksy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				has_completed_focus = SOV_the_declaration
-			}
-			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-			}
-			traits = {
-				driver_of_the_faithful
 			}
 		}		
 	}
