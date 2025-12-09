@@ -26,17 +26,80 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1600 }
 
 	
- ######   #######  ##     ## ##     ##  #######  ##    ##    ########  ########     ###    ##    ##  ######  ##     ## ########  ######  
-##    ## ##     ## ###   ### ###   ### ##     ## ###   ##    ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## ##       ##    ## 
-##       ##     ## #### #### #### #### ##     ## ####  ##    ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## ##       ##       
-##       ##     ## ## ### ## ## ### ## ##     ## ## ## ##    ########  ########  ##     ## ## ## ## ##       ######### ######    ######  
-##       ##     ## ##     ## ##     ## ##     ## ##  ####    ##     ## ##   ##   ######### ##  #### ##       ##     ## ##             ## 
-##    ## ##     ## ##     ## ##     ## ##     ## ##   ###    ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## ##       ##    ## 
- ######   #######  ##     ## ##     ##  #######  ##    ##    ########  ##     ## ##     ## ##    ##  ######  ##     ## ########  ######  
+	focus = {
+		id = GER_remilitarize_the_rhineland
 
+		icon = GFX_focus_GER_remilitarize_the_rhineland
 
+		x = 22
+		y = 0
 
-##########################################
+		cost = 10
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 120
+			add_named_threat = {
+				threat = 5
+				name = GER_rhineland
+			}
+			
+				42 = {
+					set_demilitarized_zone = no
+				}
+				51 = {
+					set_demilitarized_zone = no
+				}
+				978 = {
+					set_demilitarized_zone = no
+				}
+				news_event = {
+					hours = 0
+					id = news.25
+				}
+		}
+	}
+	
+	focus = {
+		id = GER_the_four_year_plan
+
+		icon = GFX_focus_GER_the_four_year_plan
+		alternate_icon = GFX_focus_GER_the_four_year_plan_historical
+
+		x = -17
+		y = 1
+		relative_position_id = GER_remilitarize_the_rhineland
+		cost = 5
+		prerequisite = { focus = GER_remilitarize_the_rhineland }
+		available = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 3
+				technology = concentrated_industry2
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+			}
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 0.5
+				uses = 1
+				technology = concentrated_industry5
+			}
+		}
+	}
 
 	focus = {
 		id = GER_construct_the_reichsautobahn
@@ -223,42 +286,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_research_slot = 1
-		}
-	}
-	
-	focus = {
-		id = GER_the_four_year_plan
-
-		icon = GFX_focus_GER_the_four_year_plan
-		alternate_icon = GFX_focus_GER_the_four_year_plan_historical
-
-		mutually_exclusive = { focus = GER_prioritize_economic_growth }
-		x = -17
-		y = 1
-		relative_position_id = GER_remilitarize_the_rhineland
-		cost = 5
-		prerequisite = { focus = GER_remilitarize_the_rhineland }
-		available = {
-
-		}
-		
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 1.0
-				uses = 3
-				technology = concentrated_industry2
-				technology = concentrated_industry3
-				technology = concentrated_industry4
-			}
-			add_tech_bonus = {
-				name = GER_four_year_plan
-				bonus = 0.5
-				uses = 1
-				technology = concentrated_industry5
-			}
 		}
 	}
 	
@@ -1069,6 +1096,43 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = GER_soviet_treaty
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = GER_develop_modern_maneuver_warfare }
+		x = 0
+		y = 1
+		relative_position_id = GER_develop_modern_maneuver_warfare
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			SOV = {
+				country_event = { id = germany.75 }
+				add_tech_bonus = {
+					name = GER_soviet_treaty
+					bonus = 1.0
+					uses = 2
+					technology = improved_medium_tank_chassis
+					technology = improved_heavy_tank_chassis
+					technology = advanced_medium_tank_chassis
+					technology = advanced_heavy_tank_chassis
+				}
+			}
+			
+			add_tech_bonus = {
+				name = GER_soviet_treaty
+				bonus = 1.0
+				uses = 2
+				technology = improved_medium_tank_chassis
+				technology = improved_heavy_tank_chassis
+				technology = armor_tech_3
+			}
+		}
+	}
+	
+	focus = {
 		id = GER_army_indoctrination
 		icon = GFX_focus_GER_appease_the_wehrmacht
 		prerequisite = { focus = GER_soviet_treaty }
@@ -1241,43 +1305,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_soviet_treaty
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		prerequisite = { focus = GER_develop_modern_maneuver_warfare }
-		x = 0
-		y = 1
-		relative_position_id = GER_develop_modern_maneuver_warfare
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			SOV = {
-				country_event = { id = germany.75 }
-				add_tech_bonus = {
-					name = GER_soviet_treaty
-					bonus = 1.0
-					uses = 2
-					technology = improved_medium_tank_chassis
-					technology = improved_heavy_tank_chassis
-					technology = advanced_medium_tank_chassis
-					technology = advanced_heavy_tank_chassis
-				}
-			}
-			
-			add_tech_bonus = {
-				name = GER_soviet_treaty
-				bonus = 1.0
-				uses = 2
-				technology = improved_medium_tank_chassis
-				technology = improved_heavy_tank_chassis
-				technology = armor_tech_3
-			}
-		}
-	}
-	
-	focus = {
 		id = GER_advanced_panzer_research
 		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = GER_soviet_treaty }
@@ -1362,38 +1389,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = GER_combined_arms
-
-		icon = GFX_focus_generic_tank_air_support
-		alternate_icon = GFX_focus_GER_combined_arms_historical
-
-		prerequisite = { focus = GER_dive_bombers }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_dive_bombers
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_modify_arm_modifier_tt
-			add_to_variable = { 
-			    ger_wehrmacht_dm_air_cas_present_factor = 0.05
-				tooltip = air_cas_present_factor_tt
-			}
-			add_to_variable = { 
-			    ger_wehrmacht_dm_air_cas_efficiency = 0.05
-				tooltip = air_cas_efficiency_tt
-			}
-		}
-	}
-
-
-	#LUFTWAFFE
 	focus = {
 		id = GER_expanding_the_luftwaffe
 		icon = GFX_focus_GER_airforce
@@ -1527,6 +1522,39 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = GER_combined_arms
+
+		icon = GFX_focus_generic_tank_air_support
+		alternate_icon = GFX_focus_GER_combined_arms_historical
+
+		prerequisite = { focus = GER_dive_bombers }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_dive_bombers
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = GER_modify_arm_modifier_tt
+			add_to_variable = { 
+			    ger_wehrmacht_dm_air_cas_present_factor = 0.05
+				tooltip = air_cas_present_factor_tt
+			}
+			add_to_variable = { 
+			    ger_wehrmacht_dm_air_cas_efficiency = 0.05
+				tooltip = air_cas_efficiency_tt
+			}
+		}
+	}
+
+
+	#LUFTWAFFE
 	
 	focus = {
 		id = GER_form_the_jagdwaffe
@@ -1976,51 +2004,6 @@ focus_tree = {
 ##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##          ##  ##  ## ##  ##  ## 
 ##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##          ##  ##  ## ##  ##  ## 
 ##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ########     ###  ###   ###  ###  
-
-
-
-
-
-	focus = {
-		id = GER_remilitarize_the_rhineland
-
-		icon = GFX_focus_GER_remilitarize_the_rhineland
-
-		x = 22
-		y = 0
-		relative_position_id = GER_prioritize_economic_growth
-
-		cost = 10
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
-
-		completion_reward = {
-			add_war_support = 0.1
-			add_political_power = 120
-			add_named_threat = {
-				threat = 5
-				name = GER_rhineland
-			}
-			
-				42 = {
-					set_demilitarized_zone = no
-				}
-				51 = {
-					set_demilitarized_zone = no
-				}
-				978 = {
-					set_demilitarized_zone = no
-				}
-				news_event = {
-					hours = 0
-					id = news.25
-				}
-		}
-	}
 
 	focus = {
 		id = GER_anschluss

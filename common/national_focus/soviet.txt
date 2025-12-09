@@ -32,11 +32,8 @@ focus_tree = {
 		id = SOV_finish_the_five_year_plan
 
 		icon = GFX_focus_generic_industry_1
-		prerequisite = { focus = SOV_infrastructure_effort_nsb }
-		prerequisite = { focus = SOV_heavy_industry }
 		x = 1
 		y = 1
-		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 10
 
 		available = {
@@ -437,7 +434,6 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter2
 		x = 10
 		y = 1
-		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 5
 
 		ai_will_do = {
@@ -2725,7 +2721,7 @@ focus_tree = {
 			226 = { add_dynamic_modifier = { modifier = massive_flooding days = 210 } }
 			200 = { add_dynamic_modifier = { modifier = massive_flooding days = 210 } }	
 			
-			hidden_effect = { news_event = origion.24 hours = 3 }
+			hidden_effect = { news_event = origion.24 }
 		}
 	}
 
@@ -3357,7 +3353,7 @@ focus_tree = {
 		completion_reward = {
 			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 			
-			hidden_effect = { news_event = origion.33 hours = 1 }
+			hidden_effect = { news_event = origion.33 }
 		}
 	}
 

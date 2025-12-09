@@ -24,7 +24,28 @@
 	############################
 	##### PRESERVE G ROM #######
 	############################
+	
+	focus = {
+		id = ROM_institute_royal_dictatorship
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 9
+		y = 0
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 120
+		}		
+	}
+	
 	focus = {
 		id = ROM_preserve_greater_romania
 		icon = GFX_focus_rom_preserve_romania
@@ -676,27 +697,6 @@
 	#############################
 
 	focus = {
-		id = ROM_institute_royal_dictatorship
-		icon = GFX_focus_rom_royal_dictatorship
-		x = 9
-		y = 0
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 120
-		}		
-	}
-
-	focus = {
 		id = ROM_revise_the_constitution
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = ROM_institute_royal_dictatorship }
@@ -1218,7 +1218,6 @@
 		id = ROM_reserve_divisions
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = ROM_royal_guards_divisions }
-		mutually_exclusive = { focus = ROM_the_armored_division }
 		x = 0
 		y = 1
 		relative_position_id = ROM_royal_guards_divisions
@@ -1344,7 +1343,6 @@
 		id = ROM_black_sea_dominance
 		icon = GFX_focus_SWE_coastal_support
 		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_coastal_defense_navy }
 		x = 0
 		y = 1
 		relative_position_id = ROM_expand_the_galati_shipyards

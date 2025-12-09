@@ -122,25 +122,6 @@ characters = {
 			visible = { always = no }
 			ai_will_do = {
 				base = 1.000
-				modifier = {
-					factor = 2.000
-					OR = {
-						BUL_is_democratic_socialist_ai = yes 
-						BUL_is_democratic_liberal_ai = yes 
-					}
-					NOT = {
-						has_government = democratic 
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						OR = {
-							BUL_is_democratic_socialist_ai = yes 
-							BUL_is_democratic_liberal_ai = yes 
-						}
-					}
-				}
 			}
 		}
 		name = BUL_stoycho_mushanov
@@ -363,16 +344,6 @@ characters = {
 				small = GFX_portrait_BUL_georgi_markov_small
 			}
 		}
-	}
-
-	BUL_asen_nikolov = {
-			name = BUL_asen_nikolov
-			portraits = {
-				army = {
-					large = "GFX_portrait_bul_asen_nikolov"
-					small = GFX_portrait_BUL_asen_nikolov_small
-				}
-			}
 	}
 
 	BUL_nikola_stoychev = {

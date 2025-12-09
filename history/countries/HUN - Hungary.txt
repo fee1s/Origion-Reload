@@ -96,23 +96,6 @@ if = {
 		add_ideas = { HUN_treaty_of_triannon }
 	}
 }
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	create_equipment_variant = {
-		name = "WM-16"
-		type = small_plane_airframe_1
-		modules = {
-			fixed_main_weapon_slot = light_mg_4x
-			fixed_auxiliary_weapon_slot_1 = light_mg_4x
-			engine_type_slot = engine_2_1x
-			special_type_slot_1 = armor_plate_small
-			special_type_slot_2 = fuel_tanks_small
-		}
-		design_team = mio:HUN_mw_aircraft_organization
-	}
-}
 
 if = {
 	limit = {

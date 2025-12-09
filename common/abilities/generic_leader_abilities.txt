@@ -57,7 +57,6 @@ ability = {
 		}
 		
 		unit_modifiers = {
-			paratrooper_count_per_plane = 1.0
 			paradrop_organization_factor = 2.0
 			paratrooper_aa_defense = 0.5
 		}
@@ -114,9 +113,7 @@ ability = {
 		type = army_leader
 		
 		allowed = {
-			has_ability = makeshift_bridges
-			is_border_war = no
-			are_makeshift_bridges = yes
+			always = no
 		}
 		
 		

@@ -126,11 +126,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				tag = JAP
-				has_completed_focus = JAP_the_unthinkable_option
-			}
-			modifier = {
-				factor = 0
-				tag = JAP
 				has_completed_focus = JAP_purge_the_kodoha_faction
 				date > 1938.1.1
 			}
@@ -3441,10 +3436,6 @@ country_event = {
 		name = germany.122.b
 		ai_chance = {
 			factor = 50
-			modifier = {
-				factor = 0
-				FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
-			}
 			modifier = {
 				factor = 0
 				OR = {

@@ -644,11 +644,11 @@ news_event = { # Технологии 1938 года доступны
 	
 	trigger = { 
 	    date > 1937.12.30 
-		NOT = { has_global_flag = 1938_tech }
+		NOT = { has_global_flag = tech_1938 }
 	}
 	
 	immediate = {
-	    set_global_flag = 1938_tech
+	    set_global_flag = tech_1938
 	}
 	
 	option = {
@@ -668,11 +668,11 @@ news_event = { # Технологии 1941 года доступны
 	
 	trigger = { 
 	    date > 1940.12.30 
-		NOT = { has_global_flag = 1941_tech }
+		NOT = { has_global_flag = tech_1941 }
 	}
 	
 	immediate = {
-	    set_global_flag = 1941_tech
+	    set_global_flag = tech_1941
 	}
 	
 	option = {
@@ -784,7 +784,7 @@ news_event = { # заморозки на восточном фронте
 		name = origion.23.a
 	}
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # совок взрывает гэс
@@ -831,7 +831,7 @@ news_event = { # Тотален
 	major = yes
 	fire_only_once = no
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 	
 	trigger = {
 	    NOT = { has_global_flag = totalen_krieg_flag }
@@ -969,7 +969,7 @@ news_event = { # скрытый ивент вспомогательный по �
 		country_event = { id = news.34 days = 7 }
 	}
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # Московское перемирие

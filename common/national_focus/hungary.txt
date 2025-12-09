@@ -288,18 +288,6 @@
 		completion_reward = {
 
 			add_ideas = HUN_promoted_hungarianism
-			
-			IF = {
-				limit = {
-					has_completed_focus = wuw_HUN_outlaw_the_party_of_national_will
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				set_party_name = { 
-					ideology = fascism 
-					long_name = HUN_arrow_cross_party_long 
-					name = HUN_arrow_cross_party 
-				}
-			}
 
 		}
 	}
@@ -628,19 +616,6 @@
 
 		completion_reward = {
 			activate_advisor = GER_hermann_goring_king_of_hun
-			hidden_effect = {
-				if = {
-					limit = {
-						amount_taken_ideas = {
-    					    amount > 2
-     					    slots = {
-     					        political_advisor
-        					}
-                         }
-					}
-					add_political_power = 150
-				}
-			}
 		}
 	}
 	

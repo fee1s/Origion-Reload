@@ -42,23 +42,53 @@ focus_tree = {
 	}
 
 
-########  ##    ##    ########  ##        #######   #######  ########        ###    ##        #######  ##    ## ######## 
-##     ##  ##  ##     ##     ## ##       ##     ## ##     ## ##     ##      ## ##   ##       ##     ## ###   ## ##       
-##     ##   ####      ##     ## ##       ##     ## ##     ## ##     ##     ##   ##  ##       ##     ## ####  ## ##       
-########     ##       ########  ##       ##     ## ##     ## ##     ##    ##     ## ##       ##     ## ## ## ## ######   
-##     ##    ##       ##     ## ##       ##     ## ##     ## ##     ##    ######### ##       ##     ## ##  #### ##       
-##     ##    ##       ##     ## ##       ##     ## ##     ## ##     ##    ##     ## ##       ##     ## ##   ### ##       
-########     ##       ########  ########  #######   #######  ########     ##     ## ########  #######  ##    ## ######## 
+	focus = {
+		id = ITA_triumph_in_africa_bba
+		icon = GFX_focus_ETH_the_second_italo_ethiopian_war
 
+		x = -9
+		y = 0
+	
+		cost = 2
 
+		bypass = {
+		}
 
- ######   #######  ##        #######  ##    ## ####    ###    ##                ##    #### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##       
-##    ## ##     ## ##       ##     ## ###   ##  ##    ## ##   ##               ##      ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##       
-##       ##     ## ##       ##     ## ####  ##  ##   ##   ##  ##              ##       ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##       
-##       ##     ## ##       ##     ## ## ## ##  ##  ##     ## ##             ##        ##  ## ## ## ##     ## ##     ##  ######     ##    ########   ##  ##     ## ##       
-##       ##     ## ##       ##     ## ##  ####  ##  ######### ##            ##         ##  ##  #### ##     ## ##     ##       ##    ##    ##   ##    ##  ######### ##       
-##    ## ##     ## ##       ##     ## ##   ###  ##  ##     ## ##           ##          ##  ##   ### ##     ## ##     ## ##    ##    ##    ##    ##   ##  ##     ## ##       
- ######   #######  ########  #######  ##    ## #### ##     ## ########    ##          #### ##    ## ########   #######   ######     ##    ##     ## #### ##     ## ######## 
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.15
+		}
+	}
+	
+	focus = {
+		id = ITA_culto_del_duce
+		icon = GFX_focus_ITA_culto_del_duce
+		prerequisite = { focus = ITA_triumph_in_africa_bba }
+
+		x = -9
+		y = 1
+		
+		cost = 3
+		available = {
+			has_country_leader = {
+				character = ITA_benito_mussolini
+				ruling_only = yes
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+
+		completion_reward = {
+			add_country_leader_trait = lion_tamer
+
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 
 	focus = {
 		id = ITA_italian_highways_bba
@@ -1041,7 +1071,29 @@ focus_tree = {
 			custom_effect_tooltip = ITA_increase_production_military_industry_tt
 		}
 	}
+	
+	focus = {
+		id = ITA_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = ITA_increase_production }
+		
+		relative_position_id = ITA_increase_production
+		x = 0
+		y = 1
+		cost = 5
 
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_secret_weapons
+				bonus = 1.0
+				uses = 2
+				category = nuclear
+			}
+		}
+	}
+	
 	focus = {
 		id = ITA_thermojet_research
 		icon = GFX_focus_rocketry
@@ -1116,7 +1168,6 @@ focus_tree = {
 		id = ITA_preserve_army_traditions
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = ITA_army_primacy_bba }
-		mutually_exclusive = { focus = ITA_a_bandits_war }
 		x = 0
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
@@ -1173,7 +1224,25 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_army_leaders
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = ITA_preserve_army_traditions }
 
+		x = -1
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 5
+		
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {
+			add_to_variable = { ITA_re_army_speed_factor = 0.05 }
+			custom_effect_tooltip = ITA_army_leaders_re_tt
+		}
+	}
+	
 	focus = {
 		id = ITA_moschettieri_del_duce
 		icon = GFX_focus_ITA_moschettieri_del_duce
@@ -1192,26 +1261,6 @@ focus_tree = {
 			add_to_variable = { ITA_re_army_core_defence_factor = 0.05 }
 			add_to_variable = { ITA_re_modifier_cas_damage_reduction = 0.05 }
 			custom_effect_tooltip = ITA_moschettieri_del_duce_re_tt
-		}
-	}
-
-
-	focus = {
-		id = ITA_army_leaders
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = ITA_preserve_army_traditions }
-
-		x = -1
-		y = 1
-		relative_position_id = ITA_preserve_army_traditions
-		cost = 5
-		
-
-		search_filters = {FOCUS_FILTER_ARMY_XP}
-
-		completion_reward = {
-			add_to_variable = { ITA_re_army_speed_factor = 0.05 }
-			custom_effect_tooltip = ITA_army_leaders_re_tt
 		}
 	}
 
@@ -2177,54 +2226,6 @@ focus_tree = {
 ##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##       
 ##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##       
 ##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## #######
-
-	focus = {
-		id = ITA_triumph_in_africa_bba
-		icon = GFX_focus_ETH_the_second_italo_ethiopian_war
-
-		x = -9
-		y = 0
-	
-		cost = 2
-
-		bypass = {
-		}
-
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
-
-		completion_reward = {
-			add_stability = 0.2
-			add_war_support = 0.15
-		}
-	}
-	
-	focus = {
-		id = ITA_culto_del_duce
-		icon = GFX_focus_ITA_culto_del_duce
-		prerequisite = { focus = ITA_triumph_in_africa_bba }
-
-		x = -9
-		y = 1
-		
-		cost = 3
-		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
-		}
-
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
-
-		completion_reward = {
-			add_country_leader_trait = lion_tamer
-
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
 	
 
 	focus = {
@@ -2312,20 +2313,9 @@ focus_tree = {
 			
 			add_war_support = 0.05
 
-			if = {
-				limit = {
-					has_completed_focus = ITA_the_man_of_providence
-				}
-				swap_ruler_traits = {
-					remove = il_duce_providence
-					add = il_duce_providence_strengthen
-				}
-			}
-			else = {
-				swap_ruler_traits = {
-					remove = il_duce
-					add = il_duce_strengthen
-				}
+			swap_ruler_traits = {
+				remove = il_duce
+				add = il_duce_strengthen
 			}
 		}
 	}
@@ -2921,28 +2911,6 @@ focus_tree = {
 				sound_effect = psi_ita_triumph
             }
 		}				
-	}
-
-	focus = {
-		id = ITA_secret_weapons
-		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = ITA_increase_production }
-		
-		relative_position_id = ITA_increase_production
-		x = 0
-		y = 1
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = ITA_secret_weapons
-				bonus = 1.0
-				uses = 2
-				category = nuclear
-			}
-		}
 	}
 
 	focus = {

@@ -494,51 +494,6 @@ GER_LTINF_01 =
 	}
 }
 
-GER_MOT_01 = 
-{
-	name = "Motorized Divisions"
-
-	for_countries = { GER }
-
-	can_use = {
-		OR = {
-			has_government = neutrality 
-			has_government = democratic 
-		}
-		has_completed_focus = GER_oppose_hitler
-	}
-
-	division_types = { "motorized"  }
-
-	fallback_name = "%d. Infanterie-Division (mot)"
-
-	link_numbering_with = { GER_Inf_01 }
-
-	# Names with numbers (only one number per entry)
-	ordered =
-	{
-		2 = { "%d. Infanterie-Division (mot.)" }
-		13 = { "%d. Infanterie-Division (mot.)" }
-		20 = { "%d. Infanterie-Division (mot.)" }
-		29 = { "%d. Infanterie-Division (mot.)" }
-		16 = { "%d. Infanterie-Division (mot.)" }
-		60 = { "%d. Infanterie-Division (mot.)" }
-		14 = { "%d. Infanterie-Division (mot.)" }
-		3 = { "%d. Infanterie-Division (mot.)" }
-		18 = { "%d. Infanterie-Division (mot.)" }
-		36 = { "%d. Infanterie-Division (mot.)" }
-		10 = { "%d. Infanterie-Division (mot.)" }
-		25 = { "%d. Infanterie-Division (mot.)" }
-		90 = { "%d. Infanterie-Division (mot.)" }
-		932 = { "Infanterie-Division (mot.) Großdeutschland" }
-		164 = { "%d. Infanterie-Division (mot.)" }
-		
-		# GD existed before 16.5.42 as a strong regiment, but this list is divisional sized units only so it was put in the raising order after it was upgraded to a full division.
-		# removed 'leichte Afrika' from the names of 90., 164. Divisions as their existence depends on historical events that may not occur in game
-		# surviving units of this type renamed to Panzergrenadier-Divisions in 1943
-	}
-}
-
 #Nazi Motorized
 GER_MOT_02 = 
 {

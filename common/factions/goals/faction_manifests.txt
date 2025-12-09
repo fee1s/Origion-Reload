@@ -5,6 +5,16 @@ faction_manifest_origion_generic = {
 	is_manifest = yes
 	
 	ratio_progress = {
-		# ы
+		total_amount = 100
+		scale = {
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = 0.75
+				modifier = { 
+				}
+			}
+		}
 	}
 }

@@ -82,6 +82,36 @@ focus_tree = {
 			add_to_variable = { USA_stability_factor = 0.1 tooltip = stability_factor_tt} 
 		}
 	}
+	
+	focus = {
+		id = USA_neutrality_act
+		icon = GFX_goal_generic_neutrality_focus
+		x = 6
+		y = 1
+		prerequisite = { focus = USA_continue_the_new_deal }
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = { has_completed_focus = USA_agricultural_adjustment_act }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = isolation
+			
+			add_political_power = 200
+			add_war_support = -0.05
+			
+			hidden_effect = {
+				news_event = { id = mtg_news.3 days = 3 random_days = 5 }
+			}
+		}
+	}
 
 #	#   # ## #  
 #   # #  # #  # 
@@ -374,35 +404,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = USA_neutrality_act
-		icon = GFX_goal_generic_neutrality_focus
-		x = 6
-		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal }
-		cost = 10
 
-		ai_will_do = {
-			factor = 1
-		}
-		
-		available = { has_completed_focus = USA_agricultural_adjustment_act }
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_ideas = isolation
-			
-			add_political_power = 200
-			add_war_support = -0.05
-			
-			hidden_effect = {
-				news_event = { id = mtg_news.3 days = 3 random_days = 5 }
-			}
-		}
-	}
 	focus = {
 		id = USA_lending_for_military_needs
 		icon = GFX_focus_GER_customs_union
@@ -1963,7 +1965,35 @@ focus_tree = {
 			}
 		}
 	}
-
+	
+	focus = {
+		id = USA_modernization
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = USA_the_giant_wakes }
+		x = 2
+		y = 0
+		relative_position_id = USA_wartime
+		cost = 5
+		ai_will_do = {
+		factor = 1
+		}
+		available_if_capitulated = yes
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_tech_bonus = {
+			name = USA_modernization_economick
+			ahead_reduction = 2
+			bonus = 1.0
+			uses = 1
+			technology = concentrated_industry5
+			technology = flexible_line
+			technology = streamlined_line
+			}
+		}
+	}
+	
 	focus = {
 		id = USA_military
 		icon = GFX_focus_DEN_limited_regulations
@@ -2025,33 +2055,7 @@ focus_tree = {
 			add_to_variable = { USA_consumer_goods_expected_value = -0.05 tooltip = consumer_goods_expected_tt }
 		}
 	}
-	focus = {
-		id = USA_modernization
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = USA_the_giant_wakes }
-		x = 2
-		y = 0
-		relative_position_id = USA_wartime
-		cost = 5
-		ai_will_do = {
-		factor = 1
-		}
-		available_if_capitulated = yes
-		available = {
-			has_war = yes
-		}
-		completion_reward = {
-			add_tech_bonus = {
-			name = USA_modernization_economick
-			ahead_reduction = 2
-			bonus = 1.0
-			uses = 1
-			technology = concentrated_industry5
-			technology = flexible_line
-			technology = streamlined_line
-			}
-		}
-	}
+
 	focus = {
 		id = USA_fordism
 		icon = GFX_focus_generic_combined_arms

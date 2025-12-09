@@ -456,7 +456,27 @@ focus_tree = {
 			}
 		}
 	}
-
+	
+	focus = {
+		id = uk_service_focus
+		prerequisite = {
+			focus = limited_rearmament_focus
+		}
+		available = {
+		}
+		icon = GFX_goal_generic_position_armies
+		x = 4
+		y = 1
+		relative_position_id = limited_rearmament_focus
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+			army_experience = 150
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_acclimatization_hot_climate_gain_factor = 0.1 tooltip = acclimatization_hot_climate_gain_factor_tt}
+		}
+	}
+	
 	focus = {
 		id = ENG_tank_focus
 		icon = GFX_goal_generic_army_tanks
@@ -520,6 +540,36 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = ENG_motorized_focus
+		prerequisite = {
+			focus = ENG_tank_focus
+		}
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 2
+		relative_position_id = ENG_tank_focus
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = yes
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			mio:ENG_vauxhall_automotive_organization = {
+				add_mio_funds = 3350
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}	
+	
+	focus = {
 		id = ENG_defense_program_BSA
 		prerequisite = {
 			focus = ENG_motorized_focus
@@ -551,36 +601,6 @@ focus_tree = {
 				technology = improved_infantry_weapons
 				technology = improved_infantry_weapons_2
 				technology = advanced_infantry_weapons
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_motorized_focus
-		prerequisite = {
-			focus = ENG_tank_focus
-		}
-		icon = GFX_goal_generic_army_motorized
-		x = 0
-		y = 2
-		relative_position_id = ENG_tank_focus
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = yes
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		completion_reward = {
-			mio:ENG_vauxhall_automotive_organization = {
-				add_mio_funds = 3350
-			}
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1
-				uses = 2
-				category = motorized_equipment
 			}
 		}
 	}
@@ -1941,25 +1961,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = uk_service_focus
-		prerequisite = {
-			focus = limited_rearmament_focus
-		}
-		available = {
-		}
-		icon = GFX_goal_generic_position_armies
-		x = 4
-		y = 1
-		relative_position_id = limited_rearmament_focus
-		cost = 5
-		available_if_capitulated = yes
-		completion_reward = {
-			army_experience = 150
-			custom_effect_tooltip = ENG_chiefs_of_staff_intro
-			add_to_variable = {ENG_acclimatization_hot_climate_gain_factor = 0.1 tooltip = acclimatization_hot_climate_gain_factor_tt}
-		}
-	}
-	focus = {
 		id = uk_mediterranean_focus
 		prerequisite = {
 			focus = uk_colonial_focus
@@ -2845,27 +2846,6 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = uk_operation_countenance 
-		
-		prerequisite = { focus = ENG_blood_toil_tears }
-		
-		available = {
-		    GER = { has_war_with = SOV }
-		}
-		
-		icon = GFX_focus_PER_push_to_mountains #GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
-		
-		relative_position_id = ENG_we_shall_fight_on_the_beaches
-		x = -1
-		y = 1
-		cost = 5
-		
-		completion_reward = {
-			unlock_decision_tooltip = ENG_operation_countenance
-		}
-	}
 
 	focus = {
 		id = ENG_steady_as_she_goes
@@ -2998,32 +2978,7 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = ENG_blood_toil_tears
-		available = {
-			date > 1939.9.1
-		}
-		
-		icon = GFX_focus_eng_the_kings_party
-		cost = 5
-		relative_position_id = ENG_home_defence
-		
-		x = 0
-		y = 2
-		
-		prerequisite = { focus = ENG_prepare_for_the_inevitable }
-		prerequisite = { focus = ENG_issue_gasmasks }
-		
-		completion_reward = {
-			custom_effect_tooltip = ENG_stoyak_intro
-			add_to_variable = {ENG_consumer_goods_expected_value = -0.025 tooltip = consumer_goods_expected_tt}
-			add_to_variable = {ENG_industrial_capacity_dockyard = 0.075 tooltip = industrial_capacity_dockyard_tt}
-			add_to_variable = {ENG_industrial_capacity_factory = 0.075 tooltip = industrial_capacity_factory_tt}
-			add_to_variable = {ENG_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt}
-			add_to_variable = {ENG_weekly_bombing_war_support = 0.005 tooltip = weekly_bombing_war_support_tt}
-		}
-	}
+
 	focus = {
 		id = ENG_issue_gasmasks
 		available_if_capitulated = yes
@@ -3058,6 +3013,32 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = ENG_blood_toil_tears
+		available = {
+			date > 1939.9.1
+		}
+		
+		icon = GFX_focus_eng_the_kings_party
+		cost = 5
+		relative_position_id = ENG_home_defence
+		
+		x = 0
+		y = 2
+		
+		prerequisite = { focus = ENG_prepare_for_the_inevitable }
+		prerequisite = { focus = ENG_issue_gasmasks }
+		
+		completion_reward = {
+			custom_effect_tooltip = ENG_stoyak_intro
+			add_to_variable = {ENG_consumer_goods_expected_value = -0.025 tooltip = consumer_goods_expected_tt}
+			add_to_variable = {ENG_industrial_capacity_dockyard = 0.075 tooltip = industrial_capacity_dockyard_tt}
+			add_to_variable = {ENG_industrial_capacity_factory = 0.075 tooltip = industrial_capacity_factory_tt}
+			add_to_variable = {ENG_production_factory_efficiency_gain_factor = 0.05 tooltip = production_factory_efficiency_gain_factor_tt}
+			add_to_variable = {ENG_weekly_bombing_war_support = 0.005 tooltip = weekly_bombing_war_support_tt}
+		}
+	}
+	
+	focus = {
 		id = ENG_we_shall_fight_on_the_beaches
 		available = {
 			date > 1939.12.1
@@ -3081,7 +3062,28 @@ focus_tree = {
 			 custom_effect_tooltip = ENG_chiefs_of_staff_intro
 			 add_to_variable = {ENG_convoy_escort_efficiency = 0.15 tooltip = convoy_escort_efficiency_tt}
 			
-			}
+		}
+	}	
+	
+	focus = {
+		id = uk_operation_countenance 
+		
+		prerequisite = { focus = ENG_blood_toil_tears }
+		
+		available = {
+		    GER = { has_war_with = SOV }
+		}
+		
+		icon = GFX_focus_PER_push_to_mountains #GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
+		
+		relative_position_id = ENG_we_shall_fight_on_the_beaches
+		x = -1
+		y = 1
+		cost = 5
+		
+		completion_reward = {
+			unlock_decision_tooltip = ENG_operation_countenance
+		}
 	}
 	
 	focus = {

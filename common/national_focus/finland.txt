@@ -53,7 +53,6 @@ focus_tree = {
 
 		x = 11
 		y = 0
-		relative_position_id = FIN_suomalainen_sosialismi
 		
 		cost = 10
 		
@@ -160,6 +159,61 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.1
 			}
+		}
+	}
+	
+	focus = {
+		id = FIN_national_unity
+		icon = GFX_focus_EST_national_pride_in_finland
+		prerequisite = { focus = FIN_finnish_neutrality }
+
+		x = 2
+		y = 1
+		relative_position_id = FIN_finnish_neutrality
+		cost = 10
+		available = {
+		    date > 1937.7.1
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = FIN_arm_the_lotta_svard
+		icon = GFX_focus_SWE_lottakoren
+		prerequisite = { focus = FIN_national_unity }
+
+		x = -1
+		y = 1
+		relative_position_id = FIN_national_unity
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			custom_effect_tooltip = FIN_finnish_economy_tt
+			add_to_variable = { 
+			    FIN_finnish_economy_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_stability = 0.1
 		}
 	}
 	
@@ -495,61 +549,6 @@ focus_tree = {
 			    remove_ideas = FIN_axis_stuff_idea
 				GER = { add_to_faction = FIN }
 			}
-		}
-	}
-	
-	focus = {
-		id = FIN_national_unity
-		icon = GFX_focus_EST_national_pride_in_finland
-		prerequisite = { focus = FIN_finnish_neutrality }
-
-		x = 2
-		y = 1
-		relative_position_id = FIN_finnish_neutrality
-		cost = 10
-		available = {
-		    date > 1937.7.1
-		}
-
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = FIN_finnish_economy_tt
-			add_to_variable = { 
-			    FIN_finnish_economy_stability_factor = 0.1
-				tooltip = stability_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_stability = 0.1
-		}
-	}
-	
-	focus = {
-		id = FIN_arm_the_lotta_svard
-		icon = GFX_focus_SWE_lottakoren
-		prerequisite = { focus = FIN_national_unity }
-
-		x = -1
-		y = 1
-		relative_position_id = FIN_national_unity
-		cost = 10
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
-
-		completion_reward = {
-			custom_effect_tooltip = FIN_finnish_economy_tt
-			add_to_variable = { 
-			    FIN_finnish_economy_stability_factor = 0.1
-				tooltip = stability_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_stability = 0.1
 		}
 	}
 	

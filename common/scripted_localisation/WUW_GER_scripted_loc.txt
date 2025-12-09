@@ -116,12 +116,6 @@ defined_text = {
 defined_text = {
 	name = GetMolotovInMRPact
 	text = {
-		trigger = {
-			SOV = { has_completed_focus = SOV_policy_of_collective_security }
-		}
-		localization_key = MR_pact_litvinov
-	}
-	text = {
 		localization_key = MR_pact_molotov 
 	}
 }
@@ -280,12 +274,6 @@ defined_text = {
 
 defined_text = {
 	name = GetKDFFactoriesText
-	text = {
-		trigger = {
-			has_completed_focus = GER_prioritize_economic_growth
-		}
-		localization_key = GER_kdf_wagen_factories_economic_growth_text
-	}
 	text = {
 		localization_key = GER_kdf_wagen_factories_autarky_text 
 	}

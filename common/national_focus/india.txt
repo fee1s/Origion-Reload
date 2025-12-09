@@ -26,7 +26,37 @@ focus_tree = {
 	############################
 	## THE BIG QUEEN SECTION ###
 	############################
+	
+	focus = {
+		id = RAJ_lessons_of_the_great_war
+		icon = GFX_goal_generic_small_arms
+		x = 13
+		y = 0
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
 	focus = {
 		id = RAJ_provincial_elections
 		icon = GFX_goal_generic_forceful_treaty
@@ -413,42 +443,10 @@ focus_tree = {
 			hidden_effect = { set_technology = { jungle_warfare = 1 } }
 		}
 	}
-
-
+	
 	############################
 	#### WAR PREP SECTION ######
 	############################
-
-
-	focus = {
-		id = RAJ_lessons_of_the_great_war
-		icon = GFX_goal_generic_small_arms
-		x = 13
-		y = 0
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 3
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			army_experience = 10
-		}
-	}
 
 	############################
 	####### INDIAN ARMY ########

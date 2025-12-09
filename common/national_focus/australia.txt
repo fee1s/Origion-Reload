@@ -205,7 +205,108 @@
 			}
 		}
 	}
+	
+	focus = {
+		id = AST_establish_advisory_war_council
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = AST_support_the_policy_of_appeasement }
+		relative_position_id = AST_standard_gauge_railway
+		x = 5
+		y = 0
 
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			date > 1937.8.1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 120
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = AST_national_security_act
+		icon = GFX_focus_SWI_issue_war_bonds
+		prerequisite = { focus = AST_establish_advisory_war_council }
+		x = -2
+		y = 1
+		relative_position_id = AST_establish_advisory_war_council
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = AST_modify_economy_dm_tt
+			add_to_variable = { 
+			    AST_economy_dm_consumer_goods_expected_value = -0.025
+				tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = { 
+			    AST_economy_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    AST_economy_dm_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = AST_civil_construction_corps
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = AST_national_security_act }
+		x = -1
+		y = 1
+		relative_position_id = AST_national_security_act
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = AST_modify_economy_dm_tt
+			add_to_variable = { 
+			    AST_economy_dm_consumer_goods_expected_value = -0.025
+				tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = { 
+			    AST_economy_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    AST_economy_dm_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+	
 	focus = {
 		id = AST_allied_works_council
 		icon = GFX_focus_generic_the_giant_wakes
@@ -698,71 +799,6 @@
 	############################
 
 	focus = {
-		id = AST_establish_advisory_war_council
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = AST_support_the_policy_of_appeasement }
-		relative_position_id = AST_standard_gauge_railway
-		x = 5
-		y = 0
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 3
-		}
-
-		available = {
-			date > 1937.8.1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 120
-			add_war_support = 0.05
-		}
-	}
-
-	focus = {
-		id = AST_national_security_act
-		icon = GFX_focus_SWI_issue_war_bonds
-		prerequisite = { focus = AST_establish_advisory_war_council }
-		x = -2
-		y = 1
-		relative_position_id = AST_establish_advisory_war_council
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = AST_modify_economy_dm_tt
-			add_to_variable = { 
-			    AST_economy_dm_consumer_goods_expected_value = -0.025
-				tooltip = consumer_goods_expected_tt
-			}
-			add_to_variable = { 
-			    AST_economy_dm_stability_factor = 0.05
-				tooltip = stability_factor_tt
-			}
-			add_to_variable = { 
-			    AST_economy_dm_industrial_capacity_factory = 0.05
-				tooltip = industrial_capacity_factory_tt
-			}
-		}
-	}
-
-	focus = {
 		id = AST_volunteer_defence_corps
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = AST_establish_advisory_war_council }
@@ -1194,42 +1230,6 @@
 				uses = 1
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
-			}
-		}
-	}
-
-	focus = {
-		id = AST_civil_construction_corps
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = AST_national_security_act }
-		x = -1
-		y = 1
-		relative_position_id = AST_national_security_act
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = AST_modify_economy_dm_tt
-			add_to_variable = { 
-			    AST_economy_dm_consumer_goods_expected_value = -0.025
-				tooltip = consumer_goods_expected_tt
-			}
-			add_to_variable = { 
-			    AST_economy_dm_stability_factor = 0.05
-				tooltip = stability_factor_tt
-			}
-			add_to_variable = { 
-			    AST_economy_dm_industrial_capacity_factory = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 		}
 	}

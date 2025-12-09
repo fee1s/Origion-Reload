@@ -160,85 +160,7 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
-		id = JAP_strike_on_the_southern_resource_area
-		icon = GFX_focus_jap_strike_south
-		prerequisite = {focus = JAP_sov_non_aggresive_pact}
-		prerequisite = {focus = JAP_intervene_in_china}
-		x = 2
-		y = 2
-		relative_position_id = JAP_airfield_for_asian_war
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = MAL
-		will_lead_to_war_with = INS
-		cost = 5
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1940.1.1
-			}
-			modifier = {
-				factor = 0
-				ENG = { has_war = no }
-				HOL = { has_war = no }
-			}
-			modifier = {
-				has_war_with = SOV
-				factor = 0
-			}
-		}
-		available = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			unlock_decision_tooltip = JAP_strike_on_the_southern_resource_area_decision
-		}
-	}
-
 	
-	focus = {
-		id = JAP_miduey_fight_focus
-		icon = GFX_focus_generic_attack_usa
-		prerequisite = {focus = JAP_strike_on_the_southern_resource_area}
-		x = -1
-		y = 1
-		relative_position_id = JAP_strike_on_the_southern_resource_area
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = MAL
-		will_lead_to_war_with = INS
-		cost = 2
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1940.1.1
-			}
-			modifier = {
-				factor = 0
-				ENG = { has_war = no }
-				HOL = { has_war = no }
-			}
-			modifier = {
-				has_war_with = SOV
-				factor = 0
-			}
-		}
-		available = {
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			unlock_decision_tooltip = JAP_strike_midyei
-		}
-	}
-
 	focus = {
 		id = JAP_airfield_for_asian_war
 		icon = GFX_focus_generic_license_production
@@ -379,6 +301,84 @@ focus_tree = {
 			#hidden_effect = {
 			#	add_ideas = JAP_inv_cap
 			#}
+		}
+	}
+
+	focus = {
+		id = JAP_strike_on_the_southern_resource_area
+		icon = GFX_focus_jap_strike_south
+		prerequisite = {focus = JAP_sov_non_aggresive_pact}
+		prerequisite = {focus = JAP_intervene_in_china}
+		x = 2
+		y = 2
+		relative_position_id = JAP_airfield_for_asian_war
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 0
+				ENG = { has_war = no }
+				HOL = { has_war = no }
+			}
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			unlock_decision_tooltip = JAP_strike_on_the_southern_resource_area_decision
+		}
+	}
+
+	
+	focus = {
+		id = JAP_miduey_fight_focus
+		icon = GFX_focus_generic_attack_usa
+		prerequisite = {focus = JAP_strike_on_the_southern_resource_area}
+		x = -1
+		y = 1
+		relative_position_id = JAP_strike_on_the_southern_resource_area
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = INS
+		cost = 2
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+			}
+			modifier = {
+				factor = 0
+				ENG = { has_war = no }
+				HOL = { has_war = no }
+			}
+			modifier = {
+				has_war_with = SOV
+				factor = 0
+			}
+		}
+		available = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			unlock_decision_tooltip = JAP_strike_midyei
 		}
 	}
 
@@ -584,7 +584,6 @@ focus_tree = {
 					free_building_slots = {
 						building = synthetic_refinery
 						size > 2
-						include_locked = yes
 					}
 				}
 				random_select_amount = 2
@@ -1873,7 +1872,6 @@ focus_tree = {
 		id = JAP_strategic_bomber_effort
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = JAP_range_focus }
-		prerequisite = { focus = JAP_bomber_modernization }
 		x = -1
 		y = 3
 		relative_position_id = JAP_fighter_modernization
@@ -2487,6 +2485,43 @@ focus_tree = {
 	}	
 	
 	focus = {
+		id = JAP_war_economic
+		icon = GFX_focus_generic_currency_reforms
+		prerequisite = { focus = JAP_overmobilized_industry}
+		relative_position_id = JAP_national_mobilization_law
+		x = -2
+		y = 2
+		cost = 5
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			custom_effect_tooltip = JAP_war_economic_tt
+			add_to_variable = {JAP_consumer_goods_expected_value = -0.03}
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}	
+	}
+	
+	focus = {
 		id = JAP_centralized_economic
 		icon = GFX_focus_generic_tank_production    
 		prerequisite = { focus = JAP_war_economic }
@@ -2541,44 +2576,7 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = JAP_strike_USSR
 		}	
-	}	
-	
-	focus = {
-		id = JAP_war_economic
-		icon = GFX_focus_generic_currency_reforms
-		prerequisite = { focus = JAP_overmobilized_industry}
-		relative_position_id = JAP_national_mobilization_law
-		x = -2
-		y = 2
-		cost = 5
-		ai_will_do = {
-		factor = 1
-		}
-		available = {
-			has_war = yes
-		}
-		completion_reward = {
-			custom_effect_tooltip = JAP_war_economic_tt
-			add_to_variable = {JAP_consumer_goods_expected_value = -0.03}
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}	
-	}	
+	}		
 	
 	focus = {
 		id = JAP_za_imperatora
