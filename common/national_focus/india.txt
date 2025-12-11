@@ -19,48 +19,42 @@ focus_tree = {
 		}
 	}
 	
-	shared_focus = bracing_for_the_inevitable
+	#shared_focus = bracing_for_the_inevitable
 	
 	default = no
 
-	############################
-	## THE BIG QUEEN SECTION ###
-	############################
-	
-	focus = {
-		id = RAJ_lessons_of_the_great_war
-		icon = GFX_goal_generic_small_arms
-		x = 13
+
+	focus = {  
+		id = RAJ_provincial_autonomy
+		icon = GFX_focus_RAJ_provincial_autonomy
+		x = 10
 		y = 0
 
 		cost = 10
 
 		ai_will_do = {
-			factor = 3
+			factor = 20
 		}
 
-		available = {
+		
+		
+		available_if_capitulated = yes
 
-		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		
 		completion_reward = {
-			army_experience = 10
+			modify_tech_sharing_bonus = {
+         		id = commonwealth_research
+         		bonus = 0.05
+			}	
+			
 		}
 	}
-	
+
 	focus = {
-		id = RAJ_provincial_elections
-		icon = GFX_goal_generic_forceful_treaty
-		x = -10
+		id = RAJ_creation_indian_national_army
+		icon = GFX_focus_RAJ_indianisation_of_army
+		x = 0
 		y = 1
 
 		cost = 10
@@ -69,609 +63,86 @@ focus_tree = {
 			factor = 20
 		}
 		
-		prerequisite = {
-		    focus = RAJ_lessons_of_the_great_war
-		}
-		relative_position_id = RAJ_lessons_of_the_great_war
+		relative_position_id = RAJ_provincial_autonomy
+		prerequisite = {focus = RAJ_provincial_autonomy}
 
-		available = {
-			date > 1937.7.1
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_political_power = 100	
-		}
-	}
-
-	
-
-	focus = {
-		id = RAJ_indian_national_congress
-		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = RAJ_provincial_elections }
 		
-		x = 0
-		y = 1
-		relative_position_id = RAJ_provincial_elections
+		
+		available_if_capitulated = yes
 
-		cost = 10
 
-		ai_will_do = {
-			factor = 27
-		}
-
-		available = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.1
-		}
-	}
-
-
-
-	
-
-	############################
-	### SOMEWHAT DEMOCRATIC ####
-	############################
-
-	focus = {
-		id = RAJ_cripps_mission
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = RAJ_indian_national_congress }
-		x = -2
-		y = 1
-		relative_position_id = RAJ_indian_national_congress
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			swap_ideas = {
-				add_idea = RAJ_marginalized_muslim_community_angry
-				remove_idea = RAJ_marginalized_muslim_community
-			}	 	
-		}
-	}
-
-	focus = {
-		id = RAJ_two_nation_theory
-		icon = GFX_focus_RAJ_two_nation_theory
-		prerequisite = { focus = RAJ_cripps_mission }
-		x = -2
-		y = 2
-		relative_position_id = RAJ_indian_national_congress
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			OR = {
-				has_idea = RAJ_marginalized_muslim_community_happy
-				PAK = { exists = yes }
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			
-			if = {
-				limit = {
-					has_idea = RAJ_marginalized_muslim_community_angry
-				}
-				swap_ideas = {
-					add_idea = RAJ_marginalized_muslim_community_happy
-					remove_idea = RAJ_marginalized_muslim_community_angry
-				}
-			}
-			else = {
-				swap_ideas = {
-					add_idea = RAJ_marginalized_muslim_community_happy
-					remove_idea = RAJ_marginalized_muslim_community
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_princely_state_donations
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = RAJ_indian_national_congress }
-		x = 0
-		y = 1
-		relative_position_id = RAJ_indian_national_congress
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		completion_reward = {
-			swap_ideas = {
-				add_idea = RAJ_princely_states_donations
-				remove_idea = RAJ_princely_states
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_imperial_service_troops
-		icon = GFX_focus_generic_commonwealth_build_infantry
-		prerequisite = { focus =  RAJ_princely_state_donations }
-		x = 0
-		y = 1
-		relative_position_id = RAJ_princely_state_donations
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			swap_ideas = {
-				add_idea = RAJ_princely_states_donations_troops
-				remove_idea = RAJ_princely_states_donations
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_british_army_support
-		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = RAJ_indian_national_congress }
-		x = 2
-		y = 1
-		relative_position_id = RAJ_indian_national_congress
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			army_experience = 10
-			add_tech_bonus = {
-				name = RAJ_british_army_support
-				bonus = 1.0
-				uses = 2
-				technology = tech_military_police3
-				technology = tech_military_police4
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_red_eagle_division
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = RAJ_british_army_support }
-		x = 0
-		y = 2
-		relative_position_id = RAJ_british_army_support
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-		custom_effect_tooltip = RAJ_create_unit_red_eagles_tt
-		army_experience = 25
-			hidden_effect = {
-				division_template = {
-					name = "Red Eagles Division"
-					priority = 2
-					division_names_group = RAJ_INF_01
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-	    	   		 	infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
-					}
-
-					support = {
-        				artillery = { x = 0 y = 0 }
-        				engineer = { x = 0 y = 1 }
-					}
-				}
-	
-				random_owned_controlled_state = {
-					prioritize = { 439 }
-					create_unit = {
-						division = "name = \"Red Eagles Division\" division_template = \"Red Eagles Division\" start_experience_factor = 0.75" 
-						owner = RAJ
-					}	
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_chindits
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = RAJ_british_army_support }
-		x = 1
-		y = 1
-		relative_position_id = RAJ_british_army_support
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_completed_focus = RAJ_indian_gurkhas
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = RAJ_chindits
-				bonus = 1
-				uses = 2
-				category = mountaineers_tech
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_jungle_training
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = RAJ_chindits }
-		prerequisite = { focus = RAJ_indian_gurkhas }
-		x = 2
-		y = 2
-		relative_position_id = RAJ_british_army_support
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			custom_effect_tooltip = RAJ_jungle_training_effect
-			hidden_effect = { set_technology = { jungle_warfare = 1 } }
-		}
-	}
-	
-	############################
-	#### WAR PREP SECTION ######
-	############################
-
-	############################
-	####### INDIAN ARMY ########
-	############################
-
-	focus = {
-		id = RAJ_indianisation_of_army
-		icon = GFX_focus_RAJ_indianisation_of_army
-		prerequisite = { focus = RAJ_lessons_of_the_great_war }
-		x = -4
-		y = 1
-		relative_position_id = RAJ_lessons_of_the_great_war
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		
 		completion_reward = {
 			add_political_power = 100
 			army_experience = 150
-		}
-	}
-
-	focus = {
-		id = RAJ_indian_gurkhas
-		icon = GFX_focus_RAJ_indian_gurkhas
-		prerequisite = { focus = RAJ_indianisation_of_army }
-		x = -1
-		y = 2
-		relative_position_id = RAJ_indianisation_of_army
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_completed_focus = RAJ_chindits
-			}
-		}
-
-		available = {
-			has_tech = tech_mountaineers
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = RAJ_indian_gurkhas
-		}
+		}	
 	}
 	
+	
 	focus = {
-		id = RAJ_lions_of_the_great_war
-		icon = GFX_focus_RAJ_lions_of_the_great_war
-		prerequisite = { focus = RAJ_indianisation_of_army }
-		x = 0
+		id = RAJ_lion_great_war
+		icon = GFX_focus_SWE_the_lion_of_the_north
+		x = 0	
 		y = 1
-		relative_position_id = RAJ_indianisation_of_army
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = RAJ_lions_of_the_great_war
-			army_experience = 10
-		}
-	}
-
-	focus = {
-		id = RAJ_an_indian_sandhurst
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = RAJ_lions_of_the_great_war }
-		x = 0
-		y = 3
-		relative_position_id = RAJ_indianisation_of_army
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			army_experience = 15
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_tech_bonus = {
-				name = RAJ_an_indian_sandhurst
-				bonus = 1.0
-				uses = 3
-				technology = antitank3
-				technology = antitank4
-				technology = antitank5
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			mio:RAJ_ordnance_factories_board_organization = {
-				add_mio_size = 2
-			}
-		}
-	}
-
-
-	############################
-	# ARMOR/MECH/STUFF SECTION #
-	############################
-
-	focus = {
-		id = RAJ_the_bangalore_torpedo
-		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = RAJ_lessons_of_the_great_war }
-		x = -1
-		y = 1
-		relative_position_id = RAJ_lessons_of_the_great_war
 
 		cost = 10
 
 		ai_will_do = {
 			factor = 20
 		}
+		
+		prerequisite = {focus = RAJ_creation_indian_national_army}
+		relative_position_id = RAJ_creation_indian_national_army
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
 		completion_reward = {
-			add_tech_bonus = {
-				name = RAJ_the_bangalore_torpedo
-				bonus = 1.0
-				uses = 2
-				technology = tech_engineers3
-				technology = tech_engineers4
-			}
-		}
+			add_war_support = 0.05
+			army_experience = 20
+			}	
 	}
-
+	
+	
 	focus = {
 		id = RAJ_vickers_berthier_gun
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = RAJ_lessons_of_the_great_war }
-		x = 2
-		y = 0
-		relative_position_id = RAJ_the_bangalore_torpedo
+		x = 3
+		y = 1
 
 		cost = 10
 
 		ai_will_do = {
 			factor = 20
 		}
+		
+		prerequisite = {focus = RAJ_provincial_autonomy}
+		relative_position_id = RAJ_provincial_autonomy
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+
 		completion_reward = {
 			add_tech_bonus = {
 				name = RAJ_vickers_berthier_gun
@@ -680,225 +151,1309 @@ focus_tree = {
 				technology = improved_infantry_weapons_2
 				technology = advanced_infantry_weapons
 			}
-		}
+		}	
 	}
-
+	
 	focus = {
-		id = RAJ_royal_indian_artillery
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = RAJ_the_bangalore_torpedo focus = RAJ_vickers_berthier_gun }
-		x = 0
+		id = RAJ_the_bangalore_torpedo
+		icon = GFX_focus_SOV_organize_wreckers
+		x = 5
 		y = 1
-		relative_position_id = RAJ_the_bangalore_torpedo
 
 		cost = 10
 
 		ai_will_do = {
-			factor = 30
+			factor = 20
 		}
+		
+		prerequisite = {focus = RAJ_provincial_autonomy}
+		relative_position_id = RAJ_provincial_autonomy
 
 		available = {
-
+			
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
 		completion_reward = {
-			army_experience = 10
 			add_tech_bonus = {
-				name = RAJ_royal_indian_artillery
+				
+				name = RAJ_the_bangalore_torpedo
+				bonus = 1.0
+				uses = 2
+				technology = tech_engineers3
+				technology = tech_engineers4
+			}
+		}	
+	}
+		
+		
+		
+		
+		
+		
+	focus = {
+		id = RAJ_guns_corps
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		x = 2
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_vickers_berthier_gun}
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes 
+
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				
+				bonus = 0.5
+				uses = 1
+				technology = support_weapons3
+			}
+			add_tech_bonus = {
+				
+				bonus = 1
+				uses = 1
+				technology = support_weapons4
+			}
+			add_tech_bonus = {
+				
+				bonus = 1
+				uses = 1
+				technology = infantry_at
+			}
+		}	
+	}
+		
+	focus = {
+		id = RAJ_development_17funt
+		icon = GFX_focus_generic_anti_tank_guns
+		x = 3
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_guns_corps}
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			
+			add_tech_bonus = {
+				
 				bonus = 1.0
 				uses = 1
-                technology = artillery1
+				technology = antitank3
 			}
+			
+			add_tech_bonus = {
+				
+				bonus = 1.0
+				uses = 1
+				technology = antitank4
+			}
+			add_tech_bonus = {
+				
+				bonus = 1.0
+				uses = 1
+				technology = antitank5
+			}
+		
+		}	
+	
+	
+	}
+	
+
+	focus = {
+		id = RAJ_border_corps
+		icon = GFX_focus_generic_military_academy
+		x = 6
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
 		}
+		
+		prerequisite = {focus = RAJ_the_bangalore_torpedo}
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			
+			
+			add_tech_bonus = {
+				
+				bonus = 1.0
+				uses = 2
+				technology = tech_military_police3
+				technology = tech_military_police4
+			}
+			add_tech_bonus = {
+				
+			    bonus = 1
+			    uses = 2
+				technology = tech_field_hospital3
+				technology = tech_field_hospital4
+			}
+		}	
 	}
 
 	focus = {
-		id = RAJ_army_motorization
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = RAJ_the_bangalore_torpedo focus = RAJ_vickers_berthier_gun }
+		id = RAJ_flamethrower_company
+		icon = GFX_focus_RAJ_a_private_military
+		x = 5
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_border_corps}
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				
+			    bonus = 1
+			    uses = 2
+				technology = tech_flamethrower_brigade3
+				technology = tech_flamethrower_brigade4
+			}
+		
+		}	
+	}
+		
+	focus = {
+		id = RAJ_siege_batteries
+		icon = GFX_focus_RAJ_mountain_guns
+		x = 4
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_vickers_berthier_gun focus = RAJ_the_bangalore_torpedo}
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				
+			    bonus = 1
+			    uses = 1
+				technology = artillery1
+				technology = artillery2
+			}
+			
+		}	
+	}
+		
+	focus = {
+		id = RAJ_moder_artillery
+		icon = GFX_focus_generic_railway_gun
+		x = 4
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_siege_batteries  }
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				
+			    bonus = 1
+			    uses = 1
+				technology = artillery3
+				technology = artillery4
+			}
+			
+		}	
+	}
+		
+	focus = {
+		id = RAJ_south_east_asia_command
+		icon = GFX_goal_generic_construct_military
+		x = -3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_provincial_autonomy  }
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			date > 1940.9.1
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_local_resources_factor = 0.1
+				tooltip = local_resources_factor_tt
+			}
+			
+		}	
+	}
+	focus = {
+		id = RAJ_burma_rangers
+		icon = GFX_focus_generic_jungle_training
+		x = -2
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_south_east_asia_command  }
+		relative_position_id = RAJ_provincial_autonomy
+
+		available = {
+			has_tech = rangers_tech 
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				
+			    bonus = 1
+			    uses = 1
+				technology = rangers_tech2
+			}
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+            add_to_variable = { 
+                RAJ_army_dm_special_forces_attack_factor = 0.1
+                tooltip = special_forces_attack_factor_tt
+            }
+			add_to_variable = { 
+                RAJ_army_dm_special_forces_defence_factor = 0.1
+                tooltip = special_forces_defence_factor_tt
+            }	 
+		}	
+	}
+		
+		focus = {
+		id = RAJ_strategic_reserves
+		icon = GFX_focus_FIN_weapon_caches
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_south_east_asia_command  }
+		relative_position_id = RAJ_south_east_asia_command
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = RAJ
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1200
+					producer = RAJ
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment 
+					amount = 900
+					producer = RAJ
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment 
+					amount = 500
+					producer = RAJ
+				}
+			}
+		}
+		
+		focus = {
+		id = RAJ_support_field
+		icon = GFX_focus_PRC_establish_domestic_aircraft_production
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_strategic_reserves  }
+		relative_position_id = RAJ_strategic_reserves
+		
+
+		available = {
+			has_full_control_of_state = 438
+			has_full_control_of_state = 426
+			has_full_control_of_state = 435
+			has_full_control_of_state = 436
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+				435 = { add_building_construction = {
+							type = air_base
+							level = 5
+							instant_build = yes
+						}
+			}
+				426 = { add_building_construction = {
+							type = air_base
+							level = 5
+							instant_build = yes
+						}
+			}
+				438 = { add_building_construction = {
+							type = air_base
+							level = 3
+							instant_build = yes
+						}
+			}
+				436 = { add_building_construction = {
+							type = air_base
+							level = 3
+							instant_build = yes
+						}
+			}
+		
+		}
+	}
+		focus = {
+		id = RAJ_defend_deli
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_strategic_reserves  }
+		relative_position_id = RAJ_strategic_reserves
+		
+
+		available = {
+			surrender_progress > 0.5
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			
+			custom_effect_tooltip = deli_bunkers_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				439 = {
+					set_building_level = {
+						type = bunker
+						level = 8
+						instant_build = yes
+						province = 2086
+					}
+					set_building_level = {
+						type = bunker
+						level = 5
+						instant_build = yes
+						province = 11955
+					}
+				}
+				438 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						instant_build = yes
+						province = 10794
+					}
+				}
+				433 = {
+					set_building_level = {
+						type = bunker
+						level = 5
+						instant_build = yes
+						province = 4915
+					}
+					set_building_level = {
+						type = bunker
+						level = 5
+						instant_build = yes
+						province = 2054
+					}
+				}
+			}
+			
+			add_timed_idea = {
+				idea = RAJ_hold_at_all_costs
+				days = 90
+			}
+		}
+	}
+	
+	focus = {
+		id = RAJ_convoy_fleet
+		icon = GFX_focus_generic_merchant_fleet
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_defend_deli focus = RAJ_support_field }
+		relative_position_id = RAJ_defend_deli
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 100
+					producer = RAJ
+				}
+				
+				 
+			}	
+		}
+		
+	focus = {
+		id = RAJ_indian_gurkhas
+		icon = GFX_focus_AFG_quami
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_burma_rangers} 
+		prerequisite = {focus = RAJ_lion_great_war }
+		relative_position_id = RAJ_lion_great_war
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+            add_to_variable = { 
+				RAJ_army_dm_attrition = -0.04
+                tooltip = attrition_tt
+            }
+			
+		}
+	}
+	
+	focus = {
+		id = RAJ_chindits
+		icon = GFX_focus_ETH_peacekeeping_forces
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_indian_gurkhas} 
+		relative_position_id = RAJ_indian_gurkhas
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		 
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+            add_to_variable = { 
+				RAJ_army_dm_army_morale_factor = 0.04
+                tooltip = army_morale_factor_tt
+            }
+			
+				
+		}	 
+	}	
+	
+	focus = {
+		id = RAJ_mobilization_reform
+		icon = GFX_focus_SOV_mobilization_plan
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		 
+		prerequisite = {focus = RAJ_lion_great_war} 
+		relative_position_id = RAJ_lion_great_war
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+            add_to_variable = { 
+				RAJ_army_dm_conscription_factor = 0.1 
+                tooltip = conscription_factor_tt
+            }
+				
+		}	
+	}
+	focus = {
+		id = RAJ_complete_mobilization
+		icon = GFX_focus_CHL_incorporate_machi_into_the_army
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_mobilization_reform} 
+		relative_position_id = RAJ_mobilization_reform
+
+		available = {
+			has_completed_focus = RAJ_south_east_asia_command 
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+            add_to_variable = { 
+				RAJ_army_dm_conscription_factor = 0.1
+                tooltip = conscription_factor_tt
+            }
+		}	
+	}
+	focus = {
+		id = RAJ_local_logistics 
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_complete_mobilization}  
+		prerequisite = {focus = RAJ_chindits}
+		relative_position_id = RAJ_complete_mobilization
+		
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+			add_to_variable = { 
+				RAJ_army_dm_supply_consumption_factor = -0.04
+				tooltip = supply_consumption_factor_tt
+			}
+		}	
+	}
+	
+		
+	
+
+	focus = {
+		id = RAJ_provincial_elections
+		icon = GFX_focus_RAJ_a_congress_resurgent
+		x = -8
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_provincial_autonomy} 
+		relative_position_id = RAJ_provincial_autonomy
+		
+
+		available = {
+			date > 1937.8.1
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+			
+				
+		
+				
+	}	
+	focus = {
+		id = RAJ_national_congress 
+		icon = GFX_focus_RAJ_mahatma
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_provincial_elections} 
+		relative_position_id = RAJ_provincial_elections
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
+			
+			
+		
+		}
+	}
+	focus = {
+		id = RAJ_unify_the_taxes_system 
+		icon = GFX_focus_RAJ_war_taxes 
 		x = 2
 		y = 1
-		relative_position_id = RAJ_the_bangalore_torpedo
 
 		cost = 10
 
 		ai_will_do = {
-			factor = 30
+			factor = 20
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = RAJ_army_motorization
-				bonus = 1.0
-				uses = 1
-				technology = mechanised_infantry			
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_revive_the_screw_guns
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = RAJ_royal_indian_artillery 
-		focus = RAJ_army_motorization }
-		x = 1
-		y = 2
-		relative_position_id = RAJ_the_bangalore_torpedo
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 30
-			modifier = {
-				factor = 2
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = RAJ_revive_the_screw_guns_effect
-			hidden_effect = { set_technology = { mountain_gun = 1 } }
-		}
-	}
-
-	focus = {
-		id = RAJ_modernizing_army
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = RAJ_revive_the_screw_guns }
-		x = 1
-		y = 3
-		relative_position_id = RAJ_the_bangalore_torpedo
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			army_experience = 25
-			air_experience = 100
-		}
-	}
-
-	focus = {
-		id = RAJ_new_special_forces
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = RAJ_an_indian_sandhurst}
-		x = 0
-		y = 1
-		cost = 10
-		relative_position_id = RAJ_an_indian_sandhurst
-		completion_reward = {
-			add_potential_special_forces_tree = yes
-		}
-	}
-
-	focus = {
-		id = RAJ_indian_defense_research
-		icon = GFX_focus_research
-		prerequisite = { focus = RAJ_modernizing_army }
-		prerequisite = { focus = RAJ_an_indian_sandhurst }
-		x = -1
-		y = 4
-		relative_position_id = RAJ_the_bangalore_torpedo
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			date > 1941.1.1
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-
-	############################
-	######## AIR SECTION #######
-	############################
-
-
-	############################
-	######### INDUSTRY #########
-	############################
-
-	focus = {
-		id = RAJ_great_indian_peninsula_railway
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 8
-		y = 1
-
-		cost = 5
 		
-		prerequisite = {
-		    focus = RAJ_lessons_of_the_great_war
+		prerequisite = {focus = RAJ_provincial_elections} 
+		relative_position_id = RAJ_provincial_elections
+		
+
+		available = {
+			
 		}
-		relative_position_id = RAJ_lessons_of_the_great_war
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+			
+				
+		
+				
+	}
+
+	focus = {
+		id = RAJ_kripps_mission
+		icon = GFX_focus_RAJ_appoint_a_c_suite
+		x = -2
+		y = 1
+
+		cost = 5
 
 		ai_will_do = {
-			factor = 7
+			factor = 20
 		}
+		
+		 
+		prerequisite = {focus = RAJ_provincial_elections} 
+		relative_position_id = RAJ_provincial_elections
+		
+
+		available = {
+			has_completed_focus = RAJ_south_east_asia_command
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			
+			
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_war_support_factor = -0.05
+				tooltip = war_support_factor_tt
+			}
+		}
+			
+	}
+	
+	focus = {
+		id = RAJ_pacistan_questions
+		icon = GFX_focus_RAJ_tryst_with_destiny_PAK
+		x = -1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		 
+		prerequisite = {focus = RAJ_kripps_mission} 
+		relative_position_id = RAJ_kripps_mission
+		
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+						add_political_power = 50
+
+			
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
+			}
+		}
+			
+	}
+	
+	focus = {
+		id = RAJ_bangladesh_questions 
+		icon = GFX_focus_RAJ_tryst_with_destiny_BAN
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		 
+		prerequisite = {focus = RAJ_kripps_mission} 
+		relative_position_id = RAJ_kripps_mission
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			add_political_power = 50
+			
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_conscription_factor = 0.05
+				tooltip = conscription_factor_tt
+			}		
+		}
+	}
+	
+	focus = {
+		id = RAJ_appease_local_princes 
+		icon = GFX_focus_RAJ_the_legacy_of_babur
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		 
+		prerequisite = {focus = RAJ_national_congress} 
+		prerequisite = {focus = RAJ_unify_the_taxes_system} 
+		relative_position_id = RAJ_national_congress
+		
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}		
+		}
+	}
+	
+	focus = {
+		id = RAJ_integrity_of_india_Act 
+		icon = GFX_focus_RAJ_tryst_with_destiny
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		 
+		prerequisite = {focus = RAJ_pacistan_questions} 
+		prerequisite = {focus = RAJ_bangladesh_questions} 
+		relative_position_id = RAJ_pacistan_questions
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+				add_to_variable = { 
+					RAJ_army_dm_army_core_defence_factor = 0.05
+					tooltip = army_core_defence_factor_tt
+				}
+			
+			
+			
+			
+				
+		}
+	}
+	
+	focus = {
+		id = RAJ_jewel_of_british_crown
+		icon = GFX_focus_RAJ_sikh_religious_guarantees
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+	
+		prerequisite = {focus = RAJ_appease_local_princes} 
+		relative_position_id = RAJ_appease_local_princes
+		
+		
+
+		available = {
+			date >1939.1.1
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}	
+		}
+	}
+			
+	focus = {
+		id = RAJ_dominion_india  
+		icon = GFX_focus_RAJ_the_dominion_of_india
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		 
+		prerequisite = {focus = RAJ_integrity_of_india_Act} 
+		prerequisite = {focus = RAJ_jewel_of_british_crown} 
+		relative_position_id = RAJ_integrity_of_india_Act
+		
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.2
+				tooltip = stability_factor_tt
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			ENG = {
+				set_autonomy = {
+					target = RAJ
+					autonomous_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}	
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = RAJ_great_hindustan_railway   
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 10
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		prerequisite = {focus = RAJ_provincial_autonomy} 
+		relative_position_id = RAJ_provincial_autonomy
 
 		available = {
 			has_full_control_of_state = 428
@@ -906,94 +1461,101 @@ focus_tree = {
 			has_full_control_of_state = 433
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
-
+		
+		available_if_capitulated = yes
+		
 		completion_reward = {
-		    build_railway = { #Delhi - Karachi
+			build_railway = { #Delhi - Karachi
 			    level = 5
 				path = { 2086 10794 5086 12137 1377 4299 9973 10751 4516 4544 7537 7593 4204 4245 }
 			}
 		}
 	}
-
+	
 	focus = {
-		id = RAJ_industrial_expansion
+		id = RAJ_develop_delhi 
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = RAJ_great_indian_peninsula_railway }
-		x = -4
+		x = -2
 		y = 1
-		relative_position_id = RAJ_great_indian_peninsula_railway
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
-			factor = 25
+			factor = 20
+		}
+	
+		prerequisite = {focus = RAJ_great_hindustan_railway} 
+		relative_position_id = RAJ_great_hindustan_railway
+
+		available = {
+			has_full_control_of_state = 439
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
+		completion_reward = {
+			439 = {	
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RAJ_ishapore_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RAJ_great_hindustan_railway }
+		x = 2
+		y = 1
+		
+		relative_position_id = RAJ_great_hindustan_railway
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
 		}
 
 		available = {
-
+			has_full_control_of_state = 433
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_industrial_expansion_IC
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
+		available_if_capitulated = yes
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 437 438 433 439 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			433 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
-				set_state_flag = RAJ_industrial_expansion_IC
 			}
 		}
 	}
-
+	
 	focus = {
 		id = RAJ_tata_steel
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = RAJ_industrial_expansion }
-		x = -1
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = RAJ_great_hindustan_railway }
+		x = 0
 		y = 1
-		relative_position_id = RAJ_industrial_expansion
+	
+		relative_position_id = RAJ_great_hindustan_railway
 
 		cost = 5
 
@@ -1013,9 +1575,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		available_if_capitulated = yes
 
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1028,251 +1590,30 @@ focus_tree = {
 			}
 		}
 	}
-
+	
 	focus = {
-		id = RAJ_assam_oil
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = RAJ_industrial_expansion }
-		x = 1
-		y = 1
-		relative_position_id = RAJ_industrial_expansion
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-			modifier = {
-				factor = 2
-				has_completed_focus = RAJ_tata_steel
-			}
-		}
-
-		available = {
-			controls_state = 432
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			432 = {
-				add_resource = {
-					type = oil
-					amount = 30
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_indian_institute_of_science
-		icon = GFX_focus_research
-		prerequisite = { focus = RAJ_tata_steel }
-		prerequisite = { focus = RAJ_assam_oil }
-		x = 0
-		y = 2
-		relative_position_id = RAJ_industrial_expansion
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = RAJ_research_collaboration
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = RAJ_indian_institute_of_science }
-		x = 0
-		y = 3
-		relative_position_id = RAJ_industrial_expansion
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			if = {
-				limit = { GER = { exists = yes } }
-				
-				has_war = yes
-			}
-			
-			else = { date > 1939.9.1 }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-
-	############################
-	########## NAVY ############
-	############################
-
-	focus = {
-		id = RAJ_expand_mazagon_dock
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = RAJ_industrial_expansion }
-		prerequisite = { focus = RAJ_east_india_railways }
-		x = 3
-		y = 1
-		relative_position_id = RAJ_industrial_expansion
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_expand_mazagon_dock
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-				if = {
-					limit = { has_state_flag = RAJ_expand_mazagon_dock_NB }
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 1349
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			navy_experience = 150
-			random_owned_controlled_state = {
-				prioritize = { 429 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = RAJ_expand_mazagon_dock
-				if = {
-					limit = { state = 429 }
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 1349
-					}
-					set_state_flag = RAJ_expand_mazagon_dock_NB
-				}
-			}
-		}
-	}
-
-
-	############################
-	#### BRITISH INVESTORS #####
-	############################
-
-	focus = {
-		id = RAJ_east_india_railways
+		id = RAJ_central_railway_administration 
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = RAJ_great_indian_peninsula_railway }
-		x = 2
+		
+		
+		
+		prerequisite = { focus = RAJ_ishapore_arsenal }
+		relative_position_id = RAJ_ishapore_arsenal
+		
+		
+		x = -1
 		y = 1
-		relative_position_id = RAJ_great_indian_peninsula_railway
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-			NOT = {
-				AND = {
-					controls_state = 640
-					controls_state = 288
-					controls_state = 430
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
 		
 
+		cost = 5
+
+		
+		
+		available_if_capitulated = yes
+
+
+		
 		completion_reward = {
 			build_railway = {
 				path = {
@@ -1312,376 +1653,253 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = RAJ_administrative_oversight
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = RAJ_east_india_railways }
+		id = RAJ_indian_institute_of_science
+		icon = GFX_focus_research
+		prerequisite = { focus = RAJ_develop_delhi }
+		relative_position_id = RAJ_develop_delhi
 		x = -1
 		y = 1
-		relative_position_id = RAJ_east_india_railways
+		
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
-			factor = 30
+			factor = 50
 		}
 
-		available = {
-			date > 1939.1.1
-			}
+		
+		
+		available_if_capitulated = yes
 
-		bypass = {
 
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = RAJ_enable_local_industrialization
+			add_research_slot = 1
 		}
 	}
 	
 	focus = {
-		id = RAJ_land_clearance
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = RAJ_administrative_oversight }
-		x = -1
-		y = 1
-		relative_position_id = RAJ_administrative_oversight
-
-		cost = 3
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			hidden_effect = {
-				every_owned_state = {
-					limit = { has_state_flag = RAJ_industrialized_this_state }
-					add_extra_state_shared_building_slots = 1
-				}
-			}
-			custom_effect_tooltip = RAJ_land_clearance_effect_tt
-		}
-	}
-	
-	focus = {
-		id = RAJ_workforce_integration
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = RAJ_administrative_oversight }
+		id = RAJ_expand_mazagon_dock
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = RAJ_develop_delhi }
+		
 		x = 1
 		y = 1
-		relative_position_id = RAJ_administrative_oversight
-
-		cost = 3
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			hidden_effect = {
-				every_owned_state = {
-					limit = { has_state_flag = RAJ_industrialized_this_state }
-					add_dynamic_modifier = {
-						modifier = RAJ_industrialized_personnel
-					}
-				}
-			}
-			custom_effect_tooltip = RAJ_integration_tooltip
-			add_dynamic_modifier = {
-				modifier = RAJ_industrialized_personnel
-			}
-			custom_effect_tooltip = RAJ_integration_tooltip_post
-		}
-	}
-
-	focus = {
-		id = RAJ_ishapore_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = RAJ_east_india_railways }
-		x = 2
-		y = 1
-		relative_position_id = RAJ_east_india_railways
+		
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 30
+			factor = 20
 		}
 
-		available = {
+		
+		
+		available_if_capitulated = yes
 
+		relative_position_id = RAJ_develop_delhi
+		
+
+		completion_reward = {
+			
+			429 = {
+				
+				
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				
+				if = {
+					
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 4245
+					}
+					set_state_flag = RAJ_expand_mazagon_dock_NB
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RAJ_assam_oil
+		icon = GFX_goal_generic_oil_refinery
+		
+		prerequisite = { focus = RAJ_tata_steel }
+		x = 0
+		y = 2
+		
+		relative_position_id = RAJ_tata_steel
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				has_completed_focus = RAJ_tata_steel
+			}
+		}
+
+		
+		
+		available_if_capitulated = yes
+
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			428 = {
+				add_resource = {
+					type = oil
+					amount = 30
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = RAJ_indian_sandhurst
+		icon = GFX_focus_RAJ_issue_bonds_on_the_stock_market
+		prerequisite = { focus = RAJ_ishapore_arsenal }
+		x = 1
+		y = 1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+		
+		relative_position_id = RAJ_ishapore_arsenal
+		
+		available = {
+			date > 1937.8.1
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_ishapore_arsenal_AF
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
+		
+		
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 431 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
+			437 = {
+				
+				
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = RAJ_ishapore_arsenal_AF
+				
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			mio:RAJ_ordnance_factories_board_organization = {
+				add_mio_size = 2
+			}
+		
+		}
+	
+	
+	}
+	
+	focus = {
+		id = RAJ_british_investment_in_light_industry
+		icon = GFX_focus_SWE_landsverk
+		prerequisite = { focus = RAJ_indian_institute_of_science focus = RAJ_expand_mazagon_dock}
+		x = 1
+		y = 1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			date > 1940.6.1
+		}
+
+		relative_position_id = RAJ_indian_institute_of_science
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			439 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
 			}
 		}
 	}
-
+	
 	focus = {
-		id = RAJ_strengthen_ties_with_british_investors
-		icon = GFX_focus_RAJ_british_investors
-		prerequisite = { focus = RAJ_ishapore_arsenal }
+		id = RAJ_british_investment_in_heavy_industry 
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = RAJ_central_railway_administration focus = RAJ_indian_sandhurst} 
+		x = 1
+		y = 1
+		
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+		
+		relative_position_id = RAJ_central_railway_administration
+		
+		available = {
+			date > 1940.6.1
+		}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			439 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	
+	
+	}
+	
+	focus = {
+		id = RAJ_indomitable_will 
+		icon = GFX_focus_RAJ_the_sun_sets
+		prerequisite = {focus = RAJ_british_investment_in_light_industry}
+		prerequisite = {focus = RAJ_british_investment_in_heavy_industry}
+		prerequisite = {focus = RAJ_assam_oil}
+		
+		relative_position_id = RAJ_assam_oil
+		
 		x = 0
 		y = 1
-		relative_position_id = RAJ_ishapore_arsenal
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-            date > 1939.1.1 
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			add_autonomy_ratio = {
-				value = -0.15
-				localization = RAJ_strengthen_ties_with_british_investors
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_strengthen_ties_with_british_investors_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
-			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF2
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_british_rail_investors
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = RAJ_strengthen_ties_with_british_investors }
-		x = -1
-		y = 2
-		relative_position_id = RAJ_ishapore_arsenal
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			add_autonomy_ratio = {
-				value = -0.25
-				localization = RAJ_british_rail_investors
-			}
-			add_ideas = RAJ_british_rail_investors
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_rail_investors_IC1
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_rail_investors_IC2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			add_ideas = RAJ_british_rail_investors
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = RAJ_british_rail_investors_IC1
-			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_british_rail_investors_IC2
-			}
-		}
-	}
-
-	focus = {
-		id = RAJ_british_arms_investors
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = RAJ_strengthen_ties_with_british_investors }
-		x = 1
-		y = 2
-		relative_position_id = RAJ_ishapore_arsenal
-
-		cost = 5
+		
+		cost = 10
 
 		ai_will_do = {
 			factor = 30
@@ -1689,131 +1907,25 @@ focus_tree = {
 
 		available = {
 			
+			date > 1942.1.1
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_arms_investors_AF1
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_arms_investors_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
+		available_if_capitulated = yes
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = RAJ_british_arms_investors_AF1
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
 			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_british_arms_investors_AF2
+			
+			add_to_variable = { 
+				RAJ_jewel_of_the_british_crown_dm_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
 			}
 		}
-	}	
-
-	focus = {
-		id = RAJ_british_victory_investors
-		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
-		prerequisite = { focus = RAJ_british_arms_investors }
-		prerequisite = { focus = RAJ_british_rail_investors }
-		x = -1
-		y = 1
-		relative_position_id = RAJ_british_arms_investors
-		cost = 5
-		ai_will_do = {
-			factor = 30
-		}
-		available = {
-			date > 1940.6.1
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}	
+	}
 }
+
+

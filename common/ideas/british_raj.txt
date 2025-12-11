@@ -382,24 +382,7 @@ ideas = {
 			}
 		}
 
-		RAJ_agrarian_society = {
-
-			picture = generic_agrarian_society
-
-			allowed = {
-				original_tag = RAJ
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				conscription_factor = -0.69
-			}
-		}
+		
 
 		RAJ_quit_india_movement = {
 		
@@ -424,127 +407,21 @@ ideas = {
 				autonomy_gain = 0.4
 			}
 		}
-	}
+		
+		RAJ_hold_at_all_costs = {
 
-	naval_manufacturer = {
-		
-		designer = yes
-		
-		mazagon_dock_limited = {
-			
+			picture = RAJ_private_military_complex
+
 			allowed = {
-				has_dlc = "Together for Victory"
-				original_TAG = RAJ
+				original_tag = RAJ
 			}
 
-			picture = generic_naval_manufacturer_1
-						
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { convoy_escort_naval_manufacturer }
+			removal_cost = -1
 
-		}
-		
-		garden_reach_shipbuilders = {
-			
-			allowed = {
-				has_dlc = "Together for Victory"
-				original_TAG = RAJ
-			}
-			
-			picture = generic_naval_manufacturer_3
-			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { pacific_fleet_naval_manufacturer }
-		}
-		
-		scindia_shipyard = {
-			
-			allowed = {
-				has_dlc = "Together for Victory"
-				original_TAG = RAJ
-			}
-			
-			picture = generic_naval_manufacturer_2
-			
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { atlantic_fleet_naval_manufacturer }
-			
-		}
-		
-	}
-
-	aircraft_manufacturer = {
-			
-		designer = yes
-		
-		hindustan_aircraft= {
-			
-			allowed = {
-				has_dlc = "Together for Victory"
-				original_TAG = RAJ
-			}
-			
-			picture = generic_air_manufacturer_1
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { light_aircraft_manufacturer }
-			
 			modifier = {
-			}
-		}
-					
-	}
-	materiel_manufacturer = {
-			
-		designer = yes
-		
-		ishapore_rifle_factory = {
-			
-			allowed = {
-				has_dlc = "Together for Victory"
-				original_TAG = RAJ
-			}
-
-			picture = generic_infantry_equipment_manufacturer_2
-			
-			research_bonus = {
-				infantry_weapons = 0.15
-			}
-			
-			traits = { infantry_equipment_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		ordnance_factories_board = {
-			
-			allowed = {
-				has_dlc = "Together for Victory"
-				original_TAG = RAJ
-			}
-			
-			picture = generic_artillery_manufacturer_2
-			
-			research_bonus = {
-				artillery = 0.15
-			}
-			
-			traits = { artillery_manufacturer }
-			
-			modifier = {
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+				cas_damage_reduction = 0.05
 			}
 		}
 	}

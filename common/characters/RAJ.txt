@@ -1,4 +1,20 @@
 characters={
+	RAJ_mahatma_mohandas_gandhi={
+		name=RAJ_mahatma_mohandas_gandhi
+		portraits={
+			civilian = {
+				small = GFX_portrait_RAJ_mohandas_gandi_nuclear_small 
+				large = GFX_portrait_RAJ_mohandas_gandi_nuclear
+			}	
+		}
+		
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
 	RAJ_lord_linlithgow={
 		name=RAJ_lord_linlithgow
 		portraits={
@@ -47,11 +63,6 @@ characters={
 			civilian={
 				large="GFX_RAJ_pattabhi_sitaramayya"
 			}
-		}
-		country_leader={
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 

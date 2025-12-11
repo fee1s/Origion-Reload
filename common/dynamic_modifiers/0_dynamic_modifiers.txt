@@ -1088,13 +1088,7 @@ SOV_capital_of_the_tsars = {
 	state_production_speed_buildings_factor = 0.25
 }
 
-RAJ_agrarian_society_dynamic = { #NATIONAL SPIRIT
-	enable = { always = yes }
 
-	icon = GFX_idea_generic_agrarian_society
-	
-	conscription_factor = RAJ_agrarian_society_value
-}
 
 RAJ_industrialized_personnel = {
 	enable = { always = yes }
@@ -1765,3 +1759,39 @@ ENG_chiefs_of_staff = {
 	planning_speed = ENG_planning_speed
 	custom_modifier_tooltip = ENG_chiefs_of_staff_dm_tt
 }
+
+RAJ_army_dm = {
+	enable = {always=yes}
+	icon = GFX_idea_raj_indian_gentlemen_officers
+	
+	special_forces_attack_factor = RAJ_army_dm_special_forces_attack_factor
+	special_forces_defence_factor = RAJ_army_dm_special_forces_defence_factor
+	attrition = RAJ_army_dm_attrition
+	army_org_factor = RAJ_army_dm_army_org_factor
+	army_morale_factor = RAJ_army_dm_army_morale_factor
+	supply_consumption_factor = RAJ_army_dm_supply_consumption_factor
+	army_core_defence_factor = RAJ_army_dm_army_core_defence_factor
+	conscription_factor = RAJ_army_dm_conscription_factor
+}
+
+#RAJ_agrarian_society_dm = {
+#	enable = {always=yes}
+#	icon = GFX_idea_generic_agrarian_society
+#	
+#	conscription_factor = RAJ_agrarian_society_dm_conscription_factor
+#}
+
+RAJ_jewel_of_the_british_crown_dm = {
+	enable = {always=yes}
+	icon = GFX_idea_RAJ_sikh_inclusivity_policies
+	
+	stability_factor = RAJ_jewel_of_the_british_crown_dm_stability_factor
+	war_support_factor = RAJ_jewel_of_the_british_crown_dm_war_support_factor
+	conscription_factor = RAJ_jewel_of_the_british_crown_dm_conscription_factor
+	consumer_goods_factor = RAJ_jewel_of_the_british_crown_dm_consumer_goods_factor
+	industrial_capacity_factory = RAJ_jewel_of_the_british_crown_dm_industrial_capacity_factory
+	production_factory_max_efficiency_factor = RAJ_jewel_of_the_british_crown_dm_production_factory_max_efficiency_factor
+	local_resources_factor = RAJ_jewel_of_the_british_crown_dm_local_resources_factor
+}
+	
+	
