@@ -248,8 +248,24 @@ focus_tree = {
 				uses = 1
 				technology = infantry_at
 			}
-		}	
-	}
+			
+			random_state = {
+				prioritize = { 439 438 433 443 428 437 436 426 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+				
+		}
+			
+		
+		
+	}	
+	
 		
 	focus = {
 		id = RAJ_development_17funt
@@ -300,6 +316,16 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				technology = antitank5
+			}
+		
+			random_state = {
+				prioritize = { 439 438 433 443 428 437 436 426 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		
 		}	
@@ -353,7 +379,21 @@ focus_tree = {
 			    uses = 2
 				technology = tech_field_hospital3
 				technology = tech_field_hospital4
+			
+				random_state = {
+				prioritize = { 439 438 433 443 428 437 436 426 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
+			
+			}
+			
+			
+			
 		}	
 	}
 
@@ -393,6 +433,17 @@ focus_tree = {
 			    uses = 2
 				technology = tech_flamethrower_brigade3
 				technology = tech_flamethrower_brigade4
+				
+				random_state = {
+				prioritize = { 439 438 433 443 428 437 436 426 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
 			}
 		
 		}	
@@ -434,6 +485,17 @@ focus_tree = {
 			    uses = 1
 				technology = artillery1
 				technology = artillery2
+				
+				random_state = {
+				prioritize = { 439 438 433 443 428 437 436 426 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
 			}
 			
 		}	
@@ -475,6 +537,16 @@ focus_tree = {
 			    uses = 1
 				technology = artillery3
 				technology = artillery4
+			
+				random_state = {
+				prioritize = { 439 438 433 443 428 437 436 426 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			}
 			
 		}	
@@ -535,7 +607,7 @@ focus_tree = {
 		relative_position_id = RAJ_provincial_autonomy
 
 		available = {
-			has_tech = rangers_tech 
+			
 		}
 
 		bypass = {
@@ -914,7 +986,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = RAJ_modify_army_modifier_tt
             add_to_variable = { 
-				RAJ_army_dm_conscription_factor = 0.1 
+				RAJ_army_dm_conscription_factor = 0.1
                 tooltip = conscription_factor_tt
             }
 				
@@ -946,7 +1018,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = RAJ_modify_army_modifier_tt
             add_to_variable = { 
-				RAJ_army_dm_conscription_factor = 0.1
+				RAJ_army_dm_conscription_factor = 0.05
                 tooltip = conscription_factor_tt
             }
 		}	
@@ -1126,7 +1198,7 @@ focus_tree = {
 		
 
 		available = {
-			has_completed_focus = RAJ_south_east_asia_command
+			date > 1940.1.1
 		}
 
 		bypass = {
@@ -1153,11 +1225,11 @@ focus_tree = {
 	
 	focus = {
 		id = RAJ_pacistan_questions
-		icon = GFX_focus_RAJ_tryst_with_destiny_PAK
+		icon = GFX_focus_RAJ_the_pakistan_movement
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -1184,25 +1256,40 @@ focus_tree = {
 
 		
 		completion_reward = {
-						add_political_power = 50
-
+			add_political_power = 50
+			add_state_core = 440
+			add_state_core = 430
 			
-			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
-			add_to_variable = { 
-				RAJ_jewel_of_the_british_crown_dm_conscription_factor = 0.05
-				tooltip = conscription_factor_tt
+			
+			add_state_core = 442
+			add_state_core = 445
+			add_state_core = 444
+			add_state_core = 443
+			add_state_core = 430
+		
+			hidden_effect = {
+				COL = {
+					remove_state_core = 440
+					remove_state_core = 430
+					remove_state_core = 442
+					remove_state_core = 445
+					remove_state_core = 444
+					remove_state_core = 443
+					remove_state_core = 430
+				}
 			}
+			
 		}
 			
 	}
 	
 	focus = {
 		id = RAJ_bangladesh_questions 
-		icon = GFX_focus_RAJ_tryst_with_destiny_BAN
+		icon = GFX_focus_RAJ_hindu_mahasabha
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -1229,12 +1316,17 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 50
-			
-			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
-			add_to_variable = { 
-				RAJ_jewel_of_the_british_crown_dm_conscription_factor = 0.05
-				tooltip = conscription_factor_tt
-			}		
+			add_state_core = 288
+			add_state_core = 640
+					
+			hidden_effect = {
+				COL = {
+					remove_state_core = 640
+					remove_state_core = 288
+					
+				}
+			}
+		
 		}
 	}
 	
@@ -1326,7 +1418,11 @@ focus_tree = {
 					tooltip = army_core_defence_factor_tt
 				}
 			
-			
+			custom_effect_tooltip = RAJ_modify_army_modifier_tt
+            add_to_variable = { 
+				RAJ_army_dm_conscription_factor = 0.05
+                tooltip = conscription_factor_tt
+            }
 			
 			
 				
@@ -1369,7 +1465,7 @@ focus_tree = {
 			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
 			
 			add_to_variable = { 
-				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.05
+				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.1
 				tooltip = stability_factor_tt
 			}
 			
@@ -1435,6 +1531,9 @@ focus_tree = {
 					end_civil_wars = no
 				}	
 			}
+			
+		
+		
 		}
 	}
 	
@@ -1580,7 +1679,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
 		completion_reward = {
 			429 = {
 				add_resource = {
@@ -1672,7 +1771,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1680,14 +1779,14 @@ focus_tree = {
 	
 	focus = {
 		id = RAJ_expand_mazagon_dock
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_generic_navy_research_bonus
 		prerequisite = { focus = RAJ_develop_delhi }
 		
 		x = 1
 		y = 1
 		
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -1717,13 +1816,47 @@ focus_tree = {
 					add_building_construction = {
 						type = naval_base
 						level = 2
-						instant_build = yes
+						instant_build = yes 
 						province = 4245
 					}
 					set_state_flag = RAJ_expand_mazagon_dock_NB
 				}
 			}
+		
+			custom_effect_tooltip = raj_destroyer_tt
+				
+			hidden_effect = {
+				set_technology = { improved_ship_hull_light = 1 }
+				set_technology = { advanced_depth_charges = 1 }
+				set_technology = { improved_sonar = 1 }
+				
+				create_equipment_variant = {
+					name = "Origion India Destroyer 1"
+					type = ship_hull_light_3     
+					name_group = NAME_THEME_HISTORICAL_DESTROYERS
+					parent_version = 0
+					modules = {
+						front_1_custom_slot = ship_depth_charge_3
+						mid_1_custom_slot = ship_depth_charge_3
+						rear_1_custom_slot = ship_depth_charge_3
+						fixed_ship_radar_slot = ship_sonar_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot=ship_fire_control_system_2
+						
+						fixed_ship_battery_slot = ship_depth_charge_3
+					}
+				}
+				
+				load_oob = RAJ_fleet
+			}
+		
+		
 		}
+		
+		
+	
+	
+	
 	}
 	
 	focus = {
@@ -1750,7 +1883,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
 		completion_reward = {
 			428 = {
 				add_resource = {
