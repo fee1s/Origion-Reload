@@ -58,7 +58,7 @@ add_dynamic_modifier = {modifier = RAJ_army_dm}
 add_dynamic_modifier = {modifier = RAJ_jewel_of_the_british_crown_dm}
 
 set_variable = { 
-    RAJ_army_dm_conscription_factor = -0.85
+    RAJ_army_dm_conscription_factor = -0.95
 }
 
 set_variable = { 
@@ -68,10 +68,7 @@ set_variable = {
     RAJ_jewel_of_the_british_crown_dm_war_support_factor = -0.1
 	tooltip =  RAJ_divided_nation_dm_tt
 }
-set_variable = { 
-    RAJ_jewel_of_the_british_crown_dm_conscription_factor = -0.1
-	tooltip =  RAJ_divided_nation_dm_tt
-}
+
 set_variable = { 
     RAJ_jewel_of_the_british_crown_dm_consumer_goods_factor = 0.15
 	tooltip =  RAJ_divided_nation_dm_tt
@@ -84,7 +81,6 @@ if = {
 
 	add_to_tech_sharing_group = commonwealth_research
 }
-   
 
 
 
