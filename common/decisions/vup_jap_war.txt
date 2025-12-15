@@ -102,6 +102,12 @@ JAP_operation = {
 		
 		complete_effect = {
 			add_timed_idea = {idea = JAP_strike_midyei days = 60}
+			
+			hidden_effect = {
+				news_event = { 
+					id = origion.34
+				}	
+			}
 		}
 	}
 	

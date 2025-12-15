@@ -1093,3 +1093,30 @@ news_event = { # Юбилей Красной армии (Красной Арми
 		}
 	}
 }
+
+news_event = { # Битва за Мидуэй (Японская операция, бонусы)
+	id = origion.34
+	title = origion.34.t
+	desc = origion.34.d
+	picture = GFX_news_event_midway
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+	
+ 	option = {
+		name = origion.34.a
+		trigger = {
+			ORIGION_is_in_faction_with_axis = yes
+		}
+	}
+	
+	option = {
+		name = origion.34.b
+		trigger = {
+			ORIGION_is_in_faction_with_united_nations = yes
+		}
+	}
+}
