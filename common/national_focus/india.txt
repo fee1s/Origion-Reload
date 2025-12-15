@@ -132,7 +132,7 @@ focus_tree = {
 		relative_position_id = RAJ_lion_great_war
 
 		available = {
-			
+			has_completed_focus = RAJ_integrity_of_india_Act
 		}
 
 		bypass = {
@@ -148,7 +148,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = RAJ_modify_army_modifier_tt
             add_to_variable = { 
-				RAJ_army_dm_conscription_factor = 0.25
+				RAJ_army_dm_conscription_factor = 0.1
                 tooltip = conscription_factor_tt
             }
 				
@@ -667,12 +667,6 @@ focus_tree = {
 		prerequisite = {focus = RAJ_mobilization_reform} 
 		relative_position_id = RAJ_mobilization_reform
 
-		available = {
-			has_completed_focus = RAJ_south_east_asia_command 
-		}
-
-		
-		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1199,8 +1193,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
 			add_to_variable = { 
-				RAJ_jewel_of_the_british_crown_dm_consumer_goods_factor = -0.15
-				tooltip = consumer_goods_factor_tt
+				RAJ_jewel_of_the_british_crown_dm_consumer_goods_expected_value = -0.05
+				tooltip = consumer_goods_expected_tt
 			}
 		}
 			
@@ -1300,7 +1294,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = RAJ_modify_army_modifier_tt
             add_to_variable = { 
-				RAJ_army_dm_conscription_factor = 0.1
+				RAJ_army_dm_conscription_factor = 0.025
                 tooltip = conscription_factor_tt
             }				
 			
@@ -1326,7 +1320,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -1367,7 +1361,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = RAJ_modify_army_modifier_tt
             add_to_variable = { 
-				RAJ_army_dm_conscription_factor = 0.1
+				RAJ_army_dm_conscription_factor = 0.025
                 tooltip = conscription_factor_tt
             }
 			
@@ -1473,7 +1467,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = RAJ_modify_army_modifier_tt
             add_to_variable = { 
-				RAJ_army_dm_conscription_factor = 0.45
+				RAJ_army_dm_conscription_factor = 0.05
                 tooltip = conscription_factor_tt
             }
 			
@@ -1528,8 +1522,8 @@ focus_tree = {
 			}
 			
 			add_to_variable = { 
-				RAJ_jewel_of_the_british_crown_dm_consumer_goods_factor = -0.15
-				tooltip = consumer_goods_factor_tt
+				RAJ_jewel_of_the_british_crown_dm_consumer_goods_expected_value = -0.05
+				tooltip = consumer_goods_expected_tt
 			}	
 		}
 	}
@@ -1649,11 +1643,11 @@ focus_tree = {
 		
 		completion_reward = {
 			439 = {	
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1687,10 +1681,10 @@ focus_tree = {
 
 		completion_reward = {
 			433 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1900,7 +1894,7 @@ focus_tree = {
 		y = 2
 		
 		relative_position_id = RAJ_tata_steel
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
