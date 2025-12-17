@@ -1120,3 +1120,47 @@ news_event = { # Битва за Мидуэй (Японская операция
 		}
 	}
 }
+
+news_event = { # План «Кантокуэн» (Японская операция)
+	id = origion.35
+	title = origion.35.t
+	desc = origion.35.d
+	picture = GFX_news_event_kantokuen
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+	
+ 	option = {
+		name = origion.35.a
+		trigger = {
+			ORIGION_is_in_faction_with_axis = yes
+		}
+	}
+	
+	option = {
+		name = origion.35.b
+		trigger = {
+			ORIGION_is_in_faction_with_united_nations = yes
+		}
+	}
+}
+
+country_event = { # Предупреждение об атаке Японии (Для СССР)
+	id = origion.36
+	title = origion.36.t
+	desc = origion.36.d
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = yes
+	
+ 	option = {
+		name = origion.36.a
+	}
+}

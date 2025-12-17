@@ -1207,6 +1207,9 @@ JAP_zaibatsu_dm = {
 	political_power_cost = JAP_political_power_cost 
 	consumer_goods_expected_value = JAP_consumer_goods_expected_value
 	production_speed_dockyard_factor = JAP_production_speed_dockyard_factor 
+	global_building_slots_factor = JAP_zaibatsu_dm_global_building_slots_factor
+	
+	custom_modifier_tooltip = JAP_zaibatsu_dm_tt
 }
 
 JAP_emperor_army_dm = {
@@ -1224,6 +1227,11 @@ JAP_emperor_army_dm = {
 	army_defence_factor = JAP_army_defence_factor
 	sortie_efficiency = JAP_sortie_efficiency
 	naval_torpedo_screen_penetration_factor = JAP_naval_torpedo_screen_penetration_factor
+	
+	# филс, продолжаю переносить идеи в динамики
+	
+	convoy_retreat_speed = JAP_emperor_army_dm_convoy_retreat_speed
+	supply_factor = JAP_emperor_army_dm_supply_factor
 }
 
 JAP_militarism_dm = {

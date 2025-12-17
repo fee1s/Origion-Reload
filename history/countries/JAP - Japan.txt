@@ -23,7 +23,7 @@ add_to_faction = JAP
 set_research_slots = 6
 set_fuel_ratio = 1.0
 add_ideas = {
-	state_shintoism
+	# state_shintoism
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
@@ -36,7 +36,7 @@ set_variable = {JAP_army_heat_attrition_factor = 0}
 set_variable = {JAP_army_terrain_penalty_reduction = 0}
 set_variable = {JAP_army_conscription_factor = 0}
 set_variable = {JAP_army_org_factor = -0.15}
-set_variable = {JAP_army_morale_factor = 0}
+set_variable = {JAP_army_morale_factor = 0.1 }
 set_variable = {JAP_army_defence_factor = 0}
 set_variable = {JAP_army_defence_factor = 0}
 add_dynamic_modifier = { modifier = JAP_emperor_army_dm }
@@ -54,6 +54,7 @@ set_variable = {JAP_consumer_goods_expected_value = 0.05}
 set_variable = {JAP_capacity_factory = 0.05}
 set_variable = {JAP_production_speed_arms_factory_factor = 0.05}
 set_variable = {JAP_production_speed_industrial_complex_factor = 0.05}
+set_variable = {JAP_zaibatsu_dm_global_building_slots_factor = 0.3}
 add_dynamic_modifier = { modifier = JAP_zaibatsu_dm }
 
 #JAP_militarism_dm (feels, 03.12.25)

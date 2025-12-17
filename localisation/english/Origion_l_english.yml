@@ -312,6 +312,20 @@ CAN_army_dm_tt:0 "[CAN_assult_rifle][CAN_asia_dm_tt][CAN_euro_dm_tt] \n"
 CAN_rifle_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-10.00%§! \n"
 CAN_euro_tt:0 "§Y$motorized$§!:\n $production_cost_tt$ §G-10.00%§! \n"
 CAN_asia_tt:0 "§Y$amphibious_mechanized_equipment$§!:\n $production_cost_tt$ §G-10.00%§! \n"
+
+JAP_zaibatsu_dm_tt:0 "[JAP_investion_osaka_arsenal_dm_tt][JAP_unified_fighter_development_2_dm_tt][JAP_unified_fighter_development_2_and_pa_dm_tt][JAP_the_zero_dm_tt][JAP_the_zero_and_pn_dm_tt][JAP_prioritize_aircraft_construction_dm_tt] \n"
+
+JAP_investion_osaka_arsenal_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-10.00%§! \n§Y$anti_air_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_tank_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$artillery_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n"
+
+JAP_unified_fighter_development_2_tt:0 "§Y$mio_cat_eq_all_small_plane$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$mio_cat_eq_all_medium_plane$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$mio_cat_eq_all_large_plane$§!:\n $production_cost_tt$ §G-5.00%§! \n"
+
+JAP_prioritize_army_aircraft_construction_tt:0 "§Y$mio_cat_eq_all_medium_plane$§!:\n $production_cost_tt$ §G-10.00%§! \n"
+JAP_prioritize_naval_aircraft_construction_tt:0 "§Y$cv_small_plane_airframe$§!:\n $production_cost_tt$ §G-20.00%§! \n"
+
+JAP_unified_fighter_development_2_and_pa_tt:0 "§Y$mio_cat_eq_all_small_plane$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$mio_cat_eq_all_medium_plane$§!:\n $production_cost_tt$ §G-15.00%§! \n§Y$mio_cat_eq_all_large_plane$§!:\n $production_cost_tt$ §G-5.00%§! \n"
+
+JAP_the_zero_tt:0 "§Y$cv_small_plane_airframe$§!:\n $air_range_factor_tt$ §G+35%§! \n"
+JAP_the_zero_and_pn_tt:0 "§Y$cv_small_plane_airframe$§!:\n $production_cost_tt$ §G-20.00%§! \n $air_range_factor_tt$ §G+35%§! \n"
 ENG_stoyak:0 "British Stoicism"
 ENG_chiefs_of_staff:0 "Committee of Chiefs of Staff"
 ENG_stoyak_intro:0 "Modify §Y$ENG_stoyak$§! by"
@@ -372,7 +386,7 @@ JAP_guide_the_zaibatsus_tt: "Modify §Y$JAP_zaibatsu_dm$§! by \nConstruction sp
 JAP_expand_chromium_tt: "Modify §Y$JAP_zaibatsu_dm$§! by \nResource efficiency increase: §G+5.0%§! \n\n"
 JAP_tokyo_weapon_investion_tt: "Modify §Y$JAP_zaibatsu_dm$§! by \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §G+10.0%§! \n\n"
 JAP_industry_upgrade_tt: "Modify §Y$JAP_zaibatsu_dm$§! by \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.0%§! \n\n"
-JAP_secure_china_tt: "Building slots will be added on §Cthe coast of China§!."
+JAP_secure_china_tt: "§gThe number of construction slots along the coast of the Chinese Republic will be greatly increased..§!"
 JAP_war_economic_tt: "\nModify §Y$JAP_zaibatsu_dm$§! by \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y-3.0%§! \n\n"
 JAP_optimization_tt: "Modify §Y$JAP_zaibatsu_dm$§! by \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.0%§! \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: §G+5.0%§! \n\n"
 JAP_centralized_economic_tt: "Modify §Y$JAP_zaibatsu_dm$§! by \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10.0%§! \n\n"
@@ -536,6 +550,15 @@ origion.34.t: "Battle of Midway"
 origion.34.d: "In the area around Midway Atoll, distant from major supply lines and communications, an operation long in preparation is underway. Carrier task forces are moving into the sea, aircraft are being deployed to forward positions, and the plan relies on surprise, carrier aviation range, and precise coordination of strikes. \n\nThis bold action, far from the home bases, aims to disrupt the existing balance of power in the Pacific. Success could grant strategic initiative and impose a new tempo of war on the opponent, while delay or miscalculation could carry consequences far beyond a single operation." 
 origion.34.a: "Historic moment" 
 origion.34.b: "Dangerous gamble"
+
+origion.35.t: "Japan Denounces the Neutrality Pact"
+origion.35.d: "Following the defeat of Western powers in the southern seas and the establishment of control over India, the Japanese Empire gained the freedom to execute previously postponed plans. The Kantokuen plan, designed as a scenario for war against the Soviet Union, was put into action. \n\nThe Kwantung Army began offensive operations along the Far Eastern borders, seeking to exploit the favorable moment and the redeployment of Soviet forces to other fronts. The decision to commence the campaign marks the transition of the conflict into a continental phase in Asia."
+origion.35.a: "Forward!"
+origion.35.b: "Strike from the rear!"
+
+origion.36.t: "Increased Japanese Activity in the Far East"
+origion.36.d: "In recent weeks, noticeable changes have been observed on the opposite side of the Far Eastern border. Japanese units are increasingly detected on the move, with a rise in the transport of personnel and equipment along railways and in border areas. \n\nAir activity and reconnaissance efforts have intensified, and incidents that were previously isolated have become more frequent. Formally, the situation remains calm; however, what is taking place bears less and less resemblance to routine maneuvers."
+origion.36.a: "This is concerning"
 
 # Bookmarks
 
@@ -1041,10 +1064,6 @@ GER_operation_margareta_tt: "We will carry out an operation to remove §YMiklós
 
 GER_modify_eco_modifier_tt: "Modify §Y$ger_economy_dm$§! by"
 GER_modify_arm_modifier_tt: "Modify §Y$ger_wehrmacht_dm$§! by"
-consumer_goods_expected_tt: " $MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: $RIGHT|Y=%1$"
-fuel_gain_from_states_factor_tt: "$MODIFIER_FUEL_GAIN_FACTOR_FROM_STATES$: $RIGHT|+=%1$"
-navy_capital_ship_attack_factor_tt: "$MODIFIER_NAVY_CAPITAL_SHIP_ATTACK_FACTOR$: $RIGHT|+=2%$"
-land_equipment_upgrade_xp_cost_tt: "$MODIFIER_LAND_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%$"
 
 decision_unlock_blau: "Operation can be activated \nduring §YJune 1, 1942§! to §YSeptember 1, 1942§!."
 decision_unlock_doppelkopf: "Operation can be activated \nduring §YJune 1, 1943§! to §YSeptember 1, 1943§!."
@@ -1065,6 +1084,7 @@ ITA_modify_regio_esercito_modifier_tt: "Modify §YRegio Esercito§! by"
 
 JAP_modify_emperor_army_modifier_tt: "Modify §Y$JAP_emperor_army_dm$§! by"
 JAP_modify_militarism_modifier_tt: "Modify §Y$JAP_militarism_dm$§! by"
+JAP_modify_zaibatsu_modifier_tt: "Modify §Y$JAP_zaibatsu_dm$§! by"
 
 tech_tooltip: "Researching these technologies grants them to the entire alliance"
 tech_tooltip_armor: "Chassis technologies automatically become available to the entire alliance"

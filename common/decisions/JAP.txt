@@ -182,9 +182,13 @@ JAP_interservice_rivalry = {
             	value = -0.4
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
-			add_ideas = JAP_prioritize_army_aircraft_construction
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = JAP_modify_zaibatsu_modifier_tt
+			custom_effect_tooltip = JAP_prioritize_army_aircraft_construction_tt
+			
+			hidden_effect = { add_ideas = JAP_prioritize_army_aircraft_construction activate_mission = JAP_bop_timeout }
 			set_country_flag = JAP_prioritize_army_aircraft_construction
-			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_prioritize_naval_aircraft_construction = {
@@ -220,9 +224,13 @@ JAP_interservice_rivalry = {
             	value = 0.4
     	    }
 			set_country_flag = { flag = JAP_war_conferences_cd value = 1 days = 180 }
-			add_ideas = JAP_prioritize_naval_aircraft_construction
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = JAP_modify_zaibatsu_modifier_tt
+			custom_effect_tooltip = JAP_prioritize_naval_aircraft_construction_tt
+			
+			hidden_effect = { add_ideas = JAP_prioritize_naval_aircraft_construction activate_mission = JAP_bop_timeout }
 			set_country_flag = JAP_prioritize_naval_aircraft_construction
-			activate_mission = JAP_bop_timeout
 		}
 	}
 	JAP_everybody_serves = {

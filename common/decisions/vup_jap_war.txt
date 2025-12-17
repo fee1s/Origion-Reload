@@ -101,13 +101,10 @@ JAP_operation = {
 		is_good = yes
 		
 		complete_effect = {
-			add_timed_idea = {idea = JAP_strike_midyei days = 60}
-			
-			hidden_effect = {
-				news_event = { 
-					id = origion.34
-				}	
-			}
+			news_event = { 
+				id = origion.34
+			}	
+			add_timed_idea = {idea = JAP_strike_midyei days = 60}	
 		}
 	}
 	
@@ -140,21 +137,21 @@ JAP_operation = {
 		days_remove = 90
 		cost = 25
 		remove_effect = {
-			672 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			721 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			335 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			334 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			667 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
+			#672 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#721 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#335 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#334 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#667 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
 			672 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -262,12 +259,12 @@ JAP_operation = {
 		days_remove = 90
 		cost = 25
 		remove_effect = {
-			333 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			336 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
+			#333 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#336 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
 			336 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -327,12 +324,12 @@ JAP_operation = {
 		days_remove = 90
 		cost = 25
 		remove_effect = {
-			640 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			288 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
+			#640 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#288 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
 			288 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -444,29 +441,24 @@ JAP_operation = {
 		days_remove = 90
 		cost = 25
 		remove_effect = {
-			623 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			327 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			624 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			625 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			627 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			628 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			hidden_effect = {
-				626 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-				}	
-			}
+			#623 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#327 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#624 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#625 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#627 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#628 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
 			623 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -548,24 +540,24 @@ JAP_operation = {
 		days_remove = 90
 		cost = 25
 		remove_effect = {
-			623 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			626 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			327 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			624 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			625 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
-			628 = {
-				add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
-			}
+			#623 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#626 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#327 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#624 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#625 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
+			#628 = {
+			#	add_dynamic_modifier = { modifier = no_jap_asian_wal_dm scope = JAP }
+			#}
 			628 = {
 				add_building_construction = {
 					type = coastal_bunker
@@ -675,34 +667,41 @@ JAP_operation = {
 		
 		available = {
 			has_completed_focus = JAP_strike_sov
-			has_full_control_of_state = 672
-			has_full_control_of_state = 333
-			has_full_control_of_state = 334
-			has_full_control_of_state = 336
-			has_full_control_of_state = 430
-			has_full_control_of_state = 335
-			has_full_control_of_state = 284
-			has_full_control_of_state = 285
-			has_full_control_of_state = 631
-			has_full_control_of_state = 630
-			has_full_control_of_state = 727
-			has_full_control_of_state = 723
-			has_full_control_of_state = 284
+			has_full_control_of_state = 439	
 			has_full_control_of_state = 285
 			has_full_control_of_state = 629
 		}
 		
 		fire_only_once = yes
 		is_good = yes
+		days_remove = 30
 		
 		complete_effect = {
-			declare_war_on = {
-				target = SOV
-				type = annex_everything
+			every_country = {
+			    limit = {
+				    original_tag = SOV
+				}
+		    	country_event = { 
+		    	    id = origion.36
+		    	}
 			}
-			
+		}
+		
+		modifier = { dig_in_speed_factor = 1 supply_factor = 0.5 }
+		
+		remove_effect = {
+			hidden_effect = { 
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+		    news_event = { 
+		        id = origion.35
+			}
 			add_timed_idea = { idea = JAP_strike_sov days = 90}
 		}
+			
 	}	
 }
 

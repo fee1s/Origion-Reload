@@ -1608,3 +1608,69 @@ defined_text = {
 		localization_key = british_tank_discount_tt
 	}
 }
+defined_text = {
+	name = JAP_investion_osaka_arsenal_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = JAP_investion_osaka_arsenal
+		}
+		localization_key = JAP_investion_osaka_arsenal_tt
+	}
+}
+defined_text = {
+	name = JAP_the_zero_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = JAP_the_zero
+			JAP = { NOT = { has_country_flag = JAP_prioritize_naval_aircraft_construction } }
+		}
+		localization_key = JAP_the_zero_tt
+	}
+}
+defined_text = {
+	name = JAP_the_zero_and_pn_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = JAP_the_zero
+			JAP = { has_country_flag = JAP_prioritize_naval_aircraft_construction }
+		}
+		localization_key = JAP_the_zero_and_pn_tt
+	}
+}
+defined_text = {
+	name = JAP_unified_fighter_development_2_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = JAP_unified_fighter_development_2
+			JAP = { NOT = { has_country_flag = JAP_prioritize_army_aircraft_construction } }
+		}
+		localization_key = JAP_unified_fighter_development_2_tt
+	}
+}
+defined_text = {
+	name = JAP_unified_fighter_development_2_and_pa_dm_tt
+	text = {
+		trigger = {
+			has_completed_focus = JAP_unified_fighter_development_2
+			JAP = { has_country_flag = JAP_prioritize_army_aircraft_construction }
+		}
+		localization_key = JAP_unified_fighter_development_2_and_pa_tt
+	}
+}
+defined_text = {
+	name = JAP_prioritize_aircraft_construction_dm_tt
+	text = {
+		trigger = {
+			NOT = { has_completed_focus = JAP_unified_fighter_development_2 }
+			JAP = { has_country_flag = JAP_prioritize_army_aircraft_construction }
+		}
+		localization_key = JAP_prioritize_army_aircraft_construction_tt
+	}
+	text = {
+		trigger = {
+			NOT = { has_completed_focus = JAP_the_zero }
+			JAP = { has_country_flag = JAP_prioritize_naval_aircraft_construction }
+		}
+		localization_key = JAP_prioritize_naval_aircraft_construction_tt
+	}
+}
