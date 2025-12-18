@@ -327,6 +327,12 @@ JAP_unified_fighter_development_2_and_pa_tt:0 "§Y$mio_cat_eq_all_small_plane$§
 JAP_the_zero_tt:0 "§Y$cv_small_plane_airframe$§!:\n $air_range_factor_tt$ §G+35%§! \n"
 JAP_the_zero_and_pn_tt:0 "§Y$cv_small_plane_airframe$§!:\n $production_cost_tt$ §G-20.00%§! \n $air_range_factor_tt$ §G+35%§! \n"
 
+ger_economy_dm_tt:0 "[GER_inspection_in_infantry_dm_tt][GER_inspection_in_air_dm_tt][GER_inspection_in_tanks_dm_tt][GER_u_boat_efforts_dm_tt]"
+GER_inspection_in_air_tt:0 "§Y$mio_cat_eq_all_small_plane$§!:\n $STAT_COMMON_MAXIMUM_SPEED$§G+5%§! \n $STAT_COMMON_RELIABILITY$§G+5%§! \n$air_range_factor_tt$§G+5%§! \n $production_cost_tt$ §G-3.00%§! \n\n"
+GER_inspection_in_tanks_tt:0 "§Y$mio_cat_eq_all_tanks$§!:\n $STAT_COMMON_RELIABILITY$§G+5%§! \n $STAT_COMMON_MAXIMUM_SPEED$§G+5%§! \n $STAT_ARMY_BREAKTHROUGH$§G+5%§! \n $production_cost_tt$ §G-3.00%§! \n\n"
+GER_u_boat_efforts_tt:0 "§Y$submarine$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
+GER_inspection_in_infantry_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_air_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_tank_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$artillery_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
+
 ENG_stoyak:0 "Британский стоицизм"
 ENG_chiefs_of_staff:0 "Комитет начальников штабов"
 ENG_stoyak_intro:0 "Идея §Y$ENG_stoyak$§! будет изменена на"
@@ -755,6 +761,25 @@ ENG_burma_focus_tt: "Добавит по §Y2 укрепления§! в каж�
 ENG_australia_focus_tt: "Добавит по §Y3 морских укрепления§! в каждый порт в §Yконтинентальной Австралии§!\nТакже вы получите §Yавиабазы§! максимального уровня в §YНовом Южном Уэльсе§! и §YВиктории§!"
 uk_noasia_fleet_idea: "Перевооружения флота"
 ROM_oil_reservation: "Исследования по нефтепереработке"
+
+BUL_national_industry_dm:0 "Национальная промышленность"
+BUL_national_industry_dm_tt:0 "[BUL_found_the_brannik_dm_tt]"
+BUL_modify_national_industry_tt:0 "§Y$BUL_national_industry_dm$§! изменится на"
+
+BUL_found_the_brannik_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-10.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
+
+BUL_second_national_catastrophe_dm:0 "Вторая национальная катастрофа"
+BUL_second_national_catastrophe_dm_desc:0 "После нашего поражения в Великой войне Нейиский договор заставил нас уступить обширные территории Югославии, Греции и Румынии; до недавнего времени Лига Наций требовала от нас в первую очередь выплачивать крупные суммы в счёт репараций, что ухудшало экономику и неизбежно повышало долг страны. Дух нации так полностью и не оправился от такого удара, и неудивительно, что в Болгарии этот договор известен как Вторая национальная катастрофа..."
+
+BUL_bulgarian_irredentism_dm:0 "Болгарский ирредентизм"
+BUL_bulgarian_irredentism_dm_desc:0 "Болгарский национализм взывает к необходимости изменить балканские границы в пользу Болгарии, и с этим согласятся даже коммунисты и демократы. Мы должны подчеркнуть необходимость восстановления Великой Болгарии как общую цель нашего народа."
+
+BUL_modify_second_national_catastrophe_tt:0 "§Y$BUL_second_national_catastrophe_dm$§! изменится на"
+BUL_modify_bulgarian_irredentism_tt:0 "§Y$BUL_bulgarian_irredentism_dm$§! изменится на"
+BUL_modify_military_dictatorship_tt:0 "§Y$BUL_military_dictatorship_dm$§! изменится на"
+
+BUL_military_dictatorship_dm:0 "Военная диктатура"
+BUL_military_dictatorship_dm_desc:0 "Мы должны взять полноту власти в свои руки и править страной в качестве военного авторитарного режима, допускающего любые методы во имя военных устремлений."
 
 BUL_tanks_research:0 "Разработка танков"
 BUL_entering_totalen_krieg:0 "Поддержание военной машины"

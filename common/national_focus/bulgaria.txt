@@ -84,7 +84,15 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			remove_ideas = BUL_army_restrictions
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_industrial_capacity_factory = 0.25
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_industrial_capacity_dockyard = 0.25
+				tooltip = industrial_capacity_dockyard_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -413,7 +421,15 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_ideas = BUL_prussia_of_the_balkans_01
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_conscription_factor = 0.15
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
 		}
 	}
 	
@@ -430,9 +446,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = BUL_prussia_of_the_balkans_01
-				add_idea = BUL_prussia_of_the_balkans_02
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_supply_factor = 0.05
+				tooltip = supply_factor_tt
 			}
 		}
 	}
@@ -450,9 +467,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = BUL_prussia_of_the_balkans_01
-				add_idea = BUL_prussia_of_the_balkans_03
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_air_cas_present_factor = 0.05
+				tooltip = air_cas_present_factor_tt
 			}
 		}
 	}
@@ -570,7 +588,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_ideas = BUL_brannik
+			custom_effect_tooltip = BUL_modify_national_industry_tt
+			custom_effect_tooltip = BUL_found_the_brannik_tt
+			
+			hidden_effect = { add_ideas = BUL_brannik }
 		}
 	}
 	
@@ -591,7 +612,11 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			add_ideas = BUL_military_dictatorship
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_conscription = 0.025
+				tooltip = conscription_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -620,9 +645,14 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = BUL_military_dictatorship
-				add_idea = BUL_military_dictatorship_2
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_army_core_attack_factor = 0.05
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_army_core_defence_factor = 0.05
+				tooltip = army_core_defence_factor_tt
 			}
 		}
 	}
@@ -643,9 +673,14 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = BUL_brannik
-				add_idea = BUL_brannik_2
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_training_time_army_factor = -0.15
+				tooltip = training_time_army_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_conscription = 0.005
+				tooltip = conscription_tt
 			}
 		}
 	}
@@ -668,9 +703,22 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_national_industry_04
-				add_idea = BUL_national_industry_05
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_global_building_slots_factor = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_buildings_factor = -0.15
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_efficiency_gain_factor = 0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 	}
@@ -759,9 +807,18 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			swap_ideas ={
-				remove_idea = BUL_military_dictatorship_2
-				add_idea = BUL_military_dictatorship_3
+			custom_effect_tooltip = BUL_modify_military_dictatorship_tt
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_conscription = 0.05
+				tooltip = conscription_tt
+			}
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_army_core_attack_factor = 0.15
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_military_dictatorship_dm_army_core_defence_factor = 0.15
+				tooltip = army_core_defence_factor_tt
 			}
 		}
 	}
@@ -783,9 +840,14 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 		completion_reward = {
-		    swap_ideas = {
-				remove_idea = BUL_second_national_catastrophe
-				add_idea = BUL_second_national_catastrophe_02
+			custom_effect_tooltip = BUL_modify_second_national_catastrophe_tt
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -853,7 +915,19 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			add_ideas = BUL_government_reforms_fascists_01
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_consumer_goods_expected_value = -0.015
+				tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
 		}
 	}
 
@@ -869,9 +943,18 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_government_reforms_fascists_01
-				add_idea = BUL_government_reforms_fascists_02
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_consumer_goods_expected_value = -0.01
+				tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
 			}
 		}
 	}
@@ -888,9 +971,22 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_government_reforms_fascists_02
-				add_idea = BUL_government_reforms_fascists_03
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_consumer_goods_expected_value = -0.005
+				tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_arms_factory_factor = 0.05
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_min_export = -0.1
+				tooltip = min_export_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -918,10 +1014,21 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-		    swap_ideas = {
-				remove_idea = BUL_second_national_catastrophe_02
-				add_idea = BUL_bulgarian_irredentism
+			custom_effect_tooltip = BUL_modify_second_national_catastrophe_tt
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_stability_factor = 0.1
+				tooltip = stability_factor_tt
 			}
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_war_support_factor = 0.2
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_surrender_limit = 1
+				tooltip = surrender_limit_tt
+			}
+			
+			hidden_effect = { remove_dynamic_modifier = { modifier = BUL_second_national_catastrophe_dm } add_dynamic_modifier = { modifier = BUL_bulgarian_irredentism_dm } }
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -945,7 +1052,15 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			add_ideas = BUL_bulgarian_patriarchate_restored
+			custom_effect_tooltip = BUL_modify_bulgarian_irredentism_tt
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_political_power_gain = 0.15
+				tooltip = political_power_gain_tt
+			}
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_stability_factor = 0.15
+				tooltip = stability_factor_tt
+			}
 		}
 	}
 
@@ -997,7 +1112,11 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-		    add_ideas = BUL_national_industry_01
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 		
@@ -1024,9 +1143,18 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-		    swap_ideas = {
-				remove_idea = BUL_national_industry_01
-				add_idea = BUL_national_industry_02
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_max_efficiency_factor = 0.02
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_efficiency_gain_factor = -0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 	}
@@ -1046,13 +1174,23 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-		    swap_ideas = {
-				remove_idea = BUL_national_industry_02
-				add_idea = BUL_national_industry_03
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
 			}
-			add_research_slot = 1
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_max_efficiency_factor = 0.03
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_efficiency_gain_factor = -0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_research_slot = 1
 		}
 	}
 
@@ -1071,9 +1209,22 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_national_industry_03
-				add_idea = BUL_national_industry_04
+		    custom_effect_tooltip = BUL_modify_national_industry_tt
+			add_to_variable = { 
+			    BUL_national_industry_dm_global_building_slots_factor = 0.2
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_national_industry_dm_production_factory_efficiency_gain_factor = -0.1
+				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt

@@ -12,8 +12,8 @@ Convoy_fix:0 "Fix convoy bug"
 FRA_WIN_Africa:0 "Ask Britain for control of Algeria"
 FRA_closed_eco:0 "Government in exile"
 USA_annex_ENG:0 "Reverse colonization"
-start_eff:0 "Ramp up production"
-start_efficiency:0 "Ramp up production"
+start_eff:0 "Production boost"
+start_efficiency:0 "Production boost"
 soviet_military_offensive_was_done:0 "The offensive has been carried out"
 AST_annex:0 "Cooperation between dominions"
 AST_annex_NZL:0 "Integrate New Zealand"
@@ -326,6 +326,13 @@ JAP_unified_fighter_development_2_and_pa_tt:0 "§Y$mio_cat_eq_all_small_plane$§
 
 JAP_the_zero_tt:0 "§Y$cv_small_plane_airframe$§!:\n $air_range_factor_tt$ §G+35%§! \n"
 JAP_the_zero_and_pn_tt:0 "§Y$cv_small_plane_airframe$§!:\n $production_cost_tt$ §G-20.00%§! \n $air_range_factor_tt$ §G+35%§! \n"
+
+ger_economy_dm_tt:0 "[GER_inspection_in_infantry_dm_tt][GER_inspection_in_air_dm_tt][GER_inspection_in_tanks_dm_tt][GER_u_boat_efforts_dm_tt]"
+GER_inspection_in_air_tt:0 "§Y$mio_cat_eq_all_small_plane$§!:\n $STAT_COMMON_MAXIMUM_SPEED$§G+5%§! \n $STAT_COMMON_RELIABILITY$§G+5%§! \n$air_range_factor_tt$§G+5%§! \n $production_cost_tt$ §G-3.00%§! \n\n"
+GER_inspection_in_tanks_tt:0 "§Y$mio_cat_eq_all_tanks$§!:\n $STAT_COMMON_RELIABILITY$§G+5%§! \n $STAT_COMMON_MAXIMUM_SPEED$§G+5%§! \n $STAT_ARMY_BREAKTHROUGH$§G+5%§! \n $production_cost_tt$ §G-3.00%§! \n\n"
+GER_u_boat_efforts_tt:0 "§Y$submarine$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
+GER_inspection_in_infantry_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_air_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_tank_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$artillery_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
+
 ENG_stoyak:0 "British Stoicism"
 ENG_chiefs_of_staff:0 "Committee of Chiefs of Staff"
 ENG_stoyak_intro:0 "Modify §Y$ENG_stoyak$§! by"
@@ -759,6 +766,25 @@ ENG_burma_focus_tt: "Adds §Y2 fortifications§! to each city in §YEastern and 
 ENG_australia_focus_tt: "Adds §Y3 naval fortifications§! to each port in §Ycontinental Australia§! Also provides §Yairbases§! at maximum level in §YNew South Wales§! and §YVictoria§!"
 uk_noasia_fleet_idea: "Fleet rearmament"
 ROM_oil_reservation: "Oil refining research"
+
+BUL_national_industry_dm:0 "National Industry"
+BUL_national_industry_dm_tt:0 "[BUL_found_the_brannik_dm_tt]"
+BUL_modify_national_industry_tt:0 "Modify §Y$BUL_national_industry_dm$§! by"
+
+BUL_found_the_brannik_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-10.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
+
+BUL_second_national_catastrophe_dm:0 "Second National Catastrophe"
+BUL_second_national_catastrophe_dm_desc:0 "Following our defeat in the Great War, the Treaty of Neuilly-sur-Seine forced us to cede vast territories that now belong to Yugoslavia, Greece, and Romania, and until recently the League of Nations required us to prioritize the payment of large sums of war reparations, crippling our economy and inevitably increasing the debt of our country. The national spirit has never really recovered from this blow, so it is no wonder why this treaty is popularly known in Bulgaria as the Second National Catastrophe..."
+
+BUL_bulgarian_irredentism_dm:0 "Bulgarian Irredentism"
+BUL_bulgarian_irredentism_dm_desc:0 "Bulgarian nationalism calls for the necessity to redraw the Balkan borders in favor of Bulgaria, and even the communists and the democrats will agree with that. We must emphasize the need to restore Greater Bulgaria, a common goal for all our people."
+
+BUL_modify_second_national_catastrophe_tt:0 "Modify §Y$BUL_second_national_catastrophe_dm$§! by"
+BUL_modify_bulgarian_irredentism_tt:0 "Modify §Y$BUL_bulgarian_irredentism_dm$§! by"
+BUL_modify_military_dictatorship_tt:0 "Modify §Y$BUL_military_dictatorship_dm$§! by"
+
+BUL_military_dictatorship_dm:0 "Military Dictatorship"
+BUL_military_dictatorship_dm_desc:0 "We must take full control of the country and rule it under a militaristic authoritarian regime that allows us to take the necessary measures to continue our military efforts."
 
 BUL_tanks_research:0 "Tank development"
 BUL_entering_totalen_krieg:0 "Maintaining the war machine"

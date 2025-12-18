@@ -1417,6 +1417,8 @@ ger_economy_dm = {
 	production_speed_dockyard_factor = ger_economy_dm_production_speed_dockyard_factor
 	local_resources_factor = ger_economy_dm_local_resources_factor
 	consumer_goods_expected_value = ger_economy_dm_consumer_goods_expected_value
+	
+	custom_modifier_tooltip = ger_economy_dm_tt
 }
 
 ger_wehrmacht_dm = {
@@ -1802,5 +1804,71 @@ RAJ_jewel_of_the_british_crown_dm = {
 	production_factory_max_efficiency_factor = RAJ_jewel_of_the_british_crown_dm_production_factory_max_efficiency_factor
 	local_resources_factor = RAJ_jewel_of_the_british_crown_dm_local_resources_factor
 }
+
+BUL_national_industry_dm = {
+	icon = GFX_idea_bul_national_industry
+	enable = { always = yes }
+	
+	production_speed_buildings_factor = BUL_national_industry_dm_production_speed_buildings_factor
+	production_factory_efficiency_gain_factor = BUL_national_industry_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = BUL_national_industry_dm_production_factory_max_efficiency_factor
+	global_building_slots_factor = BUL_national_industry_dm_global_building_slots_factor
+	
+	industrial_capacity_factory = BUL_national_industry_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = BUL_national_industry_dm_industrial_capacity_dockyard
+	
+	production_speed_arms_factory_factor = BUL_national_industry_dm_production_speed_arms_factory_factor
+	consumer_goods_expected_value = BUL_national_industry_dm_consumer_goods_expected_value
+	local_resources_factor = BUL_national_industry_dm_local_resources_factor
+	min_export = BUL_national_industry_dm_min_export
+	
+	custom_modifier_tooltip = BUL_national_industry_dm_tt
+}
+
+BUL_second_national_catastrophe_dm = {
+	icon = GFX_idea_bul_second_national_catastrophe
+	enable = { always = yes }
+	
+	stability_factor = BUL_second_national_catastrophe_dm_stability_factor
+	war_support_factor = BUL_second_national_catastrophe_dm_war_support_factor
+	
+	surrender_limit = BUL_second_national_catastrophe_dm_surrender_limit
+	political_power_gain = BUL_second_national_catastrophe_dm_political_power_gain
+	
+	fascism_drift = BUL_second_national_catastrophe_dm_fascism_drift
+	war_support_weekly = BUL_second_national_catastrophe_dm_war_support_weekly
+}
+
+BUL_bulgarian_irredentism_dm = {
+	icon = GFX_idea_bul_bulgarian_irredentism
+	enable = { always = yes }
+	
+	stability_factor = BUL_second_national_catastrophe_dm_stability_factor
+	war_support_factor = BUL_second_national_catastrophe_dm_war_support_factor
+	
+	surrender_limit = BUL_second_national_catastrophe_dm_surrender_limit
+	political_power_gain = BUL_second_national_catastrophe_dm_political_power_gain
+	
+	fascism_drift = BUL_second_national_catastrophe_dm_fascism_drift
+	war_support_weekly = BUL_second_national_catastrophe_dm_war_support_weekly
+}
+
+BUL_military_dictatorship_dm = {
+	icon = GFX_idea_bul_prussia_of_the_balkans
+	enable = { always = yes }
+	
+	# war_support_weekly = 0.001
+	conscription = BUL_military_dictatorship_dm_conscription
+	conscription_factor = BUL_military_dictatorship_dm_conscription_factor
+	training_time_army_factor = BUL_military_dictatorship_dm_training_time_army_factor
+	# fascism_drift = 0.1
+	army_core_attack_factor = BUL_military_dictatorship_dm_army_core_attack_factor
+	army_core_defence_factor = BUL_military_dictatorship_dm_army_core_defence_factor
+	army_morale_factor = BUL_military_dictatorship_dm_army_morale_factor
+	
+	supply_factor = BUL_military_dictatorship_dm_supply_factor
+	air_cas_present_factor = BUL_military_dictatorship_dm_air_cas_present_factor
+}
+	
 	
 	

@@ -350,68 +350,6 @@ ideas = {
 				army_morale_factor = 0.1
 			}
 		}
-		
-		BUL_brannik = {
-			picture = MEX_politicised_army
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_completed_focus = BUL_found_the_brannik
-					has_government = neutrality
-				}
-			}
-			removal_cost = -1
-			
-			modifier = {
-				training_time_army_factor = -0.15
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					instant = yes
-					build_cost_ic = -0.1
-				}
-				support_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-			}
-		}
-		
-		BUL_brannik_2 = {
-			name = BUL_brannik
-			picture = MEX_politicised_army
-
-			allowed = {
-				original_tag = BUL
-			}
-
-			allowed_civil_war = {
-				OR = {
-					has_completed_focus = BUL_found_the_brannik
-					has_government = neutrality
-				}
-			}
-			removal_cost = -1
-			
-			modifier = {
-				conscription = 0.005
-				training_time_army_factor = -0.3
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					instant = yes
-					build_cost_ic = -0.1
-				}
-				support_equipment = {
-					instant = yes
-					build_cost_ic = -0.05
-				}
-			}
-		}
 
 		BUL_military_dictatorship = {
 			picture = generic_intel_bonus

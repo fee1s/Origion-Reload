@@ -983,7 +983,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {	
-			add_ideas = inspection_in_tanks
+			custom_effect_tooltip = GER_modify_eco_modifier_tt
+			custom_effect_tooltip = GER_inspection_in_tanks_tt
+			hidden_effect = { add_ideas = inspection_in_tanks }
 		}	
 	}
 
@@ -1022,7 +1024,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {	
-			add_ideas = inspection_in_air
+			custom_effect_tooltip = GER_modify_eco_modifier_tt
+			custom_effect_tooltip = GER_inspection_in_air_tt
+			hidden_effect = { add_ideas = inspection_in_air }
 		}	
 	}	
 
@@ -1040,7 +1044,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {	
-			add_ideas = inspection_in_infantry
+			custom_effect_tooltip = GER_modify_eco_modifier_tt
+			custom_effect_tooltip = GER_inspection_in_infantry_tt
+			hidden_effect = { add_ideas = inspection_in_infantry }
 		}	
 	}	
 
@@ -1969,7 +1975,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = GER_modular_construction
+			custom_effect_tooltip = GER_modify_eco_modifier_tt
+			custom_effect_tooltip = GER_u_boat_efforts_tt
+			hidden_effect = { add_ideas = GER_modular_construction }
 		}
 	}
 	
@@ -2028,27 +2036,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_war_support = 0.1
-			add_political_power = 75
-			add_named_threat = {
-				threat = 10
-				name = germany.4.t
+			news_event = {
+				id = news.36
 			}
+			
 			hidden_effect = {
+				add_war_support = 0.1
+				add_political_power = 75
 				every_state = {
 					limit = {
 						is_controlled_by = AUS
 					}
 					add_core_of = GER
-				}
-				AUS = {
-					every_unit_leader = {
-						set_nationality = GER
-					}
-				}
-				annex_country = {
-					target = AUS
-					transfer_troops = yes
 				}
 				GER_mefo_bills_level_down = yes
 				GER_mefo_bills_level_down = yes
@@ -2064,8 +2063,9 @@ focus_tree = {
 						value = 1
 					}
 				}
-				news_event = {
-					id = news.36
+				add_named_threat = {
+					threat = 10
+					name = germany.4.t
 				}
 			}
 		}
@@ -2158,8 +2158,8 @@ focus_tree = {
 		will_lead_to_war_with = CZE
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {		
+		completion_reward = {
+			effect_tooltip = { country_event = { id = news.60 } }
 			hidden_effect = {
 				add_to_variable = {
 					var = GER_mefo_bill_counter
@@ -2245,15 +2245,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			GER = {
-				transfer_state = 188
-				add_state_core = 188
-			}
-			add_named_threat = {
-				threat = 3
-				name = GER_demand_memel_threat
+			country_event = {
+				id = news.19
 			}
 			hidden_effect = {
+				transfer_state = 188
+				add_state_core = 188
 				188 = {
 					add_claim_by = GER
 				}
@@ -2269,8 +2266,9 @@ focus_tree = {
 				762 = {
 					add_claim_by = GER
 				}
-				country_event = {
-					id = news.19
+				add_named_threat = {
+					threat = 3
+					name = GER_demand_memel_threat
 				}
 			}
 		}
