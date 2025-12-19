@@ -16,7 +16,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_purge_the_kodoha_faction
-		icon = GFX_JAP_fight_kodoha
+		icon = GFX_focus_JAP_purge_the_kodoha_faction 
 		x = 18
 		y = 0
 		offset = {
@@ -69,7 +69,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_greater_east_asian_co_prosperity_sphere
-		icon = GFX_focus_usa_focus_on_asia
+		icon = GFX_focus_JAP_greater_east_asian_co_properity_sphere
 		prerequisite = { focus = JAP_purge_the_kodoha_faction }
 		x = 0
 		y = 1
@@ -128,7 +128,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_strike_south_doctrine
-		icon = GFX_focus_attack_france
+		icon = GFX_focus_JAP_occupy_indochina
 		prerequisite = {focus = JAP_greater_east_asian_co_prosperity_sphere}
 		x = 17
 		y = 2
@@ -163,7 +163,7 @@ focus_tree = {
 	
 	focus = {
 		id = JAP_airfield_for_asian_war
-		icon = GFX_focus_generic_license_production
+		icon = GFX_focus_generic_air_bases
 		prerequisite = { focus = JAP_strike_south_doctrine }
 		x = -1
 		y = 1
@@ -274,7 +274,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_naval_tech_for_war
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_focus_generic_naval_invasion 
 		prerequisite = { focus = JAP_strike_south_doctrine }
 		x = 1
 		y = 1
@@ -307,7 +307,7 @@ focus_tree = {
 	focus = {
 		id = JAP_strike_on_the_southern_resource_area
 		icon = GFX_focus_jap_strike_south
-		prerequisite = {focus = JAP_sov_non_aggresive_pact}
+		prerequisite = {focus = JAP_soviet_japanese_neutrality_pact}
 		prerequisite = {focus = JAP_intervene_in_china}
 		x = 2
 		y = 2
@@ -383,7 +383,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_sov_non_aggresive_pact
+		id = JAP_soviet_japanese_neutrality_pact
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = JAP_naval_tech_for_war }
 		prerequisite = { focus = JAP_airfield_for_asian_war }
@@ -400,7 +400,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = {
-				name = JAP_sov_non_aggresive_pact
+				name = JAP_soviet_japanese_neutrality_pact
 				bonus = 1.0
 				uses = 1
 				technology = advanced_medium_tank_chassis
@@ -449,7 +449,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_building_asian_wal
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_focus_JAP_isolate_oceania
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area }
 		x = 3
 		y = 1
@@ -718,7 +718,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_spiritual_mobilization
-		icon = GFX_focus_jap_spiritual_mobilization
+		icon = GFX_focus_JAP_give_it_your_all_for_the_emperor
 		prerequisite = { focus = JAP_liaison_conference }
 		x = 1
 		y = 1
@@ -774,7 +774,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_national_defence_state
-		icon = GFX_JAP_tot_mob
+		icon = GFX_focus_JAP_the_imperial_defense_plan
 		prerequisite = { focus = JAP_strike_on_the_southern_resource_area}
 		x = 0
 		y = 2
@@ -804,7 +804,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_asia_lider
-		icon = GFX_focus_jap_cast_the_die
+		icon = GFX_focus_JAP_new_order_in_east_asia
 		prerequisite = {focus = JAP_purge_the_kodoha_faction}
 		available = {
 		}
@@ -1209,7 +1209,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_the_korea_project
-		icon = GFX_Korea
+		icon = GFX_focus_JAP_build_up_korean_industries
 		prerequisite = {focus = JAP_asia_lider}
 		x = -2
 		y = 1
@@ -1240,7 +1240,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_the_taiwan_project
-		icon = GFX_focus_jap_pacific_guardian
+		icon = GFX_focus_JAP_hasten_the_integration_of_taiwan 
 		prerequisite = {focus = JAP_the_korea_project}
 		x = -2
 		y = 2
@@ -1408,7 +1408,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_army_expansion_law
-		icon = GFX_JAP_army
+		icon = GFX_focus_JAP_advance_one_hundred_million_fireballs
 		prerequisite = {focus = JAP_purge_the_kodoha_faction}
 		x = 25
 		y = 1
@@ -1437,7 +1437,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_small_arms_modernization
-		icon = GFX_goal_rhineland
+		icon = GFX_focus_JAP_rely_on_infantry_charges
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = -2
 		y = 1
@@ -1471,7 +1471,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_supremacy_of_technology
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_advanced_military_studies
 		prerequisite = { focus = JAP_army_expansion_law}
 		x = 2
 		y = 1
@@ -1511,7 +1511,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_modern_artillery
-		icon = GFX_focus_SMB_mountain_guns
+		icon = GFX_focus_JAP_expand_the_irago_proving_ground
 		prerequisite = { focus = JAP_small_arms_modernization}
 		x = 0
 		y = 1
@@ -1544,7 +1544,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_armored_divisions
-		icon = GFX_focus_generic_heavy_tank
+		icon = GFX_focus_JAP_reform_the_army
 		prerequisite = { focus = JAP_supremacy_of_technology }
 		x = 0
 		y = 1
@@ -1583,7 +1583,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_army_expansion
-		icon = GFX_focus_prc_infiltration
+		icon = GFX_focus_JAP_sonno_joi
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = 0
 		y = 1
@@ -1617,7 +1617,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_supremacy_of_will
-		icon = GFX_focus_GER_schutztruppe
+		icon = GFX_focus_JAP_supremacy_of_will
 		prerequisite = { focus = JAP_army_expansion }
 		x = 0
 		y = 1
@@ -1644,7 +1644,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_disciplined_army
-		icon = GFX_SOV_muster_the_old_guard_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_japanese_imperial_glory
 		prerequisite = { focus = JAP_supremacy_of_will }
 		mutually_exclusive = { focus = JAP_fanatism_army }
 		x = -1
@@ -1694,7 +1694,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_fanatism_army
-		icon = GFX_focus_generic_fascist_troops
+		icon = GFX_focus_JAP_form_the_yokusan_sonendan
 		prerequisite = {focus = JAP_supremacy_of_will}
 		mutually_exclusive = { focus = JAP_disciplined_army }
 		x = 1
@@ -1907,7 +1907,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_unified_fighter_development
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_JAP_jet_prototypes
 		prerequisite = { focus = JAP_range_focus focus = JAP_agility_focus }
 		x = 0
 		y = 2
@@ -2010,7 +2010,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_carrier_warfare_experiments
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_JAP_strengthen_the_kido_butai
 		prerequisite = { focus = JAP_new_naval_estimates }
 		x = -1
 		y = 1
@@ -2089,7 +2089,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_first_air_fleet
-		icon = GFX_focus_generic_air_carrier
+		icon = GFX_focus_SMB_blue_water_fleet
 		prerequisite = { focus = JAP_carrier_warfare_experiments }
 		x = 0
 		y = 2
@@ -2326,7 +2326,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_cruiser_modernization
-		icon = GFX_focus_generic_navy_battleship2
+		icon = GFX_focus_JAP_balanced_naval_approach
 		prerequisite = { focus = JAP_new_naval_estimates }
 		x = 3
 		y = 1
