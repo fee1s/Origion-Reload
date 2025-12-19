@@ -1869,6 +1869,61 @@ BUL_military_dictatorship_dm = {
 	supply_factor = BUL_military_dictatorship_dm_supply_factor
 	air_cas_present_factor = BUL_military_dictatorship_dm_air_cas_present_factor
 }
+
+HUN_gombos_trade_treaty_dm = {
+	icon = GFX_idea_HUN_wuw_HUN_gombos_trade_treaty
+	enable = { always = yes }
+
+	production_speed_buildings_factor = HUN_gombos_trade_treaty_dm_production_speed_buildings_factor
+	production_factory_efficiency_gain_factor = HUN_gombos_trade_treaty_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = HUN_gombos_trade_treaty_dm_production_factory_max_efficiency_factor
+	global_building_slots_factor = HUN_gombos_trade_treaty_dm_global_building_slots_factor
+	
+	industrial_capacity_factory = HUN_gombos_trade_treaty_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = HUN_gombos_trade_treaty_dm_industrial_capacity_dockyard
+	
+	production_speed_arms_factory_factor = HUN_gombos_trade_treaty_dm_production_speed_arms_factory_factor
+	production_speed_industrial_complex_factor = HUN_gombos_trade_treaty_dm_production_speed_industrial_complex_factor
+	production_speed_infrastructure_factor = HUN_gombos_trade_treaty_dm_production_speed_infrastructure_factor
+
+	consumer_goods_expected_value = HUN_gombos_trade_treaty_dm_consumer_goods_expected_value
+	local_resources_factor = HUN_gombos_trade_treaty_dm_local_resources_factor
+	min_export = HUN_gombos_trade_treaty_dm_min_export
+	
+	custom_modifier_tooltip = HUN_gombos_trade_treaty_dm_tt		
+}
+
+HUN_hungarian_national_defense_association_dm = {
+	icon = GFX_idea_HUN_wuw_HUN_hungarian_national_defense_association
+	enable = { always = yes }
+	
+	conscription = HUN_hungarian_national_defense_association_dm_conscription
+	conscription_factor = HUN_hungarian_national_defense_association_dm_conscription_factor
+	training_time_army_factor = HUN_hungarian_national_defense_association_dm_training_time_army_factor
+	army_core_attack_factor = HUN_hungarian_national_defense_association_dm_army_core_attack_factor
+	army_core_defence_factor = HUN_hungarian_national_defense_association_dm_army_core_defence_factor
+	army_morale_factor = HUN_hungarian_national_defense_association_dm_army_morale_factor
+
+	mobilization_speed = HUN_hungarian_national_defense_association_dm_mobilization_speed
+	
+	supply_factor = HUN_hungarian_national_defense_association_dm_supply_factor
+	air_cas_present_factor = HUN_hungarian_national_defense_association_dm_air_cas_present_factor	
+}
+
+HUN_power_to_the_regent_dm = {
+	icon = GFX_idea_HUN_hungarian_monarchy_fascism
+	enable = { always = yes }
+	
+	stability_factor = HUN_power_to_the_regent_dm_stability_factor
+	war_support_factor = HUN_power_to_the_regent_dm_war_support_factor
+	
+	surrender_limit = HUN_power_to_the_regent_dm_surrender_limit
+	political_power_gain = HUN_power_to_the_regent_dm_political_power_gain
+	political_power_factor = HUN_power_to_the_regent_dm_political_power_factor
+	
+	fascism_drift = HUN_power_to_the_regent_dm_fascism_drift
+	war_support_weekly = HUN_power_to_the_regent_dm_war_support_weekly	
+}
 	
 	
 	

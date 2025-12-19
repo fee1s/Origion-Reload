@@ -67,12 +67,18 @@
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			HUN_miklos_horthy = {
-				swap_country_leader_traits = {
-				    remove = HUN_the_regent
-				    add = HUN_the_regent_2
-				    ideology = oligarchism
-				}
+			custom_effect_tooltip = HUN_modify_power_to_the_regent_tt
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_political_power_factor = 0.1
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_fascism_drift = 0.01
+				tooltip = fascism_drift_tt
 			}
 		}
 	}
@@ -99,7 +105,13 @@
 
 		completion_reward = {
 			add_political_power = 50
-			add_ideas = HUN_power_to_the_regent_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = HUN_modify_power_to_the_regent_tt
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_political_power_factor = 0.05
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
@@ -126,19 +138,12 @@
 		completion_reward = {
 
 			add_political_power = 75
+			add_stability = -0.05
 
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = HUN_restricted_voting_rights
-				days = 360
-			}
-
 		}
 	}
 
@@ -188,7 +193,11 @@
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			remove_ideas = HUN_treaty_of_triannon_aat
+			custom_effect_tooltip = HUN_modify_gombos_trade_treaty_tt
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_arms_factory_factor = 0.5
+				tooltip = production_speed_arms_factory_factor_tt
+			}
 		}
 	}
 
@@ -217,6 +226,8 @@
 				ideology = fascism
 				popularity = 0.1
 			}
+			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
             set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
@@ -251,16 +262,23 @@
 		completion_reward = {
 			add_stability = 0.05
 			add_war_support = 0.1
-			swap_ideas = {
-				remove_idea = HUN_power_to_the_regent_idea
-				add_idea = HUN_more_power_to_the_regent_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = HUN_modify_power_to_the_regent_tt
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_political_power_factor = 0.15
+				tooltip = political_power_factor_tt
 			}
-			HUN_miklos_horthy = {
-				swap_country_leader_traits = {
-				    remove = HUN_the_regent_2
-				    add = HUN_the_regent_3
-				    ideology = fascism_ideology
-				}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_fascism_drift = 0.01
+				tooltip = fascism_drift_tt
 			}
 		}
 	}
@@ -286,9 +304,15 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-
-			add_ideas = HUN_promoted_hungarianism
-
+			custom_effect_tooltip = HUN_modify_power_to_the_regent_tt
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_political_power_factor = 0.1
+				tooltip = political_power_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_war_support_factor = 0.15
+				tooltip = war_support_factor_tt
+			}
 		}
 	}
 	
@@ -313,14 +337,25 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_ideas = HUN_arrow_cross_idea
+			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = HUN_modify_hungarian_national_defense_association_tt
+			add_to_variable = { 
+			    HUN_hungarian_national_defense_association_dm_mobilization_speed = 0.2
+				tooltip = mobilization_speed_tt
+			}
+			add_to_variable = { 
+			    HUN_hungarian_national_defense_association_dm_training_time_army_factor = -0.2
+				tooltip = training_time_army_factor_tt
+			}
+	
 			custom_effect_tooltip = generic_skip_one_line_tt
 			set_party_name = { 
 				ideology = fascism 
 				long_name = HUN_arrow_cross_party_long 
 				name = HUN_arrow_cross_party 
 			}
-		}
+		} 
 	}
 
 	focus = {
@@ -345,6 +380,8 @@
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+			add_war_support = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_state = {
 				limit = {
 					OR = {
@@ -392,8 +429,15 @@
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_ideas = HUN_old_hungary_reclaimed
-
+			custom_effect_tooltip = HUN_modify_power_to_the_regent_tt
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_power_to_the_regent_dm_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
 		}
 	}
 
@@ -718,9 +762,22 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = HUN_invite_foreign_investors
-			    add_idea = HUN_invite_german_investors
+			custom_effect_tooltip = HUN_modify_gombos_trade_treaty_tt
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_local_resources_factor = 0.1
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_infrastructure_factor = -0.2
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_arms_factory_factor = 0.1
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_industrial_complex_factor = -0.2
+				tooltip = production_speed_industrial_complex_factor_tt
 			}
 		}
 	}
@@ -844,7 +901,19 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = HUN_invite_foreign_investors
+			custom_effect_tooltip = HUN_modify_gombos_trade_treaty_tt
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_infrastructure_factor = 0.1
+				tooltip = production_speed_infrastructure_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_arms_factory_factor = 0.1
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_gombos_trade_treaty_dm_production_speed_industrial_complex_factor = 0.1
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
 		}
 	}
 
@@ -1409,6 +1478,12 @@
 
 		completion_reward = {
 			army_experience = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = HUN_modify_hungarian_national_defense_association_tt
+			add_to_variable = { 
+			    HUN_hungarian_national_defense_association_dm_conscription = 0.005
+				tooltip = conscription_tt
+			}
 		}
 	}
 
@@ -1488,6 +1563,7 @@
 				technology = improved_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -1537,6 +1613,7 @@
 				uses = 2
 				category = support_tech
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -1582,6 +1659,16 @@
 
 		completion_reward = {
 			army_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = HUN_modify_hungarian_national_defense_association_tt
+			add_to_variable = { 
+			    HUN_hungarian_national_defense_association_dm_army_core_attack_factor = 0.05
+				tooltip = army_core_attack_factor_tt
+			}
+			add_to_variable = { 
+			    HUN_hungarian_national_defense_association_dm_army_core_defence_factor = 0.05
+				tooltip = army_core_defence_factor_tt
+			}
 		}
 	}
 
@@ -1682,6 +1769,8 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			army_experience = 10
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = HUN_develop_tanks
 				bonus = 1
@@ -1689,6 +1778,7 @@
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = HUN_develop_tanks
 				bonus = 1.0
@@ -1725,7 +1815,9 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-		    add_ideas = HUN_assault_gun_focus
+			hidden_effect = { add_ideas = HUN_assault_gun_focus }
+			custom_effect_tooltip = HUN_modify_gombos_trade_treaty_tt
+			custom_effect_tooltip = wuw_HUN_assault_gun_focus_tt
 			add_tech_bonus = {
 				name = HUN_artillery_effort
 				bonus = 1.0

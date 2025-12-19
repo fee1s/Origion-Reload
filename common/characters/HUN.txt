@@ -1,52 +1,24 @@
 characters={
 	HUN_miklos_horthy={
-		instance = {
-			allowed = {
-				has_dlc = "Death or Dishonor"
+		name=HUN_miklos_horthy
+		portraits={
+			navy = { #Can become Navy leader and therefore navy advisor
+				large = "GFX_Portrait_hungary_miklos_horthy_admiral"
+				small = "GFX_idea_HUN_miklos_horthy_admiral"
 			}
-			name=HUN_miklos_horthy
-			portraits={
-				navy = { #Can become Navy leader and therefore navy advisor
-					large = "GFX_Portrait_hungary_miklos_horthy_admiral"
-					small = "GFX_idea_HUN_miklos_horthy_admiral"
-				}
-				civilian={
-					large="GFX_Portrait_hungary_miklos_horthy"
-				}
-			}
-			country_leader={
-				ideology=oligarchism
-				traits={ HUN_the_regent }
-				expire="1965.1.1.1"
-				id=500
-			}
-			country_leader={
-				ideology=fascism_ideology
-				traits={ HUN_the_regent_2 }
-				expire="1965.1.1.1"
-				id=503
+			civilian={
+				large="GFX_Portrait_hungary_miklos_horthy"
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Death or Dishonor" }
-			}
-			name=HUN_miklos_horthy
-			portraits={
-				civilian={
-					large="GFX_Portrait_hungary_miklos_horthy"
-				}
-			}
-			country_leader={
-				ideology=oligarchism
-				expire="1965.1.1.1"
-				id=500
-			}
-			country_leader={
-				ideology=fascism_ideology
-				expire="1965.1.1.1"
-				id=500
-			}
+		country_leader={
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 	
