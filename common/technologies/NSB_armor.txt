@@ -982,6 +982,35 @@ technologies = {
 			position = { x = 5 y = 2 }
 		}
 
+		on_research_complete = {
+		    hidden_effect = {
+			    if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_allies = yes
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_allies = yes
+					    }
+				        set_technology = { basic_heavy_tank_chassis = 1 }
+				    }
+				}
+				if = {
+				    limit = {
+					    ORIGION_is_in_faction_with_axis = yes
+						NOT = { original_tag = JAP }
+					}
+					every_country = {
+				        limit = {
+					        ORIGION_is_in_faction_with_axis = yes
+							NOT = { original_tag = JAP }
+					    }
+				        set_technology = { basic_heavy_tank_chassis = 1 }
+				    }
+				}
+			}
+		}
+
 		ai_will_do = {
 			factor = 0.8
 
