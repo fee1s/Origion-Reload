@@ -165,11 +165,14 @@ SOV_mig_design_bureau_organization = {
 		token = SOV_mio_trait_merge_plant_no_28
 		name = SOV_merge_aircraft_plant_1
 		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		icon = GFX_generic_mio_department_icon_plane_fighter_quality
 		special_trait_background = yes
 
-		position = { x=@aircraft_1_X y=@aircraft_1_Y }
-		
+		position = { x=0 y=1}
+
+		all_parents = { generic_mio_advanced_materials }
+
+		relative_position_id = generic_mio_advanced_materials
 		visible = {
 			FROM = { original_tag = SOV }
 		}
@@ -189,10 +192,11 @@ SOV_mig_design_bureau_organization = {
 		token = SOV_mio_trait_merge_plant_no_150
 		name = SOV_merge_aircraft_plant_2
 		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_air_agility
+		icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
 		special_trait_background = yes
-
-		position = { x=@aircraft_2_X y=@aircraft_2_Y }
+		all_parents = { generic_mio_trait_fixed_tailwheels }
+		relative_position_id = generic_mio_trait_fixed_tailwheels
+		position = { x=0 y=1 }
 		
 		visible = {
 			FROM = { original_tag = SOV }
@@ -213,10 +217,13 @@ SOV_mig_design_bureau_organization = {
 		token = SOV_mio_trait_merge_vef_plant
 		name = SOV_merge_aircraft_plant_3
 		#icon = GFX_generic_mio_department_icon_facilities
-		icon = GFX_generic_mio_trait_icon_detection
+		icon = GFX_generic_mio_department_icon_plane_fighter_technology
 		special_trait_background = yes
 
-		position = { x=@aircraft_3_X y=@aircraft_3_Y }
+		all_parents = { generic_mio_trait_removable_wings }
+		relative_position_id = generic_mio_trait_removable_wings
+
+		position = { x=0 y=1 }
 		
 		visible = {
 			FROM = { original_tag = SOV }

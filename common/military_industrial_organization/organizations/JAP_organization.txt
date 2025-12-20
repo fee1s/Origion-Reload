@@ -61,56 +61,10 @@ JAP_sasebo_naval_arsenal_organization = {
 JAP_mitsubishi_organization = {
 	include = generic_high_agility_fighter_aircraft_organization
 	icon = GFX_idea_mitsubishi
-	equipment_type = {
-		mio_cat_eq_all_small_plane
-		maritime_patrol_plane
-	}	
 	
 	allowed = {	
 		tag = JAP
 		has_dlc = "Arms Against Tyranny"
-	}
-	
-	research_categories = {	
-		mio_cat_all_light_fighter_and_modules 
-		mio_cat_all_naval_bomber_and_modules 
-	}
-
-	override_trait = {
-		token = generic_mio_trait_fuel_injection_engines
-		
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_bigger_engines
-	}
-
-	override_trait = {
-		token = generic_mio_trait_high_octane_fuels
-		
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_bigger_engines
-	}
-
-	override_trait = {
-		token = generic_mio_trait_subsidiary_suppliers
-		
-		position = { x=0 y=2 }
-		relative_position_id = generic_mio_trait_fuel_injection_engines
-	}
-
-	add_trait = { 
-		token = ENG_mio_trait_elliptical_wings
-		name = ENG_mio_trait_elliptical_wings
-		icon = GFX_generic_mio_trait_icon_defense
-		special_trait_background = yes
-
-		position = { x=0 y=1 }
-		relative_position_id = generic_mio_trait_cantilever_wing_structure
-
-		any_parent = { generic_mio_trait_cantilever_wing_structure }
-
-		equipment_bonus = {
-			air_defence = 0.1
-		}
 	}
 
 	add_trait = { 
@@ -119,13 +73,14 @@ JAP_mitsubishi_organization = {
 		icon = GFX_generic_mio_trait_icon_defense
 		special_trait_background = yes
 
-		position = { x=1 y=1 }
-		relative_position_id = generic_mio_trait_fuel_injection_engines
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_fighter_specialization
 
-		all_parents = { generic_mio_trait_fuel_injection_engines generic_mio_trait_high_octane_fuels }
-
+		all_parents = { generic_mio_trait_fighter_specialization }
+		limit_to_equipment_type = { mio_cat_eq_only_light_fighter }
+		
 		equipment_bonus = {
-			air_defence = 0.1
+			air_defence = 0.2
 		}
 	}
 }
