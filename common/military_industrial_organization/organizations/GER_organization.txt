@@ -86,8 +86,12 @@ GER_messerschmitt_organization = {
 
 		all_parents = { generic_mio_advanced_materials }
 
+		limit_to_equipment_type = {
+			mio_cat_eq_only_light_fighter
+		}
+
 		production_bonus = {
-			production_efficiency_gain_factor = 0.025
+			production_efficiency_gain_factor = 0.05
 		}
 	}
 
@@ -122,43 +126,6 @@ GER_junkers_organization = {
 				has_dlc = "By Blood Alone"
 			}
 		}
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = GER } }
-			}
-			FROM = { NOT = { has_war_with = GER } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { NOT  = { original_tag = GER } }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_GER_junkers_organization_flag
-				}
-			}
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_psychological_warfare
-		name = GER_mio_trait_psychological_warfare
-
-		icon = GFX_generic_mio_trait_icon_fuel_consumption
-		special_trait_background = yes
-		
-		position = { x=2 y=0 }
-		relative_position_id = generic_mio_trait_reinforced_wings
-
-		equipment_bonus = {
-			fuel_consumption = -0.05
-		} 
 	}
 }
 

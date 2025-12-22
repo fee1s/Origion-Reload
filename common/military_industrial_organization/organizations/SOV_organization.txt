@@ -171,7 +171,9 @@ SOV_mig_design_bureau_organization = {
 		position = { x=0 y=1}
 
 		all_parents = { generic_mio_advanced_materials }
-
+		limit_to_equipment_type = {
+			mio_cat_eq_only_light_fighter
+		}
 		relative_position_id = generic_mio_advanced_materials
 		visible = {
 			FROM = { original_tag = SOV }
@@ -197,7 +199,9 @@ SOV_mig_design_bureau_organization = {
 		all_parents = { generic_mio_trait_fixed_tailwheels }
 		relative_position_id = generic_mio_trait_fixed_tailwheels
 		position = { x=0 y=1 }
-		
+		limit_to_equipment_type = {
+			mio_cat_eq_only_light_fighter
+		}		
 		visible = {
 			FROM = { original_tag = SOV }
 		}
@@ -222,7 +226,9 @@ SOV_mig_design_bureau_organization = {
 
 		all_parents = { generic_mio_trait_removable_wings }
 		relative_position_id = generic_mio_trait_removable_wings
-
+		limit_to_equipment_type = {
+			mio_cat_eq_only_light_fighter
+		}
 		position = { x=0 y=1 }
 		
 		visible = {

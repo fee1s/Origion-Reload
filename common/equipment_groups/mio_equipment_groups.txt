@@ -207,6 +207,24 @@ mio_cat_eq_only_light_fighter_and_CAS_no_cv = { #Includes only Small Fighter and
 	}
 }
 
+mio_cat_eq_only_CAS_and_cv = { 
+	equipment_type = {
+		#CAS
+		small_plane_cas_airframe_0
+		small_plane_cas_airframe_1
+		small_plane_cas_airframe_2
+		small_plane_cas_airframe_3
+		small_plane_cas_airframe_4
+		
+		# CV
+		cv_small_plane_cas_airframe_0
+		cv_small_plane_cas_airframe_1
+		cv_small_plane_cas_airframe_2
+		cv_small_plane_cas_airframe_3
+		cv_small_plane_cas_airframe_4
+	}
+}
+
 mio_cat_eq_only_tactical_bomber = { #Includes only Tactical Bomber (Heavy Fighter, No Scout...) --- Needed because plane designer is a gift to us all
 	equipment_type = {
 		medium_plane_airframe_0
