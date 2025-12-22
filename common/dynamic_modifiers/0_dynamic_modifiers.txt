@@ -1869,6 +1869,51 @@ BUL_military_dictatorship_dm = {
 	supply_factor = BUL_military_dictatorship_dm_supply_factor
 	air_cas_present_factor = BUL_military_dictatorship_dm_air_cas_present_factor
 }
+
+SAF_ossewabrandwag_dm = {
+	icon = GFX_idea_saf_ossewabrandwag
+	enable = { always = yes }
+	
+	industrial_capacity_factory = SAF_ossewabrandwag_dm_industrial_capacity_factory
+	consumer_goods_expected_value = SAF_ossewabrandwag_dm_consumer_goods_expected_value
+	production_speed_buildings_factor = SAF_ossewabrandwag_dm_production_speed_buildings_factor
+	stability_factor = SAF_ossewabrandwag_dm_stability_factor
+	war_support_factor = SAF_ossewabrandwag_dm_war_support_factor
+	fascism_drift = SAF_ossewabrandwag_dm_fascism_drift
+	
+}
+
+SAF_caps_corps_dm = {
+	icon = GFX_idea_ITA_hardened_irregular_bands
+	enable = { always = yes }
+	
+	conscription_factor = SAF_caps_corps_dm_conscription_factor
+	acclimatization_hot_climate_gain_factor = SAF_caps_corps_dm_acclimatization_hot_climate_gain_factor
+	heat_attrition_factor = SAF_caps_corps_dm_heat_attrition_factor 
+	supply_consumption_factor = SAF_caps_corps_dm_supply_consumption_factor
+	army_core_defence_factor = SAF_caps_corps_dm_army_core_defence_factor
+	supply_consumption_factor = SAF_caps_corps_dm_supply_consumption_factor
+}
+
+SAF_gold_economy_dm = {
+	icon = GFX_SAF_gold_economy
+	enable = { always = yes }
+	
+	consumer_goods_expected_value = SAF_gold_economy_dm_consumer_goods_expected_value
+	industrial_capacity_factory = SAF_gold_economy_dm_industrial_capacity_factory
+	production_speed_buildings_factor = SAF_gold_economy_dm_production_speed_buildings_factor
+	production_speed_synthetic_refinery_factor = SAF_gold_economy_dm_production_speed_synthetic_refinery_factor
+}
+SAF_cabinet_dm = {
+	icon = GFX_idea_RAJ_just_good_business
+	enable = { always = yes }
+	
+	stability_factor = SAF_cabinet_dm_stability_factor
+	war_support_factor = SAF_cabinet_dm_war_support_factor
+	political_power_factor = SAF_cabinet_dm_political_power_factor
+	
+	}
+}
 	
 	
 	

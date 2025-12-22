@@ -32,6 +32,44 @@ if = {
 	}
 }
 
+
+add_dynamic_modifier = { modifier = SAF_caps_corps_dm }
+add_dynamic_modifier = { modifier = SAF_gold_economy_dm }
+add_dynamic_modifier = { modifier = SAF_cabinet_dm }
+add_dynamic_modifier = { modifier = SAF_ossewabrandwag_dm }
+
+set_variable = { 
+    SAF_ossewabrandwag_dm_industrial_capacity_factory = -0.1
+}
+set_variable = { 
+    SAF_ossewabrandwag_dm_industrial_capacity_dockyard = -0.1
+}
+set_variable = { 
+    SAF_ossewabrandwag_dm_fascism_drift = 0.03
+}
+set_variable = { 
+    SAF_gold_economy_dm_production_speed_synthetic_refinery_factor = -0.5
+
+
+
+set_variable = { 
+    SAF_caps_corps_dm_conscription_factor = -0.5
+}
+
+
+
+
+set_popularities = {
+	democratic = 65
+	fascism = 35
+	communism = 0
+}
+
+
+
+
+
+
 set_stability = 0.6
 set_war_support = 0.1
 # Starting tech
@@ -135,8 +173,8 @@ if = {
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
-	add_ideas = SAF_ossewabrandwag
-	add_ideas = SAF_history_of_segregation
+	
+	
 
 	add_to_tech_sharing_group = commonwealth_research
 	add_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }
@@ -246,11 +284,7 @@ set_politics = {
 	election_frequency = 60
 	elections_allowed = yes
 }
-set_popularities = {
-	democratic = 75
-	fascism = 20
-	communism = 5
-}
+
 
 recruit_character = SAF_j_b_m_hertzog
 recruit_character = SAF_d_f_malan

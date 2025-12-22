@@ -1,23 +1,22 @@
-
 state={
-	id=681
-	name="STATE_681" # Cape
-	manpower = 4581934
+	id=998
+	name="STATE_998" # East Cape
+	manpower = 1250056
 
 	state_category = large_city
 
 	history={
 		owner = SAF
 		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 3
-			air_base = 1
-			12589 = {
-				naval_base = 4
+			infrastructure = 2 #was: 5
+			industrial_complex = 2
+			
+			4696 = {
+				naval_base = 2
 			}
 		}
 		victory_points = {
-			12589 10 
+			4696 1
 		}
 		add_core_of = SAF
 		1936.1.1.14 = {
@@ -27,7 +26,7 @@ state={
 	}
 
 	provinces={
-		1509 4528 4822 5203 10415 10442 10697 12419 12547 12589 12692 
+		4822 4696 12547 1833 4584
 	}
 
 	local_supplies=0.0 
