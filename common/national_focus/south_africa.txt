@@ -39,7 +39,10 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.05
-			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
 		}	
 	}
 	
@@ -128,14 +131,12 @@
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SAF_the_crusader_tank
-				bonus = 1.0
+				bonus = 1
 				uses = 2
-				technology = tech_engineers3
-				technology = tech_engineers4
-				
-				
+				technology = improved_infantry_weapons
+				technology = improved_infantry_weapons_2
 			}
+			
 			
 		}	
 	}
@@ -318,8 +319,8 @@
 	}
 	
 	focus = {
-		id = SAF_buy_stan 
-		icon = GFX_focus_BRA_ethical_internationalism
+		id = SAF_buy_stan  
+		icon = GFX_focus_AUS_bring_generals_out_of_retirement
 		x = 2
 		y = 2
 
@@ -340,10 +341,13 @@
 		
 		completion_reward = {
 			add_tech_bonus = {
-				bonus = 1
+				name = SAF_the_crusader_tank
+				bonus = 1.0
 				uses = 2
-				technology = improved_infantry_weapons
-				technology = improved_infantry_weapons_2
+				technology = tech_engineers3
+				technology = tech_engineers4
+				
+				
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_state = { 
@@ -573,7 +577,7 @@
 		x = 0
 		y = 4
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -621,14 +625,17 @@
 		
 		available_if_capitulated = yes
 
-
+		available = {
+			has_completed_focus = SAF_barry_third_term
+			has_completed_focus = SAF_exploitation_of_blacks
+		}
 		
 		completion_reward = {
 			
 			
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -667,7 +674,7 @@
 			
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -735,7 +742,7 @@
 		completion_reward = {
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -771,13 +778,13 @@
 		completion_reward = {
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_industrial_capacity_factory = 0.03
+				SAF_ossewabrandwag_dm_industrial_capacity_factory = 0.02
                 tooltip = industrial_capacity_factory_tt
             }
 		}
@@ -807,13 +814,13 @@
 		completion_reward = {
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_to_variable = { 
-				SAF_SAF_ossewabrandwag_dm_industrial_capacity_factory = 0.03
+				SAF_ossewabrandwag_dm_industrial_capacity_factory = 0.02
                 tooltip = industrial_capacity_factory_tt
             }
 		}
@@ -844,7 +851,7 @@
 		completion_reward = {
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -882,10 +889,11 @@
 		completion_reward = {
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
 			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.02
+				SAF_ossewabrandwag_dm_fascism_drift = 0.03
 				tooltip = fascism_drift_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SAF_caps_corps_dm_tt
 			add_to_variable = { 
 				SAF_caps_corps_dm_conscription_factor = 0.05
 				tooltip = conscription_factor_tt
@@ -902,14 +910,14 @@
 		x = 0
 		y = 3
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
 		}
 		
 		available = {
-			date > 1938.1.1
+			
 		}
 		
 		relative_position_id = SAF_barri_cabinet
@@ -941,7 +949,7 @@
 		x = 2
 		y = 3
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -1064,7 +1072,7 @@
 		}
 		
 		available = {
-			has_completed_focus = SAF_cape_corps
+			
 		}
 		
 		relative_position_id = SAF_course_of_united_party
@@ -1074,20 +1082,49 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			every_owned_state = {
+			random_state = {
 				limit = {
 					OR =  {
 						state = 275 state = 681 state = 997 
 					}
 				}
-				ROOT = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				} 
+				 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
 			}	
+			random_state = {
+				limit = {
+					OR =  {
+						state = 681 state = 997 
+					}
+				}
+				 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_state = {
+				limit = {
+					OR =  {
+						state = 997 
+					}
+				}
+				 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		
 		}
 	}
 	
@@ -1326,7 +1363,7 @@
 	
 	focus = {
 		id = SAF_pretoria_arms  
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
 		x = 1
 		y = 1
 
@@ -1435,7 +1472,7 @@
 	
 	focus = {
 		id = SAF_bloemfontein_artilery_plant 
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_SOV_national_unification_ccp_2d_sov_compatibility
 		x = 2
 		y = 2
 
@@ -1546,64 +1583,7 @@
 		}	
 	}
 	
-	focus = {
-		id = SAF_fulfill_allied_obligations   
-		icon = GFX_focus_eng_the_sun_never_sets
-		x = -3
-		y = 1
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
-		
-		available = {
-			
-		}
-		
-		relative_position_id = SAF_split_in_party
 	
-		prerequisite = {focus = SAF_split_in_party }
-		
-		
-		
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			ENG = {
-				custom_effect_tooltip = SAF_joint_air_training_scheme_tt 
-			}
-			
-			hidden_effect = { 
-				set_technology = { aa_hmg = 1 }
-				set_technology = { heavy_bombs = 1 }
-				
-				create_equipment_variant = {
-					name = "Hector" 
-					type = small_plane_cas_airframe_1
-					modules = {
-						fixed_main_weapon_slot = heavy_bomb_locks
-						fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
-						engine_type_slot = engine_2_1x
-						special_type_slot_1 = fuel_tanks_small
-						special_type_slot_2 = lmg_defense_turret		
-					}
-				}
-				
-				ENG = {
-					add_equipment_to_stockpile = {
-						type = small_plane_cas_airframe_1
-						amount = 50
-						variant_name = "Hector"
-						producer = SAF
-					}
-				}
-			}
-			
-		}	
-	}
 	
 	focus = {
 		id = SAF_persecuting_nationalists  
@@ -1618,7 +1598,7 @@
 		}
 		
 		available = {
-			
+			date > 1940.9.1
 		}
 		
 		relative_position_id = SAF_split_in_party
@@ -1654,9 +1634,9 @@
 			
 		}
 		
-		relative_position_id = SAF_fulfill_allied_obligations
+		relative_position_id = SAF_homeland_defence
 	
-		prerequisite = {focus = SAF_fulfill_allied_obligations }
+		prerequisite = {focus = SAF_homeland_defence }
 		
 		
 		
@@ -1728,9 +1708,9 @@
 			
 		}
 		
-		relative_position_id = SAF_fulfill_allied_obligations
+		relative_position_id = SAF_homeland_defence
 	
-		prerequisite = {focus = SAF_fulfill_allied_obligations }
+		prerequisite = {focus = SAF_homeland_defence }
 		
 		
 		
@@ -1848,9 +1828,9 @@
 	}
 	
 	focus = {
-		id = SAF_new_military_budget   
-		icon = GFX_focus_AUS_raid_military_storages
-		x = 3
+		id = SAF_homeland_defence    
+		icon = GFX_focus_PER_stand_with_giants
+		x = -3
 		y = 1
 
 		cost = 10
@@ -1888,6 +1868,61 @@
 					amount = 250
 					producer = SAF
 				}
+		}	
+	}
+	
+	focus = {
+		id = SAF_new_military_budget   
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			    tooltip = SAF_new_military_budget_tt
+				hidden_trigger = {
+				    check_variable = { SAF_gold_economy_dm_consumer_goods_expected_value = -0.1 }
+				}
+			}
+		}
+		
+		
+		
+		
+		relative_position_id = SAF_split_in_party
+	
+		prerequisite = {focus = SAF_split_in_party }
+		
+		
+		
+		
+		available_if_capitulated = yes
+		completion_reward = {
+			custom_effect_tooltip = SAF_gold_economy_dm_tt
+			add_to_variable = {
+				SAF_gold_economy_dm_consumer_goods_expected_value = -0.05
+				custom_effect_tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = {
+				SAF_gold_economy_dm_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_to_variable = {
+				SAF_gold_economy_dm_line_change_production_efficiency_factor = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_to_variable = {
+				SAF_gold_economy_dm_consumer_goods_expected_value = -0.05
+				tooltip = consumer_goods_expected_tt
+			}
 		}	
 	}
 	
