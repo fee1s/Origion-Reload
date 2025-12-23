@@ -86,35 +86,12 @@ JAP_mitsubishi_organization = {
 }
 
 JAP_aichi_organization = {
-	include = generic_range_focused_aircraft_organization
+	include = generic_cas_aircraft_organization
 	icon = GFX_idea_aichi
 	allowed = {	
 		tag = JAP
 	}
-	available = {
-		FROM = { has_completed_focus = JAP_range_focus }
-	}
 }
-
-JAP_nakajima_organization = {
-	include = generic_heavy_aircraft_organization
-	icon = GFX_idea_nakajima
-	allowed = {	
-		tag = JAP
-		has_dlc = "Arms Against Tyranny"
-	}
-}
-
-JAP_yokosuka_organization = {
-	include = generic_naval_aircraft_organization 
-	icon = GFX_idea_yokosuka
-	allowed = {	
-		tag = JAP
-		has_dlc = "Arms Against Tyranny"
-	}
-}
-
-
 
 ################################### 
 

@@ -1784,19 +1784,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = JAP_aichi_organization
-				mio:JAP_aichi_organization = {
-					add_mio_funds = 3000
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = aichi
+			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			mio:JAP_aichi_organization = {
+				add_mio_funds = 3000
 			}
 		}
 	}
@@ -1824,19 +1815,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = JAP_mitsubishi_organization
-				mio:JAP_mitsubishi_organization = {
-					add_mio_funds = 3000
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = mitsubishi
+			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			mio:JAP_mitsubishi_organization = {
+				add_mio_funds = 3000
 			}
 		}
 	}

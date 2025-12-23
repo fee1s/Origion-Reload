@@ -225,6 +225,15 @@ mio_cat_eq_only_CAS_and_cv = {
 	}
 }
 
+mio_cat_eq_only_naval_bombers = { 
+	equipment_type = {
+		small_plane_naval_bomber_airframe
+		cv_small_plane_naval_bomber_airframe
+
+		large_plane_maritime_patrol_plane_airframe
+	}
+}
+
 mio_cat_eq_only_tactical_bomber = { #Includes only Tactical Bomber (Heavy Fighter, No Scout...) --- Needed because plane designer is a gift to us all
 	equipment_type = {
 		medium_plane_airframe_0

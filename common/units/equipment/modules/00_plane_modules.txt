@@ -325,7 +325,11 @@ equipment_modules = {
 		add_stats = {
 			weight = 2
 		}
-		
+
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
+
 		mission_type_stats = {
 			limit = {
 				air_superiority
@@ -346,7 +350,9 @@ equipment_modules = {
 		category = fighter_weapon
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
-
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
 		add_stats = {
 			weight = 4
 		}
@@ -376,7 +382,9 @@ equipment_modules = {
 		add_stats = {
 			weight = 3
 		}
-		
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 		
 		mission_type_stats = {
 			limit = {
 				air_superiority
@@ -401,7 +409,9 @@ equipment_modules = {
 		add_stats = {
 			weight = 6
 		}
-		
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 		
 		mission_type_stats = {
 			limit = {
 				air_superiority
@@ -424,7 +434,9 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 		parent = heavy_mg_2x
-
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
 		add_stats = {
 			weight = 4
 		}
@@ -450,7 +462,9 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 		parent = heavy_mg_4x
-		
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 		
 		add_stats = {
 			weight = 8
 		}
@@ -480,7 +494,9 @@ equipment_modules = {
 		add_stats = {
 			weight = 4
 		}
-		
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 		
 		mission_type_stats = {
 			limit = {
 				air_superiority
@@ -503,6 +519,9 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { fighter heavy_fighter }
 		parent = aircraft_cannon_1_2x
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
 		add_stats = {
 			weight = 8
 		}
@@ -611,7 +630,9 @@ equipment_modules = {
 			weight = 4
 			air_agility = -20
 		}
-		
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 		
 		allow_mission_type = {
 			cas
 		}
@@ -632,7 +653,9 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 		parent = heavy_bomb_locks
-
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
 		add_stats = {
 			weight = 6
 			air_agility = -15
@@ -657,7 +680,9 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 		parent = tank_buster_1
-
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
 		add_stats = {
 			weight = 8
 			air_agility = -20
@@ -681,7 +706,9 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = cas
 		parent = tank_buster_2
-
+		forbid_equipment_type_exact_match_for_category = {
+			nav_bomber_weapon = naval_bomber
+		} 
 		add_stats = {
 			weight = 10
 			air_agility = -22
@@ -705,6 +732,8 @@ equipment_modules = {
 		category = nav_bomber_weapon
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { naval_bomber maritime_patrol_plane }
+
+		forbid_equipment_type_exact_match = heavy_fighter
 
 		allow_mission_type = {
 			naval_bomber
@@ -737,6 +766,8 @@ equipment_modules = {
 		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		parent = torpedo_mounting
 
+		forbid_equipment_type_exact_match = heavy_fighter
+
 		allow_mission_type = {
 			naval_bomber
 			port_strike
@@ -766,6 +797,8 @@ equipment_modules = {
 		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		parent = torpedo_mounting_2
 
+		forbid_equipment_type_exact_match = heavy_fighter
+
 		allow_mission_type = {
 			naval_bomber
 			port_strike
@@ -794,6 +827,8 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = { naval_bomber maritime_patrol_plane }
 		parent = torpedo_mounting_3
+		
+		forbid_equipment_type_exact_match = heavy_fighter
 
 		allow_mission_type = {
 			naval_bomber

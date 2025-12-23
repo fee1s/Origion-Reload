@@ -112,28 +112,6 @@ ENG_hawker_organization = {
 	}
 }
 
-ENG_de_havilland_organization = {
-	include = generic_medium_aircraft_organization
-	icon = GFX_idea_de_havilland
-	allowed = {	
-		has_dlc = "Arms Against Tyranny"
-		OR = {
-			tag = ENG
-			tag = NOR 		
-		}
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-	}
-}
-
 ##     ##    ###    ######## ######## ########  #### ######## ##       
 ###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       
 #### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##       
