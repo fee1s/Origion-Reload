@@ -489,6 +489,21 @@ GER_operations = {
 				    	complete_national_focus = FIN_finnish_march_of_conquest
 				    }
 				}
+
+				every_country = {
+					limit = { ORIGION_is_in_faction_with_allies = yes }
+					scoped_sound_effect = psi_allies_barbarossa
+				}
+
+				every_country = {
+					limit = { ORIGION_is_in_faction_with_axis = yes }
+					scoped_sound_effect = psi_axis_barbarossa
+				}
+
+				every_country = {
+					limit = { original_tag = SOV }
+					scoped_sound_effect = psi_sov_barbarossa
+				}
 				
 				if = {
 					limit = { USA = { exists = no } }

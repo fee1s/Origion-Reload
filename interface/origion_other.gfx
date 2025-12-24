@@ -12,4 +12,38 @@ spriteTypes = {
 		name = "GFX_country_tradeview_bg_high"
 		texturefile = "gfx/interface/tradeview/country_tradeview_bg_high.dds"		
 	}
+	
+	SpriteType = {
+		name = "GFX_menu_origion_snow_animation"
+		texturefile = "gfx/interface/origion_snow_bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/origion_snow_mask.dds"
+			animationtexturefile = "gfx/interface/origion_snow_animation_first.dds"	 # <- the animated file
+			animationrotation = 210		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 23			# in seconds
+			animationdelay = 0.0			# in seconds
+			animationblendmode = "add"		#add, multiply, overlay
+			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0 y = 0 }
+			animationtexturescale = { x = 0.3 y = 0.3 } 
+		}
+		
+		animation = {
+			animationmaskfile = "gfx/interface/origion_snow_mask.dds"
+			animationtexturefile = "gfx/interface/origion_snow_animation_second.dds"	 # <- the animated file
+			animationrotation = 220	# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 26				# in seconds
+			animationdelay = 0.0			# in seconds
+			animationblendmode = "add"	   #add, multiply, overlay
+			animationtype = "scrolling"	  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0 y = 0 }
+			animationtexturescale = { x = 0.3 y = 0.3 } 
+		}
+	
+		legacy_lazy_load = no
+	}
+
 }
