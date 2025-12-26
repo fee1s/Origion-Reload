@@ -781,6 +781,9 @@ news_event = { # заморозки на восточном фронте
 	
 	immediate = {
 		set_global_flag = freeze_on_eastern_front
+
+		## НОВОГОДНЕЕ ОБНОВЛЕНИЕ
+		hidden_effect = { sound_effect = psi_christmas }
 	}
 	
 	option = {
