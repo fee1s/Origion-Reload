@@ -1,0 +1,49 @@
+bookmarks = {
+	bookmark = {
+		name = "only_asia_name"
+		desc = "only_asia_desc"
+		date = 1936.1.1.14
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+	
+
+		"GER"={
+			history = "GER_BLITZKRIEG_DESC"
+			ideology = fascism
+			available = { has_dlc = "Waking the Tiger" }
+			ideas = {
+				sour_loser
+				general_staff
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_remilitarize_the_rhineland
+				GER_danzig_or_war
+				GER_totalen_krieg
+			}
+		}
+		"SOV"={
+			history = "SOV_BLITZKRIEG_DESC"
+			ideology = communism
+			available = { has_dlc = "No Step Back" }
+			ideas = {
+				trotskyite_plot_nsb
+				SOV_second_five_year_plan_fake_1936_ns
+			}
+			focuses = {
+				SOV_the_path_of_marxism_leninism
+				SOV_secret_protocol_of_the_MR_pact
+				SOV_the_sacred_war
+			}	
+		}
+
+		"---"={
+			history = "OTHER_BLITZKRIEG_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

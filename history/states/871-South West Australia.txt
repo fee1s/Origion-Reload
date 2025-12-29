@@ -8,6 +8,7 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+
 		}
 		owner = AST
 		add_core_of = AST
@@ -15,11 +16,12 @@ state={
 			owner = COL
 			add_core_of = COL
 		}
+	
 		1936.1.1.14 = {
-            owner = AST
-            add_core_of = AST
-        }
-	}
+			owner = COL
+			add_core_of = COL
+		}
+}
 	state_category = town
 	manpower=50000
 	local_supplies=0.000
