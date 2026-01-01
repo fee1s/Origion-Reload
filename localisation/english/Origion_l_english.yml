@@ -160,7 +160,7 @@ ENG_operation_downfall:0 "Operation §Y«Downfall»§!"
 ENG_altantikwall_fall_no_asia:0 "Operation §Y«Overlord»§!"
 
 sea_invasion_prohibited_ITA_dm:0 "§tInsecure invasion§!"
-sea_invasion_prohibited_ITA_tt:0 "Landing in this region is only possible after fall of §YNorth Africa§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CAllies§!) = §R-300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§Axis§!) = §G+300%§!"
+sea_invasion_prohibited_ITA_tt:0 "Landing in this region is only possible after fall of §YNorth Africa§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CAllies§!) = §R-300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RAxis§!) = §G+300%§!"
 sea_invasion_prohibited_ENG_dm:0 "§tInsecure invasion§!"
 sea_invasion_prohibited_ENG_tt:0 "Landing in this region is only possible after the fall of §YGibraltar§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CAllies§!) = §G+300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RAxis§!) = §R-300%§!"
 sea_invasion_prohibited_USA_dm:0 "§tInsecure invasion§!"
@@ -1188,6 +1188,9 @@ AST_new_zealand_steel_desc: ""
 AST_taranaki_oil: "Taranaki Oil Extraction"
 AST_taranaki_oil_desc: ""
 USA_lend_lease_tt: "§Y[USA.GetName]§! cannot send §YLend-Lease§! before §YMay 1, 1941§!."
+
+BUL_condemn_macedonian_organizations_tt:0 "Spirit §Y$BUL_imro_01$§! will be removed after §Y270§! days"
+BUL_imro_00_tt:0 "The §Ynational spirit§! can be removed via §Y$BUL_condemn_macedonian_organizations$§! focus"
 
 axis_dec_cat: "Equipment Supplies to Germany"
 axis_dec_cat_desc: "§YGerman Reich§!, with its extensive supply network and industrial capabilities, can send weapons and equipment to the front lines where they are most needed. \n\nSo far we have sent: \n£GFX_unit_fighter_icon_small §YFighters:§! [?aviation_ll_var|0]\n£GFX_unit_medium_armor_icon_small §YMedium Tanks:§! [?tank_ll_var|0]\n£GFX_unit_medium_tank_destroyer_brigade_icon_small §YMedium Tank Destroyers:§! [?antitank_ll_var|0]\n£GFX_unit_mechanized_icon_small §YArmored Personnel Carriers:§! [?mech_ll_var|0]"

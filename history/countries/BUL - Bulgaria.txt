@@ -33,8 +33,6 @@ set_variable = { BUL_second_national_catastrophe_dm_stability_factor = -0.15 }
 set_variable = { BUL_second_national_catastrophe_dm_war_support_factor = -0.15 }
 add_dynamic_modifier = { modifier = BUL_second_national_catastrophe_dm }
 
-add_dynamic_modifier = { modifier = BUL_military_dictatorship_dm }
-
 #You don't want Bulgarian party names? Just remove these lines
 set_party_name = { # DLC
 	ideology = communism
@@ -65,7 +63,7 @@ add_timed_idea = {
 }
 add_ideas = {
 	# BUL_second_national_catastrophe
-	BUL_imro_01
+	BUL_imro_00
 	# BUL_army_restrictions
 	volunteer_only
 }
