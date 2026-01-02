@@ -28,7 +28,7 @@ focus_tree = {
 		id = BUL_appoint_right_wing_ministers
 
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = 10
+		x = 6
 		y = 0
 		cost = 10
 
@@ -91,6 +91,42 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.15
+		}
+	}
+	
+	focus = {
+		id = BUL_condemn_macedonian_organizations
+
+		prerequisite = { focus = BUL_promote_bulgarian_nationalism }
+		prerequisite = { focus = BUL_the_path_towards_a_greater_bulgaria }
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = BUL_promote_bulgarian_nationalism
+		
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
+		completion_reward = {
+			custom_effect_tooltip = BUL_condemn_macedonian_organizations_tt
+			hidden_effect = {
+				remove_ideas = BUL_imro_00
+				add_timed_idea = {
+					idea = BUL_imro_01
+					days = 270
+				}
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = BUL_modify_second_national_catastrophe_tt
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_stability_factor = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = { 
+			    BUL_second_national_catastrophe_dm_war_support_factor = 0.05
+				tooltip = war_support_factor_tt
+			}
 		}
 	}
 
@@ -503,42 +539,6 @@ focus_tree = {
 ##     ##  ##        ##    ##    ##     ## ##   ##    ##  ##       ######### ##          ##     ## ##   ##   ######### ##  #### ##       ##     ## 
 ##     ##  ##  ##    ##    ##    ##     ## ##    ##   ##  ##    ## ##     ## ##          ##     ## ##    ##  ##     ## ##   ### ##    ## ##     ## 
 ##     ## ####  ######     ##     #######  ##     ## ####  ######  ##     ## ########    ########  ##     ## ##     ## ##    ##  ######  ##     ## 
-
-	focus = {
-		id = BUL_condemn_macedonian_organizations
-
-		prerequisite = { focus = BUL_promote_bulgarian_nationalism }
-		prerequisite = { focus = BUL_the_path_towards_a_greater_bulgaria }
-		icon = GFX_focus_BUL_condemn_macedonian_organizations
-		x = 1
-		y = 1
-		cost = 10
-		relative_position_id = BUL_promote_bulgarian_nationalism
-		
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
-		completion_reward = {
-			custom_effect_tooltip = BUL_condemn_macedonian_organizations_tt
-			hidden_effect = {
-				remove_ideas = BUL_imro_00
-				add_timed_idea = {
-					idea = BUL_imro_01
-					days = 270
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = BUL_modify_second_national_catastrophe_tt
-			add_to_variable = { 
-			    BUL_second_national_catastrophe_dm_stability_factor = 0.05
-				tooltip = stability_factor_tt
-			}
-			add_to_variable = { 
-			    BUL_second_national_catastrophe_dm_war_support_factor = 0.05
-				tooltip = war_support_factor_tt
-			}
-		}
-	}
 
 	focus = {
 		id = BUL_cooperate_with_the_zveno
