@@ -53,31 +53,6 @@ state={
 
 		}
 		
-		add_dynamic_modifier = {
-			modifier = fra_maginot_line
-			scope = GER
-		}
-		
-		add_dynamic_modifier = {
-			modifier = fra_maginot_line
-			scope = ITA
-		}
-		
-		add_dynamic_modifier = {
-			modifier = fra_maginot_line
-			scope = HUN
-		}
-		
-		add_dynamic_modifier = {
-			modifier = fra_maginot_line
-			scope = ROM
-		}
-		
-		add_dynamic_modifier = {
-			modifier = fra_maginot_line
-			scope = BUL
-		}
-		
 		add_core_of = FRA
 		1939.1.1 = {
 			buildings = {
@@ -86,9 +61,10 @@ state={
 		}
 
 	
-		1936.1.1.14 = {
-			owner = COL
-			add_core_of = COL
+		1941.3.1.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
 		}
 	}
 

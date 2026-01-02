@@ -303,6 +303,7 @@ news_event = { # -тнп за продажу самолетов Югослави
 	fire_only_once = yes
 	trigger = {
 		date > 1937.12.30
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -389,6 +390,7 @@ news_event = { # напряга за марко поло в ноу азии
 	trigger = {
 		date > 1937.07.22
 		JAP = { exists = no }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -409,6 +411,7 @@ news_event = { # напряга за конец аннекса китая в н�
 	trigger = {
 		date > 1938.07.22
 		JAP = { exists = no }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -648,6 +651,7 @@ news_event = { # Технологии 1938 года доступны
 	trigger = { 
 	    date > 1937.12.30 
 		NOT = { has_global_flag = tech_1938 }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -672,6 +676,7 @@ news_event = { # Технологии 1941 года доступны
 	trigger = { 
 	    date > 1940.12.30 
 		NOT = { has_global_flag = tech_1941 }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -962,7 +967,7 @@ news_event = { # скрытый ивент вспомогательный по �
 	major = yes
 	fire_only_once = no
 	
-	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
+	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } NOT = { has_global_flag = OST_FRONT_FLAG } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
 	
 	immediate = {
 	    set_global_flag = second_compiegne_signed

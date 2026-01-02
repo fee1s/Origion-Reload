@@ -2,7 +2,7 @@ bookmarks = {
 	bookmark = {
 		name = "only_asia_name"
 		desc = "only_asia_desc"
-		date = 1936.1.1.14
+		date = 1941.3.1.12
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 	
@@ -44,6 +44,8 @@ bookmarks = {
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
+			set_global_flag = OST_FRONT_FLAG
+			set_global_flag = all_europe_occupied_by_axis
 		}
 	}
 }

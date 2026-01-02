@@ -268,40 +268,42 @@ on_actions = {
 				   value = -2000
 				}
 			}
-			FRA = { 
-				every_state = { 
-					limit = { 
-						OR = { 
-							state = 29 
-							state = 785 
-							state = 18
-							state = 28
-							state = 17 
-							state = 15
-							state = 16
-							state = 30
-							state = 14 
-							state = 24 
-							state = 27
-							state = 33
-							state = 23
-							state = 30 
-							state = 19 
-							state = 25 
-							state = 31
-							state = 26 
-							state = 22
-							state = 20
-							state = 32
-							state = 21
-							state = 851
-							state = 735
-							state = 1
-						}
+			if = { limit = { NOT = { has_global_flag = OST_FRONT_FLAG } } 
+				FRA = { 
+					every_state = { 
+						limit = { 
+							OR = { 
+								state = 29 
+								state = 785 
+								state = 18
+								state = 28
+								state = 17 
+								state = 15
+								state = 16
+								state = 30
+								state = 14 
+								state = 24 
+								state = 27
+								state = 33
+								state = 23
+								state = 30 
+								state = 19 
+								state = 25 
+								state = 31
+								state = 26 
+								state = 22
+								state = 20
+								state = 32
+								state = 21
+								state = 851
+								state = 735
+								state = 1
+							}
+						} 
+						
+						add_dynamic_modifier = { modifier = no_fra_mainland_buildings }
 					} 
-					
-					add_dynamic_modifier = { modifier = no_fra_mainland_buildings }
-				} 
+				}
 			}
 			POL = {
 				add_ai_strategy = {
