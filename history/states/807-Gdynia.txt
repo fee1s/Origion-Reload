@@ -19,9 +19,10 @@ state={
 		}
 		buildings = {
 			infrastructure = 3 #was: 6
-			arms_factory = 2
-			industrial_complex = 1
+			arms_factory = 4
+			industrial_complex = 2
 			air_base = 2
+			dockyard = 5
 			9263 = {
 				naval_base = 1
 			}
@@ -36,7 +37,8 @@ state={
 			add_core_of = GER
 			controller = GER
 		}
-}
+		add_extra_state_shared_building_slots = 8
+	}
 
 	provinces={
 		243 279 334 389 3295 3324 6347 9263

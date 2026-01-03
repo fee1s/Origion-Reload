@@ -465,6 +465,21 @@ on_actions = {
 				}
 			}
 
+			if = { 
+				limit = { has_global_flag = OST_FRONT_FLAG }
+
+				every_state = {
+					limit = {
+						is_core_of = ROM
+						NOT = { OR = { state = 766 state = 78 state = 80 } }
+					}
+
+					add_dynamic_modifier = { modifier = no_slots_dm }
+
+					set_building_level = { type = arms_factory level = 0 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = dockyard level = 0 instant_build = yes }
+				}
+			}			
+
 			every_state = {
 			    limit = {
 					OR = {

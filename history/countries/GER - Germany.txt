@@ -452,15 +452,178 @@ if = {
 	complete_national_focus = GER_Volkswagen
 	complete_national_focus = GER_hermann_goring_werke
 	complete_national_focus = GER_develop_heraeus_facilities
+	complete_national_focus = GER_soviet_treaty
 
 	complete_national_focus = GER_the_swiss_gold
-	complete_national_focus = GER_ITA_food
+	complete_national_focus = GER_ITA_stell
 
-	complete_national_focus = GER_army_indoctrination
 	complete_national_focus = GER_panzer_troops_school
 	complete_national_focus = GER_combined_arms
 
 	complete_national_focus = GER_FRA_workpower
+
+	unlock_national_focus = GER_remilitarize_the_rhineland
+	unlock_national_focus = GER_lider_faction
+	unlock_national_focus = GER_swedish_trade_agreement
+	unlock_national_focus = GER_ITA_food
+	unlock_national_focus = GER_anschluss
+	unlock_national_focus = GER_demand_sudetenland
+	unlock_national_focus = GER_fate_of_czechoslovakia
+	unlock_national_focus = GER_reassert_eastern_claims
+	unlock_national_focus = GER_molotov_ribbentrop_pact
+	unlock_national_focus = GER_danzig_or_war
+	unlock_national_focus = GER_around_maginot
+	unlock_national_focus = GER_operation_weserubung
+	unlock_national_focus = GER_triumphal_march
+	unlock_national_focus = GER_operation_marita_zov
+	unlock_national_focus = GER_fate_of_yugoslavia
+	unlock_national_focus = GER_before_war_with_USSR
+	unlock_national_focus = GER_war_with_eng
+	unlock_national_focus = GER_develop_modern_maneuver_warfare
+	unlock_national_focus = GER_advanced_panzer_research
+	unlock_national_focus = GER_dive_bombers
+	unlock_national_focus = GER_aeronautical_research_institute
+	unlock_national_focus = GER_expanding_the_luftwaffe
+
+	set_technology = {
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+		improved_equipment_conversion = 1
+		advanced_equipment_conversion = 1
+
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		concentrated_industry4 = 1
+		concentrated_industry5 = 1
+
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		excavation1 = 1
+		excavation2 = 1
+		excavation3 = 1
+
+		rubber_processing = 1
+		improved_rubber_processing = 1
+		modern_rubber_processing = 1
+		advanced_rubber_processing = 1
+
+		oil_processing = 1
+		improved_oil_processing = 1
+		advanced_oil_processing = 1
+
+		fuel_refining2 = 1
+		fuel_refining3 = 1
+
+		electronic_mechanical_engineering = 1
+		mechanical_computing = 1
+
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		improved_decimetric_radar = 1
+		centimetric_radar = 1
+
+		improved_small_airframe = 1
+		heavy_bombs = 1
+		aa_hmg = 1
+		aa_cannon_1 = 1
+		tank_buster_1 = 1
+		engines_3 = 1
+
+		interwar_artillery = 1
+		interwar_antitank = 1
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+		antitank4 = 1
+		antitank5 = 1
+		antiair1 = 1
+		antiair2 = 1
+
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		improved_light_tank_chassis = 1
+
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+
+		tech_engineers2 = 1
+		tech_maintenance_company = 1
+		tech_maintenance_company2 = 1
+		tech_flamethrower_brigade = 1
+		tech_flamethrower_brigade2 = 1
+
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		mechanised_infantry = 1
+	}
+
+	10 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } }
+	87 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
+	98 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
+
+	69 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } }
+	9 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } }
+	75 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } }
+	74 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
+
+	4 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+
+	68 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	66 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	67 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+
+	64 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } }
+	65 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 7 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	59 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } }
+	60 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 8 instant_build = yes } }
+	54 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 9 instant_build = yes } }
+
+	53 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+	52 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+
+	50 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+	978 = { set_building_level = { type = arms_factory level = 21 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+
+	42 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	55 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	57 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	51 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = industrial_complex level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+
+	763 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+
+	34 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } }
+	6 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } }
+	977 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } }
+
+	37 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } }
+	911 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
+
+	5 = { set_building_level = { type = arms_factory level = 1 instant_build = yes } }
+
+	## ВЕНГЕРСКИЕ СТЕЙТЫ
+
+	974 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	155 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+
+	154 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 4 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+	43 = { set_building_level = { type = arms_factory level = 11 instant_build = yes } set_building_level = { type = industrial_complex level = 9 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	664 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	70 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } set_building_level = { type = industrial_complex level = 4 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	
+	## БОЛГАРСКИЕ СТЕЙТЫ
+
+	48 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 20 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	801 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	211 = { set_building_level = { type = arms_factory level = 22 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	212 = { set_building_level = { type = arms_factory level = 11 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 }
 
 add_equipment_to_stockpile = {
