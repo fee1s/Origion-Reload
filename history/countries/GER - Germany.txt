@@ -207,9 +207,8 @@ add_ideas = {
 	limited_conscription
 	partial_economic_mobilisation
 }
-add_ideas = GER_mefo_bills_1
 
-activate_mission = GER_mefo_bills_mission
+if = { limit = { has_start_date < 1941.3.1 } add_ideas = GER_mefo_bills_1 activate_mission = GER_mefo_bills_mission }
 
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_konrad_adenauer
@@ -434,6 +433,29 @@ if = {
 }
 
 1941.3.1.12 = {
+	## ПРОДАКШЕН, ДИВИЗИИ
+
+	set_oob = GER_1941_ORGN
+
+	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
+
+	add_dynamic_modifier = {
+		modifier = african_warfare_dm
+	}
+
+	add_to_variable = { african_warfare_dm_fuel_gain_factor = 0.1 }
+	add_to_variable = { african_warfare_dm_max_fuel_factor = 0.1		}
+	add_to_variable = { african_warfare_dm_industrial_capacity_factory = 0.1 }
+	add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.1 }
+	add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.1 }
+	add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.1 }
+
+	declare_war_on = { target = ENG type = annex_everything }
+
+	ENG = { add_ideas = BAN_BAN }
+
+	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
+	
 	complete_national_focus = GER_the_four_year_plan
 	complete_national_focus = GER_accelerate_the_rearmament_program
 	complete_national_focus = GER_concentrated_armament_program 
@@ -565,42 +587,50 @@ if = {
 		mechanised_infantry = 1
 	}
 
+	## БОНУС НА РЕЗИНУ ПОЛУЧАЕМЫЕ С ТЕХНОЛОГИЙ (ДОЛЖНО БЫТЬ, Т.К ТЕХНОЛОГИИ НЕ РАБОТАЮТ В СЦЕНАРИИ ПОЧЕМУ-ТО)
+
+	modify_building_resources = {
+        building = synthetic_refinery
+        resource = rubber
+        amount = 4
+    }
+
 	10 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } }
 	87 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
 	98 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
 
-	69 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } }
+	69 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } }
 	9 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } }
 	75 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } }
-	74 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
+	74 = { set_building_level = { type = arms_factory level = 4 instant_build = yes } }
 
-	4 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	4 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 1 instant_build = yes } }
 
-	68 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	66 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	67 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	68 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	66 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	67 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 
-	64 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } }
+	64 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 	65 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 7 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	59 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } }
-	60 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 8 instant_build = yes } }
-	54 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 9 instant_build = yes } }
+	59 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	60 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 8 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	54 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 9 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 
-	53 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
-	52 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	53 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	52 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 
 	50 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
-	978 = { set_building_level = { type = arms_factory level = 21 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+	978 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
 
 	42 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	55 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	57 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	51 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = industrial_complex level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	55 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	57 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
+	51 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 
-	763 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+	763 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
 
 	34 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } }
-	6 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } }
+	6 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } }
 	977 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } }
 
 	37 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } }
@@ -620,10 +650,533 @@ if = {
 	
 	## БОЛГАРСКИЕ СТЕЙТЫ
 
-	48 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 20 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	801 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	211 = { set_building_level = { type = arms_factory level = 22 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	212 = { set_building_level = { type = arms_factory level = 11 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	48 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = industrial_complex level = 20 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } add_extra_state_shared_building_slots = 13 }
+	801 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 5 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } add_extra_state_shared_building_slots = 6 }
+	211 = { set_building_level = { type = arms_factory level = 22 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } add_extra_state_shared_building_slots = 8 }
+	212 = { set_building_level = { type = arms_factory level = 11 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } add_extra_state_shared_building_slots = 10 }
+
+	## ТРЕЙТЫ В КБШКАХ
+
+	mio:GER_daimler_benz_organization = {
+		complete_mio_trait = generic_mio_trait_simplified_suspension
+		complete_mio_trait = generic_mio_trait_crew_ergonomics
+		complete_mio_trait = generic_mio_trait_improved_tracks
+		complete_mio_trait = generic_mio_trait_command_upgrades
+		complete_mio_trait = generic_mio_trait_standardized_components
+		complete_mio_trait = generic_mio_trait_long_barreled_guns
+		complete_mio_trait = generic_mio_trait_infantry_support_tanks
+	}
+
+	mio:GER_messerschmitt_organization = {
+		complete_mio_trait = generic_mio_trait_expanded_production_facilities
+		complete_mio_trait = generic_mio_trait_fixed_tailwheels
+		complete_mio_trait = generic_mio_advanced_materials
+		complete_mio_trait = generic_mio_trait_removable_wings
+		complete_mio_trait = generic_mio_trait_liquid_cooled_engines
+		complete_mio_trait = generic_mio_trait_maritime_duties
+		complete_mio_trait = generic_mio_trait_advanced_aerodynamics
+		complete_mio_trait = generic_mio_trait_fuselage_ordinance_rack
+		complete_mio_trait = generic_mio_trait_ongoing_developmental_upgrades
+		complete_mio_trait = generic_mio_trait_heavier_airframe
+		complete_mio_trait = generic_mio_trait_fighter_specialization
+		complete_mio_trait = generic_mio_trait_multi_purpose_aircraft
+		complete_mio_trait = generic_mio_trait_flexible_design
+		complete_mio_trait = generic_mio_trait_fighter_expertise
+
+		complete_mio_trait = GER_mio_trait_fuselage_based_weapons
+		complete_mio_trait = GER_mio_trait_maintenance_first_design
+	}
+
+	mio:GER_junkers_organization = {
+		complete_mio_trait = generic_mio_trait_low_altitude_attacks
+		complete_mio_trait = generic_mio_trait_canopies_and_firewalls
+		complete_mio_trait = generic_mio_trait_automatic_pull_out
+		complete_mio_trait = generic_mio_trait_reinforced_wings
+		complete_mio_trait = generic_mio_trait_air_brakes
+		complete_mio_trait = generic_mio_trait_bombs
+		complete_mio_trait = generic_mio_heat_bombs
+	}
+
+	mio:GER_mauser_organization = {
+		complete_mio_trait = generic_mio_trait_drum_pattern_sights
+		complete_mio_trait = generic_mio_trait_quality_materials
+		# complete_mio_trait = generic_mio_trait_improved_small_arms_bullet_design
+		complete_mio_trait = generic_mio_trait_armor_piercing_rounds
+		# complete_mio_trait = generic_mio_trait_medium_machineguns
+		# complete_mio_trait = generic_mio_trait_anti_vechicle_land_mines
+
+		complete_mio_trait = generic_mio_trait_research_program
+		complete_mio_trait = generic_mio_trait_reinforced_stocks
+		complete_mio_trait = generic_mio_trait_advanced_barrel_forging
+		complete_mio_trait = generic_mio_trait_mass_rifle_production
+	}
+
+	mio:GER_rheinmetall_organization = {
+		complete_mio_trait = generic_mio_trait_advanced_barrel_forging
+		complete_mio_trait = generic_mio_trait_gun_mass_production
+	}
+
+	mio:GER_germaniawerft_organization = {
+		complete_mio_trait = generic_mio_trait_internal_armor_belt
+		complete_mio_trait = generic_mio_trait_external_armor_belt
+		complete_mio_trait = generic_mio_trait_advanced_hydrodynamic_design
+		complete_mio_trait = generic_mio_trait_production_capital_first
+		complete_mio_trait = generic_mio_trait_production_capital_third
+		complete_mio_trait = generic_mio_trait_production_capital_fourth
+	}
+
+	## ШАБЛОНЫ СНАРЯЖЕНИЯ
+
+    create_equipment_variant = {
+        name = "Stug III"
+        type = medium_tank_destroyer_chassis_1
+        design_team = mio:GER_daimler_benz_organization
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_heavy_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = wet_ammo_storage
+        }
+		upgrades = { tank_nsb_engine_upgrade = 3 }
+		parent_version = 0
+		obsolete = yes
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_1
+		amount = 1400
+		variant_name = "Stug III"
+	}
+
+	create_equipment_variant = {
+        name = "Panzerkampfwagen V"
+        type = medium_tank_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 9
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = tank_radio_3
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = no
+		parent_version = 2
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 2100
+		variant_name = "Panzerkampfwagen V"	
+	}
+	
+	create_equipment_variant = {
+        name = "Panzerkampfwagen IV"
+        type = medium_tank_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 9
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = tank_radio_2
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = yes
+		parent_version = 1
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 2400
+		variant_name = "Panzerkampfwagen IV"	
+	}
+
+	create_equipment_variant = {
+        name = "Panzerkampfwagen III"
+        type = medium_tank_chassis_1
+        design_team = mio:GER_daimler_benz_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 13
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = tank_radio_1
+            special_type_slot_4 = wet_ammo_storage
+        }
+		parent_version = 0
+		obsolete = yes
+    }
+
+    create_equipment_variant = {
+        name = "JagdPz V"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_high_velocity_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = no
+		parent_version = 2
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 4600
+		variant_name = "JagdPz V"
+	}
+
+    create_equipment_variant = {
+        name = "JagdPz IV"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_heavy_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = yes
+		parent_version = 1
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 5000
+		variant_name = "JagdPz IV"
+	}
+
+    create_equipment_variant = {
+        name = "Flakpanzer IV «Ostwind»"
+        type = medium_tank_aa_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+        modules = {
+            turret_type_slot = tank_light_one_man_tank_turret
+            main_armament_slot = tank_anti_air_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = extra_ammo_storage
+            special_type_slot_2 = extra_ammo_storage
+            special_type_slot_3 = extra_ammo_storage
+            special_type_slot_4 = easy_maintenance
+        }
+    }
+
+    create_equipment_variant = {
+        name = "Panzerkampfwagen II"
+        type = light_tank_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_three_man_tank_turret
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_3
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = easy_maintenance
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 14
+		}
+    }
+
+	create_equipment_variant = {
+		name = "Fw-190 A" 
+		type = small_plane_airframe_2
+		design_team = mio:GER_messerschmitt_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = hmg_defense_turret		
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Fw-190" 
+		type = small_plane_airframe_2
+		design_team = mio:GER_messerschmitt_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = lmg_defense_turret		
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Bf-109" 
+		type = small_plane_airframe_1
+		design_team = mio:GER_messerschmitt_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = fuel_tanks_small			
+		}
+		obsolete = yes
+	}		
+
+	create_equipment_variant = {
+		name = "Ju.87 B" 
+		type = small_plane_cas_airframe_2
+		design_team = mio:GER_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = tank_buster_1
+			fixed_auxiliary_weapon_slot_1 = tank_buster_1
+			fixed_auxiliary_weapon_slot_2 = tank_buster_1
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = hmg_defense_turret		
+			special_type_slot_3 = fuel_tanks_small		
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Ju.87 A" 
+		type = small_plane_cas_airframe_2
+		design_team = mio:GER_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = tank_buster_1
+			fixed_auxiliary_weapon_slot_1 = tank_buster_1
+			fixed_auxiliary_weapon_slot_2 = tank_buster_1
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = lmg_defense_turret		
+			special_type_slot_3 = fuel_tanks_small		
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Ju.87" 
+		type = small_plane_cas_airframe_1
+		design_team = mio:GER_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = fuel_tanks_small			
+		}
+		parent_version = 0
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Heinkel He 177 B" 	
+		type = large_plane_airframe_0
+		design_team = mio:GER_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+			engine_type_slot = engine_2_4x
+			special_type_slot_1 = fuel_tanks_large
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+		}
+	}	
+
+	create_equipment_variant = {
+		name = "Sonderkraftfahrzeug 11" 	
+		type = mechanized_equipment_1
+		design_team = mio:GER_opel_organization
+		upgrades = { mech_cost_upgrade = 5 }
+	}	
+
+	create_equipment_variant = { # 287.100
+		name = "Karabiner 98k" 	
+		type = infantry_equipment_1
+		design_team = mio:GER_mauser_organization
+		obsolete = yes
+	}	
+
+	create_equipment_variant = { # 35.500 -> 55.500
+		name = "MP 38" 	
+		type = infantry_equipment_2
+		design_team = mio:GER_mauser_organization
+		parent_version = 0
+	}	
+
+	#create_equipment_variant = { # 20.000
+	#	name = "MP 43" 	
+	#	type = infantry_equipment_3
+	#	design_team = mio:GER_mauser_organization
+	#	parent_version = 0
+	#}
+
+	create_equipment_variant = { # 13.300
+		name = "Дополнительное оснащение" 	
+		type = support_equipment_1
+		design_team = mio:GER_mauser_organization
+		parent_version = 0
+	}
+
+	create_equipment_variant = { # 1.000
+		name = "20-мм FlaK 30" 	
+		type = anti_air_equipment_2
+		design_team = mio:GER_rheinmetall_organization
+		parent_version = 0
+	}	
+
+	create_equipment_variant = { # 5.500
+		name = "20-мм FlaK 20" 	
+		type = anti_air_equipment_1
+		design_team = mio:GER_rheinmetall_organization
+	}
+	
+	create_equipment_variant = { # 7.900
+		name = "Opel Blitz" 	
+		type = motorized_equipment_1
+		design_team = mio:GER_opel_organization
+		parent_version = 0
+	}
+
+	## ДОБАВЛЯЕМ ТЕХНИКУ НА СКЛАДЫ
+
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 12410
+	}
+
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 262200
+		variant_name = "Karabiner 98k"
+	}
+
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_2
+		amount = 55500
+		variant_name = "MP 38"
+	}
+
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 7295
+	}
+
+	add_equipment_to_stockpile = {
+		type = anti_air_equipment_2
+		amount = 1100
+		variant_name = "20-мм FlaK 30"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = anti_air_equipment_1
+		amount = 5500
+		variant_name = "20-мм FlaK 20"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = mechanized_equipment_1
+		amount = 30100
+		variant_name = "Sonderkraftfahrzeug 11"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = large_plane_airframe_0
+		amount = 100
+		variant_name = "Heinkel He 177 B"	
+	}
+	
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_1
+		amount = 50
+		variant_name = "Ju.87"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_2
+		amount = 350
+		variant_name = "Ju.87 A"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_1
+		amount = 800
+		variant_name = "Bf-109"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_2
+		amount = 9100
+		variant_name = "Fw-190"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_1
+		amount = 1800
+		variant_name = "Panzerkampfwagen III"	
+	}
+	
+	add_equipment_to_stockpile = {
+		type = medium_tank_aa_chassis_2
+		amount = 860
+		variant_name = "Flakpanzer IV «Ostwind»"
+	}
+
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_2
+		amount = 260
+		variant_name = "Panzerkampfwagen II"
+	}
+
+	add_equipment_to_stockpile = {
+		type = train_equipment_1
+		amount = 220
+	}
 }
 
 add_equipment_to_stockpile = {

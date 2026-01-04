@@ -25,6 +25,29 @@ on_actions = {
 			}
 			if = { 
 				limit = {
+					state = 126
+					has_global_flag = OST_FRONT_FLAG
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+					to_state = 64 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 64
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { off_channel_coastline = yes } } transfer_state_to = ENG }  
+				}				
+			}
+			if = { 
+				limit = {
 					is_core_of = FIN
 					ROOT = { original_tag = SOV }
 				} 
@@ -468,6 +491,8 @@ on_actions = {
 			if = { 
 				limit = { has_global_flag = OST_FRONT_FLAG }
 
+				## ОБНУЛЕНИЕ РУМЫНСКОЙ ПРОМЫШЛЕННОСТИ И СЛОТОВ НА ЕЕ ТЕРРИТОРИИ
+
 				every_state = {
 					limit = {
 						is_core_of = ROM
@@ -478,6 +503,96 @@ on_actions = {
 
 					set_building_level = { type = arms_factory level = 0 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = dockyard level = 0 instant_build = yes }
 				}
+
+				## РУМЫНСКИЕ СТЕЙТЫ (РЕСУРСЫ)
+
+				46 = { 
+					add_resource = {
+						type = oil
+						amount = 40
+					}
+
+					set_building_level = { type = infrastructure level = 5 instant_build = yes }
+				}
+
+				## ИТАЛЬЯСКИЕ СТЕЙТЫ (РЕСУРСЫ)
+
+				186 = { 
+					add_resource = {
+						type = oil
+						amount = 225
+					}
+
+					add_resource = {
+						type = rubber
+						amount = 42
+					}
+				}
+
+				## ВЕНГЕРСКИЕ СТЕЙТЫ (РЕСУРСЫ)
+
+				43 = {
+					add_resource = {
+						type = aluminium
+						amount = 90
+					}				
+				}
+
+				## БОЛГАРСКИЕ СТЕЙТЫ (РЕСУРСЫ)
+
+				48 = {
+					add_resource = {
+						type = steel
+						amount = 120
+					}				
+				}
+				
+				## МЕНЕДЖМЕНТ ПРАВ НА РЕСУРСЫ
+
+				COL = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = SPR
+								state = 459
+								state = 290
+							}
+						}
+
+						controller = {
+							give_resource_rights = {
+								receiver = VIC
+								state = PREV
+							}
+						}
+					}
+
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = ITA
+								is_core_of = SWE
+								state = 105
+								state = 804
+								state = 104
+								state = 109
+								state = 185
+								state = 47
+								state = 186
+								state = 735
+							}
+						}
+						
+						controller = {
+							give_resource_rights = {
+								receiver = GER
+								state = PREV
+							}
+						}
+					}
+				}
+
+
 			}			
 
 			every_state = {
