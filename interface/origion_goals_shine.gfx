@@ -724,7 +724,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	
-	SpriteType = {
+    SpriteType = {
 		name = "GFX_SAF_Yan_Smets_shimmy_shine"
 		texturefile = "gfx/interface/goals/saf/SAF_Yan_Smets_shimmy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -740,7 +740,7 @@ spriteTypes = {
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
-	}
+
 		animation = {
 			animationmaskfile = "gfx/interface/goals/saf/SAF_Yan_Smets_shimmy.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
@@ -755,10 +755,4 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	
-	
-	
-	
-
-
 }

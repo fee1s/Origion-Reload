@@ -18,7 +18,7 @@
 	focus = { 
 		id = SAF_course_of_united_party  
 		icon = GFX_SAF_course_of_united_party
-		x = 10
+		x = 13
 		y = 0
 
 		cost = 10
@@ -380,7 +380,7 @@
 		
 		relative_position_id = SAF_cape_corps
 		
-		prerequisite = {focus = SAF_buy_stan focus = SAF_buy_stan}
+		prerequisite = { focus = SAF_buy_stan focus = SAF_follow_example_of_ss }
 		
 		
 		available_if_capitulated = yes
@@ -1033,8 +1033,8 @@
 	focus = {
 		id = SAF_split_in_party
 		icon = GFX_SAF_Yan_Smets_shimmy
-		x = 10
-		y = 5
+		x = 0
+		y = 1
 
 		cost = 0
 
@@ -1046,7 +1046,7 @@
 			date > 1940.6.1
 		}
 		
-		
+		relative_position_id = SAF_general_rearmament
 		
 		prerequisite = {focus = SAF_barry_third_term }
 		prerequisite = {focus = SAF_general_rearmament}
@@ -1261,7 +1261,7 @@
 		
 		relative_position_id = SAF_infrastructure
 	
-		prerequisite = {focus = SAF_cape_instinute }
+		prerequisite = { focus = SAF_cape_instinute }
 		
 		available_if_capitulated = yes
 
@@ -1469,7 +1469,7 @@
 		
 		relative_position_id = SAF_south_development
 	
-		prerequisite = {focus = SAF_north_development }
+		prerequisite = {focus = SAF_south_development }
 		
 		
 		
