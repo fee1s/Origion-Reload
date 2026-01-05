@@ -1,0 +1,47 @@
+SAF_rand_mines_cat = {
+	SAF_rand_mines_mission = { 
+		
+		activation = {
+			always = no
+		}
+		
+		available = {
+			
+			
+			check_variable = { SAF_gold_economy_dm_consumer_goods_expected_value = -0.1 }
+		}
+		
+		
+		cancel_trigger = {
+			
+			
+		}
+		
+		 visible = {
+            always = no
+        }
+		
+		days_mission_timeout = 100
+		
+		selectable_mission = no
+		
+		is_good = no
+		
+		fire_only_once = no
+		
+		complete_effect = {
+        
+		}
+		
+		
+		timeout_effect = {
+			hidden_effect = { activate_mission = SAF_rand_mines_mission } 
+				
+			custom_effect_tooltip = SAF_gold_economy_dm_tt
+			add_to_variable = { 
+				SAF_gold_economy_dm_consumer_goods_expected_value = -0.01
+                tooltip = consumer_goods_expected_tt
+            }
+        }
+    }
+}

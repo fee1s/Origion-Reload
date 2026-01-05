@@ -291,6 +291,8 @@ news_event = { # вступление италии в войну против с
 		if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } }
 		
 		sound_effect = psi_ita_join_war
+	
+		SAF = { complete_national_focus = SAF_split_in_party }
 	}
 	
 	mean_time_to_happen = { days = 1 }
