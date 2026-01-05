@@ -1943,24 +1943,16 @@
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = SAF_gold_economy_dm_tt
-			add_to_variable = {
-				SAF_gold_economy_dm_consumer_goods_expected_value = -0.05
-				custom_effect_tooltip = consumer_goods_expected_tt
-			}
-			add_to_variable = {
-				SAF_gold_economy_dm_production_factory_efficiency_gain_factor = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
-			}
 			
 			add_to_variable = {
-				SAF_gold_economy_dm_line_change_production_efficiency_factor = 0.05
+				SAF_gold_economy_dm_production_factory_efficiency_gain_factor = -0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			add_to_variable = {
+				SAF_gold_economy_dm_line_change_production_efficiency_factor = 0.1
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 			
-			add_to_variable = { 
-				SAF_gold_economy_dm_production_factory_start_efficiency_factor = 0.05
-                tooltip = production_factory_start_efficiency_factor_tt
-            }
 		}	
 	}
 	
