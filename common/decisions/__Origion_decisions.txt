@@ -1327,9 +1327,11 @@ axis_dec_cat = {
 			custom_effect_tooltip = tank_ll_tt
 			set_variable = { eq_amount_st = num_equipment@medium_tank_chassis }
 			set_variable = { eq_amount_pt = num_equipment@medium_tank_destroyer_chassis }
+			set_variable = { eq_amount_ar = num_equipment@medium_tank_artillery_chassis }
 			set_variable = { eq_amount_me = num_equipment@mechanized_equipment }
 			add_to_variable = { tank_ll_var = eq_amount_st }
 			add_to_variable = { antitank_ll_var = eq_amount_pt }
+			add_to_variable = { artitank_ll_var = eq_amount_ar }
 			add_to_variable = { mech_ll_var = eq_amount_me }
 			hidden_effect = { 
 				send_equipment = {
@@ -1340,6 +1342,11 @@ axis_dec_cat = {
 				send_equipment = {
 					equipment = medium_tank_destroyer_chassis 
 					amount = var:eq_amount_pt 
+					target = GER 
+				}
+				send_equipment = {
+					equipment = medium_tank_artillery_chassis 
+					amount = var:eq_amount_ar 
 					target = GER 
 				}
 				send_equipment = {
