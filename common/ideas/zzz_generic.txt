@@ -748,6 +748,35 @@ ideas = {
 				#}
 			}
 		}
+
+		SAF_deepen_rand_mines_hidden_idea = {
+			allowed = {  always = no }
+			
+			picture = man_five_year_plan_air
+			name = SAF_gold_economy_dm
+			removal_cost = -1
+
+			on_remove = { 
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = {
+								flag = SAF_deepen_rand_mines_step
+								value = 10
+							}
+						}
+					}
+					modify_country_flag = {
+						flag = SAF_deepen_rand_mines_step
+						value = 1
+					}
+					add_timed_idea = { idea = SAF_deepen_rand_mines_hidden_idea days = 100 }
+					add_to_variable = { 
+						SAF_gold_economy_dm_consumer_goods_expected_value = -0.01 
+					}
+				}
+			}
+		}
     }
 
 	# Special ones that can be applied on other countries through focus system.

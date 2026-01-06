@@ -658,7 +658,6 @@
 
 		available = {
 			has_completed_focus = SAF_barry_third_term
-			has_completed_focus = SAF_exploitation_of_blacks
 		}
 		
 		completion_reward = {
@@ -733,7 +732,7 @@
 		}
 		
 		available = {
-			date > 1937.9.15
+			date > 1937.9.1
 		}
 		
 		relative_position_id = SAF_barri_cabinet
@@ -1066,7 +1065,7 @@
 				retire_character = SAF_j_b_m_hertzog
 				promote_character = {
 					character = SAF_Yan_Smets 
-					ideology = democratic
+					ideology = conservatism
 				}
 			}
 		}
@@ -1096,37 +1095,11 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			random_state = {
+			every_owned_state = {
 				limit = {
 					OR =  {
 						state = 275
-					}
-				}
-				 
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				
-			}	
-			random_state = {
-				limit = {
-					OR =  {
 						state = 681 
-					}
-				}
-				 
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				
-			}
-			random_state = {
-				limit = {
-					OR =  {
 						state = 997 
 					}
 				}
@@ -1137,8 +1110,7 @@
 					instant_build = yes
 				}
 				
-			}
-		
+			}	
 		}
 	}
 	
@@ -1302,7 +1274,13 @@
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = rand_mines_mission_tt          
-			hidden_effect = { activate_mission = SAF_rand_mines_mission }   	    
+			hidden_effect = { 
+				add_timed_idea = { idea = SAF_deepen_rand_mines_hidden_idea days = 100 } 				
+				set_country_flag = {
+					flag = SAF_deepen_rand_mines_step
+					value = 1
+				}
+			}  	    
 		}	
 	}
 	
@@ -1387,7 +1365,7 @@
 			factor = 20
 		}
 		
-		available = {
+		available = {  
 			
 		}
 		
@@ -1404,10 +1382,10 @@
 				limit = {
 					state = 275 
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory 
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			} 
@@ -1625,7 +1603,8 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			 
+			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_dynamic_modifier = { modifier = SAF_ossewabrandwag_dm }
 			
 			
@@ -1708,7 +1687,6 @@
 				SAF_caps_corps_dm_conscription_factor = 0.05
                 tooltip = conscription_factor_tt
             }
-			custom_effect_tooltip = generic_skip_one_line_tt
 			add_to_variable = { 
 				SAF_caps_corps_dm_army_core_defence_factor = 0.05
                 tooltip = army_core_defence_factor_tt
@@ -1919,40 +1897,20 @@
 		ai_will_do = {
 			factor = 20
 		}
-		
-		available = {
-			custom_trigger_tooltip = {
-			    tooltip = SAF_new_military_budget_tt
-				hidden_trigger = {
-				    check_variable = { SAF_gold_economy_dm_consumer_goods_expected_value = -0.1 }
-				}
-			
-			}
-		}
-		
-		
-		
-		
+
 		relative_position_id = SAF_split_in_party
 	
 		prerequisite = {focus = SAF_split_in_party }
-		
-		
-		
-		
+
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = SAF_gold_economy_dm_tt
-			
 			add_to_variable = {
-				SAF_gold_economy_dm_production_factory_efficiency_gain_factor = -0.05
+				SAF_gold_economy_dm_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
-			}
-			add_to_variable = {
-				SAF_gold_economy_dm_line_change_production_efficiency_factor = 0.1
-				tooltip = line_change_production_efficiency_factor_tt
-			}
-			
+			}	
+			custom_effect_tooltip = generic_skip_one_line_tt
+			mio:generic_infantry_equipment_organization = { add_mio_size = 2 }
 		}	
 	}
 	
@@ -1993,6 +1951,8 @@
 				}
 			} 
 			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = SAF_gold_economy_dm_tt
 			add_to_variable = { 
 				SAF_gold_economy_dm_industrial_capacity_factory = 0.025
                 tooltip = industrial_capacity_factory_tt
