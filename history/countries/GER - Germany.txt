@@ -439,6 +439,14 @@ if = {
 
 	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
 
+	add_political_power = 520
+
+	activate_decision = war_bonds
+
+	remove_decision = GER_unternehmen_margarethe
+
+	add_command_power = 190
+
 	add_dynamic_modifier = {
 		modifier = african_warfare_dm
 	}
@@ -453,6 +461,44 @@ if = {
 	declare_war_on = { target = ENG type = annex_everything }
 
 	ENG = { add_ideas = BAN_BAN }
+
+	add_ideas = { 
+		export_focus
+		war_economy
+
+		krupp
+
+		political_loyalty_spirit
+		state_serves_the_military_spirit
+		flexible_organization_spirit
+
+		instilled_aggression_spirit
+		flexible_contracts_spirit
+		decisive_battle_spirit
+
+		air_crew_surveys_spirit
+		veteran_air_instructors_spirit
+	}
+
+	activate_advisor = walther_funk
+	activate_advisor = joachim_von_ribbentrop
+	activate_advisor = fritz_todt
+	activate_advisor = franz_halder
+	activate_advisor = albert_kesselring
+	activate_advisor = ernst_udet
+	activate_advisor = erwin_rommel
+	activate_advisor = hugo_sperrle
+	activate_advisor = gunther_von_kluge
+
+	set_sub_doctrine = mobile_infantry
+
+	add_mastery = { amount = 403 folder = land }
+	add_mastery = { amount = 403 folder = naval }
+	add_mastery = { amount = 483 folder = air }
+
+	army_experience = 700
+	navy_experience = 300
+	air_experience = 790
 
 	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
 	
