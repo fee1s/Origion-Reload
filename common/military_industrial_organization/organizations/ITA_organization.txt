@@ -44,10 +44,6 @@ ITA_fiat_organization = {
 	
 	available = {
 		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			BUL = { has_completed_focus = BUL_contract_foreign_companies }
-		}
-		IF = {
 			limit = { FROM = { original_tag = HUN } }
 			HUN = { has_completed_focus = wuw_HUN_license_fiat_tankettes }
 		}
@@ -146,13 +142,6 @@ ITA_lancia_organization = {
 				tag = BUL 
 				has_dlc = "Battle for the Bosporus"
 			}
-		}
-	}
-	
-	available = {
-		IF = {
-			limit = { FROM = { original_tag = BUL } }
-			BUL = { has_completed_focus = BUL_contract_foreign_companies }
 		}
 	}
 }

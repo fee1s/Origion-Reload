@@ -177,9 +177,12 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = ITA_fiat_organization
-			show_mio_tooltip = ITA_lancia_organization
+			add_tech_bonus = {
+				name = BUL_war_logistics
+			    bonus = 1
+			    uses = 1
+				technology = mechanised_infantry
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = BUL_war_logistics
@@ -196,12 +199,6 @@ focus_tree = {
 				technology = tech_flamethrower_brigade4
 				technology = tech_field_hospital4
 				technology = tech_signal_company4
-			}
-			add_tech_bonus = {
-				name = BUL_war_logistics
-			    bonus = 1
-			    uses = 1
-				technology = mechanised_infantry
 			}
 		}
 	}
@@ -223,12 +220,6 @@ focus_tree = {
 			    uses = 1
 				technology = improved_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = advanced_medium_tank_chassis
-				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}
@@ -601,6 +592,7 @@ focus_tree = {
 			    	is_southern_europe_shore = yes
 			    	is_controlled_by_allies = yes
 			   	}
+				GER = { has_completed_focus = GER_totalen_krieg }
 			}
 		}
 		
@@ -803,6 +795,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 5
+
+		available = {
+			has_completed_focus = BUL_utmost_optimization
+		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -1032,10 +1028,6 @@ focus_tree = {
 		x = -6
 		y = 1
 		cost = 5
-
-		available = {
-		    has_completed_focus = BUL_the_path_towards_a_greater_bulgaria
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -1243,7 +1235,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_variable = { var = BUL_plovdiv_steel_duration value = 30 }
+			set_variable = { var = BUL_plovdiv_steel_duration value = 60 }
 			unlock_decision_tooltip = BUL_mineral_extraction_in_the_rhodopes
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
