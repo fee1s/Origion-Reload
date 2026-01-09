@@ -1147,7 +1147,10 @@ focus_tree = {
 		relative_position_id = GER_soviet_treaty
 		cost = 5
 		available = {
-		    has_war = yes
+			if = { limit = { has_start_date < 1941.03.01 }
+		    	has_war = yes
+			}
+			else = { }
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }

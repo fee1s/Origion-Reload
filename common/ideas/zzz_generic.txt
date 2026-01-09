@@ -748,6 +748,37 @@ ideas = {
 				#}
 			}
 		}
+
+		GER_east_mode_policies = { 
+			allowed = { always = no }
+			
+			picture = man_five_year_plan_air
+			name = GER_autarky
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+					reliability = -0.05
+					soft_attack = -0.05
+					hard_attack = -0.05
+					armor_value = -0.05
+					instant = yes
+				}
+
+				mio_cat_eq_all_battleship = {
+					naval_weather_penalty_factor = -0.25
+					naval_speed = 0.1
+					instant = yes
+				}
+
+				mio_cat_eq_all_cruiser = {
+					naval_weather_penalty_factor = -0.25
+					naval_speed = 0.1
+					instant = yes
+				}
+			}
+		}
     }
 
 	# Special ones that can be applied on other countries through focus system.

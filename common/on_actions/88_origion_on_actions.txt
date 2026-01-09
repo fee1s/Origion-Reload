@@ -25,29 +25,6 @@ on_actions = {
 			}
 			if = { 
 				limit = {
-					state = 126
-					has_global_flag = OST_FRONT_FLAG
-				} 
-				teleport_armies = {
-					limit = {
-						OR = {
-							ORIGION_is_in_faction_with_axis = yes
-						}
-					}
-					to_state = 64 
-				} 
-				every_country = {
-					delete_unit = {
-						state = 64
-						disband = yes
-					} 
-				}
-				PREV = { 
-					if = { limit = { OR = { off_channel_coastline = yes } } transfer_state_to = ENG }  
-				}				
-			}
-			if = { 
-				limit = {
 					is_core_of = FIN
 					ROOT = { original_tag = SOV }
 				} 

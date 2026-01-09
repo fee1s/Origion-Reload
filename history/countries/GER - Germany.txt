@@ -69,12 +69,6 @@ if = {
 }
 }
 
-add_timed_idea = {
-    idea = winter_debuff
-	days = 2251
-}
-
-
 starting_train_buffer = 2
 set_fuel_ratio = 0.8
 
@@ -208,7 +202,15 @@ add_ideas = {
 	partial_economic_mobilisation
 }
 
-if = { limit = { has_start_date < 1941.3.1 } add_ideas = GER_mefo_bills_1 activate_mission = GER_mefo_bills_mission }
+if = { limit = { has_start_date < 1941.3.1 } 
+	add_ideas = GER_mefo_bills_1 
+	activate_mission = GER_mefo_bills_mission 
+
+	add_timed_idea = {
+		idea = winter_debuff
+		days = 2251
+	}
+}
 
 recruit_character = GER_wilhelm_pieck
 recruit_character = GER_konrad_adenauer
@@ -439,11 +441,20 @@ if = {
 
 	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
 
-	add_political_power = 520
+	set_war_support = 0.9
+	
+	set_stability = 0.8
+
+	add_political_power = 570
 
 	activate_decision = war_bonds
 
-	remove_decision = GER_unternehmen_margarethe
+	add_timed_idea = {
+		idea = winter_debuff
+		days = 366
+	}
+
+	add_ideas = { peace_training GER_east_mode_policies }
 
 	add_command_power = 190
 
@@ -489,6 +500,133 @@ if = {
 	activate_advisor = erwin_rommel
 	activate_advisor = hugo_sperrle
 	activate_advisor = gunther_von_kluge
+
+	add_threat = 300
+
+	add_trait = {
+		character = GER_walter_model
+		trait = defensive_doctrine
+	}
+
+	add_trait = {
+		character = GER_walter_model
+		trait = organisational_leader
+	}
+
+	add_trait = {
+		character = GER_walter_model
+		trait = inspirational_leader
+	}
+
+	add_trait = {
+		character = GER_walter_model
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = GER_fedor_von_bock
+		trait = ambusher
+	}
+
+	add_trait = {
+		character = GER_fedor_von_bock	
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = GER_erwin_von_witzleben
+		trait = infantry_expert
+	}
+
+	add_trait = {
+		character = GER_erwin_von_witzleben	
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = GER_erich_von_manstein
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = GER_erich_von_manstein
+		trait = thorough_planner
+	}
+
+	add_trait = {
+		character = GER_erich_von_manstein
+		trait = offensive_doctrine
+	}
+
+	add_trait = {
+		character = GER_erich_von_manstein
+		trait = camouflage_expert
+	}
+
+	add_trait = {
+		character = GER_gunther_von_kluge
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = GER_gunther_von_kluge
+		trait = fortress_buster
+	}
+
+	add_trait = {
+		character = GER_gunther_von_kluge
+		trait = camouflage_expert
+	}
+
+	add_trait = {
+		character = GER_erwin_rommel
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = GER_erwin_rommel
+		trait = fortress_buster
+	}
+
+	add_trait = {
+		character = GER_erwin_rommel
+		trait = combined_arms_expert
+	}
+
+	add_trait = {
+		character = GER_erich_raeder
+		trait = lone_wolf
+	}
+
+	add_trait = {
+		character = GER_erich_raeder
+		trait = cruiser_captain
+	}
+
+	add_trait = {
+		character = GER_erich_raeder
+		trait = big_guns_expert
+	}
+
+	add_trait = {
+		character = GER_erich_raeder
+		trait = fly_swatter
+	}
+
+	add_trait = {
+		character = GER_karl_donitz
+		trait = concealment_expert
+	}
+
+	add_trait = {
+		character = GER_karl_donitz
+		trait = torpedo_expert
+	}
+
+	add_trait = {
+		character = GER_karl_donitz
+		trait = lancer
+	}
 
 	set_sub_doctrine = mobile_infantry
 
