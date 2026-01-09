@@ -338,65 +338,6 @@ set_variable = { SOV_factionalism_political_power_factor = -0.10 }
 set_variable = { SOV_factionalism_political_advisor_cost_factor = 0 }
 set_variable = { SOV_factionalism_popularity_stability_cost_factor = -0.1 }
 
-#POUM VARS
-set_variable = { SOV_default_poum_days = 30 }
-set_variable = { SOV_default_poum_cd = 180 }
-set_variable = { SOV_long_poum_cd = 365 }
-
-
-#MERGE DESIGNERS VARS
-set_variable = { SOV_merge_designers_cost = 50 } #Default cost for merge designer decisions
-set_variable = { SOV_merge_designers_time = 180 } #The time to complete merge designer decisions
-
-#INDUSTRIAL RELOCATION
-set_variable = { SOV_industrial_relocation_max_factories = 6 } #Max amount of factories that will be relocated by a decision
-set_variable = { SOV_industrial_relocation_days = 60 } #Decision duration
-set_variable = { SOV_industrial_relocation_trains_focus = 60 } #Trains to be used by the focus (10 trains / factory)
-set_variable = { SOV_industrial_relocation_trains_focus_negative = -60 } #Trains to be used by the focus (10 trains / factory)
-set_variable = { SOV_industrial_relocation_trains_decision = 60 } #Trains to be used by the generic decision (10 trains / factory)
-set_variable = { SOV_industrial_relocation_trains_decision_negative = -60 } #Trains to be used by the generic decision (10 trains / factory)
-set_variable = { SOV_industrial_relocation_trains_decision_aluminium = 10 } #Trains to be used by the aluminium decision (10 trains / factory)
-set_variable = { SOV_industrial_relocation_trains_decision_aluminium_negative = -10 } #Trains to be used by the aluminium decision (10 trains / factory)
-
-#DECISIONS COST - For cost reductions
-set_variable = { SOV_pressure_country_government_cost = 50 }
-set_variable = { SOV_promote_ideology_rallies_cost = 50 }
-set_variable = { SOV_send_ultimatum_to_country_cost = 75 }
-set_variable = { SOV_send_infantry_equipment_cost = 50 }
-set_variable = { SOV_peace_deal_cost = 15 }
-set_variable = { SOV_sinkiang_proposal_cost = 15 }
-set_variable = { SOV_sinkiang_puppeting_cost = 100 } #This will increase for each state controlled by SIK excluding the ones owned at game start.
-set_variable = { SOV_sinkiang_puppeting_cost_increase_per_state = 15 }
-
-#DECISIONS DAYS
-set_variable = { SOV_sinkiang_mineral_prospection_days = 180 }
-set_variable = { SOV_sinkiang_oil_prospection_days = 270 }
-set_variable = { SOV_sinkiang_military_aid_days = 90 }
-set_variable = { SOV_sinkiang_support_expansion_days = 365 }
-
-#DECISIONS DAYS
-set_variable = { SOV_pressure_government_days = 30 }
-set_variable = { SOV_pressure_government_cd = 365 }
-set_variable = { SOV_ideological_rallies_days = 90 }
-set_variable = { SOV_ultimatum_days = 14 }
-set_variable = { SOV_send_infantry_equipment_cd = 180 }
-set_variable = { SOV_operation_countenance_preparation_days = 30 }
-set_variable = { SOV_operation_countenance_mission_days = 30 }
-
-set_variable = { SOV_permanent_revolution_uprising_days = 90 }
-
-#PLANNED ECONOMY VARS
-set_variable = { SOV_planned_economy_industrial_capacity_factory_initial = 0.01 } #+0.01% per puppet (max 0.1%)
-set_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_initial = -0.01 } #-0.01% per puppet (max -0.01%)
-set_variable = { SOV_planned_economy_industrial_capacity_factory_extra = 0.01 } #+0.01% per puppet (max 0.1%)
-set_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_extra = -0.01 } #-0.01% per puppet (max -0.01%)
-
-set_variable = { SOV_planned_economy_party_popularity_stability_factor = 0 } #Victory Over Devastation
-set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0 } #Victory Over Devastation
-set_variable = { SOV_planned_economy_industry_repair_factor = 0 } #Victory Over Devastation
-set_variable = { SOV_planned_economy_consumer_goods_factor = 0 } #Victory Over Devastation
-
-
 #Add synthetic refineries tech
 set_technology = {
 	synth_oil_experiments = 1
@@ -672,6 +613,177 @@ if = {
 			rear_1_custom_slot = ship_airplane_launcher_2
 		}
 	}
+}
+
+1941.3.1.12 = {
+
+	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
+	
+	complete_national_focus = SOV_the_path_of_marxism_leninism
+	complete_national_focus = SOV_finish_the_five_year_plan
+	complete_national_focus = SOV_third_five_year_plan
+	complete_national_focus = SOV_increase_state_reserves
+	complete_national_focus = SOV_reorganize_the_pc_of_heavy_industry
+	complete_national_focus = SOV_industrial_modernization
+	complete_national_focus = SOV_steel_casting_industry
+	complete_national_focus = SOV_national_specialists
+	complete_national_focus = SOV_eastern_development
+	complete_national_focus = SOV_develop_the_urals
+	complete_national_focus = SOV_the_ussr_academy_of_sciences
+	complete_national_focus = SOV_expand_the_aircraft_industry
+	complete_national_focus = SOV_modernize_aircraft_facilities
+	complete_national_focus = SOV_merge_aircraft_plants
+	complete_national_focus = SOV_the_centre
+	complete_national_focus = SOV_the_stalin_constitution
+	complete_national_focus = SOV_the_zinovyevite_terrorist_center
+	complete_national_focus = SOV_socialism_in_one_country
+	complete_national_focus = SOV_the_collectivization_process
+	complete_national_focus = SOV_the_anti_soviet_trotskyist_center
+	complete_national_focus = SOV_the_workers_dictatorship
+	complete_national_focus = SOV_the_military_conspiracy
+	complete_national_focus = SOV_the_bloc_of_rights_and_trotskyites
+	complete_national_focus = SOV_behead_the_snake
+	complete_national_focus = SOV_addressing_internal_affairs
+	complete_national_focus = SOV_expand_the_agitprop
+	complete_national_focus = SOV_the_new_soviet_woman
+	complete_national_focus = SOV_positive_heroism
+	complete_national_focus = SOV_nkvd_primacy
+	complete_national_focus = SOV_strengthen_the_mobilization_plan
+	complete_national_focus = SOV_cohesion_first
+	complete_national_focus = SOV_rehabilitated_military
+	complete_national_focus = SOV_military_reorganization
+	complete_national_focus = SOV_pc_of_mechanical_engineering
+	complete_national_focus = SOV_superior_war_machines
+	complete_national_focus = SOV_soviet_artillery
+	complete_national_focus = SOV_merge_tank_and_materiel_plants
+	complete_national_focus = SOV_the_means_to_wage_war
+	complete_national_focus = SOV_secure_the_administration
+	complete_national_focus = SOV_found_the_pcdi
+
+	unlock_national_focus = SOV_development_of_tankograd
+	unlock_national_focus = SOV_transpolar_flights
+	unlock_national_focus = SOV_secret_protocol_of_the_MR_pact
+
+	## ТЕХНОЛОГИИ И СКИДКИ
+
+	set_technology = {
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+		improved_equipment_conversion = 1
+		advanced_equipment_conversion = 1
+
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		concentrated_industry4 = 1
+		concentrated_industry5 = 1
+
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		excavation1 = 1
+		excavation2 = 1
+		excavation3 = 1
+		excavation4 = 1
+
+		#rubber_processing = 1
+		#improved_rubber_processing = 1
+		#modern_rubber_processing = 1
+		#advanced_rubber_processing = 1
+
+		#oil_processing = 1
+		#improved_oil_processing = 1
+		#advanced_oil_processing = 1
+
+		#fuel_refining2 = 1
+		#fuel_refining3 = 1
+
+		electronic_mechanical_engineering = 1
+		mechanical_computing = 1
+
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		improved_decimetric_radar = 1
+		# centimetric_radar = 1
+
+		improved_small_airframe = 1
+		heavy_bombs = 1
+		#aa_hmg = 1
+		#aa_cannon_1 = 1
+		tank_buster_1 = 1
+		engines_3 = 1
+
+		interwar_artillery = 1
+		interwar_antitank = 1
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+		antitank4 = 1
+		antitank5 = 1
+		antiair1 = 1
+		antiair2 = 1
+
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		improved_light_tank_chassis = 1
+
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+
+		tech_engineers2 = 1
+		tech_maintenance_company = 1
+		tech_maintenance_company2 = 1
+		tech_military_police2 = 1
+		tech_flamethrower_brigade = 1
+		tech_flamethrower_brigade2 = 1
+
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		mechanised_infantry = 1
+	}
+
+	add_tech_bonus = {
+		name = SOV_reorganize_the_pc_of_heavy_industry_name_default
+		ahead_reduction = 2
+		technology = flexible_line
+		technology = streamlined_line
+	}
+
+	## КОНСТРАКШЕН
+
+	219 = { set_building_level = { type = arms_factory level = 25 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	195 = { set_building_level = { type = arms_factory level = 23 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	252 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	217 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	137 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	234 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	229 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	400 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	398 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+	581 = { set_building_level = { type = arms_factory level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	653 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	572 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = industrial_complex level = 6 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	582 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } }
+	651 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	652 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	251 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
+	249 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
+	833 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
+	256 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
+	250 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } }
+	255 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+	239 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+	405 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	405 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	586 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	408 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	409 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } }
+	253 = { set_building_level = { type = arms_factory level = 1 instant_build = yes } }
+	829 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
 }
 
 1936.1.1.13 = {

@@ -806,7 +806,7 @@ if = {
 	50 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
 	978 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
 
-	42 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	42 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 	55 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 	57 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 	51 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
@@ -911,61 +911,35 @@ if = {
 
 	## ШАБЛОНЫ СНАРЯЖЕНИЯ
 
-    create_equipment_variant = {
-        name = "Stug III"
-        type = medium_tank_destroyer_chassis_1
-        design_team = mio:GER_daimler_benz_organization
-        modules = {
-            turret_type_slot = tank_medium_fixed_superstructure_turret
-            main_armament_slot = tank_heavy_cannon_2
-            suspension_type_slot = tank_bogie_suspension
-            armor_type_slot = tank_riveted_armor
-            engine_type_slot = tank_gasoline_engine
-            special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
-            special_type_slot_3 = squeezebore_adaptor
-            special_type_slot_4 = wet_ammo_storage
-        }
-		upgrades = { tank_nsb_engine_upgrade = 3 }
-		parent_version = 0
-		obsolete = yes
-    }
-
-	add_equipment_to_stockpile = {
-		type = medium_tank_destroyer_chassis_1
-		amount = 1400
-		variant_name = "Stug III"
-	}
-
 	create_equipment_variant = {
-        name = "Panzerkampfwagen V"
-        type = medium_tank_chassis_2
+        name = "Panzerkampfwagen III"
+        type = medium_tank_chassis_1
         design_team = mio:GER_daimler_benz_organization
         upgrades  = {
-            tank_nsb_engine_upgrade = 9
+            tank_nsb_engine_upgrade = 13
             tank_nsb_armor_upgrade = 14
         }
         modules = {
             turret_type_slot = tank_medium_three_man_tank_turret
-            main_armament_slot = tank_medium_cannon_3
+            main_armament_slot = tank_medium_cannon
             suspension_type_slot = tank_bogie_suspension
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
             special_type_slot_2 = secondary_turret_small_cannon
-            special_type_slot_3 = tank_radio_3
-            special_type_slot_4 = easy_maintenance
+            special_type_slot_3 = tank_radio_1
+            special_type_slot_4 = wet_ammo_storage
         }
-		obsolete = no
-		parent_version = 2
-    }
+		parent_version = 0
+		obsolete = yes
+    }	
 
 	add_equipment_to_stockpile = {
-		type = medium_tank_chassis_2
-		amount = 2100
-		variant_name = "Panzerkampfwagen V"	
+		type = medium_tank_chassis_1
+		amount = 1800
+		variant_name = "Panzerkampfwagen III"	
 	}
-	
+
 	create_equipment_variant = {
         name = "Panzerkampfwagen IV"
         type = medium_tank_chassis_2
@@ -996,51 +970,57 @@ if = {
 	}
 
 	create_equipment_variant = {
-        name = "Panzerkampfwagen III"
-        type = medium_tank_chassis_1
+        name = "Panzerkampfwagen V"
+        type = medium_tank_chassis_2
         design_team = mio:GER_daimler_benz_organization
         upgrades  = {
-            tank_nsb_engine_upgrade = 13
+            tank_nsb_engine_upgrade = 9
             tank_nsb_armor_upgrade = 14
         }
         modules = {
             turret_type_slot = tank_medium_three_man_tank_turret
-            main_armament_slot = tank_medium_cannon
+            main_armament_slot = tank_medium_cannon_3
             suspension_type_slot = tank_bogie_suspension
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
             special_type_slot_2 = secondary_turret_small_cannon
-            special_type_slot_3 = tank_radio_1
-            special_type_slot_4 = wet_ammo_storage
+            special_type_slot_3 = tank_radio_3
+            special_type_slot_4 = easy_maintenance
         }
+		obsolete = no
 		parent_version = 0
-		obsolete = yes
     }
 
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 2100
+		variant_name = "Panzerkampfwagen V"	
+	}
+
     create_equipment_variant = {
-        name = "JagdPz V"
-        type = medium_tank_destroyer_chassis_2
+        name = "Stug III"
+        type = medium_tank_destroyer_chassis_1
         design_team = mio:GER_daimler_benz_organization
         modules = {
             turret_type_slot = tank_medium_fixed_superstructure_turret
-            main_armament_slot = tank_high_velocity_cannon_3
+            main_armament_slot = tank_heavy_cannon_2
             suspension_type_slot = tank_bogie_suspension
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_gasoline_engine
             special_type_slot_1 = secondary_turret_small_cannon
             special_type_slot_2 = secondary_turret_small_cannon
             special_type_slot_3 = squeezebore_adaptor
-            special_type_slot_4 = easy_maintenance
+            special_type_slot_4 = wet_ammo_storage
         }
-		obsolete = no
-		parent_version = 2
+		upgrades = { tank_nsb_engine_upgrade = 3 }
+		obsolete = yes
     }
 
 	add_equipment_to_stockpile = {
-		type = medium_tank_destroyer_chassis_2
-		amount = 4600
-		variant_name = "JagdPz V"
+		type = medium_tank_destroyer_chassis_1
+		amount = 1400
+		variant_name = "Stug III"
 	}
 
     create_equipment_variant = {
@@ -1066,6 +1046,31 @@ if = {
 		type = medium_tank_destroyer_chassis_2
 		amount = 5000
 		variant_name = "JagdPz IV"
+	}
+
+    create_equipment_variant = {
+        name = "JagdPz V"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:GER_daimler_benz_organization
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_high_velocity_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = no
+		parent_version = 0
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 4600
+		variant_name = "JagdPz V"
 	}
 
     create_equipment_variant = {
@@ -1337,12 +1342,6 @@ if = {
 		type = small_plane_airframe_2
 		amount = 9100
 		variant_name = "Fw-190"	
-	}
-
-	add_equipment_to_stockpile = {
-		type = medium_tank_chassis_1
-		amount = 1800
-		variant_name = "Panzerkampfwagen III"	
 	}
 	
 	add_equipment_to_stockpile = {
