@@ -449,6 +449,7 @@ if = {
 	add_political_power = 570
 
 	activate_decision = war_bonds
+	activate_mission = GER_downfall_of_northern_africa_1
 
 	add_timed_idea = {
 		idea = winter_debuff
@@ -463,12 +464,51 @@ if = {
 		modifier = african_warfare_dm
 	}
 
+	set_global_flag = africa_started
+
+	set_global_flag = balearic_controlled_AXIS
+	set_global_flag = iraq_controlled_AXIS
+	set_global_flag = palestine_controlled_AXIS
+	set_global_flag = matruh_controlled_AXIS
+	set_global_flag = cairo_controlled_AXIS
+	set_global_flag = cyprus_controlled_AXIS
+	set_global_flag = malta_controlled_AXIS
+
+	set_global_flag = morocco_controlled_ALLY
+	set_global_flag = nyle_controlled_ALLY
+	set_global_flag = upnyle_controlled_ALLY
+	set_global_flag = gibraltar_controlled_ALLY
+				
+	set_global_flag = algeria_controlled_AXIS
+	set_global_flag = eastalgeria_controlled_AXIS
+	set_global_flag = tunis_controlled_AXIS
+	set_global_flag = libya_controlled_AXIS
+	set_global_flag = eastlibya_controlled_AXIS
+	set_global_flag = kirenaika_controlled_AXIS
+	set_global_flag = crete_controlled_AXIS
+	set_global_flag = sardinia_controlled_AXIS
+	set_global_flag = sicily_controlled_AXIS
+
+	every_country = {
+		limit = {
+			OR = {
+				ORIGION_is_in_faction_with_allies = yes
+				ORIGION_is_in_faction_with_axis = yes
+			}
+		}
+		set_variable = { ALLY_africa_controlled_regions = 3 }
+		set_variable = { AXIS_africa_controlled_regions = 14 }
+	}
+
 	add_to_variable = { african_warfare_dm_fuel_gain_factor = 0.1 }
 	add_to_variable = { african_warfare_dm_max_fuel_factor = 0.1		}
 	add_to_variable = { african_warfare_dm_industrial_capacity_factory = 0.1 }
 	add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.1 }
 	add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.1 }
 	add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.1 }
+
+	set_variable = { GER_downfall_of_northern_africa_days = 60 }
+	set_variable = { SOV.SOV_ll_size = 590 }
 
 	ENG = { add_ideas = BAN_BAN }
 

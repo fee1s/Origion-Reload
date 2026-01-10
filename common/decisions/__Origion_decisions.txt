@@ -1180,6 +1180,170 @@ ORG_africa_dec_cat = {
 			}
 		}
 	}
+
+	GER_downfall_of_northern_africa_1 = {
+		icon = GFX_decision_revolt
+		# days_mission_timeout = 184
+		days_mission_timeout = 10
+		is_good = no
+		fire_only_once = yes
+		visible = {
+		    original_tag = GER
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			set_global_flag = balearic_controlled_ALLY
+			africa_dm_small_step_remove_effect = yes
+			activate_mission = GER_downfall_of_northern_africa_2
+		}
+	}
+
+	GER_downfall_of_northern_africa_2 = {
+		icon = GFX_decision_revolt
+		# days_mission_timeout = 90
+		days_mission_timeout = 10
+		is_good = no
+		fire_only_once = yes
+		visible = {
+		    original_tag = GER
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			africa_dm_torch_step_remove_effect = yes
+			set_global_flag = operation_torch_flag
+			set_global_flag = eastalgeria_controlled_AXIS
+			set_global_flag = morocco_controlled_ALLY
+			set_global_flag = algeria_controlled_ALLY
+			activate_mission = GER_downfall_of_northern_africa_3
+		}
+	}
+
+	GER_downfall_of_northern_africa_3 = {
+		icon = GFX_decision_revolt
+		# days_mission_timeout = GER_downfall_of_northern_africa_days
+		days_mission_timeout = 10
+		is_good = no
+		fire_only_once = yes
+		visible = {
+		    original_tag = GER
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			set_variable = { SOV_ll_size = 530 }
+			hidden_effect = {
+				every_core_state = {
+					limit = { is_core_of = NOR }
+					COL = { transfer_state = PREV }
+				}
+			}
+			activate_mission = GER_downfall_of_northern_africa_4
+		}
+		
+	}
+
+	GER_downfall_of_northern_africa_4 = {
+		icon = GFX_decision_revolt
+		# days_mission_timeout = GER_downfall_of_northern_africa_days
+		days_mission_timeout = 10
+		is_good = no
+		fire_only_once = yes
+		visible = {
+		    original_tag = GER
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			africa_dm_local_succesful_step_remove_effect = yes
+			set_global_flag = cairo_controlled_ALLY
+			set_global_flag = eastalgeria_controlled_ALLY
+			set_global_flag = tunis_controlled_ALLY
+			activate_mission = GER_downfall_of_northern_africa_5
+		}
+	}
+
+	GER_downfall_of_northern_africa_5 = {
+		icon = GFX_decision_revolt
+		# days_mission_timeout = GER_downfall_of_northern_africa_days
+		days_mission_timeout = 10
+		is_good = no
+		fire_only_once = yes
+		visible = {
+		    original_tag = GER
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			set_variable = { SOV_ll_size = 700 }
+			activate_mission = GER_downfall_of_northern_africa_6
+		}
+	}
+
+	GER_downfall_of_northern_africa_6 = {
+		icon = GFX_decision_revolt
+		# days_mission_timeout = GER_downfall_of_northern_africa_days
+		days_mission_timeout = 10
+		is_good = no
+		fire_only_once = yes
+		visible = {
+		    original_tag = GER
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = {
+		        always = no
+			}
+	    }
+		
+		timeout_effect = {
+			africa_dm_fall_of_northern_africa_remove_effect = yes
+			set_global_flag = kirenaika_controlled_ALLY
+			set_global_flag = eastlibya_controlled_ALLY
+			set_global_flag = libya_controlled_ALLY
+			set_global_flag = palestine_controlled_ALLY
+			set_global_flag = iraq_controlled_ALLY
+			set_global_flag = matruh_controlled_ALLY
+		}
+	}
 }
 FIN_jatkosota = {
 	FIN_stagnation_economic_0_des = {
