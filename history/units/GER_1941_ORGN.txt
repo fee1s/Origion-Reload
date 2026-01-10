@@ -1,8 +1,6 @@
 ﻿division_template = {
 	name = "PEH"
 
-	division_names_group = GER_Inf_01
-
 	regiments = {
 		infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 }  
 		infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 }  						 
@@ -127,28 +125,6 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = small_plane_cas_airframe_2
-			version_name = "Ju.87 B" 
-		}
-		requested_factories = 25
-		progress = 0.1
-		efficiency = 84
-		industrial_manufacturer = mio:GER_junkers_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = small_plane_airframe_2
-			version_name = "Fw-190 A" 
-		}
-		requested_factories = 335
-		progress = 0.1
-		efficiency = 101
-		industrial_manufacturer = mio:GER_messerschmitt_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
 			type = medium_tank_chassis_2
 			version_name = "Panzerkampfwagen V" 
 		}
@@ -194,11 +170,43 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = mechanized_equipment_1
-			version_name = "Sonderkraftfahrzeug 11" 
+			creator = "GER" 
 		}
 		requested_factories = 28
 		progress = 0.1
 		efficiency = 108
 		industrial_manufacturer = mio:GER_opel_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_cas_airframe_2
+			version_name = "Ju.87 B" 
+		}
+		requested_factories = 25
+		progress = 0.1
+		efficiency = 84
+		industrial_manufacturer = mio:GER_junkers_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_2
+			version_name = "Fw-190 A" 
+		}
+		requested_factories = 335
+		progress = 0.1
+		efficiency = 101
+		industrial_manufacturer = mio:GER_messerschmitt_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			version_name = "ZZZZZ" 
+		}
+		requested_factories = 38
+		progress = 0
+		industrial_manufacturer = mio:GER_germaniawerft_organization
 	}
 }

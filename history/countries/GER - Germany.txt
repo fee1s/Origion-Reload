@@ -438,6 +438,7 @@ if = {
 	## ПРОДАКШЕН, ДИВИЗИИ
 
 	set_oob = GER_1941_ORGN
+	set_naval_oob = GER_1941_naval_mtg
 
 	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
 
@@ -468,8 +469,6 @@ if = {
 	add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.1 }
 	add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.1 }
 	add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.1 }
-
-	declare_war_on = { target = ENG type = annex_everything }
 
 	ENG = { add_ideas = BAN_BAN }
 
@@ -636,7 +635,7 @@ if = {
 
 	army_experience = 700
 	navy_experience = 300
-	air_experience = 790
+	air_experience = 690
 
 	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
 	
@@ -689,7 +688,7 @@ if = {
 	unlock_national_focus = GER_advanced_panzer_research
 	unlock_national_focus = GER_dive_bombers
 	unlock_national_focus = GER_aeronautical_research_institute
-	unlock_national_focus = GER_expanding_the_luftwaffe
+	complete_national_focus = GER_expanding_the_luftwaffe
 
 	set_technology = {
 		basic_machine_tools = 1
@@ -803,7 +802,7 @@ if = {
 	53 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 	52 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } }
 
-	50 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
+	50 = { set_building_level = { type = arms_factory level = 21 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
 	978 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 4 instant_build = yes } }
 
 	42 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = synthetic_refinery level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
@@ -885,8 +884,8 @@ if = {
 		complete_mio_trait = generic_mio_trait_drum_pattern_sights
 		complete_mio_trait = generic_mio_trait_quality_materials
 		# complete_mio_trait = generic_mio_trait_improved_small_arms_bullet_design
-		complete_mio_trait = generic_mio_trait_armor_piercing_rounds
-		# complete_mio_trait = generic_mio_trait_medium_machineguns
+		# complete_mio_trait = generic_mio_trait_armor_piercing_rounds
+		complete_mio_trait = generic_mio_trait_medium_machineguns
 		# complete_mio_trait = generic_mio_trait_anti_vechicle_land_mines
 
 		complete_mio_trait = generic_mio_trait_research_program
@@ -988,6 +987,7 @@ if = {
             special_type_slot_3 = tank_radio_3
             special_type_slot_4 = easy_maintenance
         }
+		mark_older_equipment_obsolete = yes
 		obsolete = no
 		parent_version = 0
     }
@@ -1063,6 +1063,7 @@ if = {
             special_type_slot_3 = squeezebore_adaptor
             special_type_slot_4 = easy_maintenance
         }
+		mark_older_equipment_obsolete = yes
 		obsolete = no
 		parent_version = 0
     }
@@ -1124,6 +1125,7 @@ if = {
 			special_type_slot_2 = fuel_tanks_small		
 			special_type_slot_3 = hmg_defense_turret		
 		}
+		mark_older_equipment_obsolete = yes
 	}
 
 	create_equipment_variant = {
@@ -1154,20 +1156,18 @@ if = {
 			special_type_slot_2 = fuel_tanks_small			
 		}
 		obsolete = yes
-	}		
+	}	
 
 	create_equipment_variant = {
-		name = "Ju.87 B" 
-		type = small_plane_cas_airframe_2
+		name = "Ju.87" 
+		type = small_plane_cas_airframe_1
 		design_team = mio:GER_junkers_organization
 		modules = {
-			fixed_main_weapon_slot = tank_buster_1
-			fixed_auxiliary_weapon_slot_1 = tank_buster_1
-			fixed_auxiliary_weapon_slot_2 = tank_buster_1
-			engine_type_slot = engine_3_1x
-			special_type_slot_1 = armor_plate_small
-			special_type_slot_2 = hmg_defense_turret		
-			special_type_slot_3 = fuel_tanks_small		
+			fixed_main_weapon_slot = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = fuel_tanks_small			
 		}
 	}
 
@@ -1187,19 +1187,26 @@ if = {
 		obsolete = yes
 	}
 
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_2
+		amount = 350
+		variant_name = "Ju.87 A"	
+	}
+
 	create_equipment_variant = {
-		name = "Ju.87" 
-		type = small_plane_cas_airframe_1
+		name = "Ju.87 B" 
+		type = small_plane_cas_airframe_2
 		design_team = mio:GER_junkers_organization
 		modules = {
-			fixed_main_weapon_slot = heavy_bomb_locks
-			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
-			engine_type_slot = engine_2_1x
-			special_type_slot_1 = lmg_defense_turret
-			special_type_slot_2 = fuel_tanks_small			
+			fixed_main_weapon_slot = tank_buster_1
+			fixed_auxiliary_weapon_slot_1 = tank_buster_1
+			fixed_auxiliary_weapon_slot_2 = tank_buster_1
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = hmg_defense_turret		
+			special_type_slot_3 = fuel_tanks_small		
 		}
-		parent_version = 0
-		obsolete = yes
+		mark_older_equipment_obsolete = yes
 	}
 
 	create_equipment_variant = {
@@ -1222,6 +1229,7 @@ if = {
 		type = mechanized_equipment_1
 		design_team = mio:GER_opel_organization
 		upgrades = { mech_cost_upgrade = 5 }
+		mark_older_equipment_obsolete = yes
 	}	
 
 	create_equipment_variant = { # 287.100
@@ -1236,6 +1244,7 @@ if = {
 		type = infantry_equipment_2
 		design_team = mio:GER_mauser_organization
 		parent_version = 0
+		mark_older_equipment_obsolete = yes
 	}	
 
 	#create_equipment_variant = { # 20.000
@@ -1250,6 +1259,7 @@ if = {
 		type = support_equipment_1
 		design_team = mio:GER_mauser_organization
 		parent_version = 0
+		mark_older_equipment_obsolete = yes
 	}
 
 	create_equipment_variant = { # 1.000
@@ -1257,6 +1267,7 @@ if = {
 		type = anti_air_equipment_2
 		design_team = mio:GER_rheinmetall_organization
 		parent_version = 0
+		mark_older_equipment_obsolete = yes
 	}	
 
 	create_equipment_variant = { # 5.500
@@ -1270,6 +1281,51 @@ if = {
 		type = motorized_equipment_1
 		design_team = mio:GER_opel_organization
 		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "ZZZZZ"
+		type = ship_hull_cruiser_2
+		name_group = GER_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_3
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_radar_3
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_3
+			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			front_1_custom_slot = ship_anti_air_3
+			mid_1_custom_slot = ship_torpedo_2
+			mid_2_custom_slot = ship_torpedo_2
+			rear_1_custom_slot = ship_airplane_launcher_2
+		}
+		design_team = mio:GER_germaniawerft_organization
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "ZZZZZZ"
+		type = ship_hull_heavy_2
+		name_group = GER_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_radar_3
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bc_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = ship_heavy_battery_2
+			mid_2_custom_slot = ship_heavy_battery_2
+			rear_1_custom_slot = ship_airplane_launcher_2
+		}
+		design_team = mio:GER_germaniawerft_organization
+		mark_older_equipment_obsolete = yes
 	}
 
 	## ДОБАВЛЯЕМ ТЕХНИКУ НА СКЛАДЫ
@@ -1324,12 +1380,6 @@ if = {
 		type = small_plane_cas_airframe_1
 		amount = 50
 		variant_name = "Ju.87"	
-	}
-
-	add_equipment_to_stockpile = {
-		type = small_plane_cas_airframe_2
-		amount = 350
-		variant_name = "Ju.87 A"	
 	}
 
 	add_equipment_to_stockpile = {

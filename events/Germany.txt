@@ -227,6 +227,7 @@ country_event = {
 
 	trigger = {
 		10 = { is_controlled_by_axis = yes }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 
 	mean_time_to_happen = {

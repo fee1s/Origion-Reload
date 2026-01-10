@@ -616,6 +616,211 @@ if = {
 }
 
 1941.3.1.12 = {
+	## ПРОДАКШЕН, ДИВИЗИИ
+
+	set_oob = SOV_1941_ORGN
+	set_naval_oob = SOV_1941_naval_mtg
+
+	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
+
+	add_political_power = -273
+
+	add_manpower = -764000
+
+	add_mastery = { amount = 403 folder = land }
+	add_mastery = { amount = 403 folder = naval }
+	add_mastery = { amount = 483 folder = air }
+
+	army_experience = 350
+	navy_experience = 450
+	air_experience = 380
+
+	add_ideas = { 
+		war_economy
+		limited_conscription
+
+		stalingrad_tractor_factory
+
+		mass_assault_academy_spirit
+		ideological_loyalty_spirit
+		operational_reserve_spirit
+
+		instilled_aggression_spirit
+		flexible_contracts_spirit
+		decisive_battle_spirit
+
+		air_crew_surveys_spirit
+		veteran_air_instructors_spirit
+
+		peace_training 
+		GER_east_mode_policies
+	}
+
+	activate_advisor = mikhail_kalinin
+	activate_advisor = SOV_lazar_kaganovich
+	activate_advisor = alexander_golovanov
+	activate_advisor = vasily_kuznetsov
+	activate_advisor = konstantin_rokossovsky
+	activate_advisor = ivan_chernyakhovsky
+	activate_advisor = alexander_novikov
+	activate_advisor = georgy_zhukov
+
+	set_variable = { SOV_propaganda_high_yield_cost = 240 }
+
+	add_trait = {
+		character = SOV_ivan_konev
+		trait = defensive_doctrine
+	}
+
+	add_trait = {
+		character = SOV_ivan_konev
+		trait = organisational_leader
+	}
+
+	add_trait = {
+		character = SOV_ivan_konev
+		trait = inspirational_leader
+	}
+
+	add_trait = {
+		character = SOV_ivan_konev
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = SOV_vasily_kuznetsov
+		trait = ambusher
+	}
+
+	add_trait = {
+		character = SOV_vasily_kuznetsov	
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = SOV_vasily_kuznetsov	
+		trait = expert_improviser
+	}
+
+	add_trait = {
+		character = SOV_aleksandr_vasilevsky
+		trait = ambusher
+	}
+
+	add_trait = {
+		character = SOV_aleksandr_vasilevsky	
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = SOV_aleksandr_vasilevsky	
+		trait = expert_improviser
+	}
+
+	add_trait = {
+		character = SOV_ivan_chernyakhovsky
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = SOV_ivan_chernyakhovsky
+		trait = thorough_planner
+	}
+
+	add_trait = {
+		character = SOV_ivan_chernyakhovsky
+		trait = offensive_doctrine
+	}
+
+	add_trait = {
+		character = SOV_ivan_chernyakhovsky
+		trait = inspirational_leader
+	}
+
+	add_trait = {
+		character = SOV_konstantin_rokossovsky
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = SOV_konstantin_rokossovsky
+		trait = fortress_buster
+	}
+
+	add_trait = {
+		character = SOV_konstantin_rokossovsky
+		trait = combined_arms_expert
+	}
+
+	add_trait = {
+		character = SOV_filipp_oktyabrsky
+		trait = lone_wolf
+	}
+
+	add_trait = {
+		character = SOV_filipp_oktyabrsky
+		trait = cruiser_captain
+	}
+
+	add_trait = {
+		character = SOV_filipp_oktyabrsky
+		trait = big_guns_expert
+	}
+
+	add_trait = {
+		character = SOV_filipp_oktyabrsky
+		trait = fly_swatter
+	}
+
+	add_trait = {
+		character = SOV_sergey_gorshkov
+		trait = lone_wolf
+	}
+
+	add_trait = {
+		character = SOV_sergey_gorshkov
+		trait = cruiser_captain
+	}
+
+	add_trait = {
+		character = SOV_sergey_gorshkov
+		trait = big_guns_expert
+	}
+
+	add_trait = {
+		character = SOV_sergey_gorshkov
+		trait = fly_swatter
+	}
+
+	add_trait = {
+		character = SOV_arseny_golovko
+		trait = concealment_expert
+	}
+
+	add_trait = {
+		character = SOV_arseny_golovko
+		trait = torpedo_expert
+	}
+
+	add_trait = {
+		character = SOV_arseny_golovko
+		trait = lancer
+	}
+
+	add_trait = {
+		character = SOV_gordey_levchenko
+		trait = cruiser_captain
+	}
+
+	add_trait = {
+		character = SOV_gordey_levchenko
+		trait = destroyer_leader
+	}
+
+	add_trait = {
+		character = SOV_gordey_levchenko
+		trait = fly_swatter
+	}
 
 	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
 	
@@ -748,7 +953,7 @@ if = {
 
 	add_tech_bonus = {
 		name = SOV_reorganize_the_pc_of_heavy_industry_name_default
-		ahead_reduction = 2
+		ahead_reduction = 1
 		technology = flexible_line
 		technology = streamlined_line
 	}
@@ -770,13 +975,13 @@ if = {
 	582 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } }
 	651 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 	652 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	251 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
+	251 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
 	249 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
 	833 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
 	256 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
 	250 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } }
-	255 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
-	239 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+	255 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
+	239 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
 	405 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 	405 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 	586 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
@@ -784,6 +989,499 @@ if = {
 	409 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } }
 	253 = { set_building_level = { type = arms_factory level = 1 instant_build = yes } }
 	829 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+
+	## ТРЕЙТЫ В КБШКАХ
+
+	mio:SOV_okmo_organization = {
+		complete_mio_trait = generic_mio_trait_simplified_suspension
+		complete_mio_trait = generic_mio_trait_crew_ergonomics
+		complete_mio_trait = generic_mio_trait_improved_tracks
+		complete_mio_trait = generic_mio_trait_command_upgrades
+		complete_mio_trait = generic_mio_trait_standardized_components
+		complete_mio_trait = generic_mio_trait_long_barreled_guns
+		complete_mio_trait = generic_mio_trait_infantry_support_tanks
+
+		complete_mio_trait = generic_mio_trait_soviet_production
+	}
+
+	mio:SOV_mig_design_bureau_organization = {
+		complete_mio_trait = generic_mio_trait_expanded_production_facilities
+		complete_mio_trait = generic_mio_trait_fixed_tailwheels
+		complete_mio_trait = generic_mio_advanced_materials
+		complete_mio_trait = generic_mio_trait_removable_wings
+		complete_mio_trait = generic_mio_trait_liquid_cooled_engines
+		#complete_mio_trait = generic_mio_trait_maritime_duties
+		complete_mio_trait = generic_mio_trait_advanced_aerodynamics
+		#complete_mio_trait = generic_mio_trait_fuselage_ordinance_rack
+		complete_mio_trait = generic_mio_trait_ongoing_developmental_upgrades
+		complete_mio_trait = generic_mio_trait_heavier_airframe
+		complete_mio_trait = generic_mio_trait_fighter_specialization
+		complete_mio_trait = generic_mio_trait_multi_purpose_aircraft
+		complete_mio_trait = generic_mio_trait_flexible_design
+		#complete_mio_trait = generic_mio_trait_fighter_expertise
+
+		complete_mio_trait = SOV_mio_trait_merge_plant_no_28
+		complete_mio_trait = SOV_mio_trait_merge_plant_no_150
+		complete_mio_trait = SOV_mio_trait_merge_vef_plant
+	}
+
+	mio:SOV_yakovlev_design_bureau_organization = {
+		complete_mio_trait = generic_mio_trait_low_altitude_attacks
+		complete_mio_trait = generic_mio_trait_canopies_and_firewalls
+		complete_mio_trait = generic_mio_trait_automatic_pull_out
+		complete_mio_trait = generic_mio_trait_reinforced_wings
+		complete_mio_trait = generic_mio_trait_air_brakes
+		#complete_mio_trait = generic_mio_trait_bombs
+		#complete_mio_trait = generic_mio_heat_bombs
+	}
+
+	mio:SOV_tula_arms_plant_organization = {
+		complete_mio_trait = generic_mio_trait_drum_pattern_sights
+		complete_mio_trait = generic_mio_trait_quality_materials
+		# complete_mio_trait = generic_mio_trait_improved_small_arms_bullet_design
+		# complete_mio_trait = generic_mio_trait_armor_piercing_rounds
+		complete_mio_trait = generic_mio_trait_medium_machineguns
+		# complete_mio_trait = generic_mio_trait_anti_vechicle_land_mines
+
+		complete_mio_trait = generic_mio_trait_research_program
+		complete_mio_trait = generic_mio_trait_reinforced_stocks
+		complete_mio_trait = generic_mio_trait_advanced_barrel_forging
+		complete_mio_trait = generic_mio_trait_mass_rifle_production
+
+		complete_mio_trait = SOV_mio_trait_merge_plant_no_622
+		complete_mio_trait = SOV_mio_trait_merge_nkmz_plant
+		complete_mio_trait = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
+	}
+
+	mio:SOV_grabin_design_bureau_organization = {
+		complete_mio_trait = generic_mio_trait_advanced_barrel_forging
+		complete_mio_trait = generic_mio_trait_gun_mass_production
+
+		complete_mio_trait = SOV_mio_trait_merge_plant_no_172
+	}
+
+	mio:SOV_nevskoye_design_bureau_organization = {
+		complete_mio_trait = generic_mio_trait_internal_armor_belt
+		complete_mio_trait = generic_mio_trait_external_armor_belt
+		complete_mio_trait = generic_mio_trait_advanced_hydrodynamic_design
+		complete_mio_trait = generic_mio_trait_production_capital_first
+		complete_mio_trait = generic_mio_trait_production_capital_third
+		complete_mio_trait = generic_mio_trait_production_capital_fourth
+	}
+
+	mio:SOV_gaz_organization = {
+		complete_mio_trait = generic_mio_trait_open_chassi
+		complete_mio_trait = generic_mio_trait_bulletproof_panels
+		complete_mio_trait = generic_mio_trait_mounted_light_anti_tank_gun
+
+		complete_mio_trait = SOV_mio_trait_merge_automobile_tool_plant
+	}
+
+	## ШАБЛОНЫ СНАРЯЖЕНИЯ
+
+	create_equipment_variant = {
+        name = "T-34 1939"
+        type = medium_tank_chassis_2
+        design_team = mio:SOV_okmo_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 9
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = tank_radio_1
+            special_type_slot_4 = wet_ammo_storage
+        }
+		obsolete = yes
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 250
+		variant_name = "T-34 1939"	
+	}
+
+	create_equipment_variant = {
+        name = "T-34 1940"
+        type = medium_tank_chassis_2
+        design_team = mio:SOV_okmo_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 9
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = tank_radio_2
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = yes
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 500
+		variant_name = "T-34 1940"	
+	}
+
+	create_equipment_variant = {
+        name = "T-34 1941"
+        type = medium_tank_chassis_2
+        design_team = mio:SOV_okmo_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 9
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = tank_radio_2
+            special_type_slot_4 = easy_maintenance
+        }
+		mark_older_equipment_obsolete = yes
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 1950
+		variant_name = "T-34 1941"	
+	}
+
+    create_equipment_variant = {
+        name = "Su-85 1940"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:SOV_okmo_organization
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_heavy_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = yes
+		parent_version = 1
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 1300
+		variant_name = "Su-85 1940"
+	}
+
+    create_equipment_variant = {
+        name = "Su-85 1941"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:SOV_okmo_organization
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_high_velocity_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		mark_older_equipment_obsolete = yes
+		obsolete = no
+		parent_version = 0
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 3000
+		variant_name = "Su-85 1941"
+	}
+
+    create_equipment_variant = {
+        name = "ZSU-37 1941"
+        type = medium_tank_aa_chassis_2
+        design_team = mio:SOV_okmo_organization
+        modules = {
+            turret_type_slot = tank_light_one_man_tank_turret
+            main_armament_slot = tank_anti_air_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = extra_ammo_storage
+            special_type_slot_2 = extra_ammo_storage
+            special_type_slot_3 = extra_ammo_storage
+            special_type_slot_4 = easy_maintenance
+        }
+    }
+
+    create_equipment_variant = {
+        name = "BT-7 1941"
+        type = light_tank_chassis_2
+        design_team = mio:SOV_okmo_organization
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_three_man_tank_turret
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_2
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = easy_maintenance
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 14
+		}
+		mark_older_equipment_obsolete = yes	
+    }
+
+	create_equipment_variant = {
+		name = "Polikarpov I-16" 
+		type = small_plane_airframe_1
+		design_team = mio:SOV_mig_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = self_sealing_fuel_tanks_small
+			special_type_slot_2 = fuel_tanks_small			
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Lavochkin-Gorbunov-Gudkov LaGG-3" 
+		type = small_plane_airframe_2
+		design_team = mio:SOV_mig_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = armor_plate_small		
+			special_type_slot_3 = lmg_defense_turret		
+		}
+		obsolete = no
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Ilyushin Il-2 1939" 
+		type = small_plane_cas_airframe_2
+		design_team = mio:SOV_yakovlev_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_2 = heavy_bomb_locks
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = lmg_defense_turret		
+			special_type_slot_3 = fuel_tanks_small		
+		}
+		obsolete = yes
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_2
+		amount = 250
+		variant_name = "Ilyushin Il-2 1939"	
+	}
+
+	create_equipment_variant = {
+		name = "Ilyushin Il-2 1940" 
+		type = small_plane_cas_airframe_2
+		design_team = mio:SOV_yakovlev_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = tank_buster_1
+			fixed_auxiliary_weapon_slot_1 = tank_buster_1
+			fixed_auxiliary_weapon_slot_2 = tank_buster_1
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = lmg_defense_turret		
+			special_type_slot_3 = fuel_tanks_small		
+		}
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "BRT-1941" 	
+		type = mechanized_equipment_1
+		design_team = mio:SOV_gaz_organization
+		upgrades = { mech_cost_upgrade = 5 }
+		mark_older_equipment_obsolete = yes
+	}	
+
+	create_equipment_variant = {
+		name = "PPSh-41" 	
+		type = infantry_equipment_2
+		design_team = mio:SOV_tula_arms_plant_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}	
+
+	create_equipment_variant = {
+		name = "Дополнительное оснащение" 	
+		type = support_equipment_1
+		design_team = mio:SOV_tula_arms_plant_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "M1940" 	
+		type = anti_air_equipment_2
+		design_team = mio:SOV_grabin_design_bureau_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}	
+
+	create_equipment_variant = {
+		name = "M1939" 	
+		type = anti_air_equipment_1
+		design_team = mio:SOV_grabin_design_bureau_organization
+	}
+	
+	create_equipment_variant = {
+		name = "ZIS-5" 	
+		type = motorized_equipment_1
+		design_team = mio:SOV_gaz_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "ZZZ"
+		type = ship_hull_cruiser_2
+		name_group = SOV_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = ship_radar_2
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_3
+			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			front_1_custom_slot = ship_anti_air_2
+			mid_1_custom_slot = ship_torpedo_2
+			mid_2_custom_slot = ship_torpedo_2
+			rear_1_custom_slot = ship_airplane_launcher_2
+		}
+		design_team = mio:SOV_nevskoye_design_bureau_organization
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "ZZZZ"
+		type = ship_hull_heavy_2
+		name_group = SOV_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			fixed_ship_armor_slot = ship_armor_bc_2
+			front_1_custom_slot = ship_heavy_battery_2
+			mid_1_custom_slot = ship_heavy_battery_2
+			mid_2_custom_slot = ship_heavy_battery_2
+			rear_1_custom_slot = ship_airplane_launcher_2
+		}
+		design_team = mio:SOV_nevskoye_design_bureau_organization
+		mark_older_equipment_obsolete = yes
+	}
+
+	## ДОБАВЛЯЕМ ТЕХНИКУ НА СКЛАДЫ
+
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 33300
+	}
+
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_2
+		amount = 488500
+		variant_name = "PPSh-41"
+	}
+
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 17400
+	}
+
+	add_equipment_to_stockpile = {
+		type = anti_air_equipment_2
+		amount = 1060
+		variant_name = "M1940"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = anti_air_equipment_1
+		amount = 20980
+		variant_name = "M1939"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = mechanized_equipment_1
+		amount = 8560
+		variant_name = "BRT-1941"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_2
+		amount = 450
+		variant_name = "Ilyushin Il-2 1940"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_1
+		amount = 1200
+		variant_name = "Polikarpov I-16"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_2
+		amount = 8300
+		variant_name = "Lavochkin-Gorbunov-Gudkov LaGG-3"	
+	}
+	
+	add_equipment_to_stockpile = {
+		type = medium_tank_aa_chassis_2
+		amount = 780
+		variant_name = "ZSU-37 1941"
+	}
+
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_2
+		amount = 1480
+		variant_name = "BT-7 1941"
+	}
+
+	add_equipment_to_stockpile = {
+		type = train_equipment_1
+		amount = 824
+	}
 }
 
 1936.1.1.13 = {
