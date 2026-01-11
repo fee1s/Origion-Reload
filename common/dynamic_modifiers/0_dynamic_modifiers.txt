@@ -1968,5 +1968,11 @@ SAF_cabinet_dm = {
 	political_power_factor = SAF_cabinet_dm_political_power_factor
 	party_popularity_stability_factor = SAF_cabinet_dm_party_popularity_stability_factor
 }	
+no_slots_dm = {
+	icon = GFX_modifiers_increased_metal_production
+	enable = { always = yes }
+
+	local_building_slots_factor = -3
+}
 	
 	

@@ -1350,7 +1350,7 @@ ORG_africa_dec_cat = {
 		timeout_effect = {
 			custom_effect_tooltip = uk_operation_countenance_tt
 			hidden_effect = {
-				set_variable = { GER.SOV_ll_size = 700 }
+				set_variable = { GER.SOV_ll_size = 235 }
 				activate_mission = GER_downfall_of_northern_africa_6
 			}
 		}
@@ -1442,6 +1442,7 @@ ORG_africa_dec_cat = {
 				africa_dm_naval_invasion_in_ita_remove_effect = yes
 				set_global_flag = sicily_controlled_ALLY
 				set_global_flag = sardinia_controlled_ALLY
+				set_global_flag = GER_downfall_of_northern_africa_8_flag
 				activate_mission = GER_downfall_of_northern_africa_9
 			}
 		}
@@ -1481,7 +1482,7 @@ ORG_africa_dec_cat = {
 		visible = {
 			OR = { 
 				AND = { has_global_flag = ITA_ask_for_help_1941_flag date < 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1941_completed } }
-				AND = { has_global_flag = ITA_ask_for_help_1942_flag has_global_flag = ITA_ask_for_help_1941_completed NOT = { has_global_flag = ITA_ask_for_help_1942_completed } }
+				AND = { has_global_flag = ITA_ask_for_help_1942_flag NOT = { has_global_flag = GER_downfall_of_northern_africa_8_flag } has_global_flag = ITA_ask_for_help_1941_completed NOT = { has_global_flag = ITA_ask_for_help_1942_completed } }
 				AND = { has_global_flag = ITA_ask_for_help_1943_flag has_global_flag = ITA_ask_for_help_1941_completed has_global_flag = ITA_ask_for_help_1942_completed NOT = { has_global_flag = ITA_ask_for_help_1943_completed } } 
 			}
 		}
