@@ -1350,6 +1350,7 @@ country_event = { # Africa Gui
 	
 	trigger = {
 	    has_global_flag = africa_started
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 		OR = {
 		    any_country = {
 		        controls_morocco = yes

@@ -242,6 +242,32 @@ if = {
 	}
 }
 
+1941.3.1 = {
+	set_technology = { improved_ship_hull_heavy = 1 } 
+			
+	create_equipment_variant = {
+		name = "NMS Marasti"
+		type = ship_hull_heavy_3
+		name_group = ROM_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_radar_3
+			fixed_ship_engine_slot = heavy_ship_engine_3
+			fixed_ship_secondaries_slot = dp_ship_secondaries_3
+			fixed_ship_armor_slot = ship_armor_bc_4
+			front_1_custom_slot = ship_heavy_battery_3
+			mid_1_custom_slot = ship_heavy_battery_3
+			mid_2_custom_slot = ship_heavy_battery_3
+			mid_3_custom_slot = dp_ship_secondaries_3 
+			rear_1_custom_slot = ship_airplane_launcher_3
+		}
+		design_team = mio:ROM_galati_shipyard_organization
+	}
+}
+
 add_equipment_to_stockpile = {
 	type = support_equipment_1
 	amount = 303

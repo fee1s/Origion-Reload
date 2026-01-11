@@ -1,0 +1,51 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Flota Romania de Mare"			
+		naval_base = 657 # Constanta
+		task_force = {				
+			name = "Flota Romania de Mare"			
+			location = 657 # Constanta
+
+			ship = { name = "HMS H Eastern" definition = battle_cruiser start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = ROM version_name = "Origion Romania battle_cruiser" } } }
+
+			ship = { name = "HMS He Eastern" definition = battle_cruiser pride_of_the_fleet = yes start_experience_factor = 0.3 equipment = { ship_hull_heavy_3 = { amount = 1 owner = ROM version_name = "NMS Marasti" } } }
+			
+			ship = { name = "HMS K Eastern" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ROM version_name = "Origion Romania Light Cruiser"} } }
+			ship = { name = "HMS Ko Eastern" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = ROM version_name = "Origion Romania Light Cruiser"} } }	
+		}				
+	}
+
+	fleet = {
+		name = "Kriegsmarine"	
+		naval_base = 241
+		task_force = {
+			name = "Germany Main Fleet"
+			location = 241
+
+			ship = { name = "HMS H" pride_of_the_fleet = yes definition = battle_cruiser start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GER version_name = "Origion Germany Battleship" } } }
+			ship = { name = "HMS He" definition = battle_cruiser start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GER version_name = "Origion Germany Battleship" } } }
+			ship = { name = "HMS Hea" definition = battle_cruiser start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GER version_name = "Origion Germany Battleship" } } }
+			ship = { name = "HMS Heav" definition = battle_cruiser start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GER version_name = "Origion Germany Battleship" } } }
+			
+			ship = { name = "HMS K" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }
+			ship = { name = "HMS Ko" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+			ship = { name = "HMS KoL" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+			ship = { name = "HMS KoLD" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+			ship = { name = "HMS KoLDe" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+			ship = { name = "HMS KoLDeR" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+			ship = { name = "HMS KoLDeRR" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+			ship = { name = "HMS KoLDeRRR" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "Origion Germany Light Cruiser"} } }	
+
+			ship = { name = "HMS Heave" definition = battle_cruiser start_experience_factor = 0.7 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GER version_name = "ZZZZZZ" } } }
+			ship = { name = "HMS Heavel" definition = battle_cruiser start_experience_factor = 0.7 equipment = { ship_hull_heavy_2 = { amount = 1 owner = GER version_name = "ZZZZZZ" } } }
+			
+			ship = { name = "HMS KoLDeRRRRR" definition = light_cruiser start_experience_factor = 0.7 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "ZZZZZ"} } }	
+			ship = { name = "HMS KoLDeRRRR" definition = light_cruiser start_experience_factor = 0.7 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "ZZZZZ"} } }		
+			ship = { name = "HMS KoLDeRRRRRR" definition = light_cruiser start_experience_factor = 0.7 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "ZZZZZ"} } }	
+			ship = { name = "HMS KoLDeRRRRRRR" definition = light_cruiser start_experience_factor = 0.7 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GER version_name = "ZZZZZ"} } }	
+		} 
+	}
+}

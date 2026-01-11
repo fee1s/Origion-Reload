@@ -668,6 +668,13 @@ ideas = {
 
 			cancel_if_invalid = no
 
+			allowed_to_remove = {
+				if = { 
+					limit = { has_global_flag = OST_FRONT_FLAG }
+					always = no
+				}
+			}
+
 			ai_will_do = {
    				factor = 1
 

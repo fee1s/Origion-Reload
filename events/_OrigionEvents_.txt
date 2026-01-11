@@ -257,6 +257,7 @@ news_event = { # вступление италии в войну против с
 	fire_only_once = yes
 	trigger = {
 		date > 1940.5.31
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 		GER = {
 			has_war_with = ENG
 		}
@@ -305,6 +306,7 @@ news_event = { # -тнп за продажу самолетов Югослави
 	fire_only_once = yes
 	trigger = {
 		date > 1937.12.30
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -391,6 +393,7 @@ news_event = { # напряга за марко поло в ноу азии
 	trigger = {
 		date > 1937.07.22
 		JAP = { exists = no }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -411,6 +414,7 @@ news_event = { # напряга за конец аннекса китая в н�
 	trigger = {
 		date > 1938.07.22
 		JAP = { exists = no }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -650,6 +654,7 @@ news_event = { # Технологии 1938 года доступны
 	trigger = { 
 	    date > 1937.12.30 
 		NOT = { has_global_flag = tech_1938 }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -674,6 +679,7 @@ news_event = { # Технологии 1941 года доступны
 	trigger = { 
 	    date > 1940.12.30 
 		NOT = { has_global_flag = tech_1941 }
+		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 	
 	immediate = {
@@ -964,7 +970,7 @@ news_event = { # скрытый ивент вспомогательный по �
 	major = yes
 	fire_only_once = no
 	
-	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
+	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } NOT = { has_global_flag = OST_FRONT_FLAG } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
 	
 	immediate = {
 	    set_global_flag = second_compiegne_signed
@@ -1171,4 +1177,53 @@ country_event = { # Предупреждение об атаке Японии (�
  	option = {
 		name = origion.36.a
 	}
+}
+
+country_event = { # Италия запрашивает поддержку 
+	id = origion.37
+	title = origion.37.t
+	desc = origion.37.d
+	picture = GFX_report_event_german_italian_pact
+	
+	major = yes
+
+	fire_only_once = no
+
+	is_triggered_only = no
+
+	trigger = { 
+		has_global_flag = OST_FRONT_FLAG
+		original_tag = GER
+		OR = { 
+			AND = { NOT = { has_global_flag = ITA_ask_for_help_1941_flag } date > 1941.11.29 } 
+			AND = { NOT = { has_global_flag = ITA_ask_for_help_1942_flag } has_global_flag = ITA_ask_for_help_1941_completed date > 1942.11.29 } 
+			AND = { NOT = { has_global_flag = ITA_ask_for_help_1943_flag } has_global_flag = ITA_ask_for_help_1942_completed date > 1943.5.29 } 
+		}
+		NOT = { has_global_flag = GER_east_mode_africa_fall_flag }
+	}
+	
+	immediate = { 	
+		hidden_effect = {	
+			if = { limit = { NOT = { has_global_flag = ITA_ask_for_help_1942_flag } date < 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1941_flag } 
+			else_if = { limit = { has_global_flag = ITA_ask_for_help_1941_flag NOT = { has_global_flag = ITA_ask_for_help_1942_completed } NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1942_flag add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_7 days = -30 } set_variable = { ITA_ask_for_help_amount = 1500 } add_to_variable = { GER_downfall_of_northern_africa_days = -30 } }
+			else = { set_global_flag = ITA_ask_for_help_1943_flag set_variable = { ITA_ask_for_help_amount = 500 } add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_9 days = -30 } }
+		}
+	}
+
+	option = {
+		name = origion.37.a
+		trigger = { 
+			OR = {
+				AND = { date < 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1941_completed } }
+				has_global_flag = ITA_ask_for_help_1941_completed
+			}
+		}
+	}
+
+	option = {
+		name = origion.37.b
+		trigger = { date > 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1941_completed } }
+	}
+	
+	mean_time_to_happen = { days = 2 }
 }

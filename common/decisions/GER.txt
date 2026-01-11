@@ -207,6 +207,7 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		visible = {
 			HUN = { is_ai = yes }
+			NOT = { has_global_flag = OST_FRONT_FLAG }
 		}
 		
 		fire_only_once = yes
@@ -236,6 +237,7 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		visible = {
 			ROM = { is_ai = yes }
+			NOT = { has_global_flag = OST_FRONT_FLAG }
 		}
 		
 		fire_only_once = yes
@@ -258,6 +260,7 @@ GER_operations = {
 		icon = GFX_GER_so_decision
 		visible = {
 			BUL = { is_ai = yes }
+			NOT = { has_global_flag = OST_FRONT_FLAG }
 		}
 		
 		fire_only_once = yes
@@ -269,6 +272,7 @@ GER_operations = {
 	
 	GER_fall_wise = {
 		icon = GFX_GER_so_decision
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		available = {
 			has_completed_focus = GER_danzig_or_war
 			date > 1939.9.1
@@ -294,6 +298,7 @@ GER_operations = {
 	}
 	GER_fall_weserubung = {
 		icon = GFX_GER_so_decision
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		available = {
 			has_completed_focus = GER_operation_weserubung
 		}
@@ -326,6 +331,7 @@ GER_operations = {
 	}
 	GER_fall_gelb = {
 		icon = GFX_GER_so_decision
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		available = {
 			has_completed_focus = GER_around_maginot
 		}
@@ -377,6 +383,7 @@ GER_operations = {
 	}
 	GER_ROT = {
 		icon = GFX_GER_so_decision
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		available = {
 			date > 1939.12.1
 			hidden_trigger = { NOT = { has_global_flag = second_compiegne_signed } }
@@ -395,6 +402,7 @@ GER_operations = {
 		}
 	}
 	Ger_fall_sonnenblume = {
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		icon = GFX_GER_so_decision
 		available = {
 			has_completed_focus = GER_operation_sonnenblume
@@ -506,7 +514,7 @@ GER_operations = {
 				}
 				
 				if = {
-					limit = { USA = { exists = no } }
+					limit = { has_global_flag = NO_ASIA_FLAG }
 					
 					COL = { 
 						transfer_state = 336 
@@ -524,6 +532,13 @@ GER_operations = {
             			    transfer_troops = no
 	       				}
 					}
+				}
+				if = {
+					limit = { has_global_flag = OST_FRONT_FLAG }
+					
+					COL = { activate_mission = SOV_ll_east_front_mode }
+
+					add_stability = 0.2 ## ДОБАВЛЯЕТСЯ, Т.К СО СТАРТА УЖЕ ВЫЧТЕНО -20% СТАБИЛЬНОСТИ ЗА НАСТУПАТЕЛЬНУЮ ВОЙНУ (HISTORY/COUNTRIES)
 				}
 				every_state = {
 			    	limit = {
@@ -615,6 +630,7 @@ GER_operations = {
 	}
 	Ger_fall_die_wacht_am_rhein = {
 		icon = GFX_GER_so_decision
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		available = {
 			has_completed_focus = GER_die_wacht_am_rhein
 			custom_trigger_tooltip = {
@@ -708,7 +724,7 @@ GER_operations = {
 	GER_aviation_ll_to_hungary = {
 		icon = GFX_GER_so_decision
 		available = { HUN = { is_ai = no } }
-		visible = { NOT = { has_country_flag = aviation_ll_to_hungary_enabled } }
+		visible = { NOT = { has_country_flag = aviation_ll_to_hungary_enabled } NOT = { has_global_flag = OST_FRONT_FLAG } }
 		fire_only_once = no
 		priority = 10
 		complete_effect = {

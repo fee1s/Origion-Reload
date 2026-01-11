@@ -1439,16 +1439,16 @@ news_event = {
 				transfer_state = 735
 			}
 				
-			if = { limit = { JAP = { exists = no } }
-				COL = {
-					transfer_state = 286
-					transfer_state = 741
-					transfer_state = 670
-					transfer_state = 671
-				}
-			}
+			# if = { limit = { JAP = { exists = no } }
+			# 	COL = {
+			# 		transfer_state = 286
+			# 		transfer_state = 741
+			# 		transfer_state = 670
+			# 		transfer_state = 671
+			# 	}
+			# }
 			
-			if = { limit = { JAP = { exists = yes NOT = { has_completed_focus = JAP_strike_south_doctrine } } }
+			if = { limit = { JAP = { NOT = { has_completed_focus = JAP_strike_south_doctrine } } }
 				VIC = {
 					transfer_state = 286
 					transfer_state = 741

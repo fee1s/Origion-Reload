@@ -29,40 +29,25 @@ state = {
 		buildings = {
 
 			infrastructure = 4
-			industrial_complex = 2
+			industrial_complex = 4
+			arms_factory = 5
 			anti_air_building = 1
-
-			424 = {
-				bunker = 1
-			}
-			469 = {
-				bunker = 1
-			}
-			3585 = {
-				bunker = 1
-			}
-			6470 = {
-				bunker = 1
-			}
-			9555 = {
-				bunker = 1
-			}
-			11432 = {
-				bunker = 1
-			}
-
 		}
+
+		add_extra_state_shared_building_slots = 8
 
 		1938.9.30 = {
 			owner = GER
 			controller = GER
 			add_core_of = GER
 		}
-		1936.1.1.14 = {
-			owner = COL
-			add_core_of = COL
+
+	
+		1941.3.1.12 = {
+			owner = GER
+			add_core_of = GER
 		}
-	}
+}
 
 	provinces = {
 		424 469 3418 3585 6470 9555 11401 11414 11432 	

@@ -13,18 +13,22 @@ state={
 	history={
 		victory_points = {
 			6464 5
+
 		}
 		owner = POL
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 1
+			arms_factory = 1
 		}
 		add_core_of = POL
-		1936.1.1.14 = {
-            owner = COL
-            add_core_of = COL
-        }
-	}
+	
+		1941.3.1.12 = {
+			owner = GER
+			add_core_of = GER
+			controller = GER
+		}
+}
 
 	local_supplies=0.0 
 }

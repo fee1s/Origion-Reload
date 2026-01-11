@@ -1,0 +1,1135 @@
+﻿division_template = {
+	name = "PEH"
+
+	regiments = {
+		infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 }  
+		infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 }  						 
+		infantry = { x = 0 y = 2 } 	infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } 
+	}
+	support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } military_police = { x = 0 y = 2 } }
+}
+
+division_template = {
+	name = "T-90 «Crazed Dragon»"
+	regiments = {
+		medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
+		medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+		medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+		medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 }    medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+		medium_tank_destroyer_brigade = { x = 0 y = 4 }													 															 mechanized = { x = 4 y = 4 }																									
+	}			
+	support = {
+		engineer = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }		
+		flamethrower_brigade = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "CHANGE THIS TEMPLATE!"
+	regiments = {
+		infantry = { x = 0 y = 0 } 
+	}
+	
+	support = { }
+}
+
+division_template = {
+	name = "CHANGE THIS TEMPLATE!!!"
+	regiments = {
+		medium_armor = { x = 0 y = 0 } 
+	}
+	
+	support = { }
+}
+
+units = {
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9240 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9240 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10493 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10493 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11222 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11222 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9236 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9236 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!!!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3507 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3507 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13427 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13427 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9543 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9543 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 434 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 434 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11703 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11703 division_template = "CHANGE THIS TEMPLATE!!!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13534 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13534 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3686 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3686 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3686 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3686 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3686 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3686 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13440 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13440 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13430 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13430 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13536 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13536 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13535 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13535 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6704 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6704 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3722 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3722 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3722 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3722 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11437 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11437 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6420 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6420 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3568 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3568 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13429 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13429 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 418 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 418 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 418 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 418 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 418 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 418 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11405 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11405 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11405 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11405 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 453 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 453 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11452 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11452 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9479 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9479 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9463 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9463 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9463 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9463 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 511 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 511 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11504 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11504 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11504 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11504 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11437 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11437 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11437 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11437 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9433 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9433 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9433 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9433 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6423 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6423 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6423 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6423 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11561 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11561 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11561 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11561 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11561 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11561 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11683 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11683 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 721 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 721 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 721 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 721 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3452 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3452 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3452 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3452 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9491 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9491 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9491 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9491 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11530 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11530 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11530 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11530 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11530 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11530 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11454 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11438 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3494 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9543 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9543 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13425 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13427 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13427 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13427 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13427 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 525 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13426 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 489 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6532 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6532 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6532 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6532 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3480 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3480 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3480 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3480 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3568 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3568 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3568 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3568 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3542 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3542 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 238 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 238 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6589 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6589 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 315 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 315 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 371 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 371 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11325 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11325 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11229 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11229 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11298 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11298 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9342 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9342 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11355 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11355 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9288 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9288 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9288 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9288 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9288 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9288 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6344 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6344 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6344 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6344 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3378 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3378 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3378 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3378 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6373 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6373 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6373 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6373 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6319 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6319 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6319 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6319 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9249 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9249 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3507 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3507 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3507 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3507 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3293 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3293 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3293 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3293 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3203 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3203 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3203 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3203 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11453 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11453 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11453 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11453 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6556 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6556 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6556 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6556 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6232 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6232 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6232 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6232 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 215 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 215 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 215 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 215 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 304 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 304 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 304 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 304 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11313 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11313 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11313 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11313 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9554 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9554 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9554 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9554 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6543 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6543 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3520 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3520 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3520 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3520 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11526 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11526 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9542 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9542 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9542 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9542 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 580 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 580 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6304 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6304 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9714 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3757 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11409 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6254 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6254 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6330 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6330 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6330 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6330 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6386 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6386 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6254 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6254 division_template = "CHANGE THIS TEMPLATE!" }	
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11670 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13428 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3306 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3306 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3364 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3364 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3335 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3335 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3335 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3335 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3226 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3226 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9295 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9295 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11391 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11391 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 233 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 233 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11220 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11220 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 306 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 306 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 306 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 306 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 358 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 358 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6233 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6233 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6233 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6233 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11271 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11271 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11271 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11271 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6354 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6354 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6354 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6354 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11220 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11220 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9543 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9543 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11241 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11241 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11241 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11241 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11241 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11241 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6220 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6220 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 294 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 294 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3267 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3267 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 358 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 358 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9341 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9341 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 233 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 233 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11370 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9304 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9304 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11216 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11216 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 277 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 277 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 277 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 277 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9236 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9236 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6340 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6340 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9304 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9304 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9304 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9304 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9359 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9359 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9359 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9359 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3393 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6296 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9404 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11498 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11226 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11358 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3255 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3255 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 265 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 265 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6222 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6222 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9323 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 323 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6249 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6249 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9295 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9295 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6326 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6326 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3219 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3219 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6459 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6459 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 310 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 310 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 310 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 310 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 310 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 310 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9386 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9386 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 7482 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 10323 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3575 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9317 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9317 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9317 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9317 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9317 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9317 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9501 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9501 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3388 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3388 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11302 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11302 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3298 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3298 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3333 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3333 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 222 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 222 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 222 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 222 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 415 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 415 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 592 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 592 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9221 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9221 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6178 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6178 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6381 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6381 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3074 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3074 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3074 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3074 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3152 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3152 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3152 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3152 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3152 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3152 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 185 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 185 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 4640 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 4640 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 4640 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 4640 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11202 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11202 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11391 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11391 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11259 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11259 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6293 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6293 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11342 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6249 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6249 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 387 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 387 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9353 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9353 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9295 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9295 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6459 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6459 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6326 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6326 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3219 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3219 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3480 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3480 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13541 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13541 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11424 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 149 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 149 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3151 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3151 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3151 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3151 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3151 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3151 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13438 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13438 division_template = "CHANGE THIS TEMPLATE!" }
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13437 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13437 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13437 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13437 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9323 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9323 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13535 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13535 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13536 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13536 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11683 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11683 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6420 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6420 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11425 division_template = "CHANGE THIS TEMPLATE!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6532 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6532 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9698 division_template = "CHANGE THIS TEMPLATE!" } 		
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 453 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 453 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11452 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11452 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9479 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9479 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 511 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 511 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13541 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13541 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13429 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 13429 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11425 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11425 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11425 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3364 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3364 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3306 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3306 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6355 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6355 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6411 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6411 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3335 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3335 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3226 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3226 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9301 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9301 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6252 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6252 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3366 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11216 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11216 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6413 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9359 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9359 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3320 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 327 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9236 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9236 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9274 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6371 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6371 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3267 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3267 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9341 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9341 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9340 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 181 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 181 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11186 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11186 division_template = "CHANGE THIS TEMPLATE!" } 
+	
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11186 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 11186 division_template = "CHANGE THIS TEMPLATE!" }
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_2
+			version_name = "PPSh-41" 
+		}
+		requested_factories = 60
+		progress = 0.1
+		efficiency = 96
+		industrial_manufacturer = mio:SOV_tula_arms_plant_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 8
+		progress = 0.1
+		efficiency = 141
+		industrial_manufacturer = mio:SOV_tula_arms_plant_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 126
+		industrial_manufacturer = mio:SOV_gaz_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = train_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 4
+		progress = 0.4
+		efficiency = 126
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 129
+		industrial_manufacturer = mio:SOV_grabin_design_bureau_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_2
+			creator = "SOV" 
+		}
+		requested_factories = 6
+		progress = 0.1
+		efficiency = 67
+		industrial_manufacturer = mio:SOV_grabin_design_bureau_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_cas_airframe_2
+			version_name = "Ilyushin Il-2 1940" 
+		}
+		requested_factories = 15
+		progress = 0.1
+		efficiency = 125
+		industrial_manufacturer = mio:SOV_yakovlev_design_bureau_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = small_plane_airframe_2
+			version_name = "Lavochkin-Gorbunov-Gudkov LaGG-3" 
+		}
+		requested_factories = 157
+		progress = 0.1
+		efficiency = 120
+		industrial_manufacturer = mio:SOV_mig_design_bureau_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = mechanized_equipment_1
+			version_name = "BRT-1941" 
+		}
+		requested_factories = 16
+		progress = 0.1
+		efficiency = 98
+		industrial_manufacturer = mio:SOV_gaz_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_chassis_2
+			version_name = "BT-7 1941" 
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 98
+		industrial_manufacturer = mio:SOV_okmo_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_aa_chassis_2
+			version_name = "ZSU-37 1941" 
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 126
+		industrial_manufacturer = mio:SOV_okmo_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_2
+			version_name = "T-34 1941" 
+		}
+		requested_factories = 37
+		progress = 0.1
+		efficiency = 84
+		industrial_manufacturer = mio:SOV_okmo_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_destroyer_chassis_2
+			version_name = "Su-85 1941" 
+		}
+		requested_factories = 58
+		progress = 0.1
+		efficiency = 98
+		industrial_manufacturer = mio:SOV_okmo_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_2
+			version_name = "ZZZ" 
+		}
+		requested_factories = 8
+		progress = 0
+		industrial_manufacturer = mio:SOV_nevskoye_design_bureau_organization
+	}
+}

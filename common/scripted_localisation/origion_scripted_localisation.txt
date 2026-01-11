@@ -1186,13 +1186,13 @@ defined_text = {
 	    trigger = {
 		    has_global_flag = balearic_controlled_ALLY
 		}
-		localization_key = africa_map_medium_step_add_tt
+		localization_key = africa_map_small_step_add_tt
 	}
 	text = {
 	    trigger = {
 		    has_global_flag = balearic_controlled_AXIS
 		}
-		localization_key = africa_map_medium_step_remove_tt
+		localization_key = africa_map_small_step_remove_tt
 	}
 }
 defined_text = {
@@ -1310,13 +1310,13 @@ defined_text = {
 	    trigger = {
 		    has_global_flag = crete_controlled_ALLY
 		}
-		localization_key = africa_map_small_step_add_tt
+		localization_key = africa_map_medium_step_add_tt
 	}
 	text = {
 	    trigger = {
 		    has_global_flag = crete_controlled_AXIS
 		}
-		localization_key = africa_map_small_step_remove_tt
+		localization_key = africa_map_medium_step_remove_tt
 	}
 }
 defined_text = {
@@ -1726,5 +1726,20 @@ defined_text = {
 			has_completed_focus = wuw_HUN_assault_gun_focus
 		}
 		localization_key = wuw_HUN_assault_gun_focus_tt
+	}
+}
+defined_text = {
+	name = GER_downfall_of_northern_africa_days_scripted_loc_tt
+	text = {
+		trigger = {
+			NOT = { has_global_flag = ITA_ask_for_help_1941_completed }
+		}
+		localization_key = GER_downfall_of_northern_africa_days_60_tt
+	}
+	text = {
+		trigger = {
+			has_global_flag = ITA_ask_for_help_1941_completed
+		}
+		localization_key = GER_downfall_of_northern_africa_days_30_tt
 	}
 }

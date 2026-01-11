@@ -8,6 +8,7 @@ state={
 		owner = POL
 		victory_points = {
 			362 10
+
 		}
 		
 		
@@ -15,8 +16,9 @@ state={
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
-			industrial_complex = 1
-			dockyard = 3
+			industrial_complex = 3
+			dockyard = 5
+
 			362 = {
 				naval_base = 5
 			}
@@ -25,10 +27,14 @@ state={
 		1938.3.12 = {
 			add_claim_by = GER
 		}
-		1936.1.1.14 = {
-			owner = COL
-			add_core_of = COL
+
+	
+		1941.3.1.12 = {
+			owner = GER
+			add_core_of = GER
+			controller = GER
 		}
+		add_extra_state_shared_building_slots = 4
 	}
 
 	provinces={

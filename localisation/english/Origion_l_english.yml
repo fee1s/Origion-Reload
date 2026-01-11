@@ -19,8 +19,8 @@ AST_annex:0 "Cooperation between dominions"
 AST_annex_NZL:0 "Integrate New Zealand"
 USA_operation_torch:0 "§ROperation «Torch»§!"
 USA_operation_downfall:0 "§ROperation "Downfall"§!"
-SOV_meta_deployment:0 "Automatic division deployment"
-SOV_reserve_deployment:0 "Additional division deployment"
+SOV_meta_deployment:0 "Meta Division Deployment"
+SOV_universal_deployment:0 "Universal Division Deployment"
 ORG_allies_lend_lease_to_sov:0 "Lend-lease to the Soviet Union"
 ORG_allies_lend_lease_to_sov_desc:0 "During the §YGreat Patriotic War§! we can send vital supplies to the §YSoviet Union§!, helping it to effectively fight against §YNazi Germany§!. Each §Ysupply corridor§! we control increases §Ythroughput§! by £convoy_texticon §G20%§!, allowing more equipment and weapons to be delivered. Support for the §YSoviet Union§! depends directly on how many §Ysupply corridors§! we manage to control, strengthening its army and increasing combat effectiveness on the §YEastern Front§!."
 investments_ferrous_metallurgy_sverdlovsk:0 "Investments in Sverdlovsk ferrous metallurgy"
@@ -160,7 +160,7 @@ ENG_operation_downfall:0 "Operation §Y«Downfall»§!"
 ENG_altantikwall_fall_no_asia:0 "Operation §Y«Overlord»§!"
 
 sea_invasion_prohibited_ITA_dm:0 "§tInsecure invasion§!"
-sea_invasion_prohibited_ITA_tt:0 "Landing in this region is only possible after fall of §YNorth Africa§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CAllies§!) = §R-300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RAxis§!) = §G+300%§!"
+sea_invasion_prohibited_ITA_tt:0 "Landing in this region is only possible after fall of §YNorth Africa§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CAllies§!) = §R-300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§Axis§!) = §G+300%§!"
 sea_invasion_prohibited_ENG_dm:0 "§tInsecure invasion§!"
 sea_invasion_prohibited_ENG_tt:0 "Landing in this region is only possible after the fall of §YGibraltar§! \n\n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§CAllies§!) = §G+300%§! \n$MODIFIERS_ARMY_ATTACK_FACTOR$ (§RAxis§!) = §R-300%§!"
 sea_invasion_prohibited_USA_dm:0 "§tInsecure invasion§!"
@@ -456,6 +456,23 @@ air_theorist_tt: "£GFX_army_doctrine_mastery Land Doctrine mastery gain: §G+0.
 theorist_trigger_tt: "Cannot hire a §YTheorist§! because no §YSubdoctrine§! is selected."
 doctrine_theorist_trigger_tt: "Cannot change §YDoctrine§! because a §YTheorist§! is currently hired."
 
+SOV_ll_east_front_mode: "§YFighter deliveries to [SOV.GetName]§!"
+SOV_ll_east_front_mode_tt: "So far we have sent: \n£GFX_unit_fighter_icon_small §YFighters:§! [?GER.SOV_ll_east_front_mode_amount|0]"
+GER_help_for_ita_dec: "§YDeploy the Luftwaffe in [ITA.GetAdjectiveCap] operations§!"
+GER_help_for_ita_dec_tt: "§YDelays the progress of the Northern African Front collapse§! by §Y[GER_downfall_of_northern_africa_days_scripted_loc_tt] days§!\n\n§RBy refraining from providing support this time, we will lose this opportunity forever!§!"
+GER_downfall_of_northern_africa_days_60_tt: "60"
+GER_downfall_of_northern_africa_days_30_tt: "30"
+
+GER_downfall_of_northern_africa_1:0 "§YLanding on the Balearic Islands§!"
+GER_downfall_of_northern_africa_2:0 "§YOperation «Torch»§!"
+GER_downfall_of_northern_africa_3:0 "§YLanding in Norway§!"
+GER_downfall_of_northern_africa_4:0 "§YOperation «Compass»§!"
+GER_downfall_of_northern_africa_5:0 "§YOperation «Countenance»§!"
+GER_downfall_of_northern_africa_6:0 "§YCapitulation of the Afrika Korps§!"
+GER_downfall_of_northern_africa_7:0 "§YCretan Operation§!"
+GER_downfall_of_northern_africa_8:0 "§YOperation «Husky»§!"
+GER_downfall_of_northern_africa_9:0 "§YOperation «Manna»§!"
+
 SICILIAN_NARROWS_tt: "§YThe strait§! will be blocked for §YAllied§! countries until §YTunisia§! or §Ythe Suez Canal§! is returned."
 SICILIAN_NARROWS_tt_NOT: "§YThe strait§! is blocked for §YAllied§! countries until §YTunisia§! or §Ythe Suez Canal§! is returned."
 
@@ -567,16 +584,23 @@ origion.36.t: "Increased Japanese Activity in the Far East"
 origion.36.d: "In recent weeks, noticeable changes have been observed on the opposite side of the Far Eastern border. Japanese units are increasingly detected on the move, with a rise in the transport of personnel and equipment along railways and in border areas. \n\nAir activity and reconnaissance efforts have intensified, and incidents that were previously isolated have become more frequent. Formally, the situation remains calm; however, what is taking place bears less and less resemblance to routine maneuvers."
 origion.36.a: "This is concerning"
 
+origion.37.t: "Italy Requests Luftwaffe Support" 
+origion.37.d: "Italian command reports growing pressure across secondary theaters of war. Without reliable air superiority, holding key positions is becoming increasingly costly. Rome urges the transfer of German fighter units to secure operations and supply lines, preventing the situation from slipping beyond control." 
+origion.37.a: "It is possible"
+origion.37.b: "It is beyond our power"
+
 # Bookmarks
 
 No_Asia_Name: "European War"
 No_Asia_Desc: "A mode designed specifically for situations with an insufficient number of players for a full deployment. Matches in this mode can be comfortably conducted with 12-14 players."
 
-only_asia_name: "Pacific Front"
-only_asia_desc: "This game mode focuses exclusively on events occurring on the Pacific Front of World War II, with particular emphasis on landings and naval combat. The mode is designed for a small group of players, from 6 to 8."
+ost_front_name: "Eastern Front"
+ost_front_desc: "A game mode focused exclusively on the confrontation between Germany and the Soviet Union on the Eastern Front of World War II. Gameplay revolves around large-scale land warfare, intensive micromanagement, and strategic front control without the involvement of allies or other Axis powers. The mode is designed for 8–10 players but also supports a 1v1 format."
 
 GATHERING_STORM_NAME: "World War"
 GATHERING_STORM_DESC: "This mode covers the full spectrum of World War II events, battles on all fronts, and global scale. Players will participate in key military operations, from the Western Front to the Eastern Front, from African deserts to the Pacific Ocean, fighting for dominance on land, in the air, and at sea."
+
+ost_policies_not_available_tt:0 "§RThis policy cannot be selected in the current game mode§!"
 
 # Focuses and descriptions
 ITA_use_prom:0 "Exploitation of new territories"
@@ -1066,6 +1090,22 @@ africa_map_medium_step_remove_tt: "Losing this region modifies §Y$african_warfa
 
 africa_map_gibraltar_step_add_tt: "Owning this region modifies §Y$african_warfare_dm$§! by: \n$MODIFIER_FUEL_GAIN_FACTOR$: §G+5.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G+5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§! \n--------\n§BControlled by Allies§!"
 africa_map_gibraltar_step_remove_tt: "Losing this region modifies §Y$african_warfare_dm$§! by: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-5.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-5.0%§! \n--------\n§RControlled by Axis§!"
+
+GER_downfall_of_northern_africa_1_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §G-1.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G-1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G-1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G-1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G-1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G-1.0%§!"
+
+GER_downfall_of_northern_africa_2_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §G-2.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G-2.0%§!"
+
+GER_downfall_of_northern_africa_4_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §G-6.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G-6.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G-6.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G-6.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G-6.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G-6.0%§!"
+
+GER_downfall_of_northern_africa_6_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §G-12.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G-12.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G-12.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G-12.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G-12.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G-12.0%§!"
+
+GER_downfall_of_northern_africa_7_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §G-3.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G-3.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G-3.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G-3.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G-3.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G-3.0%§!"
+
+GER_downfall_of_northern_africa_8_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §G-4.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G-4.0%§!"
+
+GER_downfall_of_northern_africa_3_tt: "§Y[GER.GetName]§! will lose control over §Y[NOR.GetAdjective]§! territory, resulting in an increase of §Ysupply throughput§! to §Y[SOV.GetName]§! by £convoy_texticon §G20%§!."
+
+GER_downfall_of_northern_africa_9_tt: "§Y[GER.GetName]§! will lose access to the §Y[ITA.GetAdjective]§! resource base located in §Y[GRE.GetAdjective]§! territory."
 
 mio_header_tank_construction_medium: "Medium Tanks"
 mio_header_tank_construction_heavy: "Heavy Tanks"
