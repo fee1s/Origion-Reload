@@ -27,7 +27,7 @@ focus_tree = {
 
 	
 	focus = {
-		id = GER_remilitarize_the_rhineland
+		id = GER_remilitarize_the_rhineland 
 
 		icon = GFX_focus_GER_remilitarize_the_rhineland
 
@@ -39,6 +39,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
+
+		available = { AND = { has_global_flag = ITA_ask_for_help_1942_flag has_global_flag = ITA_ask_for_help_1941_flag  has_global_flag = ITA_ask_for_help_1943_flag     has_global_flag = ITA_ask_for_help_1941_completed NOT = { has_global_flag = ITA_ask_for_help_1942_completed } } }
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
 

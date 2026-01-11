@@ -545,6 +545,49 @@ if = {
 		}
 	}
 
+1941.3.1 = {
+	set_technology = {
+		improved_small_airframe = 1
+		aa_hmg = 1
+		aa_cannon_1 = 1
+		engines_3 = 1
+	}
+
+	mio:ENG_supermarine_organization = {
+		complete_mio_trait = generic_mio_trait_expanded_production_facilities
+		complete_mio_trait = generic_mio_trait_fixed_tailwheels
+		complete_mio_trait = generic_mio_advanced_materials
+		complete_mio_trait = generic_mio_trait_removable_wings
+		complete_mio_trait = generic_mio_trait_liquid_cooled_engines
+		complete_mio_trait = generic_mio_trait_maritime_duties
+		complete_mio_trait = generic_mio_trait_advanced_aerodynamics
+		complete_mio_trait = generic_mio_trait_fuselage_ordinance_rack
+		complete_mio_trait = generic_mio_trait_ongoing_developmental_upgrades
+		complete_mio_trait = generic_mio_trait_heavier_airframe
+		complete_mio_trait = generic_mio_trait_fighter_specialization
+		complete_mio_trait = generic_mio_trait_multi_purpose_aircraft
+		complete_mio_trait = generic_mio_trait_flexible_design
+		complete_mio_trait = generic_mio_trait_fighter_expertise
+
+		complete_mio_trait = ENG_mio_trait_supercharger
+	}
+
+	create_equipment_variant = {
+		name = "Supermarine Spitfire" 
+		type = small_plane_airframe_2
+		design_team = mio:ENG_supermarine_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = lmg_defense_turret		
+		}
+	}
+}
+
 add_equipment_to_stockpile = {
 	type = support_equipment_1
 	amount = 258

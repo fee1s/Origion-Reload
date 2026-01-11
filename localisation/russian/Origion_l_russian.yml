@@ -19,8 +19,8 @@ AST_annex:0 "Сотрудничество между доминионами"
 AST_annex_NZL:0 "Интегрировать Новую Зеландию"
 USA_operation_torch:0 "§RОперация «Факел»§!"
 USA_operation_downfall:0 "§RОперация «Даунфол»§!"
-SOV_meta_deployment:0 "Автоматическая расстановка дивизий"
-SOV_reserve_deployment:0 "Дополнительная расстановка дивизий"
+SOV_meta_deployment:0 "Метовая расстановка дивизий"
+SOV_universal_deployment:0 "Универсальная расстановка дивизий"
 ORG_allies_lend_lease_to_sov:0 "Ленд-лиз для Советского Союза"
 ORG_allies_lend_lease_to_sov_desc:0 "Во время §YВеликой Отечественной войны§! мы можем отправлять жизненно важные поставки в §YСоветский Союз§!, что поможет ему эффективно бороться с §Yнацистской Германией§!. Каждый контролируемый нами §Yкоридор снабжения§! увеличивает §Yпропускную способность§! на £convoy_texticon §G20%§!, позволяя отправлять больше техники и вооружений. Поддержка §YСоветского Союза§! напрямую зависит от того, сколько §Yкоридоров снабжения§! нам удастся контролировать, что укрепит его армию и повысит боеспособность на §YВосточном фронте§!."
 investments_ferrous_metallurgy_sverdlovsk:0 "Инвестиции в чёрную металлургию Свердловска"
@@ -452,6 +452,22 @@ navy_theorist_tt: "£GFX_army_doctrine_mastery Получаемые очк. ос
 air_theorist_tt: "£GFX_army_doctrine_mastery Получаемые очк. освоения армии: §G+0.25§! \n£GFX_navy_doctrine_mastery Получаемые очк. освоения флота: §G+0.25§! \n£GFX_air_doctrine_mastery Получаемые очк. освоения авиации: §G+0.30§!"
 theorist_trigger_tt: "Невозможно нанять §Yтеоретика§!, так как не выбрана §Yвторостепенная доктрина§!."
 doctrine_theorist_trigger_tt: "Невозможно сменить §Yдоктрину§!, так как нанят §Yтеоретик§!."
+SOV_ll_east_front_mode: "§YПоставки истребителей в [SOV.GetName]§!"
+SOV_ll_east_front_mode_tt: "На данный момент мы отправили: \n£GFX_unit_fighter_icon_small §YИстребители:§! [?GER.SOV_ll_east_front_mode_amount|0]."
+GER_help_for_ita_dec: "§YЗадействовать Люфтваффе в [ITA.GetAdjectiveCap] операциях§!"
+GER_help_for_ita_dec_tt: "§YОтсрочивает§! текущий и все предстоящие этапы падения §YСевероафриканского фронта§! на §Y[GER_downfall_of_northern_africa_days_scripted_loc_tt] дн.§!\n\n§RВоздержавшись от оказания поддержки в этот раз, мы утратим эту возможность навсегда!§!"
+GER_downfall_of_northern_africa_days_60_tt: "60"
+GER_downfall_of_northern_africa_days_30_tt: "30"
+
+GER_downfall_of_northern_africa_1:0 "§YДесант на Балеарских островах§!"
+GER_downfall_of_northern_africa_2:0 "§YОперация «Факел»§!"
+GER_downfall_of_northern_africa_3:0 "§YВысадка в Норвегии§!"
+GER_downfall_of_northern_africa_4:0 "§YОперация «Компас»§!"
+GER_downfall_of_northern_africa_5:0 "§YОперации «Согласие»§!"
+GER_downfall_of_northern_africa_6:0 "§YКапитуляция «Африканского корпуса»§!"
+GER_downfall_of_northern_africa_7:0 "§YКритская операция§!"
+GER_downfall_of_northern_africa_8:0 "§YОперация «Хаски»§!"
+GER_downfall_of_northern_africa_9:0 "§YОперация «Манна»§!"
 
 SICILIAN_NARROWS_tt: "§YПролив§! будет заблокирован для стран §YСоюзников§! до возвращения §YТуниса§! или §YСуэцкого канала§!."
 SICILIAN_NARROWS_tt_NOT: "§YПролив§! заблокирован для стран §YСоюзников§! до возвращения §YТуниса§! или §YСуэцкого канала§!."
@@ -563,6 +579,11 @@ origion.35.b: "Удар в спину!"
 origion.36.t: "Активизация японских сил на Дальнем Востоке" 
 origion.36.d: "В последние недели на сопредельной стороне дальневосточной границы отмечаются заметные изменения. Японские части всё чаще фиксируются в движении, на железных дорогах и в приграничных районах наблюдается рост перевозок личного состава и техники. \n\nУсиливается работа авиации и средств разведки, участились инциденты, ранее носившие единичный характер. Формально обстановка остаётся спокойной, однако происходящее всё меньше похоже на обычные манёвры." 
 origion.36.a: "Это тревожно" 
+
+origion.37.t: "Италия запрашивает поддержку Люфтваффе" 
+origion.37.d: "Итальянское командование сообщает о нарастающем давлении на второстепенных театрах войны. Без устойчивого превосходства в воздухе удержание позиций становится всё более затратным. Рим настаивает на переброске немецких истребительных частей для прикрытия ключевых операций и коммуникаций, пока ситуация не вышла из-под контроля." 
+origion.37.a: "Это возможно" 
+origion.37.b: "Это не в наших силах" 
 
 # Букмаркс
 
@@ -1062,6 +1083,22 @@ africa_map_medium_step_remove_tt: "Потеря данного региона и
 
 africa_map_gibraltar_step_add_tt: "Владение данным регионом изменяет модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §G+5.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §G+5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.0%§! \n--------\n§BКонтроллируется Союзниками§!"
 africa_map_gibraltar_step_remove_tt: "Потеря данного региона изменит модификатор §Y$african_warfare_dm$§! на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-5.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-5.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-5.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-5.0%§! \n--------\n§RКонтроллируется Осью§!"
+
+GER_downfall_of_northern_africa_1_tt: "§Y$african_warfare_dm$§! изменится на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-1.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-1.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-1.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-1.0%§!"
+
+GER_downfall_of_northern_africa_2_tt: "§Y$african_warfare_dm$§! изменится на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-2.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-2.0%§!"
+
+GER_downfall_of_northern_africa_3_tt: "§Y[GER.GetName]§! утратит контроль над §Y[NOR.GetAdjective]§! территорией, в следствии чего §Yпропускная способность§! поставок в §Y[SOV.GetName]§! увеличится на £convoy_texticon §G20%§!."
+
+GER_downfall_of_northern_africa_4_tt: "§Y$african_warfare_dm$§! изменится на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-6.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-6.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-6.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-6.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-6.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-6.0%§!"
+
+GER_downfall_of_northern_africa_6_tt: "§Y$african_warfare_dm$§! изменится на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-12.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-12.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-12.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-12.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-12.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-12.0%§!"
+
+GER_downfall_of_northern_africa_7_tt: "§Y$african_warfare_dm$§! изменится на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-3.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-3.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-3.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-3.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-3.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-3.0%§!"
+
+GER_downfall_of_northern_africa_8_tt: "§Y$african_warfare_dm$§! изменится на: \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-4.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-4.0%§!"
+
+GER_downfall_of_northern_africa_9_tt: "§Y[GER.GetName]§! утратит контроль над §Y[ITA.GetAdjectiveCap]§! ресурсной базой, находящейся на §Y[GRE.GetAdjectiveCap]§! территории."
 
 mio_header_tank_construction_medium: "Средние танки"
 mio_header_tank_construction_heavy: "Тяжёлые танки"

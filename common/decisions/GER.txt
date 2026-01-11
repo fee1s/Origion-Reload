@@ -514,7 +514,7 @@ GER_operations = {
 				}
 				
 				if = {
-					limit = { USA = { exists = no } }
+					limit = { has_global_flag = NO_ASIA_FLAG }
 					
 					COL = { 
 						transfer_state = 336 
@@ -532,6 +532,13 @@ GER_operations = {
             			    transfer_troops = no
 	       				}
 					}
+				}
+				if = {
+					limit = { has_global_flag = OST_FRONT_FLAG }
+					
+					COL = { activate_mission = SOV_ll_east_front_mode }
+
+					add_stability = 0.2 ## ДОБАВЛЯЕТСЯ, Т.К СО СТАРТА УЖЕ ВЫЧТЕНО -20% СТАБИЛЬНОСТИ ЗА НАСТУПАТЕЛЬНУЮ ВОЙНУ (HISTORY/COUNTRIES)
 				}
 				every_state = {
 			    	limit = {
