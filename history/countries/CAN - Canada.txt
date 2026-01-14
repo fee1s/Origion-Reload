@@ -14,15 +14,20 @@ set_sub_doctrine = line_of_battle
 set_sub_doctrine = support_integrated_operations
 set_sub_doctrine = wolfpacks
 
-add_dynamic_modifier = {modifier = CAN_army}
-add_dynamic_modifier = {modifier = CAN_economy}
-set_variable = { CAN_army_army_org_factor = -0.30 }
-set_variable = { CAN_army_army_morale_factor = -0.30 }
-set_variable = {CAN_conscription_factor = -0.3}
+add_dynamic_modifier = {modifier = CAN_army_dm}
+add_dynamic_modifier = {modifier = CAN_economy_dm}
+set_variable = { CAN_army_dm_army_org_factor = -0.30 }
+set_variable = { CAN_army_dm_army_morale_factor = -0.30 }
+set_variable = {CAN_army_dm_conscription_factor = -0.3}
 
-set_variable = {CAN_consumer_goods_expected_value = 0.25}
-set_variable = {CAN_industrial_capacity_factory = -0.2}
-set_variable = {CAN_industrial_capacity_dockyard = -0.2}
+set_variable = {CAN_economy_dm_consumer_goods_expected_value = 0.25}
+set_variable = {CAN_economy_dm_industrial_capacity_factory = -0.2}
+set_variable = {CAN_economy_dm_industrial_capacity_dockyard = -0.2}
+	
+	set_variable = {
+		CAN_economy_dm_political_power_gain = -0.7
+	}
+
 if = {
 	limit = {
 		NOT = {
@@ -63,6 +68,14 @@ if = {
 		set_naval_oob = "CAN_1936_naval_legacy"
 	}
 }
+
+set_popularities = {
+	democratic = 80
+	fascism = 10
+	communism = 5
+	neutrality = 5
+}
+
 
 set_research_slots = 3
 set_country_flag = monroe_doctrine
@@ -124,6 +137,7 @@ set_technology = {
 	fuel_refining = 1
 	fuel_silos = 1
 	basic_train = 1
+	motorised_infantry = 1
 }
 if = {
 	limit = {
@@ -335,11 +349,7 @@ set_politics = {
 	elections_allowed = yes
 }
 
-set_popularities = {
-	democratic = 98
-	fascism = 1
-	communism = 1
-}
+
 
 set_convoys = 150
 set_stability = 0.5
