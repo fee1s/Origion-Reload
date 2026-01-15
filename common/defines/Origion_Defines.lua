@@ -59,6 +59,7 @@ NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_MULTIPLIER = 40.0 -- Фл
 NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_CRIT_CHANCE_FACTOR = 0.0025
 
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0 -- Возвращаем абузный стак плана, как и был на версии 1.16.10
+NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_MALUS = 0 -- Штраф на скорость плана при морском вторжении (Убран)
 
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.175 -- Маленькая река
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая река

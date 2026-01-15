@@ -997,7 +997,7 @@ if = {
 		complete_mio_trait = generic_mio_trait_command_upgrades
 		complete_mio_trait = generic_mio_trait_standardized_components
 		complete_mio_trait = generic_mio_trait_long_barreled_guns
-		complete_mio_trait = generic_mio_trait_infantry_support_tanks
+		complete_mio_trait = generic_mio_trait_anti_tank_specialization
 
 		complete_mio_trait = generic_mio_trait_soviet_production
 	}
@@ -1082,7 +1082,7 @@ if = {
         type = medium_tank_chassis_2
         design_team = mio:SOV_okmo_organization
         upgrades  = {
-            tank_nsb_engine_upgrade = 9
+            tank_nsb_engine_upgrade = 12
             tank_nsb_armor_upgrade = 14
         }
         modules = {
@@ -1110,7 +1110,7 @@ if = {
         type = medium_tank_chassis_2
         design_team = mio:SOV_okmo_organization
         upgrades  = {
-            tank_nsb_engine_upgrade = 9
+            tank_nsb_engine_upgrade = 12
             tank_nsb_armor_upgrade = 14
         }
         modules = {
@@ -1138,7 +1138,7 @@ if = {
         type = medium_tank_chassis_2
         design_team = mio:SOV_okmo_organization
         upgrades  = {
-            tank_nsb_engine_upgrade = 9
+            tank_nsb_engine_upgrade = 12
             tank_nsb_armor_upgrade = 14
         }
         modules = {
@@ -1176,6 +1176,9 @@ if = {
             special_type_slot_3 = squeezebore_adaptor
             special_type_slot_4 = easy_maintenance
         }
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+		}
 		obsolete = yes
 		parent_version = 1
     }
@@ -1201,6 +1204,9 @@ if = {
             special_type_slot_3 = squeezebore_adaptor
             special_type_slot_4 = easy_maintenance
         }
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+		}
 		mark_older_equipment_obsolete = yes
 		obsolete = no
 		parent_version = 0
@@ -1227,6 +1233,9 @@ if = {
             special_type_slot_3 = extra_ammo_storage
             special_type_slot_4 = easy_maintenance
         }
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+		}
     }
 
     create_equipment_variant = {
@@ -1245,7 +1254,7 @@ if = {
 			special_type_slot_4 = easy_maintenance
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 7
+			tank_nsb_engine_upgrade = 11
 			tank_nsb_armor_upgrade = 14
 		}
 		mark_older_equipment_obsolete = yes	
@@ -1460,7 +1469,7 @@ if = {
 
 	add_equipment_to_stockpile = {
 		type = small_plane_airframe_2
-		amount = 8300
+		amount = 8800
 		variant_name = "Lavochkin-Gorbunov-Gudkov LaGG-3"	
 	}
 	

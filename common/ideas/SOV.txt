@@ -80,53 +80,6 @@ ideas = {
 			}
 		}
 		
-		SOV_increased_aircraft_production_ns_bonus = { #Used as a hidden idea to prevent overcrowding in the regular Soviet Aircraft ns tt
-			removal_cost = -1
-
-			picture = generic_neutrality_drift_bonus
-
-			allowed = {
-				always = no # Added via purges
-			}
-
-			equipment_bonus = {
-				#AIRCRAFT
-				small_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				cv_small_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				small_plane_cas_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				cv_small_plane_cas_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_scout_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				large_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		
 		SOV_soviet_german_trade_agreement = {
 			picture = can_wartime_prices_and_trade_board
 
