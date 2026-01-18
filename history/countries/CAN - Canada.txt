@@ -16,11 +16,9 @@ set_sub_doctrine = wolfpacks
 
 add_dynamic_modifier = {modifier = CAN_army_dm}
 add_dynamic_modifier = {modifier = CAN_economy_dm}
-set_variable = { CAN_army_dm_army_org_factor = -0.30 }
-set_variable = { CAN_army_dm_army_morale_factor = -0.30 }
-set_variable = {CAN_army_dm_conscription_factor = -0.3}
 
-set_variable = {CAN_economy_dm_consumer_goods_expected_value = 0.25}
+
+set_variable = {CAN_economy_dm_consumer_goods_expected_value = 0.2}
 set_variable = {CAN_economy_dm_industrial_capacity_factory = -0.2}
 set_variable = {CAN_economy_dm_industrial_capacity_dockyard = -0.2}
 	
@@ -72,15 +70,14 @@ if = {
 set_popularities = {
 	democratic = 80
 	fascism = 10
-	communism = 5
-	neutrality = 5
+	communism = 10
 }
 
 
 set_research_slots = 3
 set_country_flag = monroe_doctrine
-set_stability = 0.5
-set_war_support = 0.15
+set_stability = 0.52
+set_war_support = 0.1
 
 recruit_character = CAN_mackenzie_king
 recruit_character = CAN_adrien_arcand

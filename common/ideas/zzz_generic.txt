@@ -250,7 +250,7 @@ ideas = {
 				}				
 			}
 		}
-		CAN_euro = {
+		CAN_mechanized = {
 			name = CAN_army
 			allowed = {
 				always = no
@@ -265,21 +265,21 @@ ideas = {
 			picture = FIN_german_threat
 
 			equipment_bonus = {
-				motorized = {
-					build_cost_ic = -0.1 instant = yes
-				}
 				mechanized_equipment_1 = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.025 instant = yes
 				}
 				mechanized_equipment_2 = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.025 instant = yes
 				}
 				mechanized_equipment_3 = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.025 instant = yes
+				}
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.025 instant = yes
 				}
 			}
-		}
-		CAN_asia = {
+		}	
+		CAN_armor = {
 			name = CAN_army
 			allowed = {
 				always = no
@@ -294,8 +294,11 @@ ideas = {
 			picture = idea_chi_army_corruption3
 
 			equipment_bonus = {
-				amphibious_mechanized_equipment = {
-					build_cost_ic = -0.1 instant = yes
+				armor = {
+					build_cost_ic = -0.025 instant = yes
+				}
+				motorized_equipment_1 = {
+					build_cost_ic = -0.025 instant = yes
 				}
 			}
 		}
