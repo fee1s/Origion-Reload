@@ -12,6 +12,43 @@
 	
 	default = no
 
+	focus = {
+		id = CAN_strengthen_the_commonwealth_ties
+		icon = GFX_CAN_maple_leaf
+		x = 16
+		y = -1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				democratic < 0.5
+				factor = 0.5
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+   			
+			add_political_power = 25
+			
+			hidden_effect = {
+				modify_tech_sharing_bonus = {
+					id = commonwealth_research
+					bonus = 0.03
+				}
+			}
+		}
+	}
 	
 	focus = {
 		id = CAN_crown_corporations
@@ -24,13 +61,6 @@
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 3
-				has_completed_focus = CAN_rowell_sirois_commission
-			}
-		}
 
 		available = {
 
@@ -365,6 +395,10 @@
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = {
+				CAN_economy_dm_local_resources_factor = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
 				CAN_economy_dm_production_speed_arms_factory_factor = 0.1
 				tooltip = production_speed_arms_factory_factor_tt
 			}
@@ -627,7 +661,6 @@
 		id = CAN_armor_focus 
 		icon = GFX_focus_generic_tank_production
 		prerequisite = { focus = CAN_dominion_rifle_association }
-		prerequisite = { focus = CAN_output }
 		relative_position_id = CAN_military_commission_on_prices_and_trade
 		x = 1
 		y = 3
@@ -919,10 +952,6 @@
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = {
-				CAN_economy_dm_local_resources_factor = 0.05
-				tooltip = local_resources_factor_tt
-			}
-			add_to_variable = {
 				CAN_economy_dm_local_resources_factor = 0.025
 				tooltip = local_resources_factor_tt
 			}
@@ -959,6 +988,46 @@
 			add_research_slot = 1
 		}
 	}
+	
+		focus = {
+		id = CAN_real_estate_commission
+		icon = GFX_focus_SWE_hygienic_housing
+		prerequisite = { focus = CAN_rowel_sirois_commission }
+		x = -2
+		y = 1
+		relative_position_id = CAN_rowel_sirois_commission
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = CAN_economy_dm_tt
+			add_to_variable = {
+				CAN_economy_dm_min_export = -0.1 
+				tooltip = min_export_tt
+			}
+			add_to_variable = {
+				CAN_economy_dm_global_building_slots_factor = 0.1 
+				tooltip = global_building_slots_factor_tt
+			}
+		}
+	}
+
 	
 	focus = {
 		id = CAN_tariff_increasing 
@@ -999,45 +1068,6 @@
 			}
 		}
 	}
-	
-	focus = {
-		id = CAN_real_estate_commission
-		icon = GFX_focus_SWE_hygienic_housing
-		prerequisite = { focus = CAN_rowel_sirois_commission }
-		x = -2
-		y = 1
-		relative_position_id = CAN_rowel_sirois_commission
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = CAN_economy_dm_tt
-			add_to_variable = {
-				CAN_economy_dm_min_export = -0.1 
-				tooltip = min_export_tt
-			}
-			add_to_variable = {
-				CAN_economy_dm_global_building_slots_factor = 0.1 
-				tooltip = global_building_slots_factor_tt
-			}
-		}
-	}
 
 	focus = {
 		id = CAN_mine_the_shield
@@ -1047,7 +1077,7 @@
 		y = 2
 		relative_position_id = CAN_rowel_sirois_commission
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -1065,7 +1095,7 @@
 				}
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 16
 				}
 			}
 			random_owned_controlled_state = {
@@ -1085,7 +1115,7 @@
 				}
 				add_resource = {
 					type = chromium
-					amount = 14
+					amount = 16
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1266,45 +1296,6 @@
 	}
 
 	focus = {
-		id = CAN_strengthen_the_commonwealth_ties
-		icon = GFX_CAN_maple_leaf
-		x = 16
-		y = -1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-			modifier = {
-				democratic < 0.5
-				factor = 0.5
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_stability = 0.05
-   			
-			add_political_power = 25
-			
-			hidden_effect = {
-				modify_tech_sharing_bonus = {
-					id = commonwealth_research
-					bonus = 0.03
-				}
-			}
-		}
-	}
-	
-
-	focus = {
 		id = CAN_limited_lending 
 		icon = GFX_focus_generic_welfare
 		x = 0
@@ -1323,7 +1314,7 @@
 		}
 		
 		bypass = {
-			has_idea = low_economic_mobilisation
+				
 		}
 
 		cancel_if_invalid = yes
@@ -1536,7 +1527,7 @@
 		}
 		
 		bypass = {
-			has_ideas = partial_economic_mobilisation
+			
 		}
 
 		cancel_if_invalid = yes
@@ -1650,7 +1641,7 @@
 		}
 		
 		bypass = {
-			has_ideas = war_economy
+			
 		}
 
 		cancel_if_invalid = yes
@@ -1890,6 +1881,12 @@
 
 		completion_reward = {
 			add_research_slot = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CAN_economy_dm_tt
+			add_to_variable = {
+				CAN_economy_dm_economy_dm_research_speed_factor = 0.05
+				tooltip = research_speed_factor_tt
+			}
 		}
 	}
 	
@@ -1942,8 +1939,7 @@
 	focus = {
 		id = CAN_mechanized_focus   
 		icon = GFX_focus_generic_mechanized
-		prerequisite = { focus = CAN_proizvodstvo }
-		prerequisite = { focus = CAN_dominion_rifle_association		 }
+		prerequisite = { focus = CAN_dominion_rifle_association }
 		relative_position_id = CAN_military_commission_on_prices_and_trade
 		x = -1
 		y = 3
