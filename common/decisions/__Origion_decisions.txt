@@ -1414,6 +1414,7 @@ ORG_africa_dec_cat = {
 				set_global_flag = crete_controlled_ALLY
 				set_global_flag = cyprus_controlled_ALLY
 				set_global_flag = malta_controlled_ALLY
+				set_global_flag = GER_downfall_of_northern_africa_7_flag
 				activate_mission = GER_downfall_of_northern_africa_8
 			}
 		}
@@ -1482,7 +1483,7 @@ ORG_africa_dec_cat = {
 		visible = {
 			OR = { 
 				AND = { has_global_flag = ITA_ask_for_help_1941_flag date < 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1941_completed } }
-				AND = { has_global_flag = ITA_ask_for_help_1942_flag NOT = { has_global_flag = GER_downfall_of_northern_africa_8_flag } has_global_flag = ITA_ask_for_help_1941_completed NOT = { has_global_flag = ITA_ask_for_help_1942_completed } }
+				AND = { has_global_flag = ITA_ask_for_help_1942_flag NOT = { has_global_flag = GER_downfall_of_northern_africa_7_flag } has_global_flag = ITA_ask_for_help_1941_completed NOT = { has_global_flag = ITA_ask_for_help_1942_completed } }
 				AND = { has_global_flag = ITA_ask_for_help_1943_flag has_global_flag = ITA_ask_for_help_1941_completed has_global_flag = ITA_ask_for_help_1942_completed NOT = { has_global_flag = ITA_ask_for_help_1943_completed } } 
 			}
 		}

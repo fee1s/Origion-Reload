@@ -1133,39 +1133,85 @@ no_fra_mainland_buildings = { # Французский дебафф на сте�
     local_building_slots_factor = -2
 }
 
-CAN_army = { #NATIONAL SPIRIT
+CAN_army_dm = { 
 	enable = { always = yes }
-	icon = GFX_idea_chi_army_corruption3
-	army_org_factor = CAN_army_army_org_factor
-	army_morale_factor = CAN_army_army_morale_factor
-	conscription_factor = CAN_conscription_factor
-	training_time_factor = CAN_training_time_factor
-	experience_gain_army_factor = CAN_experience_gain_army_factor
-	conscription = CAN_conscription
-	amphibious_invasion_defence = CAN_amphibious_invasion_defence
-	custom_modifier_tooltip = CAN_army_dm_tt
+	icon = GFX_idea_RAJ_kingmaker
+	
+	army_org_factor = CAN_army_dm_army_org_factor
+	army_morale_factor = CAN_army_dm_army_morale_factor
+	conscription_factor = CAN_army_dm_conscription_factor
+	training_time_factor = CAN_army_dm_training_time_factor
+	conscription = CAN_army_dm_conscription
+	amphibious_invasion_defence = CAN_army_dm_amphibious_invasion_defence
+	army_core_defence_factor = CAN_army_dm_army_core_defence_factor
+	custom_modifier_tooltip = CAN_army_tt
 }
 
-CAN_economy = {
+CAN_economy_dm = {
 	enable = {always = yes}
-	icon = GFX_idea_can_defence_of_canada_regulations_democratic
+	icon = GFX_idea_great_depression
 
-	consumer_goods_expected_value = CAN_consumer_goods_expected_value
-	industrial_capacity_factory = CAN_industrial_capacity_factory
-	industrial_capacity_dockyard = CAN_industrial_capacity_dockyard
-	political_advisor_cost_factor = CAN_political_advisor_cost_factor
-	stability_factor = CAN_stability_factor
-	min_export = CAN_min_export
-	global_building_slots_factor = CAN_global_building_slots_factor
-	production_factory_start_efficiency_factor = CAN_production_factory_start_efficiency_factor
-	production_factory_efficiency_gain_factor = CAN_production_factory_efficiency_gain_factor
-	defensive_war_stability_factor = CAN_defensive_war_stability_factor
-	production_factory_max_efficiency_factor = CAN_production_factory_max_efficiency_factor
-	surrender_limit = CAN_surrender_limit
-	autonomy_gain = CAN_autonomy_gain
-	research_speed_factor = CAN_research_speed_factor
-
+	political_power_gain = CAN_economy_dm_political_power_gain
+	consumer_goods_expected_value = CAN_economy_dm_consumer_goods_expected_value
+	industrial_capacity_factory = CAN_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = CAN_economy_dm_industrial_capacity_dockyard
+	political_advisor_cost_factor = CAN_economy_dm_political_advisor_cost_factor
+	stability_factor = CAN_economy_dm_stability_factor
+	min_export = CAN_economy_dm_min_export
+	global_building_slots_factor = CAN_economy_dm_global_building_slots_factor
+	production_factory_efficiency_gain_factor = CAN_economy_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = CAN_economy_dm_production_factory_max_efficiency_factor
+	research_speed_factor = CAN_economy_dm_economy_dm_research_speed_factor
+	line_change_production_efficiency_factor = CAN_economy_dm_line_change_production_efficiency_factor
+	production_speed_industrial_complex_factor = CAN_economy_dm_production_speed_industrial_complex_factor
+	local_resources_factor = CAN_economy_dm_local_resources_factor
+	production_speed_arms_factory_factor = CAN_economy_dm_production_speed_arms_factory_factor
 }
+
+CAN_economy2_dm = {
+	enable = {always = yes}
+	icon = GFX_idea_generic_improved_industries
+
+	political_power_gain = CAN_economy_dm_political_power_gain
+	consumer_goods_expected_value = CAN_economy_dm_consumer_goods_expected_value
+	industrial_capacity_factory = CAN_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = CAN_economy_dm_industrial_capacity_dockyard
+	political_advisor_cost_factor = CAN_economy_dm_political_advisor_cost_factor
+	stability_factor = CAN_economy_dm_stability_factor
+	min_export = CAN_economy_dm_min_export
+	global_building_slots_factor = CAN_economy_dm_global_building_slots_factor
+	production_factory_efficiency_gain_factor = CAN_economy_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = CAN_economy_dm_production_factory_max_efficiency_factor
+	research_speed_factor = CAN_economy_dm_economy_dm_research_speed_factor
+	line_change_production_efficiency_factor = CAN_economy_dm_line_change_production_efficiency_factor
+	production_speed_industrial_complex_factor = CAN_economy_dm_production_speed_industrial_complex_factor
+	local_resources_factor = CAN_economy_dm_local_resources_factor
+	production_speed_arms_factory_factor = CAN_economy_dm_production_speed_arms_factory_factor
+}
+
+CAN_economy3_dm = {
+	enable = {always = yes}
+	icon = GFX_idea_GER_wirtschaftswunder
+
+	political_power_gain = CAN_economy_dm_political_power_gain
+	consumer_goods_expected_value = CAN_economy_dm_consumer_goods_expected_value
+	industrial_capacity_factory = CAN_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = CAN_economy_dm_industrial_capacity_dockyard
+	political_advisor_cost_factor = CAN_economy_dm_political_advisor_cost_factor
+	stability_factor = CAN_economy_dm_stability_factor
+	min_export = CAN_economy_dm_min_export
+	global_building_slots_factor = CAN_economy_dm_global_building_slots_factor
+	production_factory_efficiency_gain_factor = CAN_economy_dm_production_factory_efficiency_gain_factor
+	production_factory_max_efficiency_factor = CAN_economy_dm_production_factory_max_efficiency_factor
+	research_speed_factor = CAN_economy_dm_economy_dm_research_speed_factor
+	line_change_production_efficiency_factor = CAN_economy_dm_line_change_production_efficiency_factor
+	production_speed_industrial_complex_factor = CAN_economy_dm_production_speed_industrial_complex_factor
+	local_resources_factor = CAN_economy_dm_local_resources_factor
+	production_speed_arms_factory_factor = CAN_economy_dm_production_speed_arms_factory_factor
+}
+
+
+
 
 GER_atlantikwall_dynamic_modifier = {
 	icon = GFX_modifiers_generic_bunker_build_speed

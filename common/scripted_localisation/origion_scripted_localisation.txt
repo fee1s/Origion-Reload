@@ -1526,35 +1526,6 @@ defined_text = {
 
 }
 defined_text = {
-	name = CAN_ec_1
-	text = {
-		trigger = {
-			NOT = {has_completed_focus = CAN_national_resources_mobilization_act}
-		}
-		localization_key = CAN_depres_ec
-	}
-}
-
-defined_text = {
-	name = CAN_ec_2
-	text = {
-		trigger = {
-			has_completed_focus = CAN_national_resources_mobilization_act
-			NOT = {has_completed_focus = CAN_war_fueled_economy }
-		}
-	localization_key = CAN_mobil_ec
-	}
-}
-defined_text = {
-	name = CAN_ec_3
-	text = {
-		trigger = {
-			has_completed_focus = CAN_war_fueled_economy
-		}
-	localization_key = CAN_obl_ec
-	}
-}
-defined_text = {
 	name = CAN_assult_rifle
 	text = {
 		trigger = {
@@ -1564,21 +1535,21 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = CAN_asia_dm_tt
+	name = CAN_mechanized_tt
 	text = {
 		trigger = {
-			has_completed_focus = CAN_war_asia
+			has_completed_focus = CAN_mechanized_focus
 		}
-		localization_key = CAN_asia_tt
+		localization_key = CAN_mechanized_tt
 	}
 }
 defined_text = {
-	name = CAN_euro_dm_tt
+	name = CAN_armor_tt
 	text = {
 		trigger = {
-			has_completed_focus = CAN_war_euro
+			has_completed_focus = CAN_armor_focus
 		}
-		localization_key = CAN_euro_tt
+		localization_key = CAN_armor_tt
 	}
 }
 defined_text = {

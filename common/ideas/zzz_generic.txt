@@ -250,7 +250,7 @@ ideas = {
 				}				
 			}
 		}
-		CAN_euro = {
+		CAN_mechanized = {
 			name = CAN_army
 			allowed = {
 				always = no
@@ -265,21 +265,21 @@ ideas = {
 			picture = FIN_german_threat
 
 			equipment_bonus = {
-				motorized = {
-					build_cost_ic = -0.1 instant = yes
-				}
 				mechanized_equipment_1 = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.025 instant = yes
 				}
 				mechanized_equipment_2 = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.025 instant = yes
 				}
 				mechanized_equipment_3 = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.025 instant = yes
+				}
+				amphibious_mechanized_equipment = {
+					build_cost_ic = -0.025 instant = yes
 				}
 			}
-		}
-		CAN_asia = {
+		}	
+		CAN_armor = {
 			name = CAN_army
 			allowed = {
 				always = no
@@ -294,8 +294,11 @@ ideas = {
 			picture = idea_chi_army_corruption3
 
 			equipment_bonus = {
-				amphibious_mechanized_equipment = {
-					build_cost_ic = -0.1 instant = yes
+				armor = {
+					build_cost_ic = -0.025 instant = yes
+				}
+				motorized_equipment_1 = {
+					build_cost_ic = -0.025 instant = yes
 				}
 			}
 		}
@@ -805,53 +808,6 @@ ideas = {
 					naval_weather_penalty_factor = -0.25
 					naval_speed = 0.1
 					instant = yes
-				}
-			}
-		}
-		
-		SOV_increased_aircraft_production_ns_bonus = { #Used as a hidden idea to prevent overcrowding in the regular Soviet Aircraft ns tt
-			removal_cost = -1
-
-			picture = generic_neutrality_drift_bonus
-
-			allowed = {
-				always = no # Added via purges
-			}
-
-			equipment_bonus = {
-				#AIRCRAFT
-				small_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				cv_small_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				small_plane_cas_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				cv_small_plane_cas_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				cv_small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				medium_plane_scout_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				large_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
-				}
-				large_plane_maritime_patrol_plane_airframe = {
-					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
