@@ -347,40 +347,17 @@ Origion_fast_templates = { # Решения на авто-шаблоны
 		}
 	}
 }
-origion_rerol_dec_cat = { # Рещения на рерол
-    origion_rerol_dec_SOV = {
-		icon = generic_army_support
-		cosmetic_tag = SOV
-		cosmetic_ideology = communism	
-        visible = {
-		    always = yes
-		}
-		available = {
-			ROOT = { is_ai = no }
-		}
-		fire_only_once = yes
-		days_remove = -1
-		complete_effect = {
-			hidden_effect = {
-		        random_country = {
-			        limit = {
-					tag = SOV
-			        }
-					change_tag_from = ROOT				
-				}
-			}
-		}
-	}
-	
+origion_rerol_dec_cat = { ## ПЕРЕСАДКА
 	origion_rerol_dec_ENG = {
-		icon = generic_army_support
+		icon = GFX_decision_onmap_recruit_operative
 		cosmetic_tag = ENG
 		cosmetic_ideology = democratic
 		visible = {
-			always = yes
+			ROOT = { is_ai = no }
+			ENG = { is_ai = no }
 		}
 		available = {
-			ROOT = { is_ai = no }
+			has_capitulated = yes
 		}
 		fire_only_once = yes
 		days_remove = -1
@@ -388,7 +365,7 @@ origion_rerol_dec_cat = { # Рещения на рерол
 			hidden_effect = {
 				random_country = {
 					limit = {
-					tag = ENG
+						tag = ENG
 					}
 					change_tag_from = ROOT
 				}
@@ -397,14 +374,15 @@ origion_rerol_dec_cat = { # Рещения на рерол
 	}
 
 	origion_rerol_dec_USA = {
-		icon = generic_army_support
+		icon = GFX_decision_onmap_recruit_operative
 		cosmetic_tag = USA
 		cosmetic_ideology = democratic
 		visible = {
-			always = yes
+			ROOT = { is_ai = no }
+			USA = { is_ai = no }
 		}
 		available = {
-			ROOT = { is_ai = no }
+			has_capitulated = yes
 		}
 		fire_only_once = yes
 		days_remove = -1
@@ -412,7 +390,7 @@ origion_rerol_dec_cat = { # Рещения на рерол
 			hidden_effect = {
 				random_country = {
 					limit = {
-					tag = USA
+						tag = USA
 					}
 					change_tag_from = ROOT			
 				}

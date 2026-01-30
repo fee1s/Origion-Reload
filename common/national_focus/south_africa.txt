@@ -526,15 +526,14 @@
 		completion_reward = {
 			custom_effect_tooltip = SAF_caps_corps_dm_tt
 			add_to_variable = { 
-				SAF_caps_corps_dm_acclimatization_hot_climate_gain_factor = 50
+				SAF_caps_corps_dm_acclimatization_hot_climate_gain_factor = 0.1
                 tooltip = acclimatization_hot_climate_gain_factor_tt
             }
 			
 			add_to_variable = { 
 				SAF_caps_corps_dm_heat_attrition_factor = -0.5
                 tooltip = heat_attrition_factor_tt
-            }
-			
+            }		
 		}	
 	}
 	

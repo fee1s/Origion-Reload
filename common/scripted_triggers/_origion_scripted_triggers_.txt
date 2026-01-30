@@ -532,3 +532,14 @@ all_europe_occupied_by_axis = {
 	DEN = { exists = no }
 	NOR = { exists = no }
 }
+
+southern_italy_is_fully_occupied = { ## ИСПОЛЬЗУЕТСЯ ДЛЯ СКРЫТОГО ИВЕНТА (В ПРОШЛОМ ДЕСИЖЕНА) НА ПАДЕНИЕ АТЛАНТИЧЕСКОГО ВАЛА В РЕЖИМЕ БЕЗ АЗИИ
+	custom_trigger_tooltip = {
+		tooltip = southern_italy_is_fully_occupied_tt
+
+		117 = { is_fully_controlled_by_allies = yes }
+		849 = { is_fully_controlled_by_allies = yes }
+		156 = { is_fully_controlled_by_allies = yes }
+		115 = { is_fully_controlled_by_allies = yes }
+	}
+}

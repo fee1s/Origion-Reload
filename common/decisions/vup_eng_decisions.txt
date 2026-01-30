@@ -121,11 +121,12 @@ ENG_house_of_commons = {
     ENG_altantikwall_fall_no_asia = {
 		icon = GFX_decision_eng_puppet_usa
 		available = {
-			NOT = { 115 = { is_controlled_by = ITA } }
+			southern_italy_is_fully_occupied = yes
 		}
 		
 		visible = {
 		   has_global_flag = NO_ASIA_FLAG 
+		   GER = { has_completed_focus = GER_atlantikwall }
 		}
 		
 		fire_only_once = yes
@@ -135,61 +136,64 @@ ENG_house_of_commons = {
 				remove_dynamic_modifier = { 
 				    modifier = atlantikwall_dm 
 				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = USA
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = ENG
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = FRA
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = CAN
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = AST
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = SAF
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = RAJ
-				}
-				remove_dynamic_modifier = { 
-				    modifier = atlantikwall_hidden_dm 
-					scope = SOV
-				}
-				remove_dynamic_modifier = {
-					modifier = atlantikwall_hidden_2_dm
-					scope = GER
-				}
-				remove_dynamic_modifier = {
-					modifier = atlantikwall_hidden_2_dm
-					scope = JAP
-				}
-				remove_dynamic_modifier = {
-					modifier = atlantikwall_hidden_2_dm
-					scope = ITA
-				}
-				remove_dynamic_modifier = {
-					modifier = atlantikwall_hidden_2_dm
-					scope = HUN
-				}
-				remove_dynamic_modifier = {
-					modifier = atlantikwall_hidden_2_dm
-					scope = ROM
-				}
-				remove_dynamic_modifier = {
-					modifier = atlantikwall_hidden_2_dm
-					scope = BUL
+
+				hidden_effect = { 
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = USA
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = ENG
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = FRA
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = CAN
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = AST
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = SAF
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = RAJ
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = SOV
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = GER
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = JAP
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = ITA
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = HUN
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = ROM
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = BUL
+					}
 				}
 			}
 		}

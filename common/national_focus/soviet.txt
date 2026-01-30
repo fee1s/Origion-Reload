@@ -3803,12 +3803,10 @@ focus_tree = {
 		id = SOV_positive_heroism
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 10
-
-		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
 		available = {
 
@@ -3832,110 +3830,27 @@ focus_tree = {
 		id = SOV_revive_the_stakhanovite_movement
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = SOV_positive_heroism }
-		x = 0
+		prerequisite = { focus = SOV_the_komsomol }
+		x = 1
 		y = 1
 		relative_position_id = SOV_positive_heroism
 		cost = 10
 
 		available = {
-
+			has_completed_focus = SOV_desperate_measures
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_ideas = SOV_stakhanovite_movement
-		}
-	}
-
-	focus = {
-		id = SOV_war_heroes
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = { focus = SOV_revive_the_stakhanovite_movement }
-		x = 0
-		y = 1
-		relative_position_id = SOV_revive_the_stakhanovite_movement
-		cost = 10
-
-		available = {
-
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			add_ideas = SOV_war_heroes_ns
-
-		}
-	}
-
-	focus = {
-		id = SOV_collectivist_propaganda
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = 0
-		y = 1
-		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
-
-		mutually_exclusive = { focus = SOV_positive_heroism }
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_PROPAGANDA}
-
-		completion_reward = {
-			add_political_power = 25
-			add_ideas = SOV_collectivist_propaganda_ns
-
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = SOV_propaganda_for_the_motherland
-			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
-			SOV_unlock_propaganda_campaign_slot_effect = yes
-		}
-	}
-
-	focus = {
-		id = SOV_socialist_emulation
-		icon = GFX_goal_generic_soviet_construction
-		prerequisite = { focus = SOV_collectivist_propaganda }
-		x = 0
-		y = 1
-		relative_position_id = SOV_collectivist_propaganda
-		cost = 10
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_ideas = SOV_socialist_emulation_1_ns
-		}
-	}
-
-	focus = {
-		id = SOV_socialist_realism
-		icon = GFX_focus_YUG_pan_slavic_congress
-		prerequisite = { focus = SOV_socialist_emulation }
-		x = 0
-		y = 1
-		relative_position_id = SOV_socialist_emulation
-		cost = 10
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SOV_socialist_emulation_1_ns
-				add_idea = SOV_socialist_emulation_2_ns
+		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			add_to_variable = { 
+			    SOV_fyp_industrial_capacity_factory = 0.03
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+			    SOV_fyp_industrial_capacity_dockyard = 0.03
+				tooltip = industrial_capacity_dockyard_tt
 			}
 		}
 	}
@@ -3944,7 +3859,7 @@ focus_tree = {
 		id = SOV_the_komsomol
 		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
@@ -3973,11 +3888,11 @@ focus_tree = {
 	focus = {
 		id = SOV_patriarch_of_all_russia
 		icon = GFX_focus_SOV_patriarch_of_all_russia
-		prerequisite = { focus = SOV_war_heroes focus = SOV_socialist_realism }
-		x = 1
+		prerequisite = { focus = SOV_revive_the_stakhanovite_movement }
+		x = 0
 		y = 1
-		relative_position_id = SOV_war_heroes
-		cost = 5
+		relative_position_id = SOV_revive_the_stakhanovite_movement
+		cost = 10
 
 		available = {
 
@@ -3987,6 +3902,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.1
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			add_to_variable = { 
+			    SOV_the_red_army_army_org_factor = 0.05
+				tooltip = army_org_factor_tt
+			}
 		}
 	}
 

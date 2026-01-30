@@ -908,15 +908,12 @@ SOV_propaganda_campaigns = {
 		available = {
 			SOV_propaganda_poster_slot_available = yes
 
-			has_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
+			has_completed_focus = SOV_lessons_of_war
 		}
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_collectivist_propaganda
+				has_completed_focus = SOV_positive_heroism
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 		}
@@ -928,8 +925,6 @@ SOV_propaganda_campaigns = {
 		cost = SOV_propaganda_for_the_motherland_cost
 
 		modifier = {
-			experience_gain_army_factor = 0.1
-			command_power_gain_mult = 0.15
 			breakthrough_factor = 0.075
 		}
 
