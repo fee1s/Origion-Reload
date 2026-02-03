@@ -22,6 +22,20 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
+
+	if = { # Миноры Оси не дают ленд-лиз до 180 дней Барбароссы
+		limit = {
+			OR = { 
+            	original_tag = HUN
+				original_tag = ROM
+				original_tag = BUL
+			}				
+        }
+		has_global_flag = {
+			flag = barbarossa_has_been_started
+			days > 160
+		}
+	}
 	
 	if = { # Япония не дает ленд-лиз никому
 		limit = {
@@ -112,6 +126,21 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
         }
 		always = no
 	}
+
+	if = { # Миноры Оси не дают ленд-лиз до 180 дней Барбароссы
+		limit = {
+			OR = { 
+            	FROM = { original_tag = HUN }
+				FROM = { original_tag = ROM }
+				FROM = { original_tag = BUL }
+			}				
+        }
+		has_global_flag = {
+			flag = barbarossa_has_been_started
+			days > 160
+		}
+	}
+
 	if = { # Юса не дает ленд-лиз до войны
 		limit = {
             FROM = { tag = USA }
