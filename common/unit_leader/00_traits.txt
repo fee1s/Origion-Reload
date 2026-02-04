@@ -840,14 +840,10 @@ leader_traits = {
 			always = no # not gainable
 		}
 
-		prerequisites = {
-			has_trait = inflexible_strategist
-		}
-
 		cost = 1000
-		field_marshal_modifier = {
-			defence = 0.10
-		}
+		#field_marshal_modifier = {
+		#	defence = 0.10
+		#}
 		custom_effect_tooltip = INCREASED_COUNTERATTACK_CHANCE
 		
 		ai_will_do = {
@@ -865,13 +861,10 @@ leader_traits = {
 		gain_xp = {
 			always = no # not gainable
 		}
-		prerequisites = {
-			has_trait = brilliant_strategist
-		}
 		cost = 1000
-		field_marshal_modifier = {
-			breakthrough_factor = 0.10
-		}
+		#field_marshal_modifier = {
+		#	breakthrough_factor = 0.10
+		#}
 		custom_effect_tooltip = INCREASED_ASSAULT_AND_SHOCK_CHANCE
 		
 		ai_will_do = {

@@ -10,6 +10,8 @@ NDefines.NGame.ENERGY_RESOURCE = "oil" -- Заменен уголь на неф�
 NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0.0 -- Шизо-дефайн, связанный с побережьем, см. ориг файлы Хойки
 NDefines.NCountry.NAVY_USE_HOME_BASE_FOR_RANGE = false -- Флот 1.16.10
 
+NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 25 -- Стоимость выжженной земли (увеличено)
+
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
 NDefines.NCountry.CONVOY_LENDLEASE_RANGE_FACTOR = 0 --1
@@ -403,7 +405,7 @@ NDefines.NDiplomacy.TRUCE_PERIOD_AFTER_KICKING_FROM_FACTION = 0
 NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_KICKING_NEW_MEMBERS_OF_FACTION = 0
 NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_REINVITE_KICKED_NATIONS = 0
 NDefines.NDiplomacy.FRONT_IS_DANGEROUS = 0
-NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 10
+NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 0 -- Стоимость уменьшена с 10 до 0 (03.02.2026)
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 0
 NDefines.NDiplomacy.EMBARGO_COST = 10000
 NDefines.NDiplomacy.REVOKE_EMBARGO_COST = 10000

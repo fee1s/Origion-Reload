@@ -42,18 +42,11 @@ ideologies = {
 		faction_impact_on_world_tension = 0.1
 
 		modifiers = {
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.80
-			lend_lease_tension = 0.50
-			send_volunteers_tension = 0.50
-			guarantee_tension = 0.25
 			# annex_cost_factor = 0.5 # Deprecated, use common\peace_conference\00_generic_peace.txt instead
 			civilian_intel_to_others = 150
 			army_intel_to_others = 150
 			navy_intel_to_others = 150
 			airforce_intel_to_others = 150
-			embargo_cost_factor = -0.5
-			embargo_threshold_factor = -0.5
 		}
 
 		faction_modifiers = {
@@ -114,9 +107,6 @@ ideologies = {
 			army_intel_to_others = 150
 			navy_intel_to_others = 150
 			airforce_intel_to_others = 150
-			hidden_modifier = { join_faction_tension = -0.1 }
-			embargo_threshold_factor = 0.5
-			lend_lease_tension = 0.00
 		}
 
 		faction_modifiers = {
@@ -167,14 +157,10 @@ ideologies = {
 		can_collaborate = yes
 
 		modifiers = {
-			justify_war_goal_when_in_major_war_time = -0.80
 			civilian_intel_to_others = 150
 			army_intel_to_others = 150
 			navy_intel_to_others = 150
 			airforce_intel_to_others = 150
-			hidden_modifier = { join_faction_tension = -0.1 }
-			embargo_cost_factor = 1
-			lend_lease_tension = 0.00
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
@@ -223,13 +209,6 @@ ideologies = {
 		}
 
 		modifiers = {
-			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4
-			lend_lease_tension = 0.6
-			send_volunteers_tension = 0.4
-			guarantee_tension = 0.4
-			drift_defence_factor = -0.3
 			civilian_intel_to_others = 150
 			army_intel_to_others = 150
 			navy_intel_to_others = 150

@@ -18,10 +18,6 @@ ideas = {
 				production_speed_dockyard_factor = -0.75
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5
-				join_faction_tension = 0.20
-				lend_lease_tension = 1
-				send_volunteers_tension = 1
-				guarantee_tension = 0.75
 			}
 
 			allowed_to_remove = {
@@ -608,8 +604,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.10
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 20.0
 			}
 
 			cancel_if_invalid = no
@@ -660,8 +654,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.05
-				civilian_intel_to_others = 20.0
-				navy_intel_to_others = 10.0
 			}
 
 			default = yes
@@ -711,9 +703,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
 				research_speed_factor = 0.01
-				civilian_intel_to_others = 10.0
-				navy_intel_to_others = 5
-				lend_lease_tension = 0.20
 			}
 
 			cancel_if_invalid = no
@@ -766,7 +755,6 @@ ideas = {
 			modifier = {
 				min_export = 0
 				#civilian_intel_to_others = 0.0
-				lend_lease_tension = 0.40
 			}
 
 			cancel_if_invalid = no
@@ -824,8 +812,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.10
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 20.0
 			}
 			cancel_if_invalid = no
 			allowed_to_remove = {
@@ -849,8 +835,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.05
-				civilian_intel_to_others = 20.0
-				navy_intel_to_others = 10.0
 			}
 			cancel_if_invalid = no
 			allowed_to_remove = {
@@ -879,8 +863,6 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.10
 				resource_trade_cost_bonus_per_factory = -8
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 20.0
 			}
 			cancel_if_invalid = no
 			allowed_to_remove = {

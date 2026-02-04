@@ -250,7 +250,25 @@ Origion_fast_templates = { # Решения на авто-шаблоны
 					light_tank_recon = { x = 0 y = 1 }		
 					flamethrower_brigade = { x = 0 y = 2 }
 					field_hospital = { x = 0 y = 3 }
-					anti_tank = { x = 0 y = 4 }
+					anti_air = { x = 0 y = 4 }
+				}
+			}
+
+			division_template = {
+				name = "Танк 45W Десантные"
+				regiments = {
+					amphibious_medium_armor = { x = 0 y = 0 }  amphibious_medium_armor = { x = 1 y = 0 }    amphibious_medium_armor = { x = 2 y = 0 } 		amphibious_mechanized = { x = 3 y = 0 } amphibious_mechanized = { x = 4 y = 0 }
+					amphibious_medium_armor = { x = 0 y = 1 }  amphibious_medium_armor = { x = 1 y = 1 }    amphibious_medium_armor = { x = 2 y = 1 } 		amphibious_mechanized = { x = 3 y = 1 } amphibious_mechanized = { x = 4 y = 1 }
+					amphibious_medium_armor = { x = 0 y = 2 }  amphibious_medium_armor = { x = 1 y = 2 }    amphibious_medium_armor = { x = 2 y = 2 } 		amphibious_mechanized = { x = 3 y = 2 } amphibious_mechanized = { x = 4 y = 2 }
+					amphibious_medium_armor = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 } medium_tank_destroyer_brigade = { x = 2 y = 3 } amphibious_mechanized = { x = 3 y = 3 } amphibious_mechanized = { x = 4 y = 3 }
+					amphibious_medium_armor = { x = 0 y = 4 }													 								            amphibious_mechanized = { x = 3 y = 4 } amphibious_mechanized = { x = 4 y = 4 }																									
+				}			
+				support = {
+					engineer = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1 }		
+					flamethrower_brigade = { x = 0 y = 2 }
+					field_hospital = { x = 0 y = 3 }
+					anti_air = { x = 0 y = 4 }
 				}
 			}
 		}
@@ -1556,7 +1574,12 @@ axis_dec_cat = {
 		visible = { NOT = { has_country_flag = aviation_ll_to_germany_enabled } }
 		fire_only_once = no
 		priority = 10
-		available = { has_war = yes } 
+		available = { 		
+			has_global_flag = {
+				flag = barbarossa_has_been_started
+				days > 160
+			}
+		} 	
 		complete_effect = {
 			set_country_flag = aviation_ll_to_germany_enabled
 			custom_effect_tooltip = aviation_ll_to_germany_tt
@@ -1602,7 +1625,12 @@ axis_dec_cat = {
 		visible = { NOT = { has_country_flag = tank_ll_to_germany_enabled } }
 		fire_only_once = no
 		priority = 10
-		available = { has_war = yes } 
+		available = { 			
+			has_global_flag = {
+				flag = barbarossa_has_been_started
+				days > 160
+			}
+		} 
 		complete_effect = {
 			set_country_flag = tank_ll_to_germany_enabled
 			custom_effect_tooltip = tank_ll_to_germany_tt
