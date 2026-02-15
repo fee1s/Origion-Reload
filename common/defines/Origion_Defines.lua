@@ -52,6 +52,8 @@ NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0.0
 NDefines.NMilitary.XP_GAIN_PER_OVERRUN_UNIT = 0.00
 NDefines.NMilitary.XP_GAIN_FOR_SHATTERING = 0.00
 
+NDefines.NMilitary.FIELD_EXPERIENCE_ON_DIVISION_MULT = 0 -- Лок на прокачку офицеров
+
 NDefines.NMilitary.ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.00
 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0 -- Скорость перевода генерала в другую армию

@@ -6767,6 +6767,11 @@ generic_high_agility_fighter_aircraft_organization = {
 		limit_to_equipment_type = {
 			medium_plane_fighter_airframe
 		}
+		available = {
+			owner ={
+				has_tech = advanced_machine_tools
+			}
+		}
 		production_bonus = {
 			production_capacity_factor = 0.1
 		}
