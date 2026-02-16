@@ -265,6 +265,8 @@ focus_tree = {
 				uses = 2
 				technology = concentrated_industry4
 				technology = concentrated_industry5
+				technology = dispersed_industry4
+				technology = dispersed_industry5
 			}
 		}
 	}
@@ -1095,16 +1097,6 @@ focus_tree = {
 		prerequisite = {
 			focus = uk_commonwealth_focus
 		}
-		available = {
-			any_country = {
-				original_tag = SAF
-			}
-		}
-		bypass = {
-			SAF = {
-				exists = no
-			}
-		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -1142,11 +1134,6 @@ focus_tree = {
 		id = uk_canada_focus
 		prerequisite = {
 			focus = uk_south_africa_focus
-		}
-		available = {
-			any_country = {
-				original_tag = CAN
-			}
 		}
 		bypass = {
 			CAN = {
@@ -1205,21 +1192,11 @@ focus_tree = {
 		prerequisite = {
 			focus = uk_commonwealth_focus
 		}
-		available = {
-			any_country = {
-				original_tag = RAJ
-			}
-		}
 		icon = GFX_focus_RAJ_british_investors
 		x = 0
 		y = 2
 		relative_position_id = uk_commonwealth_focus
 		cost = 5
-		bypass = {
-			RAJ = {
-				exists = no
-			}
-		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -1252,16 +1229,6 @@ focus_tree = {
 		id = uk_australia_focus
 		prerequisite = {
 			focus = uk_commonwealth_focus
-		}
-		available = {
-			any_country = {
-				original_tag = AST
-			}
-		}
-		bypass = {
-			AST = {
-				exists = no
-			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -1302,16 +1269,6 @@ focus_tree = {
 		id = uk_new_zealand_focus
 		prerequisite = {
 			focus = uk_australia_focus
-		}
-		available = {
-			any_country = {
-				original_tag = AST
-			}
-		}
-		bypass = {
-			AST = {
-				exists = no
-			}
 		}
 		ai_will_do = {
 			factor = 100

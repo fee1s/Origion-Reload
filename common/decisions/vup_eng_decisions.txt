@@ -1,4 +1,166 @@
 ENG_house_of_commons = {
+	ENG_african_deployment = {
+		icon = GFX_decision_eng_blackshirt_speech
+
+		allowed = {
+			tag = ENG
+		}
+
+		fire_only_once = yes
+		
+		available = {
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = ENG_african_deployment_trigger_tt
+				if = { limit = { RAJ = { exists = yes } }
+					RAJ = { has_manpower > 189999 }
+				}
+
+				if = { limit = { SAF = { exists = yes } NOT = { has_global_flag = NO_ASIA_FLAG } }
+					SAF = { has_manpower > 161999 }
+				}
+
+				if = { limit = { CAN = { exists = yes } NOT = { has_global_flag = NO_ASIA_FLAG } }
+					CAN = { has_manpower > 3999 }
+				}
+
+				if = { limit = { SAF = { exists = yes } has_global_flag = NO_ASIA_FLAG }
+					SAF = { has_manpower > 323999 }
+				}
+
+				if = { limit = { CAN = { exists = yes } has_global_flag = NO_ASIA_FLAG }
+					CAN = { has_manpower > 4999 }
+				}
+
+				if = { limit = { AST = { exists = yes } }
+					AST = { has_manpower > 4999 }
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ENG_african_deployment_tt
+			hidden_effect = {
+				if = { limit = { RAJ = { exists = yes } }
+					RAJ = {
+						add_manpower = -190000
+						load_oob = "RAJ_auto_deployment"
+					}
+				}
+
+				if = { limit = { SAF = { exists = yes } NOT = { has_global_flag = NO_ASIA_FLAG } }
+					SAF = {
+						add_manpower = -162000
+						load_oob = "SAF_auto_deployment"
+					}
+				}
+
+				if = { limit = { CAN = { exists = yes } NOT = { has_global_flag = NO_ASIA_FLAG } }
+					CAN = {
+						add_manpower = -4000
+						load_oob = "CAN_auto_deployment"
+					}
+				}
+
+				if = { limit = { SAF = { exists = yes } has_global_flag = NO_ASIA_FLAG } 
+					SAF = {
+						add_manpower = -324000
+						load_oob = "SAF_auto_deployment_na"
+					}
+				}
+
+				if = { limit = { CAN = { exists = yes } has_global_flag = NO_ASIA_FLAG }
+					CAN = {
+						add_manpower = -6000
+						load_oob = "CAN_auto_deployment_na"
+					}
+				}
+
+				if = { limit = { AST = { exists = yes } }
+					AST = {
+						add_manpower = -5000
+						load_oob = "AST_auto_deployment"
+					}
+				}
+			}
+		}
+	}
+
+	ENG_home_defence_deployment = {
+		icon = GFX_decision_eng_blackshirt_speech
+
+		allowed = {
+			tag = ENG
+		}
+
+		fire_only_once = yes
+		
+		available = {
+			has_war = no
+			custom_trigger_tooltip = {
+				tooltip = ENG_african_deployment_trigger_tt
+				if = { limit = { RAJ = { exists = yes } }
+					RAJ = { has_manpower > 19999 }
+				}
+
+				if = { limit = { ENG = { exists = yes } }
+					ENG = { has_manpower > 6999 }
+				}
+
+				if = { limit = { SAF = { exists = yes } }
+					SAF = { has_manpower > 19999 }
+				}
+
+				if = { limit = { CAN = { exists = yes } }
+					CAN = { has_manpower > 7999 }
+				}
+
+				if = { limit = { AST = { exists = yes } }
+					AST = { has_manpower > 7999 }
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ENG_home_defence_deployment_tt
+			hidden_effect = {
+				if = { limit = { RAJ = { exists = yes } }
+					RAJ = {
+						add_manpower = -20000
+						load_oob = "RAJ_home_defence_deployment"
+					}
+				}
+
+				if = { limit = { SAF = { exists = yes } }
+					SAF = {
+						add_manpower = -20000
+						load_oob = "SAF_home_defence_deployment"
+					}
+				}
+
+				if = { limit = { CAN = { exists = yes } }
+					CAN = {
+						add_manpower = -8000
+						load_oob = "CAN_home_defence_deployment"
+					}
+				}
+
+				if = { limit = { AST = { exists = yes } }
+					AST = {
+						add_manpower = -8000
+						load_oob = "AST_home_defence_deployment"
+					}
+				}
+
+				if = { limit = { ENG = { exists = yes } }
+					ENG = {
+						add_manpower = -7000
+						load_oob = "ENG_home_defence_deployment"
+					}
+				}
+			}
+		}
+	}
 	ENG_FRA_union = {
 		icon = GFX_decision_eng_abdication_crisis
 		available = {

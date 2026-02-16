@@ -1983,13 +1983,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-			name = USA_modernization_economick
-			ahead_reduction = 2
-			bonus = 1.0
-			uses = 1
-			technology = concentrated_industry5
-			technology = flexible_line
-			technology = streamlined_line
+				name = USA_modernization
+				ahead_reduction = 2
+				bonus = 1.0
+				uses = 1
+				technology = concentrated_industry5
+				technology = dispersed_industry5
 			}
 		}
 	}
@@ -2011,8 +2010,8 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-		custom_effect_tooltip = USA_economy_intro
-		add_to_variable = { USA_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt}
+			custom_effect_tooltip = USA_economy_intro
+			add_to_variable = { USA_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt}
 		}
 	}
 	focus = {
