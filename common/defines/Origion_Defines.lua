@@ -79,6 +79,9 @@ NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 25.0
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.2 -- Дебафф от красного воздуха (уменьшено)
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.075 -- Дебафф на скорость от красного воздуха (уменьшено)
 
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.7 -- Одно из значений в формуле рассчета дебаффа на защиту от цвета воздуха (используются значения из версии 1.17.3)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 112 -- Скорость получения дебаффа (используются значения из версии 1.17.3)
+
 NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 15 -- Шанс нанести урон укреплению
 
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.03 -- Общий множитель скорости дивизий, ванила это 0.05
@@ -111,6 +114,9 @@ NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_ACCIDENT_FACTOR = 0.00 -- самол�
 
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.11 -- бафф касых по дамагу
 NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.09 -- бафф касых по дамагу по организации
+
+NDefines.NMilitary.LAND_AIR_COMBAT_STR_DICE_SIZE = 2 -- Бросок кубика в рамках этого значения определяет дамаг от касов (прочка) by feels: изменения от версии 1.17.4, исправлено 21.02.26.
+NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DICE_SIZE = 4 -- Бросок кубика в рамках этого значения определяет дамаг от касов (орга)
 
 NDefines.NAir.AIR_WING_MAX_STATS_ATTACK = 9999 -- ванильный лок на максимальное кол-во статов в бою
 NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- ванильный лок на максимальное кол-во статов в бою
@@ -204,6 +210,20 @@ NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 4
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00 -- Корабли не могут получить ранение на тренировке
 
 NDefines.NNavy.NAVY_VISIBILITY_BONUS_ON_RETURN_FOR_REPAIR = 0.01 -- Заметность кораблей при отправке на ремонт в случае тяжелых повреждений (0 - невидимый)
+
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_LOW = 0.2 -- Оригион использует ванильные значения дефайнов, связанных с отступлением и ремонтом кораблей от версии 1.17.3
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_MEDIUM = 0.5
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_HIGH = 0.90
+
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_LOW_COMBAT = 0.6
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_MEDIUM_COMBAT = 0.3
+NDefines.NNavy.REPAIR_AND_RETURN_PRIO_HIGH_COMBAT = 0.1
+
+NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_LOW = 0.2
+NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_MEDIUM = 0.4
+NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_HIGH = 0.8
+
+NDefines.NNavy.REPAIR_AND_RETURN_UNIT_DYING_STR = 0.4 -- Значение, при котором корабль считается "умирающим" - инста-выход из боя
 
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.0 -- Адмиралы не качаются
 
@@ -332,6 +352,8 @@ NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 1.5	-
 NDefines.NNavy.NAVAL_BASE_DOMINANCE_FACTOR = 0.00 -- Удалено превосходство за новые мор. базы (не используются)
 NDefines.NNavy.NAVAL_HEADQUARTERS_FIRST_ADJACENT_FACTOR = 0.0
 NDefines.NNavy.NAVAL_HEADQUARTERS_SECOND_ADJACENT_FACTOR = 0.00
+
+NDefines.NNavy.COMBAT_MIN_HIT_CHANCE = 0.05 -- Минимальный шанс попаданий в любых морских сражениях (используется значение от версии 1.17.3)
 
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_TARGET_SCALE = 10 -- Шансы попадания по разным линия и конкретным типам кораблей (новый дефайн 1.17)
 NDefines.NNavy.NAVAL_COMBAT_AIR_SCREEN_TARGET_SCALE = 20 
