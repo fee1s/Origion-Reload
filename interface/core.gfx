@@ -527,6 +527,13 @@ spriteTypes = {
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
+	
+	textSpriteType = {
+		name = "GFX_button_123x34_gray"
+		texturefile = "gfx//interface//button_123x34_gray.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 
 	textSpriteType = {
 		name = "GFX_button_148x34_light"
@@ -1846,4 +1853,15 @@ bitmapfonts = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	
+	spriteType = {
+		name = "GFX_warning_11x24"
+		texturefile = "gfx//interface//warning_11x24.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_generic_circle_background"
+		texturefile = "gfx/interface/generic_text_circle.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		noOfFrames = 5
+	}	
 }
