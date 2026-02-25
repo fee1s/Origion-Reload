@@ -1181,4 +1181,93 @@ on_actions = {
 			}
 		}
 	}
+	on_daily_GER = {
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_global_flag = totalen_krieg_flag }
+						all_europe_occupied_by_axis = yes
+						OR = {
+							date > 1943.02.17
+							OR = {
+								AND = {
+									14 = {
+										is_controlled_by_allies = yes
+									}
+									15 = {
+										is_controlled_by_allies = yes
+									}
+									30 = {
+										is_controlled_by_allies = yes
+									}
+								}
+								AND = {
+									19 = {
+										is_controlled_by_allies = yes
+									}
+									23 = {
+										is_controlled_by_allies = yes
+									}
+									25 = {
+										is_controlled_by_allies = yes
+									}
+								}
+								AND = {
+									19 = {
+										is_controlled_by_allies = yes
+									}
+									23 = {
+										is_controlled_by_allies = yes
+									}
+									25 = {
+										is_controlled_by_allies = yes
+									}
+								}
+								AND = {
+									20 = {
+										is_controlled_by_allies = yes
+									}
+									21 = {
+										is_controlled_by_allies = yes
+									}
+								}
+								16 = {
+								is_controlled_by_allies = yes
+								}
+								AND = {
+									29 = {
+										is_controlled_by_allies = yes
+									}
+									6 = {
+										is_controlled_by_allies = yes
+									}
+									7 = {
+										is_controlled_by_allies = yes
+									}
+								}
+							}
+							AND = {
+								date > 1942.09.01
+								count_triggers = {
+									amount = 2
+									SOV = { controls_state = 812 }
+									SOV = { controls_state = 207 }
+									SOV = { controls_state = 221 }
+								}
+							}
+							GER = { surrender_progress > 0.0 }
+							any_axis_capital_fallen_trigger = yes
+						}
+					}
+				}
+				complete_national_focus = GER_totalen_krieg
+				set_global_flag = totalen_krieg_flag
+				every_country = {
+					limit = {is_ai = no}
+					set_country_flag = totalen_krieg_flag_gui
+				}
+			}
+		}
+	}
 }

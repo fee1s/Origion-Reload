@@ -1,0 +1,24 @@
+scripted_gui = {
+
+	orgn_event_window = {
+		window_name = "orgn_event_window"
+		context_type = player_context
+
+		visible = {
+			has_country_flag = totalen_krieg_flag_gui
+		}
+		triggers = {
+			ORGN_Event_totalen_1_visible = { has_country_flag = totalen_krieg_flag_gui }
+			ORGN_Event_totalen_2_visible = { has_country_flag = totalen_krieg_flag_gui }
+			ORGN_Event_totalen_3_visible = { has_country_flag = totalen_krieg_flag_gui }
+			ORGN_Event_totalen_4_visible = { has_country_flag = totalen_krieg_flag_gui }
+		}
+		
+		effects = {
+			btn_minimize_orgn_click = {
+				clr_country_flag = totalen_krieg_flag_gui
+			}
+		}
+		
+	}
+}

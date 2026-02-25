@@ -4,11 +4,49 @@ spriteTypes = {
         texturefile = "gfx/event_pictures/event_fall_blau.dds"
     }
 	
-	spriteType = {
-        name = "GFX_news_event_goeb"
-        texturefile = "gfx/event_pictures/event_goeb.dds"
-    }
+	frameAnimatedSpriteType = {
+		name = "GFX_news_event_goeb_1"
+		texturefile = "gfx/event_pictures/result_part_1.png"
+		noOfFrames = 160
+		loadType = "INGAME"
+		transparencecheck = no
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
 	
+	frameAnimatedSpriteType = {
+		name = "GFX_news_event_goeb_2"
+		texturefile = "gfx/event_pictures/result_part_2.png"
+		noOfFrames = 160
+		loadType = "INGAME"
+		transparencecheck = no
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_news_event_goeb_3"
+		texturefile = "gfx/event_pictures/result_part_3.png"
+		noOfFrames = 160
+		loadType = "INGAME"
+		transparencecheck = no
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_news_event_goeb_4"
+		texturefile = "gfx/event_pictures/result_part_4.png"
+		noOfFrames = 160
+		loadType = "INGAME"
+		transparencecheck = no
+		animation_rate_fps = 8
+		looping = yes
+		play_on_show = yes
+	}
     spriteType = {
         name = "GFX_news_event_carrier"
         texturefile = "gfx/event_pictures/event_carrier.dds"

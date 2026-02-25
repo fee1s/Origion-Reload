@@ -1705,3 +1705,35 @@ defined_text = {
 		localization_key = GER_downfall_of_northern_africa_days_30_tt
 	}
 }
+
+
+###Scripted event defined text
+
+
+defined_text = {
+    name = event_title_orgn
+    text = { 
+        trigger = {
+            has_country_flag = totalen_krieg_flag_gui
+        }
+        localization_key = "origion.26.t"
+    }
+}
+defined_text = {
+    name = event_desc_orgn
+    text = {
+        trigger = {
+            has_country_flag = totalen_krieg_flag_gui
+        }
+        localization_key = "origion.26.d"
+    }
+}
+defined_text = {
+    name = event_text_button
+    text = {
+        trigger = {
+            has_country_flag = totalen_krieg_flag_gui
+        }
+        localization_key = "origion.26.a"
+    }
+}

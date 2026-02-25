@@ -580,3 +580,74 @@ guiTypes = {
 		}
 	}
 }
+guiTypes = {
+	containerWindowType = {
+			name = "orgn_event_window"	
+			position = { x = 0 y = 0 }	
+			size = { width = 472 height = 423 }
+			orientation = center
+			origo = center
+			moveable = yes
+			click_to_front = no
+			clipping = no
+			background = {
+				name = "Background"	
+				spriteType = "GFX_event_news_bg"
+			}
+			iconType = {
+				name = "ORGN_Event_totalen_1"
+				spriteType = "GFX_news_event_goeb_1"
+				position = {x = 59 y = 92}
+			}
+			iconType = {
+				name = "ORGN_Event_totalen_2"
+				spriteType = "GFX_news_event_goeb_2"
+				position = {x = 158 y = 92}
+			}
+			iconType = {
+				name = "ORGN_Event_totalen_3"
+				spriteType = "GFX_news_event_goeb_3"
+				position = {x = 257 y = 92}
+			}
+			iconType = {
+				name = "ORGN_Event_totalen_4"
+				spriteType = "GFX_news_event_goeb_4"
+				position = {x = 356 y = 92}
+			}
+			
+			instantTextBoxType = {
+				name = "Title"
+				position = { x = 12 y = 260 }
+				font = "hoi4_typewriter22"
+				borderSize = {x = 0 y = 0}
+				text = "[event_title_orgn]"	
+				maxWidth = 490
+				maxHeight = 32
+				format = centre
+			}
+			
+			instantTextBoxType = {
+				name = "orgn_desc_gui"
+				position = { x = 17 y = 285 }
+				borderSize = {x = 0 y = 0}
+				text = "[event_desc_orgn]"
+				font = "hoi4_typewriter16"
+				maxWidth = 460
+				maxHeight = 230
+				format = left
+				fixedsize = yes	
+				format = center
+			}
+				
+			buttonType = {
+				name = "btn_minimize_orgn"
+				position = { x=80 y=502 }
+				spriteType = "GFX_event_option_entry"
+				clicksound = click_close
+				buttonFont = "hoi_20bs"
+				format = center
+				vertical_alignment = center
+				buttonText = "[event_text_button]"
+			}
+	}
+}
