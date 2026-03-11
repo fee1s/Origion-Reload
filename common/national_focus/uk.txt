@@ -54,22 +54,43 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			every_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+			if = { limit = { NOT = { has_global_flag = NO_ASIA_FLAG } } 
+				every_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						is_core_of = ROOT
 					}
-					is_core_of = ROOT
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					random_select_amount = 2
 				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 3
-					instant_build = yes
-				}
-				random_select_amount = 2
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+					random_select_amount = 2
+				}				
 			}
 		}
  	}
@@ -2492,13 +2513,18 @@ focus_tree = {
 		prerequisite = { focus = ENG_blood_toil_tears }
 		
 		completion_reward = {
-			 custom_effect_tooltip = ENG_stoyak_intro
-			 add_to_variable = {ENG_production_speed_arms_factory_factor = 0.15 tooltip = production_speed_arms_factory_factor_tt}
-			 add_to_variable = {ENG_defensive_war_stability_factor = 0.1 tooltip = defensive_war_stability_factor_tt}
-			 add_to_variable = {ENG_weekly_convoys_war_support = 0.02 tooltip = weekly_convoys_war_support_tt}
-			 custom_effect_tooltip = generic_skip_one_line_tt
-			 custom_effect_tooltip = ENG_chiefs_of_staff_intro
-			 add_to_variable = {ENG_convoy_escort_efficiency = 0.15 tooltip = convoy_escort_efficiency_tt}
+			custom_effect_tooltip = ENG_stoyak_intro
+			if = { limit = { NOT = { has_global_flag = NO_ASIA_FLAG } } 
+			 	add_to_variable = { ENG_production_speed_arms_factory_factor = 0.15 tooltip = production_speed_arms_factory_factor_tt }
+			}
+			else = {
+			 	add_to_variable = { ENG_production_speed_arms_factory_factor = 0.55 tooltip = production_speed_arms_factory_factor_tt }
+			}
+			add_to_variable = {ENG_defensive_war_stability_factor = 0.1 tooltip = defensive_war_stability_factor_tt}
+			add_to_variable = {ENG_weekly_convoys_war_support = 0.02 tooltip = weekly_convoys_war_support_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = {ENG_convoy_escort_efficiency = 0.15 tooltip = convoy_escort_efficiency_tt}
 			
 		}
 	}	

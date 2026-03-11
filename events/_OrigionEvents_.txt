@@ -287,6 +287,7 @@ news_event = { # вступление италии в войну против с
 				
 				ENG = { transfer_state = PREV }
 			}
+			if = { limit = { has_global_flag = NO_ASIA_FLAG } add_to_variable = { ENG_production_speed_arms_factory_factor = -0.4 } }
 		}
 		
 		if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } }
