@@ -81,7 +81,7 @@ set_research_slots = 5
 
 
 
-set_stability = 0.75
+set_stability = 0.9
 set_war_support = 0.1
 add_command_power = 20
 
@@ -201,9 +201,9 @@ add_ideas = {
 add_dynamic_modifier = {modifier = ENG_stoyak}
 add_dynamic_modifier = {modifier = ENG_chiefs_of_staff}
 
-set_variable = {ENG_global_building_slots_factor = 0.25}
-set_variable = {ENG_production_speed_synthetic_refinery_factor = -0.5}
-set_variable = {ENG_conscription_factor = -0.3}
+set_variable = { ENG_global_building_slots_factor = 0.25 }
+set_variable = { ENG_production_speed_synthetic_refinery_factor = -0.5 }
+set_variable = { ENG_conscription_factor = -0.7 }
 set_convoys = 1250
 
 # DIPLOMACY
@@ -249,7 +249,6 @@ if = {
 
 
 1936.1.1.13 = {	    
-	set_variable = {ENG_conscription = 0.125}
 	set_variable = {ENG_surrender_limit = 1}
 }
 

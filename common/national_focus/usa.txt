@@ -286,7 +286,7 @@ focus_tree = {
         completion_reward = {
 			custom_effect_tooltip = USA_economy_intro
 			add_to_variable = { USA_production_speed_synthetic_refinery_factor = 0.75 tooltip = production_speed_synthetic_refinery_factor_tt}
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
             add_tech_bonus = {
                 name = USA_rubber_reserve_company
                 bonus = 1.0
@@ -807,12 +807,13 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_potential_special_forces_tree = yes
-			}
+			add_tech_bonus = {
+				name = USA_airborne_divisions
+				uses = 2
+				bonus = 1.0
+				technology = paratroopers
+				technology = paratroopers2
+			}			
 		}
 	}
 	focus = {
@@ -1278,8 +1279,6 @@ focus_tree = {
 			custom_effect_tooltip = USA_war_departament_intro
 			add_to_variable = {USA_air_mission_efficiency = 0.05 tooltip = air_mission_efficiency_tt}
 			add_to_variable = {USA_air_weather_penalty = -0.1 tooltip = air_weather_penalty_tt}
-			add_to_variable = {USA_air_doctrine_cost_factor = -0.1 tooltip = air_doctrine_cost_factor_tt}
-			add_to_variable = {USA_air_ace_generation_chance_factor = 0.1 tooltip = air_ace_generation_chance_factor_tt}
 		}
 	}
 

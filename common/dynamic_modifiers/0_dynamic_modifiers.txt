@@ -2018,5 +2018,16 @@ no_slots_dm = {
 
 	local_building_slots_factor = -3
 }
+
+FRA_victors_of_wwi_dm = {
+	icon = GFX_idea_generic_victors_of_ww1
+	enable = { always = yes }
+
+	conscription_factor = FRA_victors_of_wwi_dm_conscription_factor
+	max_planning = FRA_victors_of_wwi_dm_max_planning
+	planning_speed = FRA_victors_of_wwi_dm_planning_speed
+	army_morale_factor = FRA_victors_of_wwi_dm_army_morale_factor
+	army_org_factor = FRA_victors_of_wwi_dm_army_org_factor
+}
 	
 	

@@ -36,7 +36,17 @@ country_event = { # Ключевой ивент для Франции
 			
 			add_manpower = 838450
 			
-			remove_ideas = FRA_victors_of_wwi
+			## ВСЕ ДЕБАФФЫ И БАФФЫ, КРОМЕ МЕНПАВЕРА УБИРАЮТСЯ (ПЕРЕНЕСЕНО ИЗ REMOVE_IDEAS)
+			
+			set_variable = { FRA_victors_of_wwi_dm_army_org_factor = 0 }
+			set_variable = { FRA_victors_of_wwi_dm_army_morale_factor = 0 }
+			set_variable = { FRA_victors_of_wwi_dm_planning_speed = 0 }
+			set_variable = { FRA_victors_of_wwi_dm_max_planning = 0 }
+
+			FRA_charles_de_gaulle = { remove_trait = { trait = camouflage_expert } }
+			FRA_jean_de_lattre_de_tassigny = { remove_trait = { trait = camouflage_expert } }
+			FRA_maurice_gamelin = { remove_trait = { trait = camouflage_expert } }
+			
 			remove_ideas = FRA_inflexible_production
 			
 			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 60060 producer = FRA }

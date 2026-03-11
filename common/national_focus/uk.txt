@@ -104,7 +104,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -800,7 +800,6 @@ focus_tree = {
 			add_to_variable = {ENG_max_command_power = 20 tooltip = max_command_power_tt}
 			add_to_variable = {ENG_command_power_gain_mult = 0.1 tooltip = command_power_gain_mult_tt}
 			add_to_variable = {ENG_planning_speed = 0.1 tooltip = planning_speed_tt}
-			add_potential_special_forces_tree = yes
 		}
 	}
 
@@ -1785,7 +1784,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = uk_mediterranean_focus
-		cost = 2
+		cost = 5
 		
 		ai_will_do = {
 			factor = 1
@@ -1981,7 +1980,7 @@ focus_tree = {
 		x = -1
 		y = -1
 		relative_position_id = uk_kena_aswan_defensive_line
-		cost = 2
+		cost = 5
 		
 		ai_will_do = {
 			factor = 1
@@ -2456,6 +2455,8 @@ focus_tree = {
 				}
 			}
 		}
+
+		available = { date > 1940.9.1 }
 		relative_position_id = ENG_home_defence
 		cost = 10
 		ai_will_do = {
@@ -2466,8 +2467,15 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		completion_reward = {
+			custom_effect_tooltip = ENG_chiefs_of_staff_intro
+			add_to_variable = { 
+			    ENG_conscription_factor = 0.7
+				tooltip = conscription_factor_tt
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_war_support = 0.1
-			add_stability = 0.15
 		}
 	}
 	
@@ -2484,8 +2492,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		
-		prerequisite = { focus = ENG_prepare_for_the_inevitable }
-		prerequisite = { focus = ENG_issue_gasmasks }
+		prerequisite = { focus = ENG_prepare_for_the_inevitable focus = ENG_issue_gasmasks }
 		
 		completion_reward = {
 			custom_effect_tooltip = ENG_stoyak_intro

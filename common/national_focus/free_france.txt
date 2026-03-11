@@ -1013,13 +1013,15 @@
 			factor = 1
 		}
 		
+		available = { date > 1943.6.1 }
+
 		available_if_capitulated = yes
 		
 		completion_reward = {
-			custom_effect_tooltip = FRA_modify_dirigisme_modifier_tt
+			custom_effect_tooltip = FRA_modify_victors_of_wwi_modifier_tt
 			add_to_variable = { 
-			    fra_dirigisme_conscription = 0.015
-				tooltip = conscription_tt
+			    FRA_victors_of_wwi_dm_conscription_factor = 0.4
+				tooltip = conscription_factor_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt 

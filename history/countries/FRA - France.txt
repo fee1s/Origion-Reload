@@ -1,8 +1,8 @@
 ﻿capital = 16
 
-set_grand_doctrine = grand_battleplan
-set_sub_doctrine = defensive_postures
-set_sub_doctrine = mobile_defense
+set_grand_doctrine = new_mobile_warfare
+set_sub_doctrine = commandos
+set_sub_doctrine = armored_spearhead
 
 set_grand_doctrine = new_operational_integrity
 set_sub_doctrine = air_subdoctrine_dogfighting_mastery
@@ -71,6 +71,16 @@ add_dynamic_modifier = {
 set_variable = { fra_dirigisme_industrial_capacity_factory = -0.2 }
 set_variable = { fra_dirigisme_industrial_capacity_dockyard = -0.2 }
 set_variable = { fra_dirigisme_production_speed_arms_factory_factor = -0.75 }
+
+add_dynamic_modifier = {
+    modifier = FRA_victors_of_wwi_dm
+}
+
+set_variable = { FRA_victors_of_wwi_dm_army_org_factor = -0.25 }
+set_variable = { FRA_victors_of_wwi_dm_army_morale_factor = -0.5 }
+set_variable = { FRA_victors_of_wwi_dm_planning_speed = -0.5 }
+set_variable = { FRA_victors_of_wwi_dm_max_planning = 0.15 }
+set_variable = { FRA_victors_of_wwi_dm_conscription_factor = -0.4 }
 
 # Starting tech
 set_technology = {
@@ -159,7 +169,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	FRA_victors_of_wwi
 	FRA_disjointed_government
 	limited_conscription
 	FRA_inflexible_production

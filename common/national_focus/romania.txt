@@ -978,7 +978,6 @@
 
 		completion_reward = {
 			army_experience = 150
-			add_potential_special_forces_tree = yes
 		}
 	}
 
@@ -1009,8 +1008,9 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = ROM_iron_guard
+			custom_effect_tooltip = ROM_iron_guard_intro
 			add_to_variable = {ROM_army_morale_factor = 0.1 tooltip = army_morale_factor_tt}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				prioritize = { 46 }
 				limit = {

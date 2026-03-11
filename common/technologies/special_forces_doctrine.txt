@@ -39,14 +39,7 @@ technologies = {
 		research_cost = 2.25
 		
 		allow = {
-			AND = {
-				has_tech = tech_mountaineers
-				can_unlock_new_special_forces_tree = yes
-			}
-		}
-		
-		on_research_complete = {
-			remove_potential_special_forces_tree = yes
+			has_tech = tech_mountaineers
 		}
 		
 		categories = {
@@ -438,7 +431,6 @@ technologies = {
 		allow = { 
 			AND = {
 				has_tech = marines
-				can_unlock_new_special_forces_tree = yes
 				hidden_trigger = {
 				    NOT = { original_tag = FIN }
 				}
@@ -916,17 +908,11 @@ technologies = {
 		
 		category_paratroopers = {
 			soft_attack = 0.05
+			supply_consumption = -0.02
 		}
 		
 		allow = { 
-			AND = {
-				has_tech = paratroopers 
-				can_unlock_new_special_forces_tree = yes
-			}
-		}
-		
-		on_research_complete = {
-			remove_potential_special_forces_tree = yes
+			has_tech = paratroopers 
 		}
 		
 		path = {
@@ -1025,10 +1011,10 @@ technologies = {
 			cat_paratroopers_doctrine
 		}
 		
-		category_paratroopers = {
-			defense = 0.1
+		paratrooper = {
 			urban = {
 				attack = 0.05
+				movement = 0.1
 			}
 		}
 
@@ -1070,8 +1056,12 @@ technologies = {
 		doctrine = yes	
 		research_cost = 4.5
 		
-		enable_subunits = {
-			airborne_light_armor
+		#enable_subunits = {
+		#	airborne_light_armor
+		#}
+		
+		paratrooper = {
+			defense = 0.1
 		}
 		
 		categories = {
@@ -1106,11 +1096,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		signal_company = {
-			battalion_mult = {
-				category = category_paratroopers
-				defense = 0.1
-			}
+		paratrooper = {
+			initiative = 0.01
 		}
 			
 		doctrine = yes	
@@ -1149,11 +1136,8 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		field_hospital = {
-			battalion_mult = {
-				category = category_paratroopers
-				default_morale = 0.1
-			}
+		paratrooper = {
+			default_morale = 0.1
 		}
 		
 		doctrine = yes	
@@ -1233,11 +1217,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		category_paratroopers = {
-			supply_consumption = -0.1
-		}
-		
-		special_forces_no_supply_grace = 24
+		special_forces_no_supply_grace = 48
 		
 		doctrine = yes	
 		research_cost = 2.25
@@ -1270,9 +1250,12 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		
-		category_paratroopers = {
+		paratrooper = {
 			soft_attack = 0.05
-			breakthrough = 0.05
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
 		}
 		
 		doctrine = yes	
@@ -1306,11 +1289,11 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		
-		category_paratroopers = {
-			soft_attack = 0.1
+		paratrooper = {
+			soft_attack = 0.05
 			urban = {
-				attack = 0.1
-				defence = 0.1
+				attack = 0.05
+				defence = 0.05
 			}
 		}
 		
@@ -1380,19 +1363,13 @@ technologies = {
 		
 
 		allow = {
-			AND = {
-				has_tech = rangers_tech
-				can_unlock_new_special_forces_tree = yes
-			}
+			has_tech = rangers_tech
 		}
 		
 		folder = {
 			name = special_forces_doctrine_folder
 			position = { x = 0 y = 0 }
-		}		
-		on_research_complete = {
-			remove_potential_special_forces_tree = yes
-		}		
+		}				
 	}
 
 	rangers_jaegers_training = {

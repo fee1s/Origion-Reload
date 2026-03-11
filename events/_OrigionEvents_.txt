@@ -252,9 +252,12 @@ news_event = { # ось сдает африку до мая 1941
 
 news_event = { # вступление италии в войну против союзников
 	id = origion.4
-	hidden = yes
+	title = origion.4.t
+	desc = origion.4.d
 	major = yes
 	fire_only_once = yes
+	picture = GFX_news_event_italy
+
 	trigger = {
 		date > 1940.5.31
 		NOT = { has_global_flag = OST_FRONT_FLAG }
@@ -264,37 +267,43 @@ news_event = { # вступление италии в войну против с
 	}
 	
 	immediate = {
-		ITA = {	
-			ITA_join_to_war = yes
-		}
-		every_country = {
-		    limit = {
-		    	ORIGION_is_in_faction_with_axis = yes
-				NOT = { original_tag = JAP }
-				NOT = { original_tag = FIN }
-		    }
-		    add_dynamic_modifier = {
-			    modifier = african_warfare_dm
+		hidden_effect = {
+			ITA = {	
+				ITA_join_to_war = yes
 			}
-	    }
-		set_global_flag = africa_started
-		
-		ENG = { 
-			every_state = {
+			every_country = {
 				limit = {
-					is_italian_eth_state = yes
+					ORIGION_is_in_faction_with_axis = yes
+					NOT = { original_tag = JAP }
+					NOT = { original_tag = FIN }
 				}
-				
-				ENG = { transfer_state = PREV }
+				add_dynamic_modifier = {
+					modifier = african_warfare_dm
+				}
 			}
-			if = { limit = { has_global_flag = NO_ASIA_FLAG } add_to_variable = { ENG_production_speed_arms_factory_factor = -0.4 } }
+			set_global_flag = africa_started
+			
+			ENG = { 
+				every_state = {
+					limit = {
+						is_italian_eth_state = yes
+					}
+					
+					ENG = { transfer_state = PREV }
+				}
+				if = { limit = { has_global_flag = NO_ASIA_FLAG } add_to_variable = { ENG_production_speed_arms_factory_factor = -0.4 } }
+			}
+			
+			if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } }
+			
+			sound_effect = psi_ita_join_war
+		
+			SAF = { complete_national_focus = SAF_split_in_party }
 		}
-		
-		if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } }
-		
-		sound_effect = psi_ita_join_war
-	
-		SAF = { complete_national_focus = SAF_split_in_party }
+	}
+
+	option = {
+		name = origion.4.a
 	}
 	
 	mean_time_to_happen = { days = 1 }

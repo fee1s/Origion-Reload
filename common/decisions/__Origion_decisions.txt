@@ -784,28 +784,28 @@ ORG_allies_lend_lease_to_sov = {
 			
 				send_equipment = { equipment = small_plane_airframe amount = 355 target = SOV }
 				custom_effect_tooltip = first_asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 355 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 355 } set_global_flag = first_ll_was_sent }
 			}
 			
 			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 3029 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 530 target = SOV }
 				custom_effect_tooltip = first_asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 530 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 530 } set_global_flag = first_ll_was_sent }
 			}
 			
 			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 3199 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 700 target = SOV }
 				custom_effect_tooltip = first_asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 700 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 700 } set_global_flag = first_ll_was_sent }
 			}
 			
 			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 3384 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 885 target = SOV }
 				custom_effect_tooltip = first_asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 885 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 885 } set_global_flag = first_ll_was_sent }
 			}
 
 			activate_mission = fighter_ll_to_sov_medium_ll
@@ -834,25 +834,45 @@ ORG_allies_lend_lease_to_sov = {
 			
 				has_equipment = { small_plane_airframe > 1499 } 
 			}
+
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
-			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes }
-			
-				has_equipment = { small_plane_airframe > 839 } 
+				has_equipment = { small_plane_airframe > 674 } 
 			}
 			
-			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
-				has_equipment = { small_plane_airframe > 1134 } 
+				has_equipment = { small_plane_airframe > 969 } 
 			}
 			
-			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
-				has_equipment = { small_plane_airframe > 1429 } 
+				has_equipment = { small_plane_airframe > 1264 } 
 			}
 			
-			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
-				has_equipment = { small_plane_airframe > 1749 } 
+				has_equipment = { small_plane_airframe > 1584 } 
+			}
+
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
+			
+				has_equipment = { small_plane_airframe > 3089 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
+			
+				has_equipment = { small_plane_airframe > 3384 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
+			
+				has_equipment = { small_plane_airframe > 3679 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
+			
+				has_equipment = { small_plane_airframe > 3999 } 
 			}
 			
 			check_variable = { ENG.lend_lease_side_progress < 1 }
@@ -860,10 +880,10 @@ ORG_allies_lend_lease_to_sov = {
 
 		visible = { NOT = { has_country_flag = fighter_ll_to_sov_large_enabled } has_country_flag = open_fighter_ll_category_flag }
 		fire_only_once = no
-		priority = 11
+		priority = 13
 		complete_effect = {
 			set_country_flag = fighter_ll_to_sov_large_enabled
-			activate_mission = fighter_ll_to_sov_large_first
+			activate_mission = fighter_ll_to_sov_large_ll
 			
 			add_to_variable = { var = ENG.lend_lease_side_progress value = 100 }
 		}
@@ -872,14 +892,14 @@ ORG_allies_lend_lease_to_sov = {
 		icon = GFX_decision_generic_air
 		visible = { has_country_flag = fighter_ll_to_sov_large_enabled has_country_flag = open_fighter_ll_category_flag } 
 		fire_only_once = no
-		priority = 10
+		priority = 12
 		complete_effect = {
 			clr_country_flag = fighter_ll_to_sov_large_enabled
 			
 			add_to_variable = { var = ENG.lend_lease_side_progress value = -100 }
 		}
 	}
-	fighter_ll_to_sov_large_first = { 
+	fighter_ll_to_sov_large_ll = { 
 		icon = GFX_decision_generic_air
 		activation = { always = no }
 		allowed = { always = no }
@@ -889,124 +909,93 @@ ORG_allies_lend_lease_to_sov = {
 		selectable_mission = no
 		is_good = yes
 		fire_only_once = yes
-		priority = 9
+		priority = 11
 		timeout_effect = { 
 			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 589 } asian_war_simulation = no }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 590 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.fighters_sent value = 590 } }
 			}
 			
 			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 884 } asian_war_simulation = no }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 885 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 885 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.fighters_sent value = 885 } }
 			}
 			
 			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1179 } asian_war_simulation = no }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.fighters_sent value = 1180 } }
 			}
 			
 			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1499 } asian_war_simulation = no }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 1500 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1500 } }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.fighters_sent value = 1500 } }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 839 } asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 674 } asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
 				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 590 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } add_to_variable = { var = ENG.fighters_sent value = 590 } }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1134 } asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 969 } asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 885 target = SOV }
 				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 885 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } add_to_variable = { var = ENG.fighters_sent value = 885 } }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1429 } asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1264 } asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
 				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } add_to_variable = { var = ENG.fighters_sent value = 1180 } }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1749 } asian_war_simulation = yes }
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1584 } asian_war_simulation = yes has_global_flag = first_ll_was_sent }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 1500 target = SOV }
 				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_second add_to_variable = { var = ENG.fighters_sent value = 1500 } }
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } add_to_variable = { var = ENG.fighters_sent value = 1500 } }
 			}
-		}
-	}
-	fighter_ll_to_sov_large_second = { 
-		icon = GFX_decision_generic_air
-		activation = { always = no }
-		allowed = { always = no }
-		visible = { has_country_flag = open_fighter_ll_category_flag }
-		available = { NOT = { has_country_flag = fighter_ll_to_sov_large_enabled } } 
-		days_mission_timeout = 30
-		selectable_mission = no
-		is_good = yes
-		fire_only_once = yes
-		priority = 8
-		timeout_effect = { 
-			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 589 } asian_war_simulation = no }
+
+			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 3089 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 590 } }
+				custom_effect_tooltip = first_asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 590 } set_global_flag = first_ll_was_sent }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 884 } asian_war_simulation = no }
+			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 3384 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 885 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 885 } }
+				custom_effect_tooltip = first_asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 885 } set_global_flag = first_ll_was_sent }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1179 } asian_war_simulation = no }
+			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 3679 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1180 } }
+				custom_effect_tooltip = first_asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 1180 } set_global_flag = first_ll_was_sent }
 			}
 			
-			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1499 } asian_war_simulation = no }
+			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 3999 } asian_war_simulation = yes NOT = { has_global_flag = first_ll_was_sent } }
 			
 				send_equipment = { equipment = small_plane_airframe amount = 1500 target = SOV }
-				hidden_effect = { activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1500 } }
+				custom_effect_tooltip = first_asian_war_simulation_tt
+				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 2500 target = COL } add_to_variable = { var = ENG.fighters_sent value = 1500 } set_global_flag = first_ll_was_sent }
 			}
-			
-			if = { limit = { maximum_lend_lease_is_fourty = yes has_equipment = { small_plane_airframe > 839 } asian_war_simulation = yes }
-			
-				send_equipment = { equipment = small_plane_airframe amount = 590 target = SOV }
-				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 590 } }
-			}
-			
-			if = { limit = { maximum_lend_lease_is_sixty = yes has_equipment = { small_plane_airframe > 1134 } asian_war_simulation = yes }
-			
-				send_equipment = { equipment = small_plane_airframe amount = 885 target = SOV }
-				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 885 } }
-			}
-			
-			if = { limit = { maximum_lend_lease_is_eighty = yes has_equipment = { small_plane_airframe > 1429 } asian_war_simulation = yes }
-			
-				send_equipment = { equipment = small_plane_airframe amount = 1180 target = SOV }
-				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1180 } }
-			}
-			
-			if = { limit = { maximum_lend_lease_is_hundred = yes has_equipment = { small_plane_airframe > 1749 } asian_war_simulation = yes }
-			
-				send_equipment = { equipment = small_plane_airframe amount = 1500 target = SOV }
-				custom_effect_tooltip = asian_war_simulation_tt
-				hidden_effect = { send_equipment = { equipment = small_plane_airframe amount = 85 target = COL } activate_mission = fighter_ll_to_sov_large_first add_to_variable = { var = ENG.fighters_sent value = 1500 } }
-			}
+
+			activate_mission = fighter_ll_to_sov_large_ll
 		}
 	}
 }

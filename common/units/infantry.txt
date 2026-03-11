@@ -150,7 +150,7 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 20
+		max_strength = 25
 		max_organisation = 50
 		default_morale = 0.4
 		manpower = 1000
@@ -263,8 +263,8 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 20
-		max_organisation = 40
+		max_strength = 25
+		max_organisation = 60
 		default_morale = 0.4
 		manpower = 1000
 
@@ -286,8 +286,8 @@ sub_units = {
 			movement = 0.1
 		}
 		mountain = {
-			attack = 0.35
-			defence = 0.1
+			attack = 0.15
+			defence = 0.2
 			movement = 0.2
 		}
 	}
@@ -322,8 +322,8 @@ sub_units = {
 		combat_width = 2
 
 		#Size Definitions
-		max_strength = 20
-		max_organisation = 40
+		max_strength = 25
+		max_organisation = 60
 		default_morale = 0.4
 		manpower = 1000
 
@@ -340,13 +340,13 @@ sub_units = {
 		}
 		forest = {
 			attack = 0.05
-			defence = 0.1
-			movement = 0.15
+			defence = 0.05
+			movement = 0.1
 		}
 		jungle = {
-			attack = 0.15
-			defence = 0.1
-			movement = 0.15
+			attack = 0.05
+			defence = 0.05
+			movement = 0.1
 		}
 	}
 
@@ -378,8 +378,8 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 22
-		max_organisation = 50
+		max_strength = 25
+		max_organisation = 60
 		default_morale = 0.4
 		manpower = 1000
 
@@ -388,11 +388,14 @@ sub_units = {
 		suppression = 1
 		weight = 0.5
 		supply_consumption = 0.05
-
-		can_be_parachuted = yes
 	
 		need = {
 			infantry_equipment = 200
+		}
+
+		urban = {
+			defence = 0.05
+			movement = 0.05
 		}
 	}
 
