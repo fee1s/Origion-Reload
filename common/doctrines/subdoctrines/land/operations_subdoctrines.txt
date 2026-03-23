@@ -232,7 +232,7 @@ mission_type_tactics = {
         base = 1
         modifier = {
             factor = 50
-            original_tag = GER
+            original_tag = USA
         }
 
         modifier = {
@@ -245,71 +245,42 @@ mission_type_tactics = {
 	visible = { has_doctrine = superior_firepower }
 	
     # EFFECTS
-	category_army = {
-		max_strength = -0.8
-		hard_attack = 0.06
-	}
+	max_planning = 0.05
+	land_reinforce_rate = 0.02
+	initiative_factor = -0.025
 	
 	rewards = {
         low_level_delegation ={
         #1
-			category_army = {
-				max_strength = -0.75
-			}
 			category_front_line = {
-				soft_attack = 0.04
-				hard_attack = 0.04
-			}
-			max_planning = 0.04
-			category_light_infantry = {
-				default_morale = 0.05
+				hard_attack = 0.02
+				soft_attack = 0.02
 			}
         }
         flexible_command = {
         #2
-			category_army = {
-				max_strength = -0.7
-				hard_attack = 0.04
+			category_front_line = {
+				soft_attack = 0.02
+				hard_attack = 0.02
 			}
-			max_planning = 0.02
-			land_reinforce_rate = 0.01
         }
         maneouver_drills = {
         #3
-			category_army = {
-				max_strength = -0.65
-			}
-			category_front_line = {
-				soft_attack = 0.02
-				hard_attack = 0.02
-			}
-			max_planning = 0.02
 			category_light_infantry = {
-				default_morale = 0.05
+				default_morale = 0.1
 			}
-            
         }
         flexible_combat_formations = {
         #4
-			category_army = {
-				max_strength = -0.5
-			}
 			category_front_line = {
-				soft_attack = 0.02
 				hard_attack = 0.02
 			}
-			land_reinforce_rate = 0.01
         }
         control_zone_responsibilities = {
         #5
-			category_army = {
-				max_strength = -0.4
-			}
 			category_front_line = {
 				soft_attack = 0.02
-				hard_attack = 0.02
 			}
-			max_planning = 0.02
         }
     }
 }

@@ -63,13 +63,17 @@ Epsilon_decions = { # Общие решения
 			has_manpower > 749999
 		}
 
-		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = sov_deployment_activated_once } }
 
 		complete_effect = {
 			SOV = {
 				add_manpower = -750000
-				load_oob = "SOV_universal_deployment"
+				hidden_effect = {
+					load_oob = "SOV_universal_deployment"
+				}
 			}
+
+			set_global_flag = sov_deployment_activated_once
 		}
 	}
 
@@ -87,13 +91,17 @@ Epsilon_decions = { # Общие решения
 			has_manpower > 749999
 		}
 
-		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = sov_deployment_activated_once } }
 		
 		complete_effect = {
 			SOV = {
 				add_manpower = -750000
-				load_oob = "SOV_meta_deployment"
+				hidden_effect = {
+					load_oob = "SOV_meta_deployment"
+				}
 			}
+
+			set_global_flag = sov_deployment_activated_once
 		}
 	}
 	

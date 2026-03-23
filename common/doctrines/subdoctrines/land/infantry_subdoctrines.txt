@@ -167,32 +167,23 @@ assault_infantry = {
     # EFFECTS
 	enable_tactic = tactic_delay
 	category_support_battalions = {
-		max_organisation = 10
-		soft_attack = 0.25
+		soft_attack = 0.5
 	}
 
     rewards = {
         low_echelon_fire_support = {
         #1
-			category_support_battalions = {
-				max_organisation = 6
-				soft_attack = 0.1
-			}
 			category_light_infantry = {
-				max_organisation = 2
-				soft_attack = 0.02
+				max_organisation = 4
+				soft_attack = 0.06
 				defense = 0.04
 			}
 			enable_tactic = tactic_elastic_defense
         }
         organic_battalion_fire_support = {
         #2
-			category_support_battalions = {
-				max_organisation = 4
-				soft_attack = 0.1
-			}
 			category_light_infantry = {
-				max_organisation = 2
+				max_organisation = 4
 				soft_attack = 0.04
 				defense = 0.02
 			}
@@ -202,12 +193,9 @@ assault_infantry = {
         integrated_support_batteries = {
         #3
 			enable_tactic = tactic_tactical_withdrawal
-			category_support_battalions = {
-				soft_attack = 0.05
-			}
 			category_light_infantry = {
 				max_organisation = 2
-				soft_attack = 0.02
+				soft_attack = 0.04
 				defense = 0.02
 			}
         }

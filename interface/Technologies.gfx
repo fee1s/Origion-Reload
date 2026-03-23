@@ -5644,6 +5644,12 @@ spriteTypes = {
 		name = "GFX_early_ship_hull_submarine_medium"
 		texturefile = "gfx/interface/technologies/early_submarine.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_ship_hull_carrier_submarine_medium"
+		texturefile = "gfx/interface/technologies/ship_hull_carrier_submarine.dds"
+	} 
+	
 	 ##   ##  ###  ###  ### ### ###  
 	#  # #  # #  # #  #  #  #   #  # 
 	#    #### ###  ###   #  ##  ###  
@@ -8179,6 +8185,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ship_hull_modern_super_battleship.dds"
 	}
 	
+	# Escort Carrier
+
+	SpriteType = {
+		name = "GFX_ship_hull_escort_carrier_medium" #Escort Carrier MTG
+		texturefile = "gfx/interface/technologies/ship_hull_escort_carrier.dds"
+	}
+	SpriteType = {
+		name = "GFX_escort_carrier_medium" #Escort Carrier Non-MTG
+		texturefile = "gfx/interface/technologies/ship_hull_escort_carrier.dds"
+	}	
 
 	#Small Tech icons for Tech Tree
 	SpriteType = {
