@@ -186,18 +186,20 @@ adjacency_rule =
 
 	contested =
 	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
+		army = no
+		navy = no
+		submarine = no
+		trade = no
 	}
+
 	enemy =
 	{
-		army = yes
-		navy = yes
-		submarine = yes
-		trade = yes
+		army = no
+		navy = no
+		submarine = no
+		trade = no
 	}
+
 	friend =
 	{
 		army = yes
@@ -205,25 +207,16 @@ adjacency_rule =
 		submarine = yes
 		trade = yes
 	}
+
 	neutral =
 	{
 		army = yes
-		
 		navy = yes
 		submarine = yes
 		trade = yes
 	}
 	
-	is_disabled = {
-		AND = {
-			ORIGION_is_in_faction_with_allies = yes
-			446 = { is_controlled_by = ITA }
-			458 = { is_controlled_by = ITA }
-		}
-		tooltip = SICILIAN_NARROWS_tt
-	}
-	
-	required_provinces = { 11969 9994 7059 10074 }
+	required_provinces = { 11969 9994 }
 	
 	icon = 11969	
 	offset = { 25.0 0.0 10.0 }
@@ -267,6 +260,56 @@ adjacency_rule =
 	
 	icon = 4159	
 	offset = { 6.0 -2.0 2.0 }
+}
+
+#Antikythera strait
+adjacency_rule =
+{
+	name = "ANTIKYTHERA_STRAIT"
+
+	contested =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	enemy =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	is_disabled = {
+		AND = {
+			ORIGION_is_in_faction_with_allies = yes
+			OR = { 446 = { is_controlled_by = ITA } 458 = { is_controlled_by = ITA } }
+			has_global_flag = fall_of_cairo_ita
+			NOT = { 451 = { is_controlled_by_allies = yes } }
+		}
+		tooltip = ANTIKYTHERA_STRAIT_tt
+	}
+	
+	required_provinces = { 1130 4136 9992 }
+	
+	icon = 1130	
+	offset = { -30.0 0.0 55.0 }
 }
 
 adjacency_rule =

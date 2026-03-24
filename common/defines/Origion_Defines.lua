@@ -103,9 +103,9 @@ NDefines.NDoctrines.NAVAL_MISSION_MASTERY_GAIN_FACTORS = { 0.0, 0.0, 0.0, 0.0, 0
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.225 -- Умеменьшить размены в воздухе
 NDefines.NAir.COMBAT_DAMAGE_SCALE_CARRIER = 0.675 -- Умеменьшить размены в воздухе
 
-NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 2.9 -- портстрайк бафф
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 3.5 -- бафф морбобров по дамагу по организации
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.9 -- бафф морбобров по дамагу
+NDefines.NAir.PORT_STRIKE_DAMAGE_FACTOR = 0.75 -- портстрайк бафф
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.4 -- бафф морбобров по дамагу по организации
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.25 -- бафф морбобров по дамагу
 
 NDefines.NAir.FIELD_EXPERIENCE_FACTOR = 2.4 -- множитель получаемого опыта авиации (всего) by feels: работает по выеб*нному, судя по всему, скейлит опыт именно авиакрыльев
 
@@ -236,7 +236,12 @@ NDefines.NNavy.COMBAT_CRITICAL_DAMAGE_MULT = 7.5 -- Криты
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.75 -- снижение урона пво от мор авиации
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.25 -- cнижение урона от мор авиации при получении повреждений
 
-NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 5 -- Бафф на навалы от авиков
+NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.01
+NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.01
+
+NDefines.NNavy.ANTI_AIR_TARGETING = 0.01
+
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 8.5 -- Бафф на навалы от авиков
 
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 8 -- частота атаки авианосного соединения в часах
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.8, 2.2, 1.4 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)

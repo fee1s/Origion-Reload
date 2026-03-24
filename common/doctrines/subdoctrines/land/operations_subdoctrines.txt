@@ -247,7 +247,6 @@ mission_type_tactics = {
     # EFFECTS
 	max_planning = 0.05
 	land_reinforce_rate = 0.02
-	initiative_factor = -0.025
 	
 	rewards = {
         low_level_delegation ={
@@ -267,8 +266,9 @@ mission_type_tactics = {
         maneouver_drills = {
         #3
 			category_light_infantry = {
-				default_morale = 0.1
+				default_morale = 0.2
 			}
+			land_reinforce_rate = 0.02
         }
         flexible_combat_formations = {
         #4
