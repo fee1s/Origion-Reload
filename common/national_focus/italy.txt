@@ -2465,10 +2465,6 @@ focus_tree = {
 		relative_position_id = ITA_culto_del_duce
 		cost = 5
 
-		available = {
-			date > 1938.01.01
-		}
-
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
@@ -2531,12 +2527,12 @@ focus_tree = {
 									id = 1130
 								}
 								building = bunker
-								level < 6
+								level < 1
 							}
 						}
 						add_building_construction = {
 							type = bunker
-							level = 5
+							level = 8
 							province = 1130
 							instant_build = yes
 						}
@@ -2549,12 +2545,12 @@ focus_tree = {
 									id = 9992
 								}
 								building = bunker
-								level < 3
+								level < 1
 							}
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 5
 							province = 9992
 							instant_build = yes
 						}
@@ -2567,12 +2563,12 @@ focus_tree = {
 									id = 4136
 								}
 								building = bunker
-								level < 3
+								level < 1
 							}
 						}
 						add_building_construction = {
 							type = bunker
-							level = 3
+							level = 5
 							province = 4136
 							instant_build = yes
 						}
@@ -2809,13 +2805,7 @@ focus_tree = {
 		id = ITA_battle_of_mersa_matruh
 		
 		available = {
-			date > 1941.6.1
-			OR = {
-				NOT = { controls_state = 446 } 
-				NOT = { controls_state = 458 } 
-			}
-			
-			hidden_trigger = { NOT = { axis_lost_africa_trigger = yes } }
+			custom_trigger_tooltip = { tooltip = ITA_battle_of_mersa_matruh_tt NOT = { axis_lost_africa_trigger = yes } OR = { AND = { has_global_flag = fall_of_cairo_ita 446 = { is_controlled_by_allies = yes } } AND = { 458 = { is_controlled_by_allies = yes } has_global_flag = operation_torch_flag } } }
 		}
 		
 		relative_position_id = ITA_pact_of_steel

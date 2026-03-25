@@ -1130,7 +1130,7 @@ ORG_africa_dec_cat = {
 		icon = GFX_decision_eng_puppet_usa
 		available = {
 			has_completed_focus = uk_operation_crusader
-			date > 1942.1.1
+			date > 1941.12.1
 		}
 		visible = {
 			original_tag = ENG
@@ -1145,6 +1145,7 @@ ORG_africa_dec_cat = {
 				RAJ = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
 				SAF = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
 				FRA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+				USA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
 			}		
 		}
 	}
