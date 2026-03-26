@@ -36,12 +36,9 @@ country_event = { # Ключевой ивент для Франции
 			
 			add_manpower = 838450
 			
-			## ВСЕ ДЕБАФФЫ И БАФФЫ, КРОМЕ МЕНПАВЕРА УБИРАЮТСЯ (ПЕРЕНЕСЕНО ИЗ REMOVE_IDEAS)
+			## ВСЕ ДЕБАФФЫ И БАФФЫ УБИРАЮТСЯ (ПЕРЕНЕСЕНО ИЗ REMOVE_IDEAS)
 			
-			set_variable = { FRA_victors_of_wwi_dm_army_org_factor = 0 }
-			set_variable = { FRA_victors_of_wwi_dm_army_morale_factor = 0 }
-			set_variable = { FRA_victors_of_wwi_dm_planning_speed = 0 }
-			set_variable = { FRA_victors_of_wwi_dm_max_planning = 0 }
+			remove_dynamic_modifier = { modifier = FRA_victors_of_wwi_dm }
 
 			FRA_charles_de_gaulle = { remove_trait = { trait = camouflage_expert } }
 			FRA_jean_de_lattre_de_tassigny = { remove_trait = { trait = camouflage_expert } }
@@ -54,7 +51,7 @@ country_event = { # Ключевой ивент для Франции
 			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 2200 producer = FRA }
 			add_equipment_to_stockpile = { type = support_equipment_1 amount = 1980 producer = FRA }				
 			add_equipment_to_stockpile = { type = train_equipment_1 amount = 160 producer = FRA }
-			add_equipment_to_stockpile = { type = convoy amount = 750 producer = FRA }
+			add_equipment_to_stockpile = { type = convoy amount = 450 producer = FRA } ## 750 -> 450 (26.03.26)
 			
 			# add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "AMX 40" amount = 1400 producer = FRA } 
 			# add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "Somua SAu 40" amount = 4600 producer = FRA } 

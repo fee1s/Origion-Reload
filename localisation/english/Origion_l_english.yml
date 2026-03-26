@@ -487,6 +487,7 @@ asian_war_simulation_tt: "\nWe will sacrifice §Y85§! units of §YFighters§! f
 FRA_city_that_never_gives_up_tt: "§YParis§! will receive §Y10§! levels of fortifications. §YSuburban provinces§! will receive §Y5§! levels of fortifications each. France is ready to defend its capital."
 FRA_return_of_the_escort_cruisers_tt: "§Y8 light cruisers§!, surviving the capitulation, return to service under the tricolor of §YFree France§!."
 FRA_return_of_dunkirk_tt: "§Y4 battleships§!, saved from capture, return to combat under the command of §YFree France§!."
+uk_atlantic_charter_tt: "The composition of §Y[ENG.GetAdjectiveCap] navy§! will be reinforced with twelve §YIowa-class battlecruisers§! and twenty-four §YBrooklyn-class light cruisers§!.\n\nSome members of the §Y[USA.GetAdjectiveCap]§! Admiralty will begin serving in our §Ynavy§!."
 FRA_subjugate_central_africa_tt: "If §YFrance§! capitulates, §YCentral Africa§! remains under §YFree France§! control, not passing to §YVichy§!."
 FRA_subjugate_west_africa_tt: "If §YFrance§! capitulates, §YWest Africa§! remains under §YFree France§! control, not passing to §YVichy§!."
 FRA_subjugate_overseas_territories_tt: "If §YFrance§! capitulates, §YFrench Guiana§! remains under §YFree France§! control, not passing to §YVichy§!."
@@ -518,6 +519,7 @@ SOV_ll_east_front_mode_tt: "So far we have sent: \n£GFX_unit_fighter_icon_small
 GER_help_for_ita_dec: "§YDeploy the Luftwaffe in [ITA.GetAdjectiveCap] operations§!"
 GER_help_for_ita_dec_tt: "§YDelays the progress of the Northern African Front collapse§! by §Y[GER_downfall_of_northern_africa_days_scripted_loc_tt] days§!\n\n§RBy refraining from providing support this time, we will lose this opportunity forever!§!"
 ITA_battle_of_mersa_matruh_tt: "§Y[ITA.GetName]§! has lost §Ycontrol§! of one of the key §Ystraits§!."
+ITA_ministry_of_italian_africa_tt:0 "Level §Y5§! fortifications will be built in all §Ycities of Libya§!. Level §Y3§! fortifications will be built in the hilly and mountainous areas of §YLibya§!.\n\nA level §Y5§! radar station will be established in the state §Y[451.GetName]§!."
 GER_downfall_of_northern_africa_days_60_tt: "60"
 GER_downfall_of_northern_africa_days_30_tt: "30"
 
@@ -661,6 +663,10 @@ origion.37.t: "Italy Requests Luftwaffe Support"
 origion.37.d: "Italian command reports growing pressure across secondary theaters of war. Without reliable air superiority, holding key positions is becoming increasingly costly. Rome urges the transfer of German fighter units to secure operations and supply lines, preventing the situation from slipping beyond control." 
 origion.37.a: "It is possible"
 origion.37.b: "It is beyond our power"
+
+origion.38.t: "Operation «Crusader»"
+origion.38.d: "British forces in North Africa launched an offensive against Axis troops, initiating a large-scale operation in the Cyrenaica region. The fighting became prolonged and exhausting, spreading across desert areas and key supply routes. Both sides suffered losses, while the front line gradually shifted. \n\nGerman and Italian forces began to withdraw, seeking to stabilize the situation along new defensive lines. Despite tactical difficulties, the operation altered the situation in the region and influenced the further course of the desert campaign."
+origion.38.a: "The situation in Africa is changing again."
 
 # Bookmarks
 
@@ -1298,7 +1304,8 @@ AST_new_zealand_steel: "New Zealand Steel"
 AST_new_zealand_steel_desc: ""
 AST_taranaki_oil: "Taranaki Oil Extraction"
 AST_taranaki_oil_desc: ""
-USA_lend_lease_tt: "§Y[USA.GetName]§! cannot send §YLend-Lease§! before §YMay 1, 1941§!."
+USA_lend_lease_tt: "§Y[USA.GetName]§! cannot send §Ylend-lease§! before §YMay 1, 1941§!."
+raj_cant_ll_tt: "§Y[RAJ.GetName]§! cannot receive §Ylend-lease§! until §Ycapitulation§!."
 
 BUL_condemn_macedonian_organizations_tt:0 "Spirit §Y$BUL_imro_01$§! will be removed after §Y270§! days"
 BUL_imro_00_tt:0 "The §Ynational spirit§! can be removed via §Y$BUL_condemn_macedonian_organizations$§! focus"

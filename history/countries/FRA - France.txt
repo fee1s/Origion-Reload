@@ -41,6 +41,8 @@ if = {
 	}
 }
 
+add_manpower = 1750000
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "FRA_1936_air_bba"
@@ -80,7 +82,7 @@ set_variable = { FRA_victors_of_wwi_dm_army_org_factor = -0.25 }
 set_variable = { FRA_victors_of_wwi_dm_army_morale_factor = -0.5 }
 set_variable = { FRA_victors_of_wwi_dm_planning_speed = -0.5 }
 set_variable = { FRA_victors_of_wwi_dm_max_planning = 0.15 }
-set_variable = { FRA_victors_of_wwi_dm_conscription_factor = -0.4 }
+set_variable = { FRA_victors_of_wwi_dm_conscription_factor = -1 }
 
 # Starting tech
 set_technology = {

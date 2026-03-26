@@ -18,7 +18,6 @@ Epsilon_decions = { # Общие решения
 				type = convoy
 				amount = 1
 			}
-			clr_country_flag = theorist_picked_flag
 		}
 	}
 
@@ -1146,6 +1145,8 @@ ORG_africa_dec_cat = {
 				SAF = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
 				FRA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
 				USA = { add_timed_idea = { idea = uk_operation_crusader days = 60 } }
+
+				news_event = { id = origion.38 days = 1 }
 			}		
 		}
 	}

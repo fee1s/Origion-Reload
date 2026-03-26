@@ -2413,6 +2413,32 @@ focus_tree = {
 				}
 				ITA = { annex_country = { target = GRE } }
 				add_named_threat = { threat = 10 name = GER_fate_of_greece }
+
+				clr_global_flag = crete_controlled_ALLY
+				set_global_flag = crete_controlled_AXIS
+
+				every_country = {
+					limit = {
+						ORIGION_is_in_faction_with_axis = yes
+					}
+					add_to_variable = { african_warfare_dm_fuel_gain_factor = 0.02 }
+					add_to_variable = { african_warfare_dm_max_fuel_factor = 0.02 }
+					add_to_variable = { african_warfare_dm_industrial_capacity_factory = 0.02 }
+					add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.02 }
+					add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.02 }
+					add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.02 }
+				}
+
+				every_country = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_allies = yes
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+					add_to_variable = { ALLY_africa_controlled_regions = -1 }
+					add_to_variable = { AXIS_africa_controlled_regions = 1 }
+				}
 			}
 		}
 	}

@@ -1570,7 +1570,36 @@ news_event = {
 				add_equipment_to_stockpile = { type = medium_tank_aa_chassis_2 variant_name = "Char 2C Trophy" amount = 48 producer = GER } 				
 				add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "Renault R35 Trophy" amount = 48 producer = GER }	
 			}
-			
+
+			clr_global_flag = tunis_controlled_ALLY
+			clr_global_flag = balearic_controlled_ALLY
+
+			set_global_flag = tunis_controlled_AXIS
+			set_global_flag = balearic_controlled_AXIS
+
+			every_country = {
+				limit = {
+					ORIGION_is_in_faction_with_axis = yes
+				}
+				add_to_variable = { african_warfare_dm_fuel_gain_factor = 0.03 }
+				add_to_variable = { african_warfare_dm_max_fuel_factor = 0.03 }
+				add_to_variable = { african_warfare_dm_industrial_capacity_factory = 0.03 }
+				add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = 0.03 }
+				add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = 0.03 }
+				add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.03 }
+			}
+
+			every_country = {
+				limit = {
+					OR = {
+						ORIGION_is_in_faction_with_allies = yes
+						ORIGION_is_in_faction_with_axis = yes
+					}
+				}
+				add_to_variable = { ALLY_africa_controlled_regions = -2 }
+				add_to_variable = { AXIS_africa_controlled_regions = 2 }
+			}
+
 			set_global_flag = french_company_ended
 		}
 	}

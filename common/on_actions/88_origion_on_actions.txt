@@ -442,15 +442,15 @@ on_actions = {
 				set_global_flag = matruh_controlled_ALLY
 				set_global_flag = gibraltar_controlled_ALLY
 				set_global_flag = malta_controlled_ALLY
+				set_global_flag = crete_controlled_ALLY
+				set_global_flag = balearic_controlled_ALLY
+				set_global_flag = tunis_controlled_ALLY
 				
 				set_global_flag = algeria_controlled_AXIS
 				set_global_flag = eastalgeria_controlled_AXIS
-				set_global_flag = tunis_controlled_AXIS
 				set_global_flag = libya_controlled_AXIS
 				set_global_flag = eastlibya_controlled_AXIS
 				set_global_flag = kirenaika_controlled_AXIS
-				set_global_flag = crete_controlled_AXIS
-				set_global_flag = balearic_controlled_AXIS
 				set_global_flag = sardinia_controlled_AXIS
 				set_global_flag = sicily_controlled_AXIS
 
@@ -461,8 +461,20 @@ on_actions = {
 							ORIGION_is_in_faction_with_axis = yes
 						}
 					}
-					set_variable = { ALLY_africa_controlled_regions = 9 }
-					set_variable = { AXIS_africa_controlled_regions = 8 }
+					set_variable = { ALLY_africa_controlled_regions = 12 }
+					set_variable = { AXIS_africa_controlled_regions = 5 }
+				}
+
+				every_country = {
+					limit = {
+						ORIGION_is_in_faction_with_axis = yes
+					}
+					set_variable = { african_warfare_dm_fuel_gain_factor = -0.05 }
+					set_variable = { african_warfare_dm_max_fuel_factor = -0.05	}
+					set_variable = { african_warfare_dm_industrial_capacity_factory = -0.05 }
+					set_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.05 }
+					set_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.05 }
+					set_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.05 }
 				}
 			}
 

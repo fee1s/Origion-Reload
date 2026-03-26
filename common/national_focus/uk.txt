@@ -30,7 +30,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_POLITICALz
 		}
 		completion_reward = {
 			add_stability = 0.15
@@ -982,7 +982,7 @@ focus_tree = {
 				name = uk_carrier_focus
 				bonus = 1
 				uses = 1
-				technology = advanced_ship_hull_carrier
+				technology = improved_ship_hull_carrier
 			}
 		}
 	}
@@ -1012,7 +1012,7 @@ focus_tree = {
 				name = uk_battleship_focus
 				bonus = 1
 				uses = 1
-				technology = advanced_ship_hull_heavy
+				technology = improved_ship_hull_heavy
 			}
 		}
 	}
@@ -1030,19 +1030,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-		available = {
-			date > 1941.05.01
-		}
 		available_if_capitulated = yes
 		completion_reward = {
-			custom_effect_tooltip = ENG_vanguard_tt
+			add_tech_bonus = {
+				name = ENG_vanguard
+				bonus = 1
+				uses = 2
+				technology = advanced_ship_hull_heavy
+				technology = advanced_heavy_battery
+			}
+
+			# custom_effect_tooltip = ENG_vanguard_tt
 			
-			hidden_effect = { set_technology = { advanced_ship_hull_heavy = 1 } }
+			# hidden_effect = { set_technology = { advanced_ship_hull_heavy = 1 } }
 			
-			set_technology = { advanced_heavy_battery = 1 }
+			# set_technology = { advanced_heavy_battery = 1 }
 		}
 	}
 
@@ -2662,14 +2664,14 @@ focus_tree = {
 			focus = uk_noasia_focus
 		}
 		available = {
-		    date > 1940.11.1
+		    date > 1941.4.1
 		}
 		relative_position_id = uk_noasia_focus
 
 		icon = GFX_focus_GER_panzerschiff
-		x = 0
-		y = 1
-		cost = 5
+		x = 1
+		y = 2
+		cost = 4
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2679,92 +2681,24 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = ENG_stoyak_intro
-			add_to_variable = {ENG_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt}
-			
-			random_owned_controlled_state = {
+			add_to_variable =  { ENG_industrial_capacity_dockyard = 0.15 tooltip = industrial_capacity_dockyard_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_owned_state = {
 				limit = {
-					is_coastal = yes
 					free_building_slots = {
 						building = dockyard
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
 					type = dockyard
-					level = 5
+					level = 10
 					instant_build = yes
 				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
+				random_select_amount = 12
 			}
 		}
 	}
@@ -2774,14 +2708,14 @@ focus_tree = {
 			focus = uk_noasia_focus
 		}
 		available = {
-		    date > 1941.5.1
+		    date > 1941.4.1
 		}
 		relative_position_id = uk_noasia_focus
 
 		icon = GFX_focus_generic_naval_invasion_tank
 		x = -1
 		y = 2
-		cost = 5
+		cost = 4
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -2810,18 +2744,64 @@ focus_tree = {
 		relative_position_id = uk_noasia_focus
 
 		icon = GFX_focus_generic_north_atlantic_fleet
-		x = 1
-		y = 2
-		cost = 5
+		x = 0
+		y = 1
+		cost = 2
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			USA = { USA_chester_w_nimitz = { set_nationality = ENG } }
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			USA = { USA_ernest_king = { set_nationality = ENG } }
+			custom_effect_tooltip = uk_atlantic_charter_tt
+
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "Origion Iowa Class Battleship"
+					type = ship_hull_heavy_3
+					name_group = USA_BB_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_heavy_battery_3
+						fixed_ship_anti_air_slot = ship_anti_air_3
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+						fixed_ship_radar_slot = ship_radar_3
+						fixed_ship_engine_slot = heavy_ship_engine_3
+						fixed_ship_secondaries_slot = dp_ship_secondaries_3
+						fixed_ship_armor_slot = ship_armor_bc_4
+						front_1_custom_slot = ship_heavy_battery_3
+						mid_1_custom_slot = ship_heavy_battery_3
+						mid_2_custom_slot = ship_heavy_battery_3
+						mid_3_custom_slot = ship_anti_air_3
+						rear_1_custom_slot = ship_airplane_launcher_3
+					}
+					design_team = mio:ENG_cammell_laird_organization
+				}
+
+				create_equipment_variant = {
+					name = "Origion Brooklyn Class Light Cruiser"
+					type = ship_hull_cruiser_3
+					name_group = USA_CL_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_medium_battery_3
+						fixed_ship_anti_air_slot = ship_anti_air_3
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+						fixed_ship_radar_slot = ship_radar_3
+						fixed_ship_engine_slot = cruiser_ship_engine_3
+						fixed_ship_armor_slot = ship_armor_cruiser_4
+						fixed_ship_secondaries_slot = dp_ship_secondaries_3
+						front_1_custom_slot = ship_light_medium_battery_3
+						mid_1_custom_slot = ship_torpedo_3
+						mid_2_custom_slot = ship_torpedo_3
+						rear_1_custom_slot = ship_anti_air_3
+						rear_2_custom_slot = ship_airplane_launcher_3
+					}
+					design_team = mio:ENG_cammell_laird_organization
+				}
+
+				USA = { USA_chester_w_nimitz = { set_nationality = ENG } USA_ernest_king = { set_nationality = ENG } }
+
+				load_oob = "ENG_atlantic_charter_mtg"
+			}	
 		}
 	}
 	

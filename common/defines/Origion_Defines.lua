@@ -241,7 +241,7 @@ NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.01
 
 NDefines.NNavy.ANTI_AIR_TARGETING = 0.01
 
-NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 8.5 -- Бафф на навалы от авиков
+NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 12.5 -- Бафф на навалы от авиков
 
 NDefines.NAir.CARRIER_HOURS_DELAY_AFTER_EACH_COMBAT = 8 -- частота атаки авианосного соединения в часах
 NDefines.NNavy.BASE_GUN_COOLDOWNS = { 1.8, 2.2, 1.4 } -- атака в часах ( 1- тяж 2- торпеды - 3 лк)
