@@ -1,176 +1,75 @@
 add_namespace = origion
 
-news_event = { # триумф оси в египте
+news_event = { # Аида
 	id = origion.1
-	hidden = yes
+	title = origion.1.t
+	desc = origion.1.d
+	picture = GFX_news_event_aida
+	
 	major = yes
 	fire_only_once = yes
-	trigger = {
-	    NOT = { has_global_flag = africa_triumph }
-		OR = {
-			447 = { is_controlled_by = ITA }
-			447 = { is_controlled_by = GER }
-			447 = { is_controlled_by = ROM }
-		}
-		
-		OR = {
-			907 = { is_controlled_by = ITA }
-			907 = { is_controlled_by = GER }
-			907 = { is_controlled_by = ROM }
-		}
-		
-		OR = {
-			446 = { is_controlled_by = ITA }
-			446 = { is_controlled_by = GER }
-			446 = { is_controlled_by = ROM }
-		}
-	}
 	
-	immediate = {
-	    set_global_flag = africa_triumph
-		AST = {
-			complete_national_focus = AST_lose_in_africa
-		}
+	option = {
+		name = origion.1.a
 	}
-	
+
 	mean_time_to_happen = { days = 1 }
 }
 
 news_event = { # ось сдает африку до мая 1941
 	id = origion.2
-	hidden = yes
+	title = origion.2.t
+	desc = origion.2.d
+	picture = GFX_news_event_tunis
+	
 	major = yes
-	fire_only_once = yes
+	fire_only_once = no
+
 	trigger = {
-				OR = {
-					661 = { is_controlled_by = ENG }
-					661 = { is_controlled_by = FRA }
-					661 = { is_controlled_by = CAN }
-					661 = { is_controlled_by = RAJ }
-					661 = { is_controlled_by = AST }
-					661 = { is_controlled_by = NZL }
-					661 = { is_controlled_by = SAF }
-					661 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					448 = { is_controlled_by = ENG }
-					448 = { is_controlled_by = FRA }
-					448 = { is_controlled_by = CAN }
-					448 = { is_controlled_by = RAJ }
-					448 = { is_controlled_by = AST }
-					448 = { is_controlled_by = NZL }
-					448 = { is_controlled_by = SAF }
-					448 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					449 = { is_controlled_by = ENG }
-					449 = { is_controlled_by = FRA }
-					449 = { is_controlled_by = CAN }
-					449 = { is_controlled_by = RAJ }
-					449 = { is_controlled_by = AST }
-					449 = { is_controlled_by = NZL }
-					449 = { is_controlled_by = SAF }
-					449 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					662 = { is_controlled_by = ENG }
-					662 = { is_controlled_by = FRA }
-					662 = { is_controlled_by = CAN }
-					662 = { is_controlled_by = RAJ }
-					662 = { is_controlled_by = AST }
-					662 = { is_controlled_by = NZL }
-					662 = { is_controlled_by = SAF }
-					662 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					663 = { is_controlled_by = ENG }
-					663 = { is_controlled_by = FRA }
-					663 = { is_controlled_by = CAN }
-					663 = { is_controlled_by = RAJ }
-					663 = { is_controlled_by = AST }
-					663 = { is_controlled_by = NZL }
-					663	 = { is_controlled_by = SAF }
-					663	 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					450 = { is_controlled_by = ENG }
-					450 = { is_controlled_by = FRA }
-					450 = { is_controlled_by = CAN }
-					450 = { is_controlled_by = RAJ }
-					450 = { is_controlled_by = AST }
-					450 = { is_controlled_by = NZL }
-					450 = { is_controlled_by = SAF }
-					450 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					451 = { is_controlled_by = ENG }
-					451 = { is_controlled_by = FRA }
-					451 = { is_controlled_by = CAN }
-					451 = { is_controlled_by = RAJ }
-					451 = { is_controlled_by = AST }
-					451 = { is_controlled_by = NZL }
-					451	 = { is_controlled_by = SAF }
-					451 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					665 = { is_controlled_by = ENG }
-					665 = { is_controlled_by = FRA }
-					665 = { is_controlled_by = CAN }
-					665 = { is_controlled_by = RAJ }
-					665 = { is_controlled_by = AST }
-					665 = { is_controlled_by = NZL }
-					665 = { is_controlled_by = SAF }
-					665 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					458 = { is_controlled_by = ENG }
-					458 = { is_controlled_by = FRA }
-					458 = { is_controlled_by = CAN }
-					458 = { is_controlled_by = RAJ }
-					458 = { is_controlled_by = AST }
-					458 = { is_controlled_by = NZL }
-					458	 = { is_controlled_by = SAF }
-					458	 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					984 = { is_controlled_by = ENG }
-					984 = { is_controlled_by = FRA }
-					984 = { is_controlled_by = CAN }
-					984 = { is_controlled_by = RAJ }
-					984 = { is_controlled_by = AST }
-					984 = { is_controlled_by = NZL }
-					984	 = { is_controlled_by = SAF }
-					984	 = { is_controlled_by = USA }
-				}
-				
-				OR = {
-					983 = { is_controlled_by = ENG }
-					983 = { is_controlled_by = FRA }
-					983 = { is_controlled_by = CAN }
-					983 = { is_controlled_by = RAJ }
-					983 = { is_controlled_by = AST }
-					983 = { is_controlled_by = NZL }
-					983	 = { is_controlled_by = SAF }
-					983	 = { is_controlled_by = USA }
-				}
+		NOT = { has_global_flag = north_africa_fallen_flag }
+		661 = { is_controlled_by_allies = yes }
+		448 = { is_controlled_by_allies = yes }
+		449 = { is_controlled_by_allies = yes }
+		663 = { is_controlled_by_allies = yes }
+		450 = { is_controlled_by_allies = yes }
+		451 = { is_controlled_by_allies = yes }		
+		662 = { is_controlled_by_allies = yes }
+		458 = { is_controlled_by_allies = yes }
+		665 = { is_controlled_by_allies = yes }
+		984 = { is_controlled_by_allies = yes }
+		983 = { is_controlled_by_allies = yes }
+		982 = { is_controlled_by_allies = yes }
+		985 = { is_controlled_by_allies = yes }
+		452 = { is_controlled_by_allies = yes }
+		447 = { is_controlled_by_allies = yes }
+		907 = { is_controlled_by_allies = yes }
+		446 = { is_controlled_by_allies = yes }
+		453 = { is_controlled_by_allies = yes }
+		454 = { is_controlled_by_allies = yes }
+		455 = { is_controlled_by_allies = yes }
+		554 = { is_controlled_by_allies = yes }
+		553 = { is_controlled_by_allies = yes }
+		677 = { is_controlled_by_allies = yes }
+		799 = { is_controlled_by_allies = yes }
+		680 = { is_controlled_by_allies = yes }
+		675 = { is_controlled_by_allies = yes }
+		676 = { is_controlled_by_allies = yes }
+		291 = { is_controlled_by_allies = yes }
+		656 = { is_controlled_by_allies = yes }
+		456 = { is_controlled_by_allies = yes }
+		457 = { is_controlled_by_allies = yes }
 	}
 	
 	immediate = {
-		ITA = {
-			complete_national_focus = ITA_defense
-		}
-		AST = {
-			complete_national_focus = AST_win_in_africa
-		}
+		# ITA = {
+		# 	complete_national_focus = ITA_defense
+		# }
+		# AST = {
+		# 	complete_national_focus = AST_win_in_africa
+		# }
+
+		set_global_flag = north_africa_fallen_flag
+
 		hidden_effect = {
 			every_state = {
 				limit = {
@@ -246,8 +145,12 @@ news_event = { # ось сдает африку до мая 1941
 			}
 		}
 	}
+
+	option = {
+		name = origion.2.a
+	}
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # вступление италии в войну против союзников
@@ -293,8 +196,10 @@ news_event = { # вступление италии в войну против с
 				}
 				if = { limit = { has_global_flag = NO_ASIA_FLAG } add_to_variable = { ENG_production_speed_arms_factory_factor = -0.4 } }
 			}
-			
-			if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } }
+
+			## ПЕРЕНЕСЕНО В КОМПЬЕНСКОЕ ПЕРЕМИРИЕ
+
+			# if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } } 
 			
 			sound_effect = psi_ita_join_war
 		

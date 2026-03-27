@@ -354,10 +354,6 @@ GER_operations = {
                     target = LUX
                 	type = annex_everything
                 }
-				add_timed_idea = {
-					idea = GER_fall_gelb_idea
-					days = 45
-				}
             }
 			
 			hidden_effect = {
@@ -371,6 +367,11 @@ GER_operations = {
             	ENG = { add_to_faction = LUX }
 				
 				ENG = { country_event = { id = britain.9 } }
+				
+				add_timed_idea = {
+					idea = GER_fall_gelb_idea
+					days = 45
+				}
 			}
 			
 			if = {
@@ -381,26 +382,28 @@ GER_operations = {
 			}
 		}
 	}
-	GER_ROT = {
-		icon = GFX_GER_so_decision
-		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
-		available = {
-			date > 1939.12.1
-			hidden_trigger = { NOT = { has_global_flag = second_compiegne_signed } }
-		}
-		visible = {
-		    NOT = { has_global_flag = second_compiegne_signed }
-		}
-		fire_only_once = yes
-		complete_effect = {
-			FRA = {
-				add_timed_idea = {
-					idea = fra_collapse_on_the_seine
-					days = 90
-				}
-			}
-		}
-	}
+
+	# GER_ROT = {
+	# 	icon = GFX_GER_so_decision
+	# 	visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
+	# 	available = {
+	# 		date > 1939.12.1
+	# 		hidden_trigger = { NOT = { has_global_flag = second_compiegne_signed } }
+	# 	}
+	# 	visible = {
+	# 	    NOT = { has_global_flag = second_compiegne_signed }
+	# 	}
+	# 	fire_only_once = yes
+	# 	complete_effect = {
+	# 		FRA = {
+	# 			add_timed_idea = {
+	# 				idea = fra_collapse_on_the_seine
+	# 				days = 90
+	# 			}
+	# 		}
+	# 	}
+	# }
+
 	Ger_fall_sonnenblume = {
 		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } }
 		icon = GFX_GER_so_decision

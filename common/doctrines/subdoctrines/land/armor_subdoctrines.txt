@@ -389,18 +389,19 @@ tank_destroyer_force = {
 				max_organisation = 6
 			}	
         }
-        redeployment_priority = {			
+        redeployment_priority = {		
+			enable_tactic = tactic_overwhelming_fire	
 			motorized = {
 				breakthrough = 0.02	
-				max_strength = 0.5
+				max_strength = 0.25
 			}
 			mechanized = {
 				breakthrough = 0.02
-				max_strength = 0.5
+				max_strength = 0.25
 			}
 			amphibious_mechanized = {
 				breakthrough = 0.02
-				max_strength = 0.5
+				max_strength = 0.25
 			}
         }
 
@@ -421,8 +422,6 @@ tank_destroyer_force = {
         }
 
         selfsufficient_battalion = {
-			enable_tactic = tactic_overwhelming_fire
-			
 			motorized = {
 				max_organisation = 2
 			}

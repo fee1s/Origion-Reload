@@ -226,7 +226,15 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		10 = { is_controlled_by_axis = yes }
+		OR = { 
+			10 = { is_controlled_by_axis = yes }
+			AND = {
+				GER = { is_ai = yes }
+				SOV = { is_ai = no }
+				date > 1939.9.1 
+			}
+		}
+
 		NOT = { has_global_flag = OST_FRONT_FLAG }
 	}
 
@@ -252,14 +260,6 @@ country_event = {
 
 	option = {
 		name = germany.12.a
-		if = {
-			limit = {
-				SOU = {
-					controls_state = 93
-					controls_state = 94
-				}
-			}
-		}
 	}
 }
 
