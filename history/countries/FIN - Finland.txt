@@ -123,7 +123,7 @@ set_technology = {
 	air_torpedoe_1 = 1
 }
 
-set_convoys = 500
+set_convoys = 100
 
 set_politics = {
 	ruling_party = neutrality
@@ -135,6 +135,30 @@ set_popularities = { #VANILLA
 	democratic = 10
 	fascism = 45
 	neutrality = 45
+}
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:FIN_valtion_kivaaritehdas_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:FIN_valtion_kivaaritehdas_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:FIN_sisu_auto_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:FIN_valtion_tykkitehdas_organization
+	mark_older_equipment_obsolete = yes
 }
 
 add_equipment_to_stockpile = {

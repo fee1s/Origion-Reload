@@ -16,14 +16,6 @@ set_sub_doctrine = wolfpacks
 
 if = {
 	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_oob = "FRA_1936"
-}
-if = {
-	limit = {
 		has_dlc = "No Step Back"
 	}
 	set_oob = "FRA_1936_nsb"
@@ -127,18 +119,6 @@ set_technology = {
 	
 }
 
-
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-		basic_heavy_tank = 1
-		improved_light_tank = 1
-	}
-}
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -217,74 +197,6 @@ recruit_character = FRA_jeanpierre_esteva
 recruit_character = FRA_rene_emile_godfroy
 recruit_character = FRA_rene_nicod
 
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "630 Series"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Redoutable Class"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			sub_engine_upgrade = 2
-			sub_stealth_upgrade = 2
-			sub_torpedo_upgrade = 2
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Chacal Class"
-		type = destroyer_1
-		upgrades = {
-			ship_torpedo_upgrade = 1
-			destroyer_engine_upgrade = 1
-			ship_ASW_upgrade = 1
-			ship_anti_air_upgrade = 1
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "Aigle & Vauquelin Class"
-		type = destroyer_1
-		upgrades = {
-			ship_torpedo_upgrade = 2
-			destroyer_engine_upgrade = 2
-			ship_ASW_upgrade = 2
-			ship_anti_air_upgrade = 2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Bretagne Class"
-		type = battleship_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_armor_upgrade = 1
-			ship_gun_upgrade = 1
-		}
-	}
-}
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-
-}
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -311,6 +223,36 @@ if = {
 		}
 		icon = "GFX_FRA_basic_light_tank_medium"
 	}
+}
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:FRA_mas_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:FRA_mas_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:FRA_somua_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = anti_air_equipment_1
+	design_team = mio:FRA_schneider_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:FRA_schneider_organization
+	mark_older_equipment_obsolete = yes
 }
 
 add_equipment_to_stockpile = {

@@ -28,3 +28,28 @@ HUN_femaru_fegyver_es_gepgyar_organization = {
 		tag = HUN
 	}
 }
+
+HUN_digep_artillery = {
+	include = generic_artillery_organization
+	icon = GFX_idea_HUN_digep_artillery
+	
+	allowed = {	
+		original_tag = HUN
+	}
+
+	available = {
+	}
+
+	visible = {
+		FROM = { original_tag = HUN }
+	}
+
+}
+
+HUN_mwg_raba_organization = {
+	include = generic_motorized_mechanized_organization 
+	icon = GFX_idea_HUN_mwg_raba
+	allowed = {	 
+		original_tag = HUN
+	}
+}

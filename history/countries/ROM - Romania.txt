@@ -120,15 +120,6 @@ set_technology = {
 
 if = {
 	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-	}
-}
-if = {
-	limit = {
 		has_dlc = "No Step Back"
 	}
 	set_technology = {
@@ -136,13 +127,7 @@ if = {
 		basic_light_tank_chassis = 1
 	}
 }
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-	}
-}
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	set_technology = {
@@ -166,17 +151,6 @@ if = {
 		improved_ship_torpedo_launcher = 1
 		improved_airplane_launcher = 1
 	}
-}
-if = {
-	limit = {
-		AND = {  
-			NOT = { has_dlc = "Death or Dishonor" }
-			has_dlc = "Battle for the Bosporus"
-		}
-	}
-	give_guarantee = GRE
-	give_guarantee = TUR
-	give_guarantee = YUG
 }
 
 add_timed_idea = {
@@ -266,6 +240,36 @@ if = {
 		}
 		design_team = mio:ROM_galati_shipyard_organization
 	}
+}
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:ROM_cugir_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:ROM_cugir_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:ROM_malaxa_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = anti_air_equipment_1
+	design_team = mio:ROM_resita_works_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:ROM_resita_works_organization
+	mark_older_equipment_obsolete = yes
 }
 
 add_equipment_to_stockpile = {

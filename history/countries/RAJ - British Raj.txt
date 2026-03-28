@@ -136,16 +136,6 @@ if = {
 	recruit_character = RAJ_jayanto_nath_chaudhuri
 }
 
-
-if = {
-	limit = {
-		not = { has_dlc =  "Man the Guns" }
-	}
-	set_technology = {
-		transport = 1
-	}
-}
-
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -194,14 +184,6 @@ if = {
 
 if = {
 	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
-if = {
-	limit = {
 		has_dlc = "No Step Back"
 	}
 	set_technology = {
@@ -227,19 +209,28 @@ set_popularities = {
 	neutrality = 80
 }
 
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Noor Inayat Khan"
-		GFX = GFX_portrait_noor_inayat_khan
-		traits = {  }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { RAJ }
-	}
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:RAJ_ishapore_rifle_factory_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:RAJ_ishapore_rifle_factory_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:generic_motorized_mechanized_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:RAJ_ordnance_factories_board_organization
+	mark_older_equipment_obsolete = yes
 }
 
 add_equipment_to_stockpile = {

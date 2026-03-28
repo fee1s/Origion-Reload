@@ -99,14 +99,6 @@ set_technology = {
 
 if = {
 	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
-if = {
-	limit = {
 		has_dlc = "No Step Back"
 	}
 	set_technology = {
@@ -115,15 +107,6 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_destroyer = 1
-		transport = 1
-	}
-}
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -223,6 +206,30 @@ recruit_character = SAF_abram_fischer
 recruit_character = SAF_jan_smuts
 recruit_character = SAF_dan_pienaar
 recruit_character = SAF_william_henry_everett
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:generic_infantry_equipment_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:generic_infantry_equipment_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:generic_motorized_mechanized_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:generic_artillery_organization
+	mark_older_equipment_obsolete = yes
+}
 
 add_equipment_to_stockpile = {
     type = infantry_equipment_1

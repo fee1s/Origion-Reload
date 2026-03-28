@@ -527,6 +527,7 @@ if = {
 			special_type_slot_2 = fuel_tanks_medium
 			special_type_slot_3 = empty
 		}
+		design_team = mio:SOV_yakovlev_design_bureau_organization
 	}
 	
 	create_equipment_variant = {
@@ -539,6 +540,7 @@ if = {
 			special_type_slot_1 = fuel_tanks_small
 			special_type_slot_2 = lmg_defense_turret
 		}
+		design_team = mio:SOV_mig_design_bureau_organization
 	}
 }
 
@@ -611,6 +613,36 @@ if = {
 			rear_1_custom_slot = ship_airplane_launcher_2
 		}
 	}
+}
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:SOV_tula_arms_plant_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:SOV_tula_arms_plant_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:SOV_gaz_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = anti_air_equipment_1
+	design_team = mio:SOV_grabin_design_bureau_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:SOV_grabin_design_bureau_organization
+	mark_older_equipment_obsolete = yes
 }
 
 1941.3.1.12 = {

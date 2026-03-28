@@ -45,14 +45,7 @@ set_technology = {
 	fuel_refining = 1
 	fuel_silos = 1
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -62,19 +55,7 @@ if = {
 		basic_light_tank_chassis = 1
 	}
 }
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_submarine = 1
-		transport = 1
-	}
-	set_naval_oob = "AST_1936_naval_legacy"
-}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -189,6 +170,30 @@ if = {
 				rear_1_custom_slot = empty
 			}
 	}
+}
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:AST_lithgow_saf_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:AST_lithgow_saf_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:generic_motorized_mechanized_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:generic_artillery_organization
+	mark_older_equipment_obsolete = yes
 }
 
 add_equipment_to_stockpile = {

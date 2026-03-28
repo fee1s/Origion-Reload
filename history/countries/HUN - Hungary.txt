@@ -79,17 +79,6 @@ set_technology = {
 
 if = {
 	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
-
-if = {
-	limit = {
 		has_dlc = "Death or Dishonor"
 	}
 	add_ideas = {
@@ -144,6 +133,36 @@ recruit_character = HUN_gusztav_gratz
 recruit_character = HUN_otto_von_habsburg
 recruit_character = HUN_franz_friedrich
 recruit_character = HUN_ferenc_szalasi
+
+create_equipment_variant = {
+	type = infantry_equipment_1
+	design_team = mio:HUN_femaru_fegyver_es_gepgyar_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = support_equipment_1
+	design_team = mio:HUN_femaru_fegyver_es_gepgyar_organization
+	mark_older_equipment_obsolete = yes
+}
+
+create_equipment_variant = {
+	type = motorized_equipment_1
+	design_team = mio:HUN_mwg_raba_organization
+	mark_older_equipment_obsolete = yes
+}
+
+# create_equipment_variant = {
+# 	type = anti_air_equipment_1
+# 	design_team = mio:HUN_digep_artillery
+# 	mark_older_equipment_obsolete = yes
+# }
+
+create_equipment_variant = {
+	type = artillery_equipment_1
+	design_team = mio:HUN_digep_artillery
+	mark_older_equipment_obsolete = yes
+}
 
 add_equipment_to_stockpile = {
 	type = support_equipment_1
