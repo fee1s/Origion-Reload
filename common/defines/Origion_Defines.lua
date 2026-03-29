@@ -350,7 +350,10 @@ NDefines.NNavy.CONVOY_EFFICIENCY_LOSS_MODIFIER = 1
 NDefines.NNavy.CONVOY_EFFICIENCY_REGAIN_AFTER_DAYS = 5
 NDefines.NNavy.CONVOY_EFFICIENCY_REGAIN_BASE_SPEED = 0.05
 
-NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 1.5	-- Перемножает остальные статы на детект подлодок, скейлит детекд от кол-во самолетов в регионе. (ванила 1.0)
+NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_EXTERNAL_FACTOR = 1 -- Перемножает остальные статы на детект подлодок, скейлит детекд от кол-во самолетов в регионе. (ванила 1.0)
+
+NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_MAX = 25 -- Максимальное достижимое обнаружение подлодок от авиации (НЕ ОТ КОРАБЛЕЙ)
+NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_SLOPE = 25 -- Зависимость графика увеличения обнаружения от этого числа, больше - обнаружение медленее
 
 -- Новые дефайны флота после выхода 1.17 версии (в процессе баланса)
 
