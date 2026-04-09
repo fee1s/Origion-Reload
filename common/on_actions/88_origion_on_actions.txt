@@ -3,7 +3,11 @@ on_actions = {
 		effect ={ 
 			if = { 
 				limit = {
-					off_channel_coastline = yes
+					OR = {
+						off_channel_coastline = yes
+						can_no_asia_coastlines = yes
+						eng_no_asia_coastlines = yes
+					}
 				} 
 				teleport_armies = {
 					limit = {
@@ -20,7 +24,8 @@ on_actions = {
 					} 
 				}
 				PREV = { 
-					if = { limit = { OR = { off_channel_coastline = yes } } transfer_state_to = ENG }  
+					if = { limit = { OR = { off_channel_coastline = yes eng_no_asia_coastlines = yes } } transfer_state_to = ENG }  
+					if = { limit = { OR = { can_no_asia_coastlines = yes } } transfer_state_to = CAN }  
 				}				
 			}
 			if = { 
@@ -614,67 +619,6 @@ on_actions = {
 			}
 			every_state = {
 			    limit = {
-					is_core_of = ENG
-					is_in_home_area = yes
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_dm
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_hidden_dm
-					scope = GER
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_hidden_dm
-					scope = JAP
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_hidden_dm
-					scope = ITA
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_hidden_dm
-					scope = HUN
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_hidden_dm
-					scope = ROM
-				}
-				add_dynamic_modifier = {
-					modifier = sea_invasion_prohibited_ENG_hidden_dm
-					scope = BUL
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = ENG
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = USA
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = CAN
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = RAJ
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = SAF
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = AST
-				}
-				add_dynamic_modifier = { 
-					modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
-					scope = FRA
-				}
-			}
-			every_state = {
-			    limit = {
 					OR = {
 					    state = 44
 						state = 47
@@ -765,6 +709,68 @@ on_actions = {
 			    	    modifier = inappropriate_invasion_zone_JAP
 		    		}
 		    	}
+				every_state = {
+					limit = {
+						is_core_of = ENG
+						is_in_home_area = yes
+					}
+
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_dm
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_hidden_dm
+						scope = GER
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_hidden_dm
+						scope = JAP
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_hidden_dm
+						scope = ITA
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_hidden_dm
+						scope = HUN
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_hidden_dm
+						scope = ROM
+					}
+					add_dynamic_modifier = {
+						modifier = sea_invasion_prohibited_ENG_hidden_dm
+						scope = BUL
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = ENG
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = USA
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = CAN
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = RAJ
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = SAF
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = AST
+					}
+					add_dynamic_modifier = { 
+						modifier = sea_invasion_prohibited_ENG_hidden_2_dm 
+						scope = FRA
+					}
+				}			
 				every_state = {
 			        limit = {
 			    		OR = {
@@ -1072,6 +1078,18 @@ on_actions = {
 					give_resource_rights = {
 						receiver = CAN
 						state = 382
+					}
+				}
+				
+				every_state = {
+					limit = {
+						OR = {
+							can_no_asia_coastlines = yes
+							eng_no_asia_coastlines = yes
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = inappropriate_invasion_zone
 					}
 				}
 			}
