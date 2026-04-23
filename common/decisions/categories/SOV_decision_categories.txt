@@ -2,8 +2,21 @@
 #### SOVIET ####
 ################
 
-SOV_propaganda_campaigns = {
+SOV_operations = { 
 	priority = 100
+	
+	icon = GFX_decision_category_generic_communism
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+	visible = {
+		has_completed_focus = SOV_form_the_stavka
+	}
+}
+SOV_propaganda_campaigns = {
+	priority = 70
 
 	icon = SOV_propaganda
 

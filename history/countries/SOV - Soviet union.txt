@@ -224,6 +224,9 @@ set_variable = { SOV_fyp_production_oil_factor = 0 } #-> Oil Production
 set_variable = { SOV_fyp_industry_repair_factor = 0 } #-> Fourth Five Year Plan
 
 add_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
+add_dynamic_modifier = { modifier = SOV_the_politburo_good_dynamic_modifier }
+set_variable = { SOV_the_politburo_good_dynamic_modifier_surrender_limit_dm = 0.2 }
+
 
 
 #SOVIET AIRFORCE NATIONAL SPIRIT VARS
@@ -484,7 +487,6 @@ if = {
 set_country_flag = SOV_TEST_REMOVE_VANILLA_ADVISORS_flag
 
 add_ideas = {	
-	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_closed_eco
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)

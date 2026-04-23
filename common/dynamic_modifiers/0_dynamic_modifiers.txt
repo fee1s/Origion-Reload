@@ -586,6 +586,7 @@ SOV_second_five_year_plan_dynamic_modifier = { # Используется тол
 	production_speed_buildings_factor = SOV_fyp_production_speed_buildings_factor
 	global_building_slots_factor = SOV_fyp_global_building_slots_factor
 	consumer_goods_expected_value = SOV_fyp_consumer_goods_expected_value
+	production_speed_air_base_factor = SOV_fyp_production_speed_air_base_factor
 }
 
 SOV_ussr_academy_of_sciences_dynamic_modifier = { #NATIONAL SPIRIT
@@ -1020,7 +1021,7 @@ SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
 SOV_the_politburo_good_dynamic_modifier = {
 	enable = { always = yes }
 
-	icon = GFX_idea_POL_ideology_drift_defence
+	icon = SOV_soviet_railways
 	
 	#INITIAL
 	drift_defence_factor = SOV_the_politburo_drift_defence_factor #0.05
@@ -1041,6 +1042,10 @@ SOV_the_politburo_good_dynamic_modifier = {
 	operative_slot = SOV_the_politburo_operative_slot # 1 -> Behead the Snake
 	political_advisor_cost_factor = SOV_the_politburo_political_advisor_cost_factor #-0.15 -> Freedom of Debate, Unity of Action
 	opinion_gain_monthly_same_ideology_factor = SOV_the_politburo_opinion_gain_monthly_same_ideology_factor #0.25 -> The Construction of Communism
+	war_support_weekly_factor = SOV_the_politburo_good_dynamic_modifier_war_support_weekly_factor
+	political_power_factor = SOV_the_politburo_good_dynamic_modifier_political_power_factor_dm
+	stability_factor = SOV_the_politburo_good_dynamic_modifier_stability_factor_dm
+	surrender_limit = SOV_the_politburo_good_dynamic_modifier_surrender_limit_dm
 }
 
 SOV_factionalism_modifier = { 

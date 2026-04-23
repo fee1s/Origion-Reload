@@ -1258,5 +1258,62 @@ ideas = {
 	            }
 			}
 		}
+		
+		SOV_operation_bagration_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = GFX_HUN_the_rakosi_battalion_idea
+			modifier = {
+				army_attack_factor  = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.1
+				supply_consumption_factor = -0.1
+				army_speed_factor = 0.075
+			}
+		}
+		
+		SOV_operation_uran_idea = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = GFX_HUN_the_rakosi_battalion_idea
+			modifier = {
+				army_morale_factor = 0.075
+				breakthrough_factor = 0.075
+				army_org_factor = 0.05
+				army_speed_factor = 0.075
+			}
+		}
+		
+		SOV_winter_counteroffensive_idea = { 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = GFX_HUN_the_rakosi_battalion_idea
+			modifier = {
+				army_morale_factor = 0.05
+				breakthrough_factor = 0.05
+				winter_attrition_factor = -0.1
+				acclimatization_cold_climate_gain_factor = 0.1
+			}
+		}
+		
+		SOV_kursk_defensive_operation_idea = { 
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = GFX_HUN_the_rakosi_battalion_idea
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				max_dig_in = 2
+			}
+		}
+	
 	}
 }

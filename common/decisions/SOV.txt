@@ -10,6 +10,109 @@
 ##        ##     ##  #######  ##        ##     ##  ######   ##     ## ##    ## ########  ##     ##     ######  ##     ## ##     ## ##        ##     ## ####  ######   ##    ##
 
 
+SOV_operations = { 
+	SOV_operation_bagration_dec = {
+		icon = GFX_decision_generic_tank
+		priority = 1
+		visible = {
+			always = yes
+		}
+		
+		cost = 25
+		
+		allowed = {
+			original_tag = SOV
+		}
+		
+		available = {
+			has_completed_focus = SOV_operation_bagration
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_timed_idea = { idea = SOV_operation_bagration_idea days = 30 }
+		}
+	}
+	
+	SOV_operation_uran_dec = { 
+		icon = GFX_decision_generic_operation
+		priority = 3
+		visible = {
+			always = yes
+		}
+		
+		cost = 25
+		
+		allowed = {
+			original_tag = SOV
+		}
+		
+		available = {
+			has_completed_focus = SOV_operation_uran
+			date > 1942.10.1
+			date < 1942.12.1
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_timed_idea = { idea = SOV_operation_uran_idea days = 30 }
+		}
+	}
+	
+	SOV_winter_counteroffensive_dec = {
+		icon = GFX_decision_infiltrate_state
+		priority = 4
+		visible = {
+			always = yes
+		}
+		
+		cost = 25
+		
+		allowed = {
+			original_tag = SOV
+		}
+		
+		available = {
+			has_completed_focus = SOV_winter_counteroffensive
+			date > 1941.10.1
+			date < 1941.12.1
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_timed_idea = { idea = SOV_winter_counteroffensive_idea days = 30 }
+		}
+	}
+	
+	SOV_kursk_defensive_operation_dec = { 
+		icon = GFX_decision_generic_army_support
+		priority = 2
+		visible = {
+			always = yes
+		}
+		
+		cost = 25
+		
+		allowed = {
+			original_tag = SOV
+		}
+		
+		available = {
+			has_completed_focus = SOV_kursk_defensive_operation
+			date > 1943.7.1
+			date < 1943.9.1
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_timed_idea = { idea = SOV_kursk_defensive_operation_idea days = 30 }
+		}
+	}
+}
 SOV_propaganda_campaigns = {
 	SOV_debug_unlock_slot = {
 		priority = 59
@@ -134,30 +237,6 @@ SOV_propaganda_campaigns = {
 
 		icon = eng_propaganda_campaigns
 
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 1
-				surrender_progress > 0.4
-			}
-			modifier = {
-				add = 10
-				has_manpower < 500000
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_motherland_calls_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_motherland_calls_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_motherland_calls_cost > 90 } #Shouldn't even consider doing it a fifth time
-			}
-		}
-
 		allowed = {
 			original_tag = SOV
 		}
@@ -185,9 +264,9 @@ SOV_propaganda_campaigns = {
 		cost = SOV_propaganda_motherland_calls_cost
 
 		modifier = {
-			weekly_manpower = 1000
-			training_time_factor = -0.1
-			minimum_training_level = -0.1
+			army_org_factor = 0.05
+			out_of_supply_factor = -0.1
+			no_supply_grace = 70
 		}
 
 		complete_effect = {
@@ -204,75 +283,6 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_propaganda_cost = SOV_propaganda_motherland_calls_cost }
 			SOV_increase_propaganda_campaign_cost_effect = yes
 			set_variable = { SOV_propaganda_motherland_calls_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
-		}
-	}
-
-	SOV_propaganda_victory_at_hand = { # ID = 4
-		priority = 3
-
-		icon = eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_victory_at_hand_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_victory_at_hand_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_victory_at_hand_cost > 90 } #Shouldn't even consider doing it a fifth time
-			}
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			SOV_propaganda_poster_slot_available = yes
-
-			GER = { surrender_progress > 0.25 }
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = SOV_expand_the_agitprop
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
-		}
-
-		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
-
-		cost = SOV_propaganda_victory_at_hand_cost
-
-		modifier = {
-			army_attack_factor = 0.05
-			army_speed_factor = 0.1
-			org_loss_when_moving = -0.05
-		}
-
-		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 4 }
-			SOV_pick_propaganda_campaign_slot_effect = yes
-			SOV_achievement_propaganda_counter_effect = yes
-		}
-
-		remove_effect = {
-			set_variable = { SOV_propaganda_campaign_to_remove = 4 }
-			SOV_reset_propaganda_campaign_slot_effect = yes
-
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_victory_at_hand_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_victory_at_hand_cost = SOV_propaganda_cost }
 			clear_variable = SOV_propaganda_cost
 
 			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
@@ -355,95 +365,6 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_propaganda_cost = SOV_propaganda_defend_moscow_cost }
 			SOV_increase_propaganda_campaign_cost_effect = yes
 			set_variable = { SOV_propaganda_defend_moscow_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
-		}
-	}
-
-	SOV_propaganda_fight_to_the_last = { # ID = 6
-		priority = 5
-
-		icon = eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 0.75
-			modifier = {
-				factor = 10
-				OR = {
-					AND = {
-						stockpile_ratio = {
-							archetype = train_equipment
-							ratio < 0.75
-						}
-						stockpile_ratio = {
-							archetype = motorized_equipment
-							ratio < 0.75
-						}
-					}
-					stockpile_ratio = {
-						archetype = convoy
-						ratio < 5
-					}
-				}
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_fight_to_the_last_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_fight_to_the_last_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_fight_to_the_last_cost > 90 } #Shouldn't even consider doing it a fifth time
-			}
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			SOV_propaganda_poster_slot_available = yes
-			has_war = yes
-			surrender_progress > 0.1
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = SOV_expand_the_agitprop
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
-		}
-
-		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
-
-
-		cost = SOV_propaganda_fight_to_the_last_cost
-
-		modifier = {
-			army_org_factor = 0.05
-			out_of_supply_factor = -0.1
-			no_supply_grace = 70
-		}
-
-		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 6 }
-			SOV_pick_propaganda_campaign_slot_effect = yes
-			SOV_achievement_propaganda_counter_effect = yes
-		}
-
-		remove_effect = {
-			set_variable = { SOV_propaganda_campaign_to_remove = 6 }
-			SOV_reset_propaganda_campaign_slot_effect = yes
-
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_fight_to_the_last_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_fight_to_the_last_cost = SOV_propaganda_cost }
 			clear_variable = SOV_propaganda_cost
 
 			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
@@ -869,151 +790,6 @@ SOV_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_for_the_motherland = { # ID = 12
-		priority = 11
-
-		icon = eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 10
-				has_manpower < 300000
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					command_power < 25
-					has_army_experience < 25
-				}
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_for_the_motherland_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_for_the_motherland_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_for_the_motherland_cost > 90 } #Shouldn't even considered doing it a fifth time
-			}
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			SOV_propaganda_poster_slot_available = yes
-
-			has_completed_focus = SOV_lessons_of_war
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = SOV_positive_heroism
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
-		}
-
-		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
-
-		cost = SOV_propaganda_for_the_motherland_cost
-
-		modifier = {
-			breakthrough_factor = 0.075
-		}
-
-		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 12 }
-			SOV_pick_propaganda_campaign_slot_effect = yes
-			SOV_achievement_propaganda_counter_effect = yes
-		}
-
-		remove_effect = {
-			set_variable = { SOV_propaganda_campaign_to_remove = 12 }
-			SOV_reset_propaganda_campaign_slot_effect = yes
-
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_for_the_motherland_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_for_the_motherland_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
-		}
-	}
-
-	SOV_propaganda_heroes_forward = { # ID = 13
-		priority = 12
-
-		icon = eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_heroes_forward_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_heroes_forward_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_heroes_forward_cost > 90 } #Shouldn't even considered doing it a fifth time
-			}
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			SOV_propaganda_poster_slot_available = yes
-
-			has_war = yes
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = SOV_positive_heroism
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
-		}
-
-		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
-
-		cost = SOV_propaganda_heroes_forward_cost
-
-		modifier = {
-			army_morale_factor = 0.07
-		}
-
-		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 13 }
-			SOV_pick_propaganda_campaign_slot_effect = yes
-			SOV_achievement_propaganda_counter_effect = yes
-		}
-
-		remove_effect = {
-			set_variable = { SOV_propaganda_campaign_to_remove = 13 }
-			SOV_reset_propaganda_campaign_slot_effect = yes
-
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_heroes_forward_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_heroes_forward_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
-		}
-	}
-
 	SOV_propaganda_knowledge = { # ID = 19
 		priority = 18
 
@@ -1082,91 +858,5 @@ SOV_propaganda_campaigns = {
 			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
 		}
 	}
-
-	SOV_propaganda_builders_of_communism = { # ID = 20
-		priority = 19
-
-		icon = eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 10
-				has_war = no
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_builders_of_communism_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_builders_of_communism_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_builders_of_communism_cost > 90 } #Shouldn't even considered doing it a fifth time
-			}
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			SOV_propaganda_poster_slot_available = yes
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = SOV_the_komsomol
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
-		}
-
-		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
-
-		cost = SOV_propaganda_builders_of_communism_cost
-
-		modifier = {
-			research_speed_factor = 0.02
-			communism_drift = 0.1
-			opinion_gain_monthly_same_ideology_factor = 0.25
-		}
-
-		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 20 }
-			SOV_pick_propaganda_campaign_slot_effect = yes
-			SOV_achievement_propaganda_counter_effect = yes
-			custom_effect_tooltip = SOV_propaganda_builders_of_communism_effect_tt
-			if = {
-				limit = {
-					any_country = {
-						is_subject_of = ROOT
-					}
-				}
-				hidden_effect = {
-					every_country = {
-						limit = {
-							is_subject_of = ROOT
-						}
-						country_event = NSB_soviet_propaganda_capmaign_events.1
-					}
-				}
-			}
-		}
-
-		remove_effect = {
-			set_variable = { SOV_propaganda_campaign_to_remove = 20 }
-			SOV_reset_propaganda_campaign_slot_effect = yes
-
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_builders_of_communism_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_builders_of_communism_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
-		}
 	}
 }
