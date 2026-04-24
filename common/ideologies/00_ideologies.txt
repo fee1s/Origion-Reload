@@ -178,7 +178,6 @@ ideologies = {
 			}
 
 			anarchism = {
-				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
 
 			moderatism = {
@@ -207,7 +206,9 @@ ideologies = {
 			can_puppet = yes
 			can_send_volunteers = no
 		}
-
+		
+		can_collaborate = yes
+		
 		modifiers = {
 			civilian_intel_to_others = 150
 			army_intel_to_others = 150
