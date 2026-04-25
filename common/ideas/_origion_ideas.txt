@@ -1258,5 +1258,63 @@ ideas = {
 	            }
 			}
 		}
+		
+		dominion1_trade_idea = {
+				allowed = {
+					always = no
+				} 
+
+				removal_cost = -1
+				picture = SWE_the_gateway_to_peace
+
+				targeted_modifier = {
+					tag = CAN  
+					extra_trade_to_target_factor = 0.25
+				}
+				targeted_modifier = {
+					tag = ENG   
+					trade_cost_for_target_factor = -0.25
+				}
+			}
 	}
-}
+	
+	
+	
+	ideas = {
+		hidden_ideas = {	
+			dominion_trade_idea = {
+				allowed = {
+					always = no
+				} 
+
+				removal_cost = -1
+				picture = SWE_the_gateway_to_peace
+
+				targeted_modifier = {
+					tag = CAN  
+					extra_trade_to_target_factor = 0.25
+				}
+				targeted_modifier = {
+					tag = ENG   
+					trade_cost_for_target_factor = -0.25
+				}
+		
+			raj_dominion_trade_idea = {
+				allowed = {
+					always = no
+				} 
+
+				removal_cost = -1
+				picture = SWE_the_gateway_to_peace
+
+				targeted_modifier = {
+					tag = CAN  
+					extra_trade_to_target_factor = 0.5
+				}
+				targeted_modifier = {
+					tag = ENG   
+					trade_cost_for_target_factor = -0.25
+				}
+			}
+		}
+	}
