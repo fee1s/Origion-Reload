@@ -158,6 +158,8 @@ add_ideas = {
 	ENG_george_vi
 }
 
+add_ideas = { eng_dominion_trade_idea }
+
 add_dynamic_modifier = {modifier = ENG_stoyak}
 add_dynamic_modifier = {modifier = ENG_chiefs_of_staff}
 
@@ -179,16 +181,6 @@ if = {
 		target = RAJ
 		autonomous_state = autonomy_colony
 		freedom_level = 0.35
-	}
-	set_autonomy = {
-		target = CAN
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
-	}
-	set_autonomy = {
-		target = SAF
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.4
 	}
 	set_autonomy = {
 		target = AST
