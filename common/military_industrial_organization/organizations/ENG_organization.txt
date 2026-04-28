@@ -136,6 +136,7 @@ ENG_rsaf_enfield_organization = {
 					original_TAG = LAT
 					original_TAG = LIT
 					original_TAG = EST
+					original_TAG = SAF
 				}
 				has_dlc = "No Step Back"
 			}
@@ -158,9 +159,22 @@ ENG_vauxhall_automotive_organization = {
 	icon = GFX_idea_vauxhall
 	name = ENG_vauxhall_organization
 	
-	allowed = {	
-		tag = ENG
+	allowed = {
+		OR = {
+			tag = ENG
+			AND = {
+				OR = {
+					original_TAG = SAF
+					original_TAG = RAJ
+					original_TAG = CAN
+					
+				
+				}
+				has_dlc = "No Step Back"
+			}
+		}
 	}
+
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
@@ -190,6 +204,9 @@ ENG_royal_arsenal_organization = {
 					original_TAG = LAT
 					original_TAG = LIT
 					original_TAG = EST
+					original_TAG = CAN
+					original_TAG = SAF
+				
 				}
 				has_dlc = "No Step Back"
 			}

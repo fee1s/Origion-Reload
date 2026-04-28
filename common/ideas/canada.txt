@@ -668,46 +668,6 @@ ideas = {
 
 	industrial_concern = {
 
-
-
-		montreal_lab = {
-
-			picture = generic_industrial_concern_1
-
-			allowed = {
-				original_TAG = CAN
-				has_dlc = "Together for Victory"
-			}
-
-
-
-			research_bonus = {
-				electronics = 0.15
-			}
-
-			traits = { electronics_concern }
-
-			modifier = {
-			}
-		}
-
-		polymer_corporation = {
-
-			picture = generic_industrial_concern_2
-
-			allowed = {
-				original_tag = CAN
-				has_dlc = "Together for Victory"
-			}
-
-			research_bonus = {
-				synth_resources = 0.1
-				industry = 0.05
-			}
-
-			traits = { refinery_concern }
-		}
-
 		canadian_pacific_railway = {
 
 			picture = CAN_canadian_pacific_railway
@@ -722,10 +682,10 @@ ideas = {
 			}
 
 			research_bonus = {
-				industry = 0.05
+				industry = 0.15
 			}
 
-			traits = { railway_company }
+			traits = { industrial_concern }
 		}
 
 	}

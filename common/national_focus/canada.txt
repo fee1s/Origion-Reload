@@ -126,7 +126,7 @@
 	focus = {
 		id = CAN_dollar_a_year_men
 		icon = GFX_focus_SWI_issue_war_bonds
-		prerequisite = { focus = CAN_maritime_colonial_railway}
+		prerequisite = { focus = CAN_small_business_support}
 		relative_position_id = CAN_crown_corporations
 		x = 1
 		y = 3
@@ -776,8 +776,8 @@
 	}
 		
 	focus = {
-		id = CAN_maritime_colonial_railway
-		icon = GFX_focus_generic_low_cost_housing
+		id = CAN_small_business_support   
+		icon = GFX_focus_spa_the_spanish_miracle
 		prerequisite = { focus = CAN_national_housing_act }
 		x = 2
 		y = 2
@@ -1399,10 +1399,6 @@
 				factor = 5
 				is_subject = no 
 			}
-		}
-
-		available = {
-			has_completed_focus = CAN_canadian_defence_council
 		}
 		
 		bypass = {
