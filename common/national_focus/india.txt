@@ -1560,11 +1560,23 @@ focus_tree = {
 
 
 		
-		completion_reward = {
-			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
+		completion_reward = {	
+			set_politics = {
+				ruling_party = democratic
+			}
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.50
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = RAJ_jewel_of_the_british_crown_tt
 			add_to_variable = { 
-				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.1
+				RAJ_jewel_of_the_british_crown_dm_stability_factor = 0.2
 				tooltip = stability_factor_tt
 			}
 			
@@ -1573,6 +1585,7 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas = { raj_trade_idea }
 				add_ideas = { dominion_trade_idea }
+				set_cosmetic_tag = RAJ_UK_autonomy_dominion
 			}
 			
 		}
