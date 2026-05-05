@@ -376,6 +376,31 @@ on_actions = {
 	}
     on_startup = {
 		effect = {
+			SAF = {
+				SAF_adolf_malan = {
+					set_character_flag = camouflage_expert_not_allowed
+				}
+				SAF_dan_pienaar = {
+					set_character_flag = camouflage_expert_not_allowed
+				}
+			}
+			RAJ = {
+				RAJ_noel_beresfordpeirse = {
+					set_character_flag = camouflage_expert_not_allowed
+				}
+				RAJ_frank_messervy = {
+					set_character_flag = camouflage_expert_not_allowed
+				}
+			}
+			AST = {
+				AST_horace_robertson = {
+					set_character_flag = camouflage_expert_not_allowed
+				}
+				AST_iven_mackay = {
+					set_character_flag = camouflage_expert_not_allowed
+				}
+			}
+			
 			COL = {
 				give_resource_rights = {
 					receiver = USA
@@ -882,7 +907,7 @@ on_actions = {
 			996 = {
 				add_dynamic_modifier = {modifier = no_airfield_dm}
 			}
-	    }
+		}
 	}
 	on_weekly_USA = {
 	    effect = {
