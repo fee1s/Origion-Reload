@@ -372,9 +372,7 @@ focus_tree = {
 		relative_position_id = USA_wpa
 		
 		available_if_capitulated = yes
-		available = {
-			has_government = democratic
-		}
+		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 1
@@ -392,15 +390,19 @@ focus_tree = {
 		#	factor = 1
 		#}
 
+		
+		
 		available_if_capitulated = yes
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_research_slot = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = USA_manhattan_project
 				bonus = 1.0
 				uses = 1
-				technology = advanced_computing_machine
+				technology = improved_computing_machine
 			}
 		}
 	}
@@ -779,6 +781,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			mio:USA_chrysler_organization = {
+				add_mio_size = 5
+			}
 		}
 	}
 	focus = {
@@ -932,13 +938,6 @@ focus_tree = {
 				name = USA_tank_experiments
 				uses = 1
 				bonus = 1.0
-				technology = advanced_medium_tank_chassis
-				technology = advanced_heavy_tank_chassis
-			}
-			add_tech_bonus = {
-				name = USA_tank_experiments
-				uses = 1
-				bonus = 1.0
 				technology = amphibious_drive
 			}
 		}
@@ -961,8 +960,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			mio:USA_chrysler_organization = {
-				add_mio_size = 5
+			add_tech_bonus = {
+				name = USA_main_battle_tanks
+				uses = 1
+				bonus = 1.0
+				technology = advanced_medium_tank_chassis
+				technology = advanced_heavy_tank_chassis
 			}
 		}
 	}

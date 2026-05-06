@@ -366,7 +366,7 @@
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_research_slot = 1
+			
 		}
 	}
 	
@@ -1695,17 +1695,10 @@
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = AST_z_special_unit
-				bonus = 3.0
+				bonus = 1
 				uses = 2
-				category = marine_tech
-			}
-			add_tech_bonus = {
-				name = AST_z_special_unit
-				bonus = 2.0
-				uses = 2
-				technology = amphibious_tank_chassis
-				technology = amphibious_drive
+				technology = marines
+				technology = marines2
 			}
 		}
 	}

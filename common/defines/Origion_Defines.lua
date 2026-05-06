@@ -25,6 +25,8 @@ NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 30
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 
+NDefines.NMilitary.PREFERRED_TACTIC_COMMAND_POWER_COST = 0 -- Предпочитаемые тактики стоят 0 телефонов
+
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 NDefines.NMilitary.TRAINING_ATTRITION = 0.00
 

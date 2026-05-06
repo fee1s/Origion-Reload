@@ -1,0 +1,113 @@
+FRA_deployment_cat = {
+	FRA_main_deployment = {
+			icon = GFX_decision_eng_blackshirt_speech
+
+			allowed = {
+				tag = FRA
+			}
+
+			fire_only_once = yes
+			
+			available = {
+				has_war = no
+				custom_trigger_tooltip = {
+					tooltip = FRA_main_deployment_trigger_tt
+					if = { limit = { FRA = { exists = yes } }
+						FRA = { has_manpower > 152999 }
+					}
+				}
+			}
+
+			complete_effect = {
+				custom_effect_tooltip = FRA_main_deployment_tt
+				hidden_effect = {
+					if = { limit = { FRA = { exists = yes } }
+						FRA = {
+							add_manpower = -153000
+							load_oob = "FRA_main_auto_deployment"
+						}
+					}
+				}
+			}
+		}
+		
+		#FRA_atlantik_deployment = {
+		#	icon = GFX_decision_eng_blackshirt_speech
+		#
+		#	allowed = {
+		#		tag = FRA
+		#	}
+		#	
+		#	fire_only_once = yes
+		#	
+		#	available = {
+		#		has_global_flag = french_company_ended
+		#		custom_trigger_tooltip = {
+		#			tooltip = FRA_main_deployment_trigger_tt
+		#			if = { limit = { FRA = { exists = yes } }
+		#			FRA = { has_manpower > 27999 }
+		#			}
+		#		}
+		#		custom_trigger_tooltip = {
+		#			tooltip = FRA_control_atlantik_deployment_tt
+		#			933 = { is_controlled_by_allies = yes } 
+		#			337 = { is_controlled_by_allies = yes }  
+		#			100 = { is_controlled_by_allies = yes }  
+		#			101 = { is_controlled_by_allies = yes }  
+		#			698 = { is_controlled_by_allies = yes }  
+		#			697 = { is_controlled_by_allies = yes } 
+		#			178 = { is_controlled_by_allies = yes } 
+		#			702 = { is_controlled_by_allies = yes }
+		#			687 = { is_controlled_by_allies = yes } 
+		#			309 = { is_controlled_by_allies = yes }  
+		#			310 = { is_controlled_by_allies = yes }  
+		#			696 = { is_controlled_by_allies = yes }  
+		#			685 = { is_controlled_by_allies = yes }  
+		#			
+		#		}
+		#	}
+		#
+		#	complete_effect = {
+		#		custom_effect_tooltip = FRA_atlantik_deployment_tt
+		#		hidden_effect = {
+		#			if = { limit = { FRA = { exists = yes } }
+		#				FRA = {
+		#					add_manpower = -28000
+		#					load_oob = "FRA_atlantik_auto_deployment"
+		#				}
+		#			}
+		#		}
+		#	}
+		#}
+		
+		FRA_africa_deployment = {
+			icon = GFX_decision_eng_blackshirt_speech
+
+			allowed = {
+				tag = FRA
+			}
+			
+			fire_only_once = yes
+			
+			available = {
+				has_global_flag = french_company_ended
+				date < 1940.6.1
+				custom_trigger_tooltip = {
+					tooltip = FRA_main_deployment_trigger_tt
+					if = { limit = { FRA = { exists = yes } }
+						FRA = { has_manpower > 23999 }
+					}
+				}
+			}
+
+			complete_effect = {
+				custom_effect_tooltip = FRA_africa_deployment_tt 
+				hidden_effect = {
+					FRA = {
+						add_manpower = -24000
+						load_oob = "FRA_africa_auto_deployment" 
+					}
+				}
+			}
+		}
+}
