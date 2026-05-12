@@ -1054,6 +1054,9 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
+			available = {
+				
+			}
 			visible = {
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
@@ -1112,7 +1115,7 @@ characters = {
 			}
 			visible = { always = yes }
 			traits = {
-				technocrat 
+				smooth_talking_charmer
 			}
 		}
 	}
@@ -1134,17 +1137,20 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
+			available = { 
+				has_completed_focus = SOV_gosplan_ussr
+			}
 			visible = {
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
 				}
 			}
 			available = {
-				has_completed_focus = SOV_finish_the_five_year_plan 
+				
 			}
 			
 			traits = {
-				smooth_talking_charmer 
+				war_industrialist  
 			}
 		}
 	}

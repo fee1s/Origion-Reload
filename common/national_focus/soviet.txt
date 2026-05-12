@@ -21,7 +21,7 @@ focus_tree = {
 		x = 18
 		y = 1
 		relative_position_id = SOV_country_of_victorious_socialism 
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SOV_country_of_victorious_socialism }
 
@@ -31,8 +31,6 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 150
-			navy_experience = 150
-			air_experience = 150
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -40,6 +38,10 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_the_red_army_conscription_factor = 0.15
 				tooltip = conscription_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
 			}
 		}
 	}
@@ -84,10 +86,6 @@ focus_tree = {
 			    SOV_the_red_army_land_reinforce_rate = 0.02
 				tooltip = land_reinforce_rate_tt
 			}
-			add_to_variable = { 
-			    SOV_the_red_army_army_morale_factor = 0.1
-				tooltip = army_morale_factor_tt
-			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
@@ -100,7 +98,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		cost = 5
 
 		available = {
 			OR = {
@@ -367,7 +365,6 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = SOV_rehabilitated_military }
 		prerequisite = { focus = SOV_cohesion_first }
-		prerequisite = { focus = SOV_improve_the_stalin_line }
 		x = -1
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
@@ -1530,35 +1527,154 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_finish_the_five_year_plan
+		id = SOV_line_kazan_kuibyshev
+		icon = GFX_focus_generic_total_war
+		prerequisite = { focus = SOV_the_defense_of_moscow }
+		prerequisite = { focus = SOV_southern_frontier }
+		relative_position_id = SOV_impregnable_forts
+		x = -1
+		y = 2
+		cost = 2
+		
+		available = {
+			251 = {
+				is_controlled_by = ROOT
+			}
+			249 = {
+				is_controlled_by = ROOT
+			}
+			
+		}
+		
+		bypass = {
+			NOT = {
+				217	 = {
+					is_controlled_by = ROOT  
+				}
+			}
+		}
+		
+		completion_reward = {
+			251 = {
+				if = {
+					limit = {
+						ROOT = { controls_province = 11225 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11225
+						instant_build = yes
+					}
+					}
+				if = {
+					limit = {
+						ROOT = { controls_province = 9299 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9299
+						instant_build = yes
+					}
+				}
+			}
+			250 = { 		
+				if = {
+					limit = {
+						ROOT = { controls_province = 11319 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11319
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { controls_province = 3382 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3382
+						instant_build = yes
+					}
+				}
+			}
+			249 = { 
+				if = {
+					limit = {
+						ROOT = { controls_province = 11339 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 11339
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { controls_province = 372 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 372
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { controls_province = 6338 }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6338
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_forced_industrialization
 
-		icon = GFX_SOV_finish_the_five_year_plan_ccp_2d_sov_compatibility
-		x = -2
+		icon = GFX_SOV_paced_industrialization_ccp_2d_sov_compatibility
+		x = -3
 		y = 1
 		cost = 10
 
 		available = {
-			date > 1936.12.1
+			date > 1936.6.1
 		}
 		
 		prerequisite = { focus = SOV_country_of_victorious_socialism }
 		relative_position_id = { SOV_country_of_victorious_socialism}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = { 
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = { 
+			    SOV_economy_dm_production_speed_buildings_factor_dm = 0.1
+				tooltip = production_speed_buildings_factor_tt
+			}	
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_core_state = {
 				limit = {
 					OR = {
-						state = 220
-						state = 240
+						state = 572
+						state = 582
 					}
 				}
 				random_select_amount = 2
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1640,22 +1756,12 @@ focus_tree = {
 		relative_position_id = SOV_people_commissariat_of_aircraft_construction
 		cost = 5
 
-		available = {
-
-		}
-		
-		search_filters = {}
-
 		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_soviet_airforce_air_range_factor = 0.05
-				tooltip = air_range_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_soviet_airforce_air_agility_factor = 0.05
-				tooltip = air_agility_factor_tt
-			}
+			    SOV_economy_dm_production_speed_air_base_factor_dm = 0.05
+				tooltip = production_speed_air_base_factor_tt
+			}		
 		}
 	}
 
@@ -1705,14 +1811,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_production_factory_max_efficiency_factor = 0.025
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			
 			add_to_variable = { 
-			    SOV_fyp_production_factory_efficiency_gain_factor = -0.025
+			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			
@@ -1721,10 +1827,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOV_pc_of_mechanical_engineering_name_default
 				bonus = 1
-				uses = 3
+				uses = 2
 				technology = improved_infantry_weapons_2
 				technology = advanced_infantry_weapons
-				technology = mechanised_infantry
 			}
 		}
 	}
@@ -1734,7 +1839,7 @@ focus_tree = {
 
 		icon = GFX_focus_PER_construct_air_defenses
 		prerequisite = { focus = SOV_peoples_commissariat_of_armament }
-		x = 0
+		x = 2
 		y = 2
 		relative_position_id = SOV_peoples_commissariat_of_armament
 		cost = 5
@@ -1782,7 +1887,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = SOV_pc_of_mortar_armament_name_default
-				bonus = 0.1
+				bonus = 0.5
 				uses = 2
 				technology = support_weapons3
 				technology = support_weapons4
@@ -1800,44 +1905,6 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = SOV_peoples_commissariat_of_supply 
-
-		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_peoples_commissariat_of_armament }
-		x = 2
-		y = 2
-		relative_position_id = SOV_peoples_commissariat_of_armament
-		cost = 5
-
-		available = {
-			has_full_control_of_state = 239
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_pc_of_mortar_armament_name_default
-				bonus = 0.1
-				uses = 4
-				technology = tech_flamethrower_brigade3
-				technology = tech_flamethrower_brigade4
-				technology = mechanised_infantry2
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			239 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
 	
 	focus = {
 		id = SOV_the_means_to_wage_war
@@ -1917,36 +1984,39 @@ focus_tree = {
 		id = SOV_third_five_year_plan
 
 		icon = GFX_SOV_third_five_year_plan_ccp_2d_sov_compatibility
-		x = -24
+		x = -1
 		y = 1
-		relative_position_id = SOV_country_of_victorious_socialism
+		relative_position_id = SOV_forced_industrialization
 		cost = 10
 		
 		available = {
-			date > 1938.1.1
+			
 		}
 		
-		prerequisite = { focus = SOV_country_of_victorious_socialism }
+		prerequisite = { focus = SOV_forced_industrialization }
 
-		completion_reward = {	
-		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
-			add_to_variable = { 
-			    SOV_fyp_production_factory_efficiency_gain_factor = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
+		completion_reward = { 
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 572
+						state = 582
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
-			add_to_variable = { 
-			    SOV_fyp_consumer_goods_factor = 0.05
-				tooltip = consumer_goods_factor_tt
-			}
-			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
 			add_tech_bonus = {
-				name = SOV_third_five_year_plan_default
-				bonus = 0.75
-				uses = 2
-				technology = construction4
-				technology = excavation4
+				name = SOV_third_five_year_plan
+				bonus = 1.0
+				uses = 1
+				technology = concentrated_industry4
 			}
 		}
 	}
@@ -1956,29 +2026,31 @@ focus_tree = {
 
 		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_third_five_year_plan }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
-			add_to_variable = { 
-			    SOV_fyp_consumer_goods_factor = -0.05
-				tooltip = consumer_goods_factor_tt
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 217
+						state = 229
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-			
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_tech_bonus = {
-				name = SOV_reorganize_the_pc_of_heavy_industry_name_default
-				bonus = 1.0
-				uses = 1
-				technology = concentrated_industry4
-			}
 			add_tech_bonus = {
 				name = SOV_reorganize_the_pc_of_heavy_industry_name_default
 				bonus = 1.0
@@ -1998,21 +2070,13 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
 		cost = 10
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {		
-		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+		    custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_production_factory_max_efficiency_factor = 0.05
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
-			
-			add_to_variable = { 
-			    SOV_fyp_line_change_production_efficiency_factor = 0.1
-				tooltip = line_change_production_efficiency_factor_tt
-			}
-			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_industrial_modernization
@@ -2028,20 +2092,27 @@ focus_tree = {
 		id = SOV_increase_state_reserves
 
 		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry }
-		x = -1
-		y = 2
-		relative_position_id = SOV_third_five_year_plan
+		prerequisite = { focus = SOV_the_ussr_academy_of_sciences }
+		x = 1
+		y = 1
+		relative_position_id = SOV_the_ussr_academy_of_sciences
 		cost = 5
 
 		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+		    custom_effect_tooltip = SOV_economy_dm_tt 
 			add_to_variable = { 
-			    SOV_fyp_local_resources_factor = 0.1
+			    SOV_economy_dm_local_resources_factor_dm = 0.05
 				tooltip = local_resources_factor_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_tech_bonus = {
+				name = SOV_increase_state_reserves
+				bonus = 0.5
+				uses = 1
+				technology = excavation4
+			}
 		}
 	}
 
@@ -2049,40 +2120,28 @@ focus_tree = {
 		id = SOV_steel_casting_industry
 
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry }
-		x = 1
-		y = 1
-		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
+		prerequisite = { focus = SOV_third_five_year_plan}
+		x = 0
+		y = 2
+		relative_position_id = SOV_third_five_year_plan
 		cost = 5
 
 		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
-			add_to_variable = { 
-			    SOV_fyp_industrial_capacity_factory = 0.05
+		    custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = {
+				SOV_economy_dm_industrial_capacity_factory_dm = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
-			
 			add_to_variable = { 
-			    SOV_fyp_industrial_capacity_dockyard = 0.05
+				SOV_economy_dm_industrial_capacity_dockyard_dm = 0.05
 				tooltip = industrial_capacity_dockyard_tt
 			}
-			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			every_core_state = {
-				limit = {
-					state = 351
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_resource = {
-					type = steel
-					amount = 10
-				}
+			add_tech_bonus = {
+				name = SOV_steel_casting_industry
+				bonus = 0.75
+				uses = 1
+				technology = construction4
 			}
 		}
 	}
@@ -2091,21 +2150,22 @@ focus_tree = {
 		id = SOV_national_specialists
 
 		icon = GFX_focus_SOV_breadbasket_of_the_union
-		prerequisite = { focus = SOV_finish_the_five_year_plan }
-		x = 0
+		prerequisite = { focus = SOV_forced_industrialization }
+		x = 1
 		y = 1
-		relative_position_id = SOV_finish_the_five_year_plan
+		relative_position_id = SOV_forced_industrialization
 		cost = 10
 
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = stalingrad_tractor_factory
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = {
+				SOV_economy_dm_global_building_slots_factor_dm = 0.2
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = { 
+				SOV_economy_dm_consumer_goods_expected_value_dm = -0.025
+				tooltip = consumer_goods_expected_tt
+			}
 		}
 	}
 
@@ -2170,13 +2230,15 @@ focus_tree = {
 			}
 		}
 	}
+	
+	
 
 	focus = {
 		id = SOV_the_ussr_academy_of_sciences
 
 		icon = GFX_SOV_the_ussr_academy_of_sciences_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_eastern_development }
-		prerequisite = { focus = SOV_develop_the_urals }
+		#	prerequisite = { focus = SOV_eastern_development }
+		prerequisite = { focus = SOV_national_specialists }
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
@@ -2194,30 +2256,22 @@ focus_tree = {
 	focus = {
         id = SOV_glavoenstroy 
         icon = GFX_SOV_architect_of_communism_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_industrial_modernization }
 		prerequisite = { focus = SOV_the_ussr_academy_of_sciences }
+		prerequisite = { focus = SOV_steel_casting_industry }
 		relative_position_id = SOV_third_five_year_plan
-        x = 2
-        y = 4
-		cost = 3
+        x = 1
+        y = 3
+		cost = 5
     
 	    available = {
 			has_completed_focus = SOV_form_the_stavka
 		}
 		
 		completion_reward = {		
-		   custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_production_speed_air_base_factor = 0.05
-				tooltip = production_speed_air_base_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_fyp_production_speed_bunker_factor = 0.05
-				tooltip = production_speed_bunker_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_fyp_production_speed_coastal_bunker_factor = 0.05
-				tooltip = production_speed_coastal_bunker_factor_tt
+			    SOV_economy_dm_industrial_capacity_factory_dm = 0.025
+				tooltip = industrial_capacity_factory_tt
 			}
 		}
 		 
@@ -2227,7 +2281,7 @@ focus_tree = {
 		id = SOV_revive_the_stakhanovite_movement
 		icon = GFX_focus_generic_public_works
 		prerequisite = { focus = SOV_glavoenstroy }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_glavoenstroy
 		cost = 10
@@ -2237,45 +2291,85 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_industrial_capacity_factory = 0.03
+			    SOV_economy_dm_industrial_capacity_factory_dm = 0.025
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-			    SOV_fyp_industrial_capacity_dockyard = 0.03
-				tooltip = industrial_capacity_dockyard_tt
+			    SOV_economy_dm_local_resources_factor_dm = 0.025
+				tooltip = local_resources_factor_tt
 			}
 		}
 	}
 	
-	#focus = {
-		id = SOV_leningrad_polytechnical_institute
-		icon = GFX_focus_research2
+	focus = {
+		id = SOV_gosplan_ussr  
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = SOV_reorganize_the_pc_of_heavy_industry }
+		x = -1
+		y = 1
+		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SOV_lazar_kaganovich
+		}
+	}
+	
+	focus = {
+		id = SOV_revive_the_stakhanovite_movement1
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_glavoenstroy }
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = SOV_glavoenstroy
 		cost = 10
-		dynamic = yes 
+
 		available = {
 
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = { 
+			    SOV_economy_dm_consumer_goods_expected_value_dm = -0.025
+				tooltip = consumer_goods_expected_tt
+			}
+			add_to_variable = { 
+			    SOV_economy_dm_local_resources_factor_dm = 0.025
+				tooltip = local_resources_factor_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_leningrad_polytechnical_institute
+		icon = GFX_focus_research2
+		prerequisite = { focus = SOV_glavoenstroy }
+		x = 0
+		y = 2
+		relative_position_id = SOV_glavoenstroy
+		cost = 5
+		
+		available = {
+			
 		}
 
 		completion_reward = {
 			add_research_slot = 1
 		}
-	#}
+	}
 	
 	focus = {
 		id = SOV_synthetic_rubber
 
 		icon = GFX_SOV_synthetic_rubber_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_glavoenstroy }
-		relative_position_id = SOV_glavoenstroy
-		x = -1
+		relative_position_id = SOV_steel_casting_industry
+		x = -2
 		y = 2
-		cost = 2
+		cost = 5
 
 		completion_reward = {	
 			modify_building_resources = {
@@ -2301,9 +2395,9 @@ focus_tree = {
 		id = SOV_oil_production
 		icon = GFX_SOV_oil_production_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_glavoenstroy }
-		x = 1
-		y = 2
-		cost = 3
+		x = 3
+		y = 1
+		cost = 5
 		relative_position_id = SOV_glavoenstroy
 
 		completion_reward = {
@@ -2326,6 +2420,8 @@ focus_tree = {
 			}
 		}
 	}
+	
+	
 
 	focus = {
 		id = SOV_found_the_pcdi
@@ -2345,15 +2441,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_production_factory_max_efficiency_factor = 0.05
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
-			}
-			
-			add_to_variable = { 
-			    SOV_fyp_production_factory_efficiency_gain_factor = -0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 		
@@ -2370,25 +2461,25 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_production_factory_max_efficiency_factor = 0.025
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			
 			add_to_variable = { 
-			    SOV_fyp_production_factory_efficiency_gain_factor = -0.025
+			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			add_tech_bonus = {
-					name = GER_soviet_treaty
+					name = SOV_pc_of_mechanical_engineering
 					bonus = 1.0
-					uses = 1
-					technology = improved_medium_tank_chassis
-					technology = improved_heavy_tank_chassis
+					uses = 2
+					technology = mechanised_infantry
+					technology = mechanised_infantry2
 				}
 		}
 	}
@@ -2401,7 +2492,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 			
@@ -2429,8 +2520,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_bulldozer_blade  
-
-		icon = GFX_SOV_the_means_to_wage_war_ccp_2d_sov_compatibility
+		icon = GFX_focus_PHI_battalion_combat_teams
 		prerequisite = { focus = SOV_pc_of_mechanical_engineering }
 		x = 1
 		y = 1
@@ -2463,57 +2553,8 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_development_of_tankograd_factories_tt
-			#This is just for tooltip purposes
-			effect_tooltip = {
-				every_owned_state = {
-					limit = {
-						is_on_continent = asia
-						arms_factory  2
-						free_building_slots = {
-							building = arms_factory
-							size  1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-
-			#Actual effects
-			set_temp_variable = { temp_targets_index = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { temp_targets_index = 10 compare = less_than }
-				}
-				hidden_effect = {
-					random_owned_state = {
-						limit = {
-							is_on_continent = asia
-							arms_factory  2
-							free_building_slots = {
-								building = arms_factory
-								size  1
-								include_locked = yes
-							}
-							NOT = { has_state_flag = SOV_development_of_tankograd_flag }
-						}
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-						set_state_flag = SOV_development_of_tankograd_flag
-						add_to_temp_variable = { SOV.temp_targets_index = 1 }
-						#log = Round [SOV.temp_targets_index]
-					}
-				}
+			mio:SOV_okmo_organization = {
+				add_mio_size = 3
 			}
 		}
 	}
@@ -2546,7 +2587,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_merge_tank_and_materiel_plants
+		id = SOV_merge_tank_plants
 
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = SOV_development_of_tankograd focus = SOV_soviet_artillery }
@@ -2557,42 +2598,37 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = Arms Against Tyranny
-				}
-				#TANKS
-				every_military_industrial_organization = {
-					limit = {
-						has_mio_trait = SOV_mio_trait_merge_plant_no_174 #All Tank MIOs have this trait
-					}
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_174
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_112
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_ural_heavy_machine_building_plant
-				}
+			okmo = { unlock_mio_trait_tooltip } 
+		}	
+				
+				
+			
+		
+	}
+	
+	focus = {
+		id = SOV_merge_materiel_plants
 
-				#MATERIEL
-				every_military_industrial_organization = {
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = SOV_peoples_commissariat_of_armament }
+
+		x = 0
+		y = 2
+		relative_position_id = SOV_peoples_commissariat_of_armament
+		cost = 5
+
+		completion_reward = {
+			every_military_industrial_organization = {
 					limit = {
 						has_mio_trait = SOV_mio_trait_merge_nkmz_plant #All Materiel MIOs have this trait
 					}
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_nkmz_plant
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
 				}
-				mioSOV_grabin_design_bureau_organization = {
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_172
-				}
-				mioSOV_tula_arms_plant_organization = {
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_622
-				}
-				mioSOV_gaz_organization = {
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_automobile_tool_plant
-				}
-			}
-			else = {
-				custom_effect_tooltip = SOV_merge_tank_and_materiel_plants_tt
-			}
+				
 		}
+		
 	}
 	
 	
@@ -2828,14 +2864,6 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_the_red_army_army_morale_factor = 0.1
 				tooltip = army_morale_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			custom_effect_tooltip = SOV_stavka_dm_tt
-			add_to_variable = { 
-			    SOV_stavka_dm_surrender_limit_tt = 0.2
-				tooltip = surrender_limit_tt
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3186,7 +3214,9 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_airforce_modifier_tt
+		    air_experience = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_modify_airforce_modifier_tt
 			add_to_variable = { 
 			    SOV_soviet_airforce_air_accidents_factor = -0.25
 				tooltip = air_accidents_factor_tt
@@ -3194,6 +3224,14 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_soviet_airforce_air_weather_penalty = -0.1
 				tooltip = air_weather_penalty_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_range_factor = 0.05
+				tooltip = air_range_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_soviet_airforce_air_agility_factor = 0.05
+				tooltip = air_agility_factor_tt
 			}
 		}
 	}
@@ -3364,7 +3402,7 @@ focus_tree = {
 		cost = 2
     
 	    available = {
-			date > 1941.10.1
+			
 		}
 		
 		completion_reward = {		
@@ -3380,7 +3418,7 @@ focus_tree = {
         x = 1
         y = 1
 		relative_position_id = SOV_the_sacred_war
-		cost = 10
+		cost = 5
     
 	    available = {
 			date > 1942.1.1
@@ -3543,7 +3581,7 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_kursk_defensive_operation
-		icon = GFX_focus_attack_germany
+		icon = GFX_focus_generic_sabotage
 		prerequisite = { focus = SOV_lessons_of_war }
 		x = 3
 		y = 1
@@ -3569,7 +3607,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			
+			date > 1943.6.1
 		}
 
 		completion_reward = {	
@@ -3632,8 +3670,12 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
 			add_stability = 0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -3647,16 +3689,12 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 50
 			add_stability = 0.1
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
 		}
 	}
 	
-	focus = {
+	#focus = {
 		id = SOV_expand_the_agitprop
 		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = SOV_politburo_of_the_ussr }
@@ -3666,46 +3704,38 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 25
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
+			custom_effect_tooltip = SOV_politburo_dm_tt
+			add_to_variable = {  
+			    SOV_politburo_war_support_weekly_factor_dm = 0.5
+				tooltip = war_support_weekly_factor_tt
 			}
-
-			hidden_effect = {
-				SOV_unlock_propaganda_campaign_slot_effect = yes
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			unlock_decision_category_tooltip = SOV_propaganda_campaigns
 		}
-	}
+	#}
 	
 	focus = {
 		id = SOV_socialism_in_one_country
 		icon = GFX_focus_SOV_socialism_in_one_country
-		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
+		prerequisite = { focus = SOV_politburo_of_the_ussr }
 		x = -2
 		y = 1
-		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 10
+		relative_position_id = SOV_politburo_of_the_ussr
+		cost = 5
 
-		completion_reward = {
-				
-			custom_effect_tooltip = SOV_secure_the_administration_ns_tt
-			
-			add_to_variable = { SOV_the_politburo_economy_cost_factor = -0.2 }
-			add_to_variable = { SOV_the_politburo_trade_laws_cost_factor = -0.2 }
-			add_to_variable = { SOV_the_politburo_mobilization_laws_cost_factor = -0.2 }
-			
+		completion_reward = {	
+			custom_effect_tooltip = SOV_politburo_dm_tt
+			add_to_variable = {  
+			    SOV_politburo_dm_surrender_limit_dm = 0.2
+				tooltip = surrender_limit_tt
+			}
+			add_to_variable = {  
+			    SOV_politburo_dm_war_support_weekly_factor_dm = 0.004
+				tooltip =war_support_weekly_factor_tt
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_political_power = 75
 		}
 	}
 
-	focus = {
+	#focus = {
 		id = SOV_the_collectivization_process
 		icon = GFX_SOV_reverse_the_collectivization_process_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_socialism_in_one_country }
@@ -3719,13 +3749,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_production_speed_buildings_factor = 0.1 }
-			add_to_variable = { SOV_fyp_global_building_slots_factor = 0.1 }
-			add_to_variable = { SOV_fyp_consumer_goods_expected_value = -0.03 }
-
-			custom_effect_tooltip = SOV_the_collectivization_process_ns_tt
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = {
+				SOV_economy_global_building_slots_factor_dm = 0.15
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = { 
+				SOV_economy_consumer_goods_factor_dm = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
 		}
-	}
+	#}
 	
 	focus = {
 		id = SOV_nkvd_primacy
@@ -3734,17 +3768,17 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 2
+		cost = 5
 	
 		completion_reward = {
-			custom_effect_tooltip = SOV_the_politburo_good_dynamic_modifier_tt
+			custom_effect_tooltip = SOV_politburo_dm_tt
 			add_to_variable = { 
-			    SOV_the_politburo_defensive_war_stability_factor = 0.4
-				tooltip = defensive_war_stability_factor_tt
+				SOV_politburo_dm_economy_cost_factor_dm = -0.2
+				tooltip = economy_cost_factor_tt
 			}
 			add_to_variable = { 
-			    SOV_the_politburo_good_dynamic_modifier_war_support_weekly_factor = 0.5
-				tooltip = war_support_weekly_factor_tt
+				SOV_politburo_dm_mobilization_laws_cost_factor_dm = -0.2
+				tooltip = mobilization_laws_cost_factor_tt
 			}
 		}
 	}
@@ -3756,18 +3790,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_politburo_of_the_ussr
-		cost = 10
+		cost = 5
 
 		available = {
 			has_completed_focus = SOV_komsomol
 		}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_politburo_political_power_factor = 0.05 }
-			custom_effect_tooltip = SOV_the_stalin_constitution_ns_tt
-
-			add_political_power = 50
-			add_stability = 0.05
+			custom_effect_tooltip = SOV_politburo_dm_tt
+			add_to_variable = { 
+				SOV_politburo_dm_political_power_factor_dm = 0.05	
+				tooltip = political_power_factor_tt
+			}
 		}
 	}
 
@@ -3812,24 +3846,79 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_positive_heroism
-		icon = GFX_SOV_positive_heroism_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = -1
+		id = SOV_development_of_sovhoz
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
+		x = -2
 		y = 1
-		relative_position_id = SOV_expand_the_agitprop
+		relative_position_id = SOV_the_zinovyevite_terrorist_center
 		cost = 10
 
 		completion_reward = {
-			add_political_power = 25
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
-			SOV_unlock_propaganda_campaign_slot_effect = yes 
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = { 
+			    SOV_economy_dm_production_speed_buildings_factor_dm = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}	
+			add_to_variable = { 
+				SOV_economy_dm_consumer_goods_expected_value_dm = -0.015
+				tooltip = consumer_goods_expected_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_use_gulagsman
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SOV_development_of_sovhoz }
+		x = -1
+		y = 1
+		relative_position_id = SOV_development_of_sovhoz
+		cost = 10
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+		completion_reward = {
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = { 
+			    SOV_economy_dm_local_resources_factor_dm = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				SOV_economy_dm_industrial_capacity_factory_dm = 0.015
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+	
+	#focus = {
+		id = SOV_use_labor_gulag_prisoners
+		icon = GFX_focus_eng_imperial_federation
+		prerequisite = { focus = SOV_order_00447 }
+		x = -1
+		y = 1
+		relative_position_id = SOV_order_00447
+		cost = 10
+		
+		available = { 
+			date > 1939.1.1
+		}
+		
+		completion_reward = { 
+			
 
+			add_war_support = 0.25
+		}
+	#}
+	
+	focus = {
+		id = SOV_positive_heroism
+		icon = GFX_SOV_positive_heroism_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_socialism_in_one_country }
+		x = -1
+		y = 1
+		relative_position_id = SOV_socialism_in_one_country
+		cost = 10
+
+		completion_reward = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = konstantin_rokossovsky 
 		}
@@ -3858,35 +3947,30 @@ focus_tree = {
 			}
 		}
 	
-		completion_reward = {
-			set_country_flag = SOV_second_moscow_trial_flag
-			swap_ideas = {
-				remove_idea = trotskyite_plot_nsb
-				add_idea = trotskyite_plot_fmp
+		completion_reward = { 
+			set_country_flag = SOV_second_moscow_trial_flag 
+			custom_effect_tooltip = SOV_politburo_dm_tt
+			add_to_variable = { 
+				SOV_politburo_dm_political_power_factor_dm = 0.05 
+				tooltip = political_power_factor_tt
 			}
+			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = SOV_the_workers_dictatorship
 		icon = GFX_SOV_the_workers_dictatorship_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center }
+		prerequisite = { focus = SOV_nkvd_primacy }
 		x = 1
-		y = 2
-		relative_position_id = SOV_the_anti_soviet_trotskyist_center
+		y = 1
+		relative_position_id = SOV_nkvd_primacy
 		cost = 5
-
 		
 		completion_reward = {
-			add_to_variable = { SOV_the_politburo_political_power_factor = 0.05 }
-			custom_effect_tooltip = SOV_the_workers_dictatorship_ns_tt
-
+			add_stability = 0.1
+			add_war_support = 0.1
 			add_political_power = 50
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = SOV_propaganda_knowledge
 		}
 	}
 	
@@ -3904,12 +3988,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.05
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
+			add_political_power = 50
+			add_war_support = 0.1
 		}
 	}
 	
@@ -3938,6 +4018,7 @@ focus_tree = {
 			
 		completion_reward = {
 			hidden_effect = {
+				set_country_flag = SOV_beriya_focus_flag
 				SOV_nikolay_yezhov = {
 					SOV_purge_character_effect = yes
 				}
@@ -3963,39 +4044,62 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			date > 1944.1.1
+			has_country_flag = {
+				flag = SOV_beriya_focus_flag
+				days > 175
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_last_purge_focus_days_military_tt
+				has_country_flag = {
+					flag = SOV_beriya_focus_flag 
+					days > 175
+				}
+			}
 		}
 			
 		completion_reward = {
-			deactivate_advisor = SOV_lavrenty_beriya
+			custom_effect_tooltip = SOV_beriya_swap_tt
+			#hidden_effect = { 
+				remove_trait = {
+					character = SOV_lavrenty_beriya
+					slot = political_advisor
+					trait = head_of_the_nkvd_beriya_initial
+				}
+			#}
+			add_trait = {
+					character = SOV_lavrenty_beriya
+					slot  = political_advisor
+					trait = head_of_the_nkvd_beriya_good_modifier
+				}
 		}
 	}
 
 	focus = {
-		id = SOV_behead_the_snake
+		id = SOV_behead_the_snake 
 		icon = GFX_focus_SOV_behead_the_snake
-		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites } 
-		x = -3
+		prerequisite = { focus = SOV_the_anti_soviet_trotskyist_center } 
+		x = 1
 		y = 2
-		relative_position_id = SOV_nkvd_primacy
+		relative_position_id = SOV_the_anti_soviet_trotskyist_center
 		cost = 5
 
 		completion_reward = {
-			remove_ideas = trotskyite_plot_fmp
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_political_power = 25
+			custom_effect_tooltip = SOV_politburo_dm_tt
+			add_to_variable = { 
+				SOV_politburo_dm_political_power_factor_dm = 0.1 
+				tooltip = political_power_factor_tt
+			}
+			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = SOV_secret_protocol_of_the_MR_pact
 		icon = GFX_focus_SOV_the_supreme_soviet 
-		prerequisite = {  focus = SOV_nkvd_primacy }
-		x = 1
+		prerequisite = {  focus = SOV_the_bloc_of_rights_and_trotskyites }
+		x = -1
 		y = 1
-		relative_position_id = SOV_nkvd_primacy
+		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
 		cost = 4
 
 		ai_will_do = {

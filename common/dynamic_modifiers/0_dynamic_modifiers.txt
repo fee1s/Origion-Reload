@@ -1048,6 +1048,73 @@ SOV_the_politburo_good_dynamic_modifier = {
 	surrender_limit = SOV_the_politburo_good_dynamic_modifier_surrender_limit_dm
 }
 
+SOV_politburo_dm = { 
+	icon = GFX_idea_generic_communism_drift_bonus
+	
+	political_power_factor  = SOV_politburo_dm_political_power_factor_dm
+	stability_factor = SOV_politburo_dm_stability_factor_dm
+	economy_cost_factor = SOV_politburo_dm_economy_cost_factor_dm
+	mobilization_laws_cost_factor = SOV_politburo_dm_mobilization_laws_cost_factor_dm
+	defensive_war_stability_factor = SOV_politburo_dm_defensive_war_stability_factor_dm
+	war_support_weekly_factor = SOV_politburo_dm_war_support_weekly_factor_dm
+	surrender_limit = SOV_politburo_dm_surrender_limit_dm
+	research_speed_factor = SOV_politburo_dm_research_speed_factor_dm
+}
+
+SOV_economy_dm = { 
+	
+	icon = GFX_idea_SOV_third_five_year_plan_civilian_ccp_2d_sov_compatibility
+	
+	consumer_goods_expected_value = SOV_economy_dm_consumer_goods_expected_value_dm
+	production_speed_buildings_factor = SOV_economy_dm_production_speed_buildings_factor_dm
+	global_building_slots_factor = SOV_economy_dm_global_building_slots_factor_dm
+	production_factory_max_efficiency_factor = SOV_economy_dm_production_factory_max_efficiency_factor_dm
+	production_factory_efficiency_gain_factor = SOV_economy_dm_production_factory_efficiency_gain_factor_dm
+	production_speed_arms_factory_factor = SOV_economy_dm_production_speed_arms_factory_factor_dm
+	production_speed_air_base_factor = SOV_economy_dm_production_speed_air_base_factor_dm
+	industrial_capacity_dockyard = SOV_economy_dm_industrial_capacity_dockyard_dm
+	industrial_capacity_factory = SOV_economy_dm_industrial_capacity_factory_dm
+	local_resources_factor = SOV_economy_dm_local_resources_factor_dm
+	
+	
+	
+}
+
+
+
+SOV_second_five_year_plan_dynamic_modifier = { # Используется только этот
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_third_five_year_plan_civilian_ccp_2d_sov_compatibility
+
+	#PREVIOUS
+	production_factory_efficiency_gain_factor = SOV_fyp_production_factory_efficiency_gain_factor #-0.1
+	production_factory_max_efficiency_factor = SOV_fyp_production_factory_max_efficiency_factor #0.05
+	consumer_goods_factor = SOV_fyp_consumer_goods_factor #0.08
+	production_speed_industrial_complex_factor = SOV_fyp_production_speed_industrial_complex_factor #0.1
+	industrial_concern_cost_factor = SOV_fyp_industrial_concern_cost_factor #-0.15
+	
+	#EXTRA IMPROVEMENTS
+	local_resources_factor = SOV_fyp_local_resources_factor #0.10 -> Increase State Reserves
+	line_change_production_efficiency_factor = SOV_fyp_line_change_production_efficiency_factor #0.1 -> Industrial Modernization
+	industrial_capacity_factory = SOV_fyp_industrial_capacity_factory #0.05 -> Steel Casting Industry / Shift to Armaments Production
+	production_speed_arms_factory_factor = SOV_fyp_production_speed_arms_factory_factor #0.10
+	production_factory_start_efficiency_factor = SOV_fyp_production_factory_start_efficiency_factor #0.05 -> Optimize Production Lines
+	industrial_capacity_dockyard = SOV_fyp_industrial_capacity_dockyard #0.05 -> Steel Casting Industry
+	fuel_gain_factor_from_states = SOV_fyp_fuel_gain_factor_from_states #0.05 -> Oil Production
+	production_oil_factor = SOV_fyp_production_oil_factor #0.05 -> Oil Production
+	production_speed_bunker_factor =  SOV_fyp_production_speed_bunker_factor
+	production_speed_coastal_bunker_factor =  SOV_fyp_production_speed_coastal_bunker_factor
+	materiel_manufacturer_cost_factor = SOV_fyp_materiel_manufacturer_cost_factor
+	land_equipment_upgrade_xp_cost = SOV_fyp_land_equipment_upgrade_xp_cost
+	tank_manufacturer_cost_factor = SOV_fyp_tank_manufacturer_cost_factor
+	production_speed_buildings_factor = SOV_fyp_production_speed_buildings_factor
+	global_building_slots_factor = SOV_fyp_global_building_slots_factor
+	consumer_goods_expected_value = SOV_fyp_consumer_goods_expected_value
+	production_speed_air_base_factor = SOV_fyp_production_speed_air_base_factor
+}
+
+
 SOV_factionalism_modifier = { 
 	enable = { always = yes }
 

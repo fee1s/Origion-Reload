@@ -15,24 +15,6 @@ SOV_operations = {
 		has_completed_focus = SOV_form_the_stavka
 	}
 }
-SOV_propaganda_campaigns = {
-	priority = 70
-
-	icon = SOV_propaganda
-
-	scripted_gui = sov_propaganda_campaigns_ui
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		OR = {
-			has_completed_focus = SOV_expand_the_agitprop
-			has_country_flag = SOV_debug_show_propaganda_system_flag #Debug
-		}
-	}
-}
 
 SOV_industry_relocation = {
 
