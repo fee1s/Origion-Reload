@@ -487,8 +487,13 @@
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = ITA_fiat_organization
+			add_tech_bonus = {
+				name = wuw_HUN_license_fiat_tankettes
+				bonus = 1.0
+				uses = 2
+				technology = armor_tech_3
+				technology = engine_tech_3
+			}
 		}
 	}
 
@@ -1789,14 +1794,6 @@
 				uses = 1
 				technology = advanced_medium_tank_chassis
 				technology = advanced_heavy_tank_chassis
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_tech_bonus = {
-				name = HUN_develop_tanks
-				bonus = 1.0
-				uses = 2
-				technology = armor_tech_3
-				technology = engine_tech_3
 			}
 		}
 	}
