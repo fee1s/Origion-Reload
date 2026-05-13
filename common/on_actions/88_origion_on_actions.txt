@@ -172,6 +172,24 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					ROOT = { ORIGION_is_in_faction_with_axis = yes }
+					FROM = { tag = SOV }
+					FROM.FROM = {
+						is_owned_by = SOV
+						OR = {
+							SOV_is_industrial_relocation_first_wave = yes
+							SOV_is_industrial_relocation_second_wave = yes
+							SOV_is_industrial_relocation_third_wave = yes
+						}
+						NOT = { has_state_flag = SOV_after_combat }
+					}
+				}
+				FROM.FROM = {
+					set_state_flag = SOV_after_combat
+				}
+			}
+			if = {
+				limit = {
 					OR = {
 						TAG = ENG
 						TAG = USA

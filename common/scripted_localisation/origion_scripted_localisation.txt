@@ -1737,3 +1737,4184 @@ defined_text = {
         localization_key = "origion.26.a"
     }
 }
+
+
+
+#Эвакуционные регионы первой волны
+
+defined_text = {
+    name = GetEvacRed192
+    text = {
+        trigger = {
+            192 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_192
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow192
+    text = {
+        trigger = {
+            192 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_192
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed190
+    text = {
+        trigger = {
+            190 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_190
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow190
+    text = {
+        trigger = {
+            190 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_190
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed189
+    text = {
+        trigger = {
+            189 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_189
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow189
+    text = {
+        trigger = {
+            189 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_189
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed809
+    text = {
+        trigger = {
+            809 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_809
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow809
+    text = {
+        trigger = {
+            809 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_809
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed815
+    text = {
+        trigger = {
+            815 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_815
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow815
+    text = {
+        trigger = {
+            815 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_815
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed11
+    text = {
+        trigger = {
+            11 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_11
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow11
+    text = {
+        trigger = {
+            11 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_11
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed784
+    text = {
+        trigger = {
+            784 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_784
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow784
+    text = {
+        trigger = {
+            784 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_784
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+
+defined_text = {
+    name = GetEvacRed814
+    text = {
+        trigger = {
+            814 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_814
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow814
+    text = {
+        trigger = {
+            814 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_814
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed97
+    text = {
+        trigger = {
+            97 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_97
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow97
+    text = {
+        trigger = {
+            97 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_97
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed96
+    text = {
+        trigger = {
+            96 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_96
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow96
+    text = {
+        trigger = {
+            96 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_96
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed95
+    text = {
+        trigger = {
+            95 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_95
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow95
+    text = {
+        trigger = {
+            95 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_95
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+
+defined_text = {
+    name = GetEvacRed94
+    text = {
+        trigger = {
+            94 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_94
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow94
+    text = {
+        trigger = {
+            94 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_94
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed93
+    text = {
+        trigger = {
+            93 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_93
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow93
+    text = {
+        trigger = {
+            93 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_93
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed80
+    text = {
+        trigger = {
+            80 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_80
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow80
+    text = {
+        trigger = {
+            80 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_80
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed78
+    text = {
+        trigger = {
+            78 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_78
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow78
+    text = {
+        trigger = {
+            78 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_78
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed766
+    text = {
+        trigger = {
+            766 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_766
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow766
+    text = {
+        trigger = {
+            766 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_766
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed201
+    text = {
+        trigger = {
+            201 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_201
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow201
+    text = {
+        trigger = {
+            201 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_201
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed91
+    text = {
+        trigger = {
+            91 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_91
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow91
+    text = {
+        trigger = {
+            91 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_91
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed89
+    text = {
+        trigger = {
+            89 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_89
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow89
+    text = {
+        trigger = {
+            89 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_89
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed199
+    text = {
+        trigger = {
+            199 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_199
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow199
+    text = {
+        trigger = {
+            199 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_199
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed198
+    text = {
+        trigger = {
+            198 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_198
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow198
+    text = {
+        trigger = {
+            198 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_198
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed834
+    text = {
+        trigger = {
+            834 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_834
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow834
+    text = {
+        trigger = {
+            834 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_834
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacGreen192
+    text = {
+        trigger = {
+            192 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_192
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen192
+    text = {
+        trigger = {
+            192 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_192
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen834
+    text = {
+        trigger = {
+            834 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_834
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen198
+    text = {
+        trigger = {
+            198 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_198
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen199
+    text = {
+        trigger = {
+            199 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_199
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen89
+    text = {
+        trigger = {
+            89 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_89
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen91
+    text = {
+        trigger = {
+            91 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_91
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen201
+    text = {
+        trigger = {
+            201 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_201
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen766
+    text = {
+        trigger = {
+            766 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_766
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen78
+    text = {
+        trigger = {
+            78 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_78
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen80
+    text = {
+        trigger = {
+            80 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_80
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen93
+    text = {
+        trigger = {
+            93 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_93
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen94
+    text = {
+        trigger = {
+            94 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_94
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen97
+    text = {
+        trigger = {
+            97 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_97
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen95
+    text = {
+        trigger = {
+            95 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_95
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen814
+    text = {
+        trigger = {
+            814 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_814
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen96
+    text = {
+        trigger = {
+            96 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_96
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen784
+    text = {
+        trigger = {
+            784 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_784
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen11
+    text = {
+        trigger = {
+            11 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_11
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen815
+    text = {
+        trigger = {
+            815 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_815
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen809
+    text = {
+        trigger = {
+            809 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_809
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen189
+    text = {
+        trigger = {
+            189 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_189
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen190
+    text = {
+        trigger = {
+            190 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_190
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Эвакуционные регионы второй волны
+defined_text = {
+    name = GetEvacRed811
+    text = {
+        trigger = {
+            811 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_811
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow811
+    text = {
+        trigger = {
+            811 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_811
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed812
+    text = {
+        trigger = {
+            812 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_812
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow812
+    text = {
+        trigger = {
+            812 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_812
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed813
+    text = {
+        trigger = {
+            813 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_813
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow813
+    text = {
+        trigger = {
+            813 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_813
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed13
+    text = {
+        trigger = {
+            13 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_13
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow13
+    text = {
+        trigger = {
+            13 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_13
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed191
+    text = {
+        trigger = {
+            191 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_191
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow191
+    text = {
+        trigger = {
+            191 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_191
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed12
+    text = {
+        trigger = {
+            12 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_12
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow12
+    text = {
+        trigger = {
+            12 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_12
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed808
+    text = {
+        trigger = {
+            808 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_808
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow808
+    text = {
+        trigger = {
+            808 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_808
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed810
+    text = {
+        trigger = {
+            810 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_810
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow810
+    text = {
+        trigger = {
+            810 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_810
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed208
+    text = {
+        trigger = {
+            208 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_208
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow208
+    text = {
+        trigger = {
+            208 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_208
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed209
+    text = {
+        trigger = {
+            209 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_209
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow209
+    text = {
+        trigger = {
+            209 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_209
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed210
+    text = {
+        trigger = {
+            210 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_210
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow210
+    text = {
+        trigger = {
+            210 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_210
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed207
+    text = {
+        trigger = {
+            207 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_207
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow207
+    text = {
+        trigger = {
+            207 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_207
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed242
+    text = {
+        trigger = {
+            242 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_242
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow242
+    text = {
+        trigger = {
+            242 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_242
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed206
+    text = {
+        trigger = {
+            206 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_206
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow206
+    text = {
+        trigger = {
+            206 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_206
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed204
+    text = {
+        trigger = {
+            204 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_204
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow204
+    text = {
+        trigger = {
+            204 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_204
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed241
+    text = {
+        trigger = {
+            241 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_241
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow241
+    text = {
+        trigger = {
+            241 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_241
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed243
+    text = {
+        trigger = {
+            243 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_243
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow243
+    text = {
+        trigger = {
+            243 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_243
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed194
+    text = {
+        trigger = {
+            194 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_194
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow194
+    text = {
+        trigger = {
+            194 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_194
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed224
+    text = {
+        trigger = {
+            224 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_224
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow224
+    text = {
+        trigger = {
+            224 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_224
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed202
+    text = {
+        trigger = {
+            202 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_202
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow202
+    text = {
+        trigger = {
+            202 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_202
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed193
+    text = {
+        trigger = {
+            193 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_193
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow193
+    text = {
+        trigger = {
+            193 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_193
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed225
+    text = {
+        trigger = {
+            225 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_225
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow225
+    text = {
+        trigger = {
+            225 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_225
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed203
+    text = {
+        trigger = {
+            203 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_203
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow203
+    text = {
+        trigger = {
+            203 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_203
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed259
+    text = {
+        trigger = {
+            259 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_259
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow259
+    text = {
+        trigger = {
+            259 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_259
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed197
+    text = {
+        trigger = {
+            197 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_197
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow197
+    text = {
+        trigger = {
+            197 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_197
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed226
+    text = {
+        trigger = {
+            226 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_226
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow226
+    text = {
+        trigger = {
+            226 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_226
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed221
+    text = {
+        trigger = {
+            221 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_221
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow221
+    text = {
+        trigger = {
+            221 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_221
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed196
+    text = {
+        trigger = {
+            196 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_196
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow196
+    text = {
+        trigger = {
+            196 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_196
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed200
+    text = {
+        trigger = {
+            200 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_200
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow200
+    text = {
+        trigger = {
+            200 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_200
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed227
+    text = {
+        trigger = {
+            227 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_227
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow227
+    text = {
+        trigger = {
+            227 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_227
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed228
+    text = {
+        trigger = {
+            228 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_228
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow228
+    text = {
+        trigger = {
+            228 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_228
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed137
+    text = {
+        trigger = {
+            137 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_137
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow137
+    text = {
+        trigger = {
+            137 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_137
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen137
+    text = {
+        trigger = {
+            137 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_137
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen228
+    text = {
+        trigger = {
+            228 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_228
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen227
+    text = {
+        trigger = {
+            227 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_227
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen200
+    text = {
+        trigger = {
+            200 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_200
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen196
+    text = {
+        trigger = {
+            196 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_196
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen221
+    text = {
+        trigger = {
+            221 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_221
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen226
+    text = {
+        trigger = {
+            226 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_226
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen197
+    text = {
+        trigger = {
+            197 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_197
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen259
+    text = {
+        trigger = {
+            259 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_259
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen203
+    text = {
+        trigger = {
+            203 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_203
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen225
+    text = {
+        trigger = {
+            225 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_225
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen193
+    text = {
+        trigger = {
+            193 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_193
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen202
+    text = {
+        trigger = {
+            202 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_202
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen224
+    text = {
+        trigger = {
+            224 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_224
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen194
+    text = {
+        trigger = {
+            194 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_194
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen243
+    text = {
+        trigger = {
+            243 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_243
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen241
+    text = {
+        trigger = {
+            241 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_241
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen204
+    text = {
+        trigger = {
+            204 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_204
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen206
+    text = {
+        trigger = {
+            206 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_206
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen242
+    text = {
+        trigger = {
+            242 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_242
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen207
+    text = {
+        trigger = {
+            207 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_207
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen210
+    text = {
+        trigger = {
+            210 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_210
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen209
+    text = {
+        trigger = {
+            209 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_209
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen208
+    text = {
+        trigger = {
+            208 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_208
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen810
+    text = {
+        trigger = {
+            810 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_810
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen808
+    text = {
+        trigger = {
+            808 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_808
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen12
+    text = {
+        trigger = {
+            12 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_12
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen191
+    text = {
+        trigger = {
+            191 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_191
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen13
+    text = {
+        trigger = {
+            13 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_13
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen813
+    text = {
+        trigger = {
+            813 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_813
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen812
+    text = {
+        trigger = {
+            812 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_812
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen811
+    text = {
+        trigger = {
+            811 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_811
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+
+
+
+#Эвакуционные регионы третьей волны
+defined_text = {
+    name = GetEvacRed229
+    text = {
+        trigger = {
+            229 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_229
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow229
+    text = {
+        trigger = {
+            229 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_229
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen229
+    text = {
+        trigger = {
+            229 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_229
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed230
+    text = {
+        trigger = {
+            230 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_230
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow230
+    text = {
+        trigger = {
+            230 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_230
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen230
+    text = {
+        trigger = {
+            230 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_230
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed232
+    text = {
+        trigger = {
+            232 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_232
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow232
+    text = {
+        trigger = {
+            232 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_232
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen232
+    text = {
+        trigger = {
+            232 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_232
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed231
+    text = {
+        trigger = {
+            231 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_231
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow231
+    text = {
+        trigger = {
+            231 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_231
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen231
+    text = {
+        trigger = {
+            231 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_231
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed828
+    text = {
+        trigger = {
+            828 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_828
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow828
+    text = {
+        trigger = {
+            828 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_828
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen828
+    text = {
+        trigger = {
+            828 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_828
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed236
+    text = {
+        trigger = {
+            236 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_236
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow236
+    text = {
+        trigger = {
+            236 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_236
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen236
+    text = {
+        trigger = {
+            236 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_236
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed237
+    text = {
+        trigger = {
+            237 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_237
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow237
+    text = {
+        trigger = {
+            237 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_237
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen237
+    text = {
+        trigger = {
+            237 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_237
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed235
+    text = {
+        trigger = {
+            235 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_235
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow235
+    text = {
+        trigger = {
+            235 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_235
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen235
+    text = {
+        trigger = {
+            235 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_235
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed234
+    text = {
+        trigger = {
+            234 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_234
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow234
+    text = {
+        trigger = {
+            234 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_234
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen234
+    text = {
+        trigger = {
+            234 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_234
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed217
+    text = {
+        trigger = {
+            217 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_217
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow217
+    text = {
+        trigger = {
+            217 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_217
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen217
+    text = {
+        trigger = {
+            217 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_217
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed238
+    text = {
+        trigger = {
+            238 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_238
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow238
+    text = {
+        trigger = {
+            238 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_238
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen238
+    text = {
+        trigger = {
+            238 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_238
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed218
+    text = {
+        trigger = {
+            218 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_218
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow218
+    text = {
+        trigger = {
+            218 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_218
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen218
+    text = {
+        trigger = {
+            218 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_218
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed245
+    text = {
+        trigger = {
+            245 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_245
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow245
+    text = {
+        trigger = {
+            245 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_245
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen245
+    text = {
+        trigger = {
+            245 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_245
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed989
+    text = {
+        trigger = {
+            989 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_989
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow989
+    text = {
+        trigger = {
+            989 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_989
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen989
+    text = {
+        trigger = {
+            989 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_989
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed265
+    text = {
+        trigger = {
+            265 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_265
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow265
+    text = {
+        trigger = {
+            265 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_265
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen265
+    text = {
+        trigger = {
+            265 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_265
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed260
+    text = {
+        trigger = {
+            260 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_260
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow260
+    text = {
+        trigger = {
+            260 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_260
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen260
+    text = {
+        trigger = {
+            260 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_260
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed240
+    text = {
+        trigger = {
+            240 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_240
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow240
+    text = {
+        trigger = {
+            240 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_240
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen240
+    text = {
+        trigger = {
+            240 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_240
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed239
+    text = {
+        trigger = {
+            239 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_239
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow239
+    text = {
+        trigger = {
+            239 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_239
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen239
+    text = {
+        trigger = {
+            239 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_239
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed257
+    text = {
+        trigger = {
+            257 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_257
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow257
+    text = {
+        trigger = {
+            257 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_257
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen257
+    text = {
+        trigger = {
+            257 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_257
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed258
+    text = {
+        trigger = {
+            258 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_258
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow258
+    text = {
+        trigger = {
+            258 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_258
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen258
+    text = {
+        trigger = {
+            258 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_258
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed220
+    text = {
+        trigger = {
+            220 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_220
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow220
+    text = {
+        trigger = {
+            220 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_220
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen220
+    text = {
+        trigger = {
+            220 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_220
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed222
+    text = {
+        trigger = {
+            222 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_222
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow222
+    text = {
+        trigger = {
+            222 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_222
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen222
+    text = {
+        trigger = {
+            222 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_222
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed255
+    text = {
+        trigger = {
+            255 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_255
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow255
+    text = {
+        trigger = {
+            255 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_255
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen255
+    text = {
+        trigger = {
+            255 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_255
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed254
+    text = {
+        trigger = {
+            254 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_254
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow254
+    text = {
+        trigger = {
+            254 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_254
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen254
+    text = {
+        trigger = {
+            254 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_254
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed223
+    text = {
+        trigger = {
+            223 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_223
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow223
+    text = {
+        trigger = {
+            223 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_223
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen223
+    text = {
+        trigger = {
+            223 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_223
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed205
+    text = {
+        trigger = {
+            205 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_205
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow205
+    text = {
+        trigger = {
+            205 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_205
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen205
+    text = {
+        trigger = {
+            205 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_205
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed252
+    text = {
+        trigger = {
+            252 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_252
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow252
+    text = {
+        trigger = {
+            252 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_252
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen252
+    text = {
+        trigger = {
+            252 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_252
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed253
+    text = {
+        trigger = {
+            253 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_253
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow253
+    text = {
+        trigger = {
+            253 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_253
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen253
+    text = {
+        trigger = {
+            253 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_253
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed219
+    text = {
+        trigger = {
+            219 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_219
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow219
+    text = {
+        trigger = {
+            219 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_219
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen219
+    text = {
+        trigger = {
+            219 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_219
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed988
+    text = {
+        trigger = {
+            988 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_988
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow988
+    text = {
+        trigger = {
+            988 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_988
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen988
+    text = {
+        trigger = {
+            988 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_988
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed248
+    text = {
+        trigger = {
+            248 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_248
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow248
+    text = {
+        trigger = {
+            248 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_248
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen248
+    text = {
+        trigger = {
+            248 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_248
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed247
+    text = {
+        trigger = {
+            247 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_247
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow247
+    text = {
+        trigger = {
+            247 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_247
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen247
+    text = {
+        trigger = {
+            247 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_247
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed246
+    text = {
+        trigger = {
+            246 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_246
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow246
+    text = {
+        trigger = {
+            246 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_246
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen246
+    text = {
+        trigger = {
+            246 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_246
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed264
+    text = {
+        trigger = {
+            264 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_264
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow264
+    text = {
+        trigger = {
+            264 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_264
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen264
+    text = {
+        trigger = {
+            264 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_264
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed244
+    text = {
+        trigger = {
+            244 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_244
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow244
+    text = {
+        trigger = {
+            244 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_244
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen244
+    text = {
+        trigger = {
+            244 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_244
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed263
+    text = {
+        trigger = {
+            263 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_263
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow263
+    text = {
+        trigger = {
+            263 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_263
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen263
+    text = {
+        trigger = {
+            263 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_263
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed195
+    text = {
+        trigger = {
+            195 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_195
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow195
+    text = {
+        trigger = {
+            195 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_195
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen195
+    text = {
+        trigger = {
+            195 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_195
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+
+defined_text = {
+    name = GetEvacRed146
+    text = {
+        trigger = {
+            146 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				NOT = { is_fully_controlled_by = ROOT }
+            }
+        }
+        localization_key = SOV_ev_name_146
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacYellow146
+    text = {
+        trigger = {
+            146 = {
+                NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { controller = { has_war_with = ROOT } }
+            }
+        }
+        localization_key = SOV_ev_name_146
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}
+defined_text = {
+    name = GetEvacGreen146
+    text = {
+        trigger = {
+            146 = {
+				NOT = { has_state_flag = SOV_evacuation_finished_flag }
+				NOT = { has_state_flag = SOV_after_combat }
+				is_fully_controlled_by = ROOT
+				NOT = {	any_neighbor_state = { controller = { has_war_with = SOV } } }
+            }
+        }
+        localization_key = SOV_ev_name_146
+    }
+    text = { trigger = { always = yes } localization_key = SOV_empty_ev }
+}

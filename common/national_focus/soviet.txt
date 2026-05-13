@@ -3060,7 +3060,9 @@ focus_tree = {
 		search_filters = {}
 		select_effect = {
 			hidden_effect = {
-				soviet_starts_evacuation = yes
+				activate_mission = SOV_auto_industry_relocation_first_wave_mission
+				activate_mission = SOV_auto_industry_relocation_second_wave_mission
+				activate_mission = SOV_auto_industry_relocation_third_wave_mission
 				add_ideas = SOV_desperate_measures_ns		
 			}
 		}
