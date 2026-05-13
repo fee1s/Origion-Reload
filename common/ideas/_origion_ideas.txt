@@ -1264,13 +1264,13 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = GFX_HUN_the_rakosi_battalion_idea
+			picture = GFX_idea_tur_kemalism_with_socialist_characteristics
 			modifier = {
 				army_attack_factor  = 0.1
 				army_defence_factor = 0.1
 				breakthrough_factor = 0.1
 				supply_consumption_factor = -0.1
-				army_speed_factor = 0.075
+				army_speed_factor = 0.1
 			}
 		}
 		
@@ -1279,7 +1279,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = GFX_HUN_the_rakosi_battalion_idea
+			picture = GFX_tur_kemalism_with_socialist_characteristics
 			modifier = {
 				army_morale_factor = 0.075
 				breakthrough_factor = 0.075
@@ -1293,8 +1293,9 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = GFX_HUN_the_rakosi_battalion_idea
+			picture = GFX_tur_kemalism_with_socialist_characteristics
 			modifier = {
+				army_org_factor = 0.05
 				army_morale_factor = 0.05
 				breakthrough_factor = 0.05
 				winter_attrition_factor = -0.1
@@ -1307,11 +1308,11 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = GFX_HUN_the_rakosi_battalion_idea
+			picture = GFX_tur_kemalism_with_socialist_characteristics
 			modifier = {
-				army_morale_factor = 0.05
+				army_morale_factor = 0.1
 				army_org_factor = 0.05
-				max_dig_in = 2
+				max_dig_in = 5
 			}
 		}
 	

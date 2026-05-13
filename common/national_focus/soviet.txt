@@ -39,10 +39,6 @@ focus_tree = {
 			    SOV_the_red_army_conscription_factor = 0.15
 				tooltip = conscription_factor_tt
 			}
-			add_to_variable = { 
-			    SOV_the_red_army_army_morale_factor = 0.1
-				tooltip = army_morale_factor_tt
-			}
 		}
 	}
 	
@@ -66,6 +62,10 @@ focus_tree = {
 			    SOV_the_red_army_army_org_factor = 0.05
 				tooltip = army_org_factor_tt
 			}
+			add_to_variable = { 
+			    SOV_the_red_army_org_loss_at_low_org_factor = -0.15
+				tooltip = org_loss_at_low_org_factor_orgn_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
@@ -86,6 +86,10 @@ focus_tree = {
 			    SOV_the_red_army_land_reinforce_rate = 0.02
 				tooltip = land_reinforce_rate_tt
 			}
+			add_to_variable = { 
+			    SOV_the_red_army_army_morale_factor = 0.1
+				tooltip = army_morale_factor_tt
+			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
@@ -101,259 +105,234 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			OR = {
-				controls_state = 209
-				controls_state = 210
-				controls_state = 207
-				controls_state = 206
-				controls_state = 202
-				controls_state = 203
-				controls_state = 834
-				controls_state = 192
-				controls_state = 224
-				controls_state = 207
-				controls_state = 242
-			}
-		}
-		
-		bypass = {
-			NOT = {
-				controls_state = 209
-				controls_state = 210
-				controls_state = 207
-				controls_state = 206
-				controls_state = 202
-				controls_state = 203
-				controls_state = 834
-				controls_state = 192
-				controls_state = 224
-				controls_state = 207
-				controls_state = 242
-			}
+			
 		}
 
 		completion_reward = {
-			202 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 525 }
-						any_province_building_level = {
-							province = {
-								id = 525
+			custom_effect_tooltip = SOV_improve_the_stalin_line_tt 
+			hidden_effect = {
+				202 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 525 }
+							any_province_building_level = {
+								province = {
+									id = 525
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 525
+							instant_build = yes
 						}
 					}
-					add_building_construction = {
-						type = bunker
-						level = 8
-						province = 525
-						instant_build = yes
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13425 }
+							any_province_building_level = {
+								province = {
+									id = 13425
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 13425
+							instant_build = yes
+						}
 					}
 				}
 				
-				if = {
-					limit = {
-						ROOT = { controls_province = 13425 }
-						any_province_building_level = {
-							province = {
-								id = 13425
+				192 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11670 }
+							any_province_building_level = {
+								province = {
+									id = 11670
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 11670
+							instant_build = yes
 						}
 					}
-					add_building_construction = {
-						type = bunker
-						level = 8
-						province = 13425
-						instant_build = yes
-					}
-				}
-			}
-			
-			192 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 11670 }
-						any_province_building_level = {
-							province = {
-								id = 11670
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 13428 }
+							any_province_building_level = {
+								province = {
+									id = 13428
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
 						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 8
-						province = 11670
-						instant_build = yes
-					}
-				}
-				
-				if = {
-					limit = {
-						ROOT = { controls_province = 13428 }
-						any_province_building_level = {
-							province = {
-								id = 13428
-							}
-							building = bunker
-							level < 1
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 13428
+							instant_build = yes
 						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 8
-						province = 13428
-						instant_build = yes
-					}
-				}
-			}
-			
-			226 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 11437 }
-						any_province_building_level = {
-							province = {
-								id = 11437
-							}
-							building = bunker
-							level < 1
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 11437
-						instant_build = yes
 					}
 				}
 				
-				if = {
-					limit = {
-						ROOT = { controls_province = 11561 }
-						any_province_building_level = {
-							province = {
-								id = 11561
+				226 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11437 }
+							any_province_building_level = {
+								province = {
+									id = 11437
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11437
+							instant_build = yes
 						}
 					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 11561
-						instant_build = yes
-					}
-				}
-			}
-			
-			194 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 6232 }
-						any_province_building_level = {
-							province = {
-								id = 6232
+					
+					if = {
+						limit = {
+							ROOT = { controls_province = 11561 }
+							any_province_building_level = {
+								province = {
+									id = 11561
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11561
+							instant_build = yes
 						}
 					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 6232
-						instant_build = yes
+				}
+				
+				194 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 6232 }
+							any_province_building_level = {
+								province = {
+									id = 6232
+								}
+								building = bunker
+								level < 1
+							}
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6232
+							instant_build = yes
+						}
 					}
 				}
-			}
 
-			206 = { 
-				if = {
-					limit = {
-						ROOT = { controls_province = 11370 }
-						any_province_building_level = {
-							province = {
-								id = 11370
+				206 = { 
+					if = {
+						limit = {
+							ROOT = { controls_province = 11370 }
+							any_province_building_level = {
+								province = {
+									id = 11370
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
 						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 8
-						province = 11370
-						instant_build = yes
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 11370
+							instant_build = yes
+						}
 					}
 				}
-			}
-			
-			207 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 11241 }
-						any_province_building_level = {
-							province = {
-								id = 11241
+				
+				207 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11241 }
+							any_province_building_level = {
+								province = {
+									id = 11241
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
 						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 11241
-						instant_build = yes
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11241
+							instant_build = yes
+						}
 					}
 				}
-			}
-			
-			242 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 306 }
-						any_province_building_level = {
-							province = {
-								id = 306
+				
+				242 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 306 }
+							any_province_building_level = {
+								province = {
+									id = 306
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
 						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 306
-						instant_build = yes
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 306
+							instant_build = yes
+						}
 					}
 				}
-			}
-			
-			224 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 9288 }
-						any_province_building_level = {
-							province = {
-								id = 9288
+				
+				224 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 9288 }
+							any_province_building_level = {
+								province = {
+									id = 9288
+								}
+								building = bunker
+								level < 1
 							}
-							building = bunker
-							level < 1
 						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 9288
-						instant_build = yes
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 9288
+							instant_build = yes
+						}
 					}
 				}
 			}
@@ -377,10 +356,6 @@ focus_tree = {
 				tooltip = army_org_factor_tt
 			}
 			add_to_variable = { 
-			    SOV_the_red_army_org_loss_at_low_org_factor = -0.15
-				tooltip = org_loss_at_low_org_factor_orgn_tt
-			}
-			add_to_variable = { 
 			    SOV_the_red_army_dig_in_speed_factor = 0.05
 				tooltip = dig_in_speed_factor_tt
 			}
@@ -392,6 +367,7 @@ focus_tree = {
 			    SOV_the_red_army_cas_damage_reduction = 0.05
 				tooltip = cas_damage_reduction_tt
 			}
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
@@ -865,177 +841,166 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_improve_the_stalin_line
-		cost = 1
+		cost = 2
 
 		available = {
-			OR = {
-				controls_state = 195
-				controls_state = 208
-			}
-			OR = {
-			    has_war_with = GER
-				FIN = { is_ai = no }
-			}
+			controls_state = 195
+			controls_state = 137
+			controls_state = 208
 		}
-		
-		bypass = {
-			AND = {
-				NOT = {
-					controls_state = 195
-					controls_state = 208
-					
-				}
-			}
-		}
-		
-		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = {
-					controls_state = 195
-				}
-				195 = { #LENINGRAD
-					custom_effect_tooltip = SOV_defense_of_leningrad_forts
-					hidden_effect = {
-						195 = {
-							if = {
-								limit = {
-									ROOT = { controls_province = 13437 }
-									any_province_building_level = {
-										province = {
-											id = 13437
-										}
-										building = bunker
-										level < 1
-									}
-								}
-								add_building_construction = {
-									type = bunker
-									level = 10
-									province = 13437
-									instant_build = yes
-								}
-							}
-							
-							if = {
-								limit = {
-									ROOT = { controls_province = 3151 }
-									any_province_building_level = {
-										province = {
-											id = 3151
-										}
-										building = bunker
-										level < 1
-									}
-								}
-								add_building_construction = {
-									type = bunker
-									level = 10
-									province = 3151
-									instant_build = yes
-								}
-							}
-							
-							if = {
-								limit = {
-									ROOT = { controls_province = 149 }
-									any_province_building_level = {
-										province = {
-											id = 149
-										}
-										building = bunker
-										level < 1
-									}
-								}
-								add_building_construction = {
-									type = bunker
-									level = 10
-									province = 149
-									instant_build = yes
-								}
-							}
-							
-							if = {
-								limit = {
-									ROOT = { controls_province = 13439 }
-									any_province_building_level = {
-										province = {
-											id = 13439
-										}
-										building = bunker
-										level < 1
-									}
-								}
-								add_building_construction = {
-									type = bunker
-									level = 10
-									province = 13439
-									instant_build = yes
-								}
-							}
-							
-							if = {
-								limit = {
-									ROOT = { controls_province = 13438 }
-									any_province_building_level = {
-										province = {
-											id = 13438
-										}
-										building = bunker
-										level < 1
-									}
-								}
-								add_building_construction = {
-									type = bunker
-									level = 10
-									province = 13438
-									instant_build = yes
-								}
-							}
-							
-							if = {
-								limit = {
-									ROOT = { controls_province = 3151 }
-									any_province_building_level = {
-										province = {
-											id = 3151
-										}
-										building = coastal_bunker
-										level < 1
-									}
-								}
-								add_building_construction = {
-									type = coastal_bunker
-									level = 10
-									province = 3151
-									instant_build = yes
-								}
-							}
-						}
+			custom_effect_tooltip = SOV_impregnable_forts_tt
+			custom_effect_tooltip = SOV_defense_of_leningrad_forts
+			hidden_effect = {
+				if = {
+					limit = {
+						controls_state = 195
+
 						
-						263 = {
-							if = {
-								limit = {
-									ROOT = { controls_province = 117 }
-									any_province_building_level = {
-										province = {
-											id = 117
+					}
+					195 = { #LENINGRAD
+						
+						hidden_effect = {
+							195 = {
+								if = {
+									limit = {
+										ROOT = { controls_province = 13437 }
+										any_province_building_level = {
+											province = {
+												id = 13437
+											}
+											building = bunker
+											level < 1
 										}
-										building = bunker
-										level < 1
+									}
+									add_building_construction = {
+										type = bunker
+										level = 10
+										province = 13437
+										instant_build = yes
 									}
 								}
-								add_building_construction = {
-									type = bunker
-									level = 8
-									province = 117
-									instant_build = yes
+								
+								if = {
+									limit = {
+										ROOT = { controls_province = 3151 }
+										any_province_building_level = {
+											province = {
+												id = 3151
+											}
+											building = bunker
+											level < 1
+										}
+									}
+									add_building_construction = {
+										type = bunker
+										level = 10
+										province = 3151
+										instant_build = yes
+									}
+								}
+								
+								if = {
+									limit = {
+										ROOT = { controls_province = 149 }
+										any_province_building_level = {
+											province = {
+												id = 149
+											}
+											building = bunker
+											level < 1
+										}
+									}
+									add_building_construction = {
+										type = bunker
+										level = 10
+										province = 149
+										instant_build = yes
+									}
+								}
+								
+								if = {
+									limit = {
+										ROOT = { controls_province = 13439 }
+										any_province_building_level = {
+											province = {
+												id = 13439
+											}
+											building = bunker
+											level < 1
+										}
+									}
+									add_building_construction = {
+										type = bunker
+										level = 10
+										province = 13439
+										instant_build = yes
+									}
+								}
+								
+								if = {
+									limit = {
+										ROOT = { controls_province = 13438 }
+										any_province_building_level = {
+											province = {
+												id = 13438
+											}
+											building = bunker
+											level < 1
+										}
+									}
+									add_building_construction = {
+										type = bunker
+										level = 10
+										province = 13438
+										instant_build = yes
+									}
+								}
+								
+								if = {
+									limit = {
+										ROOT = { controls_province = 3151 }
+										any_province_building_level = {
+											province = {
+												id = 3151
+											}
+											building = coastal_bunker
+											level < 1
+										}
+									}
+									add_building_construction = {
+										type = coastal_bunker
+										level = 10
+										province = 3151
+										instant_build = yes
+									}
+								}
+							}
+							
+							263 = {
+								if = {
+									limit = {
+										ROOT = { controls_province = 117 }
+										any_province_building_level = {
+											province = {
+												id = 117
+											}
+											building = bunker
+											level < 1
+										}
+									}
+									add_building_construction = {
+										type = bunker
+										level = 8
+										province = 117
+										instant_build = yes
+									}
 								}
 							}
 						}
-					}
-					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+						add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				
 				}
 			}
 			
@@ -1165,6 +1130,7 @@ focus_tree = {
 					add_dynamic_modifier = { modifier = SOV_armored_battery_35 scope = SOV }
 				}
 			}
+		}
 		}
 	}
 	
@@ -1555,86 +1521,89 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			251 = {
-				if = {
-					limit = {
-						ROOT = { controls_province = 11225 }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 11225
-						instant_build = yes
-					}
-					}
-				if = {
-					limit = {
-						ROOT = { controls_province = 9299 }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 9299
-						instant_build = yes
-					}
-				}
-			}
-			250 = { 		
-				if = {
-					limit = {
-						ROOT = { controls_province = 11319 }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 11319
-						instant_build = yes
+			custom_effect_tooltip = SOV_line_kazan_kuibyshev_tt
+			hidden_effect = { 	
+				251 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 11225 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 11225
+							instant_build = yes
+						}
+						}
+					if = {
+						limit = {
+							ROOT = { controls_province = 9299 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 9299
+							instant_build = yes
+						}
 					}
 				}
-				if = {
-					limit = {
-						ROOT = { controls_province = 3382 }
+				250 = { 		
+					if = {
+						limit = {
+							ROOT = { controls_province = 11319 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11319
+							instant_build = yes
+						}
 					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3382
-						instant_build = yes
-					}
-				}
-			}
-			249 = { 
-				if = {
-					limit = {
-						ROOT = { controls_province = 11339 }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 11339
-						instant_build = yes
-					}
-				}
-				if = {
-					limit = {
-						ROOT = { controls_province = 372 }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 372
-						instant_build = yes
+					if = {
+						limit = {
+							ROOT = { controls_province = 3382 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 3382
+							instant_build = yes
+						}
 					}
 				}
-				if = {
-					limit = {
-						ROOT = { controls_province = 6338 }
+				249 = { 
+					if = {
+						limit = {
+							ROOT = { controls_province = 11339 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11339
+							instant_build = yes
+						}
 					}
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 6338
-						instant_build = yes
+					if = {
+						limit = {
+							ROOT = { controls_province = 372 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 372
+							instant_build = yes
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6338 }
+						}
+						add_building_construction = {
+							type = bunker
+							level = 8
+							province = 6338
+							instant_build = yes
+						}
 					}
 				}
 			}
@@ -1668,13 +1637,15 @@ focus_tree = {
 					OR = {
 						state = 572
 						state = 582
+						state = 653
+						
 					}
 				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1731,18 +1702,24 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			every_core_state = {
+			random_core_state = {
 				limit = {
-					OR = {
-						state = 195 state = 219 state = 217
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
 					}
 				}
+				prioritize = { 219 }
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = radar_station
-					level = 5
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}
+		
 		}
 	}
 
@@ -1761,7 +1738,22 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_economy_dm_production_speed_air_base_factor_dm = 0.05
 				tooltip = production_speed_air_base_factor_tt
-			}		
+			}	
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 195 state = 219 state = 217
+					}
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 5
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1777,21 +1769,15 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			if = {
+			every_military_industrial_organization = {
 				limit = {
-					has_dlc = "Arms Against Tyranny"
+					has_mio_trait = SOV_mio_trait_merge_plant_no_28 
 				}
-				every_military_industrial_organization = {
-					limit = {
-						has_mio_trait = SOV_mio_trait_merge_plant_no_28 #All Aircraft MIOs have this trait
-					}
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_28
+					custom_effect_tooltip = generic_skip_one_line_tt
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_150
+					custom_effect_tooltip = generic_skip_one_line_tt
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_vef_plant
-				}
-			}
-			else = {
-				custom_effect_tooltip = SOV_merge_aircraft_plants_tt
 			}
 		}
 	}
@@ -1813,7 +1799,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			
@@ -1859,7 +1845,16 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			219 = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				prioritize = { 398 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1880,10 +1875,6 @@ focus_tree = {
 		relative_position_id = SOV_peoples_commissariat_of_armament
 		cost = 5
 
-		available = {
-			has_full_control_of_state = 251
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
 				name = SOV_pc_of_mortar_armament_name_default
@@ -1895,7 +1886,16 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			251 = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				prioritize = { 251 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1915,11 +1915,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_peoples_commissariat_of_armament
 		cost = 5
-
-		available = {
-			has_full_control_of_state = 252
-		}
-
+		
 		completion_reward = {
 			add_tech_bonus = {
 				name = SOV_the_means_to_wage_war1
@@ -1931,7 +1927,16 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			252 = {
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				prioritize = { 249 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1943,42 +1948,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = SOV_the_means_to_wage_war
-
-		icon = GFX_SOV_the_means_to_wage_war_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_peoples_commissariat_of_armament }
-		x = 1
-		y = 1
-		relative_position_id = SOV_peoples_commissariat_of_armament
-		cost = 5
-
-		available = {
-			has_full_control_of_state = 252
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_the_means_to_wage_war1
-			    bonus = 1
-			    uses = 2
-				technology = tech_military_police4
-				technology = tech_field_hospital4
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			252 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		
-		}
-	}
 	
 	focus = {
 		id = SOV_third_five_year_plan
@@ -2149,7 +2118,7 @@ focus_tree = {
 	focus = {
 		id = SOV_national_specialists
 
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_focus_generic_industrial_experts
 		prerequisite = { focus = SOV_forced_industrialization }
 		x = 1
 		y = 1
@@ -2193,7 +2162,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2224,7 +2193,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2278,7 +2247,7 @@ focus_tree = {
     }
 	
 	focus = {
-		id = SOV_revive_the_stakhanovite_movement
+		id = SOV_every_blow_of_hammer_blow_to_enemy 
 		icon = GFX_focus_generic_public_works
 		prerequisite = { focus = SOV_glavoenstroy }
 		x = -1
@@ -2318,7 +2287,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_revive_the_stakhanovite_movement1
+		id = SOV_everything_for_front_everything_for_victory
 		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_glavoenstroy }
 		x = 1
@@ -2344,20 +2313,21 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_leningrad_polytechnical_institute
-		icon = GFX_focus_research2
+		id = SOV_they_will_know_fear
+		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = SOV_glavoenstroy }
 		x = 0
 		y = 2
 		relative_position_id = SOV_glavoenstroy
 		cost = 5
-		
-		available = {
-			
-		}
 
 		completion_reward = {
-			add_research_slot = 1
+			add_tech_bonus = {
+				name = SOV_they_will_know_fear
+				bonus = 1
+				uses = 1
+				technology = main_battle_tank_chassis
+			}
 		}
 	}
 	
@@ -2401,9 +2371,9 @@ focus_tree = {
 		relative_position_id = SOV_glavoenstroy
 
 		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_fyp_modifier_tt
+		    custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_fyp_fuel_gain_factor_from_states = 0.5
+			    SOV_economy_dm_fuel_gain_factor_from_states_dm = 0.5
 				tooltip = fuel_gain_factor_from_states_tt
 			}
 			
@@ -2463,7 +2433,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			
@@ -2539,6 +2509,26 @@ focus_tree = {
 				technology = tech_engineers4
 				technology = tech_flamethrower_brigade4
 			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				prioritize = { 252 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -2555,6 +2545,25 @@ focus_tree = {
 		completion_reward = {
 			mio:SOV_okmo_organization = {
 				add_mio_size = 3
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				prioritize = { 572 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -2598,7 +2607,13 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			okmo = { unlock_mio_trait_tooltip } 
+				every_military_industrial_organization = {
+					limit = {
+						has_mio_trait = generic_mio_trait_soviet_production_3 
+					}
+					unlock_mio_trait_tooltip = generic_mio_trait_soviet_production
+					
+				}
 		}	
 				
 				
@@ -2607,7 +2622,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_merge_materiel_plants
+		id = SOV_merge_materiel_plants  
 
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = SOV_peoples_commissariat_of_armament }
@@ -2620,11 +2635,13 @@ focus_tree = {
 		completion_reward = {
 			every_military_industrial_organization = {
 					limit = {
-						has_mio_trait = SOV_mio_trait_merge_nkmz_plant #All Materiel MIOs have this trait
+						has_mio_trait = SOV_mio_trait_merge_nkmz_plant 
 					}
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_nkmz_plant
+					custom_effect_tooltip = generic_skip_one_line_tt
 					unlock_mio_trait_tooltip = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
-					unlock_mio_trait_tooltip = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
+					custom_effect_tooltip = generic_skip_one_line_tt
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_172
 				}
 				
 		}
@@ -3606,10 +3623,6 @@ focus_tree = {
 		relative_position_id = SOV_lessons_of_war
 		cost = 10
 
-		available = {
-			date > 1943.6.1
-		}
-
 		completion_reward = {	
 		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
 			add_to_variable = { 
@@ -3654,6 +3667,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = SOV_they_will_know_fear
+				bonus = 1
+				uses = 1
+				technology = main_battle_tank_chassis
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_mastery = { amount = 100 sub_doctrine = peoples_war }
 			
 			hidden_effect = { news_event = origion.33 }
@@ -3670,7 +3690,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 100
 			add_stability = 0.1
 			add_popularity = {
 				ideology = communism
@@ -3727,11 +3747,7 @@ focus_tree = {
 			    SOV_politburo_dm_surrender_limit_dm = 0.2
 				tooltip = surrender_limit_tt
 			}
-			add_to_variable = {  
-			    SOV_politburo_dm_war_support_weekly_factor_dm = 0.004
-				tooltip =war_support_weekly_factor_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = 0.1
 		}
 	}
 
@@ -3770,6 +3786,10 @@ focus_tree = {
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
 		cost = 5
 	
+		available = { 
+			date > 1939.3.1
+		}
+		
 		completion_reward = {
 			custom_effect_tooltip = SOV_politburo_dm_tt
 			add_to_variable = { 
@@ -3801,6 +3821,10 @@ focus_tree = {
 			add_to_variable = { 
 				SOV_politburo_dm_political_power_factor_dm = 0.05	
 				tooltip = political_power_factor_tt
+			}
+			add_to_variable = { 
+				SOV_politburo_dm_defensive_war_stability_factor_dm = 0.4
+				tooltip = defensive_war_stability_factor_tt
 			}
 		}
 	}
@@ -3847,7 +3871,7 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_development_of_sovhoz
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_generic_modernizing_agriculture
 		prerequisite = { focus = SOV_the_zinovyevite_terrorist_center }
 		x = -2
 		y = 1
@@ -3868,8 +3892,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_use_gulagsman
-		icon = GFX_goal_generic_war_with_comintern
+		id = SOV_use_gulag
+		icon = GFX_focus_SOV_breadbasket_of_the_union
 		prerequisite = { focus = SOV_development_of_sovhoz }
 		x = -1
 		y = 1
@@ -3968,9 +3992,13 @@ focus_tree = {
 		cost = 5
 		
 		completion_reward = {
-			add_stability = 0.1
+			custom_effect_tooltip = SOV_politburo_dm_tt
+			add_to_variable = {  
+			    SOV_politburo_dm_war_support_weekly_factor_dm = 0.004
+				tooltip = war_support_weekly_tt
+			}
 			add_war_support = 0.1
-			add_political_power = 50
+			
 		}
 	}
 	
@@ -4018,7 +4046,7 @@ focus_tree = {
 			
 		completion_reward = {
 			hidden_effect = {
-				set_country_flag = SOV_beriya_focus_flag
+				set_country_flag = SOV_beriya_focus_days_tt
 				SOV_nikolay_yezhov = {
 					SOV_purge_character_effect = yes
 				}
@@ -4045,27 +4073,26 @@ focus_tree = {
 
 		available = {
 			has_country_flag = {
-				flag = SOV_beriya_focus_flag
+				flag = SOV_beriya_focus_days_tt
 				days > 175
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_military_tt
 				has_country_flag = {
-					flag = SOV_beriya_focus_flag 
+					flag = SOV_beriya_focus_days_tt 
 					days > 175
 				}
 			}
 		}
 			
 		completion_reward = {
-			custom_effect_tooltip = SOV_beriya_swap_tt
-			#hidden_effect = { 
+			hidden_effect = { 
 				remove_trait = {
 					character = SOV_lavrenty_beriya
 					slot = political_advisor
 					trait = head_of_the_nkvd_beriya_initial
 				}
-			#}
+			}
 			add_trait = {
 					character = SOV_lavrenty_beriya
 					slot  = political_advisor
@@ -4146,60 +4173,5 @@ focus_tree = {
 	}
 }
 
-	
-	focus = {
-		id = SOV_they_will_know_fear
-		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = SOV_lessons_of_war }
-		x = -1
-		y = 1
-		relative_position_id = SOV_lessons_of_war
-		cost = 5
 
-		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_they_will_know_fear
-				bonus = 1
-				uses = 1
-				technology = main_battle_tank_chassis
-			}
-		}
-	}
-
-	focus = {
-		id = SOV_war_heroes
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = { focus = SOV_revive_the_stakhanovite_movement }
-		x = 0
-		y = 1
-		relative_position_id = SOV_revive_the_stakhanovite_movement
-		cost = 10
-
-		available = {
-
-		}
-
-		completion_reward = {
-			add_ideas = SOV_war_heroes_ns
-
-		}
-	}
-	
-	focus = {
-		id = SOV_patriarch_of_all_russia
-		icon = GFX_focus_SOV_patriarch_of_all_russia
-		prerequisite = { focus = SOV_war_heroes focus = SOV_socialist_realism }
-		x = 1
-		y = 1
-		relative_position_id = SOV_war_heroes
-		cost = 5
-
-		available = {
-
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-		}
-	}
 	
