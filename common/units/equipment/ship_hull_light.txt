@@ -14,7 +14,6 @@ equipments = {
 		naval_dominance_factor = 100
 
 		upgrades = {
-			ship_torpedo_upgrade
 			destroyer_engine_upgrade
 			ship_ASW_upgrade
 			ship_anti_air_upgrade
@@ -36,10 +35,6 @@ equipments = {
 			fixed_ship_radar_slot = {
 				required = no
 				allowed_module_categories = { ship_radar ship_sonar }
-			}
-			fixed_ship_torpedo_slot = {
-				required = no
-				allowed_module_categories = { ship_torpedo }
 			}
 			fixed_ship_engine_slot = {
 				required = yes
@@ -72,7 +67,6 @@ equipments = {
 			fixed_ship_fire_control_system_slot = empty
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = empty
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 		}
@@ -139,7 +133,6 @@ equipments = {
 			fixed_ship_anti_air_slot = inherit
 			fixed_ship_fire_control_system_slot = inherit
 			fixed_ship_radar_slot = inherit
-			fixed_ship_torpedo_slot = inherit
 			fixed_ship_engine_slot = inherit
 
 			mid_1_custom_slot = {
@@ -186,7 +179,6 @@ equipments = {
 			fixed_ship_anti_air_slot = inherit
 			fixed_ship_fire_control_system_slot = inherit
 			fixed_ship_radar_slot = inherit
-			fixed_ship_torpedo_slot = inherit
 			fixed_ship_engine_slot = inherit
 
 			front_1_custom_slot = {
@@ -253,7 +245,6 @@ equipments = {
 			fixed_ship_anti_air_slot = inherit
 			fixed_ship_fire_control_system_slot = inherit
 			fixed_ship_radar_slot = inherit
-			fixed_ship_torpedo_slot = inherit
 			fixed_ship_engine_slot = inherit
 			front_1_custom_slot = {
 				required = no
