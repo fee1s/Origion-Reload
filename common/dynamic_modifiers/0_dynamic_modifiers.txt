@@ -1398,6 +1398,16 @@ inappropriate_invasion_zone_JAP = {
 	custom_modifier_tooltip = inappropriate_invasion_zone_JAP_tt
 }
 
+Overlord_dm = {
+	enable = { always = yes }
+	icon = GFX_modifiers_generic_military_plans
+	
+	custom_modifier_tooltip = ally_overlord_tt
+}
+Overlord_dm_hidden = {
+	enable = { always = yes }
+	army_attack_factor = 0.1
+}
 atlantikwall_dm = {
 	enable = { always = yes }
 	icon = GFX_modifiers_generic_defense

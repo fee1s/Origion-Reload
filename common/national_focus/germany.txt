@@ -3177,6 +3177,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			NOT = { has_global_flag = after_asia }
+		}
 		
 		completion_reward = {
 			custom_effect_tooltip = atlantikwall_tt_tt

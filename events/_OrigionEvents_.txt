@@ -1275,3 +1275,184 @@ news_event = { # Капитуляция СССР
 	
 	mean_time_to_happen = { days = 3 }
 }
+
+news_event = { # Капитуляция Японии
+	id = origion.42
+	title = origion.42.t
+	desc = origion.42.d
+	picture = GFX_news_event_asia
+	
+	major = yes
+	
+	trigger = {
+		JAP = { surrender_progress > 0.82 }
+		NOT = { has_global_flag = after_asia }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = after_asia
+			if = { limit = { JAP = { has_war_with = SOV } }
+				SOV = {
+					white_peace  = {
+						tag = JAP
+					}
+					transfer_state = 555
+				}
+			}
+			if = {
+                limit = {
+				    JAP = { is_ai = no }
+				}
+				random_country = {
+			        limit = {
+			        	tag = GER
+			        }
+			    	change_tag_from = JAP				
+			    }
+			}
+            JAP = {
+				every_country = {
+					limit = { ORIGION_is_in_faction_with_allies = yes }
+					white_peace = JAP
+				}
+				add_ideas = BAN_BAN 
+				remove_dynamic_modifier = { modifier = pacific_warfare_dm }
+			}
+			SIA = {
+				transfer_state = 869
+				transfer_state = 868
+				transfer_state = 289
+				transfer_state = 724
+				add_ideas = BAN_BAN
+			}
+			FRA = {
+				transfer_state = 670
+				transfer_state = 671
+				transfer_state = 741
+				transfer_state = 286
+			}
+			PRC = {
+				transfer_state = 599
+				transfer_state = 594
+				transfer_state = 591
+				transfer_state = 592
+				transfer_state = 728
+				transfer_state = 729
+				transfer_state = 326
+				transfer_state = 602
+				transfer_state = 593
+				transfer_state = 600
+				transfer_state = 595
+				transfer_state = 606
+				transfer_state = 749
+				transfer_state = 596
+				transfer_state = 613
+				transfer_state = 598
+				transfer_state = 597
+				transfer_state = 743
+				transfer_state = 614
+				transfer_state = 608
+				transfer_state = 611
+				transfer_state = 612
+				transfer_state = 610
+				transfer_state = 609
+				transfer_state = 745
+				transfer_state = 716
+				transfer_state = 715
+				transfer_state = 716
+				transfer_state = 714
+				transfer_state = 717
+				transfer_state = 328
+				transfer_state = 524
+				transfer_state = 761
+				add_ideas = BAN_BAN
+			}
+			KOR = {
+				transfer_state = 527
+				transfer_state = 525
+				add_ideas = BAN_BAN
+			}
+			
+			USA = {
+				remove_dynamic_modifier = { modifier = pacific_warfare_dm }
+				set_variable = { USA.pacific_dm_local_resources_factor = 0 }
+				set_variable = { USA.pacific_dm_production_lack_of_resource_penalty_factor = 0 }
+			}
+			every_country = {
+			    limit = {
+				    ORIGION_is_in_faction_with_allies = yes
+				}
+				clr_country_flag = asia_map_open_flag
+			}
+			every_state = { 
+			    limit = { is_atlantik_shore = yes }
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_dm 
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = USA
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = ENG
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = FRA
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = CAN
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = AST
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = SAF
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = RAJ
+					}
+					remove_dynamic_modifier = { 
+						modifier = atlantikwall_hidden_dm 
+						scope = SOV
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = GER
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = JAP
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = ITA
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = HUN
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = ROM
+					}
+					remove_dynamic_modifier = {
+						modifier = atlantikwall_hidden_2_dm
+						scope = BUL
+					}
+			}
+		}
+	}
+	
+	option = {
+		name = origion.42.a
+	}
+	
+	mean_time_to_happen = { days = 3 }
+}

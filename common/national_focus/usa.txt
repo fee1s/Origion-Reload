@@ -1061,6 +1061,67 @@ focus_tree = {
 			unlock_decision_tooltip = { decision = USA_operation_torch }
 		}
 	}
+	
+	focus = {
+		id = USA_oper_overlord
+		icon = GFX_focus_SWI_fortify_border_with_france
+		
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = USA_oper_torch }
+		
+		relative_position_id = USA_oper_torch
+		
+		cost = 2
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = USA_has_flag_after_asia_tt
+				has_global_flag = after_asia
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = USA_oper_overlord_effect_tooltip
+			hidden_effect = {
+			every_state = {
+				limit = { is_french_shore = yes }
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm 
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = USA
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = ENG
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = FRA
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = CAN
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = AST
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = SAF
+					}
+					add_dynamic_modifier = { 
+						modifier = Overlord_dm_hidden 
+						scope = RAJ
+					}
+				}
+			}
+		}
+	}
  ##  ### ###       ## ###  ##  ### ###  ##  #  # 
 #  #  #  #  #     #   #   #  #  #   #  #  # ## # 
 ####  #  ###       #  ##  #     #   #  #  # # ## 
