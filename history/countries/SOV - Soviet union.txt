@@ -534,11 +534,11 @@ if = {
 		name = "Soviet Fighter Start"
 		type = small_plane_airframe_1
 		modules = {
-			fixed_main_weapon_slot = heavy_mg_4x
-			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = fuel_tanks_small
-			special_type_slot_2 = lmg_defense_turret
+			special_type_slot_2 = armor_plate_small
 		}
 		design_team = mio:SOV_mig_design_bureau_organization
 	}
@@ -1554,7 +1554,7 @@ add_equipment_to_stockpile = {
 
 add_equipment_to_stockpile = {
     type = small_plane_airframe_1
-	amount = 2500
+	amount = 1000
 	variant_name = "Soviet Fighter Start"
 }
 
