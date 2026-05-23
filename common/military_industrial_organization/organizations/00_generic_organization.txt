@@ -834,7 +834,7 @@ soviet_tank_organization = {
 		name = generic_mio_trait_soviet_production
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { FROM = { has_completed_focus = SOV_merge_tank_and_materiel_plants } }
+		available = { FROM = { has_completed_focus = SOV_merge_tank_plants } }
 		special_trait_background = yes
 
 		position = { x=-1 y=1 }
@@ -852,7 +852,7 @@ soviet_tank_organization = {
 		name = generic_mio_trait_soviet_production_2
 		icon = GFX_generic_mio_trait_icon_production_capacity
 		
-		available = { FROM = { has_completed_focus = SOV_desperate_measures } }
+		available = { FROM = { has_completed_focus = SOV_form_the_stavka } }
 		special_trait_background = yes
 
 		position = { x=0 y=1 }
@@ -7321,7 +7321,7 @@ generic_artillery_organization = {
 	icon = GFX_idea_generic_artillery_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = USA tag = JAP tag = CZE tag = ROM tag = MEX } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = USA tag = JAP tag = CZE tag = ROM tag = MEX tag = HUN } }
 		NOT = {
 			AND = {
 				tag = POL
@@ -7801,7 +7801,6 @@ generic_infantry_equipment_organization = {
 
 		equipment_bonus = {
 			breakthrough = 0.1
-			build_cost_ic = 0.05
 		}
 	}
 
@@ -7842,7 +7841,7 @@ generic_infantry_equipment_organization = {
 		equipment_bonus = {
 			soft_attack = 0.05
 			hard_attack = 0.05
-			build_cost_ic = -0.1
+			build_cost_ic = -0.05
 		}
 	}
 
@@ -8003,7 +8002,7 @@ generic_motorized_mechanized_organization = {
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX tag = HUN} }
 		NOT = {
 			AND = {
 				tag = POL

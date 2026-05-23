@@ -19,13 +19,7 @@ ENG_vickers_armstrong_eng_organization = {
 	}
 	
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
+		
 	}
 }
 
@@ -56,13 +50,7 @@ ENG_john_brown_organization = {
 	}
 	
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
+		
 	}
 }
 
@@ -83,7 +71,6 @@ ENG_supermarine_organization = {
 	
 	allowed = {	
 		tag = ENG
-		has_dlc = "Arms Against Tyranny"
 	}
 
 	add_trait = { 
@@ -108,7 +95,6 @@ ENG_hawker_organization = {
 	icon = GFX_idea_hawker
 	allowed = {	
 		tag = ENG
-		has_dlc = "Arms Against Tyranny"
 	}
 }
 
@@ -125,31 +111,11 @@ ENG_rsaf_enfield_organization = {
 	icon = GFX_idea_rsaf_enfield
 
 	allowed = {	
-		OR = {
-			tag = ENG 
-			AND = {
-				tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				OR = {
-					original_TAG = LAT
-					original_TAG = LIT
-					original_TAG = EST
-				}
-				has_dlc = "No Step Back"
-			}
-		}
+		tag = ENG 
 	}
 
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
+		
 	}
 }
 
@@ -163,13 +129,7 @@ ENG_vauxhall_automotive_organization = {
 	}
 	
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}	
+		
 	}
 	
 	initial_trait = {
@@ -183,26 +143,10 @@ ENG_royal_arsenal_organization = {
 	include = generic_artillery_organization
 	icon = GFX_idea_royal_arsenal
 	allowed = {
-		OR = {
-			tag = ENG
-			AND = {
-				OR = {
-					original_TAG = LAT
-					original_TAG = LIT
-					original_TAG = EST
-				}
-				has_dlc = "No Step Back"
-			}
-		}
+		tag = ENG
 	}
 
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
+		
 	}
 }
