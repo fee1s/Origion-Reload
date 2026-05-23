@@ -1286,7 +1286,13 @@ news_event = { # Капитуляция Японии
 	
 	trigger = {
 		JAP = { surrender_progress > 0.82 }
-		NOT = { has_global_flag = after_asia }
+		NOT = {
+			OR = {
+				has_global_flag = after_asia 
+				has_global_flag = NO_ASIA_FLAG
+				has_global_flag = OST_FRONT_FLAG
+			}
+		}
 	}
 	
 	immediate = {
