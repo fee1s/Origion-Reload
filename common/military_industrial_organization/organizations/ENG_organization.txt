@@ -125,7 +125,31 @@ ENG_rsaf_enfield_organization = {
 	icon = GFX_idea_rsaf_enfield
 
 	allowed = {	
-		tag  = ENG
+		OR = {
+			tag = ENG 
+			AND = {
+				tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+			AND = {
+				OR = {
+					original_TAG = LAT
+					original_TAG = LIT
+					original_TAG = EST
+				}
+				has_dlc = "No Step Back"
+			}
+		}
+	}
+
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ENG } }
+			}
+			FROM = { NOT = { has_war_with = ENG } }
+		}
 	}
 }
 
@@ -138,6 +162,16 @@ ENG_vauxhall_automotive_organization = {
 		tag = ENG
 	}
 	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ENG } }
+			}
+			FROM = { NOT = { has_war_with = ENG } }
+		}	
+	}
+	
 	initial_trait = {
 		equipment_bonus = {
 			maximum_speed = 0.05
@@ -148,8 +182,27 @@ ENG_vauxhall_automotive_organization = {
 ENG_royal_arsenal_organization = {
 	include = generic_artillery_organization
 	icon = GFX_idea_royal_arsenal
-	
-	allowed = {	
-		tag = ENG
+	allowed = {
+		OR = {
+			tag = ENG
+			AND = {
+				OR = {
+					original_TAG = LAT
+					original_TAG = LIT
+					original_TAG = EST
+				}
+				has_dlc = "No Step Back"
+			}
+		}
+	}
+
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ENG } }
+			}
+			FROM = { NOT = { has_war_with = ENG } }
+		}
 	}
 }

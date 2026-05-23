@@ -223,7 +223,14 @@ set_variable = { SOV_fyp_fuel_gain_factor_from_states = 0 } #-> Oil Production
 set_variable = { SOV_fyp_production_oil_factor = 0 } #-> Oil Production
 set_variable = { SOV_fyp_industry_repair_factor = 0 } #-> Fourth Five Year Plan
 
-add_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
+add_dynamic_modifier = { modifier = SOV_politburo_dm }
+set_variable = { SOV_politburo_dm_political_power_factor_dm = -0.15 }
+set_variable = { SOV_politburo_surrender_limit_dm = 0.2 } 
+ 
+
+add_dynamic_modifier = { modifier = SOV_economy_dm }
+set_variable = { SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.15 }
+set_variable = { SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.15 }
 
 
 #SOVIET AIRFORCE NATIONAL SPIRIT VARS
@@ -401,8 +408,8 @@ if = {
 }
 
 set_research_slots = 4
-set_stability = 0.5
-set_war_support = 0.41
+set_stability = 0.4
+set_war_support = 0.06
 # Starting tech
 set_technology = { #WARNING: Do not just remove techs from here -> It can impact a lot of stuff. Before removing, double check that content does not count on these techs being researched
 	bunker_limiter = 1
@@ -484,8 +491,6 @@ if = {
 set_country_flag = SOV_TEST_REMOVE_VANILLA_ADVISORS_flag
 
 add_ideas = {	
-	home_of_revolution
-	trotskyite_plot_nsb
 	SOV_closed_eco
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
@@ -499,9 +504,9 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 10
+	democratic = 8
 	fascism = 2
-	communism = 88
+	communism = 90
 }
 
 create_faction_from_template = faction_template_comintern

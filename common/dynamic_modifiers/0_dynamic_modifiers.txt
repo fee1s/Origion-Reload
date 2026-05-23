@@ -2040,4 +2040,36 @@ FRA_victors_of_wwi_dm = {
 	army_org_factor = FRA_victors_of_wwi_dm_army_org_factor
 }
 	
+SOV_economy_dm = { 
 	
+	icon = GFX_idea_SOV_third_five_year_plan_civilian_ccp_2d_sov_compatibility
+	
+	consumer_goods_expected_value = SOV_economy_dm_consumer_goods_expected_value_dm
+	production_speed_buildings_factor = SOV_economy_dm_production_speed_buildings_factor_dm
+	global_building_slots_factor = SOV_economy_dm_global_building_slots_factor_dm
+	production_factory_max_efficiency_factor = SOV_economy_dm_production_factory_max_efficiency_factor_dm
+	production_factory_efficiency_gain_factor = SOV_economy_dm_production_factory_efficiency_gain_factor_dm
+	production_speed_arms_factory_factor = SOV_economy_dm_production_speed_arms_factory_factor_dm
+	production_speed_air_base_factor = SOV_economy_dm_production_speed_air_base_factor_dm
+	industrial_capacity_dockyard = SOV_economy_dm_industrial_capacity_dockyard_dm
+	industrial_capacity_factory = SOV_economy_dm_industrial_capacity_factory_dm
+	local_resources_factor = SOV_economy_dm_local_resources_factor_dm
+	fuel_gain_factor_from_states = SOV_economy_dm_fuel_gain_factor_from_states_dm
+	
+	
+	
+}
+
+SOV_politburo_dm = { 
+	icon = GFX_idea_generic_communism_drift_bonus
+	
+	political_power_factor  = SOV_politburo_dm_political_power_factor_dm
+	stability_factor = SOV_politburo_dm_stability_factor_dm
+	economy_cost_factor = SOV_politburo_dm_economy_cost_factor_dm
+	mobilization_laws_cost_factor = SOV_politburo_dm_mobilization_laws_cost_factor_dm
+	defensive_war_stability_factor = SOV_politburo_dm_defensive_war_stability_factor_dm
+	war_support_weekly_factor = SOV_politburo_dm_war_support_weekly_factor_dm
+	surrender_limit = SOV_politburo_dm_surrender_limit_dm
+	research_speed_factor = SOV_politburo_dm_research_speed_factor_dm
+	defensive_war_stability_factor = SOV_politburo_dm_defensive_war_stability_factor_dm
+}	
