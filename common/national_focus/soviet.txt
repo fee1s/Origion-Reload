@@ -347,7 +347,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
@@ -850,7 +850,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_impregnable_forts_tt
+			custom_effect_tooltip = SOV_impregnable_forts_tt 
 			custom_effect_tooltip = SOV_defense_of_leningrad_forts
 			hidden_effect = {
 				if = {
@@ -2313,23 +2313,32 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_they_will_know_fear
-		icon = GFX_focus_generic_army_tanks2
+		id = SOV_everything_for_front_everything_for_victory
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_glavoenstroy }
 		x = 0
 		y = 2
 		relative_position_id = SOV_glavoenstroy
-		cost = 5
+		cost = 10
+
+		available = {
+
+		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_they_will_know_fear
-				bonus = 1
-				uses = 1
-				technology = main_battle_tank_chassis
+			custom_effect_tooltip = SOV_economy_dm_tt
+			add_to_variable = { 
+			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.025
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.025
+				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 	}
+	
+	
 	
 	focus = {
 		id = SOV_synthetic_rubber
@@ -2648,163 +2657,6 @@ focus_tree = {
 		
 	}
 	
-	
-	#focus = {
-		id = SOV_leningrad_polytechnical_institute
-		icon = GFX_focus_research
-		prerequisite = { focus = SOV_the_means_to_wage_war }
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 2
-		y = 2
-		relative_position_id = SOV_the_means_to_wage_war
-		cost = 10
-		dynamic = yes 
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	#}
-
-	#focus = {
-		id = SOV_explosion_of_the_dhs
-		icon = GFX_focus_generic_provoke_border_clashes
-		
-		prerequisite = { focus = SOV_military_engineering_university }
-		x = 2
-		y = 2
-		
-		relative_position_id = SOV_military_engineering_university
-		cost = 1
-
-		available = {
-			controls_state = 226
-			controls_state = 200
-			has_war_with = GER
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			226 = { add_dynamic_modifier = { modifier = massive_flooding days = 210 } }
-			200 = { add_dynamic_modifier = { modifier = massive_flooding days = 210 } }	
-			
-			hidden_effect = { news_event = origion.24 }
-		}
-	#}
-
-	#focus = {
-		id = SOV_an_adaptable_army
-		icon = GFX_focus_generic_winter_warfare
-		prerequisite = { focus = SOV_rehabilitated_military }
-		prerequisite = { focus = SOV_the_sacred_war }
-		x = 1
-		y = 1
-		relative_position_id = SOV_rehabilitated_military
-		cost = 5
-
-		available = {
-			date > 1942.1.1
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_winter_attrition_factor = -0.35
-				tooltip = winter_attrition_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.5
-				tooltip = acclimatization_cold_climate_gain_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_mastery = { amount = 100 sub_doctrine = peoples_war }
-		}
-	#}
-
-	#focus = {
-		id = SOV_penal_battalions1
-		icon = GFX_focus_SOV_penal_battalions
-		prerequisite = { focus = SOV_the_sacred_war }
-		x = 2
-		y = 1
-		relative_position_id = SOV_the_sacred_war
-		cost = 5
-
-		available = {
-			surrender_progress > 0.25
-		}
-
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 50000
-			}
-		}
-	#}
-
-	#focus = {
-		id = SOV_smersh1
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = SOV_lessons_of_war }
-		x = 2
-		y = 1
-		relative_position_id = SOV_lessons_of_war
-		cost = 10
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_PROPAGANDA}
-
-		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_army_initiative_factor = 0.1
-				tooltip = initiative_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	#}
-
-	#focus = {
-		id = SOV_barrier_troops1
-		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = SOV_smersh }
-		x = 0
-		y = 1
-		relative_position_id = SOV_smersh
-		cost = 10
-
-		available = {
-
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_army_morale_factor = 0.1
-				tooltip = army_morale_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	#}
-
-	
-
 	focus = {
 		id = SOV_country_of_victorious_socialism  
 		icon = GFX_focus_SOV_stalins_cult_of_personality
@@ -3174,9 +3026,9 @@ focus_tree = {
 	focus = {
         id = SOV_formation_NKVD_divisions
         icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
-        prerequisite = { focus = SOV_form_the_stavka }
+        prerequisite = { focus = SOV_special_powers }
         x = -1
-        y = 1
+        y = 3
 		relative_position_id = SOV_form_the_stavka
 		cost = 5
     
@@ -3191,9 +3043,9 @@ focus_tree = {
 	focus = {
         id = SOV_special_powers 
         icon = GFX_focus_GER_alliance_with_the_ussr
-        prerequisite = { focus = SOV_formation_NKVD_divisions }
+        prerequisite = { focus = SOV_form_the_stavka }
         x = -1
-        y = 3
+        y = 1
 		relative_position_id = SOV_form_the_stavka
 		cost = 5
     
@@ -3893,7 +3745,7 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_use_gulag
-		icon = GFX_focus_SOV_breadbasket_of_the_union
+		icon = GFX_focus_PRC_urbanization_two
 		prerequisite = { focus = SOV_development_of_sovhoz }
 		x = -1
 		y = 1
