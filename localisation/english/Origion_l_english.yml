@@ -58,7 +58,7 @@ GetCurrentIsEighty: "£convoy_texticon §Y80§!"
 GetCurrentIsHundred: "£convoy_texticon §Y100§!"
 
 progress_bar_lend_lease_tt:0 "Used [GetCurrentCapacity] §Ythroughput§! of [GetMaxCapacity]"
-equipment_log_tt:0 "§LInformation about shipped equipment§!\nTotal sent §Yfighters§!: §Y[?ENG.fighters_sent]§!"
+equipment_log_tt:0 "§LInformation about shipped equipment§!\nTotal sent §Yfighters§!: §Y[?ENG.fighters_sent]§!\nTotal sent §Yinfantry§!: §Y[?ENG.infantry_sent]§!"
 equipment_log_name_tt:0 "§LSummary of lend-lease§!"
 
 # fighter supply categories
@@ -82,6 +82,22 @@ fighter_ll_to_sov_large_enabled:0 "§YAllies§! are delivering large supplies of
 
 open_fighter_ll_category:0 "§1Fighter delivery options§!"
 close_fighter_ll_category:0 "§1Hide fighter delivery options§!"
+
+
+open_infantry_ll_category:0 "§1Infantry delivery options§!"
+close_infantry_ll_category:0 "§1Hide infantry delivery options§!"
+infantry_ll_to_sov_small:0 "§2Start small infantry deliveries§!"
+stop_infantry_ll_to_sov_small:0 "§2Stop small infantry deliveries§!"
+infantry_ll_to_sov_small_ll:0 "§3Infantry shipment in progress..§!"
+infantry_ll_to_sov_small_enabled:0 "§YAllies§! are delivering small supplies of §Yinfantry§!"
+infantry_ll_to_sov_medium:0 "§2Start medium infantry deliveries§!"
+stop_infantry_ll_to_sov_medium:0 "§2Stop medium infantry deliveries§!"
+infantry_ll_to_sov_medium_ll:0 "§3Infantry shipment in progress..§!"
+infantry_ll_to_sov_medium_enabled:0 "§YAllies§! are delivering medium supplies of §Yinfantry§!"
+infantry_ll_to_sov_large:0 "§2Start large infantry deliveries§!"
+stop_infantry_ll_to_sov_large:0 "§2Stop large infantry deliveries§!"
+infantry_ll_to_sov_large_ll:0 "§3Infantry shipment in progress..§!"
+infantry_ll_to_sov_large_enabled:0 "§YAllies§! are delivering large supplies of §Yinfantry§!"
 
 iran_route_history:0 "§gThe Persian Corridor became an important supply route to the USSR during World War II. After the blockade of traditional routes, the Allies began sending resources through Iran. Since 1941, materials, weapons, and equipment were delivered via the Persian Gulf, supporting the Soviet Union in its struggle against the Nazis. This route was vital for the Red Army in the early years of the war.§!"
 asia_route_history:0 "§gThe route through Vladivostok became a key channel for supplies to the Soviet Union during World War II. When traditional routes through Europe were blocked, the Allies used the Pacific Ocean to deliver resources and weapons. Despite the dangers associated with military actions in the Pacific, this route remained vital for supplying the USSR in its fight against the Nazis.§!"
@@ -487,6 +503,7 @@ FRA_bombers_for_the_atlantic_tt: "§Y350§! units of French §YMedium Aircraft B
 SAF_joint_air_training_scheme_tt: "§Y25§! South African §Y«Hector»§! units will be added to the national stockpile."
 first_asian_war_simulation_tt: "\nWe will sacrifice §Y2500§! units of §YFighters§! for the needs of the §YPacific§! front."
 asian_war_simulation_tt: "\nWe will sacrifice §Y85§! units of §YFighters§! for the needs of the §YPacific§! front."
+asian_war_simulation_tt_for_infantry: "\nWe will sacrifice §Y17500§! units of §YInfantry equipment§! for the needs of the §YPacific§! front."
 FRA_city_that_never_gives_up_tt: "§YParis§! will receive §Y10§! levels of fortifications. §YSuburban provinces§! will receive §Y5§! levels of fortifications each. France is ready to defend its capital."
 FRA_return_of_the_escort_cruisers_tt: "§Y8 light cruisers§!, surviving the capitulation, return to service under the tricolor of §YFree France§!."
 FRA_return_of_dunkirk_tt: "§Y4 battleships§!, saved from capture, return to combat under the command of §YFree France§!."
@@ -1612,23 +1629,3 @@ FRA_africa_deployment_tt: "Automatic §YDeployment of Divisions to Africa§! wil
 french_company_ended: "The French company has ended"
 
 john_inglis_and_company_concern: "John Inglis and Company"
-
-infantry_ll_to_sov_small:0 "§2Start small infantry deliveries§!"
-stop_infantry_ll_to_sov_small:0 "§2Stop small infantry deliveries§!"
-infantry_ll_to_sov_small_ll:0 "§3Infantry shipment in progress..§!"
-infantry_ll_to_sov_small_enabled:0 "§YAllies§! are delivering small supplies of §Yinfantry§!"
-
-infantry_ll_to_sov_medium:0 "§2Start medium infantry deliveries§!"
-stop_infantry_ll_to_sov_medium:0 "§2Stop medium infantry deliveries§!"
-infantry_ll_to_sov_medium_ll:0 "§3Infantry shipment in progress..§!"
-infantry_ll_to_sov_medium_enabled:0 "§YAllies§! are delivering medium supplies of §Yinfantry§!"
-
-infantry_ll_to_sov_large:0 "§2Start large infantry deliveries§!"
-stop_infantry_ll_to_sov_large:0 "§2Stop large infantry deliveries§!"
-infantry_ll_to_sov_large_ll:0 "§3Infantry shipment in progress..§!"
-infantry_ll_to_sov_large_enabled:0 "§YAllies§! are delivering large supplies of §Yinfantry§!"
-
-open_infantry_ll_category:0 "§1Infantry delivery options§!"
-close_infantry_ll_category:0 "§1Hide infantry delivery options§!"
-
-equipment_log_tt:0 "§LInformation about shipped equipment§!\nTotal sent §Yfighters§!: §Y[?ENG.fighters_sent]§!\nTotal sent §Yinfantry§!: §Y[?ENG.infantry_sent]§!"
