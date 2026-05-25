@@ -591,36 +591,6 @@ defined_text = { #Propaganda Tooltips
 	}
 }
 
-defined_text = { #Propaganda Tooltips
-	name = GetKomsomolFocus
-	text = {
-		trigger = {
-			has_completed_focus = SOV_the_komsomol
-		}
-		localization_key = SOV_paranoia_tooltip_null
-	}
-	text = {
-		localization_key = SOV_propaganda_campaign_locked_slot_focus_komsomol
-	}
-}
-
-defined_text = {
-	name = GetPropagandaCampaignsRequirementTooltip
-	text = {
-		trigger = {
-			has_completed_focus = SOV_expand_the_agitprop
-		}
-		localization_key = propaganda_campaign_requirement_met_tt
-	}
-	text = {
-		trigger = {
-			NOT = { has_completed_focus = SOV_expand_the_agitprop }
-		}
-		localization_key = propaganda_campaign_requirement_not_met_tt
-	}
-}
-
-
 defined_text = {
 	name = GetColorControlledFactoriesTier1
 	text = {

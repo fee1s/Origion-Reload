@@ -1554,7 +1554,7 @@ SOV_CAV_02 = #COSSACK CAVALRY
 		OR = {
 			AND = {
 				tag = SOV
-				has_completed_focus = SOV_restore_cossack_units
+				has_completed_focus = SOV_form_the_stavka
 			}
 			tag = UKR
 		}
@@ -1685,7 +1685,7 @@ SOV_PEN_01 =
 
 	for_countries = { SOV }
 
-	can_use = { has_completed_focus = SOV_penal_battalions }
+	can_use = { has_completed_focus = SOV_shock_armies }
 
 	division_types = { "infantry" }
 
