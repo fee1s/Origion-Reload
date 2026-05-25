@@ -1147,6 +1147,7 @@ focus_tree = {
 			219 = {
 				is_controlled_by = ROOT
 			}
+			has_war = yes 
 		}
 		
 		bypass = {
@@ -1359,7 +1360,7 @@ focus_tree = {
 			217 = {
 				is_controlled_by = ROOT
 			}
-			
+			has_war = yes
 			
 		}
 		
@@ -1369,6 +1370,7 @@ focus_tree = {
 					is_controlled_by = ROOT  
 				}
 			}
+			has_war = yes
 		}
 		
 		completion_reward = {
@@ -2269,6 +2271,22 @@ focus_tree = {
 			    SOV_economy_dm_local_resources_factor_dm = 0.025
 				tooltip = local_resources_factor_tt
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 572
+						state = 582
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -2288,7 +2306,7 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_everything_for_front_everything_for_victory
-		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_industry_investment
 		prerequisite = { focus = SOV_glavoenstroy }
 		x = 1
 		y = 1
@@ -2309,11 +2327,27 @@ focus_tree = {
 			    SOV_economy_dm_local_resources_factor_dm = 0.025
 				tooltip = local_resources_factor_tt
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 408
+						state = 405
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
 	focus = {
-		id = SOV_everything_for_front_everything_for_victory
+		id = SOV_all_rear_forces_to_help_the_front
 		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_glavoenstroy }
 		x = 0
@@ -2332,8 +2366,24 @@ focus_tree = {
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.025
+			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					OR = {
+						state = 653
+						state = 398
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3355,8 +3405,8 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = SOV_operation_uran   
-        icon = GFX_focus_attack_germany  
+        id = SOV_operation_urann    
+        icon = GFX_focus_PRC_raid_weapon_depots  
         prerequisite = { focus = SOV_adaptive_army }
         x = 2
         y = 2
@@ -3485,7 +3535,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SOV_operation_bagration   
+		id = SOV_operation_bagration    
 		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_deep_battle }
 		prerequisite = { focus = SOV_the_glory_of_the_red_army }
@@ -3497,7 +3547,7 @@ focus_tree = {
 
 		available = {
 			date > 1944.6.1
-			surrender_progress < 0.5
+			
 		}
 
 		completion_reward = {	
@@ -3849,7 +3899,7 @@ focus_tree = {
 			    SOV_politburo_dm_war_support_weekly_factor_dm = 0.004
 				tooltip = war_support_weekly_tt
 			}
-			add_war_support = 0.1
+			add_war_support = 0.15
 			
 		}
 	}
@@ -3990,9 +4040,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = -165
 			
-			custom_effect_tooltip = SOV_secret_protocol_of_the_MR_pact_tt
+			custom_effect_tooltip = SOV_secret_protocol_of_the_MR_pact_tt 
 			
 			hidden_effect = {
 				annex_country = { target = EST }

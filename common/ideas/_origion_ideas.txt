@@ -1281,8 +1281,8 @@ ideas = {
 			removal_cost = -1
 			picture = GFX_tur_kemalism_with_socialist_characteristics
 			modifier = {
-				army_morale_factor = 0.075
-				breakthrough_factor = 0.075
+				army_morale_factor = 0.1
+				breakthrough_factor = 0.1
 				army_org_factor = 0.05
 				army_speed_factor = 0.075
 			}
@@ -1298,7 +1298,7 @@ ideas = {
 				army_org_factor = 0.05
 				army_morale_factor = 0.05
 				breakthrough_factor = 0.05
-				winter_attrition_factor = -0.1
+				winter_attrition_factor = -0.15
 				acclimatization_cold_climate_gain_factor = 0.1
 			}
 		}
@@ -1313,6 +1313,7 @@ ideas = {
 				army_morale_factor = 0.1
 				army_org_factor = 0.05
 				max_dig_in = 5
+				dig_in_speed_factor = 0.1
 			}
 		}
 	
