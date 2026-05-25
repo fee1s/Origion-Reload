@@ -2731,10 +2731,6 @@ focus_tree = {
 		relative_position_id = SOV_peoples_commissariat_of_armament
 		cost = 5
 
-		available = {
-			has_full_control_of_state = 219 #MOSCOW
-		}
-
 		completion_reward = {
 			add_tech_bonus = {
 				name = SOV_pc_of_mortar_armament_name_default
@@ -3084,9 +3080,11 @@ focus_tree = {
 		}
 		
 		select_effect = {
-			hidden_effect = {
-				soviet_starts_evacuation = yes		 
+			hidden_effect = {	 
 				add_ideas = { SOV_desperate_measures_ns } 
+				activate_mission = SOV_auto_industry_relocation_first_wave_mission
+				activate_mission = SOV_auto_industry_relocation_second_wave_mission
+				activate_mission = SOV_auto_industry_relocation_third_wave_mission
 			}
 		}
 		
@@ -3154,25 +3152,21 @@ focus_tree = {
 		cost = 2
     
 	    completion_reward = {		
-			custom_effect_tooltip = SOV_special_powers_tt   
+			custom_effect_tooltip = SOV_special_powers_tt     
 		} 
     }
 	
 	focus = {
-        id = SOV_formation_NKVD_divisions
-        icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+        id = SOV_expand_supplies 
+        icon = GFX_focus_generic_naval_invasion_tank
         prerequisite = { focus = SOV_special_powers }
         x = -1
         y = 3
 		relative_position_id = SOV_form_the_stavka
-		cost = 5
-    
-	    available = { 
-			
-		}
+		cost = 2
 		
 		completion_reward = {		
-			
+			custom_effect_tooltip = SOV_expand_supplies_tt   
 		} 
     }
 	
@@ -3228,7 +3222,7 @@ focus_tree = {
 	
 	
 	focus = {
-		id = SOV_lessons_of_war
+		id = SOV_lessons_of_war   
 		icon = GFX_focus_NOR_moscows_education_centers
 		prerequisite = { focus = SOV_winter_counteroffensive focus = SOV_adaptive_army }
 		x = 0
