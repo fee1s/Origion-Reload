@@ -1,36 +1,36 @@
 SOV_operations = { 
-	SOV_operation_bagration_dec = {
-		icon = GFX_decision_generic_tank
-		priority = 1
+	SOV_winter_counteroffensive_dec = {
+		icon = GFX_decision_infiltrate_state
 		visible = {
 			always = yes
 		}
 		
-		cost = 25
+		# cost = 25
 		
 		allowed = {
 			original_tag = SOV
 		}
 		
 		available = {
-			has_completed_focus = SOV_operation_bagration
+			has_completed_focus = SOV_winter_counteroffensive
+			date > 1941.11.1
+			date < 1942.2.1
 		}
 		
 		fire_only_once = yes
 		
 		complete_effect = {
-			add_timed_idea = { idea = SOV_operation_bagration_idea days = 45 }
+			add_timed_idea = { idea = SOV_winter_counteroffensive_idea days = 30 }
 		}
 	}
-	
+
 	SOV_operation_uran_dec = { 
 		icon = GFX_decision_generic_operation
-		priority = 3
 		visible = {
 			always = yes
 		}
 		
-		cost = 25
+		# cost = 25
 		
 		allowed = {
 			original_tag = SOV
@@ -45,44 +45,18 @@ SOV_operations = {
 		fire_only_once = yes
 		
 		complete_effect = {
-			add_timed_idea = { idea = SOV_operation_uran_idea days = 45 }
+			add_timed_idea = { idea = SOV_operation_uran_idea days = 30 }
+			hidden_effect = { news_event = origion.43 }
 		}
 	}
-	
-	SOV_winter_counteroffensive_dec = {
-		icon = GFX_decision_infiltrate_state
-		priority = 4
-		visible = {
-			always = yes
-		}
-		
-		cost = 25
-		
-		allowed = {
-			original_tag = SOV
-		}
-		
-		available = {
-			has_completed_focus = SOV_winter_counteroffensive
-			date > 1941.10.1
-			date < 1941.12.1
-		}
-		
-		fire_only_once = yes
-		
-		complete_effect = {
-			add_timed_idea = { idea = SOV_winter_counteroffensive_idea days = 45 }
-		}
-	}
-	
-	SOV_kursk_defensive_operation_dec = { 
+
+	SOV_kursk_defensive_operation_dec = {
 		icon = GFX_decision_generic_army_support
-		priority = 2
 		visible = {
 			always = yes
 		}
 		
-		cost = 25
+		# cost = 25
 		
 		allowed = {
 			original_tag = SOV
@@ -97,7 +71,31 @@ SOV_operations = {
 		fire_only_once = yes
 		
 		complete_effect = {
-			add_timed_idea = { idea = SOV_kursk_defensive_operation_idea days = 45 }
+			add_timed_idea = { idea = SOV_kursk_defensive_operation_idea days = 30 }
+		}
+	}
+
+	SOV_operation_bagration_dec = {
+		icon = GFX_decision_generic_tank
+		visible = {
+			always = yes
+		}
+		
+		# cost = 25
+		
+		allowed = {
+			original_tag = SOV
+		}
+		
+		available = {
+			has_completed_focus = SOV_operation_bagration
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			add_timed_idea = { idea = SOV_operation_bagration_idea days = 30 }
+			hidden_effect = { news_event = origion.44 }
 		}
 	}
 }

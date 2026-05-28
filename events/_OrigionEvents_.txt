@@ -707,7 +707,7 @@ news_event = { # заморозки на восточном фронте
 		set_global_flag = freeze_on_eastern_front
 
 		## НОВОГОДНЕЕ ОБНОВЛЕНИЕ
-		hidden_effect = { sound_effect = psi_christmas }
+		# hidden_effect = { sound_effect = psi_christmas }
 	}
 	
 	option = {
@@ -717,7 +717,7 @@ news_event = { # заморозки на восточном фронте
 	mean_time_to_happen = { days = 2 }
 }
 
-news_event = { # совок взрывает гэс
+news_event = { # совок взрывает гэс (REST IN PEACE, 28.05.26)
 	id = origion.24
 	title = origion.24.t
 	desc = origion.24.d
@@ -1461,4 +1461,38 @@ news_event = { # Капитуляция Японии
 	}
 	
 	mean_time_to_happen = { days = 3 }
+}
+
+news_event = { # Операция «Уран»
+	id = origion.43
+	title = origion.43.t
+	desc = origion.43.d
+	picture = GFX_news_event_uran
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+	
+ 	option = {
+		name = origion.43.a
+	}
+}
+
+news_event = { # Операция «Багратион»
+	id = origion.44
+	title = origion.44.t
+	desc = origion.44.d
+	picture = GFX_news_event_bagration
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+	
+ 	option = {
+		name = origion.44.a
+	}
 }
