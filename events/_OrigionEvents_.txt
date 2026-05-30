@@ -999,7 +999,7 @@ country_event = { # Италия запрашивает поддержку (РЕ
 	id = origion.37
 	title = origion.37.t
 	desc = origion.37.d
-	picture = GFX_report_event_german_italian_pact
+	picture = GFX_report_event_PLACEHOLDER
 	
 	major = no
 
@@ -1109,22 +1109,26 @@ news_event = { # Капитуляция СССР
 	title = origion.41.t
 	desc = origion.41.d
 	picture = GFX_news_event_barbover
-	fire_only_once = yes
 	major = yes
 	
 	trigger = {
-		NOT = {
-			219 = { is_controlled_by = SOV }
-			195 = { is_controlled_by = SOV }
-			217 = { is_controlled_by = SOV }
-			229 = { is_controlled_by = SOV }
-			251 = { is_controlled_by = SOV }
-			249 = { is_controlled_by = SOV }
+		OR = {
+			NOT = {
+				219 = { is_controlled_by = SOV }
+				195 = { is_controlled_by = SOV }
+				217 = { is_controlled_by = SOV }
+				229 = { is_controlled_by = SOV }
+				251 = { is_controlled_by = SOV }
+				249 = { is_controlled_by = SOV }
+			}
+			SOV = { surrender_progress > 0.97 }
 		}
+		NOT = { has_global_flag = ussr_has_capitulated_flag }
 	}
 	
 	immediate = {	
-		hidden_effect = {		
+		hidden_effect = {
+			set_global_flag = ussr_has_capitulated_flag		
 			if = { limit = { GER = { has_war_with = SOV } }
 				SOV = {
 					white_peace = GER
@@ -1254,6 +1258,7 @@ news_event = { # Капитуляция СССР
 					transfer_state = 216
 					transfer_state = 215
 					transfer_state = 213
+					transfer_state = 146
 				}
 			}
 			if = { limit = { FIN = { is_ai = yes } } 
@@ -1273,7 +1278,7 @@ news_event = { # Капитуляция СССР
 		name = origion.41.a
 	}
 	
-	mean_time_to_happen = { days = 3 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # Капитуляция Японии
@@ -1460,7 +1465,7 @@ news_event = { # Капитуляция Японии
 		name = origion.42.a
 	}
 	
-	mean_time_to_happen = { days = 3 }
+	mean_time_to_happen = { days = 2 }
 }
 
 news_event = { # Операция «Уран»
@@ -1494,5 +1499,31 @@ news_event = { # Операция «Багратион»
 	
  	option = {
 		name = origion.44.a
+	}
+}
+
+country_event = { # Ленд-лиз авиации доступен
+	id = origion.45
+	title = origion.45.t
+	desc = origion.45.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = origion.45.a
+	}
+}
+
+country_event = { # Ленд-лиз эквипмента доступен
+	id = origion.46
+	title = origion.46.t
+	desc = origion.46.d
+	picture = GFX_report_event_generic_rifles
+
+	is_triggered_only = yes
+
+	option = {
+		name = origion.46.a
 	}
 }

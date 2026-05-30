@@ -1120,7 +1120,7 @@ ORG_allies_lend_lease_to_sov = {
 		
 		available = { 
 			hidden_trigger = {
-				SOV = { has_completed_focus = SOV_special_powers } 
+				SOV = { has_completed_focus = SOV_expand_supplies } 
 				if = {
 					limit = {
 						asian_war_simulation = yes

@@ -1245,14 +1245,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_improve_the_stalin_line
-		cost = 2
+		cost = 5
 
-		available = {
-			controls_state = 195
-			controls_state = 137
-			controls_state = 208
-		}
-
+		bypass = { NOT = { controls_state = 195 controls_state = 208 controls_state = 137 } }
+		
 		completion_reward = {
 			custom_effect_tooltip = SOV_impregnable_forts_tt 
 			custom_effect_tooltip = SOV_defense_of_leningrad_forts
@@ -1260,8 +1256,6 @@ focus_tree = {
 				if = {
 					limit = {
 						controls_state = 195
-
-						
 					}
 					195 = { #LENINGRAD
 						
@@ -1908,20 +1902,13 @@ focus_tree = {
 		y = 2
 		cost = 2
 		
-		available = {
-			251 = {
-				is_controlled_by = ROOT
-			}
-			249 = {
-				is_controlled_by = ROOT
-			}
-			
-		}
-		
 		bypass = {
 			NOT = {
-				217	 = {
+				251	 = {
 					is_controlled_by = ROOT  
+				}
+				249 = {
+					is_controlled_by = ROOT
 				}
 			}
 		}
@@ -1934,23 +1921,13 @@ focus_tree = {
 						limit = {
 							ROOT = { controls_province = 11225 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 8
-							province = 11225
-							instant_build = yes
-						}
-						}
+						set_building_level = { type = bunker level = 10 province = 11225 instant_build = yes }
+					}
 					if = {
 						limit = {
 							ROOT = { controls_province = 9299 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 9299
-							instant_build = yes
-						}
+						set_building_level = { type = bunker level = 5 province = 9299 instant_build = yes }
 					}
 				}
 				250 = { 		
@@ -1958,23 +1935,13 @@ focus_tree = {
 						limit = {
 							ROOT = { controls_province = 11319 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 11319
-							instant_build = yes
-						}
+						set_building_level = { type = bunker level = 5 province = 11319 instant_build = yes }
 					}
 					if = {
 						limit = {
 							ROOT = { controls_province = 3382 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 3382
-							instant_build = yes
-						}
+						set_building_level = { type = bunker level = 5 province = 3382 instant_build = yes }
 					}
 				}
 				249 = { 
@@ -1982,34 +1949,19 @@ focus_tree = {
 						limit = {
 							ROOT = { controls_province = 11339 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 11339
-							instant_build = yes
-						}
+						set_building_level = { type = bunker level = 5 province = 11339 instant_build = yes }
 					}
 					if = {
 						limit = {
 							ROOT = { controls_province = 372 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 5
-							province = 372
-							instant_build = yes
-						}
+						set_building_level = { type = bunker level = 5 province = 372 instant_build = yes }
 					}
 					if = {
 						limit = {
 							ROOT = { controls_province = 6338 }
 						}
-						add_building_construction = {
-							type = bunker
-							level = 8
-							province = 6338
-							instant_build = yes
-						}
+						set_building_level = { type = bunker level = 10 province = 6338 instant_build = yes }
 					}
 				}
 			}
@@ -3150,6 +3102,16 @@ focus_tree = {
     
 	    completion_reward = {		
 			custom_effect_tooltip = SOV_special_powers_tt     
+			hidden_effect = {
+				every_country = {
+					limit = {
+						ORIGION_is_in_faction_with_allies = yes
+					}
+					country_event = { 
+		    	    	id = origion.45
+		    		}
+				}
+			}
 		} 
     }
 	
@@ -3164,6 +3126,16 @@ focus_tree = {
 		
 		completion_reward = {		
 			custom_effect_tooltip = SOV_expand_supplies_tt   
+			hidden_effect = {
+				every_country = {
+					limit = {
+						ORIGION_is_in_faction_with_allies = yes
+					}
+					country_event = { 
+		    	    	id = origion.46
+		    		}
+				}
+			}
 		} 
     }
 	
