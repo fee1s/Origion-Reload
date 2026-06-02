@@ -186,7 +186,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_economy_dm_production_speed_buildings_factor_dm = 0.05
+			    SOV_economy_dm_production_speed_buildings_factor_dm = 0.1
 				tooltip = production_speed_buildings_factor_tt
 			}	
 			add_to_variable = { 
@@ -212,7 +212,7 @@ focus_tree = {
 				tooltip = local_resources_factor_tt
 			}
 			add_to_variable = {
-				SOV_economy_dm_industrial_capacity_factory_dm = 0.015
+				SOV_economy_dm_industrial_capacity_factory_dm = 0.025
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
@@ -3435,14 +3435,6 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_soviet_airforce_air_weather_penalty = -0.1
 				tooltip = air_weather_penalty_tt
-			}
-			add_to_variable = { 
-			    SOV_soviet_airforce_air_range_factor = 0.05
-				tooltip = air_range_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_soviet_airforce_air_agility_factor = 0.05
-				tooltip = air_agility_factor_tt
 			}
 		}
 	}

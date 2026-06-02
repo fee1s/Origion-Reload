@@ -255,34 +255,12 @@ ideas = {
 			}
 
 			available = {
-				if = {
-					limit = { GER = { exists = yes } }
-					
-					has_war_support > 0.5
-					OR = {
-						has_government = fascism
-						has_government = communism
-						has_war = yes
-					}
-
-					if = {
-						limit = {
-							original_tag = HUN
-							has_dlc = "Death or Dishonor"
-						}
-						if = {
-							limit = {
-								has_dlc = "Arms Against Tyranny"
-							}
-							NOT = { has_idea = HUN_treaty_of_triannon_aat }
-						}
-						else = {
-							NOT = { has_idea = HUN_treaty_of_triannon }
-						}
-					}
+				has_war_support > 0.5
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_war = yes
 				}
-				
-				else = { date > 1939.9.1 }
 			}
 
 			cost = 150
@@ -304,25 +282,15 @@ ideas = {
 		
 			visible = {
 				NOT = { original_tag = USA }
+				NOT = { original_tag = SOV }
 			}
 
 			available = {
-				if = {
-					limit = { GER = { exists = yes } }
-				
-					if = {
-						limit = {
-							original_tag = SOV
-						}
-						always = no
-					}
-					GER = { has_war_with = SOV }
-					has_war_support > 0.8	
-					has_war = yes
-				}
-				
-				else = { has_war = yes }
+				GER = { has_war_with = SOV }
+				has_war_support > 0.8	
+				has_war = yes
 			}
+			
 			ai_will_do = {
    				factor = 30
    			}
@@ -521,9 +489,9 @@ ideas = {
             }
 			
             modifier = {
-                consumer_goods_expected_value = 0.10
-                production_speed_arms_factory_factor = 0.4
-                conversion_cost_civ_to_mil_factor = -0.4
+                consumer_goods_expected_value = 0.15
+                production_speed_arms_factory_factor = 0.3
+                conversion_cost_civ_to_mil_factor = -0.3
             }
 			
             cancel_if_invalid = no
