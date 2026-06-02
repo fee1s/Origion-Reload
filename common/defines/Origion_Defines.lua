@@ -261,7 +261,7 @@ NDefines.NNavy.BASE_POSITIONING = 1.0 -- максимальное размеще
 NDefines.NNavy.RELATIVE_SURFACE_DETECTION_TO_POSITIONING_FACTOR = 0.01 -- увеличивает обнаружение между 2 флотами, сторона с большим обнаружением получает бонус
 NDefines.NNavy.MAX_POSITIONING_BONUS_FROM_SURFACE_DETECTION = 0.0 -- уменьшает бонус от обнаружения
 
-NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.9 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR = 0.95 -- то, на сколько дебафается размещение, если флот врага больше твоего в 2 раза; УВЕЛИЧЕНО 0.9 -> 0.95, by feels. & sumnir [02.06.26]
 
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.90 -- максимальный штраф от размещения
 NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR = 0 -- штраф, за более большое авиа соединение

@@ -130,7 +130,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SOV_politburo_dm_tt
 			add_to_variable = { 
-				SOV_politburo_dm_political_power_factor_dm = 0.05	
+				SOV_politburo_dm_political_power_factor_dm = 0.05
 				tooltip = political_power_factor_tt
 			}
 			add_to_variable = { 
@@ -287,11 +287,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SOV_politburo_dm_tt
 			add_to_variable = { 
-				SOV_politburo_dm_economy_cost_factor_dm = -0.2
+				SOV_politburo_dm_economy_cost_factor_dm = -0.25
 				tooltip = economy_cost_factor_tt
 			}
 			add_to_variable = { 
-				SOV_politburo_dm_mobilization_laws_cost_factor_dm = -0.2
+				SOV_politburo_dm_mobilization_laws_cost_factor_dm = -0.25
 				tooltip = mobilization_laws_cost_factor_tt
 			}
 		}
@@ -308,7 +308,7 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = SOV_politburo_dm_tt
-			add_war_support = 0.15
+			add_war_support = 0.25
 			
 		}
 	}
@@ -2362,7 +2362,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_economy_dm_consumer_goods_expected_value_dm = -0.01
+			    SOV_economy_dm_consumer_goods_expected_value_dm = -0.025
 				tooltip = consumer_goods_expected_tt
 			}
 			add_to_variable = { 
@@ -3044,14 +3044,15 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_ideas = over_economic_mobilisation
-			
+			# add_ideas = over_economic_mobilisation
+
+			set_sub_doctrine = peoples_war
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			unlock_decision_category_tooltip = SOV_operations
 			
 			hidden_effect = { 
-				set_sub_doctrine = peoples_war 
 				set_capital = { state = 251 } 
 			}
 		}

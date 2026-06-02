@@ -282,13 +282,13 @@ ideas = {
 		
 			visible = {
 				NOT = { original_tag = USA }
-				NOT = { original_tag = SOV }
+				# NOT = { original_tag = SOV }
 			}
 
 			available = {
-				GER = { has_war_with = SOV }
+				if = { limit = { NOT = { original_tag = SOV } } GER = { has_war_with = SOV } has_war = yes }
+				else = { date > 1941.06.22 } 
 				has_war_support > 0.8	
-				has_war = yes
 			}
 			
 			ai_will_do = {
