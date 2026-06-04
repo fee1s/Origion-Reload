@@ -190,7 +190,7 @@ focus_tree = {
 				tooltip = production_speed_buildings_factor_tt
 			}	
 			add_to_variable = { 
-				SOV_economy_dm_consumer_goods_expected_value_dm = -0.015
+				SOV_economy_dm_consumer_goods_expected_value_dm = -0.025
 				tooltip = consumer_goods_expected_tt
 			}
 		}
@@ -207,12 +207,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_economy_dm_tt
-			add_to_variable = { 
-			    SOV_economy_dm_local_resources_factor_dm = 0.05
-				tooltip = local_resources_factor_tt
-			}
 			add_to_variable = {
-				SOV_economy_dm_industrial_capacity_factory_dm = 0.025
+				SOV_economy_dm_industrial_capacity_factory_dm = 0.05
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
@@ -1977,7 +1973,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			date > 1936.6.1
+			has_idea = partial_economic_mobilisation
 		}
 		
 		prerequisite = { focus = SOV_country_of_victorious_socialism }
@@ -2027,7 +2023,7 @@ focus_tree = {
 				tooltip = global_building_slots_factor_tt
 			}
 			add_to_variable = { 
-				SOV_economy_dm_consumer_goods_expected_value_dm = -0.025
+				SOV_economy_dm_consumer_goods_expected_value_dm = -0.05
 				tooltip = consumer_goods_expected_tt
 			}
 		}
@@ -2296,8 +2292,8 @@ focus_tree = {
 		completion_reward = {		
 			custom_effect_tooltip = SOV_economy_dm_tt
 			add_to_variable = { 
-			    SOV_economy_dm_industrial_capacity_factory_dm = 0.025
-				tooltip = industrial_capacity_factory_tt
+			    SOV_economy_dm_production_speed_buildings_factor_dm = 0.015
+				tooltip = production_speed_buildings_factor_tt
 			}
 		}
 		 
@@ -2322,10 +2318,7 @@ focus_tree = {
 			    SOV_economy_dm_industrial_capacity_factory_dm = 0.025
 				tooltip = industrial_capacity_factory_tt
 			}
-			add_to_variable = { 
-			    SOV_economy_dm_local_resources_factor_dm = 0.025
-				tooltip = local_resources_factor_tt
-			}
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_core_state = {
 				limit = {
@@ -2365,10 +2358,7 @@ focus_tree = {
 			    SOV_economy_dm_consumer_goods_expected_value_dm = -0.025
 				tooltip = consumer_goods_expected_tt
 			}
-			add_to_variable = { 
-			    SOV_economy_dm_local_resources_factor_dm = 0.025
-				tooltip = local_resources_factor_tt
-			}
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_core_state = {
 				limit = {
@@ -3065,7 +3055,7 @@ focus_tree = {
         x = 1
         y = 1
 		relative_position_id = SOV_form_the_stavka
-		cost = 10
+		cost = 5
     
 	    completion_reward = {		
 		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
@@ -3086,6 +3076,7 @@ focus_tree = {
 			
 		    hidden_effect = {
 			    sound_effect = psi_the_sacred_war
+				news_event = origion.47
 			}
 			
 			add_mastery = { amount = 100 sub_doctrine = peoples_war }

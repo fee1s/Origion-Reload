@@ -1527,3 +1527,20 @@ country_event = { # Ленд-лиз эквипмента доступен
 		name = origion.46.a
 	}
 }
+
+news_event = { # Вставай, страна огромная!
+	id = origion.47
+	title = origion.47.t
+	desc = origion.47.d
+	picture = GFX_news_event_arise
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	fire_only_once = no
+	
+ 	option = {
+		name = origion.47.a
+	}
+}
