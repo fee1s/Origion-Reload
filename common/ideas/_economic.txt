@@ -471,11 +471,12 @@ ideas = {
             cancel_if_invalid = no
         }
 		
-		over_economic_mobilisation = {
+		over_economic_mobilisation = { ## НЕ ИСПОЛЬЗУЕТСЯ, РАНЬШЕ ИСПОЛЬЗОВАЛОСЬ, КАК ЭКСКЛЮЗИВНАЯ ЭКОНОМИКА ДЛЯ СССР ПОСЛЕ ПЕРВОГО ВОЕННОГО ФОКУСА 
             picture = new_economic_policy
 			
 			visible = {
-				tag = SOV
+				# tag = SOV
+				always = no
 			}
 			
 			allowed_to_remove = {

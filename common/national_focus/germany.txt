@@ -3175,10 +3175,11 @@ focus_tree = {
 		relative_position_id = GER_war_with_eng
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
-		available = {
-			NOT = { has_global_flag = after_asia }
+
+		bypass = {
+			has_global_flag = after_asia
 		}
 		
 		completion_reward = {

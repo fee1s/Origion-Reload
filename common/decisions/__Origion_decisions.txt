@@ -63,13 +63,14 @@ Epsilon_decions = { # Общие решения
 			has_manpower > 749999
 		}
 
-		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = sov_deployment_activated_once } }
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = sov_deployment_activated_once } has_war = no }
 
 		complete_effect = {
 			SOV = {
 				add_manpower = -750000
 				hidden_effect = {
-					load_oob = "SOV_universal_deployment"
+					# load_oob = "SOV_universal_deployment"
+					load_oob = "SOV_meta_deployment"
 				}
 			}
 
@@ -88,16 +89,17 @@ Epsilon_decions = { # Общие решения
 		
 		available = {
 			has_completed_focus = SOV_secret_protocol_of_the_MR_pact
-			has_manpower > 749999
+			has_manpower > 849999
 		}
 
-		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = sov_deployment_activated_once } }
+		visible = { NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = sov_deployment_activated_once } has_war = no }
 		
 		complete_effect = {
 			SOV = {
-				add_manpower = -750000
+				add_manpower = -850000
 				hidden_effect = {
-					load_oob = "SOV_meta_deployment"
+					# load_oob = "SOV_meta_deployment"
+					load_oob = "SOV_close_deployment"
 				}
 			}
 

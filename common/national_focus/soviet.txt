@@ -2091,7 +2091,8 @@ focus_tree = {
 		id = SOV_the_ussr_academy_of_sciences
 
 		icon = GFX_SOV_the_ussr_academy_of_sciences_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_national_specialists }
+		prerequisite = { focus = SOV_eastern_development }
+		prerequisite = { focus = SOV_develop_the_urals }
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
@@ -3011,7 +3012,7 @@ focus_tree = {
 		prerequisite = { focus = SOV_country_of_victorious_socialism }
 		x = 6
 		y = 1
-		cost = 5
+		cost = 2
         relative_position_id = SOV_country_of_victorious_socialism
 		
 		available = {
@@ -3055,7 +3056,7 @@ focus_tree = {
         x = 1
         y = 1
 		relative_position_id = SOV_form_the_stavka
-		cost = 5
+		cost = 10
     
 	    completion_reward = {		
 		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
@@ -3114,7 +3115,7 @@ focus_tree = {
         x = -1
         y = 3
 		relative_position_id = SOV_form_the_stavka
-		cost = 5
+		cost = 10
 		
 		completion_reward = {		
 			custom_effect_tooltip = SOV_expand_supplies_tt   

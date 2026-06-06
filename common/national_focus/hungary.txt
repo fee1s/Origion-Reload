@@ -1366,7 +1366,7 @@
 			has_completed_focus = HUN_economic_integration
 		}
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 80
@@ -1410,7 +1410,7 @@
 			has_completed_focus = HUN_economic_integration
 		}
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 80
@@ -1578,7 +1578,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -1599,12 +1599,7 @@
 		completion_reward = {
 		    add_tech_bonus = {
 				bonus = 1
-				uses = 2
-				technology = tech_engineers3
-				technology = tech_military_police3
-				technology = tech_flamethrower_brigade3
-				technology = tech_field_hospital3
-				technology = tech_signal_company3
+				uses = 1
 				technology = tech_engineers4
 				technology = tech_military_police4
 				technology = tech_flamethrower_brigade4
