@@ -1931,16 +1931,13 @@ ship_heavy_battery_3 = {
 		gfx = ship_airplane_launcher_1
 		
 		add_stats = {
-			surface_detection = 7
+			surface_detection = 4
 			sub_detection = 2.5
-			build_cost_ic = 150
-			naval_light_gun_hit_chance_factor = 0.05
-			naval_heavy_gun_hit_chance_factor = 0.05
-			naval_torpedo_hit_chance_factor = 0.05
+			build_cost_ic = 120
+			naval_light_gun_hit_chance_factor = 0.04
+			naval_heavy_gun_hit_chance_factor = 0.04
+			# naval_torpedo_hit_chance_factor = 0.04
 			sub_attack = 2
-		}
-		multiply_stats = {
-			naval_speed = -0.01
 		}
 	}
 	ship_airplane_launcher_2 = {
@@ -1949,20 +1946,17 @@ ship_heavy_battery_3 = {
 		gfx = ship_airplane_launcher_2
 		parent = ship_airplane_launcher_1
 		add_stats = {
-			surface_detection = 10
+			surface_detection = 8
 			sub_detection = 3.5
-			build_cost_ic = 170
-			naval_light_gun_hit_chance_factor = 0.09
-			naval_heavy_gun_hit_chance_factor = 0.09
-			naval_torpedo_hit_chance_factor = 0.09
-			sub_attack = 3
+			build_cost_ic = 140
+			naval_light_gun_hit_chance_factor = 0.08
+			naval_heavy_gun_hit_chance_factor = 0.08
+			# naval_torpedo_hit_chance_factor = 0.08
+			sub_attack = 4
 		}
 		can_convert_from = {
 			module_category = ship_airplane_launcher
 			convert_cost_ic = 80
-		}
-		multiply_stats = {
-			naval_speed = -0.01
 		}
 	}
 
@@ -1972,20 +1966,17 @@ ship_heavy_battery_3 = {
 		gfx = ship_airplane_launcher_3
 		parent = ship_airplane_launcher_2
 		add_stats = {
-			surface_detection = 10
+			surface_detection = 12
 			sub_detection = 4.5
-			build_cost_ic = 170
+			build_cost_ic = 160
 			naval_light_gun_hit_chance_factor = 0.12
 			naval_heavy_gun_hit_chance_factor = 0.12
-			naval_torpedo_hit_chance_factor = 0.12
-			sub_attack = 4
+			# naval_torpedo_hit_chance_factor = 0.12
+			sub_attack = 6
 		}
 		can_convert_from = {
 			module_category = ship_airplane_launcher
 			convert_cost_ic = 80
-		}
-		multiply_stats = {
-			naval_speed = -0.01
 		}	
 	}
 
@@ -2306,9 +2297,11 @@ ship_heavy_battery_3 = {
 		
 		add_stats = {
 			armor_value = 10
-			naval_torpedo_damage_reduction_factor = 0.1
+			naval_torpedo_damage_reduction_factor = 0.75
+			naval_torpedo_enemy_critical_chance_factor = -1
 		}
 	}
+
 	ship_armor_cruiser_2 = {
 		abbreviation = "sdm"
 		category = ship_cruiser_armor
@@ -2323,7 +2316,8 @@ ship_heavy_battery_3 = {
 		
 		add_stats = {
 			armor_value = 15
-			naval_torpedo_damage_reduction_factor = 0.20
+			naval_torpedo_damage_reduction_factor = 0.85
+			naval_torpedo_enemy_critical_chance_factor = -2
 		}
 		build_cost_resources = {
 			steel = 1
@@ -2343,7 +2337,8 @@ ship_heavy_battery_3 = {
 		
 		add_stats = {
 			armor_value = 20
-			naval_torpedo_damage_reduction_factor = 0.25
+			naval_torpedo_damage_reduction_factor = 0.9
+			naval_torpedo_enemy_critical_chance_factor = -2.5
 		}
 		build_cost_resources = {
 			steel = 1
@@ -2363,7 +2358,8 @@ ship_heavy_battery_3 = {
 		
 		add_stats = {
 			armor_value = 25
-			naval_torpedo_damage_reduction_factor = 0.3
+			naval_torpedo_damage_reduction_factor = 0.95
+			naval_torpedo_enemy_critical_chance_factor = -3
 		}
 		build_cost_resources = {
 			steel = 1

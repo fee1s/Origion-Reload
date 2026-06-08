@@ -658,7 +658,7 @@ create_equipment_variant = {
 
 	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
 
-	add_political_power = -273
+	add_political_power = -163
 
 	add_mastery = { amount = 403 folder = land }
 	add_mastery = { amount = 403 folder = naval }
@@ -667,6 +667,8 @@ create_equipment_variant = {
 	army_experience = 350
 	navy_experience = 450
 	air_experience = 380
+
+	add_war_support = 0.1 ## АТТАШЕ
 
 	add_ideas = { 
 		war_economy
@@ -689,12 +691,12 @@ create_equipment_variant = {
 		GER_east_mode_policies
 	}
 
-	activate_advisor = mikhail_kalinin
+	activate_advisor = SOV_vyacheslav_molotov
 	activate_advisor = SOV_lazar_kaganovich
 	activate_advisor = alexander_golovanov
 	activate_advisor = vasily_kuznetsov
 	activate_advisor = konstantin_rokossovsky
-	activate_advisor = ivan_chernyakhovsky
+	activate_advisor = sergei_khudyakov
 	activate_advisor = alexander_novikov
 	activate_advisor = georgy_zhukov
 
@@ -857,8 +859,9 @@ create_equipment_variant = {
 
 	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
 	
-	complete_national_focus = SOV_the_path_of_marxism_leninism
-	complete_national_focus = SOV_finish_the_five_year_plan
+	complete_national_focus = SOV_country_of_victorious_socialism
+	complete_national_focus = SOV_politburo_of_the_ussr
+	complete_national_focus = SOV_forced_industrialization
 	complete_national_focus = SOV_third_five_year_plan
 	complete_national_focus = SOV_increase_state_reserves
 	complete_national_focus = SOV_reorganize_the_pc_of_heavy_industry
@@ -871,19 +874,19 @@ create_equipment_variant = {
 	complete_national_focus = SOV_expand_the_aircraft_industry
 	complete_national_focus = SOV_modernize_aircraft_facilities
 	complete_national_focus = SOV_merge_aircraft_plants
-	complete_national_focus = SOV_the_centre
+	complete_national_focus = SOV_development_of_sovhoz
 	complete_national_focus = SOV_the_stalin_constitution
 	complete_national_focus = SOV_the_zinovyevite_terrorist_center
 	complete_national_focus = SOV_socialism_in_one_country
-	complete_national_focus = SOV_the_collectivization_process
+	complete_national_focus = SOV_use_gulag
 	complete_national_focus = SOV_the_anti_soviet_trotskyist_center
 	complete_national_focus = SOV_the_workers_dictatorship
-	complete_national_focus = SOV_the_military_conspiracy
+	complete_national_focus = SOV_socialist_realism
 	complete_national_focus = SOV_the_bloc_of_rights_and_trotskyites
 	complete_national_focus = SOV_behead_the_snake
-	complete_national_focus = SOV_addressing_internal_affairs
-	complete_national_focus = SOV_expand_the_agitprop
-	complete_national_focus = SOV_the_new_soviet_woman
+	complete_national_focus = SOV_komsomol
+	complete_national_focus = SOV_father_of_nations
+	complete_national_focus = SOV_merge_tank_plants
 	complete_national_focus = SOV_positive_heroism
 	complete_national_focus = SOV_nkvd_primacy
 	complete_national_focus = SOV_strengthen_the_mobilization_plan
@@ -893,13 +896,19 @@ create_equipment_variant = {
 	complete_national_focus = SOV_pc_of_mechanical_engineering
 	complete_national_focus = SOV_superior_war_machines
 	complete_national_focus = SOV_soviet_artillery
-	complete_national_focus = SOV_merge_tank_and_materiel_plants
-	complete_national_focus = SOV_the_means_to_wage_war
-	complete_national_focus = SOV_secure_the_administration
+	complete_national_focus = SOV_merge_materiel_plants
+	complete_national_focus = SOV_peoples_commissariat_of_armament
+	complete_national_focus = SOV_pc_of_mortar_armament
+	complete_national_focus = SOV_gosplan_ussr
 	complete_national_focus = SOV_found_the_pcdi
 
+	# complete_national_focus = SOV_southern_frontier
+	# complete_national_focus = SOV_kursk_salient_forts
+	# complete_national_focus = SOV_improve_the_stalin_line
+	# complete_national_focus = SOV_impregnable_forts
+
 	unlock_national_focus = SOV_development_of_tankograd
-	unlock_national_focus = SOV_transpolar_flights
+	unlock_national_focus = SOV_people_commissariat_of_aircraft_construction
 	unlock_national_focus = SOV_secret_protocol_of_the_MR_pact
 
 	## ТЕХНОЛОГИИ И СКИДКИ
@@ -940,7 +949,7 @@ create_equipment_variant = {
 		#fuel_refining3 = 1
 
 		electronic_mechanical_engineering = 1
-		mechanical_computing = 1
+		# mechanical_computing = 1
 
 		radio = 1
 		radio_detection = 1
@@ -972,12 +981,16 @@ create_equipment_variant = {
 		armor_tech_1 = 1
 		armor_tech_2 = 1
 
-		tech_engineers2 = 1
+		# tech_engineers2 = 1
 		tech_maintenance_company = 1
 		tech_maintenance_company2 = 1
 		tech_military_police2 = 1
-		tech_flamethrower_brigade = 1
-		tech_flamethrower_brigade2 = 1
+
+		# tech_flamethrower_brigade = 1
+		# tech_flamethrower_brigade2 = 1
+
+		aa_hmg = 1
+		aa_cannon_1 = 1
 
 		infantry_weapons2 = 1
 		improved_infantry_weapons = 1
@@ -986,42 +999,48 @@ create_equipment_variant = {
 
 	add_tech_bonus = {
 		name = SOV_reorganize_the_pc_of_heavy_industry_name_default
-		ahead_reduction = 1
+		bonus = 1.5
 		technology = flexible_line
 		technology = streamlined_line
 	}
 
 	## КОНСТРАКШЕН
 
-	219 = { set_building_level = { type = arms_factory level = 25 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	195 = { set_building_level = { type = arms_factory level = 23 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	252 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	217 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 18 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	137 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	234 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	229 = { set_building_level = { type = arms_factory level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	400 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	398 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+	219 = { set_building_level = { type = arms_factory level = 26 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	195 = { set_building_level = { type = arms_factory level = 24 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	252 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	217 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = industrial_complex level = 16 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	137 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } set_building_level = { type = industrial_complex level = 7 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	234 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	221 = { set_building_level = { type = arms_factory level = 18 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	400 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	398 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } }
+	389 = { set_building_level = { type = arms_factory level = 1 instant_build = yes } }
 	581 = { set_building_level = { type = arms_factory level = 2 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	653 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	572 = { set_building_level = { type = arms_factory level = 14 instant_build = yes } set_building_level = { type = industrial_complex level = 6 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	582 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } }
-	651 = { set_building_level = { type = arms_factory level = 8 instant_build = yes } set_building_level = { type = industrial_complex level = 12 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	652 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	653 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 15 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	572 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 17 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	582 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } set_building_level = { type = industrial_complex level = 4 instant_build = yes } }
+	651 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 13 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	652 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 	251 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
 	249 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
-	833 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
-	256 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
-	250 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } }
-	255 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
+	247 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } }
+	248 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } }
+	248 = { set_building_level = { type = arms_factory level = 12 instant_build = yes } }
+	833 = { set_building_level = { type = arms_factory level = 11 instant_build = yes } }
+	256 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } }
+	250 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
+	255 = { set_building_level = { type = arms_factory level = 10 instant_build = yes } }
 	239 = { set_building_level = { type = arms_factory level = 9 instant_build = yes } }
-	405 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	405 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	586 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
-	408 = { set_building_level = { type = arms_factory level = 20 instant_build = yes } set_building_level = { type = industrial_complex level = 3 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	405 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	586 = { set_building_level = { type = arms_factory level = 19 instant_build = yes } set_building_level = { type = industrial_complex level = 0 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	408 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = industrial_complex level = 7 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
 	409 = { set_building_level = { type = arms_factory level = 7 instant_build = yes } set_building_level = { type = industrial_complex level = 1 instant_build = yes } }
-	253 = { set_building_level = { type = arms_factory level = 1 instant_build = yes } }
-	829 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } }
+	254 = { set_building_level = { type = arms_factory level = 6 instant_build = yes } set_building_level = { type = industrial_complex level = 2 instant_build = yes } }
+	257 = { set_building_level = { type = arms_factory level = 4 instant_build = yes } }
+	829 = { set_building_level = { type = arms_factory level = 3 instant_build = yes } }
+	253 = { set_building_level = { type = arms_factory level = 13 instant_build = yes } }
+	989 = { set_building_level = { type = arms_factory level = 2 instant_build = yes } }
 
 	## ТРЕЙТЫ В КБШКАХ
 
@@ -1127,7 +1146,7 @@ create_equipment_variant = {
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
             special_type_slot_3 = tank_radio_1
             special_type_slot_4 = wet_ammo_storage
         }
@@ -1155,7 +1174,7 @@ create_equipment_variant = {
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
             special_type_slot_3 = tank_radio_2
             special_type_slot_4 = easy_maintenance
         }
@@ -1183,7 +1202,7 @@ create_equipment_variant = {
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
             special_type_slot_3 = tank_radio_2
             special_type_slot_4 = easy_maintenance
         }
@@ -1192,7 +1211,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = medium_tank_chassis_2
-		amount = 1950
+		amount = 2350
 		variant_name = "T-34 1941"	
 	}
 
@@ -1249,7 +1268,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = medium_tank_destroyer_chassis_2
-		amount = 3000
+		amount = 2600
 		variant_name = "Su-85 1941"
 	}
 
@@ -1263,7 +1282,7 @@ create_equipment_variant = {
             suspension_type_slot = tank_bogie_suspension
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_gasoline_engine
-            special_type_slot_1 = extra_ammo_storage
+            special_type_slot_1 = squeezebore_adaptor
             special_type_slot_2 = extra_ammo_storage
             special_type_slot_3 = extra_ammo_storage
             special_type_slot_4 = easy_maintenance
@@ -1285,7 +1304,7 @@ create_equipment_variant = {
 			engine_type_slot = tank_diesel_engine
 			special_type_slot_1 = tank_radio_2
 			special_type_slot_2 = secondary_turret_small_cannon
-			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_3 = squeezebore_adaptor
 			special_type_slot_4 = easy_maintenance
 		}
 		upgrades = {
@@ -1300,6 +1319,26 @@ create_equipment_variant = {
 		type = small_plane_airframe_1
 		design_team = mio:SOV_mig_design_bureau_organization
 		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			fixed_auxiliary_weapon_slot_1 = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small			
+		}
+		obsolete = yes
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_1
+		amount = 280
+		variant_name = "Polikarpov I-16"	
+	}
+
+	create_equipment_variant = {
+		name = "Polikarpov I-16 A" 
+		type = small_plane_airframe_1
+		design_team = mio:SOV_mig_design_bureau_organization
+		modules = {
 			fixed_main_weapon_slot = heavy_mg_4x
 			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
 			engine_type_slot = engine_2_1x
@@ -1307,6 +1346,12 @@ create_equipment_variant = {
 			special_type_slot_2 = fuel_tanks_small			
 		}
 		obsolete = yes
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_1
+		amount = 870
+		variant_name = "Polikarpov I-16 A"	
 	}
 
 	create_equipment_variant = {
@@ -1322,8 +1367,43 @@ create_equipment_variant = {
 			special_type_slot_2 = armor_plate_small		
 			special_type_slot_3 = lmg_defense_turret		
 		}
-		obsolete = no
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Lavochkin-Gorbunov-Gudkov LaGG-3 A" 
+		type = small_plane_airframe_2
+		design_team = mio:SOV_mig_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = hmg_defense_turret		
+		}
 		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Kochyerigin LBSh" 
+		type = small_plane_cas_airframe_1
+		design_team = mio:SOV_yakovlev_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = heavy_bomb_locks
+			fixed_auxiliary_weapon_slot_1 = heavy_bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = fuel_tanks_small
+			special_type_slot_2 = lmg_defense_turret			
+		}
+		obsolete = yes
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_1
+		amount = 150
+		variant_name = "Kochyerigin LBSh"	
 	}
 
 	create_equipment_variant = {
@@ -1458,53 +1538,47 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = support_equipment_1
-		amount = 33300
+		amount = 47240
 	}
 
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_2
-		amount = 488500
+		amount = 571884
 		variant_name = "PPSh-41"
 	}
 
 	add_equipment_to_stockpile = {
 		type = motorized_equipment_1
-		amount = 17400
+		amount = 6600
 	}
 
 	add_equipment_to_stockpile = {
 		type = anti_air_equipment_2
-		amount = 1060
+		amount = 630
 		variant_name = "M1940"	
 	}
 
 	add_equipment_to_stockpile = {
 		type = anti_air_equipment_1
-		amount = 20980
+		amount = 23443
 		variant_name = "M1939"	
 	}
 
 	add_equipment_to_stockpile = {
 		type = mechanized_equipment_1
-		amount = 8560
+		amount = 6add438
 		variant_name = "BRT-1941"	
 	}
 
 	add_equipment_to_stockpile = {
 		type = small_plane_cas_airframe_2
-		amount = 450
+		amount = 480
 		variant_name = "Ilyushin Il-2 1940"	
 	}
 
 	add_equipment_to_stockpile = {
-		type = small_plane_airframe_1
-		amount = 1200
-		variant_name = "Polikarpov I-16"	
-	}
-
-	add_equipment_to_stockpile = {
 		type = small_plane_airframe_2
-		amount = 8500
+		amount = 11450
 		variant_name = "Lavochkin-Gorbunov-Gudkov LaGG-3"	
 	}
 	
@@ -1522,7 +1596,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = train_equipment_1
-		amount = 824
+		amount = 893
 	}
 }
 

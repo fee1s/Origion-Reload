@@ -165,3 +165,547 @@ add_equipment_to_stockpile = {
 	type = train_equipment_1
 	amount = 70
 }
+
+1941.3.1.12 = {
+	## ПРОДАКШЕН, ДИВИЗИИ
+
+	set_oob = FIN_1941_ORGN
+
+	## СОВЕТНИКИ, НАЦ. ДУХИ И Т.П
+
+	add_political_power = -180
+
+	add_ideas = { peace_training GER_east_mode_policies }
+
+	add_command_power = 170
+
+	add_ideas = { 
+		limited_conscription
+		FIN_tampella
+
+		meticulous_preparation_spirit
+		professional_officer_corps_spirit
+		flexible_organization_spirit
+
+		flexible_contracts_spirit
+
+		dive_bombing_spirit
+		massed_strike_spirit
+	}
+
+	activate_advisor = FIN_aarne_juutilainen
+	activate_advisor = FIN_aimo_cajander
+	activate_advisor = FIN_aimo_lahti
+	activate_advisor = FIN_carl_mannerheim
+	activate_advisor = FIN_paavo_susitaival
+	activate_advisor = FIN_erik_heinrichs
+	activate_advisor = FIN_vilho_petter_nenonen
+	activate_advisor = FIN_woldemar_hagglund
+
+	add_trait = {
+		character = FIN_erik_heinrichs
+		trait = defensive_doctrine
+	}
+
+	add_trait = {
+		character = FIN_erik_heinrichs
+		trait = organisational_leader
+	}
+
+	add_trait = {
+		character = FIN_erik_heinrichs
+		trait = camouflage_expert
+	}
+
+	add_trait = {
+		character = FIN_erik_heinrichs
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = FIN_woldemar_hagglund
+		trait = ambusher
+	}
+
+	add_trait = {
+		character = FIN_woldemar_hagglund	
+		trait = camouflage_expert
+	}
+
+	add_trait = {
+		character = FIN_woldemar_hagglund	
+		trait = guerilla_fighter
+	}
+
+	add_trait = {
+		character = FIN_carl_mannerheim
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = FIN_carl_mannerheim
+		trait = thorough_planner
+	}
+
+	add_trait = {
+		character = FIN_carl_mannerheim
+		trait = offensive_doctrine
+	}
+
+	add_trait = {
+		character = FIN_carl_mannerheim
+		trait = fortress_buster
+	}
+
+	add_trait = {
+		character = FIN_vilho_petter_nenonen
+		trait = adaptable
+	}
+
+	add_trait = {
+		character = FIN_vilho_petter_nenonen
+		trait = fortress_buster
+	}
+
+	add_trait = {
+		character = FIN_vilho_petter_nenonen
+		trait = camouflage_expert
+	}
+
+	set_sub_doctrine = armored_cavalry
+
+	add_mastery = { amount = 494 folder = land }
+	add_mastery = { amount = 451 folder = naval }
+	add_mastery = { amount = 483 folder = air }
+
+	army_experience = 600
+	navy_experience = 620
+	air_experience = 530
+
+	set_technology = {
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+		improved_equipment_conversion = 1
+		advanced_equipment_conversion = 1
+
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		concentrated_industry4 = 1
+		concentrated_industry5 = 1
+
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+
+		excavation1 = 1
+		excavation2 = 1
+
+		fuel_refining2 = 1
+
+		electronic_mechanical_engineering = 1
+
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		improved_decimetric_radar = 1
+		centimetric_radar = 1
+
+		improved_small_airframe = 1
+		engines_3 = 1
+
+		interwar_artillery = 1
+		interwar_antitank = 1
+
+		antitank1 = 1
+		antitank2 = 1
+		antitank3 = 1
+		antitank4 = 1
+		antitank5 = 1
+
+		interwar_antiair = 1
+		antiair1 = 1
+		antiair2 = 1
+
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		improved_light_tank_chassis = 1
+
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+
+		tech_military_police = 1
+		tech_military_police2 = 1
+		tech_engineers2 = 1
+		tech_maintenance_company = 1
+		tech_maintenance_company2 = 1
+		tech_flamethrower_brigade = 1
+		tech_flamethrower_brigade2 = 1
+
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		improved_infantry_weapons_2 = 1
+		advanced_infantry_weapons = 1
+
+		support_weapons = 1
+		# support_weapons2 = 1
+
+		mechanised_infantry = 1
+	}
+
+	## НАЦИОНАЛЬНЫЕ ФОКУСЫ
+	
+	complete_national_focus = FIN_finnish_neutrality
+	complete_national_focus = FIN_political_unity
+	complete_national_focus = FIN_align_the_agrarian_league 
+	complete_national_focus = FIN_collaboration_with_the_left
+	complete_national_focus = FIN_national_unity 
+	complete_national_focus = FIN_arm_the_lotta_svard
+	complete_national_focus = FIN_the_lone_wolf
+	complete_national_focus = FIN_cooperation_with_germany
+	complete_national_focus = FIN_wartsila_engine_production
+	complete_national_focus = FIN_german_military_advisors
+	complete_national_focus = FIN_militarized_society
+	complete_national_focus = FIN_enhance_southern_infrastructure
+	complete_national_focus = FIN_industrial_development
+	complete_national_focus = FIN_janiskoski_power_plant 
+	complete_national_focus = FIN_suomen_akatemia
+	complete_national_focus = FIN_expand_imatra_hydropower_plant
+	# complete_national_focus = FIN_makola_mine
+	complete_national_focus = FIN_power_from_the_dams
+
+	# complete_national_focus = FIN_industrial_upgrade_in_harjavalta
+	# complete_national_focus = FIN_expand_mining_prospection
+
+	# complete_national_focus = FIN_tornio_steel_factory
+	complete_national_focus = FIN_outokumpu_for_defence_industry
+
+	complete_national_focus = FIN_increase_military_investment
+
+	complete_national_focus = FIN_expand_state_military_factories
+	complete_national_focus = FIN_integrate_oy_tikkakoski
+	complete_national_focus = FIN_infantry_weapons
+	unlock_national_focus = FIN_salvaged_and_retooled
+	complete_national_focus = FIN_national_armor_focus
+	complete_national_focus = FIN_winter_warfare
+	complete_national_focus = FIN_motti_tactics
+	complete_national_focus = FIN_national_firepower
+	complete_national_focus = FIN_utilize_the_sami
+	complete_national_focus = FIN_long_range_patrols
+	complete_national_focus = FIN_sissi
+	
+	unlock_national_focus = FIN_suomen_maavoimat
+
+	## БОНУС ИЗ FIN_salvaged_and_retooled
+
+	add_to_variable = { 
+		FIN_finnish_economy_industrial_capacity_factory = 0.05
+	}
+
+	111 = { set_building_level = { type = arms_factory level = 15 instant_build = yes } set_building_level = { type = industrial_complex level = 8 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	926 = { set_building_level = { type = arms_factory level = 16 instant_build = yes } set_building_level = { type = industrial_complex level = 10 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+	148 = { set_building_level = { type = arms_factory level = 5 instant_build = yes } set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+
+	## ТРЕЙТЫ В КБШКАХ
+
+	mio:FIN_valtion_panssaritehdas_organization = {
+		complete_mio_trait = generic_mio_trait_simplified_suspension
+		complete_mio_trait = generic_mio_trait_crew_ergonomics
+		complete_mio_trait = generic_mio_trait_improved_tracks
+		complete_mio_trait = generic_mio_trait_command_upgrades
+		complete_mio_trait = generic_mio_trait_standardized_components
+		complete_mio_trait = generic_mio_trait_long_barreled_guns
+		# complete_mio_trait = generic_mio_trait_infantry_support_tanks
+	}
+
+	mio:FIN_sisu_auto_organization = {
+		complete_mio_trait = generic_mio_trait_open_chassi
+	}
+
+	mio:FIN_valtion_kivaaritehdas_organization = {
+		complete_mio_trait = generic_mio_trait_drum_pattern_sights
+		# complete_mio_trait = generic_mio_trait_quality_materials
+		# complete_mio_trait = generic_mio_trait_improved_small_arms_bullet_design
+		# complete_mio_trait = generic_mio_trait_armor_piercing_rounds
+		# complete_mio_trait = generic_mio_trait_medium_machineguns
+		# complete_mio_trait = generic_mio_trait_anti_vechicle_land_mines
+
+		complete_mio_trait = generic_mio_trait_research_program
+		complete_mio_trait = generic_mio_trait_reinforced_stocks
+		complete_mio_trait = generic_mio_trait_advanced_barrel_forging
+		complete_mio_trait = generic_mio_trait_mass_rifle_production
+	}
+
+	mio:FIN_valtion_tykkitehdas_organization = {
+		complete_mio_trait = generic_mio_trait_advanced_barrel_forging
+	}
+
+	## ШАБЛОНЫ СНАРЯЖЕНИЯ
+
+	create_equipment_variant = {
+        name = "Panzerkampfwagen IV"
+        type = medium_tank_chassis_2
+        design_team = mio:FIN_valtion_panssaritehdas_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 11
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
+            special_type_slot_3 = tank_radio_2
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = yes
+		parent_version = 1
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 330
+		variant_name = "Panzerkampfwagen IV"	
+	}
+
+	create_equipment_variant = {
+        name = "Panzerkampfwagen V"
+        type = medium_tank_chassis_2
+        design_team = mio:FIN_valtion_panssaritehdas_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 11
+            tank_nsb_armor_upgrade = 14
+        }
+        modules = {
+            turret_type_slot = tank_medium_three_man_tank_turret
+            main_armament_slot = tank_medium_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_diesel_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
+            special_type_slot_3 = tank_radio_3
+            special_type_slot_4 = easy_maintenance
+        }
+		mark_older_equipment_obsolete = yes
+		obsolete = no
+		parent_version = 0
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_chassis_2
+		amount = 390
+		variant_name = "Panzerkampfwagen V"	
+	}
+
+    create_equipment_variant = {
+        name = "JagdPz IV"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:FIN_valtion_panssaritehdas_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 1
+        }
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_heavy_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		obsolete = yes
+		parent_version = 1
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 640
+		variant_name = "JagdPz IV"
+	}
+
+    create_equipment_variant = {
+        name = "JagdPz V"
+        type = medium_tank_destroyer_chassis_2
+        design_team = mio:FIN_valtion_panssaritehdas_organization
+        upgrades  = {
+            tank_nsb_engine_upgrade = 1
+        }
+        modules = {
+            turret_type_slot = tank_medium_fixed_superstructure_turret
+            main_armament_slot = tank_high_velocity_cannon_3
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = secondary_turret_small_cannon
+            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_3 = squeezebore_adaptor
+            special_type_slot_4 = easy_maintenance
+        }
+		mark_older_equipment_obsolete = yes
+		obsolete = no
+		parent_version = 0
+    }
+
+	add_equipment_to_stockpile = {
+		type = medium_tank_destroyer_chassis_2
+		amount = 780
+		variant_name = "JagdPz V"
+	}
+
+    create_equipment_variant = {
+        name = "Flakpanzer IV «Ostwind»"
+        type = medium_tank_aa_chassis_2
+        design_team = mio:FIN_valtion_panssaritehdas_organization
+        modules = {
+            turret_type_slot = tank_light_one_man_tank_turret
+            main_armament_slot = tank_anti_air_cannon_2
+            suspension_type_slot = tank_bogie_suspension
+            armor_type_slot = tank_riveted_armor
+            engine_type_slot = tank_gasoline_engine
+            special_type_slot_1 = squeezebore_adaptor
+            special_type_slot_2 = extra_ammo_storage
+            special_type_slot_3 = extra_ammo_storage
+            special_type_slot_4 = easy_maintenance
+        }
+    }
+
+    create_equipment_variant = {
+        name = "Panzerkampfwagen II"
+        type = light_tank_chassis_2
+        design_team = mio:FIN_valtion_panssaritehdas_organization
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_three_man_tank_turret
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_3
+			special_type_slot_2 = secondary_turret_small_cannon
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = easy_maintenance
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 10
+			tank_nsb_armor_upgrade = 14
+		}
+    }
+
+	create_equipment_variant = {
+		name = "Sonderkraftfahrzeug 11" 	
+		type = mechanized_equipment_1
+		design_team = mio:FIN_sisu_auto_organization
+		upgrades = { mech_cost_upgrade = 5 }
+		mark_older_equipment_obsolete = yes
+	}		
+
+	create_equipment_variant = {
+		name = "MP 38" 	
+		type = infantry_equipment_2
+		design_team = mio:FIN_valtion_kivaaritehdas_organization
+		parent_version = 0
+	}	
+
+	create_equipment_variant = {
+		name = "MP 43" 	
+		type = infantry_equipment_3
+		design_team = mio:FIN_valtion_kivaaritehdas_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Дополнительное оснащение" 	
+		type = support_equipment_1
+		design_team = mio:FIN_valtion_kivaaritehdas_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "20-мм FlaK 30" 	
+		type = anti_air_equipment_2
+		design_team = mio:FIN_valtion_tykkitehdas_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}	
+
+	create_equipment_variant = {
+		name = "20-мм FlaK 20" 	
+		type = anti_air_equipment_1
+		design_team = mio:FIN_valtion_tykkitehdas_organization
+	}
+	
+	create_equipment_variant = {
+		name = "Opel Blitz" 	
+		type = motorized_equipment_1
+		design_team = mio:FIN_sisu_auto_organization
+		parent_version = 0
+		mark_older_equipment_obsolete = yes
+	}
+
+
+	## ДОБАВЛЯЕМ ТЕХНИКУ НА СКЛАДЫ
+
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 1630
+	}
+
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_2
+		amount = 20845
+		variant_name = "MP 38"
+	}
+
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_3
+		amount = 832
+		variant_name = "MP 43"
+	}
+
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 700
+	}
+
+	add_equipment_to_stockpile = {
+		type = anti_air_equipment_2
+		amount = 600
+		variant_name = "20-мм FlaK 30"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = anti_air_equipment_1
+		amount = 560
+		variant_name = "20-мм FlaK 20"	
+	}
+
+	add_equipment_to_stockpile = {
+		type = mechanized_equipment_1
+		amount = 1235
+		variant_name = "Sonderkraftfahrzeug 11"	
+	}
+	
+	add_equipment_to_stockpile = {
+		type = medium_tank_aa_chassis_2
+		amount = 170
+		variant_name = "Flakpanzer IV «Ostwind»"
+	}
+
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_2
+		amount = 153
+		variant_name = "Panzerkampfwagen II"
+	}
+}

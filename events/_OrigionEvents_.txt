@@ -1022,7 +1022,7 @@ country_event = { # Италия запрашивает поддержку (РЕ
 		hidden_effect = {	
 			if = { limit = { NOT = { has_global_flag = ITA_ask_for_help_1942_flag } date < 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1941_flag } 
 			else_if = { limit = { has_global_flag = ITA_ask_for_help_1941_flag NOT = { has_global_flag = ITA_ask_for_help_1942_completed } NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1942_flag add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_7 days = -30 } set_variable = { ITA_ask_for_help_amount = 1500 } add_to_variable = { GER_downfall_of_northern_africa_days = -30 } }
-			else = { set_global_flag = ITA_ask_for_help_1943_flag set_variable = { ITA_ask_for_help_amount = 500 } add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_9 days = -30 } }
+			else = { set_global_flag = ITA_ask_for_help_1943_flag set_variable = { ITA_ask_for_help_amount = 250 } add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_9 days = -30 } }
 		}
 	}
 

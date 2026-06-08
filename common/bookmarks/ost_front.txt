@@ -40,6 +40,20 @@ bookmarks = {
 		"---"={
 			history = "OTHER_BLITZKRIEG_DESC"
 		}
+		
+		"FIN"={
+			minor = yes
+			history = "FIN_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				FIN_axis_stuff_idea
+			}
+			focuses = {
+				FIN_finnish_neutrality
+				FIN_the_lone_wolf
+				FIN_finnish_march_of_conquest
+			}
+		}
 
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

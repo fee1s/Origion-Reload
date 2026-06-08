@@ -3104,6 +3104,12 @@ focus_tree = {
 		    	    	id = origion.45
 		    		}
 				}
+
+				if = { ## НАЧАЛО ПОСТАВОК В РЕЖИМЕ ВОСТОЧНОГО ФРОНТА
+					limit = { has_global_flag = OST_FRONT_FLAG }
+
+					COL = { activate_mission = SOV_ll_east_front_mode }
+				}
 			}
 		} 
     }
@@ -3127,6 +3133,16 @@ focus_tree = {
 					country_event = { 
 		    	    	id = origion.46
 		    		}
+				}
+
+				if = { ## ВОЗМОЖНО КОГДА-ТО ПРОРАБОТАЮ ПАРАЛЕЛЛЬНЫЕ МАЛЕНЬКИЕ ПОСТАВКИ ВИНТОВОК ДЛЯ ВОСТОЧНОГО ФРОНТА, ПОКА ЧТО ВОТ ТАК (ОДНА БОЛЬШАЯ ПОСТАВКА)
+					limit = { has_global_flag = OST_FRONT_FLAG }
+
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_2
+						amount = 125000
+						variant_name = "PPSh-41"
+					}
 				}
 			}
 		} 

@@ -16,6 +16,22 @@ debug_decisions = {
 		}
 	}
 
+	reset_doctrine = {
+		allowed = {
+			always = yes
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			has_global_flag = show_debug_decisions_flag
+		}
+
+		complete_effect = {
+			clr_country_flag = theorist_picked_flag
+		}
+	}
+
 	debug_hide_decisions = {
 		priority = -1
 		allowed = {

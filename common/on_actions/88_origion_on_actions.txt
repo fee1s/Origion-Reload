@@ -51,8 +51,30 @@ on_actions = {
 			}
 			if = { 
 				limit = {
+					OR = { state = 215 state = 213 state = 215 state = 722 }
+				} 
+				teleport_armies = {
+					limit = {
+						OR = {
+							ORIGION_is_in_faction_with_axis = yes
+						}
+					}
+					to_state = 64 
+				} 
+				every_country = {
+					delete_unit = {
+						state = 64
+						disband = yes
+					} 
+				}
+				PREV = { 
+					if = { limit = { OR = { state = 215 state = 213 state = 215 state = 722 } } transfer_state_to = SOV }  
+				}				
+			}
+			if = { 
+				limit = {
 					norwegian_coastline = yes
-					SOV = { has_war = no }
+					SOV = { has_war = no }				
 				} 
 				teleport_armies = {
 					limit = {
@@ -504,6 +526,15 @@ on_actions = {
 			if = { 
 				limit = { has_global_flag = OST_FRONT_FLAG }
 
+				## ФИНЛЯНДИЯ В РЕЖИМЕ ВОСТОЧНОГО ФРОНТА (РЕСУРСЫ НЕ ДОБАВЛЯЮТСЯ ЧЕРЕЗ HISTORY/COUNTRIES)
+				
+				FIN = {
+					complete_national_focus = FIN_industrial_upgrade_in_harjavalta
+					complete_national_focus = FIN_expand_mining_prospection
+					complete_national_focus = FIN_makola_mine
+					complete_national_focus = FIN_tornio_steel_factory
+				}
+
 				## ОБНУЛЕНИЕ РУМЫНСКОЙ ПРОМЫШЛЕННОСТИ И СЛОТОВ НА ЕЕ ТЕРРИТОРИИ
 
 				every_state = {
@@ -918,53 +949,6 @@ on_actions = {
 			else = {
 				set_variable = { GER.atlantikwall_dm_army_attack_factor = -0.55 }
 				set_variable = { GER.atlantikwall_2_dm_army_attack_factor = 0.55 }
-			}
-		}
-	}
-	on_weekly_FIN = {
-	    effect = {
-			if = {
-			    limit = {
-				    146 = {
-					    is_fully_controlled_by_axis = yes
-					}
-					195 = {
-					    is_fully_controlled_by_axis = yes
-					}
-					216 = {
-					    is_fully_controlled_by_axis = yes
-					}
-				}
-				transfer_state = 147
-				transfer_state = 213
-				transfer_state = 215
-				transfer_state = 722
-			}
-			else = {
-			    SOV = {
-				    transfer_state = 147
-					transfer_state = 213
-				    transfer_state = 215
-				    transfer_state = 722
-				}
-			}
-			every_country = {
-				delete_unit = {
-					state = 147
-					disband = yes
-				}
-				delete_unit = {
-					state = 213
-					disband = yes
-				}
-				delete_unit = {
-					state = 215
-					disband = yes
-				}
-				delete_unit = {
-					state = 722
-					disband = yes
-				}
 			}
 		}
 	}

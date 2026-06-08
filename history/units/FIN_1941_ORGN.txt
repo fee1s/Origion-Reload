@@ -1,0 +1,187 @@
+﻿division_template = {
+	name = "PEH"
+
+	regiments = {
+		infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 }  
+		infantry = { x = 0 y = 1 } infantry = { x = 1 y = 1 } infantry = { x = 2 y = 1 }  						 
+		infantry = { x = 0 y = 2 } 	infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } 
+	}
+	support = { engineer = { x = 0 y = 0 } anti_air = { x = 0 y = 1 } }
+}
+
+division_template = {
+	name = "T-90 «Crazed Dragon»"
+	regiments = {
+		medium_tank_destroyer_brigade = { x = 0 y = 0 }  medium_tank_destroyer_brigade = { x = 1 y = 0 } medium_armor = { x = 2 y = 0 } mechanized = { x = 3 y = 0 } mechanized = { x = 4 y = 0 }
+		medium_tank_destroyer_brigade = { x = 0 y = 1 }  medium_tank_destroyer_brigade = { x = 1 y = 1 } medium_armor = { x = 2 y = 1 } mechanized = { x = 3 y = 1 } mechanized = { x = 4 y = 1 }
+		medium_tank_destroyer_brigade = { x = 0 y = 2 }  medium_tank_destroyer_brigade = { x = 1 y = 2 } medium_armor = { x = 2 y = 2 } mechanized = { x = 3 y = 2 } mechanized = { x = 4 y = 2 }
+		medium_tank_destroyer_brigade = { x = 0 y = 3 }  medium_sp_anti_air_brigade = { x = 1 y = 3 }    medium_armor = { x = 2 y = 3 } mechanized = { x = 3 y = 3 } mechanized = { x = 4 y = 3 }
+		medium_tank_destroyer_brigade = { x = 0 y = 4 }													 															 mechanized = { x = 4 y = 4 }																									
+	}			
+	support = {
+		engineer = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }		
+		flamethrower_brigade = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+		anti_air = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "CHANGE THIS TEMPLATE!"
+	regiments = {
+		infantry = { x = 0 y = 0 } 
+	}
+	
+	support = { }
+}
+
+division_template = {
+	name = "CHANGE THIS TEMPLATE!!!"
+	regiments = {
+		medium_armor = { x = 0 y = 0 } 
+	}
+	
+	support = { }
+}
+
+units = {
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9183 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9183 division_template = "CHANGE THIS TEMPLATE!!!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9061 division_template = "CHANGE THIS TEMPLATE!!!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9061 division_template = "CHANGE THIS TEMPLATE!!!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6186 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6186 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6186 division_template = "CHANGE THIS TEMPLATE!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6082 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6082 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6082 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 52 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 52 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 52 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 139 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 139 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 139 division_template = "CHANGE THIS TEMPLATE!" }
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3030 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3030 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 3030 division_template = "CHANGE THIS TEMPLATE!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9181 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9181 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 9181 division_template = "CHANGE THIS TEMPLATE!" } 
+
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6210 division_template = "CHANGE THIS TEMPLATE!" } 
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6210 division_template = "CHANGE THIS TEMPLATE!" }
+	division = { start_equipment_factor = 0.01 start_experience_factor = 0.3 location = 6210 division_template = "CHANGE THIS TEMPLATE!" } 
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_3
+			creator = "FIN"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 54
+		industrial_manufacturer = mio:FIN_valtion_kivaaritehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "FIN" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 96
+		industrial_manufacturer = mio:FIN_valtion_kivaaritehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "FIN" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 96
+		industrial_manufacturer = mio:FIN_sisu_auto_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = anti_air_equipment_2
+			creator = "FIN" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 99
+		industrial_manufacturer = mio:FIN_valtion_tykkitehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_chassis_2
+			version_name = "Panzerkampfwagen V" 
+		}
+		requested_factories = 8
+		progress = 0.1
+		efficiency = 73
+		industrial_manufacturer = mio:FIN_valtion_panssaritehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_destroyer_chassis_2
+			version_name = "JagdPz V" 
+		}
+		requested_factories = 14
+		progress = 0.1
+		efficiency = 76
+		industrial_manufacturer = mio:FIN_valtion_panssaritehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_chassis_2
+			version_name = "Panzerkampfwagen II" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 90
+		industrial_manufacturer = mio:FIN_valtion_panssaritehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = medium_tank_aa_chassis_2
+			version_name = "Flakpanzer IV «Ostwind»" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 81
+		industrial_manufacturer = mio:FIN_valtion_panssaritehdas_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = mechanized_equipment_1
+			creator = "FIN" 
+		}
+		requested_factories = 4
+		progress = 0.1
+		efficiency = 85
+		industrial_manufacturer = mio:FIN_sisu_auto_organization
+	}
+}

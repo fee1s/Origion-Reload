@@ -517,7 +517,7 @@ create_equipment_variant = {
 	add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = 0.1 }
 
 	set_variable = { GER_downfall_of_northern_africa_days = 30 } # Стартовое кол-во дней на первую зимнюю миссию падения Северной Африки, меняется в зависимости от оказываемой помощи для Италии
-	set_variable = { ITA_ask_for_help_amount = 3500 } # Стартовое значение помощи для Италии, меняется по ходу игры
+	set_variable = { ITA_ask_for_help_amount = 2500 } # Стартовое значение помощи для Италии, меняется по ходу игры, by feels. 3500 -> 2500 [08.06.26]
 
 	set_variable = { GER.SOV_ll_east_front_mode_amount = 0 }
 	set_variable = { GER.SOV_ll_size = 590 }
@@ -553,7 +553,8 @@ create_equipment_variant = {
 		decisive_battle_spirit
 
 		air_crew_surveys_spirit
-		veteran_air_instructors_spirit
+		# veteran_air_instructors_spirit
+		air_power_projection_spirit
 	}
 
 	activate_advisor = walther_funk
@@ -1005,7 +1006,7 @@ create_equipment_variant = {
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
             special_type_slot_3 = tank_radio_1
             special_type_slot_4 = wet_ammo_storage
         }
@@ -1015,7 +1016,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = medium_tank_chassis_1
-		amount = 1800
+		amount = 1400
 		variant_name = "Panzerkampfwagen III"	
 	}
 
@@ -1034,7 +1035,7 @@ create_equipment_variant = {
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
             special_type_slot_3 = tank_radio_2
             special_type_slot_4 = easy_maintenance
         }
@@ -1044,7 +1045,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = medium_tank_chassis_2
-		amount = 1200
+		amount = 800
 		variant_name = "Panzerkampfwagen IV"	
 	}
 
@@ -1063,7 +1064,7 @@ create_equipment_variant = {
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_diesel_engine
             special_type_slot_1 = secondary_turret_small_cannon
-            special_type_slot_2 = secondary_turret_small_cannon
+            special_type_slot_2 = squeezebore_adaptor
             special_type_slot_3 = tank_radio_3
             special_type_slot_4 = easy_maintenance
         }
@@ -1074,7 +1075,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = medium_tank_chassis_2
-		amount = 900
+		amount = 400
 		variant_name = "Panzerkampfwagen V"	
 	}
 
@@ -1164,7 +1165,7 @@ create_equipment_variant = {
             suspension_type_slot = tank_bogie_suspension
             armor_type_slot = tank_riveted_armor
             engine_type_slot = tank_gasoline_engine
-            special_type_slot_1 = extra_ammo_storage
+            special_type_slot_1 = squeezebore_adaptor
             special_type_slot_2 = extra_ammo_storage
             special_type_slot_3 = extra_ammo_storage
             special_type_slot_4 = easy_maintenance
@@ -1193,19 +1194,23 @@ create_equipment_variant = {
     }
 
 	create_equipment_variant = {
-		name = "Fw-190 A" 
-		type = small_plane_airframe_2
+		name = "Bf-109" 
+		type = small_plane_airframe_1
 		design_team = mio:GER_messerschmitt_organization
 		modules = {
 			fixed_main_weapon_slot = heavy_mg_4x
 			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
-			engine_type_slot = engine_3_1x
-			special_type_slot_1 = armor_plate_small
-			special_type_slot_2 = fuel_tanks_small		
-			special_type_slot_3 = hmg_defense_turret		
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = fuel_tanks_small			
 		}
-		mark_older_equipment_obsolete = yes
+		obsolete = yes
+	}
+
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_1
+		amount = 990
+		variant_name = "Bf-109"	
 	}
 
 	create_equipment_variant = {
@@ -1224,18 +1229,26 @@ create_equipment_variant = {
 		obsolete = yes
 	}
 
+	add_equipment_to_stockpile = {
+		type = small_plane_airframe_2
+		amount = 6700
+		variant_name = "Fw-190"	
+	}
+
 	create_equipment_variant = {
-		name = "Bf-109" 
-		type = small_plane_airframe_1
+		name = "Fw-190 A" 
+		type = small_plane_airframe_2
 		design_team = mio:GER_messerschmitt_organization
 		modules = {
 			fixed_main_weapon_slot = heavy_mg_4x
 			fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
-			engine_type_slot = engine_2_1x
-			special_type_slot_1 = lmg_defense_turret
-			special_type_slot_2 = fuel_tanks_small			
+			fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = fuel_tanks_small		
+			special_type_slot_3 = hmg_defense_turret		
 		}
-		obsolete = yes
+		mark_older_equipment_obsolete = yes
 	}	
 
 	create_equipment_variant = {
@@ -1269,7 +1282,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = small_plane_cas_airframe_2
-		amount = 350
+		amount = 400
 		variant_name = "Ju.87 A"	
 	}
 
@@ -1423,7 +1436,7 @@ create_equipment_variant = {
 
 	add_equipment_to_stockpile = {
 		type = infantry_equipment_2
-		amount = 42400
+		amount = 82400
 		variant_name = "MP 38"
 	}
 
@@ -1460,18 +1473,6 @@ create_equipment_variant = {
 		type = small_plane_cas_airframe_1
 		amount = 50
 		variant_name = "Ju.87"	
-	}
-
-	add_equipment_to_stockpile = {
-		type = small_plane_airframe_1
-		amount = 800
-		variant_name = "Bf-109"	
-	}
-
-	add_equipment_to_stockpile = {
-		type = small_plane_airframe_2
-		amount = 9700
-		variant_name = "Fw-190"	
 	}
 	
 	add_equipment_to_stockpile = {
