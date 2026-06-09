@@ -27,5 +27,13 @@ scripted_gui = {
 	    	    frame = ENG.lend_lease_side_progress
 	    	}			
 		}
+
+		dynamic_lists = {
+			allies_lend_lease_exporter_gridbox = {
+				array = ENG.allies_lend_lease_senders
+				change_scope = yes
+				entry_container = "allies_lend_lease_exporter_entry"
+			}
+		}
 	}
 }

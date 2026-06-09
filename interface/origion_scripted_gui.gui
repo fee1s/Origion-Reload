@@ -76,22 +76,57 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "equipment_log_title"
-			position = { x = 360 y = 145 } 
+			position = { x = 300 y = 113 } 
 			maxHeight = 20
 			maxWidth = 340
 			font = "hoi_16mbs"
-			format = left
+			format = center
 			text = equipment_log_name_tt
 		}
 		
 		iconType = {     
 			name = "equipment_log" 
-			position = { x = 400  y = 160 }  
+			position = { x = 450  y = 160 }  
 			spriteType = "GFX_theatre_combat_log_icon"
 			scale = 1.5
 			pdx_tooltip = equipment_log_tt
 		}
+		instantTextBoxType = {
+			name = "exporters_title"
+			position = { x = 360 y = 145 }
+			font = "hoi_16mbs"
+			text = "exporters_title"
+			maxWidth = 95
+			maxHeight = 20
+			format = left
+		}
+		
+		gridBoxType = {
+			name = "allies_lend_lease_exporter_gridbox"
+			position = { x = 390 y = 160 } 
+			size = { width = 150 height = 80 }
+			slotsize = { width = 10 height = 12 }
+			max_slots_horizontal = 1
+			format = "UPPER_LEFT"
+		}
 	}
+
+	containerWindowType = {
+		name = "allies_lend_lease_exporter_entry"
+		size = { width = 41 height = 26 }
+	
+		instantTextBoxType = {
+			name = "country_flag_text_icon"
+			position = { x = 0 y = 0 }
+			font = "hoi_16mbs"
+			text = "[This.GetFlag]"
+			maxWidth = 41
+			maxHeight = 26
+			format = left
+			pdx_tooltip = "ll_exporters_tt"
+		}
+	}
+
     containerWindowType = {
 		name = "asia_map_open_container"
 		position = { x = -450 y = 0 }

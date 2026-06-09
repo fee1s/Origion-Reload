@@ -122,6 +122,9 @@ ORG_allies_lend_lease_to_sov = {
 			activate_mission = fighter_ll_to_sov_small_ll
 			
 			add_to_variable = { var = ENG.lend_lease_side_progress value = 20 }
+			hidden_effect = {
+				ENG = { add_to_array = { allies_lend_lease_senders = ROOT } }
+			}
 		}
 	}
 	stop_fighter_ll_to_sov_small = {
@@ -1501,8 +1504,10 @@ ORG_allies_lend_lease_to_sov = {
 		complete_effect = {
 			set_country_flag = infantry_ll_to_sov_small_enabled
 			activate_mission = infantry_ll_to_sov_small_ll
-			
 			add_to_variable = { var = ENG.lend_lease_side_progress value = 20 }
+			hidden_effect = {
+				ENG = { add_to_array = { allies_lend_lease_senders = ROOT } }
+			}
 		}
 	}
 	stop_infantry_ll_to_sov_small = {
