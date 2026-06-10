@@ -30,8 +30,10 @@ war_measures = {
 	icon = generic_propaganda
 
 	visible = {
-		has_war = yes
-		has_war_with_non_exiled_country = yes  
+		OR = {
+			has_war = yes
+			has_idea = tot_economic_mobilisation
+		}
 	}
 }
 operations = {
