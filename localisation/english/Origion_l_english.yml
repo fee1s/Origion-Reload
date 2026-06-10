@@ -58,9 +58,15 @@ GetCurrentIsEighty: "£convoy_texticon §Y80§!"
 GetCurrentIsHundred: "£convoy_texticon §Y100§!"
 
 progress_bar_lend_lease_tt:0 "Used [GetCurrentCapacity] §Ythroughput§! of [GetMaxCapacity]"
-equipment_log_tt:0 "§LInformation about shipped equipment§!\nTotal sent §Yfighters§!: §Y[?ENG.fighters_sent]§!\nTotal sent §Yinfantry§!: §Y[?ENG.infantry_sent]§!"
-equipment_log_name_tt:0 "§LSummary of lend-lease§!"
+equipment_log_tt:0 "§LInformation about shipped equipment§!\nTotal sent §Yfighters§!: §Y[?ENG.fighters_sent]§!\nTotal sent §Ycas§!: §Y[?ENG.cas_sent]§!\nTotal sent §Yinfantry§!: §Y[?ENG.infantry_sent]§!"
 
+equipment_log_name_tt:0 "§LLend-Lease\nSummary§!"
+open_air_ll_category:0 "§2Open Aircraft Category§!"
+close_air_ll_category:0 "§2Close Aircraft Category§!"
+open_all_infantry_ll_category:0 "§2Open Infantry Equipment Category§!"
+close_all_infantry_ll_category:0 "§2Close Infantry Equipment Category§!"
+exporters_title:0 "§LExporters§!"
+ll_exporters_tt:0 "[This.GetNameWithFlag]"
 # fighter supply categories
 fighter_ll_to_sov_small:0 "§2Start small fighter deliveries§!"
 stop_fighter_ll_to_sov_small:0 "§2Stop small fighter deliveries§!"
@@ -102,6 +108,27 @@ infantry_ll_to_sov_large_enabled:0 "§YAllies§! are delivering large supplies o
 iran_route_history:0 "§gThe Persian Corridor became an important supply route to the USSR during World War II. After the blockade of traditional routes, the Allies began sending resources through Iran. Since 1941, materials, weapons, and equipment were delivered via the Persian Gulf, supporting the Soviet Union in its struggle against the Nazis. This route was vital for the Red Army in the early years of the war.§!"
 asia_route_history:0 "§gThe route through Vladivostok became a key channel for supplies to the Soviet Union during World War II. When traditional routes through Europe were blocked, the Allies used the Pacific Ocean to deliver resources and weapons. Despite the dangers associated with military actions in the Pacific, this route remained vital for supplying the USSR in its fight against the Nazis.§!"
 norway_route_history:0 "§gThe route through Murmansk was an important channel for supplies to the Soviet Union during World War II. After the war with Germany began, the Allies started sending materials and weapons through the North Sea. Critically important resources - ammunition, equipment, and food - were delivered via Murmansk to strengthen the Soviet Army. Despite the threat of German submarines and air attacks, this route remained vital for supplying the USSR in the difficult years of the war.§!"
+
+#cas dec.
+open_cas_ll_category:0 "§1CAS Lend-Lease Options§!"
+close_cas_ll_category:0 "§1Hide CAS Lend-Lease Options§!"
+
+cas_ll_to_sov_small:0 "§2Begin Small CAS Deliveries§!"
+stop_cas_ll_to_sov_small:0 "§2Stop Small CAS Deliveries§!"
+cas_ll_to_sov_small_ll:0 "§3CAS shipments in progress...§!"
+cas_ll_to_sov_small_enabled:0 "§YAllies§! are sending small shipments of §YCAS§!"
+
+cas_ll_to_sov_medium:0 "§2Begin Medium CAS Deliveries§!"
+stop_cas_ll_to_sov_medium:0 "§2Stop Medium CAS Deliveries§!"
+cas_ll_to_sov_medium_ll:0 "§3CAS shipments in progress...§!"
+cas_ll_to_sov_medium_enabled:0 "§YAllies§! are sending medium shipments of §YCAS§!"
+
+cas_ll_to_sov_large:0 "§2Begin Large CAS Deliveries§!"
+stop_cas_ll_to_sov_large:0 "§2Stop Large CAS Deliveries§!"
+cas_ll_to_sov_large_ll:0 "§3CAS shipments in progress...§!"
+cas_ll_to_sov_large_enabled:0 "§YAllies§! are sending large shipments of §YCAS§!"
+
+asian_war_simulation_cas_tt:0 "\nWe will send §Y85§! §YClose Air Support§! planes for the needs of the §YPacific§! Front.\n\n"
 
 # Gui Pacific
 
