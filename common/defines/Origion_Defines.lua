@@ -95,6 +95,15 @@ NDefines.NMilitary.ACCLIMATIZATION_LOSS_SPEED_FACTOR = 4.0 -- Скорость �
 NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0.0 -- Мастери с треньки, это не про Оригион
 NDefines.NDoctrines.MILITARY_ATTACHE_MASTERY_TRANSFER_FACTOR = 0.0 -- Мастери с атташе, это не про Оригион
 
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_WIDTH = 0
+NDefines.NMilitary.MAX_REGIMENTAL_SUPPORT_HEIGHT = 0
+NDefines.NMilitary.MAX_HQ_BATTALION_WIDTH = 0
+NDefines.NMilitary.MAX_HQ_BATTALION_HEIGHT = 0
+NDefines.NMilitary.MAX_HQ_SUPPORT_WIDTH = 0
+NDefines.NMilitary.MAX_HQ_SUPPORT_HEIGHT = 0
+NDefines.NMilitary.MAX_HQ_REGIMENTAL_SUPPORT_WIDTH = 0
+NDefines.NMilitary.MAX_HQ_REGIMENTAL_SUPPORT_HEIGHT = 0
+
 NDefines.NDoctrines.THEATER_COMMANDER_UNITS_MASTERY_GAIN_FACTOR_PER_SKILL = 0.0
 NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1
 
