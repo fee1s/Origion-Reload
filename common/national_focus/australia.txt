@@ -18,7 +18,7 @@
 	
 	focus = {
 		id = AST_support_the_policy_of_appeasement
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_AST_a_democratic_bulwark
 		x = 13
 		y = 0
 
@@ -75,7 +75,7 @@
 
 	focus = {
 		id = AST_western_australian_government_railways
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_AST_repeal_immigration_restrictions
 		prerequisite = { focus = AST_standard_gauge_railway }
 		x = 1
 		y = 1
@@ -86,14 +86,6 @@
 		ai_will_do = {
 			factor = 5
 		}
-		
-		bypass = {
-			NOT = {
-				controls_state = 522
-				controls_state = 519
-				controls_state = 871
-			}
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -101,40 +93,15 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			build_railway = {
-				path = { 1652 2157 10983 1526 10949 8200 10969 2191 12948 5197 8165 10927 8186 }
-			}
-
-			random_owned_state = {
-			    prioritize = { 522 }
+			every_owned_state = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
+					OR = {
+						state = 522 state = 871
 					}
-					NOT = {state = 674}
 				}
-
 				add_building_construction = {
 					type = infrastructure
 					level = 1
-					instant_build = yes
-				}
-			}
-
-			random_owned_state = {
-			    prioritize = { 871 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-					NOT = {state = 674}
-				}
-
-				add_building_construction = {
-					type = infrastructure
-					level = 2
 					instant_build = yes
 				}
 			}
@@ -143,7 +110,7 @@
 
 	focus = {
 		id = AST_south_australian_housing_trust
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_AST_abolition_of_private_property
 		prerequisite = { focus = AST_western_australian_government_railways }
 		x = -1
 		y = 1
@@ -161,42 +128,24 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 519 }
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
 						include_locked = yes
 					}
-					NOT = { state = 674 }
 				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = AST_south_australian_housing_trust_IC
 			}
-			random_owned_controlled_state = {
-				prioritize = { 285 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					NOT = { state = 674 }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = AST_expand_lithgow_small_arms_factory_AF
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			518 = {
 				add_resource = {
 					type = steel
@@ -208,7 +157,7 @@
 	
 	focus = {
 		id = AST_establish_advisory_war_council
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_AST_part_with_colonizer
 		prerequisite = { focus = AST_support_the_policy_of_appeasement }
 		relative_position_id = AST_standard_gauge_railway
 		x = 5
@@ -273,7 +222,7 @@
 	
 	focus = {
 		id = AST_civil_construction_corps
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_AST_liberty_loans
 		prerequisite = { focus = AST_national_security_act }
 		x = -1
 		y = 1
@@ -309,7 +258,7 @@
 	
 	focus = {
 		id = AST_allied_works_council
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_focus_AST_unification
 		prerequisite = { focus = AST_civil_construction_corps }
 		x = -1
 		y = 1
@@ -327,44 +276,23 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {					
-					is_in_home_area = yes					
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					NOT = { state = 674 }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = AST_allied_works_council_IC1
-			}
-			random_owned_controlled_state = {
+			every_core_state = {
 				limit = {
-					is_in_home_area = yes					
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
-					NOT = { state = 674 }
 				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = AST_allied_works_council_IC2
 			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			
 		}
@@ -372,7 +300,7 @@
 	
 	focus = {
 		id = AST_Papya_cicvilian_expand
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_AST_hand_in_glove
 		prerequisite = { focus = AST_south_australian_housing_trust }
 		x = -1
 		y = 1
@@ -384,41 +312,20 @@
 			factor = 1
 		}
 
-		available = {
-			controls_state = 523
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			523 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 737 state = 979 state = 523
+					}
 				}
 				add_building_construction = {
-					type = Infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			979 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = Infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			737 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = Infrastructure
+					type = infrastructure
 					level = 2
 					instant_build = yes
 				}
@@ -428,7 +335,7 @@
 	
 	focus = {
 		id = AST_means_of_war
-		icon = GFX_focus_generic_reorient_production
+		icon = GFX_focus_AST_the_publics_australia
 		prerequisite = { focus = AST_allied_works_council }
 		prerequisite = { focus = AST_fight_work_or_perish }
 		x = 1
@@ -447,50 +354,16 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 872 }
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
-					NOT = { state = 674 }
 				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 519 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					NOT = { state = 674 }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 873 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-					NOT = { state = 674 }
-				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -520,37 +393,11 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = AST_national_roads_board_Inf1
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-
-			random_state = {
-				limit = {
-					has_state_flag = AST_national_roads_board_Inf2
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 284 }
+			every_owned_state = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
+					OR = {
+						state = 284 state = 723
 					}
 				}
 				add_building_construction = {
@@ -558,30 +405,13 @@
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = AST_national_roads_board_Inf1
-			}
-
-			random_owned_controlled_state = {
-				prioritize = { 723 }
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = AST_national_roads_board_Inf2
 			}
 		}
 	}
 
 	focus = {
 		id = AST_bureau_of_industry
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_AST_new_south_wales_government_railways
 		prerequisite = { focus = AST_national_roads_board }
 		x = -1
 		y = 1
@@ -621,7 +451,7 @@
 
 	focus = {
 		id = AST_industrial_conscription
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_AST_riling_veterans
 		prerequisite = { focus = AST_bureau_of_industry }
 		x = -1
 		y = 1
@@ -639,39 +469,22 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 284 723 }
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 1
 						include_locked = yes
 					}
 				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = AST_industrial_conscription_AF
-			}
-			random_owned_controlled_state = {
-				prioritize = { 284 723 }
-				limit = {				
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = AST_think_big_IC1
 			}
 		}
 	}
@@ -719,7 +532,7 @@
 		y = 1
 		relative_position_id = AST_national_defense_institute
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25
@@ -856,7 +669,7 @@
 		completion_reward = {
 			custom_effect_tooltip = AST_modify_army_dm_tt
 			add_to_variable = { 
-			    AST_army_dm_conscription = 0.025
+			    AST_army_dm_conscription = 0.005
 				tooltip = conscription_tt
 			}
 			add_to_variable = { 
@@ -872,7 +685,7 @@
 	
 	focus = {
 		id = AST_defending_the_papua
-		icon = GFX_focus_SWE_hedgehog_defense
+		icon = GFX_focus_AST_until_the_tide_of_battle_swings
 		prerequisite = { focus = AST_swpa_protector }
 		x = 1
 		y = 1
@@ -981,7 +794,7 @@
 		y = 2
 		relative_position_id = AST_swpa_protector
 
-		cost = 5
+		cost = 10
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1024,15 +837,7 @@
 		available_if_capitulated = no
 		search_filters = {  }
 
-		completion_reward = {
-			custom_effect_tooltip = AST_modify_army_dm_tt
-			add_to_variable = { 
-			    AST_army_dm_army_core_defence_factor = 0.1
-				tooltip = army_core_defence_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
+		completion_reward = {		
 			custom_effect_tooltip = AST_modify_economy_dm_tt
 			add_to_variable = { 
 			    AST_economy_dm_local_resources_factor = 0.1
@@ -1139,7 +944,7 @@
 	
 	focus = {
 		id = AST_citizen_military_forces
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_focus_AST_torres_strait_batallion
 		prerequisite = { focus = AST_volunteer_defence_corps }
 		x = 1
 		y = 1
@@ -1158,7 +963,7 @@
 		completion_reward = {
 			custom_effect_tooltip = AST_modify_army_dm_tt
 			add_to_variable = { 
-			    AST_army_dm_conscription = 0.025
+			    AST_army_dm_conscription = 0.005
 				tooltip = conscription_tt
 			}
 			add_to_variable = { 
@@ -1200,7 +1005,7 @@
 	
 	focus = {
 		id = AST_lessons_of_the_war
-		icon = GFX_focus_ARG_the_war_machine
+		icon = GFX_focus_AST_rats_tobruk
 		prerequisite = { focus = AST_citizen_military_forces }
 		x = 1
 		y = 1
@@ -1218,14 +1023,6 @@
 		search_filters = {  }
 
 		completion_reward = {
-			custom_effect_tooltip = AST_modify_army_dm_tt
-			add_to_variable = { 
-			    AST_army_dm_army_morale_factor = 0.1
-				tooltip = army_morale_factor_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
 			add_tech_bonus = {
 				bonus = 1.0
 				uses = 1
@@ -1269,7 +1066,7 @@
 				tooltip = stability_factor_tt
 			}
 			add_to_variable = { 
-			    AST_economy_dm_industrial_capacity_factory = 0.15
+			    AST_economy_dm_industrial_capacity_factory = 0.1
 				tooltip = industrial_capacity_factory_tt
 			}
 			hidden_effect = {
@@ -1285,7 +1082,7 @@
 	
 	focus = {
 		id = AST_rationing_and_recycling
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_AST_rural_concessions
 		prerequisite = { focus = AST_invest_in_victory }
 		x = 1
 		y = 1
@@ -1328,7 +1125,7 @@
 
 	focus = {
 		id = AST_fight_work_or_perish
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_AST_its_fight_work_or_perish
 		prerequisite = { focus = AST_invest_in_victory }
 		x = -1
 		y = 1
@@ -1360,7 +1157,7 @@
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-			    AST_economy_dm_industrial_capacity_factory = 0.15
+			    AST_economy_dm_industrial_capacity_factory = 0.1
 				tooltip = industrial_capacity_factory_tt
 			}
 		}
@@ -1413,7 +1210,7 @@
 
 	focus = {
 		id = AST_adopt_westminster
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_AST_under_the_rule_of_canberra
 		prerequisite = { focus = AST_dominion_australia }
 		x = -1
 		y = 1
@@ -1468,7 +1265,7 @@
 
 	focus = {
 		id = AST_additional_militia_training
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_AST_australian_military_forces
 		x = 4
 		y = 1
 		
@@ -1488,6 +1285,7 @@
 
 		completion_reward = {
 			army_experience = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_dynamic_modifier = {
                 modifier = AST_army_dm
             }
@@ -1496,7 +1294,7 @@
 	
 	focus = {
 		id = AST_fund_owen_gun_research
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_AST_owen_gun
 		prerequisite = { focus = AST_additional_militia_training }
 		x = 1
 		y = 1
@@ -1652,7 +1450,7 @@
 
 	focus = {
 		id = AST_introduce_unconventional_warfare
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_AST_from_picket_line_to_front_line
 		prerequisite = { focus = AST_daimler_dingo focus = AST_royal_australian_artillery focus = AST_hmas_assault}
 		x = 1
 		y = 1
@@ -1704,7 +1502,7 @@
 	}
 	focus = {
 		id = AST_m_special_unit
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_AST_all_for_one_one_for_all
 		prerequisite = { focus = AST_introduce_unconventional_warfare }
 		x = 1
 		y = 1
@@ -1740,7 +1538,7 @@
 
 	focus = {
 		id = AST_expand_the_raaf
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_AST_no1_flying_training_school
 		x = 3
 		y = 0
 		cost = 5
@@ -1759,6 +1557,7 @@
 
 		completion_reward = {
 			air_experience = 100
+			custom_effect_tooltip = generic_skip_one_line_tt
 			521 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1791,6 +1590,7 @@
 
 		completion_reward = {
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			872 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1804,7 +1604,7 @@
 
 	focus = {
 		id = AST_cac_woomera
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_AST_commonwealth_aircraft_corporation_taog
 		prerequisite = { focus = AST_expand_the_raaf }
 		relative_position_id = AST_expand_the_raaf
 
@@ -1835,7 +1635,7 @@
 
 	focus = {
 		id = AST_volunteer_air_observers_corps
-		icon = GFX_goal_generic_radar
+		icon = GFX_focus_AST_coast_watchers
 		prerequisite = { focus = AST_cac_woomera focus = AST_expand_northern_presence }
 		relative_position_id = AST_expand_the_raaf
 
@@ -1847,10 +1647,6 @@
 			factor = 1
 		}
 
-		available = {
-			has_tech = radio
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1858,11 +1654,11 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_volunteer_air_observers_corps
-				bonus = 0.75
-				uses = 2
-				category = radar_tech
+				bonus = 1
+				uses = 1
+				technology = centimetric_radar
 			}
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			522 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1876,7 +1672,7 @@
 
 	focus = {
 		id = AST_death_from_down_under
-		icon = GFX_goal_generic_CAS
+		icon = GFX_focus_AST_death_from_down_under_taog
 		prerequisite = { focus = AST_volunteer_air_observers_corps }
 		x = 0
 		y = 4
@@ -1895,7 +1691,7 @@
 
 		completion_reward = {
 			air_experience = 50
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			519 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1914,7 +1710,7 @@
 
 	focus = {
 		id = AST_cockatoo_island_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_AST_royal_australian_navy
 		x = 6
 		y = 0
 		
@@ -1931,48 +1727,29 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
-
-		complete_tooltip = {
-			navy_experience = 150
-			random_state = {
-				limit = {
-					has_state_flag = AST_cockatoo_island_shipyards_DY
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = Cockatoo_doe
-		}
-
 			
 		completion_reward = {
 			navy_experience = 150
-			random_owned_controlled_state = {
-				prioritize = { 285 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					is_coastal = yes
 					free_building_slots = {
 						building = dockyard
 						size > 1
 						include_locked = yes
 					}
-					NOT = { state = 674 }
 				}
+				random_select_amount = 1
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = AST_cockatoo_island_shipyards_DY
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = Cockatoo_doe
+			custom_effect_tooltip = generic_skip_one_line_tt
 			518 = {
 				add_resource = {
 					type = steel
@@ -1984,12 +1761,12 @@
 	
 	focus = {
 		id = AST_kangaroo_point_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_AST_eureka_stockade_monument_rally
 		x = 2
 		y = 0
 		relative_position_id = AST_cockatoo_island_shipyards
 		prerequisite = { focus = AST_support_the_policy_of_appeasement }
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2000,46 +1777,28 @@
 		available_if_capitulated = no
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = AST_kangaroo_point_shipyards_DY
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = evans_deakin_co
-		}
-
 		completion_reward = {
 			navy_experience = 25
-			random_owned_controlled_state = {
-				prioritize = { 521 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
 				limit = {
+					is_fully_controlled_by = ROOT
 					is_coastal = yes
 					free_building_slots = {
 						building = dockyard
 						size > 1
 						include_locked = yes
 					}
-					NOT = { state = 674 }
 				}
+				random_select_amount = 1
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = AST_kangaroo_point_shipyards_DY
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = evans_deakin_co
+			custom_effect_tooltip = generic_skip_one_line_tt
 			518 = {
 				add_resource = {
 					type = steel
@@ -2051,13 +1810,13 @@
 	
 	focus = {
 		id = AST_pacific_area_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_AST_british_pacific_fleet
 		prerequisite = { focus = AST_cockatoo_island_shipyards focus = AST_kangaroo_point_shipyards }
 		x = 1
 		y = 1
 		relative_position_id = AST_cockatoo_island_shipyards
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2095,13 +1854,13 @@
 	
 	focus = {
 		id = AST_scrap_iron_flotilla
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_AST_stretch_the_fleet
 		prerequisite = { focus = AST_pacific_area_navy }
 		x = -1
 		y = 1
 		relative_position_id = AST_pacific_area_navy
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2116,10 +1875,10 @@
 			add_tech_bonus = {
 				name = AST_scrap_iron_flotilla
 				bonus = 1.0
-				ahead_reduction = 2
 				uses = 1
-				category = dd_tech
+				technology = improved_ship_hull_light
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			285 = {
 				add_resource = {
 					type = steel
@@ -2131,13 +1890,13 @@
 	
 	focus = {
 		id = AST_royal_australian_submarine_service
-		icon = GFX_goal_generic_wolf_pack
+		icon = GFX_focus_AST_dalfram_dispute
 		prerequisite = { focus = AST_pacific_area_navy }
 		x = 1
 		y = 1
 		relative_position_id = AST_pacific_area_navy
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2152,10 +1911,10 @@
 			add_tech_bonus = {
 				name = AST_royal_australian_submarine_service
 				bonus = 1.0
-				ahead_reduction = 2
 				uses = 1
-				category = ss_tech
+				technology = improved_ship_hull_submarine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			285 = {
 				add_resource = {
 					type = steel
