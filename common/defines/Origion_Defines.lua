@@ -100,9 +100,7 @@ NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 1
 
 NDefines.NDoctrines.NAVAL_MISSION_MASTERY_GAIN_FACTORS = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }
 
--- новые дефайны 1.19
-
-
+-- Новые дефайны 1.19 [spqr]
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 1 -- Максимальная ширина слотов поддержки в конструкторе дивизий
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 5 -- Максимальная высота слотов поддержки в конструкторе дивизий
@@ -138,9 +136,9 @@ NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_WITHDRAW_MIN = 0 -- Мини
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_REFERENCE_MANPOWER = 0 -- Опорное значение численности личного состава для масштабирования задержки развертывания/отзыва. При этом значении задержка равна базовой
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_MANPOWER_EXPONENT = 0 -- Экспонента для масштабирования численности личного состава (значение > 1 сильнее наказывает крупные дивизии увеличенным временем восстановления)
 
-NDefines.NNavy.NAVAL_COMBAT_MEDAL_CHANCE = 1 -- Шанс 1 из N, что корабль получит медаль после участия в сражении
-NDefines.NNavy.NAVAL_COMBAT_MEDAL_MIN_DURATION = 999 -- Минимальная продолжительность боя, необходимая для возможности получения медали
-NDefines.NNavy.NAVAL_COMBAT_MEDAL_LAST_MEDAL_LIMIT = 999 -- Минимальный интервал, который должен пройти, прежде чем корабль сможет получить новую медаль
+NDefines.NNavy.NAVAL_COMBAT_MEDAL_CHANCE = 99999 -- Шанс 1 из N, что корабль получит медаль после участия в сражении
+NDefines.NNavy.NAVAL_COMBAT_MEDAL_MIN_DURATION = 9999 -- Минимальная продолжительность боя, необходимая для возможности получения медали
+NDefines.NNavy.NAVAL_COMBAT_MEDAL_LAST_MEDAL_LIMIT = 9999 -- Минимальный интервал, который должен пройти, прежде чем корабль сможет получить новую медаль
 NDefines.NNavy.NAVAL_COMBAT_MEDAL_ALLOW_CONVOY = false -- Засчитываются ли атаки на конвои для получения кораблями медалей
 
 NDefines.NMilitary.CAPTAIN_EXPERIENCE_ON_SHIP_MULT = 0.0 -- Множитель опыта получаемого капитаном корабля
