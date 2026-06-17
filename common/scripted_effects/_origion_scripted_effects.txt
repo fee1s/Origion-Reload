@@ -629,6 +629,36 @@ military_theorist_scripted_effect = {
 		folder = naval
 		days = 2000
 	}
+
+	# Спецурная прокачка
+
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = mountaineers_2
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.25
+		name = military_theorist
+		sub_doctrine = marines_2
+		days = 2000
+	}
+	
+	add_daily_mastery = {
+		amount = 0.25
+		name = military_theorist
+		sub_doctrine = paratroopers_1
+		days = 2000
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = military_theorist
+		sub_doctrine = rangers_1
+		days = 1670
+	}
 	
 	set_country_flag = theorist_picked_flag
 }
@@ -749,6 +779,36 @@ air_warfare_theorist_scripted_effect = {
 		amount = 0.25
 		name = air_warfare_theorist
 		folder = naval
+		days = 2000
+	}
+
+	# Спецурная прокачка
+
+	add_daily_mastery = {
+		amount = 0.25
+		name = air_warfare_theorist
+		sub_doctrine = mountaineers_2
+		days = 2000
+	}
+	
+	add_daily_mastery = {
+		amount = 0.25
+		name = air_warfare_theorist
+		sub_doctrine = marines_2
+		days = 2000
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = air_warfare_theorist
+		sub_doctrine = paratroopers_1
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.25
+		name = air_warfare_theorist
+		sub_doctrine = rangers_1
 		days = 2000
 	}
 	
@@ -872,6 +932,36 @@ naval_theorist_scripted_effect = {
 		name = naval_theorist
 		folder = naval
 		days = 1670
+	}
+
+	# Спецурная прокачка
+
+	add_daily_mastery = {
+		amount = 0.25
+		name = naval_theorist
+		sub_doctrine = mountaineers_2
+		days = 2000
+	}
+	
+	add_daily_mastery = {
+		amount = 0.3
+		name = naval_theorist
+		sub_doctrine = marines_2
+		days = 1670
+	}
+	
+	add_daily_mastery = {
+		amount = 0.25
+		name = naval_theorist
+		sub_doctrine = paratroopers_1
+		days = 2000
+	}
+	
+	add_daily_mastery = {
+		amount = 0.25
+		name = naval_theorist
+		sub_doctrine = rangers_1
+		days = 2000
 	}
 	
 	set_country_flag = theorist_picked_flag

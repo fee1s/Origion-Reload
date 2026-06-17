@@ -452,17 +452,17 @@ technologies = {
 			position = { x = 2 y = @1936 }
 		}
 		
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = paratrooper
-			}
-		}
-		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_paratroopers"
-			}
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+		# on_research_complete_limit = {
+		# 	NOT = {
+		# 		has_template_containing_unit = paratrooper
+		# 	}
+		# }
+		# on_research_complete = {
+		# 	hidden_effect = {
+		# 		load_oob = "unlock_paratroopers"
+		# 	}
+		# 	custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		# }
 		
 		categories = {
 			para_tech
@@ -576,19 +576,20 @@ technologies = {
 
 		enable_subunits = {
 			marine
+			pioneer_support
 		}
 		
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = marine
-			}
-		}
-		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_marines"
-			}			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+		# on_research_complete_limit = {
+		# 	NOT = {
+		# 		has_template_containing_unit = marine
+		# 	}
+		# }
+		# on_research_complete = {
+		# 	hidden_effect = {
+		# 		load_oob = "unlock_marines"
+		# 	}			
+		# 	custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		# }
 
 		path = {
 			leads_to_tech = marines2
@@ -706,19 +707,20 @@ technologies = {
 
 		enable_subunits = {
 			mountaineers
+			rangers_support
 		}
 
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = mountaineers
-			}
-		}
-		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_mountineers"
-			}
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+		# on_research_complete_limit = {
+		# 	NOT = {
+		# 		has_template_containing_unit = mountaineers
+		# 	}
+		# }
+		# on_research_complete = {
+		# 	hidden_effect = {
+		# 		load_oob = "unlock_mountineers"
+		# 	}
+		# 	custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		# }
 		
 		path = {
 			leads_to_tech = tech_mountaineers2
@@ -803,19 +805,20 @@ technologies = {
 
 		enable_subunits = {
 			ranger_battalion
+			rangers_support
 		}
 		
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = ranger_battalion
-			}
-		}
-		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_rangers"
-			}			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+		# on_research_complete_limit = {
+		# 	NOT = {
+		# 		has_template_containing_unit = ranger_battalion
+		# 	}
+		# }
+		# on_research_complete = {
+		# 	hidden_effect = {
+		# 		load_oob = "unlock_rangers"
+		# 	}			
+		# 	custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		# }
 
 		path = {
 			leads_to_tech = rangers_tech2
@@ -1769,17 +1772,17 @@ technologies = {
 		#	tank_wheeled_suspension
 		#}
 
-		on_research_complete_limit = {
-			NOT = {
-				has_template_containing_unit = motorized
-			}
-		}
-		on_research_complete = {
-			hidden_effect = {
-				load_oob = "unlock_motorized"
-			}			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+		# on_research_complete_limit = {
+		# 	NOT = {
+		# 		has_template_containing_unit = motorized
+		# 	}
+		# }
+		# on_research_complete = {
+		# 	hidden_effect = {
+		# 		load_oob = "unlock_motorized"
+		# 	}			
+		# 	custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		# }
 		
 		path = {
 			leads_to_tech = mechanised_infantry
