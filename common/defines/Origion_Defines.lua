@@ -117,16 +117,16 @@ NDefines.NMilitary.REGIMENTAL_SUPPORT_SLOT_COST_MULTIPLIER = 0.0 -- Коэффи
 NDefines.NMilitary.FIGHTING_STRENGTH_DEATH_THRESHOLD = 0.001 -- Порог боеспособности (fighting strength), ниже которого дивизии полностью уничтожаются от истощения
 NDefines.NMilitary.FIGHTING_STRENGTH_HQ_ALERT_THRESHOLD = 0.4 -- Порог боеспособности ниже которого на портрете назначенного лидера появляется предупреждающая подсветка
 NDefines.NMilitary.COMMANDER_ABILITY_BASE_RANGE = 0 -- Базовый радиус действия способностей командующего (в провинциях)
-NDefines.NMilitary.COMMS_MAX_DISTANCE = 0 -- Максимальная дистанция связи.
+NDefines.NMilitary.COMMS_MAX_DISTANCE = 999 -- Максимальная дистанция связи.
 
-NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 0.0, 0.0, 0.0, 0.0, 0.0 } -- Масштабирование предела планирования в зависимости от того на сколько провинций позади линии фронта находится штаб (HQ)
+NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 } -- Масштабирование предела планирования в зависимости от того на сколько провинций позади линии фронта находится штаб (HQ)
 NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0 -- Коэффициент предела планирования при отсутствии штаба (нет лидера лидер не назначен или находится вне структуры главного приказа)
-NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 0.0, 0.0, 0.0, 0.0, 0.0 } -- Аналогично PLANNING_CAP_COMMS_SCALING но для скорости планирования
+NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 } -- Аналогично PLANNING_CAP_COMMS_SCALING но для скорости планирования
 NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0 -- Аналогично PLANNING_CAP_NO_HQ_SCALING но для скорости планирования
-NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 0.0, 0.0, 0.0, 0.0, 0.0 } -- Аналогично PLANNING_CAP_COMMS_SCALING но для модификаторов лидера
-NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 0.0 -- Аналогично PLANNING_CAP_NO_HQ_SCALING но для модификаторов лидера
-NDefines.NMilitary.ABILITY_COMMS_SCALING = { 0.0, 0.0, 0.0, 0.0, 0.0 } -- Аналогично PLANNING_CAP_COMMS_SCALING но для активных способностей
-NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 0.0 -- Аналогично PLANNING_CAP_NO_HQ_SCALING но для активных способностей
+NDefines.NMilitary.LEADER_MOD_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 } -- Аналогично PLANNING_CAP_COMMS_SCALING но для модификаторов лидера
+NDefines.NMilitary.LEADER_MOD_NO_HQ_SCALING = 1.0 -- Аналогично PLANNING_CAP_NO_HQ_SCALING но для модификаторов лидера
+NDefines.NMilitary.ABILITY_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 } -- Аналогично PLANNING_CAP_COMMS_SCALING но для активных способностей
+NDefines.NMilitary.ABILITY_NO_HQ_SCALING = 1.0 -- Аналогично PLANNING_CAP_NO_HQ_SCALING но для активных способностей
 
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_DEPLOY = 0 -- Базовое время на восстановление при назначении лидера подразделения если он ранее не был развернут. Мгновенно при 0. Масштабируется людскими ресурсами шаблона штаба (HQ)
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_DEPLOY_MIN = 0 -- Минимальное время восстановления при развертывании командира даже для очень малых штабных шаблонов
