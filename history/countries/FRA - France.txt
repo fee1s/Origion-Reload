@@ -29,26 +29,12 @@ if = {
 
 starting_train_buffer = 2
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "FRA_1936_naval_mtg"
-		set_war_support = 0.1
-	else = {
-		set_naval_oob = "FRA_1936_naval_legacy"
-		set_war_support = 0.15
-	}
-}
+add_manpower = 1750000 ## =ДА-ДА, НЕ УДИВЛЯЙТЕСЬ=
 
-add_manpower = 1750000
-
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "FRA_1936_air_bba"
-		set_technology = {
+set_technology = {
 	aa_lmg = 1
 	engines_1 = 1
 	engines_2 = 1
-	
 	
 	iw_small_airframe = 1
 	iw_medium_airframe = 1
@@ -57,9 +43,9 @@ if = {
 	basic_small_airframe = 1
 	air_torpedoe_1 = 1
 }
-}
 
 set_research_slots = 4
+
 set_stability = 0.35
 add_command_power = 20
 set_war_support = 0.15

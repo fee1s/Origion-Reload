@@ -43,16 +43,6 @@ set_variable = { FIN_finnish_army_winter_attrition_factor = -0.3 }
 set_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 50.0 }
 set_variable = { FIN_finnish_army_cas_damage_reduction = 0.15 }
 
-### VARS ###
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "FIN_1936_naval_mtg"
-	else = {
-		set_naval_oob = "FIN_1936_naval_legacy"
-	}
-}
-
 set_research_slots = 3
 
 set_stability = 0.45

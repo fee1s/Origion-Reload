@@ -17,14 +17,7 @@ set_variable = { ger_wehrmacht_dm_planning_speed = 0.1 }
 set_variable = { ger_wehrmacht_dm_navy_max_range_factor = 0 }
 set_variable = { ger_wehrmacht_dm_navy_capital_ship_attack_factor = 0 }
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_oob = "GER_1936"
-}
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -59,7 +52,6 @@ set_sub_doctrine = rangers_1
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "GER_1936_air_bba"
 		set_technology = {
 	aa_lmg = 1
 	engines_1 = 1
@@ -108,17 +100,7 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-		improved_light_tank = 1
-		basic_heavy_tank = 1
-	}
-}
+
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -128,26 +110,7 @@ if = {
 		basic_light_tank_chassis = 1
 	}
 }
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		basic_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
-		basic_heavy_cruiser = 1
-		early_battleship = 1
-		basic_battleship = 1
-		early_battlecruiser = 1
-		transport = 1
-	}
-	set_naval_oob = "GER_1936_naval"
-}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

@@ -1,19 +1,8 @@
 ﻿capital = 141	
 
-send_embargo = sov
-send_embargo = usa
-send_embargo = ast
-send_embargo = nzl
-send_embargo = eng
-send_embargo = saf
-send_embargo = can
-send_embargo = fra
-
 country_lock_all_division_template = yes
 
 recruit_character = SWE_per_albin_hansson
-
-oob = "SWE_1936"
 
 add_ideas = {
 	BAN_BAN
@@ -39,7 +28,7 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	basic_train = 1
-	interwar_antitank = 1 # 
+	interwar_antitank = 1 
 }
 
 set_politics = {
@@ -48,6 +37,7 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	democratic = 100
 }

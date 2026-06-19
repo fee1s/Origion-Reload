@@ -1,4 +1,4 @@
-﻿capital = 439
+capital = 439
 
 set_grand_doctrine = grand_battleplan
 set_sub_doctrine = defensive_postures
@@ -22,12 +22,9 @@ set_sub_doctrine = rangers_1
 
 add_ideas = { raj_trade_idea }
 
-oob = "RAJ_1936"
+set_oob = "RAJ_1936"
 
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "RAJ_1936_air_bba"
-		set_technology = {
+set_technology = {
 	aa_lmg = 1
 	engines_1 = 1
 	engines_2 = 1
@@ -39,7 +36,6 @@ if = {
 	basic_medium_airframe = 1
 	basic_small_airframe = 1
 	air_torpedoe_1 = 1
-	}
 }
 
 set_stability = 0.5

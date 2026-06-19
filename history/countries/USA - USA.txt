@@ -24,17 +24,9 @@ set_sub_doctrine = marines_2
 set_sub_doctrine = paratroopers_1
 set_sub_doctrine = rangers_1
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "USA_1936_naval_mtg"
-	else = {
-		set_naval_oob = "USA_1936_naval_legacy"
-	}
-}
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "USA_1936_air_bba"
-		set_technology = {
+set_naval_oob = "USA_1936_naval_mtg"
+
+set_technology = {
 	aa_lmg = 1
 	engines_1 = 1
 	engines_2 = 1
@@ -44,7 +36,6 @@ if = {
 	basic_medium_airframe = 1
 	basic_small_airframe = 1
 	air_torpedoe_1 = 1
-}
 }
 
 set_research_slots = 3

@@ -31,10 +31,8 @@ set_variable = { HUN_power_to_the_regent_dm_stability_factor = -0.05 }
 add_dynamic_modifier = { modifier = HUN_power_to_the_regent_dm }
 
 oob = "HUN_1936"
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "HUN_1936_air_bba"
-		set_technology = {
+
+set_technology = {
 	aa_lmg = 1
 	engines_1 = 1
 	engines_2 = 1
@@ -47,7 +45,7 @@ if = {
 	basic_small_airframe = 1
 	air_torpedoe_1 = 1
 }
-}
+
 
 if = {
 	limit = {

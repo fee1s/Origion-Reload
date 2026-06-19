@@ -398,25 +398,6 @@ on_actions = {
 	# root country that invades
 	# scope state that is invaded
 	# from scope state that the invasion started
-	on_naval_invasion = {
-	 	effect = {
-		 	if = {
-				limit = {
-					ROOT = {
-						divisions_in_state = {
-							 unit = marine_commando
-							 size > 0
-							 state = PREV
-						}
-						 has_tech = marines_commandos_demolition 
-					}
-					NOT = { has_state_flag = marines_commando_effect }
-					OWNER = { NOT = { tag = ROOT } }
-				}
-				SF_marine_demoliton_effect = yes # Note that the state flag condition is not preventing it from doing 1 damage per division 
-			}
-	 	}
-	}
 
 	on_unit_leader_promote_from_ranks_veteran = { #Unit leader scope, FROM is unit
 		effect = {
