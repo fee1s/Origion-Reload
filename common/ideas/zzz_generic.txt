@@ -811,6 +811,16 @@ ideas = {
 				}
 			}
 		}
+
+		GER_armistice_in_progress = {
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -3
+				army_speed_factor = -3
+			}
+		}
 		
 		SOV_increased_aircraft_production_ns_bonus = { #Used as a hidden idea to prevent overcrowding in the regular Soviet Aircraft ns tt
 			removal_cost = -1

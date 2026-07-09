@@ -201,6 +201,10 @@ news_event = { # вступление италии в войну против с
 			## ПЕРЕНЕСЕНО В КОМПЬЕНСКОЕ ПЕРЕМИРИЕ
 
 			# if = { limit = { FRA = { has_idea = fra_collapse_on_the_seine } } FRA = { remove_ideas = fra_collapse_on_the_seine } } 
+
+			## ДОБАВЛЕН АВТО-КОМПЬЕН СО СТАРТА АФРИКИ, 09.07.26, by feels.
+
+			news_event = { id = news.34 }
 			
 			sound_effect = psi_ita_join_war
 		
@@ -786,10 +790,12 @@ news_event = { # скрытый ивент вспомогательный по �
 	major = yes
 	fire_only_once = no
 	
-	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } NOT = { has_global_flag = OST_FRONT_FLAG } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
+	trigger = { FRA = { surrender_progress > 0.38 } NOT = { has_global_flag = second_compiegne_signed } NOT = { has_global_flag = OST_FRONT_FLAG } NOT = { has_global_flag = french_company_ended } } # лимит капитуляции был изменен с 0.33 до 0.38, т.к количество ВП вокруг Парижа изменилось
 	
 	immediate = {
 	    set_global_flag = second_compiegne_signed
+
+		every_country = { limit = { OR = { original_tag = FRA ORIGION_is_in_faction_with_axis = yes } } add_ideas = GER_armistice_in_progress }
 
 		FRA = { country_event = { id = origion.28 days = 3 } }
 		FRA = { country_event = { id = origion.28 days = 4 } }
@@ -1013,7 +1019,7 @@ country_event = { # Италия запрашивает поддержку (РЕ
 		OR = { 
 			AND = { NOT = { has_global_flag = ITA_ask_for_help_1941_flag } date > 1941.11.29 } 
 			AND = { NOT = { has_global_flag = ITA_ask_for_help_1942_flag } has_global_flag = ITA_ask_for_help_1941_completed date > 1942.11.29 } 
-			AND = { NOT = { has_global_flag = ITA_ask_for_help_1943_flag } has_global_flag = ITA_ask_for_help_1942_completed date > 1943.5.29 } 
+			AND = { NOT = { has_global_flag = ITA_ask_for_help_1943_flag } has_global_flag = ITA_ask_for_help_1942_completed date > 1943.11.29 } 
 		}
 		NOT = { has_global_flag = GER_east_mode_africa_fall_flag }
 	}
@@ -1021,8 +1027,8 @@ country_event = { # Италия запрашивает поддержку (РЕ
 	immediate = { 	
 		hidden_effect = {	
 			if = { limit = { NOT = { has_global_flag = ITA_ask_for_help_1942_flag } date < 1942.1.1 NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1941_flag } 
-			else_if = { limit = { has_global_flag = ITA_ask_for_help_1941_flag NOT = { has_global_flag = ITA_ask_for_help_1942_completed } NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1942_flag add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_7 days = -30 } set_variable = { ITA_ask_for_help_amount = 1500 } add_to_variable = { GER_downfall_of_northern_africa_days = -30 } }
-			else = { set_global_flag = ITA_ask_for_help_1943_flag set_variable = { ITA_ask_for_help_amount = 250 } add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_9 days = -30 } }
+			else_if = { limit = { has_global_flag = ITA_ask_for_help_1941_flag NOT = { has_global_flag = ITA_ask_for_help_1942_completed } NOT = { has_global_flag = ITA_ask_for_help_1943_flag } } set_global_flag = ITA_ask_for_help_1942_flag add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_5 days = -120 } set_variable = { ITA_ask_for_help_amount = 500 } add_to_variable = { GER_downfall_of_northern_africa_days = -120 } }
+			else = { set_global_flag = ITA_ask_for_help_1943_flag set_variable = { ITA_ask_for_help_amount = 250 } add_days_mission_timeout = { mission = GER_downfall_of_northern_africa_7 days = -90 } add_to_variable = { GER_downfall_of_northern_africa_days = -90 } }
 		}
 	}
 

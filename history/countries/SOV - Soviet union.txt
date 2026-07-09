@@ -674,6 +674,8 @@ create_equipment_variant = {
 
 		peace_training 
 		GER_east_mode_policies
+
+		received_attache
 	}
 
 	activate_advisor = SOV_vyacheslav_molotov
@@ -1426,6 +1428,27 @@ create_equipment_variant = {
 			special_type_slot_2 = lmg_defense_turret		
 			special_type_slot_3 = fuel_tanks_small		
 		}
+	}	
+	
+	add_equipment_to_stockpile = {
+		type = small_plane_cas_airframe_2
+		amount = 480
+		variant_name = "Ilyushin Il-2 1940"	
+	}
+
+	create_equipment_variant = {
+		name = "Ilyushin Il-2 1941" 
+		type = small_plane_cas_airframe_2
+		design_team = mio:SOV_yakovlev_design_bureau_organization
+		modules = {
+			fixed_main_weapon_slot = tank_buster_1
+			fixed_auxiliary_weapon_slot_1 = tank_buster_1
+			fixed_auxiliary_weapon_slot_2 = tank_buster_1
+			engine_type_slot = engine_3_1x
+			special_type_slot_1 = armor_plate_small
+			special_type_slot_2 = hmg_defense_turret		
+			special_type_slot_3 = fuel_tanks_small		
+		}
 		mark_older_equipment_obsolete = yes
 	}
 
@@ -1553,12 +1576,6 @@ create_equipment_variant = {
 		type = mechanized_equipment_1
 		amount = 6438
 		variant_name = "BRT-1941"	
-	}
-
-	add_equipment_to_stockpile = {
-		type = small_plane_cas_airframe_2
-		amount = 480
-		variant_name = "Ilyushin Il-2 1940"	
 	}
 
 	add_equipment_to_stockpile = {

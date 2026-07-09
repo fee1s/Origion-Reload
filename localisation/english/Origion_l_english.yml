@@ -441,8 +441,11 @@ british_arms_discount_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ �
 british_convoy_discount_tt:0 "§Y$destroyer$§!:\n $production_cost_tt$ §G-10.00%§! \n §Y$convoy$§!:\n $production_cost_tt$ §G-10.00%§! \n"
 british_tank_discount_tt:0 "§Y$armor$§!:\n $production_cost_tt$ §G-10.00%§! \n §Y$mechanized$§!:\n $production_cost_tt$ §G-10.00%§! \n"
 
- FRA_victors_of_wwi_dm:0 "Victors of the Great War"
- FRA_victors_of_wwi_dm_desc:0 "Having emerged victorious from the Great War, the army has developed a dangerously complacent attitude which causes strategic developments to come slowly and with some reluctance."
+FRA_victors_of_wwi_dm:0 "Victors of the Great War"
+FRA_victors_of_wwi_dm_desc:0 "Having emerged victorious from the Great War, the army has developed a dangerously complacent attitude which causes strategic developments to come slowly and with some reluctance."
+
+GER_armistice_in_progress:0 "Armistice in Progress"
+GER_armistice_in_progress:0 ""
 
 # Cut focuses
 cze_deleted_focus:0 "..."
@@ -572,11 +575,11 @@ GER_downfall_of_northern_africa_days_30_tt: "30"
 
 GER_downfall_of_northern_africa_1:0 "§YLanding on the Balearic Islands§!"
 GER_downfall_of_northern_africa_2:0 "§YOperation «Torch»§!"
-GER_downfall_of_northern_africa_3:0 "§YLanding in Norway§!"
-GER_downfall_of_northern_africa_4:0 "§YOperation «Compass»§!"
-GER_downfall_of_northern_africa_5:0 "§YOperation «Countenance»§!"
-GER_downfall_of_northern_africa_6:0 "§YCapitulation of the Afrika Korps§!"
-GER_downfall_of_northern_africa_7:0 "§YCretan Operation§!"
+GER_downfall_of_northern_africa_3:0 "§YOperation «Countenance»§!"
+GER_downfall_of_northern_africa_4:0 "§YOperation «Acrobat»§!"
+GER_downfall_of_northern_africa_5:0 "§YCapitulation of the Afrika Korps§!"
+GER_downfall_of_northern_africa_6:0 "§YCretan Operation§!"
+GER_downfall_of_northern_africa_7:0 "§YLanding in Norway§!"
 GER_downfall_of_northern_africa_8:0 "§YOperation «Husky»§!"
 GER_downfall_of_northern_africa_9:0 "§YOperation «Manna»§!"
 
@@ -1266,15 +1269,17 @@ GER_downfall_of_northern_africa_1_tt: "Modify §Y$african_warfare_dm$§! by \n$M
 
 GER_downfall_of_northern_africa_2_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-2.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-2.0%§!"
 
+GER_downfall_of_northern_africa_3_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-2.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-2.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-2.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-2.0%§!"
+
 GER_downfall_of_northern_africa_4_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-6.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-6.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-6.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-6.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-6.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-6.0%§!"
 
-GER_downfall_of_northern_africa_6_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-12.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-12.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-12.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-12.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-12.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-12.0%§!"
+GER_downfall_of_northern_africa_5_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-10.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-10.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-10.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-10.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-10.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-10.0%§!"
 
-GER_downfall_of_northern_africa_7_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-3.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-3.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-3.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-3.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-3.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-3.0%§!"
+GER_downfall_of_northern_africa_6_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-4.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-4.0%§!"
+
+GER_downfall_of_northern_africa_7_tt: "§Y[GER.GetName]§! will lose control over §Y[NOR.GetAdjective]§! territory, resulting in an increase of §Ysupply throughput§! to §Y[SOV.GetName]§! by £convoy_texticon §G20%§!."
 
 GER_downfall_of_northern_africa_8_tt: "Modify §Y$african_warfare_dm$§! by \n$MODIFIER_FUEL_GAIN_FACTOR$: §R-4.0%§! \n$MODIFIER_MAX_FUEL_FACTOR$: §R-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §R-4.0%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §R-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §R-4.0%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §R-4.0%§!"
-
-GER_downfall_of_northern_africa_3_tt: "§Y[GER.GetName]§! will lose control over §Y[NOR.GetAdjective]§! territory, resulting in an increase of §Ysupply throughput§! to §Y[SOV.GetName]§! by £convoy_texticon §G20%§!."
 
 GER_downfall_of_northern_africa_9_tt: "§Y[GER.GetName]§! will lose access to the §Y[ITA.GetAdjective]§! resource base located in §Y[GRE.GetAdjective]§! territory."
 

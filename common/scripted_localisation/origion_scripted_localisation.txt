@@ -1696,11 +1696,17 @@ defined_text = {
 		trigger = {
 			NOT = { has_global_flag = ITA_ask_for_help_1941_completed }
 		}
-		localization_key = GER_downfall_of_northern_africa_days_60_tt
+		localization_key = GER_downfall_of_northern_africa_days_150_tt
 	}
 	text = {
 		trigger = {
-			has_global_flag = ITA_ask_for_help_1941_completed
+			has_global_flag = ITA_ask_for_help_1941_completed NOT = { has_global_flag = ITA_ask_for_help_1942_completed }
+		}
+		localization_key = GER_downfall_of_northern_africa_days_120_tt
+	}
+	text = {
+		trigger = {
+			has_global_flag = ITA_ask_for_help_1942_completed
 		}
 		localization_key = GER_downfall_of_northern_africa_days_30_tt
 	}

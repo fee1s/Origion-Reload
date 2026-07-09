@@ -421,12 +421,12 @@ africa_dm_fall_of_northern_africa_remove_effect = {
 		limit = {
 			ORIGION_is_in_faction_with_axis = yes
 		}
-		add_to_variable = { african_warfare_dm_fuel_gain_factor = -0.12 }
-		add_to_variable = { african_warfare_dm_max_fuel_factor = -0.12 }
-		add_to_variable = { african_warfare_dm_industrial_capacity_factory = -0.12 }
-		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.12 }
-		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.12 }
-		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.12 }
+		add_to_variable = { african_warfare_dm_fuel_gain_factor = -0.1 }
+		add_to_variable = { african_warfare_dm_max_fuel_factor = -0.1 }
+		add_to_variable = { african_warfare_dm_industrial_capacity_factory = -0.1 }
+		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.1 }
+		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.1 }
+		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.1 }
 	}
 	every_country = {
 		limit = {
@@ -435,8 +435,8 @@ africa_dm_fall_of_northern_africa_remove_effect = {
 				ORIGION_is_in_faction_with_axis = yes
 			}
 		}
-	    add_to_variable = { ALLY_africa_controlled_regions = 6 }
-	    add_to_variable = { AXIS_africa_controlled_regions = -6 }
+	    add_to_variable = { ALLY_africa_controlled_regions = 5 }
+	    add_to_variable = { AXIS_africa_controlled_regions = -5 }
 	}
 }
 
