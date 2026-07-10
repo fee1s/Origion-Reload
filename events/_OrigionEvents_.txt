@@ -204,7 +204,7 @@ news_event = { # вступление италии в войну против с
 
 			## ДОБАВЛЕН АВТО-КОМПЬЕН СО СТАРТА АФРИКИ, 09.07.26, by feels.
 
-			news_event = { id = news.34 }
+			if = { limit = { NOT = { has_global_flag = second_compiegne_signed } } FRA = { news_event = { id = origion.28 } news_event = { id = origion.28 } news_event = { id = origion.28 } news_event = { id = origion.28 } } news_event = { id = news.34 } } 
 			
 			sound_effect = psi_ita_join_war
 		
