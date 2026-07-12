@@ -18,6 +18,9 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	basic_train = 1
+
+	improved_medium_tank_chassis = 1
+	improved_light_tank_chassis = 1
 }
 
 recruit_character = CZE_edvard_benesh
@@ -34,6 +37,98 @@ set_politics = {
 set_popularities = {
 	democratic = 100
 }
+
+create_equipment_variant = {
+	name = "Skoda T-24" 	
+	type = medium_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_medium_cannon
+		turret_type_slot = tank_medium_three_man_tank_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = secondary_turret_small_cannon
+		special_type_slot_3 = easy_maintenance
+		special_type_slot_4 = tank_radio_2
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_riveted_armor
+		engine_type_slot = tank_diesel_engine
+	}
+
+	upgrades = {
+		tank_nsb_engine_upgrade = 12
+		tank_nsb_armor_upgrade = 14
+	}
+}	
+
+add_equipment_to_stockpile = { type = medium_tank_chassis_2 variant_name = "Skoda T-24" amount = 400 } 
+				
+create_equipment_variant = {
+	name = "ST-I" 	
+	type = medium_tank_destroyer_chassis_2
+	modules = {
+		main_armament_slot = tank_heavy_cannon_2
+		turret_type_slot = tank_medium_fixed_superstructure_turret
+		special_type_slot_1 = secondary_turret_small_cannon
+		special_type_slot_2 = secondary_turret_small_cannon
+		special_type_slot_3 = easy_maintenance
+		special_type_slot_4 = squeezebore_adaptor
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_riveted_armor
+		engine_type_slot = tank_diesel_engine
+	}
+
+	upgrades = {
+		tank_nsb_engine_upgrade = 7
+		tank_nsb_armor_upgrade = 0
+	}
+}
+
+add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 variant_name = "ST-I" amount = 800 }
+				
+create_equipment_variant = {
+	name = "Flakpanzer 38(t)" 	
+	type = medium_tank_aa_chassis_2
+	modules = {
+		main_armament_slot = tank_anti_air_cannon
+		turret_type_slot = tank_light_one_man_tank_turret
+		special_type_slot_1 = extra_ammo_storage
+		special_type_slot_2 = extra_ammo_storage
+		special_type_slot_3 = extra_ammo_storage
+		special_type_slot_4 = easy_maintenance
+		suspension_type_slot = tank_bogie_suspension
+		armor_type_slot = tank_riveted_armor
+		engine_type_slot = tank_diesel_engine
+	}
+
+	upgrades = {
+		tank_nsb_engine_upgrade = 6
+		tank_nsb_armor_upgrade = 0
+	}
+}
+
+add_equipment_to_stockpile = { type = medium_tank_aa_chassis_2 variant_name = "Flakpanzer 38(t)" amount = 48 }
+				
+create_equipment_variant = {
+	name = "LT vz. 34" 	
+	type = light_tank_chassis_2
+	modules = {
+		main_armament_slot = tank_high_velocity_cannon
+		turret_type_slot = tank_light_three_man_tank_turret
+		special_type_slot_1 = tank_radio_2
+		special_type_slot_2 = secondary_turret_small_cannon
+		special_type_slot_3 = extra_ammo_storage
+		special_type_slot_4 = extra_ammo_storage
+		suspension_type_slot = tank_wheeled_suspension
+		armor_type_slot = tank_riveted_armor
+		engine_type_slot = tank_diesel_engine
+	}
+
+	upgrades = {
+		tank_nsb_engine_upgrade = 11
+		tank_nsb_armor_upgrade = 14
+	}
+}
+				
+add_equipment_to_stockpile = { type = light_tank_chassis_2 variant_name = "LT vz. 34" amount = 48 }
 
 add_equipment_to_stockpile = { ## 1000 -> 1850
 	type = support_equipment_1

@@ -1848,14 +1848,15 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_technology = {improved_small_airframe = 1 } 
-			set_technology = {engines_3 = 1}
-			set_technology = {aa_hmg = 1}	
+			set_technology = { improved_small_airframe = 1 } 
+			set_technology = { engines_3 = 1 }
+			# set_technology = { aa_hmg = 1 }	
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = JAP_modify_zaibatsu_modifier_tt 
 			custom_effect_tooltip = JAP_the_zero_tt
-			hidden_effect = { add_ideas = JAP_zero_range}
+			
+			hidden_effect = { add_ideas = JAP_zero_range }
 		}
 	}
 
@@ -2083,85 +2084,50 @@ focus_tree = {
 		}
 		
 		available = {
-			has_tech = centimetric_radar
+			hidden_trigger = { has_tech = centimetric_radar has_tech = advanced_fire_control_system has_tech = antiair2 has_tech = improved_light_battery }
+			has_tech = improved_ship_hull_carrier
 		}
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_first_air_fleet
+				bonus = 1.0
+				uses = 1
+				technology = advanced_ship_hull_carrier
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = JAP_first_air_fleet_tt
+
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "Akagi Class"
+					type = ship_hull_carrier_2
+					parent_version = 0
+					name_group = JAP_CV_HISTORICAL
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_3
+						fixed_ship_radar_slot = ship_radar_3
+						fixed_ship_engine_slot = carrier_ship_engine_3
+						fixed_ship_secondaries_slot = dp_ship_secondaries_3
+						front_1_custom_slot = ship_deck_space
+						mid_1_custom_slot = ship_deck_space
+						mid_2_custom_slot = ship_deck_space
+					}
+					design_team = mio:JAP_kure_naval_arsenal_organization
+				}
+				
+				load_oob = "JAP_first_air_fleet"
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = JAP_modify_emperor_army_modifier_tt
 			add_to_variable = { 
 			    JAP_sortie_efficiency = 0.1
 				tooltip = sortie_efficiency_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			hidden_effect = {
-				set_technology = { improved_ship_hull_carrier = 1 }
-			}
-
-			#Equipment Variant
-			create_equipment_variant = {
-				name = "Akagi Class"
-				type = ship_hull_carrier_2
-				parent_version = 0
-				name_group = JAP_CV_HISTORICAL
-				modules = {
-					fixed_ship_deck_slot_1 = ship_deck_space
-					fixed_ship_deck_slot_2 = ship_deck_space
-					fixed_ship_anti_air_slot = ship_anti_air_3
-					fixed_ship_radar_slot = ship_radar_3
-					fixed_ship_engine_slot = carrier_ship_engine_3
-					fixed_ship_secondaries_slot = dp_ship_secondaries_3
-					front_1_custom_slot = ship_deck_space
-					mid_1_custom_slot = ship_deck_space
-					mid_2_custom_slot = ship_deck_space
-				}
-				design_team = mio:JAP_kure_naval_arsenal_organization
-			}
-				
-			#Line Production
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_carrier_2
-					creator = "JAP"
-					version_name = "Akagi Class"
-				}
-				name = "Akagi"
-				requested_factories = 5
-				progress = 0.80
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_carrier_2
-					creator = "JAP"
-					version_name = "Akagi Class"
-				}
-				name = "Kaga"
-				requested_factories = 5
-				progress = 0.80
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_carrier_2
-					creator = "JAP"
-					version_name = "Akagi Class"
-				}
-				name = "Amagi"
-				requested_factories = 5
-				progress = 0.80
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_carrier_2
-					creator = "JAP"
-					version_name = "Akagi Class"
-				}
-				name = "Kasagi"
-				requested_factories = 5
-				progress = 0.80
-				amount = 1
 			}
 		}
 	}
@@ -2189,7 +2155,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_modern_escorts
-				bonus = 3.0
+				bonus = 1.0
 				uses = 1
 				technology = advanced_ship_hull_cruiser	
 			}
@@ -2242,7 +2208,8 @@ focus_tree = {
 		}
 		
 		available = {
-			has_tech = centimetric_radar
+			hidden_trigger = { has_tech = centimetric_radar has_tech = advanced_fire_control_system has_tech = antiair2 has_tech = improved_light_battery }
+			has_tech = ship_hull_super_heavy
 		}
 		
 		cancel_if_invalid = yes
@@ -2250,14 +2217,19 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-				hidden_effect = {
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
-				
+			add_tech_bonus = {
+				name = JAP_the_ultimate_battleship
+				bonus = 1.0
+				uses = 1
+				technology = advanced_ship_hull_heavy
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = JAP_the_ultimate_battleship_tt
+
+			hidden_effect = {
 				create_equipment_variant = {
-					name = "Yamato Class"
+					name = "Origion Japan Yamato Class"
 					type = ship_hull_super_heavy_1
 					name_group = JAP_BB_HISTORICAL
 					parent_version = 0
@@ -2265,7 +2237,7 @@ focus_tree = {
 					modules = {
 						fixed_ship_battery_slot = ship_super_heavy_battery_1
 						fixed_ship_anti_air_slot = ship_anti_air_3
-						fixed_ship_fire_control_system_slot = empty
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_3
 						fixed_ship_radar_slot = ship_radar_3
 						fixed_ship_engine_slot = heavy_ship_engine_3
 						fixed_ship_secondaries_slot = dp_ship_secondaries_3
@@ -2281,28 +2253,8 @@ focus_tree = {
 					design_team = mio:JAP_kure_naval_arsenal_organization
 				}
 
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_super_heavy_1
-							creator = "JAP" 
-							version_name = "Yamato Class"
-						}
-						name = "Yamato" 
-						requested_factories = 150
-						progress = 0.8
-						amount = 1
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_super_heavy_1
-							creator = "JAP" 
-							version_name = "Yamato Class"
-						}
-						name = "Musashi" 
-						requested_factories = 150
-						progress = 0.8
-						amount = 1
-					}
+				load_oob = "JAP_yamato_class"
+			}		
 		}
 	}
 
@@ -2451,7 +2403,7 @@ focus_tree = {
 		relative_position_id = JAP_national_mobilization_law
 		x = 1
 		y = 3
-		cost = 5
+		cost = 10
 		ai_will_do = {
 		factor = 1
 		}
@@ -2494,13 +2446,16 @@ focus_tree = {
 		relative_position_id = JAP_national_mobilization_law
 		x = -2
 		y = 2
-		cost = 5
+		cost = 10
+
 		ai_will_do = {
-		factor = 1
+			factor = 1
 		}
+
 		available = {
 			has_war = yes
 		}
+
 		completion_reward = {
 			custom_effect_tooltip = JAP_modify_zaibatsu_modifier_tt
 			add_to_variable = { 

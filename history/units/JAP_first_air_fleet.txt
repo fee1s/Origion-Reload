@@ -1,0 +1,15 @@
+﻿units = {
+	fleet = {
+		name = "Daiichi Koku Kantai"			
+		naval_base = 9998
+		task_force = {
+			name = "1 Kantai"
+			location = 9998
+			
+			ship = { name = "JAP Nikita" definition = carrier start_experience_factor = 0.3 equipment = { ship_hull_carrier_2 = { amount = 1 owner = JAP version_name = "Origion Japan Akagi Class" } } }
+			ship = { name = "JAP Timofey" definition = carrier start_experience_factor = 0.3 equipment = { ship_hull_carrier_2 = { amount = 1 owner = JAP version_name = "Origion Japan Akagi Class" } } }
+			ship = { name = "JAP Yaroslav" definition = carrier start_experience_factor = 0.3 equipment = { ship_hull_carrier_2 = { amount = 1 owner = JAP version_name = "Origion Japan Akagi Class" } } }
+			ship = { name = "JAP Roman" definition = carrier start_experience_factor = 0.3 equipment = { ship_hull_carrier_2 = { amount = 1 owner = JAP version_name = "Origion Japan Akagi Class" } } }
+		}
+	}
+}
