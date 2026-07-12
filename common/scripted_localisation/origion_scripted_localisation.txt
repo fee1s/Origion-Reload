@@ -1449,16 +1449,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = USA_air_war_cost_2_1_tt
-	text = {
-		trigger = {
-			has_completed_focus = USA_strategic_bombing
-			NOT = { has_completed_focus = USA_optimization }
-		}
-		localization_key = "USA_hidden_air_cost_2_1_tt"
-	}
-}
-defined_text = {
 	name = USA_mihist_tt
 	text = {
 		trigger = {
@@ -1470,24 +1460,11 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = USA_mihist_2_tt
-	text = {
-		trigger = {
-			has_completed_focus = USA_optimization
-			has_completed_focus = USA_air_war_plans_division
-			has_completed_focus = USA_strategic_bombing
-		}
-		localization_key = "USA_mihist_mp_2_tt"
-	}
-}
-defined_text = {
 	name = USA_optimization_cost_loc_tt
 	text = {
 		trigger = {
 			has_completed_focus = USA_optimization
-			NOT = { has_completed_focus = USA_air_war_plans_division }
 			NOT = { has_completed_focus = USA_air_support }
-			NOT = { has_completed_focus = USA_strategic_bombing }
 
 		}
 		localization_key = "USA_optimization_cost_tt"
@@ -1500,7 +1477,6 @@ defined_text = {
 				has_completed_focus = USA_optimization
 				has_completed_focus = USA_air_war_plans_division
 				NOT = { has_completed_focus = USA_air_support }
-				NOT = { has_completed_focus = USA_strategic_bombing }
 		}
 		localization_key = "USA_mihist_mp_3_tt"
 	}

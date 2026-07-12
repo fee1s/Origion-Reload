@@ -1246,27 +1246,6 @@ ideas = {
 
 	
 	industrial_concern = {
-					
-		standard_oil_california = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.15
-			}
-			
-			traits = { refinery_concern }
-			
-			modifier = {
-			}
-		}
-		
 		general_electric = {
 			
 			
@@ -1288,14 +1267,10 @@ ideas = {
 		USA_general_motors = {
 			
 			picture = usa_general_motors
+
 			allowed = {
 				original_tag = USA
 			}
-			available = {
-				has_completed_focus = USA_wartime_industry
-			}
-			
-
 			
 			research_bonus = {
 				industry = 0.15
@@ -1303,26 +1278,9 @@ ideas = {
 			
 			traits = { industrial_concern }
 			
-			modifier = {
-				industrial_capacity_factory = 0.05
-			}
-		}
-		USA_union_pacific_railway = {
-
-			picture = idea_USA_union_pacific_railway
-
-			allowed = {
-				original_tag = USA
-			}
-
-			available = {
-			}
-
-			research_bonus = {
-				industry = 0.05
-			}
-
-			traits = { railway_company }
+			# modifier = {
+			# 	industrial_capacity_factory = 0.05
+			# }
 		}
 	}
 }
