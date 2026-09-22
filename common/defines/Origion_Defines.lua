@@ -1,4 +1,4 @@
-NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.25, 0.2, 0.07, 0.0 } -- was { 2.0, 0.5, 0.2, 0.1, 0.0 } game speeds for each level. Must be 5 entries with last one 0 for unbound
+NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.24, 0.2, 0.07, 0.0 } -- was { 2.0, 0.5, 0.2, 0.1, 0.0 } game speeds for each level. Must be 5 entries with last one 0 for unbound, 24.09.26 - { 1000.0, 0.25, 0.2, 0.07, 0.0 } -> { 1000.0, 0.24, 0.2, 0.07, 0.0 }
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 100;
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 30;
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa

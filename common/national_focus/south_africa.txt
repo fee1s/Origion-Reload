@@ -39,10 +39,10 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
+			# add_popularity = {
+			# 	ideology = democratic
+			# 	popularity = 0.1
+			# }
 		}	
 	}
 	
@@ -519,9 +519,9 @@
 		
 		available_if_capitulated = yes
 
-		available = {
-			date > 1939.9.1
-		}
+		# available = {
+		# 	date > 1939.9.1
+		# }
 		
 		completion_reward = {
 			custom_effect_tooltip = SAF_caps_corps_dm_tt
@@ -662,12 +662,12 @@
 		completion_reward = {
 			
 			
-			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
+			# custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SAF_cabinet_dm_tt
 			add_to_variable = { 
 				SAF_cabinet_dm_political_power_factor = 0.1
@@ -698,15 +698,12 @@
 
 		
 		completion_reward = {
-			
-			
-			
-			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
+			# custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SAF_cabinet_dm_tt
 			add_to_variable = { 
 				SAF_cabinet_dm_war_support_factor = 0.05
@@ -744,12 +741,12 @@
 
 		
 		completion_reward = {
-			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
+			# custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SAF_cabinet_dm_tt
 			add_to_variable = { 
 				SAF_cabinet_dm_stability_factor = 0.1
@@ -781,10 +778,10 @@
 		
 		completion_reward = {
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
 
 			
 			add_to_variable = { 
@@ -818,13 +815,12 @@
 		}
 		
 		completion_reward = {
+			# custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
 			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
-			
-			
 			add_to_variable = { 
 				SAF_ossewabrandwag_dm_industrial_capacity_factory = 0.05
                 tooltip = industrial_capacity_factory_tt
@@ -855,12 +851,12 @@
 
 		
 		completion_reward = {
-			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
+			# custom_effect_tooltip = generic_skip_one_line_tt
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
@@ -893,12 +889,12 @@
 
 		
 		completion_reward = {
-			custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
-			add_to_variable = { 
-				SAF_ossewabrandwag_dm_fascism_drift = 0.03
-				tooltip = fascism_drift_tt
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_ossewabrandwag_dm_tt
+			# add_to_variable = { 
+			# 	SAF_ossewabrandwag_dm_fascism_drift = 0.03
+			# 	tooltip = fascism_drift_tt
+			# }
+			# custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SAF_caps_corps_dm_tt
 			add_to_variable = { 
 				SAF_caps_corps_dm_conscription_factor = 0.05
@@ -1646,7 +1642,7 @@
                 tooltip = stability_factor_tt
             }
 			custom_effect_tooltip =  generic_skip_one_line_tt
-			custom_effect_tooltip = SAF_unify_goverment_tt
+			# custom_effect_tooltip = SAF_unify_goverment_tt
 			
 			add_popularity = {
 				ideology = fascism
@@ -1691,12 +1687,13 @@
 				SAF_caps_corps_dm_army_core_defence_factor = 0.05
                 tooltip = army_core_defence_factor_tt
             }
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_equipment_to_stockpile = {
-					type = convoy
-					amount = 250
-					producer = SAF
-				}
+
+			# custom_effect_tooltip = generic_skip_one_line_tt
+			# add_equipment_to_stockpile = {
+			# 		type = convoy
+			# 		amount = 250
+			# 		producer = SAF
+			# 	}
 		}	
 	}
 	focus = {
@@ -1771,12 +1768,12 @@
 				
 			
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = SAF_cabinet_dm_tt
-			add_to_variable = { 
-				SAF_cabinet_dm_war_support_factor = 0.025
-                tooltip = war_support_factor_tt
-            }
+			# custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_cabinet_dm_tt
+			# add_to_variable = { 
+			# 	SAF_cabinet_dm_war_support_factor = 0.025
+            #     tooltip = war_support_factor_tt
+            # }
 		}
 	}
 	focus = {
@@ -1877,12 +1874,12 @@
 					}
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = SAF_cabinet_dm_tt
-			add_to_variable = { 
-				SAF_cabinet_dm_war_support_factor = 0.025
-                tooltip = war_support_factor_tt
-            }
+			# custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = SAF_cabinet_dm_tt
+			# add_to_variable = { 
+			# 	SAF_cabinet_dm_war_support_factor = 0.025
+            #     tooltip = war_support_factor_tt
+            # }
 			
 		}
 	}		
@@ -1939,6 +1936,14 @@
 		
 		available_if_capitulated = yes
 		completion_reward = {
+			custom_effect_tooltip = SAF_gold_economy_dm_tt
+			add_to_variable = { 
+				SAF_gold_economy_dm_industrial_capacity_factory = 0.025
+                tooltip = industrial_capacity_factory_tt
+            }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			random_owned_state = { 
 				limit = {
 					state = 719
@@ -1950,13 +1955,6 @@
 					instant_build = yes
 				}
 			} 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = SAF_gold_economy_dm_tt
-			add_to_variable = { 
-				SAF_gold_economy_dm_industrial_capacity_factory = 0.025
-                tooltip = industrial_capacity_factory_tt
-            }
 		}	
 	}
 	
@@ -1984,7 +1982,14 @@
 		
 		
 		available_if_capitulated = yes
-		completion_reward = {
+		completion_reward = { 
+			custom_effect_tooltip = SAF_gold_economy_dm_tt
+			add_to_variable = { 
+				SAF_gold_economy_dm_industrial_capacity_factory = 0.025
+                tooltip = industrial_capacity_factory_tt
+            }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_state = { 
 				limit = {
 					state = 999 
@@ -1995,14 +2000,7 @@
 					level = 2
 					instant_build = yes
 				}  
-			} 
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = SAF_gold_economy_dm_tt
-			add_to_variable = { 
-				SAF_gold_economy_dm_industrial_capacity_factory = 0.025
-                tooltip = industrial_capacity_factory_tt
-            }
-			
+			}			
 		}	
 	}
 	
