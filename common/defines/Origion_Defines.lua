@@ -18,6 +18,7 @@ NDefines.NCountry.CONVOY_LENDLEASE_RANGE_FACTOR = 0 --1
 
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100 --200
 
+NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_POLICY_ATTACH_COST = 50 -- По причине удаления политики "Группы ОКР"
 NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 30
 
 -- Армейские
@@ -25,13 +26,18 @@ NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 30
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 
-NDefines.NMilitary.PREFERRED_TACTIC_COMMAND_POWER_COST = 0 -- Предпочитаемые тактики стоят 0 телефонов
+NDefines.NMilitary.PREFERRED_TACTIC_COMMAND_POWER_COST = 999 -- Предпочитаемые тактики стоят 0 телефонов; upd. by feels. [01.10.26]: ..999 телефонов
+
+NDefines.NMilitary.PREFERRED_TACTIC_CHARACTER_SKILL_LEVEL_REQUIRED = 10 -- Требуемый уровень для проставления предпочитаемой тактики в генерале, фактически возможность убрана
 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 NDefines.NMilitary.TRAINING_ATTRITION = 0.00
 
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 999;
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 999;
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 0;
+NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1;
+
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 0;
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 0;
 
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 300 -- Невозможно повысить генерала, фельдмаршалы интегрированы со старта
 
@@ -66,6 +72,8 @@ NDefines.NMilitary.SHORE_BOMBARDMENT_COLLATERAL_DAMAGE_CRIT_CHANCE_FACTOR = 0.00
 
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1.0 -- Возвращаем абузный стак плана, как и был на версии 1.16.10
 NDefines.NMilitary.NAVAL_INVASION_PLANNING_BONUS_MALUS = 0 -- Штраф на скорость плана при морском вторжении (Убран)
+
+NDefines.NMilitary.MULTIPLE_COMBATS_PENALTY = -0.25 -- Штраф за двойной бой
 
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.175 -- Маленькая река
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.225 -- Большая река
@@ -195,9 +203,8 @@ NDefines.NAir.ESCORT_FACTOR = 3 -- (2 -> 3) to make sure that escorted planes ar
 
 NDefines.NAir.DISRUPTION_DEFENCE_SPEED_FACTOR = 170
 
+NDefines.NMilitary.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1.0 -- возвращение к стандартному значению
 
-
-NDefines.NMilitary.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 1.0 -- возвращение к стандартному значению.
 -- Единственный лвл обученности у авиации
 
 NDefines.NAir.AIR_WING_XP_TRAINING_MAX = 2.0
@@ -259,7 +266,7 @@ NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 4
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0.00 -- Корабли не могут получить ранение на тренировке
 
-NDefines.NNavy.NAVY_VISIBILITY_BONUS_ON_RETURN_FOR_REPAIR = 0 -- Заметность кораблей при отправке на ремонт в случае тяжелых повреждений (0 - невидимый)
+NDefines.NNavy.NAVY_VISIBILITY_BONUS_ON_RETURN_FOR_REPAIR = 0.001 -- Заметность кораблей при отправке на ремонт в случае тяжелых повреждений (0 - невидимый); 0 -> 0.001, by feels., есть подозрение, что при нуле работает некорректно.
 
 NDefines.NNavy.REPAIR_AND_RETURN_PRIO_LOW = 0.2 -- Оригион использует ванильные значения дефайнов, связанных с отступлением и ремонтом кораблей от версии 1.17.3
 NDefines.NNavy.REPAIR_AND_RETURN_PRIO_MEDIUM = 0.5
@@ -276,6 +283,8 @@ NDefines.NNavy.REPAIR_AND_RETURN_AMOUNT_SHIPS_HIGH = 0.8
 NDefines.NNavy.REPAIR_AND_RETURN_UNIT_DYING_STR = 0.4 -- Значение, при котором корабль считается "умирающим" - инста-выход из боя
 
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.0 -- Адмиралы не качаются
+
+NDefines.NNavy.ADMIRAL_TASKFORCE_CAP = 999
 
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 1.0 -- Множитель потребности саплая (Ванила - 4)
 
@@ -444,9 +453,6 @@ NDefines.NNavy.SUPPORT_SHIP_RECOVERY_BASE_STRENGTH_FACTOR = 0.00 -- Корабл
 NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 7 -- Возвращаемся к старому значению (1.17 -> 1.16.10)
 NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 0 -- Стартовое доступное количество стрелочек-дропов
 NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 999 -- Стартовое доступное количество дивизий на один дроп
-
-
-
 
 -- Продакшен и постройки
 

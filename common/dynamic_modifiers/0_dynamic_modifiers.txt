@@ -430,7 +430,7 @@ SOV_defend_moscow = { #STATE MODIFIER
 	dig_in_speed_factor = 0.25
 	army_core_defence_factor = 0.25
 	army_core_attack_factor = 0.1
-	supply_factor = 0.25
+	supply_consumption_factor = -0.25
 }
 
 
@@ -468,7 +468,7 @@ SOV_seraya_loshad_battery = { #STATE MODIFIER
 	max_dig_in_factor = 0.1
 	dig_in_speed_factor = 0.25
 	army_core_defence_factor = 0.25
-	supply_factor = 0.25
+	supply_consumption_factor = -0.25
 	pocket_penalty = -0.15
 }
 
@@ -481,7 +481,7 @@ SOV_krasnaya_gorka_battery = { #STATE MODIFIER
 	max_dig_in_factor = 0.1
 	dig_in_speed_factor = 0.25
 	army_core_defence_factor = 0.25
-	supply_factor = 0.25
+	supply_consumption_factor = -0.25
 	pocket_penalty = -0.15
 }
 
@@ -494,7 +494,7 @@ SOV_armored_battery_35 = { #STATE MODIFIER #German designation Maksim Gorky
 	max_dig_in_factor = 0.1
 	dig_in_speed_factor = 0.25
 	army_core_defence_factor = 0.25
-	supply_factor = 0.25
+	supply_consumption_factor = -0.25
 	pocket_penalty = -0.15
 }
 
@@ -507,7 +507,7 @@ SOV_defend_stalingrad = { #STATE MODIFIER
 	max_dig_in_factor = 0.1
 	dig_in_speed_factor = 0.25
 	army_core_defence_factor = 0.30
-	supply_factor = 0.25
+	supply_consumption_factor = -0.25
 }
 
 SOV_factory_worker_militias_raised = { #STATE MODIFIER
@@ -1224,7 +1224,7 @@ no_jap_asian_wal_dm = { # Десижины япы на валл
     icon = GFX_modifiers_conscription_exemptions_granted
     army_defence_factor = 0.15
 	dig_in_speed_factor = 0.25
-	supply_factor = -0.10
+	supply_consumption_factor = -0.10
 	cas_damage_reduction = 0.05 
 }
 
@@ -1233,7 +1233,7 @@ operation_ketsugo_dm = { # Десижины япы на валл
     army_defence_factor = 0.20
 	army_attack_factor = 0.1
 	dig_in_speed_factor = 0.25
-	supply_factor = -0.20
+	supply_consumption_factor = -0.20
 	cas_damage_reduction = 0.20 
 	max_dig_in = 5
 }
@@ -1277,7 +1277,7 @@ JAP_emperor_army_dm = {
 	# филс, продолжаю переносить идеи в динамики
 	
 	convoy_retreat_speed = JAP_emperor_army_dm_convoy_retreat_speed
-	supply_factor = JAP_emperor_army_dm_supply_factor
+	supply_consumption_factor = JAP_emperor_army_dm_supply_factor
 }
 
 JAP_militarism_dm = {
@@ -1920,7 +1920,7 @@ BUL_military_dictatorship_dm = {
 	army_core_defence_factor = BUL_military_dictatorship_dm_army_core_defence_factor
 	army_morale_factor = BUL_military_dictatorship_dm_army_morale_factor
 	
-	supply_factor = BUL_military_dictatorship_dm_supply_factor
+	supply_consumption_factor = BUL_military_dictatorship_dm_supply_consumption_factor
 	air_cas_present_factor = BUL_military_dictatorship_dm_air_cas_present_factor
 }
 
@@ -2069,3 +2069,13 @@ SOV_politburo_dm = {
 	surrender_limit = SOV_politburo_dm_surrender_limit_dm
 	research_speed_factor = SOV_politburo_dm_research_speed_factor_dm
 }	
+
+ITA_culto_del_duce_dm = {
+	icon = GFX_idea_ITA_shadow_of_mussolini
+
+	political_power_factor = ITA_culto_del_duce_dm_political_power_factor
+	stability_factor = ITA_culto_del_duce_dm_stability_factor
+	war_support_factor = ITA_culto_del_duce_dm_war_support_factor
+	party_popularity_stability_factor = ITA_culto_del_duce_dm_party_popularity_stability_factor
+	conscription_factor = ITA_culto_del_duce_dm_conscription_factor
+}

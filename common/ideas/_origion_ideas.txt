@@ -256,7 +256,6 @@ ideas = {
 			
 			modifier = {
 				army_speed_factor = 0.075
-				supply_consumption_factor = -0.15
 				supply_factor = 0.1
 				# air_mission_efficiency = 0.1
 			}
@@ -665,7 +664,7 @@ ideas = {
 			modifier = {
 				convoy_retreat_speed = 0.5
 				dig_in_speed_factor = 0.5
-				supply_factor = 0.15
+				supply_consumption_factor = -0.15
 				planning_speed = 0.5
 			}
 		}
@@ -1211,7 +1210,6 @@ ideas = {
 			modifier = {
 				army_speed_factor = 0.1
 				supply_consumption_factor = -0.15
-				supply_factor = 0.1
 			}
 		}
 
@@ -1223,7 +1221,7 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_public_works_investment
 
-		modifier = {
+			modifier = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 			}

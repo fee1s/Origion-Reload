@@ -345,17 +345,17 @@ africa_dm_medium_step_remove_effect = { #
 }
 
 africa_dm_torch_step_remove_effect = {
-	every_country = {
-		limit = {
-			ORIGION_is_in_faction_with_axis = yes
-		}
-		add_to_variable = { african_warfare_dm_fuel_gain_factor = -0.02 }
-		add_to_variable = { african_warfare_dm_max_fuel_factor = -0.02		}
-		add_to_variable = { african_warfare_dm_industrial_capacity_factory = -0.02 }
-		add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.02 }
-		add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.02 }
-		add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.02 }
-	}
+	# every_country = {
+	# 	limit = {
+	# 		ORIGION_is_in_faction_with_axis = yes
+	# 	}
+	# 	add_to_variable = { african_warfare_dm_fuel_gain_factor = -0.02 }
+	# 	add_to_variable = { african_warfare_dm_max_fuel_factor = -0.02		}
+	# 	add_to_variable = { african_warfare_dm_industrial_capacity_factory = -0.02 }
+	# 	add_to_variable = { african_warfare_dm_industrial_capacity_dockyard = -0.02 }
+	# 	add_to_variable = { african_warfare_dm_production_factory_max_efficiency_factor = -0.02 }
+	# 	add_to_variable = { african_warfare_dm_production_factory_efficiency_gain_factor = -0.02 }
+	# }
 	every_country = {
 		limit = {
 			OR = {

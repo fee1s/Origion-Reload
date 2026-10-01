@@ -2121,9 +2121,9 @@ ship_heavy_battery_3 = {
 		gfx = ship_armor_thick_3
 		
 		multiply_stats = {
-			build_cost_ic = 0.80
+			build_cost_ic = 0.2 ## 0.8 -> 0.5, by feels. [01.10.26]
 			naval_speed = -0.30
-			max_strength = 0.12
+			max_strength = 0.25 ## 0.12 -> 0.25
 		}
 		build_cost_resources = {
 			steel = 2
