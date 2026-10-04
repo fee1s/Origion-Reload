@@ -10,7 +10,7 @@ NDefines.NGame.ENERGY_RESOURCE = "oil" -- Заменен уголь на неф�
 NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0.0 -- Шизо-дефайн, связанный с побережьем, см. ориг файлы Хойки
 NDefines.NCountry.NAVY_USE_HOME_BASE_FOR_RANGE = false -- Флот 1.16.10
 
-NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 25 -- Стоимость выжженной земли (увеличено)
+NDefines.NCountry.SCORCHED_EARTH_STATE_COST = 999 -- Стоимость выжженной земли (увеличено)
 
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.03  --0.01
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.001 --0.0005
@@ -26,18 +26,18 @@ NDefines.NIndustrialOrganisation.DEFAULT_INITIAL_ATTACH_POLICY_COOLDOWN = 30
 NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 10000000;
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 
-NDefines.NMilitary.PREFERRED_TACTIC_COMMAND_POWER_COST = 999 -- Предпочитаемые тактики стоят 0 телефонов; upd. by feels. [01.10.26]: ..999 телефонов
+NDefines.NMilitary.PREFERRED_TACTIC_COMMAND_POWER_COST = 500 -- Предпочитаемые тактики стоят 0 телефонов; upd. by feels. [01.10.26]: ..500 телефонов
 
 NDefines.NMilitary.PREFERRED_TACTIC_CHARACTER_SKILL_LEVEL_REQUIRED = 10 -- Требуемый уровень для проставления предпочитаемой тактики в генерале, фактически возможность убрана
 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2;
 NDefines.NMilitary.TRAINING_ATTRITION = 0.00
 
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 0;
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 9999;
 NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1;
 
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 0;
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 0;
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 9999;
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10;
 
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 300 -- Невозможно повысить генерала, фельдмаршалы интегрированы со старта
 

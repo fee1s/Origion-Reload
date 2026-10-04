@@ -47,7 +47,7 @@ tactic_counterattack = { # counters basic attack, assault
 	is_attacker = no
 	trigger = {
 		is_attacker = no
-		skill_advantage > 0
+		# skill_advantage > 0
 		phase = no
 	}
 	
@@ -55,11 +55,8 @@ tactic_counterattack = { # counters basic attack, assault
 	
 	base =  {
 		factor = 4
-		modifier = {
-			add = 2
-			has_trait = unyielding_defender
-		}
 	}
+
 	picture = counterattack
 	
 	defender = 0.25
@@ -76,12 +73,12 @@ tactic_assault = {
 	active = yes
 	
 	base =  {
-		factor = 2
-		modifier = {
-			add = 2
+		factor = 4
+		# modifier = {
+		# 	add = 2
 
-			has_trait = aggressive_assaulter
-		}
+		# 	has_trait = aggressive_assaulter
+		# }
 
 		modifier = {
 			factor = 0.2
@@ -247,15 +244,15 @@ tactic_shock = { #counters delay
 	
 	base =  {
 		factor = 4
-		modifier = {
-			add = 2
-			has_trait = aggressive_assaulter
-		}
+		# modifier = {
+		# 	add = 2
+		# 	has_trait = aggressive_assaulter
+		# }
 	}
 	picture = shock
 	countered_by = tactic_ambush
 	
-	defender = -0.25
+	defender = -0.15
 }
 
 tactic_tactical_withdrawal = { #counters encirclement
@@ -385,11 +382,11 @@ tactic_ambush = { #counters shock
 	trigger = {
 		is_attacker = no
 		phase = no
-		OR = {
-			skill_advantage > 1
-			skill > 2
-			has_trait = trickster
-		}
+		# OR = {
+		# 	skill_advantage > 1
+		# 	skill > 2
+		# 	has_trait = trickster
+		# }
 	}
 	
 	active = yes
@@ -398,7 +395,7 @@ tactic_ambush = { #counters shock
 	picture = ambush
 	countered_by = tactic_breakthrough
 	
-	attacker = -0.25
+	attacker = -0.15
 }
 
 tactic_blitz = {
@@ -407,7 +404,7 @@ tactic_blitz = {
 		is_attacker = yes
 		hardness > 0.5
 		phase = no
-			has_trait = panzer_leader
+		has_trait = panzer_leader
 	}
 	
 	active = no
@@ -437,10 +434,6 @@ tactic_elastic_defense = { #counters blitz
 	trigger = {
 		is_attacker = no
 		phase = no
-		OR = {
-			has_trait = defensive_doctrine
-			skill > 2
-		}
 	}
 	
 	active = no
@@ -462,13 +455,6 @@ tactic_backhand_blow = { #counters breakthrough
 	trigger = {
 		is_attacker = no
 		phase = no
-		OR = {
-			skill > 4
-			AND = {
-				has_trait = defensive_doctrine
-				skill > 3
-			}
-		}
 	}
 	
 	active = no
@@ -487,13 +473,6 @@ tactic_seize_bridge = {
 		is_attacker = yes
 		has_combat_modifier = river_crossing
 		phase = no
-		OR = {
-			skill > 3
-			AND = {
-				has_trait = offensive_doctrine
-				skill > 2
-			}
-		}
 	}
 	
 	base =  {
