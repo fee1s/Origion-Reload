@@ -439,97 +439,20 @@ focus_tree = {
 		x = 18
 		y = 1
 		relative_position_id = SOV_country_of_victorious_socialism 
-		cost = 5
+		cost = 10
 		
 		prerequisite = { focus = SOV_country_of_victorious_socialism }
 
 		completion_reward = {
 			army_experience = 150
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			# custom_effect_tooltip = generic_skip_one_line_tt
 
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_conscription_factor = 0.15
-				tooltip = conscription_factor_tt
-			}
-		}
-	}
-	
-	focus = {
-		id = SOV_cohesion_first
-		icon = GFX_SOV_cohesion_first_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
-		x = 0
-		y = 1
-		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 5
-
-		completion_reward = {		
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_army_org_factor = 0.05
-				tooltip = army_org_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_org_loss_at_low_org_factor = -0.15
-				tooltip = org_loss_at_low_org_factor_orgn_tt
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	}
-	
-	focus = {
-		id = SOV_rehabilitated_military
-		icon = GFX_SOV_rehabilitated_military_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
-		x = -2
-		y = 1
-		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 5
-
-		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_land_reinforce_rate = 0.02
-				tooltip = land_reinforce_rate_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_army_morale_factor = 0.1
-				tooltip = army_morale_factor_tt
-			}
-		}
-	}
-	
-	focus = {
-		id = SOV_military_reorganization
-		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = SOV_rehabilitated_military }
-		prerequisite = { focus = SOV_cohesion_first }
-		x = -1
-		y = 2
-		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 5
-
-		completion_reward = {
-		    custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
-			add_to_variable = { 
-			    SOV_the_red_army_army_org_factor = 0.05
-				tooltip = army_org_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_dig_in_speed_factor = 0.05
-				tooltip = dig_in_speed_factor_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_max_dig_in = 5
-				tooltip = max_dig_in_tt
-			}
-			add_to_variable = { 
-			    SOV_the_red_army_cas_damage_reduction = 0.05
-				tooltip = cas_damage_reduction_tt
-			}
+		    # custom_effect_tooltip = SOV_modify_the_red_army_modifier_tt
+			# add_to_variable = { 
+			#     SOV_the_red_army_conscription_factor = 0.15
+			# 	tooltip = conscription_factor_tt
+			# }
 		}
 	}
 
@@ -537,20 +460,12 @@ focus_tree = {
 	focus = {
 		id = SOV_southern_frontier
 		icon = GFX_SOV_the_southern_thrust_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_military_reorganization }
-		x = 0
-		y = 1
-		relative_position_id = SOV_military_reorganization
-		cost = 2
 		
-		available = {
-			OR = {
-				controls_state = 218
-				controls_state = 228
-				controls_state = 227
-				controls_state = 221
-			}
-		}
+		x = -1
+		y = 1
+		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
+		relative_position_id = SOV_strengthen_the_mobilization_plan
+		cost = 5
 		
 		bypass = {
 			NOT = {
@@ -826,20 +741,12 @@ focus_tree = {
 		id = SOV_kursk_salient_forts
 		icon = GFX_focus_CHL_expand_the_forestry
 		
-		prerequisite = { focus = SOV_military_reorganization }
-		x = -2
+		prerequisite = { focus = SOV_southern_frontier }
+		x = -1
 		y = 1
-		relative_position_id = SOV_military_reorganization
+		relative_position_id = SOV_southern_frontier
 		
-		cost = 2
-
-		available = {
-			OR = {
-				controls_state = 220
-				controls_state = 222
-				controls_state = 224
-			}
-		}
+		cost = 5
 		
 		bypass = {
 			NOT = {
@@ -998,7 +905,7 @@ focus_tree = {
 		id = SOV_improve_the_stalin_line
 		icon = GFX_SOV_improve_the_stalin_line_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
@@ -1238,7 +1145,7 @@ focus_tree = {
 		id = SOV_impregnable_forts
 		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_improve_the_stalin_line}
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SOV_improve_the_stalin_line
 		cost = 5
@@ -1532,15 +1439,12 @@ focus_tree = {
 		id = SOV_the_defense_of_moscow
 		icon = GFX_SOV_the_defense_of_moscow_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_impregnable_forts }
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = SOV_impregnable_forts
 		cost = 2
 
 		available = {
-			219 = {
-				is_controlled_by = ROOT
-			}
 			has_war = yes 
 		}
 		
@@ -1744,18 +1648,14 @@ focus_tree = {
 	focus = {
 		id = SOV_stalingrad_defence
 		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
-		prerequisite = { focus = SOV_impregnable_forts }
-		relative_position_id = SOV_impregnable_forts
-		x = 2
-		y = 1
+		prerequisite = { focus = SOV_kursk_salient_forts }
+		relative_position_id = SOV_kursk_salient_forts
+		x = 1
+		y = 2
 		cost = 2
 		
 		available = {
-			217 = {
-				is_controlled_by = ROOT
-			}
-			has_war = yes
-			
+			has_war = yes	
 		}
 		
 		bypass = {
@@ -1764,7 +1664,6 @@ focus_tree = {
 					is_controlled_by = ROOT  
 				}
 			}
-			has_war = yes
 		}
 		
 		completion_reward = {
@@ -1887,14 +1786,13 @@ focus_tree = {
 			}
 		}
 	}
-	
+
 	focus = {
-		id = SOV_line_kazan_kuibyshev
-		icon = GFX_focus_generic_total_war
-		prerequisite = { focus = SOV_the_defense_of_moscow }
-		prerequisite = { focus = SOV_southern_frontier }
-		relative_position_id = SOV_impregnable_forts
-		x = -1
+		id = SOV_voronezh_fortified_region
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = SOV_strengthen_the_mobilization_plan  }
+		relative_position_id = SOV_strengthen_the_mobilization_plan
+		x = 0
 		y = 2
 		cost = 2
 		
@@ -1908,6 +1806,109 @@ focus_tree = {
 				}
 			}
 		}
+
+		available = { has_war = yes }
+		
+		completion_reward = {
+			custom_effect_tooltip = SOV_voronezh_fortified_region_tt
+			hidden_effect = { 	
+				258 = {
+					if = {
+						limit = {
+							ROOT = { controls_province = 6398 }
+						}
+						set_building_level = { type = bunker level = 5 province = 6398 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6341 }
+						}
+						set_building_level = { type = bunker level = 3 province = 6341 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6230 }
+						}
+						set_building_level = { type = bunker level = 3 province = 6230 instant_build = yes }
+					}
+				}
+				260 = { 		
+					if = {
+						limit = {
+							ROOT = { controls_province = 413 }
+						}
+						set_building_level = { type = bunker level = 8 province = 413 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 3527 }
+						}
+						set_building_level = { type = bunker level = 3 province = 3527 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 510 }
+						}
+						set_building_level = { type = bunker level = 3 province = 510 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6494 }
+						}
+						set_building_level = { type = bunker level = 3 province = 6494 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 437 }
+						}
+						set_building_level = { type = bunker level = 3 province = 437 instant_build = yes }
+					}
+				}
+				265 = { 
+					if = {
+						limit = {
+							ROOT = { controls_province = 3431 }
+						}
+						set_building_level = { type = bunker level = 3 province = 3431 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 11555 }
+						}
+						set_building_level = { type = bunker level = 3 province = 11555 instant_build = yes }
+					}
+					if = {
+						limit = {
+							ROOT = { controls_province = 6454 }
+						}
+						set_building_level = { type = bunker level = 3 province = 6454 instant_build = yes }
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_line_kazan_kuibyshev
+		icon = GFX_focus_generic_total_war
+		prerequisite = { focus = SOV_voronezh_fortified_region focus = SOV_kursk_salient_forts focus = SOV_impregnable_forts }
+		relative_position_id = SOV_voronezh_fortified_region
+		x = 0
+		y = 1
+		cost = 2
+		
+		bypass = {
+			NOT = {
+				251	 = {
+					is_controlled_by = ROOT  
+				}
+				249 = {
+					is_controlled_by = ROOT
+				}
+			}
+		}
+
+		available = { has_war = yes }
 		
 		completion_reward = {
 			custom_effect_tooltip = SOV_line_kazan_kuibyshev_tt
@@ -2235,6 +2236,10 @@ focus_tree = {
 			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
+			add_to_variable = { 
+			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_industrial_modernization
@@ -2497,6 +2502,10 @@ focus_tree = {
 			add_to_variable = { 
 			    SOV_economy_dm_production_factory_max_efficiency_factor_dm = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+			    SOV_economy_dm_production_factory_efficiency_gain_factor_dm = -0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 		
@@ -2994,7 +3003,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_development_of_tankograd
-		cost = 5
+		cost = 10
 
 		completion_reward = {
 			every_military_industrial_organization = {
@@ -3407,15 +3416,17 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_deep_battle
-		cost = 5
+		cost = 2
 
-		available = {
-			date > 1944.6.1
+		# available = {
+		# 	date > 1944.6.1
 			
-		}
+		# }
 
 		completion_reward = {	
 		   unlock_decision_tooltip = SOV_operation_bagration_dec 
+		   custom_effect_tooltip = generic_skip_one_line_tt
+		   custom_effect_tooltip = decision_unlock_operation_bagration
 		}
 	}
 	

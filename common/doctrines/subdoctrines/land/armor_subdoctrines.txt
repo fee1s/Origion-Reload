@@ -346,7 +346,7 @@ tank_destroyer_force = {
 
     }  
 
-	enable_tactic = tactic_human_wave_tactics
+	enable_tactic = tactic_infantry_charge
 	category_army = {
 		default_morale = 0.08
 	}
@@ -389,19 +389,18 @@ tank_destroyer_force = {
 				max_organisation = 6
 			}	
         }
-        redeployment_priority = {		
-			enable_tactic = tactic_overwhelming_fire	
+        redeployment_priority = {			
 			motorized = {
 				breakthrough = 0.02	
-				max_strength = 0.5
+				# max_strength = 0.5
 			}
 			mechanized = {
 				breakthrough = 0.02
-				max_strength = 0.5
+				# max_strength = 0.5
 			}
 			amphibious_mechanized = {
 				breakthrough = 0.02
-				max_strength = 0.5
+				# max_strength = 0.5
 			}
         }
 

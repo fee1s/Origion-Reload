@@ -261,20 +261,6 @@ set_variable = { SOV_soviet_airforce_air_nav_efficiency = 0 } #-> Expand the Mor
 
 add_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier }
 
-
-#THE RED FLEET NATIONAL SPIRIT VARS
-set_variable = { SOV_red_fleet_navy_refit_ic_cost = -0.05 }
-set_variable = { SOV_red_fleet_repair_speed_factor = 0.05 }
-
-set_variable = { SOV_red_fleet_naval_coordination = 0 } #-> Advanced Maneuvers
-set_variable = { SOV_red_fleet_navy_visibility = 0 } #-> Advanced Maneuvers
-set_variable = { SOV_red_fleet_positioning = 0 } #-> Advanced Maneuvers
-set_variable = { SOV_red_fleet_screening_efficiency = 0 } #-> Advanced Maneuvers
-set_variable = { SOV_red_fleet_naval_invasion_capacity = 0 } #-> Marines
-set_variable = { SOV_red_fleet_invasion_preparation = 0 } #-> Marines
-set_variable = { SOV_red_fleet_special_forces_cap = 0 } #-> Marines
-
-
 #DEFENSE INDUSTRY NATIONAL SPIRIT VARS
 set_variable = { SOV_defense_industry_conversion_cost_civ_to_mil_factor = -0.2 }
 set_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.05 }
@@ -293,14 +279,14 @@ set_variable = { SOV_defense_industry_army_artillery_defence_factor = 0 } #-> Mi
 
 #THE RED ARMY NATIONAL SPIRIT VARS
 set_variable = { SOV_the_red_army_mobilization_laws_cost_factor = 0 }
-set_variable = { SOV_the_red_army_army_org_factor = -0.15 } # -> Restore Cossack Units / Cohsesion First #Meant to represent disgruntledness
+set_variable = { SOV_the_red_army_army_org_factor = -0.05 } # -> Restore Cossack Units / Cohsesion First #Meant to represent disgruntledness
 set_variable = { SOV_the_red_army_experience_gain_army_factor = 0 }
 set_variable = { SOV_the_red_army_experience_loss_factor = 0.25 }
 set_variable = { SOV_the_red_army_army_attack_factor = -0.125 } #сисикал
 set_variable = { SOV_the_red_army_army_defence_factor = -0.125 } #сисикал
 set_variable = { SOV_the_red_army_army_breakthrough_factor = -0.075 } #сисикал
 
-set_variable = { SOV_the_red_army_army_morale_factor = -0.2 } #сисикал
+set_variable = { SOV_the_red_army_army_morale_factor = -0.1 } #сисикал (ЭТО КТО НАПИСАЛ? БУДЕТ СПРОС) 0.2 -> 0.1, by feels. [7.10.26]
 set_variable = { SOV_the_red_army_org_loss_at_low_org_factor = 0 } #сисикал
 set_variable = { SOV_the_red_army_naval_doctrine_cost_factor = 0.2 } #сисикал
 set_variable = { SOV_the_red_army_air_doctrine_cost_factor = 0.2 } #сисикал

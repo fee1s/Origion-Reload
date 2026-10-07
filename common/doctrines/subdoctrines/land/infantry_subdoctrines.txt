@@ -87,7 +87,7 @@ grand_assault = {
     }
 
     # EFFECTS
-	enable_tactic = tactic_delay
+	enable_tactic = tactic_elastic_defense
 	land_reinforce_rate = 0.02
 	# category_light_infantry = {
 	# 	default_morale = 0.05
@@ -115,7 +115,6 @@ grand_assault = {
         }
         combined_arms_integration = {
         #3
-			enable_tactic = tactic_elastic_defense
 			land_reinforce_rate = 0.02
 			category_light_infantry = {
 				defense = 0.02

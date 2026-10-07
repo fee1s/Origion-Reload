@@ -678,63 +678,63 @@ peoples_war = {
 		hard_attack = 0.025
 	}
 
-	enable_tactic = tactic_tactical_withdrawal
+	# enable_tactic = tactic_tactical_withdrawal [УБРАНО, 7.10.26]
+
+	enable_tactic = tactic_overwhelming_fire
 	
     rewards = {
         revolutionary_base_area = {
         #1
-			enable_tactic = tactic_relentless_assault
+			enable_tactic = tactic_delay
 			category_all_armor = {
 				max_organisation = 2
-				breakthrough = 0.1
+				breakthrough = 0.05
 			}
         }
         destruction_over_land_gains = {
         #2
+			enable_tactic = tactic_human_wave_tactics
 			planning_speed = 0.15
 			category_all_armor = {
-				breakthrough = 0.1
+				breakthrough = 0.05
 			}
         }
         quick_decision_offensive_warfare = {
         #3
 			supply_consumption_factor = -0.10
-			enable_tactic = tactic_blitz
-			infantry = {
-				soft_attack = 0.05
+			enable_tactic = tactic_relentless_assault
+			# infantry = {
+			# 	soft_attack = 0.05
+			# 	breakthrough = 0.1
+			# }
+
+			mechanized = {
+				max_organisation = 6
+				breakthrough = 0.1
+			}
+			motorized = {
+				max_organisation = 6
+				breakthrough = 0.1
+			}	
+			amphibious_mechanized = {
+				max_organisation = 6
 				breakthrough = 0.1
 			}
         }
         people_not_things = {
         #4
-			enable_tactic = tactic_backhand_blow
+			enable_tactic = tactic_blitz
 			
 			category_all_armor = {
 				breakthrough = 0.10
 				default_morale = 0.05
-				maximum_speed = 0.1
+				# maximum_speed = 0.1
 			}
 			
 			# category_light_infantry = {
 			# 	max_organisation = 3
 			# 	breakthrough = 0.10
 			# }
-	
-			mechanized = {
-				max_organisation = 6
-				maximum_speed = 0.1
-				breakthrough = 0.10
-			}
-			motorized = {
-				max_organisation = 6
-				maximum_speed = 0.1
-				breakthrough = 0.10
-			}	
-			amphibious_mechanized = {
-				max_organisation = 6
-				maximum_speed = 0.1
-				breakthrough = 0.10
-			}
         }
         shock_and_awe = {
         #5
