@@ -432,6 +432,10 @@ GER_inspection_in_tanks_tt:0 "§Y$mio_cat_eq_all_tanks$§!:\n $STAT_COMMON_RELIA
 GER_u_boat_efforts_tt:0 "§Y$submarine$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
 GER_inspection_in_infantry_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_air_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_tank_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$artillery_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
 
+ger_axis_grossraumwirtschaft:0 "Großraumwirtschaft"
+
+GER_integrate_war_economy_tt: "Shared modifiers §Y$ger_axis_grossraumwirtschaft$§!: \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: [?hun.ger_economy_dm_production_factory_max_efficiency_factor|%=Y0+] \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?hun.ger_economy_dm_industrial_capacity_factory|%=Y0+] \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: [?hun.ger_economy_dm_line_change_production_efficiency_factor|%=Y0+] \n$MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR$: [?hun.ger_economy_dm_local_building_slots_factor|%=Y0+] \n$modifier_production_speed_arms_factory_factor$: [?hun.ger_economy_dm_production_speed_arms_factory_factor|%=Y0+]\n\nThis national spirit can be §Ystrengthened§! as §Y$GER_ADJ$§! focuses following §Y$GER_we_need_speer$§! are completed."
+
 ENG_stoyak:0 "British Stoicism"
 ENG_chiefs_of_staff:0 "Committee of Chiefs of Staff"
 ENG_stoyak_intro:0 "Modify §Y$ENG_stoyak$§! by"
@@ -1386,7 +1390,7 @@ FIN_stagnation_effect_tt: "§YEach month, the Soviet army increasingly adapts to
 FIN_finnish_army_tt: "After §YUSSR§! completes focus §Y$SOV_the_sacred_war$§! we will lose §R5% attack and defense§! monthly until modifiers fully expire\n\n"
 FIN_hell_weather: "Unbearable Weather"
 FIN_hell_weather_tt: "\nAny divisions in this region §Rwill be irreversibly lost§!"
-FIN_cooperation_with_germany_tt: "§Y150§! units of Finnish §YImproved Assault Corps§! will be added to the national stockpile."
+FIN_cooperation_with_germany_tt: "§Y150§! units of Finnish §Y$small_plane_cas_airframe_2$§! will be added to the national stockpile."
 FIN_cannot_war_tt: "§Y[FIN.GetName]§! can only wage war against §YSoviet Union§!"
 FIN_jatkosota: "Continuation War"
 AST_modify_army_dm_tt: "Idea §Y$AST_army_dm$§! will be modifies to:"
@@ -1790,5 +1794,5 @@ SOV_expand_supplies_tt:0 "§YAllied countries§! will be able to send weapons an
 decision_unlock_winter_counteroffensive: "Operation can be activated \nin the period between §Y1 November 1941§! and §Y1 February 1942§!."
 decision_unlock_uran: "Operation can be activated \nin the period between §Y1 October 1942§! and §Y1 December 1942§!."
 decision_unlock_kursk_defensive: "Operation can be activated \nin the period between §Y1 June 1943§! and §Y1 September 1943§!."
-decision_unlock_kursk_defensive: "Operation can be activated \nin the period between §Y1 June 1944§! and §Y1 September 1944§!."
+decision_unlock_operation_bagration: "Operation can be activated \nin the period between §Y1 June 1944§! and §Y1 September 1944§!."
 

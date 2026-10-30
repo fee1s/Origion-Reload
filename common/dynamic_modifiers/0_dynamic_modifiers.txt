@@ -1454,6 +1454,20 @@ african_warfare_dm = {
 	max_fuel_factor = african_warfare_dm_max_fuel_factor
 }
 
+ger_axis_grossraumwirtschaft = {
+	enable = { always = yes }
+	icon = GFX_idea_HABSBURG_economy
+
+	production_factory_max_efficiency_factor = hun.ger_economy_dm_production_factory_max_efficiency_factor
+    industrial_capacity_factory = hun.ger_economy_dm_industrial_capacity_factory
+	industrial_capacity_dockyard = hun.ger_economy_dm_industrial_capacity_dockyard
+	production_factory_efficiency_gain_factor = hun.ger_economy_dm_production_factory_efficiency_gain_factor
+	line_change_production_efficiency_factor = hun.ger_economy_dm_line_change_production_efficiency_factor
+	
+	local_building_slots_factor = hun.ger_economy_dm_local_building_slots_factor
+	production_speed_arms_factory_factor = hun.ger_economy_dm_production_speed_arms_factory_factor
+}
+
 ger_economy_dm = {
 	enable = { always = yes }
 	icon = GFX_idea_GER_economy_of_conquest

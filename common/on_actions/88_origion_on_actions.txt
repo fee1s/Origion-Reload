@@ -5,8 +5,8 @@ on_actions = {
 				limit = {
 					OR = {
 						off_channel_coastline = yes
-						can_no_asia_coastlines = yes
-						eng_no_asia_coastlines = yes
+						AND = { can_no_asia_coastlines = yes has_global_flag = NO_ASIA_FLAG }
+						AND = { eng_no_asia_coastlines = yes has_global_flag = NO_ASIA_FLAG }
 					}
 				} 
 				teleport_armies = {
@@ -681,6 +681,7 @@ on_actions = {
 						state = 731
 						state = 805
 						state = 849
+						italian_coastline_above_naples = yes ## ИТОГИ КОМПЕТА 24.10.26
 					}
 				}
 				add_dynamic_modifier = {

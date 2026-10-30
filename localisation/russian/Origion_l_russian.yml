@@ -441,6 +441,10 @@ GER_inspection_in_tanks_tt:0 "§Y$mio_cat_eq_all_tanks$§!:\n $STAT_COMMON_RELIA
 GER_u_boat_efforts_tt:0 "§Y$submarine$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
 GER_inspection_in_infantry_tt:0 "§Y$infantry_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_air_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$anti_tank_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$artillery_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n§Y$support_equipment$§!:\n $production_cost_tt$ §G-5.00%§! \n\n"
 
+ger_axis_grossraumwirtschaft:0 "Großraumwirtschaft"
+
+GER_integrate_war_economy_tt: "Общий модификатор §Y$ger_axis_grossraumwirtschaft$§!: \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: [?hun.ger_economy_dm_production_factory_max_efficiency_factor|%=Y0+] \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?hun.ger_economy_dm_industrial_capacity_factory|%=Y0+] \n$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: [?hun.ger_economy_dm_line_change_production_efficiency_factor|%=Y0+] \n$MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR$: [?hun.ger_economy_dm_local_building_slots_factor|%=Y0+] \n$modifier_production_speed_arms_factory_factor$: [?hun.ger_economy_dm_production_speed_arms_factory_factor|%=Y0+]\n\nЭтот национальный дух может быть §Yусилен§! по мере выполнения фокусов §Y$GER$§!, последующих фокусу §Y$GER_we_need_speer$§!."
+
 ENG_stoyak:0 "Британский стоицизм"
 ENG_chiefs_of_staff:0 "Комитет начальников штабов"
 ENG_stoyak_intro:0 "Идея §Y$ENG_stoyak$§! будет изменена на"
@@ -1392,7 +1396,7 @@ FIN_stagnation_effect_tt: "§YКаждый месяц советская арм�
 FIN_finnish_army_tt: "После того как §YСССР§! выполнит фокус §Y$SOV_the_sacred_war$§! мы станем терять по §R5% атаки и защиты§! ежемесячно, пока эти модификаторы не пропадут полностью\n\n"
 FIN_hell_weather: "Невыносимая погода"
 FIN_hell_weather_tt: "\nЛюбые дивизии в этом регионе §Rбудут безвозвратно утеряны§!"
-FIN_cooperation_with_germany_tt: "§Y150§! ед. Финск. §YУлучшенный корпус штурмовика§! будет добавлено в государственный запас."
+FIN_cooperation_with_germany_tt: "§Y150§! ед. Финск. §Y$small_plane_cas_airframe_2$§! будет добавлено в государственный запас."
 FIN_cannot_war_tt: "§Y[FIN.GetName]§! может воевать только с §YСоветским Союзом§!" 
 FIN_jatkosota: "Война-продолжение"
 AST_modify_army_dm_tt: "Будет изменена идея §Y$AST_army_dm$§! на:"
