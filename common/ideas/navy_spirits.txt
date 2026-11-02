@@ -18,8 +18,7 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
-				navy_screen_defence_factor = 0.05
-				screening_efficiency = 0.05
+				screening_efficiency = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -33,8 +32,8 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
-				naval_coordination = 0.08
-				naval_retreat_speed = 0.10
+				naval_coordination = 0.1
+				# naval_retreat_speed = 0.10
 			}
 			ai_will_do = {
 				factor = 1
@@ -93,7 +92,7 @@ ideas = {
 			ledger = navy
 			available = { has_naval_academy = yes }
 			modifier = {
-				critical_receive_chance = -0.20
+				critical_receive_chance = -0.25
 			}
 			ai_will_do = {
 				factor = 1
@@ -108,7 +107,7 @@ ideas = {
 			available = { has_naval_academy = yes }
 			modifier = {
 				navy_org = 10
-				naval_detection = 0.10
+				# naval_detection = 0.10
 			}
 			ai_will_do = {
 				factor = 1
@@ -270,8 +269,8 @@ ideas = {
 		close_combat_navy_spirit = {
 			ledger = navy
 			modifier ={
-				navy_screen_attack_factor = 0.05
-				naval_torpedo_screen_penetration_factor = 0.05
+				# navy_screen_attack_factor = 0.05
+				naval_torpedo_screen_penetration_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -350,7 +349,7 @@ ideas = {
 			modifier = {
 				navy_capital_ship_attack_factor = 0.1
 				naval_heavy_gun_hit_chance_factor = 0.05
-				naval_retreat_speed = -0.3
+				# naval_retreat_speed = -0.3
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -377,7 +376,7 @@ ideas = {
 			ledger = navy
 			modifier = {
 				naval_critical_score_chance_factor = 0.25
-				naval_retreat_chance = -0.15
+				# naval_retreat_chance = -0.15
 			}
 			ai_will_do = {
 				factor = 1

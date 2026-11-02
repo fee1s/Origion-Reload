@@ -425,10 +425,10 @@ GER_operations = {
 		available = {
 			has_completed_focus = GER_operation_sonnenblume
 			date > 1940.6.1
-			date < 1941.1.1
+			date < 1941.6.1
 		}
 		visible = {
-		    date < 1941.1.1
+		    date < 1941.6.1
 		}
 		cost = 0
 		fire_only_once = yes
@@ -464,6 +464,12 @@ GER_operations = {
 				add_timed_idea = { idea = GER_fall_barbarossa_idea days = 160 }
 			}
 			hidden_effect = {
+				GER = {
+					if = {
+						limit = { GER = { has_idea = Ger_fall_sonnenblume } }
+						GER = { remove_ideas = Ger_fall_sonnenblume }
+					}
+				}
 				ITA = {
 					add_to_war = {
 						targeted_alliance = GER
@@ -599,7 +605,7 @@ GER_operations = {
 						days = 75
 					}
 				}
-				country_event = { id = origion.6 days = 3 }
+				country_event = { id = origion.6 }
 			}
 			add_timed_idea = {
 				idea = GER_Blau
@@ -637,7 +643,7 @@ GER_operations = {
 						days = 75
 					}
 				}
-				country_event = { id = origion.25 days = 3 }
+				country_event = { id = origion.25 }
 			}
 			add_timed_idea = {
 				idea = GER_citadel
@@ -716,7 +722,7 @@ GER_operations = {
 		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = {
-				country_event = { id = origion.26 days = 3 }
+				country_event = { id = origion.26 }
 			}
 			add_timed_idea = {
 				idea = GER_Die_wacht_am_rhein

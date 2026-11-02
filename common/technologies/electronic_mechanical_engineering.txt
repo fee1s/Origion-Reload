@@ -907,284 +907,202 @@ technologies = {
 	}
 
 	
-	experimental_rockets = {
+	# experimental_rockets = {
 
-		enable_building = {
-			building = rocket_site
-			level = 2
-		}
+	# 	enable_building = {
+	# 		building = rocket_site
+	# 		level = 2
+	# 	}
 		
-		path = {
-			leads_to_tech = rocket_engines 
-			research_cost_coeff = 1
-		}
+	# 	path = {
+	# 		leads_to_tech = rocket_engines 
+	# 		research_cost_coeff = 1
+	# 	}
 		
-		research_cost = 1.5
-		start_year = 1943
+	# 	research_cost = 1.5
+	# 	start_year = 1943
 		
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 0 }
-		}
+	# 	folder = {
+	# 		name = electronics_folder
+	# 		position = { x = 0 y = 0 }
+	# 	}
 	
-		ai_will_do = {
-			factor = 1
-		}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
 		
-		categories = {
-			rocketry
-		}
-	}
+	# 	categories = {
+	# 		rocketry
+	# 	}
+	# }
 	
-	rocket_engines = {
+	# rocket_engines = {
 
-		show_equipment_icon = yes
+	# 	show_equipment_icon = yes
 
-		# can build v1s/rocket planes
-		enable_equipments = {
-			limit = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-			rocket_interceptor_equipment_1
-		}
-		enable_equipments = {
-			guided_missile_equipment_1
-		}
+	# 	# can build v1s/rocket planes
+	# 	enable_equipments = {
+	# 		limit = {
+	# 			NOT = { has_dlc = "By Blood Alone" }
+	# 		}
+	# 		rocket_interceptor_equipment_1
+	# 	}
+	# 	enable_equipments = {
+	# 		guided_missile_equipment_1
+	# 	}
 
-		rocket_artillery = {
-			soft_attack = 0.05
-		}
-		rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		motorized_rocket_brigade = {
-			soft_attack = 0.05
-		}
+	# 	rocket_artillery = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	rocket_artillery_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	mot_rocket_artillery_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	motorized_rocket_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
 		
-		path = {
-			leads_to_tech = improved_rocket_engines 
-			research_cost_coeff = 1
-		}
+	# 	path = {
+	# 		leads_to_tech = improved_rocket_engines 
+	# 		research_cost_coeff = 1
+	# 	}
 		
-		research_cost = 2
-		start_year = 1944
+	# 	research_cost = 2
+	# 	start_year = 1944
 		
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 2 }
-		}
+	# 	folder = {
+	# 		name = electronics_folder
+	# 		position = { x = 0 y = 2 }
+	# 	}
 		
 		
-		ai_will_do = {
-			factor = 1
-		}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
 		
-		categories = {
-			rocketry
-		}		
-	}
+	# 	categories = {
+	# 		rocketry
+	# 	}		
+	# }
 	
-	improved_rocket_engines = {
+	# improved_rocket_engines = {
 
-		show_equipment_icon = yes
+	# 	show_equipment_icon = yes
 		
-		# can build v2s
+	# 	# can build v2s
 		
-		enable_equipments = {
-			limit = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-			rocket_interceptor_equipment_2
-		}
-		enable_equipments = {
-			guided_missile_equipment_2
-		}
+	# 	enable_equipments = {
+	# 		limit = {
+	# 			NOT = { has_dlc = "By Blood Alone" }
+	# 		}
+	# 		rocket_interceptor_equipment_2
+	# 	}
+	# 	enable_equipments = {
+	# 		guided_missile_equipment_2
+	# 	}
 		
-		rocket_artillery = {
-			soft_attack = 0.05
-		}
-		rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		motorized_rocket_brigade = {
-			soft_attack = 0.05
-		}
+	# 	rocket_artillery = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	rocket_artillery_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	mot_rocket_artillery_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	motorized_rocket_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
 		
-		path = {
-			leads_to_tech = advanced_rocket_engines 
-			research_cost_coeff = 1
-		}
+	# 	path = {
+	# 		leads_to_tech = advanced_rocket_engines 
+	# 		research_cost_coeff = 1
+	# 	}
 		
-		research_cost = 1.5
-		start_year = 1945
+	# 	research_cost = 1.5
+	# 	start_year = 1945
 		
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 4 }
-		}
+	# 	folder = {
+	# 		name = electronics_folder
+	# 		position = { x = 0 y = 4 }
+	# 	}
 		
-		ai_will_do = {
-			factor = 1
-		}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
 		
-		categories = {
-			rocketry
-		}
-	}
+	# 	categories = {
+	# 		rocketry
+	# 	}
+	# }
 	
-	advanced_rocket_engines = {
+	# advanced_rocket_engines = {
 
-		show_equipment_icon = yes
+	# 	show_equipment_icon = yes
 
-		# can build ICBMs?
+	# 	# can build ICBMs?
 		
-		enable_equipments = {
-			limit = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-			rocket_interceptor_equipment_3
-		}
-		enable_equipments = {
-			guided_missile_equipment_3
-		}
+	# 	enable_equipments = {
+	# 		limit = {
+	# 			NOT = { has_dlc = "By Blood Alone" }
+	# 		}
+	# 		rocket_interceptor_equipment_3
+	# 	}
+	# 	enable_equipments = {
+	# 		guided_missile_equipment_3
+	# 	}
 		
-		rocket_artillery = {
-			soft_attack = 0.05
-		}
-		rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		motorized_rocket_brigade = {
-			soft_attack = 0.05
-		}
+	# 	rocket_artillery = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	rocket_artillery_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	mot_rocket_artillery_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
+	# 	motorized_rocket_brigade = {
+	# 		soft_attack = 0.05
+	# 	}
 		
-		research_cost = 1.5
-		start_year = 1946
+	# 	research_cost = 1.5
+	# 	start_year = 1946
 		
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 6 }
-		}
+	# 	folder = {
+	# 		name = electronics_folder
+	# 		position = { x = 0 y = 6 }
+	# 	}
 		
-		ai_will_do = {
-			factor = 1
-		}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
 		
-		categories = {
-			rocketry
-		}
-	}
-	
-	atomic_research = {
-
-		research_speed_factor = 0.04
-		
-		path = {
-			leads_to_tech = nuclear_reactor 
-			research_cost_coeff = 1
-		}
-		
-		start_year = 1940
-		research_cost = 5
-		
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 0 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.2
-				date > "1941.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1942.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1943.1.1"
-			}
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-		}
-		
-		categories = {
-			nuclear
-		}
-		
-		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					if = {
-						limit = {
-							check_variable = { global.atomic_research_race < 3 }
-						}
-						add_to_variable = { global.atomic_research_race = 1 }
-						if = {
-							limit = {
-								original_tag = ITA
-								NOT = { has_country_flag = ITA_pioneer_in_atomic_research_flag }
-							}
-							set_country_flag = ITA_pioneer_in_atomic_research_flag
-						}
-						else_if = {
-							limit = {
-								check_variable = { global.atomic_research_race = 3 }
-								NOT = {
-									any_country = {
-										original_tag = ITA
-										has_country_flag = ITA_pioneer_in_atomic_research_flag
-									}
-								}
-							}
-							random_country = {
-								limit = {
-									original_tag = ITA
-								}
-								set_country_flag = ITA_late_to_the_atomic_party_flag
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+	# 	categories = {
+	# 		rocketry
+	# 	}
+	# }
 	
 	nuclear_reactor = {
 
 		# can build reactors
 		
 		start_year = 1943
-		research_cost = 5
+		research_cost = 1.5
 		
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 2 }
+			position = { x = 0 y = 0 }
 		}
 
 		path = {
 			leads_to_tech = nukes 
 			research_cost_coeff = 1
+		}
+
+		allow = {
+			date > 1941.1.1 
 		}
 		
 		ai_will_do = {
@@ -1208,11 +1126,11 @@ technologies = {
 	nukes = {
 	
 		start_year = 1945
-		research_cost = 5
+		research_cost = 1.5
 		
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 6 }
+			position = { x = 0 y = 4 }
 		}
 		
 		ai_will_do = {

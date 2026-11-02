@@ -645,3 +645,13 @@ NDefines.NCountry.RESISTANCE_STRENGTH_FROM_UNIT = 0.0
 NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 0
 
 NDefines.NTechnology.BASE_TECH_COST = 100
+
+-- Рейды (После возвращения ядерки)
+
+NDefines.NRaids.RAID_MEDIUM_RISK_SETTING_DISASTER_MODIFIER = 0
+NDefines.NRaids.RAID_HIGH_RISK_SETTING_DISASTER_MODIFIER = 0
+
+NDefines.NRaids.RAID_MEDIUM_RISK_SETTING_SUCCESS_MODIFIER = 0
+NDefines.NRaids.RAID_HIGH_RISK_SETTING_SUCCESS_MODIFIER = 0
+
+NDefines.NRaids.NUCLEAR_BOMB_MIN_DAMAGE_PERCENT = 0.5 -- Минимальный урон по юнитам от атомной бомбы, увеличено с ванильного 0.1

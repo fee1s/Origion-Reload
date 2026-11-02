@@ -1,0 +1,115 @@
+types = {
+	nuclear_strike = {
+		days_to_prepare = 1
+
+		category = nuclear_raids
+
+		# Base success is 0.5 and RAIDS_MIN_SUCCESS_FOR_LAUNCH is 0.65, so without this the AI prepares strikes it can never launch.
+		ai_min_success_chance = 0.45
+
+		ai_will_do = {
+			base = 1
+		}
+
+		allowed = {
+			
+		}
+
+		# Raid Type is visible
+		visible = {
+			has_tech = nukes
+		}
+		# Specific Target is visible
+		show_target = {
+			NOT = {
+				is_in_faction_with = FROM
+			}
+		}
+
+		# Can prepare
+		available = {
+			#has_war_with = FROM
+		}
+		launchable = {
+			has_war_with = FROM
+		}
+
+		launch_sound = raid_launch_nuclear_strike
+
+		target_type = {
+			province = any
+		}
+
+		target_icon = GFX_other_target_icon
+
+		unit_requirements = {
+			equipment = {
+				type = { strategic_bomber }
+				amount = { min = 10 }
+			}
+		}
+
+		essential_equipment = {
+			nukes = 1
+		}
+
+		starting_point = {
+		    types = { air_base }
+		}
+
+		arrow = {
+			type = air
+		}
+
+		success_factors = {
+			success = {
+				base = 0.5
+
+				air_superiority = {
+					reference = 1.0
+					start_weight = -0.5
+					weight = 0.5
+				}
+			}
+		}
+
+		success_levels = {
+			success = {
+			    custom_sound = raid_result_critical_success_nuclear
+				victim_effects = { 
+					var:target_state = {
+						THIS = {
+							set_variable = { t_arms_factory_level = arms_factory_level }
+							if = {
+								limit = {
+									check_variable = { t_arms_factory_level > 0 }
+								}
+
+								multiply_variable = { t_arms_factory_level = 0.5 } 
+								round_variable = t_arms_factory_level #highest int is chosen 
+								if = {
+									limit = {
+										check_variable = { t_arms_factory_level > 0 }
+									}
+
+									remove_building = {
+										type =  arms_factory
+										level = t_arms_factory_level
+									}
+								}
+							}
+						}
+						custom_effect_tooltip = raid_nuclear_strike_tt
+					}
+					var:actor_country = {
+						launch_nuke = {
+							province = var:ROOT.target_province #optional use either province or state
+							use_nuke = no
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

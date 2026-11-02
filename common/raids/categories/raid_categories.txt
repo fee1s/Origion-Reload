@@ -15,4 +15,13 @@ categories = {
 		    always = no
 		}
 	}
+
+	nuclear_raids = {
+	    intel_source = air
+	    free_targeting = yes
+	    faction_influence_score_on_success = -100
+	    available = {
+			has_tech = nukes
+	    }
+	}
 }
