@@ -6288,8 +6288,6 @@ leader_traits = {
 		random = no
 		sprite = 14
 
-		specialization_nuclear_speed_factor = 0.1
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -10497,9 +10495,6 @@ leader_traits = {
 
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
-
-		specialization_air_speed_factor = 0.1
-		specialization_land_speed_factor = 0.1
 	}
 
 	GER_head_of_experimental_weapons = { #Dornberger (MHC) --> WARNING - Changes here require updating the tooltip GER_wunderwaffe_dornberger_trait_tt
@@ -10509,10 +10504,6 @@ leader_traits = {
 		command_cap_increase = @tier2_cp_cap_increase
 		command_power = @tier2_cp_cost
 
-		specialization_land_speed_factor = 0.1
-		specialization_air_speed_factor = 0.1
-		specialization_naval_speed_factor = 0.1
-		specialization_nuclear_speed_factor = 0.1
 		special_project_facility_supply_consumption_factor = -0.1
 	}
 
@@ -11857,7 +11848,7 @@ leader_traits = {
 	army_commando_1 = { # +4 paratrooper/marine/mountain efficiency
 		sprite = 5
 		special_forces_attack_factor = 0.05
-		special_forces_cap_flat = 3
+		# special_forces_cap_flat = 3
 		#experience_gain_army = @experience_gain_low
 
 		command_cap_increase = @tier1_cp_cap_increase
@@ -11875,7 +11866,7 @@ leader_traits = {
 	army_commando_2 = { # +8 paratrooper/marine/mountain efficiency
 		sprite = 5
 		special_forces_attack_factor = 0.10
-		special_forces_cap_flat = 6
+		# special_forces_cap_flat = 6
 		#experience_gain_army = @experience_gain_medium
 
 		command_cap_increase = @tier2_cp_cap_increase
@@ -11893,7 +11884,7 @@ leader_traits = {
 	army_commando_3 = { # +12 paratrooper/marine/mountain efficiency
 		sprite = 5
 		special_forces_attack_factor = 0.15
-		special_forces_cap_flat = 10
+		# special_forces_cap_flat = 10
 		#experience_gain_army = @experience_gain_high
 
 		command_cap_increase = @tier3_cp_cap_increase

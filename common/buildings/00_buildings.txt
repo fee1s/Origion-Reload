@@ -375,9 +375,9 @@ buildings = {
 		country_modifiers = {
 			modifiers = {
 				nuclear_production_factor = 3
-				sp_nuclear_bomb_speed_factor = 0.05
-				sp_thermo_nuclear_bomb_speed_factor = 0.05
-				thermonuclear_production_factor = 2
+				# sp_nuclear_bomb_speed_factor = 0.05
+				# sp_thermo_nuclear_bomb_speed_factor = 0.05
+				# thermonuclear_production_factor = 2
 			}
 		}
 
@@ -402,9 +402,9 @@ buildings = {
 		country_modifiers = {
 			modifiers = {
 				nuclear_production_factor = 2
-				sp_nuclear_bomb_speed_factor = 0.03
-				sp_thermo_nuclear_bomb_speed_factor = 0.03
-				thermonuclear_production_factor = 1
+				# sp_nuclear_bomb_speed_factor = 0.03
+				# sp_thermo_nuclear_bomb_speed_factor = 0.03
+				# thermonuclear_production_factor = 1
 			}
 		}
 
@@ -444,85 +444,6 @@ buildings = {
 			state_max = 1
 			shares_slots = yes
 			group_by = reactors
-		}
-	}
-
-	nuclear_facility = {
-		show_on_map = 1
-		base_cost = 15000
-		per_controlled_building_extra_cost = 5000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 20
-		value = 1
-		spawn_point = special_project_facility_spawn
-		specialization = { specialization_nuclear }
-		need_supply = yes
-		need_detection = yes
-		tags = { facility }
-		disabled_in_dmz = yes
-		only_display_if_exists = yes
-		special_icon = GFX_specialization_nuclear
-		#state_damage_modifier = { conscription_exemptions_granted }
-		#construction_speed_factor = {
-		#	trigger = {
-		#		OR = {
-		#			state = 56
-		#			state = 59
-		#			state = 64
-		#		}
-		#	}
-		#	factor = 10
-		#}
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
-	}
-
-	air_facility = {
-		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 17
-		value = 1
-		spawn_point = special_project_facility_spawn 
-		specialization = { specialization_air}
-		tags = { facility }
-		need_supply = yes
-		need_detection = yes
-		detecting_intel_type = airforce
-		disabled_in_dmz = yes
-		only_display_if_exists = yes
-		special_icon = GFX_specialization_air
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
-	}
-
-	land_facility = {
-		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 19
-		value = 1
-		spawn_point = special_project_facility_spawn 
-		specialization = { specialization_land }
-		tags = { facility }
-		disabled_in_dmz = yes
-		need_supply = yes
-		need_detection = yes
-		detecting_intel_type = army
-		only_display_if_exists = yes
-		special_icon = GFX_specialization_land
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
 		}
 	}
 
