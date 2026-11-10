@@ -1626,7 +1626,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_expanding_the_luftwaffe
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -1678,41 +1678,41 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_solve_the_logistical_bottlenecks
-		icon = GFX_goal_generic_air_production
-		prerequisite = { focus = GER_reorganize_the_luftwaffe }
+	# focus = {
+	# 	id = GER_solve_the_logistical_bottlenecks
+	# 	icon = GFX_goal_generic_air_production
+	# 	prerequisite = { focus = GER_reorganize_the_luftwaffe }
 
-		x = 0
-		y = 1
-		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 5
-		available = {
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = GER_reorganize_the_luftwaffe
+	# 	cost = 5
+	# 	available = {
 			
-		}
+	# 	}
 
-		search_filters = {}
+	# 	search_filters = {}
 
-		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
+	# 	completion_reward = {
+	# 		every_core_state = {
+	# 			limit = {
+	# 				is_fully_controlled_by = ROOT
+	# 				free_building_slots = {
+	# 					building = arms_factory
+	# 					size > 0
+	# 					include_locked = yes
+	# 				}
+	# 			}
+	# 			random_select_amount = 2
+	# 			add_extra_state_shared_building_slots = 2
+	# 			add_building_construction = {
+	# 				type = arms_factory
+	# 				level = 2
+	# 				instant_build = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
 	
 	focus = {
 		id = GER_develop_the_knickebein
@@ -1736,6 +1736,24 @@ focus_tree = {
 				technology = centimetric_radar
 				technology = improved_centimetric_radar
 				technology = advanced_centimetric_radar					
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -1790,10 +1808,10 @@ focus_tree = {
 	focus = {
 		id = GER_aerodynamic_research_institute
 		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = GER_solve_the_logistical_bottlenecks focus = GER_defense_of_the_reich }
+		prerequisite = { focus = GER_reorganize_the_luftwaffe }
 
-		x = 0
-		y = 3
+		x = -1
+		y = 2
 		relative_position_id = GER_form_the_jagdwaffe
 		cost = 10
 		available = {
@@ -1812,7 +1830,26 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = GER_uranverein
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = GER_aerodynamic_research_institute focus = GER_defense_of_the_reich }
 
+		x = 0
+		y = 3
+		relative_position_id = GER_form_the_jagdwaffe
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				technology = nukes					
+			}
+		}
+	}
 
 	#KRIEGSMARINE
 	focus = {
