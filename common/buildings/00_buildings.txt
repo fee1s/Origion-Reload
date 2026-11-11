@@ -128,30 +128,6 @@ buildings = {
 			province_max = 1
 		}
 	}
-	
-	naval_facility = {
-		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 18
-		value = 1
-		spawn_point = naval_base_spawn 
-		specialization = { specialization_naval }
-		tags = { facility }
-		disabled_in_dmz = yes
-		need_supply = yes
-		need_detection = yes
-		detecting_intel_type = navy
-		only_display_if_exists = yes
-		special_icon = GFX_specialization_naval
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
-		only_costal = yes
-	}
 
 	naval_base = {
 		show_on_map = 1
@@ -200,31 +176,6 @@ buildings = {
 		level_cap = {
 			province_max = 10
 		}
-	}
-
-	stronghold_network = {
-		dlc_allowed = { has_dlc = Gotterdammerung }
-		show_on_map = 1
-		has_destroyed_mesh = yes
-		base_cost = 20000
-		disabled_in_dmz = yes
-		icon_frame = 23
-		value = 1
-		infrastructure_construction_effect = yes
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-		}
-		hide_if_missing_tech = yes
-		show_modifier = yes
-		state_modifiers = {
-			local_supplies_for_controller = 0.1
-			state_bunker_max_level_terrain_limit = 2
-			state_coastal_bunker_max_level_terrain_limit = 2
-			enemy_attrition = 0.1
-			state_production_speed_bunker_factor = 0.1
-			state_production_speed_coastal_bunker_factor = 0.1
-		}		
 	}
 
 	dockyard = {
@@ -347,6 +298,7 @@ buildings = {
 
 	rocket_site = {
 		show_on_map = 1
+		hide_if_missing_tech = yes
 		base_cost = 6400
 		icon_frame = 12
 		rocket_production = 0
@@ -370,7 +322,10 @@ buildings = {
 		icon_frame = 13
 		nuclear_reactor = yes
 		value = 10
+		
 		infrastructure_construction_effect = yes
+
+		damage_factor = 0.35
 
 		country_modifiers = {
 			modifiers = {
@@ -384,164 +339,6 @@ buildings = {
 		level_cap = {
 			state_max = 1
 			shares_slots = yes
-			group_by = reactors
-		}
-	}
-
-	nuclear_reactor_heavy_water = {
-	    is_buildable = no
-		hide_if_missing_tech = yes
-		spawn_point = nuclear_reactor_spawn
-		show_on_map = 1
-		base_cost = 25000
-		icon_frame = 13
-		nuclear_reactor = yes
-		value = 10
-		infrastructure_construction_effect = yes
-
-		country_modifiers = {
-			modifiers = {
-				nuclear_production_factor = 2
-				# sp_nuclear_bomb_speed_factor = 0.03
-				# sp_thermo_nuclear_bomb_speed_factor = 0.03
-				# thermonuclear_production_factor = 1
-			}
-		}
-
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			group_by = reactors
-		}
-	}
-
-	commercial_nuclear_reactor = {
-		dlc_allowed = { has_dlc = Gotterdammerung }
-		hide_if_missing_tech = yes
-		spawn_point = nuclear_reactor_spawn
-		show_on_map = 1
-		base_cost = 35000
-		icon_frame = 27
-		#nuclear_reactor = yes
-		value = 10
-		infrastructure_construction_effect = yes
-		
-		country_modifiers = {
-			modifiers = {
-				nuclear_production_factor = 3
-				thermonuclear_production_factor = 2
-				#consumer_goods_factor = -0.05
-			}
-		}
-
-		state_modifiers = {
-			state_production_speed_buildings_factor = 0.15
-			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1			
-		}
-
-		level_cap = {
-			state_max = 1
-			shares_slots = yes
-			group_by = reactors
-		}
-	}
-
-	dam = {
-		show_on_map = 1
-		base_cost = 20000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 26
-		value = 5
-		tags = { dam_building }
-		spawn_point = dam_spawn
-		damage_factor = -1
-		is_buildable = no
-		need_detection = yes
-		detecting_intel_type = civilian 
-		province_damage_modifiers = { flooded }
-		#state_damage_modifier = { kurdish_agitation }
-		only_display_if_exists = yes
-		special_icon = GFX_dam_icon_small
-		level_cap = {
-			province_max = 1
-		}
-		show_modifier = yes
-		state_modifiers = {
-			state_production_speed_buildings_factor = 0.15
-			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1
-		}
-	}
-	dam_mountain = {
-		show_on_map = 1
-		base_cost = 20000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 26
-		value = 5
-		tags = { dam_building }
-		spawn_point = dam_spawn
-		damage_factor = -1
-		is_buildable = no
-		need_detection = yes
-		detecting_intel_type = civilian 
-		province_damage_modifiers = { flooded }
-		only_display_if_exists = yes
-		special_icon = GFX_dam_icon_small
-		level_cap = {
-			province_max = 1
-		}
-		show_modifier = yes
-		state_modifiers = {
-			state_production_speed_buildings_factor = 0.15
-			local_building_slots_factor = 0.15
-			state_resources_factor = 0.1
-		}
-	}
-
-	canal_kiel = {
-		show_on_map = 1
-		base_cost = 20000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 25
-		value = 5
-		tags = { locks_building }
-		spawn_point = locks_spawn
-		damage_factor = -1
-		is_buildable = no
-		always_shown = yes
-		state_damage_modifier = { kiel_canal_damaged_modifier }
-		only_display_if_exists = yes
-		special_icon = GFX_canal_icon_small
-		level_cap = {
-			province_max = 1
-		}
-		show_modifier = yes
-		state_modifiers = {
-			
-		}
-	}
-
-	canal_panama = {
-		show_on_map = 1
-		base_cost = 20000
-		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 1
-		value = 5
-		tags = { locks_building }
-		spawn_point = locks_spawn
-		damage_factor = -1
-		is_buildable = no
-		always_shown = yes
-		state_damage_modifier = { panama_canal_damaged_modifier }
-		only_display_if_exists = yes
-		special_icon = GFX_canal_icon_small
-		level_cap = {
-			province_max = 1
-		}
-		show_modifier = yes
-		state_modifiers = {
-			
 		}
 	}
 }

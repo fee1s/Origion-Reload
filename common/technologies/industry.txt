@@ -794,6 +794,28 @@ technologies = {
 			level = 5
 		}
 	}
+
+	rocket_site_hider = {
+	
+		allow = {
+			always = no
+		}
+		
+		ai_will_do = { factor = -15 }
+		
+		research_cost = 0
+		start_year = 1936
+		
+		enable_building = {
+			building = rocket_site
+			level = 2
+		}
+
+		enable_building = {
+			building = mega_gun_emplacement
+			level = 0
+		}		
+	}
 	
 	fuel_silos = {
 

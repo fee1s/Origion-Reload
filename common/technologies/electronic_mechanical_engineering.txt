@@ -1136,9 +1136,13 @@ technologies = {
 		ai_will_do = {
 			factor = 10
 		}
-		
-		nuclear_production = 1
-		
+
+		nuclear_production = 0.5
+
+		on_research_complete = {		
+			hidden_effect = { add_nuclear_bombs = 1 }
+		}
+
 		categories = {
 			nuclear
 		}

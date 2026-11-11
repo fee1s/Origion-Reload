@@ -120,10 +120,10 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "rocket_site_speed"   
+			name = "nuclear_reactor_speed"   
 			position = { x = 534 y = 62 } 
 			font = "cg_16b"              
-			text = "[?modifier@production_speed_rocket_site_factor|%0=+]"	   
+			text = "[?modifier@production_speed_nuclear_reactor_factor|%0=+]"	   
 			maxWidth = 50  
 			maxHeight = 20
 			format = right
@@ -165,7 +165,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bunker_speed"   
-			position = { x = 396 y = 242 } 
+			position = { x = 534 y = 200 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_bunker_factor|%0=+]"	   
 			maxWidth = 50  
@@ -176,7 +176,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "coastal_bunker_speed"   
-			position = { x = 442 y = 242 } 
+			position = { x = 396 y = 242 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_coastal_bunker_factor|%0=+]"	   
 			maxWidth = 50  

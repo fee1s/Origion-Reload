@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -30,7 +30,7 @@ focus_tree = {
 			factor = 1
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICALz
+			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
 			add_stability = 0.15
@@ -180,7 +180,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = maud_focus
-				bonus = 1
+				bonus = 0.5
 				uses = 1
 				technology = nukes
 			}
@@ -964,7 +964,7 @@ focus_tree = {
 				name = uk_battleship_focus
 				bonus = 1
 				uses = 1
-				technology = advanced_ship_hull_heavy
+				technology = advanced_heavy_battery
 			}
 		}
 	}
@@ -986,10 +986,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_vanguard
-				bonus = 1
-				uses = 2
+				bonus = 1.25
+				uses = 1
 				technology = advanced_ship_hull_heavy
-				technology = advanced_heavy_battery
 			}
 
 			# custom_effect_tooltip = ENG_vanguard_tt
