@@ -58,7 +58,7 @@ GetCurrentIsEighty: "£convoy_texticon §Y80§!"
 GetCurrentIsHundred: "£convoy_texticon §Y100§!"
 
 progress_bar_lend_lease_tt:0 "Used [GetCurrentCapacity] §Ythroughput§! of [GetMaxCapacity]"
-equipment_log_tt:0 "§LInformation about shipped equipment§!\nTotal sent §Yfighters§!: §Y[?ENG.fighters_sent]§!\nTotal sent §Ycas§!: §Y[?ENG.cas_sent]§!\nTotal sent §Yinfantry§!: §Y[?ENG.infantry_sent]§!"
+equipment_log_tt:0 "§LInformation about shipped equipment:§![GetFightersSent][GetCasSent][GetInfantrySent][GetSupportSent]"
 
 equipment_log_name_tt:0 "§LLend-Lease\nSummary§!"
 open_air_ll_category:0 "§2Open Aircraft Category§!"
@@ -130,6 +130,36 @@ cas_ll_to_sov_large_enabled:0 "§YAllies§! are sending large shipments of §YCA
 
 asian_war_simulation_cas_tt:0 "\nWe will send §Y85§! §YClose Air Support§! planes for the needs of the §YPacific§! Front.\n\n"
 
+
+#Решения на сап
+open_support_equipment_ll_category:0 "§1Options for supplying $support_equipment$§!"
+close_support_equipment_ll_category:0 "§1Hide options for supplying $support_equipment$§!"
+
+support_ll_to_sov_small:0 "§2Start small deliveries of $support_equipment$§!"
+stop_support_ll_to_sov_small:0 "§2Stop small supplies of $support_equipment$§!"
+support_ll_to_sov_small_ll:0 "§3Sending $support_equipment$ in progress..§!"
+support_ll_to_sov_small_enabled:0 "§YAllies§! carry out small deliveries of §Y$support_equipment$§!"
+
+support_ll_to_sov_medium:0 "§2Start medium supplies of $support_equipment$§!"
+stop_support_ll_to_sov_medium:0 "§2Stop the average supply of $support_equipment$§!"
+support_ll_to_sov_medium_ll:0 "§3Sending $support_equipment$ in progress..§!"
+support_ll_to_sov_medium_enabled:0 "§YAllies§! are carrying out medium-scale deliveries of §Y$support_equipment$§!"
+
+support_ll_to_sov_large:0 "§2Begin large-scale shipments of $support_equipment$§!"
+stop_support_ll_to_sov_large:0 "§2Halt large-scale shipments of $support_equipment$§!"
+support_ll_to_sov_large_ll:0 "§3Dispatching $support_equipment$...§!"
+support_ll_to_sov_large_enabled:0 "§YAllies§! are making large deliveries of §Y$support_equipment$§!"
+
+
+#Советский ленд-лиз
+equipment_log_tt_cas:0 "\n The number of §Y$small_plane_cas_airframe$§! sent!: §Y[?ENG.cas_sent]§!"
+equipment_log_tt_fighters:0 "\n The number of §Y$small_plane_airframe$§! sent!: §Y[?ENG.fighters_sent]§!"
+equipment_log_tt_infantry:0 "\n Number of §Y$infantry_equipment$§! sent!: §Y[?ENG.infantry_sent]§!"
+equipment_log_tt_support:0 "\n Number of §Y$support_equipment$§! sent!: §Y[?ENG.support_sent]§!"
+
+asian_war_simulation_tt_for_support:0 "\nWe will donate §Y2538§! units of §Y$support_equipment$§! to support the §YPacific front§!.\n\n"
+
+first_sent_ll_complete:0 "The needs of the Pacific Front have been met."
 # Gui Pacific
 
 pacific_warfare_dm: "War in the Pacific"
