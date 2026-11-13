@@ -1276,6 +1276,7 @@ ORG_allies_lend_lease_to_sov = {
 			NOT = { 
 				has_country_flag = open_air_ll_category_flag
 				has_country_flag = open_all_infantry_ll_category_flag
+				has_country_flag = open_anti_air_equipment_ll_category_flag
 			} 
 		}
 		available = { 
@@ -1303,6 +1304,7 @@ ORG_allies_lend_lease_to_sov = {
 			NOT = {
 				has_country_flag = open_infantry_ll_category_flag 
 				has_country_flag = open_support_equipment_ll_category_flag
+				has_country_flag = open_anti_air_equipment_ll_category_flag
 			}
 		} 
 		
@@ -1315,6 +1317,7 @@ ORG_allies_lend_lease_to_sov = {
 		visible = { 
 			NOT = { has_country_flag = open_infantry_ll_category_flag } 
 			NOT = { has_country_flag = open_support_equipment_ll_category_flag }
+			NOT = { has_country_flag = open_anti_air_equipment_ll_category_flag }
 			has_country_flag = open_all_infantry_ll_category_flag
 		}
 		complete_effect = { set_country_flag = open_infantry_ll_category_flag }
@@ -1948,6 +1951,7 @@ ORG_allies_lend_lease_to_sov = {
 		visible = { 
 			NOT = { has_country_flag = open_support_equipment_ll_category_flag } 
 			NOT = { has_country_flag = open_infantry_ll_category_flag }
+			NOT = { has_country_flag = open_anti_air_equipment_ll_category_flag }
 			has_country_flag = open_all_infantry_ll_category_flag
 		}
 		complete_effect = { set_country_flag = open_support_equipment_ll_category_flag }
@@ -2564,7 +2568,645 @@ ORG_allies_lend_lease_to_sov = {
 			activate_mission = support_ll_to_sov_large_ll
 		}
 	}
-}
+
+
+#    ###     ##     ##  #########  ####           ###     ####  #########  
+#   ## ##    ###    ##     ###      ##           ## ##     ##   ##     ##  
+#  ##   ##   ####   ##     ###      ##          ##   ##    ##   ##     ##  
+# ##     ##  ## ##  ##     ###      ##         ##     ##   ##   #########  
+# #########  ##  ## ##     ###      ##         #########   ##   ##    ##   
+# ##     ##  ##   ####     ###      ##         ##     ##   ##   ##     ##  
+# ##     ##  ##     ##     ###     ####        ##     ##  ####  ##      ##
+
+
+	open_anti_air_equipment_ll_category = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {
+			has_country_flag = open_all_infantry_ll_category_flag
+			NOT = { has_country_flag = open_anti_air_equipment_ll_category_flag }
+			NOT = { has_country_flag = open_infantry_ll_category_flag }
+			NOT = { has_country_flag = open_support_equipment_ll_category_flag }
+		}
+		fire_only_once = no
+		priority = 20
+		complete_effect = {
+			set_country_flag = open_anti_air_equipment_ll_category_flag
+		}
+	}
+	close_anti_air_equipment_ll_category = {
+		icon = GFX_decision_ger_military_buildup
+		visible = {
+			has_country_flag = open_anti_air_equipment_ll_category_flag
+		}
+		fire_only_once = no
+		priority = 20
+		complete_effect = {
+			clr_country_flag = open_anti_air_equipment_ll_category_flag
+		}
+	}
+	
+	
+	anti_air_ll_to_sov_small = {
+		icon = GFX_decision_generic_prepare_civil_war
+		available = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 2879 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 4319 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 5759 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = no }
+		
+				has_equipment = { anti_air_equipment > 7199 } 
+			}
+
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 4909 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 6349 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 7789 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 9229 } 
+			}
+			
+			check_variable = { ENG.lend_lease_side_progress < 81 }
+		}
+		visible = { 
+			NOT = { has_country_flag = anti_air_ll_to_sov_small_enabled } 
+			has_country_flag = open_anti_air_equipment_ll_category_flag
+		}
+		fire_only_once = no
+		priority = 19
+		complete_effect = {
+			set_country_flag = anti_air_ll_to_sov_small_enabled
+			activate_mission = anti_air_ll_to_sov_small_ll
+			add_to_variable = { var = ENG.lend_lease_side_progress value = 20 }
+			hidden_effect = {
+				ENG = { add_to_array = { allies_lend_lease_senders = ROOT } }
+			}
+		}
+	}
+	stop_anti_air_ll_to_sov_small = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = { has_country_flag = anti_air_ll_to_sov_small_enabled } 
+		fire_only_once = no
+		priority = 18
+		complete_effect = {
+			clr_country_flag = anti_air_ll_to_sov_small_enabled
+			add_to_variable = { var = ENG.lend_lease_side_progress value = -20 }
+			hidden_effect = {
+				ENG = { remove_from_array = { allies_lend_lease_senders = ROOT } }
+			}
+		}
+	}
+	anti_air_ll_to_sov_small_ll = {
+		icon = GFX_decision_generic_prepare_civil_war
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_anti_air_equipment_ll_category_flag }
+		available = { NOT = { has_country_flag = anti_air_ll_to_sov_small_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 17
+		timeout_effect = { 
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_fourty = yes 
+					has_equipment = { anti_air_equipment > 2879 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 2880 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 2880 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_sixty = yes 
+					has_equipment = { anti_air_equipment > 4319 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 4320 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 4320 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_eighty = yes 
+					has_equipment = { anti_air_equipment > 5759 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 5760 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 5760 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_hundred = yes 
+					has_equipment = { anti_air_equipment > 7199 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 7200 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 7200 } }
+			}
+
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_fourty = yes
+					has_equipment = { anti_air_equipment > 4909 } 
+					asian_war_simulation = yes has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 2880 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL }
+					add_to_variable = { var = ENG.anti_air_sent value = 2880 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_sixty = yes 
+					has_equipment = { anti_air_equipment > 6349 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 4320 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 4320 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_eighty = yes 
+					has_equipment = { anti_air_equipment > 7789 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 5760 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 5760 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_hundred = yes 
+					has_equipment = { anti_air_equipment > 9229 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 7200 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 7200 } 
+				}
+			}
+			
+			activate_mission = anti_air_ll_to_sov_small_ll
+		}
+	}
+	
+	anti_air_ll_to_sov_medium = {
+		icon = GFX_decision_generic_prepare_civil_war
+		available = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 8639 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 12959 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 17279 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = no }
+		
+				has_equipment = { anti_air_equipment > 21599 } 
+			}
+
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 10669 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 14989 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 19309 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 23629 } 
+			}
+			
+			check_variable = { ENG.lend_lease_side_progress < 41 }
+		}
+		visible = { 
+			NOT = { has_country_flag = anti_air_ll_to_sov_medium_enabled } 
+			has_country_flag = open_anti_air_equipment_ll_category_flag
+		}
+		fire_only_once = no
+		priority = 19
+		complete_effect = {
+			set_country_flag = anti_air_ll_to_sov_medium_enabled
+			activate_mission = anti_air_ll_to_sov_medium_ll
+			add_to_variable = { var = ENG.lend_lease_side_progress value = 60 }
+			hidden_effect = {
+				ENG = { add_to_array = { allies_lend_lease_senders = ROOT } }
+			}
+		}
+	}
+	stop_anti_air_ll_to_sov_medium = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = { has_country_flag = anti_air_ll_to_sov_medium_enabled } 
+		fire_only_once = no
+		priority = 18
+		complete_effect = {
+			clr_country_flag = anti_air_ll_to_sov_medium_enabled
+			add_to_variable = { var = ENG.lend_lease_side_progress value = -60 }
+			hidden_effect = {
+				ENG = { remove_from_array = { allies_lend_lease_senders = ROOT } }
+			}
+		}
+	}
+	anti_air_ll_to_sov_medium_ll = {
+		icon = GFX_decision_generic_prepare_civil_war
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_anti_air_equipment_ll_category_flag }
+		available = { NOT = { has_country_flag = anti_air_ll_to_sov_medium_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 17
+		timeout_effect = { 
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_fourty = yes 
+					has_equipment = { anti_air_equipment > 8639 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 8640 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 8640 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_sixty = yes 
+					has_equipment = { anti_air_equipment > 12959 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 12960 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 12960 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_eighty = yes 
+					has_equipment = { anti_air_equipment > 17279 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 17280 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 17280 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_hundred = yes 
+					has_equipment = { anti_air_equipment > 21599 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 21600 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 21600 } }
+			}
+
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_fourty = yes
+					has_equipment = { anti_air_equipment > 10669 } 
+					asian_war_simulation = yes has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 8640 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL }
+					add_to_variable = { var = ENG.anti_air_sent value = 8640 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_sixty = yes 
+					has_equipment = { anti_air_equipment > 14989 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 12960 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 12960 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_eighty = yes 
+					has_equipment = { anti_air_equipment > 19309 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 17280 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 17280 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_hundred = yes 
+					has_equipment = { anti_air_equipment > 23629 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 21600 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 21600 } 
+				}
+			}
+			
+			activate_mission = anti_air_ll_to_sov_medium_ll
+		}
+	}
+	
+	anti_air_ll_to_sov_large = {
+		icon = GFX_decision_generic_prepare_civil_war
+		available = { 
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 14399 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 21599 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = no }
+			
+				has_equipment = { anti_air_equipment > 28799 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = no }
+		
+				has_equipment = { anti_air_equipment > 35999 } 
+			}
+
+			if = { limit = { maximum_lend_lease_is_fourty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 16429 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_sixty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 23629 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_eighty = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 30829 } 
+			}
+			
+			if = { limit = { maximum_lend_lease_is_hundred = yes asian_war_simulation = yes has_global_flag = first_ll_was_sent }
+			
+				has_equipment = { anti_air_equipment > 38029 } 
+			}
+			
+			check_variable = { ENG.lend_lease_side_progress < 1 }
+		}
+
+		visible = { 
+			NOT = { has_country_flag = anti_air_ll_to_sov_large_enabled } 
+			has_country_flag = open_anti_air_equipment_ll_category_flag
+		}
+		
+		fire_only_once = no
+		priority = 19
+		complete_effect = {
+			set_country_flag = anti_air_ll_to_sov_large_enabled
+			activate_mission = anti_air_ll_to_sov_large_ll
+			add_to_variable = { var = ENG.lend_lease_side_progress value = 100 }
+			hidden_effect = {
+				ENG = { add_to_array = { allies_lend_lease_senders = ROOT } }
+			}
+		}
+	}
+	stop_anti_air_ll_to_sov_large = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = { has_country_flag = anti_air_ll_to_sov_large_enabled } 
+		fire_only_once = no
+		priority = 18
+		complete_effect = {
+			clr_country_flag = anti_air_ll_to_sov_large_enabled
+			add_to_variable = { var = ENG.lend_lease_side_progress value = -100 }
+			hidden_effect = {
+				ENG = { remove_from_array = { allies_lend_lease_senders = ROOT } }
+			}
+		}
+	}
+	anti_air_ll_to_sov_large_ll = {
+		icon = GFX_decision_generic_prepare_civil_war
+		activation = { always = no }
+		allowed = { always = no }
+		visible = { has_country_flag = open_anti_air_equipment_ll_category_flag }
+		available = { NOT = { has_country_flag = anti_air_ll_to_sov_large_enabled } } 
+		days_mission_timeout = 30
+		selectable_mission = no
+		is_good = yes
+		fire_only_once = yes
+		priority = 17
+		timeout_effect = { 
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_fourty = yes 
+					has_equipment = { anti_air_equipment > 14399 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 14400 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 14400 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_sixty = yes 
+					has_equipment = { anti_air_equipment > 21599 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 21600 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 21600 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_eighty = yes 
+					has_equipment = { anti_air_equipment > 28799 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 28800 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 28800 } }
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_hundred = yes 
+					has_equipment = { anti_air_equipment > 35999 } 
+					asian_war_simulation = no 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 36000 target = SOV }
+				custom_effect_tooltip = generic_skip_one_line_tt
+				hidden_effect = { add_to_variable = { var = ENG.anti_air_sent value = 36000 } }
+			}
+
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_fourty = yes
+					has_equipment = { anti_air_equipment > 16429 } 
+					asian_war_simulation = yes has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 14400 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL }
+					add_to_variable = { var = ENG.anti_air_sent value = 14400 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_sixty = yes 
+					has_equipment = { anti_air_equipment > 23629 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 21600 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 21600 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_eighty = yes 
+					has_equipment = { anti_air_equipment > 30829 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 28800 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 28800 } 
+				}
+			}
+			
+			if = { 
+				limit = { 
+					maximum_lend_lease_is_hundred = yes 
+					has_equipment = { anti_air_equipment > 38029 } 
+					asian_war_simulation = yes 
+					has_global_flag = first_ll_was_sent 
+				}
+			
+				send_equipment = { equipment = anti_air_equipment amount = 36000 target = SOV }
+				custom_effect_tooltip = asian_war_simulation_tt_for_anti_air
+				hidden_effect = { 
+					send_equipment = { equipment = anti_air_equipment amount = 2030 target = COL } 
+					add_to_variable = { var = ENG.anti_air_sent value = 36000 } 
+				}
+			}
+			
+			activate_mission = anti_air_ll_to_sov_large_ll
+		}
+	}
 	
 
 
@@ -2577,3 +3219,15 @@ ORG_allies_lend_lease_to_sov = {
 # #########  ##    ##   ##     ##  ##     ##  ##    ##         ##         #########     ###     ##         ##     ##  ##     ##  ##    ##      ###     
 # ##     ##  ##     ##  ##     ##  ##     ##  ##     ##        ##     ##  ##     ##     ###     ##         ##     ##  ##     ##  ##     ##     ###     
 # ##     ##  ##      ## ##     ##   #######   ##      ##        #######   ##     ##     ###     #########   #######    #######   ##       ##   ###     
+
+
+
+
+
+
+
+
+
+
+
+}
