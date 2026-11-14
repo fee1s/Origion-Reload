@@ -6013,3 +6013,19 @@ defined_text = {
 	}
 	text = { trigger = {always = yes} localization_key = SOV_empty_ev}
 }
+
+defined_text = {
+	name = GetAntiTankSent
+	text = {
+		trigger = {
+			check_variable = {
+				var = anti_tank_sent
+				value = 0
+				compare = greater_than
+			}
+		}
+		localization_key = equipment_log_tt_anti_tank
+	}
+	text = { trigger = {always = yes} localization_key = SOV_empty_ev}
+}
+

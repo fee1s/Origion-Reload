@@ -59,7 +59,7 @@ GetCurrentIsHundred: "£convoy_texticon §Y100§!"
 
 progress_bar_lend_lease_tt: "Задействовано [GetCurrentCapacity] §Yпропускной способности§! из [GetMaxCapacity]"
 
-equipment_log_tt: "§LИнформация об отправленном снаряжении:§![GetFightersSent][GetCasSent][GetInfantrySent][GetSupportSent][GetAntiAirSent][GetArtillerySent]"
+equipment_log_tt: "§LИнформация об отправленном снаряжении:§![GetFightersSent][GetCasSent][GetInfantrySent][GetSupportSent][GetAntiAirSent][GetArtillerySent][GetAntiTankSent]"
 equipment_log_name_tt: "§LСводка\nо\nленд-лизе§!"
 
 
@@ -191,6 +191,31 @@ artillery_ll_to_sov_large_ll:0 "§3Отправка $artillery_equipment$ в п�
 artillery_ll_to_sov_large_enabled:0 "§YСоюзники§! осуществляют крупные поставки §Y$artillery_equipment$§!"
 
 
+#AT
+open_anti_tank_equipment_ll_category:0 "§1Варианты поставок $anti_tank_equipment$§!"
+close_anti_tank_equipment_ll_category:0 "§1Скрыть варианты поставок $anti_tank_equipment$§!"
+
+anti_tank_ll_to_sov_small:0 "§2Начать малые поставки $anti_tank_equipment$§!"
+stop_anti_tank_ll_to_sov_small:0 "§2Прекратить малые поставки $anti_tank_equipment$§!"
+anti_tank_ll_to_sov_small_ll:0 "§3Отправка $anti_tank_equipment$ в процессе..§!"
+anti_tank_ll_to_sov_small_enabled:0 "§YСоюзники§! осуществляют малые поставки §Y$anti_tank_equipment$§!"
+
+anti_tank_ll_to_sov_medium:0 "§2Начать средние поставки $anti_tank_equipment$§!"
+stop_anti_tank_ll_to_sov_medium:0 "§2Прекратить средние поставки $anti_tank_equipment$§!"
+anti_tank_ll_to_sov_medium_ll:0 "§3Отправка $anti_tank_equipment$ в процессе..§!"
+anti_tank_ll_to_sov_medium_enabled:0 "§YСоюзники§! осуществляют средние поставки §Y$anti_tank_equipment$§!"
+
+anti_tank_ll_to_sov_large:0 "§2Начать крупные поставки $anti_tank_equipment$§!"
+stop_anti_tank_ll_to_sov_large:0 "§2Прекратить крупные поставки $anti_tank_equipment$§!"
+anti_tank_ll_to_sov_large_ll:0 "§3Отправка $anti_tank_equipment$ в процессе..§!"
+anti_tank_ll_to_sov_large_enabled:0 "§YСоюзники§! осуществляют крупные поставки §Y$anti_tank_equipment$§!"
+
+
+
+
+
+
+
 #Советский ленд-лиз
 equipment_log_tt_cas:0 "\n Количество отправленных §Y$small_plane_cas_airframe$§!: §Y[?ENG.cas_sent]§!"
 equipment_log_tt_fighters:0 "\n Количество отправленных §Y$small_plane_airframe$§!: §Y[?ENG.fighters_sent]§!"
@@ -198,10 +223,12 @@ equipment_log_tt_infantry:0 "\n Количество отправленных §
 equipment_log_tt_support:0 "\n Количество отправленных §Y$support_equipment$§!: §Y[?ENG.support_sent]§!"
 equipment_log_tt_anti_air:0 "\n Количество отправленных §Y$anti_air_equipment$§!: §Y[?ENG.anti_air_sent]§!"
 equipment_log_tt_artillery:0 "\n Количество отправленных §Y$artillery_equipment$§!: §Y[?ENG.artillery_sent]§!"
+equipment_log_tt_anti_tank:0 "\n Количество отправленных §Y$anti_tank_equipment$§!: §Y[?ENG.anti_tank_sent]§!"
 
 asian_war_simulation_tt_for_support:0 "\nМы пожертвуем §Y2538§! ед. техники §YДополнительное оснащение§! на нужды §YТихоокеанского фронта§!.\n\n"
 asian_war_simulation_tt_for_anti_air:0 "\nМы пожертвуем §Y2030§! ед. техники §Y$anti_air_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
 asian_war_simulation_tt_for_artillery:0 "\nМы пожертвуем §Y2538§! ед. техники §Y$artillery_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
+asian_war_simulation_tt_for_anti_tank:0 "\nМы пожертвуем §Y2538§! ед. техники §Y$anti_tank_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
 #Тултип лл
 first_sent_ll_complete:0 "Нужды Тихоокеанского фронта удовлетворены."
 
