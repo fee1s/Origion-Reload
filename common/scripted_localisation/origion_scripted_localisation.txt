@@ -6058,3 +6058,19 @@ defined_text = {
 	}
 	text = { trigger = {always = yes} localization_key = SOV_empty_ev}
 }
+
+defined_text = {
+	name = GetAmphibiousMechanizedSent
+	text = {
+		trigger = {
+			check_variable = {
+				var = amphibious_mechanized_sent
+				value = 0
+				compare = greater_than
+			}
+		}
+		localization_key = equipment_log_tt_amphibious_mechanized
+	}
+	text = { trigger = {always = yes} localization_key = SOV_empty_ev}
+}
+
