@@ -231,6 +231,25 @@ stop_motorized_ll_to_sov_large:0 "§2Halt large-scale shipments of $motorized_eq
 motorized_ll_to_sov_large_ll:0 "§3Dispatching $motorized_equipment$...§!"
 motorized_ll_to_sov_large_enabled:0 "§YAllies§! are making large deliveries of §Y$motorized_equipment$§!"
 
+#mech
+
+open_mechanized_equipment_ll_category:0 "§1Options for supplying $mechanized_equipment$§!"
+close_mechanized_equipment_ll_category:0 "§1Hide options for supplying $mechanized_equipment$§!"
+
+mechanized_ll_to_sov_small:0 "§2Start small deliveries of $mechanized_equipment$§!"
+stop_mechanized_ll_to_sov_small:0 "§2Stop small supplies of $mechanized_equipment$§!"
+mechanized_ll_to_sov_small_ll:0 "§3Sending $mechanized_equipment$ in progress..§!"
+mechanized_ll_to_sov_small_enabled:0 "§YAllies§! carry out small deliveries of §Y$mechanized_equipment$§!"
+
+mechanized_ll_to_sov_medium:0 "§2Start medium supplies of $mechanized_equipment$§!"
+stop_mechanized_ll_to_sov_medium:0 "§2Stop the average supply of $mechanized_equipment$§!"
+mechanized_ll_to_sov_medium_ll:0 "§3Sending $mechanized_equipment$ in progress..§!"
+mechanized_ll_to_sov_medium_enabled:0 "§YAllies§! are carrying out medium-scale deliveries of §Y$mechanized_equipment$§!"
+
+mechanized_ll_to_sov_large:0 "§2Begin large-scale shipments of $mechanized_equipment$§!"
+stop_mechanized_ll_to_sov_large:0 "§2Halt large-scale shipments of $mechanized_equipment$§!"
+mechanized_ll_to_sov_large_ll:0 "§3Dispatching $mechanized_equipment$...§!"
+mechanized_ll_to_sov_large_enabled:0 "§YAllies§! are making large deliveries of §Y$mechanized_equipment$§!"
 
 
 #Советский ленд-лиз
@@ -242,12 +261,14 @@ equipment_log_tt_anti_air:0 "\n Number of §Y$anti_air_equipment$§! sent!: §Y[
 equipment_log_tt_artillery:0 "\n Number of §Y$artillery_equipment$§! sent!: §Y[?ENG.artillery_sent]§!"
 equipment_log_tt_anti_tank:0 "\n Number of §Y$anti_tank_equipment$§! sent!: §Y[?ENG.anti_tank_sent]§!"
 equipment_log_tt_motorized:0 "\n Number of §Y$motorized_equipment$§! sent!: §Y[?ENG.motorized_sent]§!"
+equipment_log_tt_mechanized:0 "\n Number of §Y$mechanized_equipment$§! sent!: §Y[?ENG.mechanized_sent]§!"
 
 asian_war_simulation_tt_for_anti_air:0 "\nWe will donate §Y2030§! units of §Y$anti_air_equipment$§! to support the §YPacific front§!. \n\n"
 asian_war_simulation_tt_for_support:0 "\nWe will donate §Y2538§! units of §Y$support_equipment$§! to support the §YPacific front§!.\n\n"
 asian_war_simulation_tt_for_artillery:0 "\nWe will donate §Y2538§! units of §Y$artillery_equipment$§! to support the §YPacific front§!. \n\n"
 asian_war_simulation_tt_for_anti_tank:0 "\nWe will donate §Y2538§! units of §Y$anti_tank_equipment$§! to support the §YPacific front§!. \n\n"
 asian_war_simulation_tt_for_motorized:0 "\nWe will donate §Y4060§! units of §Y$motorized_equipment$§! to support the §YPacific front§!. \n\n"
+asian_war_simulation_tt_for_mechanized:0 "\nWe will donate §Y2538§! units of §Y$mechanized_equipment$§! to support the §YPacific front§!. \n\n"
 
 first_sent_ll_complete:0 "The needs of the Pacific Front have been met."
 

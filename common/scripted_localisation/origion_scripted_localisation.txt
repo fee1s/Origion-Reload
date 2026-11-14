@@ -6044,3 +6044,17 @@ defined_text = {
 	text = { trigger = {always = yes} localization_key = SOV_empty_ev}
 }
 
+defined_text = {
+	name = GetMechanizedSent
+	text = {
+		trigger = {
+			check_variable = {
+				var = mechanized_sent
+				value = 0
+				compare = greater_than
+			}
+		}
+		localization_key = equipment_log_tt_mechanized
+	}
+	text = { trigger = {always = yes} localization_key = SOV_empty_ev}
+}
