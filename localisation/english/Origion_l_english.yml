@@ -272,6 +272,27 @@ amphibious_mechanized_ll_to_sov_large_ll:0 "§3Dispatching $amphibious_mechanize
 amphibious_mechanized_ll_to_sov_large_enabled:0 "§YAllies§! are making large deliveries of §Y$amphibious_mechanized_equipment$§!"
 
 
+#train
+
+open_train_equipment_ll_category:0 "§1Options for supplying $train_equipment$§!"
+close_train_equipment_ll_category:0 "§1Hide options for supplying $train_equipment$§!"
+
+train_ll_to_sov_small:0 "§2Start small deliveries of $train_equipment$§!"
+stop_train_ll_to_sov_small:0 "§2Stop small supplies of $train_equipment$§!"
+train_ll_to_sov_small_ll:0 "§3Sending $train_equipment$ in progress..§!"
+train_ll_to_sov_small_enabled:0 "§YAllies§! carry out small deliveries of §Y$train_equipment$§!"
+
+train_ll_to_sov_medium:0 "§2Start medium supplies of $train_equipment$§!"
+stop_train_ll_to_sov_medium:0 "§2Stop the average supply of $train_equipment$§!"
+train_ll_to_sov_medium_ll:0 "§3Sending $train_equipment$ in progress..§!"
+train_ll_to_sov_medium_enabled:0 "§YAllies§! are carrying out medium-scale deliveries of §Y$train_equipment$§!"
+
+train_ll_to_sov_large:0 "§2Begin large-scale shipments of $train_equipment$§!"
+stop_train_ll_to_sov_large:0 "§2Halt large-scale shipments of $train_equipment$§!"
+train_ll_to_sov_large_ll:0 "§3Dispatching $train_equipment$...§!"
+train_ll_to_sov_large_enabled:0 "§YAllies§! are making large deliveries of §Y$train_equipment$§!"
+
+
 #Советский ленд-лиз
 equipment_log_tt_cas:0 "\n The number of §Y$small_plane_cas_airframe$§! sent!: §Y[?ENG.cas_sent]§!"
 equipment_log_tt_fighters:0 "\n The number of §Y$small_plane_airframe$§! sent!: §Y[?ENG.fighters_sent]§!"
@@ -283,6 +304,7 @@ equipment_log_tt_anti_tank:0 "\n Number of §Y$anti_tank_equipment$§! sent!: §
 equipment_log_tt_motorized:0 "\n Number of §Y$motorized_equipment$§! sent!: §Y[?ENG.motorized_sent]§!"
 equipment_log_tt_mechanized:0 "\n Number of §Y$mechanized_equipment$§! sent!: §Y[?ENG.mechanized_sent]§!"
 equipment_log_tt_amphibious_mechanized:0 "\n Number of §Y$amphibious_mechanized_equipment$§! sent!: §Y[?ENG.amphibious_mechanized_sent]§!"
+equipment_log_tt_train:0 "\n Number of §Y$train_equipment$§! sent!: §Y[?ENG.train_sent]§!"
 
 asian_war_simulation_tt_for_anti_air:0 "\nWe will donate §Y2030§! units of §Y$anti_air_equipment$§! to support the §YPacific front§!. \n\n"
 asian_war_simulation_tt_for_support:0 "\nWe will donate §Y2538§! units of §Y$support_equipment$§! to support the §YPacific front§!.\n\n"
@@ -291,6 +313,7 @@ asian_war_simulation_tt_for_anti_tank:0 "\nWe will donate §Y2538§! units of §
 asian_war_simulation_tt_for_motorized:0 "\nWe will donate §Y4060§! units of §Y$motorized_equipment$§! to support the §YPacific front§!. \n\n"
 asian_war_simulation_tt_for_mechanized:0 "\nWe will donate §Y2538§! units of §Y$mechanized_equipment$§! to support the §YPacific front§!. \n\n"
 asian_war_simulation_tt_for_amphibious_mechanized:0 "\nWe will donate §Y2538§! units of §Y$amphibious_mechanized_equipment$§! to support the §YPacific front§!. \n\n"
+asian_war_simulation_tt_for_train:0 "\nWe will donate §Y145§! units of §Y$train_equipment$§! to support the §YPacific front§!. \n\n"
 
 first_sent_ll_complete:0 "The needs of the Pacific Front have been met."
 

@@ -59,7 +59,7 @@ GetCurrentIsHundred: "£convoy_texticon §Y100§!"
 
 progress_bar_lend_lease_tt: "Задействовано [GetCurrentCapacity] §Yпропускной способности§! из [GetMaxCapacity]"
 
-equipment_log_tt: "§LИнформация об отправленном снаряжении:§![GetFightersSent][GetCasSent][GetInfantrySent][GetSupportSent][GetAntiAirSent][GetArtillerySent][GetAntiTankSent][GetMotorizedSent][GetMechanizedSent][GetAmphibiousMechanizedSent]"
+equipment_log_tt: "§LИнформация об отправленном снаряжении:§![GetFightersSent][GetCasSent][GetInfantrySent][GetSupportSent][GetAntiAirSent][GetArtillerySent][GetAntiTankSent][GetMotorizedSent][GetMechanizedSent][GetAmphibiousMechanizedSent][GetTrainSent]"
 equipment_log_name_tt: "§LСводка\nо\nленд-лизе§!"
 
 
@@ -270,6 +270,27 @@ stop_amphibious_mechanized_ll_to_sov_large:0 "§2Прекратить крупн
 amphibious_mechanized_ll_to_sov_large_ll:0 "§3Отправка $amphibious_mechanized_equipment$ в процессе..§!"
 amphibious_mechanized_ll_to_sov_large_enabled:0 "§YСоюзники§! осуществляют крупные поставки §Y$amphibious_mechanized_equipment$§!"
 
+#train
+
+open_train_equipment_ll_category:0 "§1Варианты поставок $train_equipment$§!"
+close_train_equipment_ll_category:0 "§1Скрыть варианты поставок $train_equipment$§!"
+
+train_ll_to_sov_small:0 "§2Начать малые поставки $train_equipment$§!"
+stop_train_ll_to_sov_small:0 "§2Прекратить малые поставки $train_equipment$§!"
+train_ll_to_sov_small_ll:0 "§3Отправка $train_equipment$ в процессе..§!"
+train_ll_to_sov_small_enabled:0 "§YСоюзники§! осуществляют малые поставки §Y$train_equipment$§!"
+
+train_ll_to_sov_medium:0 "§2Начать средние поставки $train_equipment$§!"
+stop_train_ll_to_sov_medium:0 "§2Прекратить средние поставки $train_equipment$§!"
+train_ll_to_sov_medium_ll:0 "§3Отправка $train_equipment$ в процессе..§!"
+train_ll_to_sov_medium_enabled:0 "§YСоюзники§! осуществляют средние поставки §Y$train_equipment$§!"
+
+train_ll_to_sov_large:0 "§2Начать крупные поставки $train_equipment$§!"
+stop_train_ll_to_sov_large:0 "§2Прекратить крупные поставки $train_equipment$§!"
+train_ll_to_sov_large_ll:0 "§3Отправка $train_equipment$ в процессе..§!"
+train_ll_to_sov_large_enabled:0 "§YСоюзники§! осуществляют крупные поставки §Y$train_equipment$§!"
+
+
 #Советский ленд-лиз
 equipment_log_tt_cas:0 "\n Количество отправленных §Y$small_plane_cas_airframe$§!: §Y[?ENG.cas_sent]§!"
 equipment_log_tt_fighters:0 "\n Количество отправленных §Y$small_plane_airframe$§!: §Y[?ENG.fighters_sent]§!"
@@ -281,6 +302,7 @@ equipment_log_tt_anti_tank:0 "\n Количество отправленных �
 equipment_log_tt_motorized:0 "\n Количество отправленных §Y$motorized_equipment$§!: §Y[?ENG.motorized_sent]§!"
 equipment_log_tt_mechanized:0 "\n Количество отправленных §Y$mechanized_equipment$§!: §Y[?ENG.mechanized_sent]§!"
 equipment_log_tt_amphibious_mechanized:0 "\n Количество отправленных §Y$amphibious_mechanized_equipment$§!: §Y[?ENG.amphibious_mechanized_sent]§!"
+equipment_log_tt_train:0 "\n Количество отправленных §Y$train_equipment$§!: §Y[?ENG.train_sent]§!"
 
 asian_war_simulation_tt_for_support:0 "\nМы пожертвуем §Y2538§! ед. техники §YДополнительное оснащение§! на нужды §YТихоокеанского фронта§!.\n\n"
 asian_war_simulation_tt_for_anti_air:0 "\nМы пожертвуем §Y2030§! ед. техники §Y$anti_air_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
@@ -289,6 +311,7 @@ asian_war_simulation_tt_for_anti_tank:0 "\nМы пожертвуем §Y2538§! 
 asian_war_simulation_tt_for_motorized:0 "\nМы пожертвуем §Y4060§! ед. техники §Y$motorized_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
 asian_war_simulation_tt_for_mechanized:0 "\nМы пожертвуем §Y2538§! ед. техники §Y$mechanized_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
 asian_war_simulation_tt_for_amphibious_mechanized:0 "\nМы пожертвуем §Y2538§! ед. техники §Y$amphibious_mechanized_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
+asian_war_simulation_tt_for_train:0 "\nМы пожертвуем §Y145§! ед. техники §Y$train_equipment$§! на нужды §YТихоокеанского фронта§!. \n\n"
 
 #Тултип лл
 first_sent_ll_complete:0 "Нужды Тихоокеанского фронта удовлетворены."
